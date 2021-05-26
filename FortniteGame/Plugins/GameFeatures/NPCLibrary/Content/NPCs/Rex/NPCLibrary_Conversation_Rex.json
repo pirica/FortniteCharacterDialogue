@@ -1,0 +1,203 @@
+[
+  {
+    "Type": "ConversationDatabase",
+    "Name": "NPCLibrary_Conversation_Rex",
+    "Properties": {
+      "CompilerVersion": 2,
+      "ReachableNodeMap": {
+        "83EEA3A0418CB8C715ECD0AB2F0C38D5": {
+          "ObjectName": "NPCLibrary_Conversation_Rex:ConversationEntryPointNode_7:ConversationEntryPointNode",
+          "ObjectPath": "/NPCLibrary/NPCs/Rex/NPCLibrary_Conversation_Rex.1"
+        },
+        "09875B5A48420E93F003608A7AEEDECC": {
+          "ObjectName": "NPCLibrary_Conversation_Rex:Speech_C_4:Speech_C",
+          "ObjectPath": "/NPCLibrary/NPCs/Rex/NPCLibrary_Conversation_Rex.6"
+        },
+        "92282432490094D9B280B29A5ADF3904": {
+          "ObjectName": "NPCLibrary_Conversation_Rex:ConversationLinkNode_0:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/Rex/NPCLibrary_Conversation_Rex.2"
+        },
+        "7410F09941B804E2881532B332FAF183": {
+          "ObjectName": "NPCLibrary_Conversation_Rex:ConversationLinkNode_1:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/Rex/NPCLibrary_Conversation_Rex.3"
+        },
+        "5CA3199E452DCB4BE72BE68D49FAA0E1": {
+          "ObjectName": "NPCLibrary_Conversation_Rex:ConversationLinkNode_2:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/Rex/NPCLibrary_Conversation_Rex.4"
+        }
+      },
+      "EntryTags": [
+        {
+          "EntryTag": {
+            "TagName": "Conversation.Entry.Rex"
+          },
+          "DestinationList": [
+            "83EEA3A0-418CB8C7-15ECD0AB-2F0C38D5"
+          ]
+        }
+      ],
+      "ExitTags": [
+        "Conversation.Entry.BasicServices",
+        "Conversation.Entry.NPCLibrary.Quests",
+        "Conversation.Entry.Season16.TheSpire.Joneses"
+      ],
+      "InternalNodeIds": [
+        "83EEA3A0-418CB8C7-15ECD0AB-2F0C38D5",
+        "09875B5A-48420E93-F003608A-7AEEDECC",
+        "92282432-490094D9-B280B29A-5ADF3904",
+        "7410F099-41B804E2-881532B3-32FAF183",
+        "5CA3199E-452DCB4B-E72BE68D-49FAA0E1"
+      ],
+      "Speakers": [
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.Player"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.406108,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "0068FF"
+          }
+        },
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.NPC"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.065123,
+            "B": 0.1875,
+            "A": 1.0,
+            "Hex": "001130"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ConversationEntryPointNode",
+    "Name": "ConversationEntryPointNode_7",
+    "Properties": {
+      "EntryTag": {
+        "TagName": "Conversation.Entry.Rex"
+      },
+      "OutputConnections": [
+        "09875B5A-48420E93-F003608A-7AEEDECC"
+      ],
+      "Compiled_NodeGUID": "83EEA3A0-418CB8C7-15ECD0AB-2F0C38D5"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_0",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.BasicServices"
+      },
+      "Compiled_NodeGUID": "92282432-490094D9-B280B29A-5ADF3904"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_1",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.NPCLibrary.Quests"
+      },
+      "Compiled_NodeGUID": "7410F099-41B804E2-881532B3-32FAF183"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_2",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.Season16.TheSpire.Joneses"
+      },
+      "Compiled_NodeGUID": "5CA3199E-452DCB4B-E72BE68D-49FAA0E1"
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_IsFirstEverConversationWithNPC",
+    "Name": "FortControllerRequirement_IsFirstEverConversationWithNPC_0",
+    "Properties": {}
+  },
+  {
+    "Type": "Speech_C",
+    "Name": "Speech_C_4",
+    "Properties": {
+      "SpeakerTag": {
+        "TagName": "Conversation.Participant.NPC"
+      },
+      "ListenerTag": {
+        "TagName": "Conversation.Participant.Player"
+      },
+      "GeneralConfig": {
+        "ContextualMessages": [
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "D9C70DCD471DA0024426A0B103483521",
+              "SourceString": "*whisper* Don't worry. I'm not REALLY a dinosaur."
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_4:FortControllerRequirement_IsFirstEverConversationWithNPC_0:FortControllerRequirement_IsFirstEverConversationWithNPC",
+                  "ObjectPath": "/NPCLibrary/NPCs/Rex/NPCLibrary_Conversation_Rex.5"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          }
+        ],
+        "DefaultMessage": {
+          "Namespace": "",
+          "Key": "38C887B343FD93E3F94F76BD234CB620",
+          "SourceString": "Rawr?"
+        }
+      },
+      "OutputConnections": [
+        "5CA3199E-452DCB4B-E72BE68D-49FAA0E1",
+        "7410F099-41B804E2-881532B3-32FAF183",
+        "92282432-490094D9-B280B29A-5ADF3904"
+      ],
+      "NodeName": "",
+      "Compiled_NodeGUID": "09875B5A-48420E93-F003608A-7AEEDECC"
+    }
+  }
+]

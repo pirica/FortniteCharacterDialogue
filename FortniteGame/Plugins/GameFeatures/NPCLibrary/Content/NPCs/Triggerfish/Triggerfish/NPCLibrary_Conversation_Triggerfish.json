@@ -1,0 +1,352 @@
+[
+  {
+    "Type": "ConversationDatabase",
+    "Name": "NPCLibrary_Conversation_Triggerfish",
+    "Properties": {
+      "CompilerVersion": 2,
+      "ReachableNodeMap": {
+        "A8E7663C454C54508EED619D5E6B167E": {
+          "ObjectName": "NPCLibrary_Conversation_Triggerfish:ConversationEntryPointNode_7:ConversationEntryPointNode",
+          "ObjectPath": "/NPCLibrary/NPCs/Triggerfish/Triggerfish/NPCLibrary_Conversation_Triggerfish.1"
+        },
+        "EB1889F947644B961498399BA6CB2E1D": {
+          "ObjectName": "NPCLibrary_Conversation_Triggerfish:Speech_C_4:Speech_C",
+          "ObjectPath": "/NPCLibrary/NPCs/Triggerfish/Triggerfish/NPCLibrary_Conversation_Triggerfish.8"
+        },
+        "C914C1B34B2489197607A2BEDE7E9C08": {
+          "ObjectName": "NPCLibrary_Conversation_Triggerfish:ConversationLinkNode_0:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/Triggerfish/Triggerfish/NPCLibrary_Conversation_Triggerfish.2"
+        },
+        "C2A5E342442597870A452DB18358F8A0": {
+          "ObjectName": "NPCLibrary_Conversation_Triggerfish:ConversationLinkNode_1:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/Triggerfish/Triggerfish/NPCLibrary_Conversation_Triggerfish.3"
+        }
+      },
+      "EntryTags": [
+        {
+          "EntryTag": {
+            "TagName": "Conversation.Entry.Trigger"
+          },
+          "DestinationList": [
+            "A8E7663C-454C5450-8EED619D-5E6B167E"
+          ]
+        }
+      ],
+      "ExitTags": [
+        "Conversation.Entry.BasicServices",
+        "Conversation.Entry.NPCLibrary.Quests"
+      ],
+      "InternalNodeIds": [
+        "A8E7663C-454C5450-8EED619D-5E6B167E",
+        "EB1889F9-47644B96-1498399B-A6CB2E1D",
+        "C914C1B3-4B248919-7607A2BE-DE7E9C08",
+        "C2A5E342-44259787-0A452DB1-8358F8A0"
+      ],
+      "Speakers": [
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.Player"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.406108,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "0068FF"
+          }
+        },
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.NPC"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.065123,
+            "B": 0.1875,
+            "A": 1.0,
+            "Hex": "001130"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ConversationEntryPointNode",
+    "Name": "ConversationEntryPointNode_7",
+    "Properties": {
+      "EntryTag": {
+        "TagName": "Conversation.Entry.Trigger"
+      },
+      "OutputConnections": [
+        "EB1889F9-47644B96-1498399B-A6CB2E1D"
+      ],
+      "Compiled_NodeGUID": "A8E7663C-454C5450-8EED619D-5E6B167E"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_0",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.BasicServices"
+      },
+      "Compiled_NodeGUID": "C914C1B3-4B248919-7607A2BE-DE7E9C08"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_1",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.NPCLibrary.Quests"
+      },
+      "Compiled_NodeGUID": "C2A5E342-44259787-0A452DB1-8358F8A0"
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_HasBars",
+    "Name": "FortControllerRequirement_HasBars_0",
+    "Properties": {
+      "ThresholdTestConfig": {
+        "Requirement": "EThresholdRequirement::GreaterThanOrEqual",
+        "Quantity": {
+          "Value": 2000.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_HasCID",
+    "Name": "FortControllerRequirement_HasCID_0",
+    "Properties": {
+      "AllowedCIDs": [
+        {
+          "AssetPathName": "/Game/Athena/Items/Cosmetics/Characters/CID_656_Athena_Commando_M_TeriyakiFishFreezerBurn.CID_656_Athena_Commando_M_TeriyakiFishFreezerBurn",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "/Game/Athena/Items/Cosmetics/Characters/CID_315_Athena_Commando_M_TeriyakiFish.CID_315_Athena_Commando_M_TeriyakiFish",
+          "SubPathString": ""
+        }
+      ]
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_HasCID",
+    "Name": "FortControllerRequirement_HasCID_1",
+    "Properties": {
+      "AllowedCIDs": [
+        {
+          "AssetPathName": "/Game/Athena/Items/Cosmetics/Characters/CID_872_Athena_Commando_F_TeriyakiFishPrincess.CID_872_Athena_Commando_F_TeriyakiFishPrincess",
+          "SubPathString": ""
+        }
+      ]
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_IsFirstEverConversationWithNPC",
+    "Name": "FortControllerRequirement_IsFirstEverConversationWithNPC_0",
+    "Properties": {}
+  },
+  {
+    "Type": "Speech_C",
+    "Name": "Speech_C_4",
+    "Properties": {
+      "SpeakerTag": {
+        "TagName": "Conversation.Participant.NPC"
+      },
+      "ListenerTag": {
+        "TagName": "Conversation.Participant.Player"
+      },
+      "GeneralConfig": {
+        "ContextualMessages": [
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "FBDE854F42801395255EC09F5B21B1ED",
+              "SourceString": "Going to spend all those bars, <b>blub?</>"
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_4:FortControllerRequirement_HasBars_0:FortControllerRequirement_HasBars",
+                  "ObjectPath": "/NPCLibrary/NPCs/Triggerfish/Triggerfish/NPCLibrary_Conversation_Triggerfish.4"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.HighTotalBars"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "AFE59D754DB65D19C3118B8AA86119F3",
+              "SourceString": "Staying damp, fin-kin?"
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAny",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_4:FortControllerRequirement_HasCID_0:FortControllerRequirement_HasCID",
+                  "ObjectPath": "/NPCLibrary/NPCs/Triggerfish/Triggerfish/NPCLibrary_Conversation_Triggerfish.5"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.OutfitReaction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "F69296D6486798D4402A31AFB9E98052",
+              "SourceString": "My <b>liege</> - You're alive!"
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAny",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_4:FortControllerRequirement_HasCID_1:FortControllerRequirement_HasCID",
+                  "ObjectPath": "/NPCLibrary/NPCs/Triggerfish/Triggerfish/NPCLibrary_Conversation_Triggerfish.6"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.OutfitReaction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "3D94629247A9AAEDA7D40BA822E27174",
+              "SourceString": "Hello, landwalker."
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_4:FortControllerRequirement_IsFirstEverConversationWithNPC_0:FortControllerRequirement_IsFirstEverConversationWithNPC",
+                  "ObjectPath": "/NPCLibrary/NPCs/Triggerfish/Triggerfish/NPCLibrary_Conversation_Triggerfish.7"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          }
+        ],
+        "DefaultMessage": {
+          "Namespace": "",
+          "Key": "BC313B064A300DC846347F9A87C9C363",
+          "SourceString": "Back off, <Hot>blub.</>"
+        }
+      },
+      "OutputConnections": [
+        "C2A5E342-44259787-0A452DB1-8358F8A0",
+        "C914C1B3-4B248919-7607A2BE-DE7E9C08"
+      ],
+      "NodeName": "",
+      "Compiled_NodeGUID": "EB1889F9-47644B96-1498399B-A6CB2E1D"
+    }
+  }
+]

@@ -1,0 +1,256 @@
+[
+  {
+    "Type": "ConversationDatabase",
+    "Name": "NPCLibrary_Conversation_BeefBoss",
+    "Properties": {
+      "CompilerVersion": 2,
+      "ReachableNodeMap": {
+        "9B71DA6043616C4F69117E98A43BA4C0": {
+          "ObjectName": "NPCLibrary_Conversation_BeefBoss:ConversationEntryPointNode_7:ConversationEntryPointNode",
+          "ObjectPath": "/NPCLibrary/NPCs/BeefBoss/BeefBoss/NPCLibrary_Conversation_BeefBoss.1"
+        },
+        "4A9E7FEB485202F091015F87361BF79A": {
+          "ObjectName": "NPCLibrary_Conversation_BeefBoss:Speech_C_4:Speech_C",
+          "ObjectPath": "/NPCLibrary/NPCs/BeefBoss/BeefBoss/NPCLibrary_Conversation_BeefBoss.6"
+        },
+        "E0ED671E479458E7533C4C918035BF3E": {
+          "ObjectName": "NPCLibrary_Conversation_BeefBoss:ConversationLinkNode_0:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/BeefBoss/BeefBoss/NPCLibrary_Conversation_BeefBoss.2"
+        },
+        "C41A350A41649980A0F650910BA8B8DA": {
+          "ObjectName": "NPCLibrary_Conversation_BeefBoss:ConversationLinkNode_1:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/BeefBoss/BeefBoss/NPCLibrary_Conversation_BeefBoss.3"
+        }
+      },
+      "EntryTags": [
+        {
+          "EntryTag": {
+            "TagName": "Conversation.Entry.BeefBoss"
+          },
+          "DestinationList": [
+            "9B71DA60-43616C4F-69117E98-A43BA4C0"
+          ]
+        }
+      ],
+      "ExitTags": [
+        "Conversation.Entry.BasicServices",
+        "Conversation.Entry.NPCLibrary.Quests"
+      ],
+      "InternalNodeIds": [
+        "9B71DA60-43616C4F-69117E98-A43BA4C0",
+        "4A9E7FEB-485202F0-91015F87-361BF79A",
+        "E0ED671E-479458E7-533C4C91-8035BF3E",
+        "C41A350A-41649980-A0F65091-0BA8B8DA"
+      ],
+      "Speakers": [
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.Player"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.406108,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "0068FF"
+          }
+        },
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.NPC"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.065123,
+            "B": 0.1875,
+            "A": 1.0,
+            "Hex": "001130"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ConversationEntryPointNode",
+    "Name": "ConversationEntryPointNode_7",
+    "Properties": {
+      "EntryTag": {
+        "TagName": "Conversation.Entry.BeefBoss"
+      },
+      "OutputConnections": [
+        "4A9E7FEB-485202F0-91015F87-361BF79A"
+      ],
+      "Compiled_NodeGUID": "9B71DA60-43616C4F-69117E98-A43BA4C0"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_0",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.BasicServices"
+      },
+      "Compiled_NodeGUID": "E0ED671E-479458E7-533C4C91-8035BF3E"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_1",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.NPCLibrary.Quests"
+      },
+      "Compiled_NodeGUID": "C41A350A-41649980-A0F65091-0BA8B8DA"
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_HasCID",
+    "Name": "FortControllerRequirement_HasCID_0",
+    "Properties": {
+      "AllowedCIDs": [
+        {
+          "AssetPathName": "/Game/Athena/Items/Cosmetics/Characters/CID_538_Athena_Commando_M_Taco.CID_538_Athena_Commando_M_Taco",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "/Game/Athena/Items/Cosmetics/Characters/CID_797_Athena_Commando_F_Taco.CID_797_Athena_Commando_F_Taco",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "/Game/Athena/Items/Cosmetics/Characters/CID_109_Athena_Commando_M_Pizza.CID_109_Athena_Commando_M_Pizza",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "/Game/Athena/Items/Cosmetics/Characters/CID_831_Athena_Commando_F_PIzzaPitMascot.CID_831_Athena_Commando_F_PIzzaPitMascot",
+          "SubPathString": ""
+        }
+      ]
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_HasOwnedTag",
+    "Name": "FortControllerRequirement_HasOwnedTag_0",
+    "Properties": {
+      "OwnedTag": {
+        "TagName": "Athena.Quests.NPC.DialogueOverride.Nightmare"
+      }
+    }
+  },
+  {
+    "Type": "Speech_C",
+    "Name": "Speech_C_4",
+    "Properties": {
+      "SpeakerTag": {
+        "TagName": "Conversation.Participant.NPC"
+      },
+      "ListenerTag": {
+        "TagName": "Conversation.Participant.Player"
+      },
+      "GeneralConfig": {
+        "ContextualMessages": [
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "0B04889D4BD5844B884B899F4F8EDB1E",
+              "SourceString": "Look who it is...."
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAny",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_4:FortControllerRequirement_HasCID_0:FortControllerRequirement_HasCID",
+                  "ObjectPath": "/NPCLibrary/NPCs/BeefBoss/BeefBoss/NPCLibrary_Conversation_BeefBoss.4"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.OutfitReaction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "EC001B674588CB836747F1B5467B155F",
+              "SourceString": "I was just flippin' some patties when some sort of... laser-sight showed up on my grill. Terrifying!"
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_4:FortControllerRequirement_HasOwnedTag_0:FortControllerRequirement_HasOwnedTag",
+                  "ObjectPath": "/NPCLibrary/NPCs/BeefBoss/BeefBoss/NPCLibrary_Conversation_BeefBoss.5"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.HasQuestGameplayTag"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          }
+        ],
+        "DefaultMessage": {
+          "Namespace": "",
+          "Key": "F3C44A3E4F7EA04CB16ED280614C4461",
+          "SourceString": "Have a beefy day!"
+        }
+      },
+      "OutputConnections": [
+        "C41A350A-41649980-A0F65091-0BA8B8DA",
+        "E0ED671E-479458E7-533C4C91-8035BF3E"
+      ],
+      "NodeName": "",
+      "Compiled_NodeGUID": "4A9E7FEB-485202F0-91015F87-361BF79A"
+    }
+  }
+]

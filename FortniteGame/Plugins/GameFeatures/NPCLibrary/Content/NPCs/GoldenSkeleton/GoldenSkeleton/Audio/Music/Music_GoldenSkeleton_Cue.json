@@ -1,0 +1,115 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "Music_GoldenSkeleton_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "Music_GoldenSkeleton_Cue:SoundNodeMixer_1:SoundNodeMixer",
+        "ObjectPath": "/NPCLibrary/NPCs/GoldenSkeleton/GoldenSkeleton/Audio/Music/Music_GoldenSkeleton_Cue.1"
+      },
+      "VolumeMultiplier": 0.8,
+      "bHasPlayWhenSilent": true,
+      "SoundClassObject": {
+        "ObjectName": "Fort_Music_NPC:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Music_NPC.0"
+      },
+      "Duration": 10000.0,
+      "MaxDistance": 2097152.0
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_1",
+    "Properties": {
+      "InputVolume": [
+        0.5,
+        0.8,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "Music_GoldenSkeleton_Cue:SoundNodeModulatorContinuous_0:SoundNodeModulatorContinuous",
+          "ObjectPath": "/NPCLibrary/NPCs/GoldenSkeleton/GoldenSkeleton/Audio/Music/Music_GoldenSkeleton_Cue.2"
+        },
+        {
+          "ObjectName": "Music_GoldenSkeleton_Cue:SoundNodeModulatorContinuous_2:SoundNodeModulatorContinuous",
+          "ObjectPath": "/NPCLibrary/NPCs/GoldenSkeleton/GoldenSkeleton/Audio/Music/Music_GoldenSkeleton_Cue.4"
+        },
+        {
+          "ObjectName": "Music_GoldenSkeleton_Cue:SoundNodeModulatorContinuous_1:SoundNodeModulatorContinuous",
+          "ObjectPath": "/NPCLibrary/NPCs/GoldenSkeleton/GoldenSkeleton/Audio/Music/Music_GoldenSkeleton_Cue.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulatorContinuous",
+    "Name": "SoundNodeModulatorContinuous_0",
+    "Properties": {
+      "VolumeModulationParams": {
+        "ParameterName": "Unaware",
+        "Default": 0.0
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "Music_GoldenSkeleton_Cue:SoundNodeWavePlayer_4:SoundNodeWavePlayer",
+          "ObjectPath": "/NPCLibrary/NPCs/GoldenSkeleton/GoldenSkeleton/Audio/Music/Music_GoldenSkeleton_Cue.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulatorContinuous",
+    "Name": "SoundNodeModulatorContinuous_1",
+    "Properties": {
+      "VolumeModulationParams": {
+        "ParameterName": "Alerted",
+        "Default": 0.0
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "Music_GoldenSkeleton_Cue:SoundNodeWavePlayer_5:SoundNodeWavePlayer",
+          "ObjectPath": "/NPCLibrary/NPCs/GoldenSkeleton/GoldenSkeleton/Audio/Music/Music_GoldenSkeleton_Cue.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulatorContinuous",
+    "Name": "SoundNodeModulatorContinuous_2",
+    "Properties": {
+      "VolumeModulationParams": {
+        "ParameterName": "Aggressive",
+        "Default": 0.0
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "Music_GoldenSkeleton_Cue:SoundNodeWavePlayer_5:SoundNodeWavePlayer",
+          "ObjectPath": "/NPCLibrary/NPCs/GoldenSkeleton/GoldenSkeleton/Audio/Music/Music_GoldenSkeleton_Cue.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_4",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/NPCLibrary/NPCs/GoldenSkeleton/GoldenSkeleton/Audio/Music/GoldenSkeleton_Music_Lo.GoldenSkeleton_Music_Lo",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_5",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/NPCLibrary/NPCs/GoldenSkeleton/GoldenSkeleton/Audio/Music/GoldenSkeleton_Music_Hi.GoldenSkeleton_Music_Hi",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    }
+  }
+]

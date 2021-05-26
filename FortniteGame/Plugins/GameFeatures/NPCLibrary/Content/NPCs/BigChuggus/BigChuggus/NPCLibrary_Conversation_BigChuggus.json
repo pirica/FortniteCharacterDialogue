@@ -1,0 +1,343 @@
+[
+  {
+    "Type": "ConversationDatabase",
+    "Name": "NPCLibrary_Conversation_BigChuggus",
+    "Properties": {
+      "CompilerVersion": 2,
+      "ReachableNodeMap": {
+        "A359282E41BFC3616C83EBB8A7C6E942": {
+          "ObjectName": "NPCLibrary_Conversation_BigChuggus:ConversationEntryPointNode_7:ConversationEntryPointNode",
+          "ObjectPath": "/NPCLibrary/NPCs/BigChuggus/BigChuggus/NPCLibrary_Conversation_BigChuggus.1"
+        },
+        "234219DC440A8496CFA1B880B0A824B7": {
+          "ObjectName": "NPCLibrary_Conversation_BigChuggus:Speech_C_3:Speech_C",
+          "ObjectPath": "/NPCLibrary/NPCs/BigChuggus/BigChuggus/NPCLibrary_Conversation_BigChuggus.8"
+        },
+        "E69DB30F4D879412353C52984D7FA962": {
+          "ObjectName": "NPCLibrary_Conversation_BigChuggus:ConversationLinkNode_0:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/BigChuggus/BigChuggus/NPCLibrary_Conversation_BigChuggus.2"
+        },
+        "6E1663074F50E437A1216499D4763514": {
+          "ObjectName": "NPCLibrary_Conversation_BigChuggus:ConversationLinkNode_1:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/BigChuggus/BigChuggus/NPCLibrary_Conversation_BigChuggus.3"
+        }
+      },
+      "EntryTags": [
+        {
+          "EntryTag": {
+            "TagName": "Conversation.Entry.BigChuggus"
+          },
+          "DestinationList": [
+            "A359282E-41BFC361-6C83EBB8-A7C6E942"
+          ]
+        }
+      ],
+      "ExitTags": [
+        "Conversation.Entry.BasicServices",
+        "Conversation.Entry.NPCLibrary.Quests"
+      ],
+      "InternalNodeIds": [
+        "A359282E-41BFC361-6C83EBB8-A7C6E942",
+        "234219DC-440A8496-CFA1B880-B0A824B7",
+        "E69DB30F-4D879412-353C5298-4D7FA962",
+        "6E166307-4F50E437-A1216499-D4763514"
+      ],
+      "Speakers": [
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.Player"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.406108,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "0068FF"
+          }
+        },
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.NPC"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.065123,
+            "B": 0.1875,
+            "A": 1.0,
+            "Hex": "001130"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ConversationEntryPointNode",
+    "Name": "ConversationEntryPointNode_7",
+    "Properties": {
+      "EntryTag": {
+        "TagName": "Conversation.Entry.BigChuggus"
+      },
+      "OutputConnections": [
+        "234219DC-440A8496-CFA1B880-B0A824B7"
+      ],
+      "Compiled_NodeGUID": "A359282E-41BFC361-6C83EBB8-A7C6E942"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_0",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.BasicServices"
+      },
+      "Compiled_NodeGUID": "E69DB30F-4D879412-353C5298-4D7FA962"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_1",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.NPCLibrary.Quests"
+      },
+      "Compiled_NodeGUID": "6E166307-4F50E437-A1216499-D4763514"
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch",
+    "Name": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0",
+    "Properties": {
+      "days": 7
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_HasCID",
+    "Name": "FortControllerRequirement_HasCID_0",
+    "Properties": {
+      "AllowedCIDs": [
+        {
+          "AssetPathName": "/Game/Athena/Items/Cosmetics/Characters/CID_570_Athena_Commando_M_SlurpMonster.CID_570_Athena_Commando_M_SlurpMonster",
+          "SubPathString": ""
+        }
+      ]
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_HasCID",
+    "Name": "FortControllerRequirement_HasCID_1",
+    "Properties": {
+      "AllowedCIDs": [
+        {
+          "AssetPathName": "/Game/Athena/Items/Cosmetics/Characters/CID_708_Athena_Commando_M_SoldierSlurp.CID_708_Athena_Commando_M_SoldierSlurp",
+          "SubPathString": ""
+        }
+      ]
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_IsFirstEverConversationWithNPC",
+    "Name": "FortControllerRequirement_IsFirstEverConversationWithNPC_0",
+    "Properties": {}
+  },
+  {
+    "Type": "Speech_C",
+    "Name": "Speech_C_3",
+    "Properties": {
+      "SpeakerTag": {
+        "TagName": "Conversation.Participant.NPC"
+      },
+      "ListenerTag": {
+        "TagName": "Conversation.Participant.Player"
+      },
+      "GeneralConfig": {
+        "ContextualMessages": [
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "F30F7907496257856D3EB2B1E8CDA9DB",
+              "SourceString": "NEW FRIEND!"
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_3:FortControllerRequirement_IsFirstEverConversationWithNPC_0:FortControllerRequirement_IsFirstEverConversationWithNPC",
+                  "ObjectPath": "/NPCLibrary/NPCs/BigChuggus/BigChuggus/NPCLibrary_Conversation_BigChuggus.7"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "9ED93A0640190F73F6D73C979F84E11B",
+              "SourceString": "FRIEND BACK! FRIEND BACK!"
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_3:FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0:FortControllerRequirement_CheckTimeSinceLastPlayedMatch",
+                  "ObjectPath": "/NPCLibrary/NPCs/BigChuggus/BigChuggus/NPCLibrary_Conversation_BigChuggus.4"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.WhileSincePlayed"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "630649FA4515300C8A98BFBCF15DA7AB",
+              "SourceString": "SLURP!!!!!"
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_3:FortControllerRequirement_HasCID_0:FortControllerRequirement_HasCID",
+                  "ObjectPath": "/NPCLibrary/NPCs/BigChuggus/BigChuggus/NPCLibrary_Conversation_BigChuggus.5"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.OutfitReaction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "BC98E7B34C45D35EDDF397B26B40D688",
+              "SourceString": "CHUGGUS MY THING! GET OWN THING! CHUGGUS MARKET SATURATED!"
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_3:FortControllerRequirement_HasCID_1:FortControllerRequirement_HasCID",
+                  "ObjectPath": "/NPCLibrary/NPCs/BigChuggus/BigChuggus/NPCLibrary_Conversation_BigChuggus.6"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.OutfitReaction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          }
+        ],
+        "DefaultMessage": {
+          "Namespace": "",
+          "Key": "A89A8EEC48B7BB3DC7A4FC93E8CA530A",
+          "SourceString": "CHUGGUS?"
+        }
+      },
+      "OutputConnections": [
+        "6E166307-4F50E437-A1216499-D4763514",
+        "E69DB30F-4D879412-353C5298-4D7FA962"
+      ],
+      "NodeName": "",
+      "Compiled_NodeGUID": "234219DC-440A8496-CFA1B880-B0A824B7"
+    }
+  }
+]

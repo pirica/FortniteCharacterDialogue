@@ -1,0 +1,325 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_PlayerPawn_Raptor_C",
+    "Properties": {
+      "bHasCookedComponentInstancingData": true,
+      "SimpleConstructionScript": {
+        "ObjectName": "BP_PlayerPawn_Raptor_C:SimpleConstructionScript_0:SimpleConstructionScript",
+        "ObjectPath": "/NPCLibrary/NPCs/Raptor/Raptor/Pawns/BP_PlayerPawn_Raptor.20"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "BP_PlayerPawn_Raptor_C:InheritableComponentHandler:InheritableComponentHandler",
+        "ObjectPath": "/NPCLibrary/NPCs/Raptor/Raptor/Pawns/BP_PlayerPawn_Raptor.11"
+      }
+    }
+  },
+  {
+    "Type": "BP_PlayerPawn_Raptor_C",
+    "Name": "Default__BP_PlayerPawn_Raptor_C",
+    "Properties": {
+      "PatrolAnimSetPairs": [
+        {
+          "WeaponType": "EFortWeaponCoreAnimation::Melee",
+          "DataAsset": {
+            "ObjectName": "MeleePatrolAnimSet:FortPatrolAnimAsset",
+            "ObjectPath": "/Game/Athena/AI/MANG/AnimSet/MeleePatrolAnimSet.0"
+          }
+        },
+        {
+          "WeaponType": "EFortWeaponCoreAnimation::SMG_P90",
+          "DataAsset": {
+            "ObjectName": "SMGCompact_Patrol_AnimSet:FortPatrolAnimAsset",
+            "ObjectPath": "/Game/Athena/AI/MANG/AnimSet/SMGCompact_Patrol_AnimSet.0"
+          }
+        },
+        {
+          "WeaponType": "EFortWeaponCoreAnimation::Consumable_Small",
+          "DataAsset": {
+            "ObjectName": "NoWeaponPatrolAnimSet:FortPatrolAnimAsset",
+            "ObjectPath": "/Game/Athena/AI/MANG/AnimSet/NoWeaponPatrolAnimSet.0"
+          }
+        }
+      ],
+      "InAirAudioComp": {
+        "ObjectName": "Default__BP_PlayerPawn_Raptor_C:InAirAudioComp:AudioComponent",
+        "ObjectPath": "/NPCLibrary/NPCs/Raptor/Raptor/Pawns/BP_PlayerPawn_Raptor.3"
+      },
+      "PSC_PlayerWalkLand": {
+        "ObjectName": "Default__BP_PlayerPawn_Raptor_C:PlayerWalkLandFX:ParticleSystemComponent",
+        "ObjectPath": "/NPCLibrary/NPCs/Raptor/Raptor/Pawns/BP_PlayerPawn_Raptor.17"
+      },
+      "PSC_PlayerRunLand": {
+        "ObjectName": "Default__BP_PlayerPawn_Raptor_C:PlayerRunLandFX:ParticleSystemComponent",
+        "ObjectPath": "/NPCLibrary/NPCs/Raptor/Raptor/Pawns/BP_PlayerPawn_Raptor.15"
+      },
+      "PSC_PlayerSlideLand": {
+        "ObjectName": "Default__BP_PlayerPawn_Raptor_C:PlayerSlideLandFX:ParticleSystemComponent",
+        "ObjectPath": "/NPCLibrary/NPCs/Raptor/Raptor/Pawns/BP_PlayerPawn_Raptor.16"
+      },
+      "PSC_HitDamage": {
+        "ObjectName": "Default__BP_PlayerPawn_Raptor_C:HitDamageFX:ParticleSystemComponent",
+        "ObjectPath": "/NPCLibrary/NPCs/Raptor/Raptor/Pawns/BP_PlayerPawn_Raptor.12"
+      },
+      "ConvertComponent": {
+        "ObjectName": "Default__BP_PlayerPawn_Raptor_C:ConvertComp:FortPawnComponent_Convert",
+        "ObjectPath": "/NPCLibrary/NPCs/Raptor/Raptor/Pawns/BP_PlayerPawn_Raptor.8"
+      },
+      "AffiliationComponent": {
+        "ObjectName": "Default__BP_PlayerPawn_Raptor_C:AffiliationComponent:FortActorComponent_Affiliation",
+        "ObjectPath": "/NPCLibrary/NPCs/Raptor/Raptor/Pawns/BP_PlayerPawn_Raptor.5"
+      },
+      "TetherComponent": {
+        "ObjectName": "Default__BP_PlayerPawn_Raptor_C:TetherComp:FortPawnComponent_Tether",
+        "ObjectPath": "/NPCLibrary/NPCs/Raptor/Raptor/Pawns/BP_PlayerPawn_Raptor.9"
+      },
+      "PSC_PlayerInWater": {
+        "ObjectName": "Default__BP_PlayerPawn_Raptor_C:PlayerInWaterFX:ParticleSystemComponent",
+        "ObjectPath": "/NPCLibrary/NPCs/Raptor/Raptor/Pawns/BP_PlayerPawn_Raptor.13"
+      },
+      "PSC_PlayerInWaterSurfaceSwimming": {
+        "ObjectName": "Default__BP_PlayerPawn_Raptor_C:PlayerInWaterSurfaceSwimmingFX:ParticleSystemComponent",
+        "ObjectPath": "/NPCLibrary/NPCs/Raptor/Raptor/Pawns/BP_PlayerPawn_Raptor.14"
+      },
+      "VocalChords": [
+        {
+          "FeedbackAudioComponent": {
+            "ObjectName": "Default__BP_PlayerPawn_Raptor_C:FeedbackAudioComp0:AudioComponent",
+            "ObjectPath": "/NPCLibrary/NPCs/Raptor/Raptor/Pawns/BP_PlayerPawn_Raptor.2"
+          },
+          "ReplicatedSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          },
+          "PendingSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          },
+          "QueuedSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          },
+          "CurrentSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          }
+        }
+      ],
+      "Mesh": {
+        "ObjectName": "Default__BP_PlayerPawn_Raptor_C:CharacterMesh0:FortPooledSkelMeshComponent",
+        "ObjectPath": "/NPCLibrary/NPCs/Raptor/Raptor/Pawns/BP_PlayerPawn_Raptor.10"
+      },
+      "CharacterMovement": {
+        "ObjectName": "Default__BP_PlayerPawn_Raptor_C:CharMoveComp:FortMovementComp_CharacterAthena",
+        "ObjectPath": "/NPCLibrary/NPCs/Raptor/Raptor/Pawns/BP_PlayerPawn_Raptor.7"
+      },
+      "CapsuleComponent": {
+        "ObjectName": "Default__BP_PlayerPawn_Raptor_C:CollisionCylinder:CapsuleComponent",
+        "ObjectPath": "/NPCLibrary/NPCs/Raptor/Raptor/Pawns/BP_PlayerPawn_Raptor.4"
+      },
+      "RootComponent": {
+        "ObjectName": "Default__BP_PlayerPawn_Raptor_C:CollisionCylinder:CapsuleComponent",
+        "ObjectPath": "/NPCLibrary/NPCs/Raptor/Raptor/Pawns/BP_PlayerPawn_Raptor.4"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "FeedbackAudioComp0",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "Default__BP_PlayerPawn_Raptor_C:CollisionCylinder:CapsuleComponent",
+        "ObjectPath": "/NPCLibrary/NPCs/Raptor/Raptor/Pawns/BP_PlayerPawn_Raptor.4"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "InAirAudioComp",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "Default__BP_PlayerPawn_Raptor_C:CharacterMesh0:FortPooledSkelMeshComponent",
+        "ObjectPath": "/NPCLibrary/NPCs/Raptor/Raptor/Pawns/BP_PlayerPawn_Raptor.10"
+      }
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "CollisionCylinder",
+    "Properties": {}
+  },
+  {
+    "Type": "FortActorComponent_Affiliation",
+    "Name": "AffiliationComponent",
+    "Properties": {}
+  },
+  {
+    "Type": "FortGenericDataStoreManagerComponent",
+    "Name": "GeneralDataStore",
+    "Properties": {}
+  },
+  {
+    "Type": "FortMovementComp_CharacterAthena",
+    "Name": "CharMoveComp",
+    "Properties": {}
+  },
+  {
+    "Type": "FortPawnComponent_Convert",
+    "Name": "ConvertComp",
+    "Properties": {}
+  },
+  {
+    "Type": "FortPawnComponent_Tether",
+    "Name": "TetherComp",
+    "Properties": {}
+  },
+  {
+    "Type": "FortPooledSkelMeshComponent",
+    "Name": "CharacterMesh0",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "Default__BP_PlayerPawn_Raptor_C:CollisionCylinder:CapsuleComponent",
+        "ObjectPath": "/NPCLibrary/NPCs/Raptor/Raptor/Pawns/BP_PlayerPawn_Raptor.4"
+      }
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Properties": {}
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "HitDamageFX",
+    "Properties": {
+      "AutoAttachParent": {
+        "ObjectName": "Default__BP_PlayerPawn_Raptor_C:CollisionCylinder:CapsuleComponent",
+        "ObjectPath": "/NPCLibrary/NPCs/Raptor/Raptor/Pawns/BP_PlayerPawn_Raptor.4"
+      },
+      "AttachParent": {
+        "ObjectName": "Default__BP_PlayerPawn_Raptor_C:CollisionCylinder:CapsuleComponent",
+        "ObjectPath": "/NPCLibrary/NPCs/Raptor/Raptor/Pawns/BP_PlayerPawn_Raptor.4"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "PlayerInWaterFX",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "Default__BP_PlayerPawn_Raptor_C:CollisionCylinder:CapsuleComponent",
+        "ObjectPath": "/NPCLibrary/NPCs/Raptor/Raptor/Pawns/BP_PlayerPawn_Raptor.4"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "PlayerInWaterSurfaceSwimmingFX",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "Default__BP_PlayerPawn_Raptor_C:CollisionCylinder:CapsuleComponent",
+        "ObjectPath": "/NPCLibrary/NPCs/Raptor/Raptor/Pawns/BP_PlayerPawn_Raptor.4"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "PlayerRunLandFX",
+    "Properties": {
+      "AutoAttachParent": {
+        "ObjectName": "Default__BP_PlayerPawn_Raptor_C:CharacterMesh0:FortPooledSkelMeshComponent",
+        "ObjectPath": "/NPCLibrary/NPCs/Raptor/Raptor/Pawns/BP_PlayerPawn_Raptor.10"
+      },
+      "AttachParent": {
+        "ObjectName": "Default__BP_PlayerPawn_Raptor_C:CharacterMesh0:FortPooledSkelMeshComponent",
+        "ObjectPath": "/NPCLibrary/NPCs/Raptor/Raptor/Pawns/BP_PlayerPawn_Raptor.10"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "PlayerSlideLandFX",
+    "Properties": {
+      "AutoAttachParent": {
+        "ObjectName": "Default__BP_PlayerPawn_Raptor_C:CharacterMesh0:FortPooledSkelMeshComponent",
+        "ObjectPath": "/NPCLibrary/NPCs/Raptor/Raptor/Pawns/BP_PlayerPawn_Raptor.10"
+      },
+      "AttachParent": {
+        "ObjectName": "Default__BP_PlayerPawn_Raptor_C:CharacterMesh0:FortPooledSkelMeshComponent",
+        "ObjectPath": "/NPCLibrary/NPCs/Raptor/Raptor/Pawns/BP_PlayerPawn_Raptor.10"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "PlayerWalkLandFX",
+    "Properties": {
+      "AutoAttachParent": {
+        "ObjectName": "Default__BP_PlayerPawn_Raptor_C:CharacterMesh0:FortPooledSkelMeshComponent",
+        "ObjectPath": "/NPCLibrary/NPCs/Raptor/Raptor/Pawns/BP_PlayerPawn_Raptor.10"
+      },
+      "AttachParent": {
+        "ObjectName": "Default__BP_PlayerPawn_Raptor_C:CharacterMesh0:FortPooledSkelMeshComponent",
+        "ObjectPath": "/NPCLibrary/NPCs/Raptor/Raptor/Pawns/BP_PlayerPawn_Raptor.10"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Properties": {}
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "SceneComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_PlayerPawn_Raptor_C:DefaultSceneRoot_GEN_VARIABLE:SceneComponent",
+        "ObjectPath": "/NPCLibrary/NPCs/Raptor/Raptor/Pawns/BP_PlayerPawn_Raptor.18"
+      },
+      "VariableGuid": "C701AEEB-42BC5211-B3F97F8A-DE05B2AB",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SimpleConstructionScript_0:SCS_Node_0:SCS_Node",
+        "ObjectPath": "/NPCLibrary/NPCs/Raptor/Raptor/Pawns/BP_PlayerPawn_Raptor.19"
+      }
+    }
+  }
+]

@@ -1,0 +1,186 @@
+[
+  {
+    "Type": "ConversationDatabase",
+    "Name": "NPCLibrary_Conversation_SnowSniper",
+    "Properties": {
+      "CompilerVersion": 2,
+      "ReachableNodeMap": {
+        "2A96D76F4712911C708EA19B0721C316": {
+          "ObjectName": "NPCLibrary_Conversation_SnowSniper:ConversationEntryPointNode_7:ConversationEntryPointNode",
+          "ObjectPath": "/NPCLibrary/NPCs/SnowSniper/SnowSniper/NPCLibrary_Conversation_SnowSniper.1"
+        },
+        "7A5CE8E247E299D285B0D5A2236F5362": {
+          "ObjectName": "NPCLibrary_Conversation_SnowSniper:Speech_C_4:Speech_C",
+          "ObjectPath": "/NPCLibrary/NPCs/SnowSniper/SnowSniper/NPCLibrary_Conversation_SnowSniper.5"
+        },
+        "002E876E4DD7A25C1DA97BA3ACB28838": {
+          "ObjectName": "NPCLibrary_Conversation_SnowSniper:ConversationLinkNode_0:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/SnowSniper/SnowSniper/NPCLibrary_Conversation_SnowSniper.2"
+        },
+        "724C318447B6FCE751B5C796CB5A3717": {
+          "ObjectName": "NPCLibrary_Conversation_SnowSniper:ConversationLinkNode_1:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/SnowSniper/SnowSniper/NPCLibrary_Conversation_SnowSniper.3"
+        }
+      },
+      "EntryTags": [
+        {
+          "EntryTag": {
+            "TagName": "Conversation.Entry.SnowSniper"
+          },
+          "DestinationList": [
+            "2A96D76F-4712911C-708EA19B-0721C316"
+          ]
+        }
+      ],
+      "ExitTags": [
+        "Conversation.Entry.BasicServices",
+        "Conversation.Entry.NPCLibrary.Quests"
+      ],
+      "InternalNodeIds": [
+        "2A96D76F-4712911C-708EA19B-0721C316",
+        "7A5CE8E2-47E299D2-85B0D5A2-236F5362",
+        "002E876E-4DD7A25C-1DA97BA3-ACB28838",
+        "724C3184-47B6FCE7-51B5C796-CB5A3717"
+      ],
+      "Speakers": [
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.Player"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.406108,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "0068FF"
+          }
+        },
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.NPC"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.065123,
+            "B": 0.1875,
+            "A": 1.0,
+            "Hex": "001130"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ConversationEntryPointNode",
+    "Name": "ConversationEntryPointNode_7",
+    "Properties": {
+      "EntryTag": {
+        "TagName": "Conversation.Entry.SnowSniper"
+      },
+      "OutputConnections": [
+        "7A5CE8E2-47E299D2-85B0D5A2-236F5362"
+      ],
+      "Compiled_NodeGUID": "2A96D76F-4712911C-708EA19B-0721C316"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_0",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.BasicServices"
+      },
+      "Compiled_NodeGUID": "002E876E-4DD7A25C-1DA97BA3-ACB28838"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_1",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.NPCLibrary.Quests"
+      },
+      "Compiled_NodeGUID": "724C3184-47B6FCE7-51B5C796-CB5A3717"
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_IsFirstEverConversationWithNPC",
+    "Name": "FortControllerRequirement_IsFirstEverConversationWithNPC_0",
+    "Properties": {}
+  },
+  {
+    "Type": "Speech_C",
+    "Name": "Speech_C_4",
+    "Properties": {
+      "SpeakerTag": {
+        "TagName": "Conversation.Participant.NPC"
+      },
+      "ListenerTag": {
+        "TagName": "Conversation.Participant.Player"
+      },
+      "GeneralConfig": {
+        "ContextualMessages": [
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "14B5D72F433C4EE38C460C838427A6D1",
+              "SourceString": "Oh hey, you found me."
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_4:FortControllerRequirement_IsFirstEverConversationWithNPC_0:FortControllerRequirement_IsFirstEverConversationWithNPC",
+                  "ObjectPath": "/NPCLibrary/NPCs/SnowSniper/SnowSniper/NPCLibrary_Conversation_SnowSniper.4"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          }
+        ],
+        "DefaultMessage": {
+          "Namespace": "",
+          "Key": "5A193DFB49CC8891D3754BBF5DD4CE1B",
+          "SourceString": "Something you need?"
+        }
+      },
+      "OutputConnections": [
+        "724C3184-47B6FCE7-51B5C796-CB5A3717",
+        "002E876E-4DD7A25C-1DA97BA3-ACB28838"
+      ],
+      "NodeName": "",
+      "Compiled_NodeGUID": "7A5CE8E2-47E299D2-85B0D5A2-236F5362"
+    }
+  }
+]

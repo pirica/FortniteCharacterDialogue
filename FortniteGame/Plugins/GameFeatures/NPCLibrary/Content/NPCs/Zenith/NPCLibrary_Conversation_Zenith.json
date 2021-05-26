@@ -1,0 +1,240 @@
+[
+  {
+    "Type": "ConversationDatabase",
+    "Name": "NPCLibrary_Conversation_Zenith",
+    "Properties": {
+      "CompilerVersion": 2,
+      "ReachableNodeMap": {
+        "AA5FC87B4B83F0840B4536BFC4F052EA": {
+          "ObjectName": "NPCLibrary_Conversation_Zenith:ConversationEntryPointNode_7:ConversationEntryPointNode",
+          "ObjectPath": "/NPCLibrary/NPCs/Zenith/NPCLibrary_Conversation_Zenith.1"
+        },
+        "E62436ED44D7F31E023DF49763C269A7": {
+          "ObjectName": "NPCLibrary_Conversation_Zenith:Speech_C_4:Speech_C",
+          "ObjectPath": "/NPCLibrary/NPCs/Zenith/NPCLibrary_Conversation_Zenith.6"
+        },
+        "F8C55743470D5F40A073FCA2CDA2CAC1": {
+          "ObjectName": "NPCLibrary_Conversation_Zenith:ConversationLinkNode_0:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/Zenith/NPCLibrary_Conversation_Zenith.2"
+        },
+        "C1D105CB4D6CE5B304C403A7B2227BCE": {
+          "ObjectName": "NPCLibrary_Conversation_Zenith:ConversationLinkNode_1:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/Zenith/NPCLibrary_Conversation_Zenith.3"
+        }
+      },
+      "EntryTags": [
+        {
+          "EntryTag": {
+            "TagName": "Conversation.Entry.Zenith"
+          },
+          "DestinationList": [
+            "AA5FC87B-4B83F084-0B4536BF-C4F052EA"
+          ]
+        }
+      ],
+      "ExitTags": [
+        "Conversation.Entry.BasicServices",
+        "Conversation.Entry.NPCLibrary.Quests"
+      ],
+      "InternalNodeIds": [
+        "AA5FC87B-4B83F084-0B4536BF-C4F052EA",
+        "E62436ED-44D7F31E-023DF497-63C269A7",
+        "F8C55743-470D5F40-A073FCA2-CDA2CAC1",
+        "C1D105CB-4D6CE5B3-04C403A7-B2227BCE"
+      ],
+      "Speakers": [
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.Player"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.406108,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "0068FF"
+          }
+        },
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.NPC"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.065123,
+            "B": 0.1875,
+            "A": 1.0,
+            "Hex": "001130"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ConversationEntryPointNode",
+    "Name": "ConversationEntryPointNode_7",
+    "Properties": {
+      "EntryTag": {
+        "TagName": "Conversation.Entry.Zenith"
+      },
+      "OutputConnections": [
+        "E62436ED-44D7F31E-023DF497-63C269A7"
+      ],
+      "Compiled_NodeGUID": "AA5FC87B-4B83F084-0B4536BF-C4F052EA"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_0",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.BasicServices"
+      },
+      "Compiled_NodeGUID": "F8C55743-470D5F40-A073FCA2-CDA2CAC1"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_1",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.NPCLibrary.Quests"
+      },
+      "Compiled_NodeGUID": "C1D105CB-4D6CE5B3-04C403A7-B2227BCE"
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_HasCID",
+    "Name": "FortControllerRequirement_HasCID_0",
+    "Properties": {
+      "AllowedCIDs": [
+        {
+          "AssetPathName": "/Game/Athena/Items/Cosmetics/Characters/CID_278_Athena_Commando_M_Yeti.CID_278_Athena_Commando_M_Yeti",
+          "SubPathString": ""
+        }
+      ]
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_IsFirstEverConversationWithNPC",
+    "Name": "FortControllerRequirement_IsFirstEverConversationWithNPC_0",
+    "Properties": {}
+  },
+  {
+    "Type": "Speech_C",
+    "Name": "Speech_C_4",
+    "Properties": {
+      "SpeakerTag": {
+        "TagName": "Conversation.Participant.NPC"
+      },
+      "ListenerTag": {
+        "TagName": "Conversation.Participant.Player"
+      },
+      "GeneralConfig": {
+        "ContextualMessages": [
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "B48ACCD3464B2A06912E9A9403FB5B36",
+              "SourceString": "Oh hey pal. We need to play poker again sometime."
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_4:FortControllerRequirement_HasCID_0:FortControllerRequirement_HasCID",
+                  "ObjectPath": "/NPCLibrary/NPCs/Zenith/NPCLibrary_Conversation_Zenith.4"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.OutfitReaction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "F429EE43467836D4C162C4AFCD1AECB1",
+              "SourceString": "Just needed a minute away from the action, huh? I get that."
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_4:FortControllerRequirement_IsFirstEverConversationWithNPC_0:FortControllerRequirement_IsFirstEverConversationWithNPC",
+                  "ObjectPath": "/NPCLibrary/NPCs/Zenith/NPCLibrary_Conversation_Zenith.5"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          }
+        ],
+        "DefaultMessage": {
+          "Namespace": "",
+          "Key": "F115131A418C1C2C8D1BA0A7A9B375D3",
+          "SourceString": "I love how <b>quiet</> it is up here."
+        }
+      },
+      "OutputConnections": [
+        "C1D105CB-4D6CE5B3-04C403A7-B2227BCE",
+        "F8C55743-470D5F40-A073FCA2-CDA2CAC1"
+      ],
+      "NodeName": "",
+      "Compiled_NodeGUID": "E62436ED-44D7F31E-023DF497-63C269A7"
+    }
+  }
+]

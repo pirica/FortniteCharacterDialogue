@@ -1,0 +1,203 @@
+[
+  {
+    "Type": "ConversationDatabase",
+    "Name": "NPCLibrary_Conversation_Obsidian",
+    "Properties": {
+      "CompilerVersion": 2,
+      "ReachableNodeMap": {
+        "51F15105414F0785283F1FA6534D167F": {
+          "ObjectName": "NPCLibrary_Conversation_Obsidian:ConversationEntryPointNode_7:ConversationEntryPointNode",
+          "ObjectPath": "/NPCLibrary/NPCs/Obsidian/Obsidian/NPCLibrary_Conversation_Obsidian.1"
+        },
+        "D0350F5141750AF21CAA3BA478B1FB89": {
+          "ObjectName": "NPCLibrary_Conversation_Obsidian:Speech_C_4:Speech_C",
+          "ObjectPath": "/NPCLibrary/NPCs/Obsidian/Obsidian/NPCLibrary_Conversation_Obsidian.6"
+        },
+        "56AC163A4D1605F912391BA0CB8B61BB": {
+          "ObjectName": "NPCLibrary_Conversation_Obsidian:ConversationLinkNode_0:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/Obsidian/Obsidian/NPCLibrary_Conversation_Obsidian.2"
+        },
+        "BCD37DAA41714032D59B7ABF9752C62F": {
+          "ObjectName": "NPCLibrary_Conversation_Obsidian:ConversationLinkNode_1:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/Obsidian/Obsidian/NPCLibrary_Conversation_Obsidian.3"
+        },
+        "781C55684AD1C419C3661DB1CCB39851": {
+          "ObjectName": "NPCLibrary_Conversation_Obsidian:ConversationLinkNode_2:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/Obsidian/Obsidian/NPCLibrary_Conversation_Obsidian.4"
+        }
+      },
+      "EntryTags": [
+        {
+          "EntryTag": {
+            "TagName": "Conversation.Entry.Obsidian"
+          },
+          "DestinationList": [
+            "51F15105-414F0785-283F1FA6-534D167F"
+          ]
+        }
+      ],
+      "ExitTags": [
+        "Conversation.Entry.BasicServices",
+        "Conversation.Entry.NPCLibrary.Quests",
+        "Conversation.Entry.Season16.TheSpire.NewManagement"
+      ],
+      "InternalNodeIds": [
+        "51F15105-414F0785-283F1FA6-534D167F",
+        "D0350F51-41750AF2-1CAA3BA4-78B1FB89",
+        "56AC163A-4D1605F9-12391BA0-CB8B61BB",
+        "BCD37DAA-41714032-D59B7ABF-9752C62F",
+        "781C5568-4AD1C419-C3661DB1-CCB39851"
+      ],
+      "Speakers": [
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.Player"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.406108,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "0068FF"
+          }
+        },
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.NPC"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.065123,
+            "B": 0.1875,
+            "A": 1.0,
+            "Hex": "001130"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ConversationEntryPointNode",
+    "Name": "ConversationEntryPointNode_7",
+    "Properties": {
+      "EntryTag": {
+        "TagName": "Conversation.Entry.Obsidian"
+      },
+      "OutputConnections": [
+        "D0350F51-41750AF2-1CAA3BA4-78B1FB89"
+      ],
+      "Compiled_NodeGUID": "51F15105-414F0785-283F1FA6-534D167F"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_0",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.BasicServices"
+      },
+      "Compiled_NodeGUID": "56AC163A-4D1605F9-12391BA0-CB8B61BB"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_1",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.NPCLibrary.Quests"
+      },
+      "Compiled_NodeGUID": "BCD37DAA-41714032-D59B7ABF-9752C62F"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_2",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.Season16.TheSpire.NewManagement"
+      },
+      "Compiled_NodeGUID": "781C5568-4AD1C419-C3661DB1-CCB39851"
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_IsFirstEverConversationWithNPC",
+    "Name": "FortControllerRequirement_IsFirstEverConversationWithNPC_0",
+    "Properties": {}
+  },
+  {
+    "Type": "Speech_C",
+    "Name": "Speech_C_4",
+    "Properties": {
+      "SpeakerTag": {
+        "TagName": "Conversation.Participant.NPC"
+      },
+      "ListenerTag": {
+        "TagName": "Conversation.Participant.Player"
+      },
+      "GeneralConfig": {
+        "ContextualMessages": [
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "569B4B8F48A128E6FFEBEA9DD5B4155B",
+              "SourceString": "Don't think we've met before. Not on this timeline, anyway."
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_4:FortControllerRequirement_IsFirstEverConversationWithNPC_0:FortControllerRequirement_IsFirstEverConversationWithNPC",
+                  "ObjectPath": "/NPCLibrary/NPCs/Obsidian/Obsidian/NPCLibrary_Conversation_Obsidian.5"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          }
+        ],
+        "DefaultMessage": {
+          "Namespace": "",
+          "Key": "3DA61FF8443CBFF33EBC30A2B6DA817E",
+          "SourceString": "I sure hope this is important."
+        }
+      },
+      "OutputConnections": [
+        "781C5568-4AD1C419-C3661DB1-CCB39851",
+        "BCD37DAA-41714032-D59B7ABF-9752C62F",
+        "56AC163A-4D1605F9-12391BA0-CB8B61BB"
+      ],
+      "NodeName": "",
+      "Compiled_NodeGUID": "D0350F51-41750AF2-1CAA3BA4-78B1FB89"
+    }
+  }
+]

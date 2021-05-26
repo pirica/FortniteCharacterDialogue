@@ -1,0 +1,130 @@
+[
+  {
+    "Type": "ConversationDatabase",
+    "Name": "NPCLibrary_Conversation_TandemTestServices",
+    "Properties": {
+      "CompilerVersion": 2,
+      "ReachableNodeMap": {
+        "ABFD7C4F4FD473ED93AC1A862AB9C012": {
+          "ObjectName": "NPCLibrary_Conversation_TandemTestServices:ConversationEntryPointNode_7:ConversationEntryPointNode",
+          "ObjectPath": "/NPCLibrary/NPCs/TandemTestServices/NPCLibrary_Conversation_TandemTestServices.1"
+        },
+        "D1AF3BC04A24FC7DE28A74AE09C91F2F": {
+          "ObjectName": "NPCLibrary_Conversation_TandemTestServices:Speech_C_4:Speech_C",
+          "ObjectPath": "/NPCLibrary/NPCs/TandemTestServices/NPCLibrary_Conversation_TandemTestServices.4"
+        },
+        "B7A91E324B614E04EC99B8BF2D60B573": {
+          "ObjectName": "NPCLibrary_Conversation_TandemTestServices:ConversationLinkNode_0:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/TandemTestServices/NPCLibrary_Conversation_TandemTestServices.2"
+        },
+        "138BB3D242A138E2F439CC97BBBDACC6": {
+          "ObjectName": "NPCLibrary_Conversation_TandemTestServices:ConversationLinkNode_1:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/TandemTestServices/NPCLibrary_Conversation_TandemTestServices.3"
+        }
+      },
+      "EntryTags": [
+        {
+          "EntryTag": {
+            "TagName": "Conversation.Entry.TandemTestServices"
+          },
+          "DestinationList": [
+            "ABFD7C4F-4FD473ED-93AC1A86-2AB9C012"
+          ]
+        }
+      ],
+      "ExitTags": [
+        "Conversation.Entry.BasicServices",
+        "Conversation.Entry.NPCLibrary.Quests"
+      ],
+      "InternalNodeIds": [
+        "ABFD7C4F-4FD473ED-93AC1A86-2AB9C012",
+        "D1AF3BC0-4A24FC7D-E28A74AE-09C91F2F",
+        "B7A91E32-4B614E04-EC99B8BF-2D60B573",
+        "138BB3D2-42A138E2-F439CC97-BBBDACC6"
+      ],
+      "Speakers": [
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.Player"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.406108,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "0068FF"
+          }
+        },
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.NPC"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.065123,
+            "B": 0.1875,
+            "A": 1.0,
+            "Hex": "001130"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ConversationEntryPointNode",
+    "Name": "ConversationEntryPointNode_7",
+    "Properties": {
+      "EntryTag": {
+        "TagName": "Conversation.Entry.TandemTestServices"
+      },
+      "OutputConnections": [
+        "D1AF3BC0-4A24FC7D-E28A74AE-09C91F2F"
+      ],
+      "Compiled_NodeGUID": "ABFD7C4F-4FD473ED-93AC1A86-2AB9C012"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_0",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.BasicServices"
+      },
+      "Compiled_NodeGUID": "B7A91E32-4B614E04-EC99B8BF-2D60B573"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_1",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.NPCLibrary.Quests"
+      },
+      "Compiled_NodeGUID": "138BB3D2-42A138E2-F439CC97-BBBDACC6"
+    }
+  },
+  {
+    "Type": "Speech_C",
+    "Name": "Speech_C_4",
+    "Properties": {
+      "SpeakerTag": {
+        "TagName": "Conversation.Participant.NPC"
+      },
+      "ListenerTag": {
+        "TagName": "Conversation.Participant.Player"
+      },
+      "OutputConnections": [
+        "138BB3D2-42A138E2-F439CC97-BBBDACC6",
+        "B7A91E32-4B614E04-EC99B8BF-2D60B573"
+      ],
+      "NodeName": "",
+      "Compiled_NodeGUID": "D1AF3BC0-4A24FC7D-E28A74AE-09C91F2F"
+    }
+  }
+]

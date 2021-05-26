@@ -1,0 +1,306 @@
+[
+  {
+    "Type": "ConversationDatabase",
+    "Name": "NPCLibrary_Conversation_Cobb",
+    "Properties": {
+      "CompilerVersion": 2,
+      "ReachableNodeMap": {
+        "399CA0E042DCB0172D2393A00B14F4E9": {
+          "ObjectName": "NPCLibrary_Conversation_Cobb:ConversationEntryPointNode_7:ConversationEntryPointNode",
+          "ObjectPath": "/NPCLibrary/NPCs/Cobb/Cobb/NPCLibrary_Conversation_Cobb.1"
+        },
+        "144F3B1947836D3B9135EBBDED188C33": {
+          "ObjectName": "NPCLibrary_Conversation_Cobb:Speech_C_4:Speech_C",
+          "ObjectPath": "/NPCLibrary/NPCs/Cobb/Cobb/NPCLibrary_Conversation_Cobb.8"
+        },
+        "9917589D441D6F2292822DBBD30AAF95": {
+          "ObjectName": "NPCLibrary_Conversation_Cobb:ConversationLinkNode_0:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/Cobb/Cobb/NPCLibrary_Conversation_Cobb.2"
+        },
+        "F688D0CC438727B337057595DF71CACD": {
+          "ObjectName": "NPCLibrary_Conversation_Cobb:ConversationLinkNode_1:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/Cobb/Cobb/NPCLibrary_Conversation_Cobb.3"
+        },
+        "2FE50ECE4B9E75B06488D4B9BDEC6D73": {
+          "ObjectName": "NPCLibrary_Conversation_Cobb:ConversationLinkNode_2:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/Cobb/Cobb/NPCLibrary_Conversation_Cobb.4"
+        }
+      },
+      "EntryTags": [
+        {
+          "EntryTag": {
+            "TagName": "Conversation.Entry.Cobb"
+          },
+          "DestinationList": [
+            "399CA0E0-42DCB017-2D2393A0-0B14F4E9"
+          ]
+        }
+      ],
+      "ExitTags": [
+        "Conversation.Entry.BasicServices",
+        "Conversation.Entry.NPCLibrary.Quests",
+        "Conversation.Entry.Season16.TheSpire.NewManagement"
+      ],
+      "InternalNodeIds": [
+        "399CA0E0-42DCB017-2D2393A0-0B14F4E9",
+        "144F3B19-47836D3B-9135EBBD-ED188C33",
+        "9917589D-441D6F22-92822DBB-D30AAF95",
+        "F688D0CC-438727B3-37057595-DF71CACD",
+        "2FE50ECE-4B9E75B0-6488D4B9-BDEC6D73"
+      ],
+      "Speakers": [
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.Player"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.406108,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "0068FF"
+          }
+        },
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.NPC"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.065123,
+            "B": 0.1875,
+            "A": 1.0,
+            "Hex": "001130"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ConversationEntryPointNode",
+    "Name": "ConversationEntryPointNode_7",
+    "Properties": {
+      "EntryTag": {
+        "TagName": "Conversation.Entry.Cobb"
+      },
+      "OutputConnections": [
+        "144F3B19-47836D3B-9135EBBD-ED188C33"
+      ],
+      "Compiled_NodeGUID": "399CA0E0-42DCB017-2D2393A0-0B14F4E9"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_0",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.BasicServices"
+      },
+      "Compiled_NodeGUID": "9917589D-441D6F22-92822DBB-D30AAF95"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_1",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.NPCLibrary.Quests"
+      },
+      "Compiled_NodeGUID": "F688D0CC-438727B3-37057595-DF71CACD"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_2",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.Season16.TheSpire.NewManagement"
+      },
+      "Compiled_NodeGUID": "2FE50ECE-4B9E75B0-6488D4B9-BDEC6D73"
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch",
+    "Name": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0",
+    "Properties": {
+      "days": 7
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_HasCID",
+    "Name": "FortControllerRequirement_HasCID_0",
+    "Properties": {
+      "AllowedCIDs": [
+        {
+          "AssetPathName": "/Game/Athena/Items/Cosmetics/Characters/CID_714_Athena_Commando_M_AnarchyAcresFarmer.CID_714_Athena_Commando_M_AnarchyAcresFarmer",
+          "SubPathString": ""
+        }
+      ]
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_IsFirstEverConversationWithNPC",
+    "Name": "FortControllerRequirement_IsFirstEverConversationWithNPC_0",
+    "Properties": {}
+  },
+  {
+    "Type": "Speech_C",
+    "Name": "Speech_C_4",
+    "Properties": {
+      "SpeakerTag": {
+        "TagName": "Conversation.Participant.NPC"
+      },
+      "ListenerTag": {
+        "TagName": "Conversation.Participant.Player"
+      },
+      "GeneralConfig": {
+        "ContextualMessages": [
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "78270BDD4801F6BA66ECF2B186C94C91",
+              "SourceString": "*smiles warmly at your return*"
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_4:FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0:FortControllerRequirement_CheckTimeSinceLastPlayedMatch",
+                  "ObjectPath": "/NPCLibrary/NPCs/Cobb/Cobb/NPCLibrary_Conversation_Cobb.5"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.WhileSincePlayed"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "6ACA688248019B7A6B4113B6EE4BFA70",
+              "SourceString": "*unsettling smile for a new arrival*"
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_4:FortControllerRequirement_IsFirstEverConversationWithNPC_0:FortControllerRequirement_IsFirstEverConversationWithNPC",
+                  "ObjectPath": "/NPCLibrary/NPCs/Cobb/Cobb/NPCLibrary_Conversation_Cobb.7"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "E318EF0E4632DAE77F16D9BCBE96F90D",
+              "SourceString": "*unsettling smile grows*"
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_4:FortControllerRequirement_HasCID_0:FortControllerRequirement_HasCID",
+                  "ObjectPath": "/NPCLibrary/NPCs/Cobb/Cobb/NPCLibrary_Conversation_Cobb.6"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.OutfitReaction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          }
+        ],
+        "DefaultMessage": {
+          "Namespace": "",
+          "Key": "DAA0B9604E6207719E960E80D142AE88",
+          "SourceString": "*unsettling smile*"
+        }
+      },
+      "OutputConnections": [
+        "2FE50ECE-4B9E75B0-6488D4B9-BDEC6D73",
+        "F688D0CC-438727B3-37057595-DF71CACD",
+        "9917589D-441D6F22-92822DBB-D30AAF95"
+      ],
+      "NodeName": "",
+      "Compiled_NodeGUID": "144F3B19-47836D3B-9135EBBD-ED188C33"
+    }
+  }
+]

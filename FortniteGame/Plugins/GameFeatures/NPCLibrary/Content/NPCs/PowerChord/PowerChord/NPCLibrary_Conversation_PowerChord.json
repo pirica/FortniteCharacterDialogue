@@ -1,0 +1,240 @@
+[
+  {
+    "Type": "ConversationDatabase",
+    "Name": "NPCLibrary_Conversation_PowerChord",
+    "Properties": {
+      "CompilerVersion": 2,
+      "ReachableNodeMap": {
+        "44D9AA234DC4E0BAA4A2FEA403F7369D": {
+          "ObjectName": "NPCLibrary_Conversation_PowerChord:ConversationEntryPointNode_7:ConversationEntryPointNode",
+          "ObjectPath": "/NPCLibrary/NPCs/PowerChord/PowerChord/NPCLibrary_Conversation_PowerChord.1"
+        },
+        "09C3D729424C61CD4EA117BED27B197E": {
+          "ObjectName": "NPCLibrary_Conversation_PowerChord:Speech_C_4:Speech_C",
+          "ObjectPath": "/NPCLibrary/NPCs/PowerChord/PowerChord/NPCLibrary_Conversation_PowerChord.6"
+        },
+        "2ABFE97D4359555EC394DD8403D3673A": {
+          "ObjectName": "NPCLibrary_Conversation_PowerChord:ConversationLinkNode_0:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/PowerChord/PowerChord/NPCLibrary_Conversation_PowerChord.2"
+        },
+        "BBD2AC99401BF1071DEE11AD35E9008F": {
+          "ObjectName": "NPCLibrary_Conversation_PowerChord:ConversationLinkNode_1:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/PowerChord/PowerChord/NPCLibrary_Conversation_PowerChord.3"
+        }
+      },
+      "EntryTags": [
+        {
+          "EntryTag": {
+            "TagName": "Conversation.Entry.PowerChord"
+          },
+          "DestinationList": [
+            "44D9AA23-4DC4E0BA-A4A2FEA4-03F7369D"
+          ]
+        }
+      ],
+      "ExitTags": [
+        "Conversation.Entry.BasicServices",
+        "Conversation.Entry.NPCLibrary.Quests"
+      ],
+      "InternalNodeIds": [
+        "44D9AA23-4DC4E0BA-A4A2FEA4-03F7369D",
+        "09C3D729-424C61CD-4EA117BE-D27B197E",
+        "2ABFE97D-4359555E-C394DD84-03D3673A",
+        "BBD2AC99-401BF107-1DEE11AD-35E9008F"
+      ],
+      "Speakers": [
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.Player"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.406108,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "0068FF"
+          }
+        },
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.NPC"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.065123,
+            "B": 0.1875,
+            "A": 1.0,
+            "Hex": "001130"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ConversationEntryPointNode",
+    "Name": "ConversationEntryPointNode_7",
+    "Properties": {
+      "EntryTag": {
+        "TagName": "Conversation.Entry.PowerChord"
+      },
+      "OutputConnections": [
+        "09C3D729-424C61CD-4EA117BE-D27B197E"
+      ],
+      "Compiled_NodeGUID": "44D9AA23-4DC4E0BA-A4A2FEA4-03F7369D"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_0",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.BasicServices"
+      },
+      "Compiled_NodeGUID": "2ABFE97D-4359555E-C394DD84-03D3673A"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_1",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.NPCLibrary.Quests"
+      },
+      "Compiled_NodeGUID": "BBD2AC99-401BF107-1DEE11AD-35E9008F"
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_HasCID",
+    "Name": "FortControllerRequirement_HasCID_0",
+    "Properties": {
+      "AllowedCIDs": [
+        {
+          "AssetPathName": "/Game/Athena/Items/Cosmetics/Characters/CID_719_Athena_Commando_F_Blonde.CID_719_Athena_Commando_F_Blonde",
+          "SubPathString": ""
+        }
+      ]
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_IsFirstEverConversationWithNPC",
+    "Name": "FortControllerRequirement_IsFirstEverConversationWithNPC_0",
+    "Properties": {}
+  },
+  {
+    "Type": "Speech_C",
+    "Name": "Speech_C_4",
+    "Properties": {
+      "SpeakerTag": {
+        "TagName": "Conversation.Participant.NPC"
+      },
+      "ListenerTag": {
+        "TagName": "Conversation.Participant.Player"
+      },
+      "GeneralConfig": {
+        "ContextualMessages": [
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "0959E4394BA1458739DE1F82953CDD0D",
+              "SourceString": "You better not be a poser."
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_4:FortControllerRequirement_IsFirstEverConversationWithNPC_0:FortControllerRequirement_IsFirstEverConversationWithNPC",
+                  "ObjectPath": "/NPCLibrary/NPCs/PowerChord/PowerChord/NPCLibrary_Conversation_PowerChord.5"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "B8841898497C65E95FD7D7BAF0739922",
+              "SourceString": "You made it too, sis?! Absolutely <b>wicked!</>"
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_4:FortControllerRequirement_HasCID_0:FortControllerRequirement_HasCID",
+                  "ObjectPath": "/NPCLibrary/NPCs/PowerChord/PowerChord/NPCLibrary_Conversation_PowerChord.4"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.OutfitReaction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          }
+        ],
+        "DefaultMessage": {
+          "Namespace": "",
+          "Key": "CE008D1946FD4694A66C2E85BCB39826",
+          "SourceString": "<enemy>ANARCHY!</>"
+        }
+      },
+      "OutputConnections": [
+        "BBD2AC99-401BF107-1DEE11AD-35E9008F",
+        "2ABFE97D-4359555E-C394DD84-03D3673A"
+      ],
+      "NodeName": "",
+      "Compiled_NodeGUID": "09C3D729-424C61CD-4EA117BE-D27B197E"
+    }
+  }
+]

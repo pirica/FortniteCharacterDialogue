@@ -1,0 +1,186 @@
+[
+  {
+    "Type": "ConversationDatabase",
+    "Name": "NPCLibrary_Conversation_GoldenSkeleton",
+    "Properties": {
+      "CompilerVersion": 2,
+      "ReachableNodeMap": {
+        "28EC0EF6478C32728C419892AA12308E": {
+          "ObjectName": "NPCLibrary_Conversation_GoldenSkeleton:ConversationEntryPointNode_7:ConversationEntryPointNode",
+          "ObjectPath": "/NPCLibrary/NPCs/GoldenSkeleton/NPCLibrary_Conversation_GoldenSkeleton.1"
+        },
+        "69039BF74B4094348A30B786B0F8AD9E": {
+          "ObjectName": "NPCLibrary_Conversation_GoldenSkeleton:Speech_C_4:Speech_C",
+          "ObjectPath": "/NPCLibrary/NPCs/GoldenSkeleton/NPCLibrary_Conversation_GoldenSkeleton.5"
+        },
+        "579754804D22DAA492ED5C89B2A1E343": {
+          "ObjectName": "NPCLibrary_Conversation_GoldenSkeleton:ConversationLinkNode_0:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/GoldenSkeleton/NPCLibrary_Conversation_GoldenSkeleton.2"
+        },
+        "139361524C50450FFC7DBDBC0AE347B7": {
+          "ObjectName": "NPCLibrary_Conversation_GoldenSkeleton:ConversationLinkNode_1:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/GoldenSkeleton/NPCLibrary_Conversation_GoldenSkeleton.3"
+        }
+      },
+      "EntryTags": [
+        {
+          "EntryTag": {
+            "TagName": "Conversation.Entry.GoldenSkeleton"
+          },
+          "DestinationList": [
+            "28EC0EF6-478C3272-8C419892-AA12308E"
+          ]
+        }
+      ],
+      "ExitTags": [
+        "Conversation.Entry.BasicServices",
+        "Conversation.Entry.NPCLibrary.Quests"
+      ],
+      "InternalNodeIds": [
+        "28EC0EF6-478C3272-8C419892-AA12308E",
+        "69039BF7-4B409434-8A30B786-B0F8AD9E",
+        "57975480-4D22DAA4-92ED5C89-B2A1E343",
+        "13936152-4C50450F-FC7DBDBC-0AE347B7"
+      ],
+      "Speakers": [
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.Player"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.406108,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "0068FF"
+          }
+        },
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.NPC"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.065123,
+            "B": 0.1875,
+            "A": 1.0,
+            "Hex": "001130"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ConversationEntryPointNode",
+    "Name": "ConversationEntryPointNode_7",
+    "Properties": {
+      "EntryTag": {
+        "TagName": "Conversation.Entry.GoldenSkeleton"
+      },
+      "OutputConnections": [
+        "69039BF7-4B409434-8A30B786-B0F8AD9E"
+      ],
+      "Compiled_NodeGUID": "28EC0EF6-478C3272-8C419892-AA12308E"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_0",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.BasicServices"
+      },
+      "Compiled_NodeGUID": "57975480-4D22DAA4-92ED5C89-B2A1E343"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_1",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.NPCLibrary.Quests"
+      },
+      "Compiled_NodeGUID": "13936152-4C50450F-FC7DBDBC-0AE347B7"
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_IsFirstEverConversationWithNPC",
+    "Name": "FortControllerRequirement_IsFirstEverConversationWithNPC_0",
+    "Properties": {}
+  },
+  {
+    "Type": "Speech_C",
+    "Name": "Speech_C_4",
+    "Properties": {
+      "SpeakerTag": {
+        "TagName": "Conversation.Participant.NPC"
+      },
+      "ListenerTag": {
+        "TagName": "Conversation.Participant.Player"
+      },
+      "GeneralConfig": {
+        "ContextualMessages": [
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "9E7CDDFD454104178EF860AC5734EEFF",
+              "SourceString": "....tribuuuute...."
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_4:FortControllerRequirement_IsFirstEverConversationWithNPC_0:FortControllerRequirement_IsFirstEverConversationWithNPC",
+                  "ObjectPath": "/NPCLibrary/NPCs/GoldenSkeleton/NPCLibrary_Conversation_GoldenSkeleton.4"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          }
+        ],
+        "DefaultMessage": {
+          "Namespace": "",
+          "Key": "D018BD7B48C81084AFC88681B8795D05",
+          "SourceString": "....tribuuuute...."
+        }
+      },
+      "OutputConnections": [
+        "13936152-4C50450F-FC7DBDBC-0AE347B7",
+        "57975480-4D22DAA4-92ED5C89-B2A1E343"
+      ],
+      "NodeName": "",
+      "Compiled_NodeGUID": "69039BF7-4B409434-8A30B786-B0F8AD9E"
+    }
+  }
+]

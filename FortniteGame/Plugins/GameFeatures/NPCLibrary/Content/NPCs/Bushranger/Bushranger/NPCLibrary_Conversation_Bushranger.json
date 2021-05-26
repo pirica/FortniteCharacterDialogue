@@ -1,0 +1,289 @@
+[
+  {
+    "Type": "ConversationDatabase",
+    "Name": "NPCLibrary_Conversation_Bushranger",
+    "Properties": {
+      "CompilerVersion": 2,
+      "ReachableNodeMap": {
+        "65E07EF84AE24E1984060AA27621CD66": {
+          "ObjectName": "NPCLibrary_Conversation_Bushranger:ConversationEntryPointNode_7:ConversationEntryPointNode",
+          "ObjectPath": "/NPCLibrary/NPCs/Bushranger/Bushranger/NPCLibrary_Conversation_Bushranger.1"
+        },
+        "D1D5368B4B0DA52A63CE95B2CFC30E50": {
+          "ObjectName": "NPCLibrary_Conversation_Bushranger:Speech_C_4:Speech_C",
+          "ObjectPath": "/NPCLibrary/NPCs/Bushranger/Bushranger/NPCLibrary_Conversation_Bushranger.7"
+        },
+        "F080EB5C4A53B0DF33602A885F34E19C": {
+          "ObjectName": "NPCLibrary_Conversation_Bushranger:ConversationLinkNode_0:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/Bushranger/Bushranger/NPCLibrary_Conversation_Bushranger.2"
+        },
+        "D77EFC884948D52B8A96A395B733B158": {
+          "ObjectName": "NPCLibrary_Conversation_Bushranger:ConversationLinkNode_1:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/Bushranger/Bushranger/NPCLibrary_Conversation_Bushranger.3"
+        }
+      },
+      "EntryTags": [
+        {
+          "EntryTag": {
+            "TagName": "Conversation.Entry.Bushranger"
+          },
+          "DestinationList": [
+            "65E07EF8-4AE24E19-84060AA2-7621CD66"
+          ]
+        }
+      ],
+      "ExitTags": [
+        "Conversation.Entry.BasicServices",
+        "Conversation.Entry.NPCLibrary.Quests"
+      ],
+      "InternalNodeIds": [
+        "65E07EF8-4AE24E19-84060AA2-7621CD66",
+        "D1D5368B-4B0DA52A-63CE95B2-CFC30E50",
+        "F080EB5C-4A53B0DF-33602A88-5F34E19C",
+        "D77EFC88-4948D52B-8A96A395-B733B158"
+      ],
+      "Speakers": [
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.Player"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.406108,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "0068FF"
+          }
+        },
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.NPC"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.065123,
+            "B": 0.1875,
+            "A": 1.0,
+            "Hex": "001130"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ConversationEntryPointNode",
+    "Name": "ConversationEntryPointNode_7",
+    "Properties": {
+      "EntryTag": {
+        "TagName": "Conversation.Entry.Bushranger"
+      },
+      "OutputConnections": [
+        "D1D5368B-4B0DA52A-63CE95B2-CFC30E50"
+      ],
+      "Compiled_NodeGUID": "65E07EF8-4AE24E19-84060AA2-7621CD66"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_0",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.BasicServices"
+      },
+      "Compiled_NodeGUID": "F080EB5C-4A53B0DF-33602A88-5F34E19C"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_1",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.NPCLibrary.Quests"
+      },
+      "Compiled_NodeGUID": "D77EFC88-4948D52B-8A96A395-B733B158"
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch",
+    "Name": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0",
+    "Properties": {
+      "days": 7
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_HasCID",
+    "Name": "FortControllerRequirement_HasCID_0",
+    "Properties": {
+      "AllowedCIDs": [
+        {
+          "AssetPathName": "/Game/Athena/Items/Cosmetics/Characters/CID_NPC_Athena_Commando_M_Kyle.CID_NPC_Athena_Commando_M_Kyle",
+          "SubPathString": ""
+        }
+      ]
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_IsFirstEverConversationWithNPC",
+    "Name": "FortControllerRequirement_IsFirstEverConversationWithNPC_0",
+    "Properties": {}
+  },
+  {
+    "Type": "Speech_C",
+    "Name": "Speech_C_4",
+    "Properties": {
+      "SpeakerTag": {
+        "TagName": "Conversation.Participant.NPC"
+      },
+      "ListenerTag": {
+        "TagName": "Conversation.Participant.Player"
+      },
+      "GeneralConfig": {
+        "ContextualMessages": [
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "3F00952E464C93A012F4DDBC69DCC629",
+              "SourceString": "Friend back! Friend back! <b>Yay!</> No see long time!"
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_4:FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0:FortControllerRequirement_CheckTimeSinceLastPlayedMatch",
+                  "ObjectPath": "/NPCLibrary/NPCs/Bushranger/Bushranger/NPCLibrary_Conversation_Bushranger.4"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.WhileSincePlayed"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "4055A76F499F8C6AB73A109E23CAC0FF",
+              "SourceString": "Welcomewelcomewelcome!"
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_4:FortControllerRequirement_IsFirstEverConversationWithNPC_0:FortControllerRequirement_IsFirstEverConversationWithNPC",
+                  "ObjectPath": "/NPCLibrary/NPCs/Bushranger/Bushranger/NPCLibrary_Conversation_Bushranger.6"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "8725742B4BD39B9F9FA5FBB792C0EB70",
+              "SourceString": "*trembles in fear*"
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_4:FortControllerRequirement_HasCID_0:FortControllerRequirement_HasCID",
+                  "ObjectPath": "/NPCLibrary/NPCs/Bushranger/Bushranger/NPCLibrary_Conversation_Bushranger.5"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.OutfitReaction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          }
+        ],
+        "DefaultMessage": {
+          "Namespace": "",
+          "Key": "005C66F64ED7D97DA1D594B58C18F9F6",
+          "SourceString": "Greetingsgreetings hi!"
+        }
+      },
+      "OutputConnections": [
+        "D77EFC88-4948D52B-8A96A395-B733B158",
+        "F080EB5C-4A53B0DF-33602A88-5F34E19C"
+      ],
+      "NodeName": "",
+      "Compiled_NodeGUID": "D1D5368B-4B0DA52A-63CE95B2-CFC30E50"
+    }
+  }
+]

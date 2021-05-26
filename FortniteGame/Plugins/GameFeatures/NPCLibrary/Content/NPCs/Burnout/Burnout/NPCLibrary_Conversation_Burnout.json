@@ -1,0 +1,240 @@
+[
+  {
+    "Type": "ConversationDatabase",
+    "Name": "NPCLibrary_Conversation_Burnout",
+    "Properties": {
+      "CompilerVersion": 2,
+      "ReachableNodeMap": {
+        "951A26974D2E0727B58353A2944AFB64": {
+          "ObjectName": "NPCLibrary_Conversation_Burnout:ConversationEntryPointNode_7:ConversationEntryPointNode",
+          "ObjectPath": "/NPCLibrary/NPCs/Burnout/Burnout/NPCLibrary_Conversation_Burnout.1"
+        },
+        "E7274A2B4A7E5EC5356E6C94D91A809A": {
+          "ObjectName": "NPCLibrary_Conversation_Burnout:Speech_C_4:Speech_C",
+          "ObjectPath": "/NPCLibrary/NPCs/Burnout/Burnout/NPCLibrary_Conversation_Burnout.6"
+        },
+        "F655DD504D93C0C968E4E99EF16F5DEC": {
+          "ObjectName": "NPCLibrary_Conversation_Burnout:ConversationLinkNode_0:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/Burnout/Burnout/NPCLibrary_Conversation_Burnout.2"
+        },
+        "68C4662D48C9F9B3F338AA845E7AB151": {
+          "ObjectName": "NPCLibrary_Conversation_Burnout:ConversationLinkNode_1:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/Burnout/Burnout/NPCLibrary_Conversation_Burnout.3"
+        }
+      },
+      "EntryTags": [
+        {
+          "EntryTag": {
+            "TagName": "Conversation.Entry.Burnout"
+          },
+          "DestinationList": [
+            "951A2697-4D2E0727-B58353A2-944AFB64"
+          ]
+        }
+      ],
+      "ExitTags": [
+        "Conversation.Entry.BasicServices",
+        "Conversation.Entry.NPCLibrary.Quests"
+      ],
+      "InternalNodeIds": [
+        "951A2697-4D2E0727-B58353A2-944AFB64",
+        "E7274A2B-4A7E5EC5-356E6C94-D91A809A",
+        "F655DD50-4D93C0C9-68E4E99E-F16F5DEC",
+        "68C4662D-48C9F9B3-F338AA84-5E7AB151"
+      ],
+      "Speakers": [
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.Player"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.406108,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "0068FF"
+          }
+        },
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.NPC"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.065123,
+            "B": 0.1875,
+            "A": 1.0,
+            "Hex": "001130"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ConversationEntryPointNode",
+    "Name": "ConversationEntryPointNode_7",
+    "Properties": {
+      "EntryTag": {
+        "TagName": "Conversation.Entry.Burnout"
+      },
+      "OutputConnections": [
+        "E7274A2B-4A7E5EC5-356E6C94-D91A809A"
+      ],
+      "Compiled_NodeGUID": "951A2697-4D2E0727-B58353A2-944AFB64"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_0",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.BasicServices"
+      },
+      "Compiled_NodeGUID": "F655DD50-4D93C0C9-68E4E99E-F16F5DEC"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_1",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.NPCLibrary.Quests"
+      },
+      "Compiled_NodeGUID": "68C4662D-48C9F9B3-F338AA84-5E7AB151"
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_HasCID",
+    "Name": "FortControllerRequirement_HasCID_0",
+    "Properties": {
+      "AllowedCIDs": [
+        {
+          "AssetPathName": "/Game/Athena/Items/Cosmetics/Characters/CID_795_Athena_Commando_M_Dummeez.CID_795_Athena_Commando_M_Dummeez",
+          "SubPathString": ""
+        }
+      ]
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_IsFirstEverConversationWithNPC",
+    "Name": "FortControllerRequirement_IsFirstEverConversationWithNPC_0",
+    "Properties": {}
+  },
+  {
+    "Type": "Speech_C",
+    "Name": "Speech_C_4",
+    "Properties": {
+      "SpeakerTag": {
+        "TagName": "Conversation.Participant.NPC"
+      },
+      "ListenerTag": {
+        "TagName": "Conversation.Participant.Player"
+      },
+      "GeneralConfig": {
+        "ContextualMessages": [
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "5BCC521E4E713CCE8A5CCAA9E50C974E",
+              "SourceString": "A new challenger appears, huh?"
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_4:FortControllerRequirement_IsFirstEverConversationWithNPC_0:FortControllerRequirement_IsFirstEverConversationWithNPC",
+                  "ObjectPath": "/NPCLibrary/NPCs/Burnout/Burnout/NPCLibrary_Conversation_Burnout.5"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "1FD501DB463DDE268F3DAABA035E30A9",
+              "SourceString": "There's something... familiar about you, but I can't put my finger on it."
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_4:FortControllerRequirement_HasCID_0:FortControllerRequirement_HasCID",
+                  "ObjectPath": "/NPCLibrary/NPCs/Burnout/Burnout/NPCLibrary_Conversation_Burnout.4"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.OutfitReaction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          }
+        ],
+        "DefaultMessage": {
+          "Namespace": "",
+          "Key": "B2A8A458429100FDAB08BE98C58BC590",
+          "SourceString": "If anyone asks, you never saw me."
+        }
+      },
+      "OutputConnections": [
+        "68C4662D-48C9F9B3-F338AA84-5E7AB151",
+        "F655DD50-4D93C0C9-68E4E99E-F16F5DEC"
+      ],
+      "NodeName": "",
+      "Compiled_NodeGUID": "E7274A2B-4A7E5EC5-356E6C94-D91A809A"
+    }
+  }
+]

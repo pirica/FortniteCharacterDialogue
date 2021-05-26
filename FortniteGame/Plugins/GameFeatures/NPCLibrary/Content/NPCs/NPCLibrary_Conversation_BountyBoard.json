@@ -1,0 +1,271 @@
+[
+  {
+    "Type": "Back_C",
+    "Name": "Back_C_5",
+    "Properties": {
+      "SubNodes": [
+        {
+          "ObjectName": "NPCLibrary_Conversation_BountyBoard:ConversationChoiceNode_4:ConversationChoiceNode",
+          "ObjectPath": "/NPCLibrary/NPCs/NPCLibrary_Conversation_BountyBoard.2"
+        }
+      ],
+      "Compiled_NodeGUID": "20E2400F-4F298D0E-3E72EAAA-300EC1EA"
+    }
+  },
+  {
+    "Type": "ConversationChoiceNode",
+    "Name": "ConversationChoiceNode_0",
+    "Properties": {}
+  },
+  {
+    "Type": "ConversationChoiceNode",
+    "Name": "ConversationChoiceNode_4",
+    "Properties": {
+      "DefaultChoiceDisplayText": {
+        "Namespace": "",
+        "Key": "F748026348209F5DFCE24EA7EB2D49B8",
+        "SourceString": "BACK"
+      }
+    }
+  },
+  {
+    "Type": "ConversationDatabase",
+    "Name": "NPCLibrary_Conversation_BountyBoard",
+    "Properties": {
+      "CompilerVersion": 2,
+      "ReachableNodeMap": {
+        "8E92249144A6D550B96643B3EB31F69D": {
+          "ObjectName": "NPCLibrary_Conversation_BountyBoard:ConversationEntryPointNode_7:ConversationEntryPointNode",
+          "ObjectPath": "/NPCLibrary/NPCs/NPCLibrary_Conversation_BountyBoard.4"
+        },
+        "EF790AC6429A04D3027B3AA23ED6904E": {
+          "ObjectName": "NPCLibrary_Conversation_BountyBoard:Speech_C_4:Speech_C",
+          "ObjectPath": "/NPCLibrary/NPCs/NPCLibrary_Conversation_BountyBoard.8"
+        },
+        "DAD62BA74B3BB1136C9455B104261437": {
+          "ObjectName": "NPCLibrary_Conversation_BountyBoard:GrantIntel_C_0:GrantIntel_C",
+          "ObjectPath": "/NPCLibrary/NPCs/NPCLibrary_Conversation_BountyBoard.6"
+        },
+        "2F6B3D674BD9B93227F74CAE12C41D80": {
+          "ObjectName": "NPCLibrary_Conversation_BountyBoard:GrantPlayerBounty_C_0:GrantPlayerBounty_C",
+          "ObjectPath": "/NPCLibrary/NPCs/NPCLibrary_Conversation_BountyBoard.7"
+        },
+        "20E2400F4F298D0E3E72EAAA300EC1EA": {
+          "ObjectName": "NPCLibrary_Conversation_BountyBoard:Back_C_5:Back_C",
+          "ObjectPath": "/NPCLibrary/NPCs/NPCLibrary_Conversation_BountyBoard.0"
+        }
+      },
+      "EntryTags": [
+        {
+          "EntryTag": {
+            "TagName": "Conversation.Entry.BountyBoardStation"
+          },
+          "DestinationList": [
+            "8E922491-44A6D550-B96643B3-EB31F69D"
+          ]
+        }
+      ],
+      "InternalNodeIds": [
+        "8E922491-44A6D550-B96643B3-EB31F69D",
+        "EF790AC6-429A04D3-027B3AA2-3ED6904E",
+        "DAD62BA7-4B3BB113-6C9455B1-04261437",
+        "2F6B3D67-4BD9B932-27F74CAE-12C41D80",
+        "20E2400F-4F298D0E-3E72EAAA-300EC1EA"
+      ],
+      "Speakers": [
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.Player"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.406108,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "0068FF"
+          }
+        },
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.NPC"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.065123,
+            "B": 0.1875,
+            "A": 1.0,
+            "Hex": "001130"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ConversationEntryPointNode",
+    "Name": "ConversationEntryPointNode_7",
+    "Properties": {
+      "EntryTag": {
+        "TagName": "Conversation.Entry.BountyBoardStation"
+      },
+      "OutputConnections": [
+        "EF790AC6-429A04D3-027B3AA2-3ED6904E"
+      ],
+      "Compiled_NodeGUID": "8E922491-44A6D550-B96643B3-EB31F69D"
+    }
+  },
+  {
+    "Type": "FortConversationChoiceWithPreviewNode",
+    "Name": "FortConversationChoiceWithPreviewNode_0",
+    "Properties": {
+      "DefaultChoiceDisplayText": {
+        "Namespace": "",
+        "Key": "5E8E0CC4494227AE5D3D3FB490C98AEA",
+        "SourceString": "Chests"
+      }
+    }
+  },
+  {
+    "Type": "GrantIntel_C",
+    "Name": "GrantIntel_C_0",
+    "Properties": {
+      "FilterDatas": [
+        {
+          "ClassFilter": {
+            "ObjectName": "BuildingContainer:Class",
+            "ObjectPath": 0
+          },
+          "ObjectTypes": [],
+          "TargetFilter": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Building.Type.Container.TreasureChest"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              2,
+              1,
+              0
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ALL( Building.Type.Container.TreasureChest )"
+          },
+          "MaxToFind": {
+            "Value": 5.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": null
+            },
+            "RegistryType": {
+              "Name": null
+            }
+          },
+          "MaxRadius": {
+            "Value": 10000.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": null
+            },
+            "RegistryType": {
+              "Name": null
+            }
+          },
+          "ShowToSquad": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": null
+            },
+            "RegistryType": {
+              "Name": null
+            }
+          },
+          "ShowMarkerDetails": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": null
+            },
+            "RegistryType": {
+              "Name": null
+            }
+          },
+          "Price": {
+            "Value": 50.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": null
+            },
+            "RegistryType": {
+              "Name": null
+            }
+          },
+          "Rarity": {
+            "Value": 6.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": null
+            },
+            "RegistryType": {
+              "Name": null
+            }
+          }
+        }
+      ],
+      "SubNodes": [
+        {
+          "ObjectName": "NPCLibrary_Conversation_BountyBoard:FortConversationChoiceWithPreviewNode_0:FortConversationChoiceWithPreviewNode",
+          "ObjectPath": "/NPCLibrary/NPCs/NPCLibrary_Conversation_BountyBoard.5"
+        }
+      ],
+      "Compiled_NodeGUID": "DAD62BA7-4B3BB113-6C9455B1-04261437"
+    }
+  },
+  {
+    "Type": "GrantPlayerBounty_C",
+    "Name": "GrantPlayerBounty_C_0",
+    "Properties": {
+      "SubNodes": [
+        {
+          "ObjectName": "NPCLibrary_Conversation_BountyBoard:ConversationChoiceNode_0:ConversationChoiceNode",
+          "ObjectPath": "/NPCLibrary/NPCs/NPCLibrary_Conversation_BountyBoard.1"
+        }
+      ],
+      "Compiled_NodeGUID": "2F6B3D67-4BD9B932-27F74CAE-12C41D80"
+    }
+  },
+  {
+    "Type": "Speech_C",
+    "Name": "Speech_C_4",
+    "Properties": {
+      "SpeakerTag": {
+        "TagName": "Conversation.Participant.NPC"
+      },
+      "ListenerTag": {
+        "TagName": "Conversation.Participant.Player"
+      },
+      "GeneralConfig": {
+        "DefaultMessage": {
+          "Namespace": "",
+          "Key": "32E9535441AE67C7765EF7A0AFBAC1B7",
+          "SourceString": "Spend all those bars in one place!"
+        }
+      },
+      "OutputConnections": [
+        "20E2400F-4F298D0E-3E72EAAA-300EC1EA",
+        "2F6B3D67-4BD9B932-27F74CAE-12C41D80",
+        "DAD62BA7-4B3BB113-6C9455B1-04261437"
+      ],
+      "NodeName": "",
+      "Compiled_NodeGUID": "EF790AC6-429A04D3-027B3AA2-3ED6904E"
+    }
+  }
+]

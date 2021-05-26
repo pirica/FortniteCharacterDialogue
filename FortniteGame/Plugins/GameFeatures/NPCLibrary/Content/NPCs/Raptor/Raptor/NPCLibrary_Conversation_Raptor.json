@@ -1,0 +1,235 @@
+[
+  {
+    "Type": "ConversationDatabase",
+    "Name": "NPCLibrary_Conversation_Raptor",
+    "Properties": {
+      "CompilerVersion": 2,
+      "ReachableNodeMap": {
+        "50D49A2C419E947204E48F83AB0F779C": {
+          "ObjectName": "NPCLibrary_Conversation_Raptor:ConversationEntryPointNode_7:ConversationEntryPointNode",
+          "ObjectPath": "/NPCLibrary/NPCs/Raptor/Raptor/NPCLibrary_Conversation_Raptor.1"
+        },
+        "E9E0C5EB4C860A0D652379AEC0764E36": {
+          "ObjectName": "NPCLibrary_Conversation_Raptor:Speech_C_4:Speech_C",
+          "ObjectPath": "/NPCLibrary/NPCs/Raptor/Raptor/NPCLibrary_Conversation_Raptor.6"
+        },
+        "54F8B4324DE9F7E28E8FBB92B484A0DA": {
+          "ObjectName": "NPCLibrary_Conversation_Raptor:ConversationLinkNode_0:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/Raptor/Raptor/NPCLibrary_Conversation_Raptor.2"
+        },
+        "4A3BE87F4E465F1FD92DC6A5F986F45D": {
+          "ObjectName": "NPCLibrary_Conversation_Raptor:ConversationLinkNode_1:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/Raptor/Raptor/NPCLibrary_Conversation_Raptor.3"
+        }
+      },
+      "EntryTags": [
+        {
+          "EntryTag": {
+            "TagName": "Conversation.Entry.Raptor"
+          },
+          "DestinationList": [
+            "50D49A2C-419E9472-04E48F83-AB0F779C"
+          ]
+        }
+      ],
+      "ExitTags": [
+        "Conversation.Entry.BasicServices",
+        "Conversation.Entry.NPCLibrary.Quests"
+      ],
+      "InternalNodeIds": [
+        "50D49A2C-419E9472-04E48F83-AB0F779C",
+        "E9E0C5EB-4C860A0D-652379AE-C0764E36",
+        "54F8B432-4DE9F7E2-8E8FBB92-B484A0DA",
+        "4A3BE87F-4E465F1F-D92DC6A5-F986F45D"
+      ],
+      "Speakers": [
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.Player"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.406108,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "0068FF"
+          }
+        },
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.NPC"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.065123,
+            "B": 0.1875,
+            "A": 1.0,
+            "Hex": "001130"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ConversationEntryPointNode",
+    "Name": "ConversationEntryPointNode_7",
+    "Properties": {
+      "EntryTag": {
+        "TagName": "Conversation.Entry.Raptor"
+      },
+      "OutputConnections": [
+        "E9E0C5EB-4C860A0D-652379AE-C0764E36"
+      ],
+      "Compiled_NodeGUID": "50D49A2C-419E9472-04E48F83-AB0F779C"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_0",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.BasicServices"
+      },
+      "Compiled_NodeGUID": "54F8B432-4DE9F7E2-8E8FBB92-B484A0DA"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_1",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.NPCLibrary.Quests"
+      },
+      "Compiled_NodeGUID": "4A3BE87F-4E465F1F-D92DC6A5-F986F45D"
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch",
+    "Name": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0",
+    "Properties": {
+      "days": 7
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_IsFirstEverConversationWithNPC",
+    "Name": "FortControllerRequirement_IsFirstEverConversationWithNPC_0",
+    "Properties": {}
+  },
+  {
+    "Type": "Speech_C",
+    "Name": "Speech_C_4",
+    "Properties": {
+      "SpeakerTag": {
+        "TagName": "Conversation.Participant.NPC"
+      },
+      "ListenerTag": {
+        "TagName": "Conversation.Participant.Player"
+      },
+      "GeneralConfig": {
+        "ContextualMessages": [
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "18E556774CC5B627236483808F1846F9",
+              "SourceString": "Ah, welcome back to the fight, chap! I say, <b>it's been a minute,</> has it not?"
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_4:FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0:FortControllerRequirement_CheckTimeSinceLastPlayedMatch",
+                  "ObjectPath": "/NPCLibrary/NPCs/Raptor/Raptor/NPCLibrary_Conversation_Raptor.4"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.WhileSincePlayed"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "899C713C46A385A0081ECC8256F3E4C1",
+              "SourceString": "Greetings! Name's Raptor, master of the skies!"
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_4:FortControllerRequirement_IsFirstEverConversationWithNPC_0:FortControllerRequirement_IsFirstEverConversationWithNPC",
+                  "ObjectPath": "/NPCLibrary/NPCs/Raptor/Raptor/NPCLibrary_Conversation_Raptor.5"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          }
+        ],
+        "DefaultMessage": {
+          "Namespace": "",
+          "Key": "4C93DC38407A513919FC31A8DEDF677E",
+          "SourceString": "Bring on that horizon, and full speed ahead!"
+        }
+      },
+      "OutputConnections": [
+        "4A3BE87F-4E465F1F-D92DC6A5-F986F45D",
+        "54F8B432-4DE9F7E2-8E8FBB92-B484A0DA"
+      ],
+      "NodeName": "",
+      "Compiled_NodeGUID": "E9E0C5EB-4C860A0D-652379AE-C0764E36"
+    }
+  }
+]

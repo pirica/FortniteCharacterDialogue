@@ -1,0 +1,352 @@
+[
+  {
+    "Type": "ConversationDatabase",
+    "Name": "NPCLibrary_Conversation_Blackheart",
+    "Properties": {
+      "CompilerVersion": 2,
+      "ReachableNodeMap": {
+        "2A9B15BA46E8886ACABAF68341A0F3F8": {
+          "ObjectName": "NPCLibrary_Conversation_Blackheart:ConversationEntryPointNode_7:ConversationEntryPointNode",
+          "ObjectPath": "/NPCLibrary/NPCs/Blackheart/Blackheart/NPCLibrary_Conversation_Blackheart.1"
+        },
+        "DC64ED1D46C9EAC43877D09F4B83EE0F": {
+          "ObjectName": "NPCLibrary_Conversation_Blackheart:Speech_C_3:Speech_C",
+          "ObjectPath": "/NPCLibrary/NPCs/Blackheart/Blackheart/NPCLibrary_Conversation_Blackheart.8"
+        },
+        "33358D064FFC13F271931FB4BA7BD312": {
+          "ObjectName": "NPCLibrary_Conversation_Blackheart:ConversationLinkNode_0:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/Blackheart/Blackheart/NPCLibrary_Conversation_Blackheart.2"
+        },
+        "15A5748C4C7A06C50DD3C49B17D83C58": {
+          "ObjectName": "NPCLibrary_Conversation_Blackheart:ConversationLinkNode_1:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/Blackheart/Blackheart/NPCLibrary_Conversation_Blackheart.3"
+        }
+      },
+      "EntryTags": [
+        {
+          "EntryTag": {
+            "TagName": "Conversation.Entry.Blackheart"
+          },
+          "DestinationList": [
+            "2A9B15BA-46E8886A-CABAF683-41A0F3F8"
+          ]
+        }
+      ],
+      "ExitTags": [
+        "Conversation.Entry.BasicServices",
+        "Conversation.Entry.NPCLibrary.Quests"
+      ],
+      "InternalNodeIds": [
+        "2A9B15BA-46E8886A-CABAF683-41A0F3F8",
+        "DC64ED1D-46C9EAC4-3877D09F-4B83EE0F",
+        "33358D06-4FFC13F2-71931FB4-BA7BD312",
+        "15A5748C-4C7A06C5-0DD3C49B-17D83C58"
+      ],
+      "Speakers": [
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.Player"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.406108,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "0068FF"
+          }
+        },
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.NPC"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.065123,
+            "B": 0.1875,
+            "A": 1.0,
+            "Hex": "001130"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ConversationEntryPointNode",
+    "Name": "ConversationEntryPointNode_7",
+    "Properties": {
+      "EntryTag": {
+        "TagName": "Conversation.Entry.Blackheart"
+      },
+      "OutputConnections": [
+        "DC64ED1D-46C9EAC4-3877D09F-4B83EE0F"
+      ],
+      "Compiled_NodeGUID": "2A9B15BA-46E8886A-CABAF683-41A0F3F8"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_0",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.BasicServices"
+      },
+      "Compiled_NodeGUID": "33358D06-4FFC13F2-71931FB4-BA7BD312"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_1",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.NPCLibrary.Quests"
+      },
+      "Compiled_NodeGUID": "15A5748C-4C7A06C5-0DD3C49B-17D83C58"
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_HasBars",
+    "Name": "FortControllerRequirement_HasBars_0",
+    "Properties": {
+      "ThresholdTestConfig": {
+        "Requirement": "EThresholdRequirement::GreaterThanOrEqual",
+        "Quantity": {
+          "Value": 2000.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_HasCID",
+    "Name": "FortControllerRequirement_HasCID_0",
+    "Properties": {
+      "AllowedCIDs": [
+        {
+          "AssetPathName": "/Game/Athena/Items/Cosmetics/Characters/CID_373_Athena_Commando_M_Pirate01.CID_373_Athena_Commando_M_Pirate01",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "/Game/Athena/Items/Cosmetics/Characters/CID_372_Athena_Commando_F_Pirate01.CID_372_Athena_Commando_F_Pirate01",
+          "SubPathString": ""
+        }
+      ]
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_HasCID",
+    "Name": "FortControllerRequirement_HasCID_1",
+    "Properties": {
+      "AllowedCIDs": [
+        {
+          "AssetPathName": "/Game/Athena/Items/Cosmetics/Characters/CID_165_Athena_Commando_M_DarkViking.CID_165_Athena_Commando_M_DarkViking",
+          "SubPathString": ""
+        }
+      ]
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_IsFirstEverConversationWithNPC",
+    "Name": "FortControllerRequirement_IsFirstEverConversationWithNPC_0",
+    "Properties": {}
+  },
+  {
+    "Type": "Speech_C",
+    "Name": "Speech_C_3",
+    "Properties": {
+      "SpeakerTag": {
+        "TagName": "Conversation.Participant.NPC"
+      },
+      "ListenerTag": {
+        "TagName": "Conversation.Participant.Player"
+      },
+      "GeneralConfig": {
+        "ContextualMessages": [
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "752BEA7E4A26B77927A7DCA17DAB22FA",
+              "SourceString": "Ye planning on spending all them bars, or do ye just like to<b> hear em jingle?</>"
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_3:FortControllerRequirement_HasBars_0:FortControllerRequirement_HasBars",
+                  "ObjectPath": "/NPCLibrary/NPCs/Blackheart/Blackheart/NPCLibrary_Conversation_Blackheart.4"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.HighTotalBars"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "CEDC9EA44D67C04FC52404A2F982D9B1",
+              "SourceString": "May your pockets be full and the authorities be slow."
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAny",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_3:FortControllerRequirement_HasCID_0:FortControllerRequirement_HasCID",
+                  "ObjectPath": "/NPCLibrary/NPCs/Blackheart/Blackheart/NPCLibrary_Conversation_Blackheart.5"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.OutfitReaction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "ECABC3DA47665AD9326CDDA837481734",
+              "SourceString": "Avast, <enemy>barbarian.</> Keep ye weapons stayed and I'll do the same."
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_3:FortControllerRequirement_HasCID_1:FortControllerRequirement_HasCID",
+                  "ObjectPath": "/NPCLibrary/NPCs/Blackheart/Blackheart/NPCLibrary_Conversation_Blackheart.6"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.OutfitReaction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "5CFA9B0E4821929F4965F7B7D699636E",
+              "SourceString": "Ha, you really know your way around the gangplank!"
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_3:FortControllerRequirement_IsFirstEverConversationWithNPC_0:FortControllerRequirement_IsFirstEverConversationWithNPC",
+                  "ObjectPath": "/NPCLibrary/NPCs/Blackheart/Blackheart/NPCLibrary_Conversation_Blackheart.7"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          }
+        ],
+        "DefaultMessage": {
+          "Namespace": "",
+          "Key": "C6E86F214225BA676BF0CA936DA01819",
+          "SourceString": "May the wind be always at your back, matey."
+        }
+      },
+      "OutputConnections": [
+        "15A5748C-4C7A06C5-0DD3C49B-17D83C58",
+        "33358D06-4FFC13F2-71931FB4-BA7BD312"
+      ],
+      "NodeName": "",
+      "Compiled_NodeGUID": "DC64ED1D-46C9EAC4-3877D09F-4B83EE0F"
+    }
+  }
+]

@@ -1,0 +1,256 @@
+[
+  {
+    "Type": "ConversationDatabase",
+    "Name": "NPCLibrary_Conversation_Turk",
+    "Properties": {
+      "CompilerVersion": 2,
+      "ReachableNodeMap": {
+        "A33B259D4BAF4B7E5C23639FE8FF9212": {
+          "ObjectName": "NPCLibrary_Conversation_Turk:ConversationEntryPointNode_7:ConversationEntryPointNode",
+          "ObjectPath": "/NPCLibrary/NPCs/Turk/Turk/NPCLibrary_Conversation_Turk.1"
+        },
+        "493D5FCD40DFF9FB55FBC88B6AD3E05D": {
+          "ObjectName": "NPCLibrary_Conversation_Turk:Speech_C_4:Speech_C",
+          "ObjectPath": "/NPCLibrary/NPCs/Turk/Turk/NPCLibrary_Conversation_Turk.6"
+        },
+        "5875A4324CEEAA88FD5D32AA3F7E838B": {
+          "ObjectName": "NPCLibrary_Conversation_Turk:ConversationLinkNode_0:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/Turk/Turk/NPCLibrary_Conversation_Turk.2"
+        },
+        "8DC48DC741E1E1CC47D3F3AD82ECB01A": {
+          "ObjectName": "NPCLibrary_Conversation_Turk:ConversationLinkNode_1:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/Turk/Turk/NPCLibrary_Conversation_Turk.3"
+        }
+      },
+      "EntryTags": [
+        {
+          "EntryTag": {
+            "TagName": "Conversation.Entry.Turk"
+          },
+          "DestinationList": [
+            "A33B259D-4BAF4B7E-5C23639F-E8FF9212"
+          ]
+        }
+      ],
+      "ExitTags": [
+        "Conversation.Entry.BasicServices",
+        "Conversation.Entry.NPCLibrary.Quests"
+      ],
+      "InternalNodeIds": [
+        "A33B259D-4BAF4B7E-5C23639F-E8FF9212",
+        "493D5FCD-40DFF9FB-55FBC88B-6AD3E05D",
+        "5875A432-4CEEAA88-FD5D32AA-3F7E838B",
+        "8DC48DC7-41E1E1CC-47D3F3AD-82ECB01A"
+      ],
+      "Speakers": [
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.Player"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.406108,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "0068FF"
+          }
+        },
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.NPC"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.065123,
+            "B": 0.1875,
+            "A": 1.0,
+            "Hex": "001130"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ConversationEntryPointNode",
+    "Name": "ConversationEntryPointNode_7",
+    "Properties": {
+      "EntryTag": {
+        "TagName": "Conversation.Entry.Turk"
+      },
+      "OutputConnections": [
+        "493D5FCD-40DFF9FB-55FBC88B-6AD3E05D"
+      ],
+      "Compiled_NodeGUID": "A33B259D-4BAF4B7E-5C23639F-E8FF9212"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_0",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.BasicServices"
+      },
+      "Compiled_NodeGUID": "5875A432-4CEEAA88-FD5D32AA-3F7E838B"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_1",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.NPCLibrary.Quests"
+      },
+      "Compiled_NodeGUID": "8DC48DC7-41E1E1CC-47D3F3AD-82ECB01A"
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_HasCID",
+    "Name": "FortControllerRequirement_HasCID_0",
+    "Properties": {
+      "AllowedCIDs": [
+        {
+          "AssetPathName": "/Game/Athena/Items/Cosmetics/Characters/CID_315_Athena_Commando_M_TeriyakiFish.CID_315_Athena_Commando_M_TeriyakiFish",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "/Game/Athena/Items/Cosmetics/Characters/CID_722_Athena_Commando_M_TeriyakiFishAssassin.CID_722_Athena_Commando_M_TeriyakiFishAssassin",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "/Game/Athena/Items/Cosmetics/Characters/CID_656_Athena_Commando_M_TeriyakiFishFreezerBurn.CID_656_Athena_Commando_M_TeriyakiFishFreezerBurn",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "/Game/Athena/Items/Cosmetics/Characters/CID_813_Athena_Commando_M_TeriyakiAtlantis.CID_813_Athena_Commando_M_TeriyakiAtlantis",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "/Game/Athena/Items/Cosmetics/Characters/CID_624_Athena_Commando_M_TeriyakiWarrior.CID_624_Athena_Commando_M_TeriyakiWarrior",
+          "SubPathString": ""
+        }
+      ]
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_IsFirstEverConversationWithNPC",
+    "Name": "FortControllerRequirement_IsFirstEverConversationWithNPC_0",
+    "Properties": {}
+  },
+  {
+    "Type": "Speech_C",
+    "Name": "Speech_C_4",
+    "Properties": {
+      "SpeakerTag": {
+        "TagName": "Conversation.Participant.NPC"
+      },
+      "ListenerTag": {
+        "TagName": "Conversation.Participant.Player"
+      },
+      "GeneralConfig": {
+        "ContextualMessages": [
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "E83CF187474FD72F94D38EA99382C456",
+              "SourceString": "I, uh, am sorry if I ever hooked you before."
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAny",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_4:FortControllerRequirement_HasCID_0:FortControllerRequirement_HasCID",
+                  "ObjectPath": "/NPCLibrary/NPCs/Turk/Turk/NPCLibrary_Conversation_Turk.4"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.OutfitReaction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "608841084D7103590D0A7F8F34B90534",
+              "SourceString": "Can you believe it's already fishing season again?"
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_4:FortControllerRequirement_IsFirstEverConversationWithNPC_0:FortControllerRequirement_IsFirstEverConversationWithNPC",
+                  "ObjectPath": "/NPCLibrary/NPCs/Turk/Turk/NPCLibrary_Conversation_Turk.5"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          }
+        ],
+        "DefaultMessage": {
+          "Namespace": "",
+          "Key": "EA41C9DC4115F606470CE0B852DC3404",
+          "SourceString": "Can't win if you never cast your line."
+        }
+      },
+      "OutputConnections": [
+        "8DC48DC7-41E1E1CC-47D3F3AD-82ECB01A",
+        "5875A432-4CEEAA88-FD5D32AA-3F7E838B"
+      ],
+      "NodeName": "",
+      "Compiled_NodeGUID": "493D5FCD-40DFF9FB-55FBC88B-6AD3E05D"
+    }
+  }
+]

@@ -1,0 +1,112 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "Music_Outer_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "Music_Outer_Cue:SoundNodeMixer_1:SoundNodeMixer",
+        "ObjectPath": "/NPCLibrary/NPCs/Outter/Outter/Audio/Music/Music_Outer_Cue.1"
+      },
+      "VolumeMultiplier": 1.413,
+      "bHasPlayWhenSilent": true,
+      "SoundClassObject": {
+        "ObjectName": "Fort_Music_NPC:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Music_NPC.0"
+      },
+      "Duration": 10000.0,
+      "MaxDistance": 2097152.0
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_1",
+    "Properties": {
+      "InputVolume": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "Music_Outer_Cue:SoundNodeModulatorContinuous_0:SoundNodeModulatorContinuous",
+          "ObjectPath": "/NPCLibrary/NPCs/Outter/Outter/Audio/Music/Music_Outer_Cue.2"
+        },
+        {
+          "ObjectName": "Music_Outer_Cue:SoundNodeModulatorContinuous_1:SoundNodeModulatorContinuous",
+          "ObjectPath": "/NPCLibrary/NPCs/Outter/Outter/Audio/Music/Music_Outer_Cue.3"
+        },
+        {
+          "ObjectName": "Music_Outer_Cue:SoundNodeModulatorContinuous_2:SoundNodeModulatorContinuous",
+          "ObjectPath": "/NPCLibrary/NPCs/Outter/Outter/Audio/Music/Music_Outer_Cue.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulatorContinuous",
+    "Name": "SoundNodeModulatorContinuous_0",
+    "Properties": {
+      "VolumeModulationParams": {
+        "ParameterName": "Unaware",
+        "Default": 0.0
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "Music_Outer_Cue:SoundNodeWavePlayer_1:SoundNodeWavePlayer",
+          "ObjectPath": "/NPCLibrary/NPCs/Outter/Outter/Audio/Music/Music_Outer_Cue.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulatorContinuous",
+    "Name": "SoundNodeModulatorContinuous_1",
+    "Properties": {
+      "VolumeModulationParams": {
+        "ParameterName": "Alerted",
+        "Default": 0.0
+      },
+      "ChildNodes": [
+        null
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulatorContinuous",
+    "Name": "SoundNodeModulatorContinuous_2",
+    "Properties": {
+      "VolumeModulationParams": {
+        "ParameterName": "Aggressive",
+        "Default": 0.0
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "Music_Outer_Cue:SoundNodeWavePlayer_0:SoundNodeWavePlayer",
+          "ObjectPath": "/NPCLibrary/NPCs/Outter/Outter/Audio/Music/Music_Outer_Cue.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/NPCLibrary/NPCs/Outter/Outter/Audio/Music/Music_InnerOuter_Outer_Hi.Music_InnerOuter_Outer_Hi",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/NPCLibrary/NPCs/Outter/Outter/Audio/Music/Music_InnerOuter_Outer_Lo.Music_InnerOuter_Outer_Lo",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    }
+  }
+]

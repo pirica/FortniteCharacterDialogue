@@ -1,0 +1,252 @@
+[
+  {
+    "Type": "ConversationDatabase",
+    "Name": "NPCLibrary_Conversation_ChickenWarrior",
+    "Properties": {
+      "CompilerVersion": 2,
+      "ReachableNodeMap": {
+        "841A036442BABC87B4254DA12BFC77AC": {
+          "ObjectName": "NPCLibrary_Conversation_ChickenWarrior:ConversationEntryPointNode_7:ConversationEntryPointNode",
+          "ObjectPath": "/NPCLibrary/NPCs/ChickenWarrior/ChickenWarrior/NPCLibrary_Conversation_ChickenWarrior.1"
+        },
+        "7EDD4D7B498D6F66A78449BE903C9345": {
+          "ObjectName": "NPCLibrary_Conversation_ChickenWarrior:Speech_C_4:Speech_C",
+          "ObjectPath": "/NPCLibrary/NPCs/ChickenWarrior/ChickenWarrior/NPCLibrary_Conversation_ChickenWarrior.7"
+        },
+        "17CC475940562C40796D47A9E4A01A7C": {
+          "ObjectName": "NPCLibrary_Conversation_ChickenWarrior:ConversationLinkNode_0:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/ChickenWarrior/ChickenWarrior/NPCLibrary_Conversation_ChickenWarrior.2"
+        },
+        "85FA38734590FEC7A62E988FA0C87BEE": {
+          "ObjectName": "NPCLibrary_Conversation_ChickenWarrior:ConversationLinkNode_1:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/ChickenWarrior/ChickenWarrior/NPCLibrary_Conversation_ChickenWarrior.3"
+        },
+        "E3F7F2334F703EAA446625A266281477": {
+          "ObjectName": "NPCLibrary_Conversation_ChickenWarrior:ConversationLinkNode_2:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/ChickenWarrior/ChickenWarrior/NPCLibrary_Conversation_ChickenWarrior.4"
+        }
+      },
+      "EntryTags": [
+        {
+          "EntryTag": {
+            "TagName": "Conversation.Entry.ChickenWarrior"
+          },
+          "DestinationList": [
+            "841A0364-42BABC87-B4254DA1-2BFC77AC"
+          ]
+        }
+      ],
+      "ExitTags": [
+        "Conversation.Entry.BasicServices",
+        "Conversation.Entry.NPCLibrary.Quests",
+        "Conversation.Entry.Season16.TheSpire.NewManagement"
+      ],
+      "InternalNodeIds": [
+        "841A0364-42BABC87-B4254DA1-2BFC77AC",
+        "7EDD4D7B-498D6F66-A78449BE-903C9345",
+        "17CC4759-40562C40-796D47A9-E4A01A7C",
+        "85FA3873-4590FEC7-A62E988F-A0C87BEE",
+        "E3F7F233-4F703EAA-446625A2-66281477"
+      ],
+      "Speakers": [
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.Player"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.406108,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "0068FF"
+          }
+        },
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.NPC"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.065123,
+            "B": 0.1875,
+            "A": 1.0,
+            "Hex": "001130"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ConversationEntryPointNode",
+    "Name": "ConversationEntryPointNode_7",
+    "Properties": {
+      "EntryTag": {
+        "TagName": "Conversation.Entry.ChickenWarrior"
+      },
+      "OutputConnections": [
+        "7EDD4D7B-498D6F66-A78449BE-903C9345"
+      ],
+      "Compiled_NodeGUID": "841A0364-42BABC87-B4254DA1-2BFC77AC"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_0",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.BasicServices"
+      },
+      "Compiled_NodeGUID": "17CC4759-40562C40-796D47A9-E4A01A7C"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_1",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.NPCLibrary.Quests"
+      },
+      "Compiled_NodeGUID": "85FA3873-4590FEC7-A62E988F-A0C87BEE"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_2",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.Season16.TheSpire.NewManagement"
+      },
+      "Compiled_NodeGUID": "E3F7F233-4F703EAA-446625A2-66281477"
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch",
+    "Name": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0",
+    "Properties": {
+      "days": 7
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_IsFirstEverConversationWithNPC",
+    "Name": "FortControllerRequirement_IsFirstEverConversationWithNPC_0",
+    "Properties": {}
+  },
+  {
+    "Type": "Speech_C",
+    "Name": "Speech_C_4",
+    "Properties": {
+      "SpeakerTag": {
+        "TagName": "Conversation.Participant.NPC"
+      },
+      "ListenerTag": {
+        "TagName": "Conversation.Participant.Player"
+      },
+      "GeneralConfig": {
+        "ContextualMessages": [
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "52B4CE9D46FDEBFA7711B097C3848DE2",
+              "SourceString": "Cluck cluck cluck!"
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_4:FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0:FortControllerRequirement_CheckTimeSinceLastPlayedMatch",
+                  "ObjectPath": "/NPCLibrary/NPCs/ChickenWarrior/ChickenWarrior/NPCLibrary_Conversation_ChickenWarrior.5"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.WhileSincePlayed"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "1230AC564DCF5B4AEE770DBFD17CFE20",
+              "SourceString": "Cheep cheep cheep!"
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_4:FortControllerRequirement_IsFirstEverConversationWithNPC_0:FortControllerRequirement_IsFirstEverConversationWithNPC",
+                  "ObjectPath": "/NPCLibrary/NPCs/ChickenWarrior/ChickenWarrior/NPCLibrary_Conversation_ChickenWarrior.6"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          }
+        ],
+        "DefaultMessage": {
+          "Namespace": "",
+          "Key": "A5CC9EE243DEFA4B4D67B08F757FDD35",
+          "SourceString": "Cluck-cluck b'kaw?"
+        }
+      },
+      "OutputConnections": [
+        "E3F7F233-4F703EAA-446625A2-66281477",
+        "85FA3873-4590FEC7-A62E988F-A0C87BEE",
+        "17CC4759-40562C40-796D47A9-E4A01A7C"
+      ],
+      "NodeName": "",
+      "Compiled_NodeGUID": "7EDD4D7B-498D6F66-A78449BE-903C9345"
+    }
+  }
+]

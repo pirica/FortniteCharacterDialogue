@@ -1,0 +1,203 @@
+[
+  {
+    "Type": "ConversationDatabase",
+    "Name": "NPCLibrary_Conversation_SlurpJonesy",
+    "Properties": {
+      "CompilerVersion": 2,
+      "ReachableNodeMap": {
+        "FB4B68A9468B3121F50579BC9A4E189B": {
+          "ObjectName": "NPCLibrary_Conversation_SlurpJonesy:ConversationEntryPointNode_7:ConversationEntryPointNode",
+          "ObjectPath": "/NPCLibrary/NPCs/SlurpJonesy/NPCLibrary_Conversation_SlurpJonesy.1"
+        },
+        "47D8FFF54B73AB4DE3E4CBA87342F87F": {
+          "ObjectName": "NPCLibrary_Conversation_SlurpJonesy:Speech_C_4:Speech_C",
+          "ObjectPath": "/NPCLibrary/NPCs/SlurpJonesy/NPCLibrary_Conversation_SlurpJonesy.6"
+        },
+        "C3F57AE740A478F03F58199F1DE431EB": {
+          "ObjectName": "NPCLibrary_Conversation_SlurpJonesy:ConversationLinkNode_0:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/SlurpJonesy/NPCLibrary_Conversation_SlurpJonesy.2"
+        },
+        "4BC12AA34D39F8DDF1FF679A2B415153": {
+          "ObjectName": "NPCLibrary_Conversation_SlurpJonesy:ConversationLinkNode_1:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/SlurpJonesy/NPCLibrary_Conversation_SlurpJonesy.3"
+        },
+        "1EABD7DB4F4620E55B26F7BC8FC78A4F": {
+          "ObjectName": "NPCLibrary_Conversation_SlurpJonesy:ConversationLinkNode_2:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/SlurpJonesy/NPCLibrary_Conversation_SlurpJonesy.4"
+        }
+      },
+      "EntryTags": [
+        {
+          "EntryTag": {
+            "TagName": "Conversation.Entry.SlurpJonesy"
+          },
+          "DestinationList": [
+            "FB4B68A9-468B3121-F50579BC-9A4E189B"
+          ]
+        }
+      ],
+      "ExitTags": [
+        "Conversation.Entry.BasicServices",
+        "Conversation.Entry.NPCLibrary.Quests",
+        "Conversation.Entry.Season16.TheSpire.Joneses"
+      ],
+      "InternalNodeIds": [
+        "FB4B68A9-468B3121-F50579BC-9A4E189B",
+        "47D8FFF5-4B73AB4D-E3E4CBA8-7342F87F",
+        "C3F57AE7-40A478F0-3F58199F-1DE431EB",
+        "4BC12AA3-4D39F8DD-F1FF679A-2B415153",
+        "1EABD7DB-4F4620E5-5B26F7BC-8FC78A4F"
+      ],
+      "Speakers": [
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.Player"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.406108,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "0068FF"
+          }
+        },
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.NPC"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.065123,
+            "B": 0.1875,
+            "A": 1.0,
+            "Hex": "001130"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ConversationEntryPointNode",
+    "Name": "ConversationEntryPointNode_7",
+    "Properties": {
+      "EntryTag": {
+        "TagName": "Conversation.Entry.SlurpJonesy"
+      },
+      "OutputConnections": [
+        "47D8FFF5-4B73AB4D-E3E4CBA8-7342F87F"
+      ],
+      "Compiled_NodeGUID": "FB4B68A9-468B3121-F50579BC-9A4E189B"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_0",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.BasicServices"
+      },
+      "Compiled_NodeGUID": "C3F57AE7-40A478F0-3F58199F-1DE431EB"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_1",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.NPCLibrary.Quests"
+      },
+      "Compiled_NodeGUID": "4BC12AA3-4D39F8DD-F1FF679A-2B415153"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_2",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.Season16.TheSpire.Joneses"
+      },
+      "Compiled_NodeGUID": "1EABD7DB-4F4620E5-5B26F7BC-8FC78A4F"
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_IsFirstEverConversationWithNPC",
+    "Name": "FortControllerRequirement_IsFirstEverConversationWithNPC_0",
+    "Properties": {}
+  },
+  {
+    "Type": "Speech_C",
+    "Name": "Speech_C_4",
+    "Properties": {
+      "SpeakerTag": {
+        "TagName": "Conversation.Participant.NPC"
+      },
+      "ListenerTag": {
+        "TagName": "Conversation.Participant.Player"
+      },
+      "GeneralConfig": {
+        "ContextualMessages": [
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "BA8B165F49D334275DAE309D8C10E603",
+              "SourceString": "The Slurp foresaw your coming."
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_4:FortControllerRequirement_IsFirstEverConversationWithNPC_0:FortControllerRequirement_IsFirstEverConversationWithNPC",
+                  "ObjectPath": "/NPCLibrary/NPCs/SlurpJonesy/NPCLibrary_Conversation_SlurpJonesy.5"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          }
+        ],
+        "DefaultMessage": {
+          "Namespace": "",
+          "Key": "337E1F3B4429E12250C3C2919773713A",
+          "SourceString": "The Slurp knows... "
+        }
+      },
+      "OutputConnections": [
+        "1EABD7DB-4F4620E5-5B26F7BC-8FC78A4F",
+        "4BC12AA3-4D39F8DD-F1FF679A-2B415153",
+        "C3F57AE7-40A478F0-3F58199F-1DE431EB"
+      ],
+      "NodeName": "",
+      "Compiled_NodeGUID": "47D8FFF5-4B73AB4D-E3E4CBA8-7342F87F"
+    }
+  }
+]

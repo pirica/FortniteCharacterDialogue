@@ -1,0 +1,291 @@
+[
+  {
+    "Type": "ConversationDatabase",
+    "Name": "NPCLibrary_Conversation_FarmerSteel",
+    "Properties": {
+      "CompilerVersion": 2,
+      "ReachableNodeMap": {
+        "8B3512E6477FBF20D958929A14D3EDED": {
+          "ObjectName": "NPCLibrary_Conversation_FarmerSteel:ConversationEntryPointNode_7:ConversationEntryPointNode",
+          "ObjectPath": "/NPCLibrary/NPCs/FarmerSteel/FarmerSteel/NPCLibrary_Conversation_FarmerSteel.1"
+        },
+        "03D9291C4BFDCC4A2CB2C7A9039D4BE6": {
+          "ObjectName": "NPCLibrary_Conversation_FarmerSteel:Speech_C_4:Speech_C",
+          "ObjectPath": "/NPCLibrary/NPCs/FarmerSteel/FarmerSteel/NPCLibrary_Conversation_FarmerSteel.7"
+        },
+        "0E75B8D6474E931559013D90C5A4BA85": {
+          "ObjectName": "NPCLibrary_Conversation_FarmerSteel:ConversationLinkNode_0:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/FarmerSteel/FarmerSteel/NPCLibrary_Conversation_FarmerSteel.2"
+        },
+        "A13237C5472C9D3B98B35485A190927F": {
+          "ObjectName": "NPCLibrary_Conversation_FarmerSteel:ConversationLinkNode_1:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/FarmerSteel/FarmerSteel/NPCLibrary_Conversation_FarmerSteel.3"
+        }
+      },
+      "EntryTags": [
+        {
+          "EntryTag": {
+            "TagName": "Conversation.Entry.FarmerSteel"
+          },
+          "DestinationList": [
+            "8B3512E6-477FBF20-D958929A-14D3EDED"
+          ]
+        }
+      ],
+      "ExitTags": [
+        "Conversation.Entry.BasicServices",
+        "Conversation.Entry.NPCLibrary.Quests"
+      ],
+      "InternalNodeIds": [
+        "8B3512E6-477FBF20-D958929A-14D3EDED",
+        "03D9291C-4BFDCC4A-2CB2C7A9-039D4BE6",
+        "0E75B8D6-474E9315-59013D90-C5A4BA85",
+        "A13237C5-472C9D3B-98B35485-A190927F"
+      ],
+      "Speakers": [
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.Player"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.406108,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "0068FF"
+          }
+        },
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.NPC"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.065123,
+            "B": 0.1875,
+            "A": 1.0,
+            "Hex": "001130"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ConversationEntryPointNode",
+    "Name": "ConversationEntryPointNode_7",
+    "Properties": {
+      "EntryTag": {
+        "TagName": "Conversation.Entry.FarmerSteel"
+      },
+      "OutputConnections": [
+        "03D9291C-4BFDCC4A-2CB2C7A9-039D4BE6"
+      ],
+      "Compiled_NodeGUID": "8B3512E6-477FBF20-D958929A-14D3EDED"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_0",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.BasicServices"
+      },
+      "Compiled_NodeGUID": "0E75B8D6-474E9315-59013D90-C5A4BA85"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_1",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.NPCLibrary.Quests"
+      },
+      "Compiled_NodeGUID": "A13237C5-472C9D3B-98B35485-A190927F"
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_HasCID",
+    "Name": "FortControllerRequirement_HasCID_0",
+    "Properties": {
+      "AllowedCIDs": [
+        {
+          "AssetPathName": "/Game/Athena/Items/Cosmetics/Characters/CID_959_Athena_Commando_M_Corny.CID_959_Athena_Commando_M_Corny",
+          "SubPathString": ""
+        }
+      ]
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_HasVisitedPOI",
+    "Name": "FortControllerRequirement_HasVisitedPOI_0",
+    "Properties": {
+      "POITag": {
+        "TagName": "Athena.Location.UnNamedPOI.SteelFarm"
+      }
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_IsFirstEverConversationWithNPC",
+    "Name": "FortControllerRequirement_IsFirstEverConversationWithNPC_0",
+    "Properties": {}
+  },
+  {
+    "Type": "Speech_C",
+    "Name": "Speech_C_4",
+    "Properties": {
+      "SpeakerTag": {
+        "TagName": "Conversation.Participant.NPC"
+      },
+      "ListenerTag": {
+        "TagName": "Conversation.Participant.Player"
+      },
+      "GeneralConfig": {
+        "ContextualMessages": [
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "F3EA8464452DA97A325F72A2F2CA8C39",
+              "SourceString": "Hey. You're not the one who's <b>been poking 'round my farm,</> are ya?"
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_4:FortControllerRequirement_HasVisitedPOI_0:FortControllerRequirement_HasVisitedPOI",
+                  "ObjectPath": "/NPCLibrary/NPCs/FarmerSteel/FarmerSteel/NPCLibrary_Conversation_FarmerSteel.5"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.VisitedSpecificPOI"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "9A94FDAB4CD74E6DD81A17AB063FDB6C",
+              "SourceString": "All you need to know about me is that you should stay outta my corn."
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_4:FortControllerRequirement_IsFirstEverConversationWithNPC_0:FortControllerRequirement_IsFirstEverConversationWithNPC",
+                  "ObjectPath": "/NPCLibrary/NPCs/FarmerSteel/FarmerSteel/NPCLibrary_Conversation_FarmerSteel.6"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "F48A6468422407B0906FE69F88190049",
+              "SourceString": "My stars. I must be seein' things."
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_4:FortControllerRequirement_HasCID_0:FortControllerRequirement_HasCID",
+                  "ObjectPath": "/NPCLibrary/NPCs/FarmerSteel/FarmerSteel/NPCLibrary_Conversation_FarmerSteel.4"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.OutfitReaction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          }
+        ],
+        "DefaultMessage": {
+          "Namespace": "",
+          "Key": "EB4512514D285F014EE5CE8AAF01B583",
+          "SourceString": "Keep outta my corn. "
+        }
+      },
+      "OutputConnections": [
+        "A13237C5-472C9D3B-98B35485-A190927F",
+        "0E75B8D6-474E9315-59013D90-C5A4BA85"
+      ],
+      "NodeName": "",
+      "Compiled_NodeGUID": "03D9291C-4BFDCC4A-2CB2C7A9-039D4BE6"
+    }
+  }
+]

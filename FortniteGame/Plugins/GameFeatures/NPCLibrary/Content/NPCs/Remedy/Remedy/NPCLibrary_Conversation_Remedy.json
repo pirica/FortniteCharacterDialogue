@@ -1,0 +1,295 @@
+[
+  {
+    "Type": "ConversationDatabase",
+    "Name": "NPCLibrary_Conversation_Remedy",
+    "Properties": {
+      "CompilerVersion": 2,
+      "ReachableNodeMap": {
+        "6119B427413E63F66B6FA2BD7263ECDC": {
+          "ObjectName": "NPCLibrary_Conversation_Remedy:ConversationEntryPointNode_7:ConversationEntryPointNode",
+          "ObjectPath": "/NPCLibrary/NPCs/Remedy/Remedy/NPCLibrary_Conversation_Remedy.1"
+        },
+        "79626BA944172C3F3801D59CF2259E7F": {
+          "ObjectName": "NPCLibrary_Conversation_Remedy:Speech_C_4:Speech_C",
+          "ObjectPath": "/NPCLibrary/NPCs/Remedy/Remedy/NPCLibrary_Conversation_Remedy.7"
+        },
+        "39D564574BD1D40AA57AE7A612BBDD1D": {
+          "ObjectName": "NPCLibrary_Conversation_Remedy:ConversationLinkNode_0:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/Remedy/Remedy/NPCLibrary_Conversation_Remedy.2"
+        },
+        "1B655EBF46142A318A195695BE894871": {
+          "ObjectName": "NPCLibrary_Conversation_Remedy:ConversationLinkNode_1:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/Remedy/Remedy/NPCLibrary_Conversation_Remedy.3"
+        }
+      },
+      "EntryTags": [
+        {
+          "EntryTag": {
+            "TagName": "Conversation.Entry.Remedy"
+          },
+          "DestinationList": [
+            "6119B427-413E63F6-6B6FA2BD-7263ECDC"
+          ]
+        }
+      ],
+      "ExitTags": [
+        "Conversation.Entry.BasicServices",
+        "Conversation.Entry.NPCLibrary.Quests"
+      ],
+      "InternalNodeIds": [
+        "6119B427-413E63F6-6B6FA2BD-7263ECDC",
+        "79626BA9-44172C3F-3801D59C-F2259E7F",
+        "39D56457-4BD1D40A-A57AE7A6-12BBDD1D",
+        "1B655EBF-46142A31-8A195695-BE894871"
+      ],
+      "Speakers": [
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.Player"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.406108,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "0068FF"
+          }
+        },
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.NPC"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.065123,
+            "B": 0.1875,
+            "A": 1.0,
+            "Hex": "001130"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ConversationEntryPointNode",
+    "Name": "ConversationEntryPointNode_7",
+    "Properties": {
+      "EntryTag": {
+        "TagName": "Conversation.Entry.Remedy"
+      },
+      "OutputConnections": [
+        "79626BA9-44172C3F-3801D59C-F2259E7F"
+      ],
+      "Compiled_NodeGUID": "6119B427-413E63F6-6B6FA2BD-7263ECDC"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_0",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.BasicServices"
+      },
+      "Compiled_NodeGUID": "39D56457-4BD1D40A-A57AE7A6-12BBDD1D"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_1",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.NPCLibrary.Quests"
+      },
+      "Compiled_NodeGUID": "1B655EBF-46142A31-8A195695-BE894871"
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_HasCID",
+    "Name": "FortControllerRequirement_HasCID_0",
+    "Properties": {
+      "AllowedCIDs": [
+        {
+          "AssetPathName": "/Game/Athena/Items/Cosmetics/Characters/CID_675_Athena_Commando_M_TheGoldenSkeleton.CID_675_Athena_Commando_M_TheGoldenSkeleton",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "/Game/Athena/Items/Cosmetics/Characters/CID_602_Athena_Commando_M_NanaSplit.CID_602_Athena_Commando_M_NanaSplit",
+          "SubPathString": ""
+        }
+      ]
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_HasOwnedTag",
+    "Name": "FortControllerRequirement_HasOwnedTag_0",
+    "Properties": {
+      "OwnedTag": {
+        "TagName": "Athena.Quests.NPC.DialogueOverride.Nightmare"
+      }
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_IsFirstEverConversationWithNPC",
+    "Name": "FortControllerRequirement_IsFirstEverConversationWithNPC_0",
+    "Properties": {}
+  },
+  {
+    "Type": "Speech_C",
+    "Name": "Speech_C_4",
+    "Properties": {
+      "SpeakerTag": {
+        "TagName": "Conversation.Participant.NPC"
+      },
+      "ListenerTag": {
+        "TagName": "Conversation.Participant.Player"
+      },
+      "GeneralConfig": {
+        "ContextualMessages": [
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "1390E6D44A6121FC67285FA72AC886B2",
+              "SourceString": "Hm. You might be a little far gone for even me to help."
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAny",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_4:FortControllerRequirement_HasCID_0:FortControllerRequirement_HasCID",
+                  "ObjectPath": "/NPCLibrary/NPCs/Remedy/Remedy/NPCLibrary_Conversation_Remedy.4"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.OutfitReaction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "26BA7D894BAC3F99543152BF4CA41B54",
+              "SourceString": "People in the jungle are turning up wounded. Some kind of... blades. Nasty stuff."
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_4:FortControllerRequirement_HasOwnedTag_0:FortControllerRequirement_HasOwnedTag",
+                  "ObjectPath": "/NPCLibrary/NPCs/Remedy/Remedy/NPCLibrary_Conversation_Remedy.5"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.HasQuestGameplayTag"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "0F37617F47BCDA3F7AD640A3767D175C",
+              "SourceString": "If you're here for a patch-job, take a number."
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_4:FortControllerRequirement_IsFirstEverConversationWithNPC_0:FortControllerRequirement_IsFirstEverConversationWithNPC",
+                  "ObjectPath": "/NPCLibrary/NPCs/Remedy/Remedy/NPCLibrary_Conversation_Remedy.6"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          }
+        ],
+        "DefaultMessage": {
+          "Namespace": "",
+          "Key": "E8644F3F4123E82AB431E98880C9FD5E",
+          "SourceString": "What can I say? I love a lost cause."
+        }
+      },
+      "OutputConnections": [
+        "1B655EBF-46142A31-8A195695-BE894871",
+        "39D56457-4BD1D40A-A57AE7A6-12BBDD1D"
+      ],
+      "NodeName": "",
+      "Compiled_NodeGUID": "79626BA9-44172C3F-3801D59C-F2259E7F"
+    }
+  }
+]

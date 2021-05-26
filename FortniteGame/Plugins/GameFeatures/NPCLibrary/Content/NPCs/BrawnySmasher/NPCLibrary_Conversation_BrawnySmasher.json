@@ -1,0 +1,120 @@
+[
+  {
+    "Type": "ConversationDatabase",
+    "Name": "NPCLibrary_Conversation_BrawnySmasher",
+    "Properties": {
+      "CompilerVersion": 2,
+      "ReachableNodeMap": {
+        "B74E66674DA1978FEC13E3807E04C3E3": {
+          "ObjectName": "NPCLibrary_Conversation_BrawnySmasher:ConversationEntryPointNode_7:ConversationEntryPointNode",
+          "ObjectPath": "/NPCLibrary/NPCs/BrawnySmasher/NPCLibrary_Conversation_BrawnySmasher.1"
+        },
+        "0FE1E531428E18089B1CABAE51AF58DE": {
+          "ObjectName": "NPCLibrary_Conversation_BrawnySmasher:Speech_C_4:Speech_C",
+          "ObjectPath": "/NPCLibrary/NPCs/BrawnySmasher/NPCLibrary_Conversation_BrawnySmasher.3"
+        },
+        "10D301C1493769F5E8881CA82DA09BD0": {
+          "ObjectName": "NPCLibrary_Conversation_BrawnySmasher:ConversationLinkNode_0:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/BrawnySmasher/NPCLibrary_Conversation_BrawnySmasher.2"
+        }
+      },
+      "EntryTags": [
+        {
+          "EntryTag": {
+            "TagName": "Conversation.Entry.BrawnySmasher"
+          },
+          "DestinationList": [
+            "B74E6667-4DA1978F-EC13E380-7E04C3E3"
+          ]
+        }
+      ],
+      "ExitTags": [
+        "Conversation.Entry.BrawnySmasher.Services"
+      ],
+      "InternalNodeIds": [
+        "B74E6667-4DA1978F-EC13E380-7E04C3E3",
+        "0FE1E531-428E1808-9B1CABAE-51AF58DE",
+        "10D301C1-493769F5-E8881CA8-2DA09BD0"
+      ],
+      "Speakers": [
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.Player"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.406108,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "0068FF"
+          }
+        },
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.NPC"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.065123,
+            "B": 0.1875,
+            "A": 1.0,
+            "Hex": "001130"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ConversationEntryPointNode",
+    "Name": "ConversationEntryPointNode_7",
+    "Properties": {
+      "EntryTag": {
+        "TagName": "Conversation.Entry.BrawnySmasher"
+      },
+      "OutputConnections": [
+        "0FE1E531-428E1808-9B1CABAE-51AF58DE"
+      ],
+      "Compiled_NodeGUID": "B74E6667-4DA1978F-EC13E380-7E04C3E3"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_0",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.BrawnySmasher.Services"
+      },
+      "Compiled_NodeGUID": "10D301C1-493769F5-E8881CA8-2DA09BD0"
+    }
+  },
+  {
+    "Type": "Speech_C",
+    "Name": "Speech_C_4",
+    "Properties": {
+      "SpeakerTag": {
+        "TagName": "Conversation.Participant.NPC"
+      },
+      "ListenerTag": {
+        "TagName": "Conversation.Participant.Player"
+      },
+      "GeneralConfig": {
+        "DefaultMessage": {
+          "Namespace": "",
+          "Key": "76799E134AAC572A4E04A1B64C041DBD",
+          "SourceString": "[Placeholder]"
+        }
+      },
+      "OutputConnections": [
+        "10D301C1-493769F5-E8881CA8-2DA09BD0"
+      ],
+      "NodeName": "",
+      "Compiled_NodeGUID": "0FE1E531-428E1808-9B1CABAE-51AF58DE"
+    }
+  }
+]

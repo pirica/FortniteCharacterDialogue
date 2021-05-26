@@ -1,0 +1,240 @@
+[
+  {
+    "Type": "ConversationDatabase",
+    "Name": "NPCLibrary_Conversation_Sparkplug",
+    "Properties": {
+      "CompilerVersion": 2,
+      "ReachableNodeMap": {
+        "634218D64EC8175E5428ACA9AB481980": {
+          "ObjectName": "NPCLibrary_Conversation_Sparkplug:ConversationEntryPointNode_7:ConversationEntryPointNode",
+          "ObjectPath": "/NPCLibrary/NPCs/Sparkplug/Sparkplug/NPCLibrary_Conversation_Sparkplug.1"
+        },
+        "EF1D331447ACEBCF618736893626517D": {
+          "ObjectName": "NPCLibrary_Conversation_Sparkplug:Speech_C_4:Speech_C",
+          "ObjectPath": "/NPCLibrary/NPCs/Sparkplug/Sparkplug/NPCLibrary_Conversation_Sparkplug.6"
+        },
+        "27926F904B5823AAC27CEEA25943C456": {
+          "ObjectName": "NPCLibrary_Conversation_Sparkplug:ConversationLinkNode_0:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/Sparkplug/Sparkplug/NPCLibrary_Conversation_Sparkplug.2"
+        },
+        "F95F7AA3478B9E85F04874A411A2FDE0": {
+          "ObjectName": "NPCLibrary_Conversation_Sparkplug:ConversationLinkNode_1:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/Sparkplug/Sparkplug/NPCLibrary_Conversation_Sparkplug.3"
+        }
+      },
+      "EntryTags": [
+        {
+          "EntryTag": {
+            "TagName": "Conversation.Entry.Sparkplug"
+          },
+          "DestinationList": [
+            "634218D6-4EC8175E-5428ACA9-AB481980"
+          ]
+        }
+      ],
+      "ExitTags": [
+        "Conversation.Entry.BasicServices",
+        "Conversation.Entry.NPCLibrary.Quests"
+      ],
+      "InternalNodeIds": [
+        "634218D6-4EC8175E-5428ACA9-AB481980",
+        "EF1D3314-47ACEBCF-61873689-3626517D",
+        "27926F90-4B5823AA-C27CEEA2-5943C456",
+        "F95F7AA3-478B9E85-F04874A4-11A2FDE0"
+      ],
+      "Speakers": [
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.Player"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.406108,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "0068FF"
+          }
+        },
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.NPC"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.065123,
+            "B": 0.1875,
+            "A": 1.0,
+            "Hex": "001130"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ConversationEntryPointNode",
+    "Name": "ConversationEntryPointNode_7",
+    "Properties": {
+      "EntryTag": {
+        "TagName": "Conversation.Entry.Sparkplug"
+      },
+      "OutputConnections": [
+        "EF1D3314-47ACEBCF-61873689-3626517D"
+      ],
+      "Compiled_NodeGUID": "634218D6-4EC8175E-5428ACA9-AB481980"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_0",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.BasicServices"
+      },
+      "Compiled_NodeGUID": "27926F90-4B5823AA-C27CEEA2-5943C456"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_1",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.NPCLibrary.Quests"
+      },
+      "Compiled_NodeGUID": "F95F7AA3-478B9E85-F04874A4-11A2FDE0"
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_HasCID",
+    "Name": "FortControllerRequirement_HasCID_0",
+    "Properties": {
+      "AllowedCIDs": [
+        {
+          "AssetPathName": "/Game/Athena/Items/Cosmetics/Characters/CID_795_Athena_Commando_M_Dummeez.CID_795_Athena_Commando_M_Dummeez",
+          "SubPathString": ""
+        }
+      ]
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_IsFirstEverConversationWithNPC",
+    "Name": "FortControllerRequirement_IsFirstEverConversationWithNPC_0",
+    "Properties": {}
+  },
+  {
+    "Type": "Speech_C",
+    "Name": "Speech_C_4",
+    "Properties": {
+      "SpeakerTag": {
+        "TagName": "Conversation.Participant.NPC"
+      },
+      "ListenerTag": {
+        "TagName": "Conversation.Participant.Player"
+      },
+      "GeneralConfig": {
+        "ContextualMessages": [
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "B030534A41D10B667312A794D1B633DE",
+              "SourceString": "Hope you haven't crashed another one..."
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_4:FortControllerRequirement_HasCID_0:FortControllerRequirement_HasCID",
+                  "ObjectPath": "/NPCLibrary/NPCs/Sparkplug/Sparkplug/NPCLibrary_Conversation_Sparkplug.4"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.OutfitReaction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "A85718AF49494934D8A873BC9B2C83E9",
+              "SourceString": "Need a tune-up? Fresh paintjob? What?"
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_4:FortControllerRequirement_IsFirstEverConversationWithNPC_0:FortControllerRequirement_IsFirstEverConversationWithNPC",
+                  "ObjectPath": "/NPCLibrary/NPCs/Sparkplug/Sparkplug/NPCLibrary_Conversation_Sparkplug.5"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          }
+        ],
+        "DefaultMessage": {
+          "Namespace": "",
+          "Key": "EC60E7BE4F621DB0270AF5B4D4805C13",
+          "SourceString": "One man's wreck is this girl's pile of potential."
+        }
+      },
+      "OutputConnections": [
+        "F95F7AA3-478B9E85-F04874A4-11A2FDE0",
+        "27926F90-4B5823AA-C27CEEA2-5943C456"
+      ],
+      "NodeName": "",
+      "Compiled_NodeGUID": "EF1D3314-47ACEBCF-61873689-3626517D"
+    }
+  }
+]
