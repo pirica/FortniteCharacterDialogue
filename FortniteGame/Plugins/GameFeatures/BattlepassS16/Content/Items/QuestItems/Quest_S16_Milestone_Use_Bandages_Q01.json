@@ -1,0 +1,130 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "Quest_S16_Milestone_Use_Bandages_Q01",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "QuestSubtype": "EFortQuestSubtype::Milestone",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/Remedy/Remedy/NPCCharacterData_Remedy.NPCCharacterData_Remedy",
+        "SubPathString": ""
+      },
+      "bSuppressQuestGrantedEvent": true,
+      "bIncludedInCategories": false,
+      "Threshold": 19,
+      "RewardsTable": {
+        "ObjectName": "ChallengeReward_S16_MilestoneXP:DataTable",
+        "ObjectPath": "/BattlepassS16/Items/QuestRewards/ChallengeReward_S16_MilestoneXP.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_s16_milestonepunch_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S16_Milestone_Use_Bandages_Q01_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "Target.Tags HasTag Athena.Quests.Ability.Heal.Medkit || Target.Tags HasTag Athena.Quests.Ability.Heal.Bandage",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::ComplexCustom",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "09A82D61485139EFB9DAFC9EBA7F51EB",
+            "SourceString": "Use Bandages and Medkits"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "D24F71CE463EFB7D50970F90F2D0A22E",
+            "SourceString": "Yowch. That looks painful."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 25,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "Quest_S16_Milestone_Use_Bandages_Q01",
+        "Key": "Quest_S16_Milestone_Use_Bandages_Q01_CompletionText",
+        "SourceString": "Be sure to change the bandages daily."
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Rare",
+      "DisplayName": {
+        "Namespace": "Quest_S16_Milestone_Use_Bandages_Q01",
+        "Key": "Quest_S16_Milestone_Use_Bandages_Q01_DisplayName",
+        "SourceString": "Use Bandages and Medkits"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S16_Milestone_Use_Bandages_Q01",
+        "Key": "Quest_S16_Milestone_Use_Bandages_Q01_ShortDescription",
+        "SourceString": "Yowch. That looks painful."
+      },
+      "Description": {
+        "Namespace": "Quest_S16_Milestone_Use_Bandages_Q01",
+        "Key": "Quest_S16_Milestone_Use_Bandages_Q01_Description",
+        "SourceString": "Use Bandages and Medkits"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP",
+        "Quest.Metadata.HideForContextualQuestDisplay"
+      ]
+    }
+  }
+]

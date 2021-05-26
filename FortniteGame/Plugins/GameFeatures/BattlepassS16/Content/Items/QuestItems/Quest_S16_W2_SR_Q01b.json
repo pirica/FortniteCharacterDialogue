@@ -1,0 +1,138 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "Quest_S16_W2_SR_Q01b",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "QuestSubtype": "EFortQuestSubtype::Milestone",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/Jules/Jules/NPCCharacterData_Jules.NPCCharacterData_Jules",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "Threshold": 2500,
+      "RewardsTable": {
+        "ObjectName": "ChallengeReward_S16_LegendaryXP_Stage2:DataTable",
+        "ObjectPath": "/BattlepassS16/Items/QuestRewards/ChallengeReward_S16_LegendaryXP_Stage2.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_sr_s16_w02",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S16_W2_SR_Q01",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.GameOn"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Weapon.Ranged.Bow"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "Target.Tags HasTag Homebase.Class || Target.Tags HasTag Athena.Faction.Generic.Hostile || Target.Tags HasTag Pawn.Athena.NPC.Duel.IsBeingChallenged || Target.Tags HasTag Pawn.Athena.NPC.Wildlife.Predator",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Damage",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "190DFCC64BCFDCCB005830B186F6C35C",
+            "SourceString": "Deal damage with bows"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "B6BAE59042164CEABE5CE0B647BAF132",
+            "SourceString": "Deal damage with bows"
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 5000,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "",
+        "Key": "41CADE4E4B0D3A9E5B1E0189708B796E",
+        "SourceString": "Huh. More effective than I remember. I bet they can be improved..."
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Legendary",
+      "DisplayName": {
+        "Namespace": "",
+        "Key": "A01D6EEB4057A2DCD5A881B01B376D5E",
+        "SourceString": "Deal damage with bows"
+      },
+      "ShortDescription": {
+        "Namespace": "",
+        "Key": "3CF0138C44B6BB4D810BF28737457278",
+        "SourceString": "Bows are a bit old-fashioned for my taste, but resources are clearly limited now."
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "B9B0CC434478D083B3AFFEAA850D4D33",
+        "SourceString": "Deal damage with bows"
+      },
+      "GameplayTags": [
+        "Quest.Metadata.PartyAssist",
+        "Quest.Metadata.GroupChallenge",
+        "ChallengeCategory.XP",
+        "Quest.Metadata.HideForContextualQuestDisplay"
+      ]
+    }
+  }
+]

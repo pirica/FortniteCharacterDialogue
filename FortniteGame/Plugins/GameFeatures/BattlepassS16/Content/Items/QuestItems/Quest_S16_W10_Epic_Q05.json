@@ -1,0 +1,150 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "Quest_S16_W10_Epic_Q05",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "QuestSubtype": "EFortQuestSubtype::WeeklyChallenge",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/CastawayJonesy/CastawayJonesy/NPCCharacterData_CastawayJonesy.NPCCharacterData_CastawayJonesy",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "Threshold": 1,
+      "Rewards": [
+        {
+          "ItemPrimaryAssetId": {
+            "PrimaryAssetType": {
+              "Name": "Quest"
+            },
+            "PrimaryAssetName": "Quest_S16_W10_Epic_Q06"
+          },
+          "Quantity": 1
+        }
+      ],
+      "RewardsTable": {
+        "ObjectName": "ChallengeReward_S16_WeeklyXP:DataTable",
+        "ObjectPath": "/BattlepassS16/Items/QuestRewards/ChallengeReward_S16_WeeklyXP.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athenabattlepass_weeklychallenge_token",
+          "Quantity": 1
+        },
+        {
+          "TemplateId": "Token:athenabattlepass_s16_w10",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S16_W10_Epic_Q05_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.Quests.SupplyDropIsFalling"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Damage",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "2767D0B64B29A4BA6F8BAB9DF0A6CF2F",
+            "SourceString": "Deal damage to descending Supply Drops"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "03AF13C74A39EAEA82A6F6AEE4B9880E",
+            "SourceString": "Maybe today that supply drop will finally land. "
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 100,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "Quest_S16_W10_Epic_Q05",
+        "Key": "Quest_S16_W10_Epic_Q05_CompletionText",
+        "SourceString": "Another supply drop, slipped through my fingers..."
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Epic",
+      "DisplayName": {
+        "Namespace": "Quest_S16_W10_Epic_Q05",
+        "Key": "Quest_S16_W10_Epic_Q05_DisplayName",
+        "SourceString": "Deal damage to descending Supply Drops"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S16_W10_Epic_Q05",
+        "Key": "Quest_S16_W10_Epic_Q05_ShortDescription",
+        "SourceString": "Maybe today that supply drop will finally land. "
+      },
+      "Description": {
+        "Namespace": "Quest_S16_W10_Epic_Q05",
+        "Key": "Quest_S16_W10_Epic_Q05_Description",
+        "SourceString": "Deal damage to descending Supply Drops"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP"
+      ]
+    }
+  }
+]

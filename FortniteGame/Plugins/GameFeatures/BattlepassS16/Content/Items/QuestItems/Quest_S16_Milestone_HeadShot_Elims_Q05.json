@@ -1,0 +1,144 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "Quest_S16_Milestone_HeadShot_Elims_Q05",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "QuestSubtype": "EFortQuestSubtype::Milestone",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/Deadfire/Deadfire/NPCCharacterData_Deadfire.NPCCharacterData_Deadfire",
+        "SubPathString": ""
+      },
+      "bSuppressQuestGrantedEvent": true,
+      "bIncludedInCategories": false,
+      "Threshold": 150,
+      "RewardsTable": {
+        "ObjectName": "ChallengeReward_S16_MilestoneXP:DataTable",
+        "ObjectPath": "/BattlepassS16/Items/QuestRewards/ChallengeReward_S16_MilestoneXP.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_s16_milestonepunch_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S16_Milestone_HeadShot_Elims_Q05_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Gameplay.DamageDone.Headshot"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Kill",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "857EB9A44C0DB190EF355E84308DF878",
+            "SourceString": "Head Shot Eliminations"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "0D98FC5D4E7C09CC9E674F9B6DD8C632",
+            "SourceString": "Make it clean. Make it count."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 200,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "Quest_S16_Milestone_HeadShot_Elims_Q05",
+        "Key": "Quest_S16_Milestone_HeadShot_Elims_Q05_CompletionText",
+        "SourceString": "Ayup. That's how we did it back in my glory days."
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Rare",
+      "DisplayName": {
+        "Namespace": "Quest_S16_Milestone_HeadShot_Elims_Q05",
+        "Key": "Quest_S16_Milestone_HeadShot_Elims_Q05_DisplayName",
+        "SourceString": "Head Shot Eliminations"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S16_Milestone_HeadShot_Elims_Q05",
+        "Key": "Quest_S16_Milestone_HeadShot_Elims_Q05_ShortDescription",
+        "SourceString": "Make it clean. Make it count."
+      },
+      "Description": {
+        "Namespace": "Quest_S16_Milestone_HeadShot_Elims_Q05",
+        "Key": "Quest_S16_Milestone_HeadShot_Elims_Q05_Description",
+        "SourceString": "Head Shot Eliminations"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP",
+        "Quest.Metadata.HideForContextualQuestDisplay"
+      ]
+    }
+  }
+]

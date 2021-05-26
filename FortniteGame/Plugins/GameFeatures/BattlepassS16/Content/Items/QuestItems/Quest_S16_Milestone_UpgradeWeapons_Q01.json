@@ -1,0 +1,130 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "Quest_S16_Milestone_UpgradeWeapons_Q01",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "QuestSubtype": "EFortQuestSubtype::Milestone",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/Jekyll/Jekyll/NPCCharacterData_Jekyll.NPCCharacterData_Jekyll",
+        "SubPathString": ""
+      },
+      "bSuppressQuestGrantedEvent": true,
+      "bIncludedInCategories": false,
+      "Threshold": 4,
+      "RewardsTable": {
+        "ObjectName": "ChallengeReward_S16_MilestoneXP:DataTable",
+        "ObjectPath": "/BattlepassS16/Items/QuestRewards/ChallengeReward_S16_MilestoneXP.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_s16_milestonepunch_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S16_Milestone_UpgradeWeapons_Q01_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.Quests.TandemService.UpgradeWeapon"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::ComplexCustom",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "D451E9D6442B6FF79B7E88AB367456CB",
+            "SourceString": "Upgrade weapons"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "E1D39A9B47FFF86568E4279DB8061A1F",
+            "SourceString": "A little science should do just the trick."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 5,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "Quest_S16_Milestone_UpgradeWeapons_Q01",
+        "Key": "Quest_S16_Milestone_UpgradeWeapons_Q01_CompletionText",
+        "SourceString": "That went much better than when I tried to upgrade myself."
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Rare",
+      "DisplayName": {
+        "Namespace": "Quest_S16_Milestone_UpgradeWeapons_Q01",
+        "Key": "Quest_S16_Milestone_UpgradeWeapons_Q01_DisplayName",
+        "SourceString": "Upgrade weapons"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S16_Milestone_UpgradeWeapons_Q01",
+        "Key": "Quest_S16_Milestone_UpgradeWeapons_Q01_ShortDescription",
+        "SourceString": "A little science should do just the trick."
+      },
+      "Description": {
+        "Namespace": "Quest_S16_Milestone_UpgradeWeapons_Q01",
+        "Key": "Quest_S16_Milestone_UpgradeWeapons_Q01_Description",
+        "SourceString": "Upgrade weapons"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP",
+        "Quest.Metadata.HideForContextualQuestDisplay"
+      ]
+    }
+  }
+]

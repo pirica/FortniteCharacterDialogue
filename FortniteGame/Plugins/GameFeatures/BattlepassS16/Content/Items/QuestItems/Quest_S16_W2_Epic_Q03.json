@@ -1,0 +1,254 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "Quest_S16_W2_Epic_Q03",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "QuestSubtype": "EFortQuestSubtype::WeeklyChallenge",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/Jules/Jules/NPCCharacterData_Jules.NPCCharacterData_Jules",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "Rewards": [
+        {
+          "ItemPrimaryAssetId": {
+            "PrimaryAssetType": {
+              "Name": "Quest"
+            },
+            "PrimaryAssetName": "Quest_S16_W2_Epic_Q04"
+          },
+          "Quantity": 1
+        }
+      ],
+      "RewardsTable": {
+        "ObjectName": "ChallengeReward_S16_WeeklyXP:DataTable",
+        "ObjectPath": "/BattlepassS16/Items/QuestRewards/ChallengeReward_S16_WeeklyXP.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athenabattlepass_weeklychallenge_token",
+          "Quantity": 1
+        },
+        {
+          "TemplateId": "Token:athenabattlepass_s16_w02",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S16_W2_Epic_Q03_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.GameOn"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Item.Weapon.Ranged.Shotgun.Bone"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": false
+                },
+                {
+                  "Tag": {
+                    "TagName": "Item.Weapon.Ranged.SMG.Bone"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": false
+                },
+                {
+                  "Tag": {
+                    "TagName": "Item.Weapon.Ranged.Pistol.Bone"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": false
+                },
+                {
+                  "Tag": {
+                    "TagName": "Item.Weapon.Ranged.Bow.Bone"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": false
+                },
+                {
+                  "Tag": {
+                    "TagName": "Item.Weapon.Ranged.Assault.Bone"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": false
+                },
+                {
+                  "Tag": {
+                    "TagName": "Item.Weapon.Ranged.Assault.Scrap"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": false
+                },
+                {
+                  "Tag": {
+                    "TagName": "Item.Weapon.Ranged.Bow.Scrap"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": false
+                },
+                {
+                  "Tag": {
+                    "TagName": "Item.Weapon.Ranged.Pistol.Revolver.Scrap"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": false
+                },
+                {
+                  "Tag": {
+                    "TagName": "Item.Weapon.Ranged.Shotgun.Scrap"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": false
+                },
+                {
+                  "Tag": {
+                    "TagName": "Item.Weapon.Ranged.SMG.Scrap"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": false
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.Vehicle"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": false
+                },
+                {
+                  "Tag": {
+                    "TagName": "Gameplay.Damage.Physical.Explosive"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": false
+                },
+                {
+                  "Tag": {
+                    "TagName": "Weapon.Melee.Impact.Pickaxe"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": false
+                },
+                {
+                  "Tag": {
+                    "TagName": "Item.Weapon.Ranged.Bow.Flame"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": false
+                },
+                {
+                  "Tag": {
+                    "TagName": "Item.Weapon.Ranged.Bow.Stink"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": false
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "Target.Tags HasTag Homebase.Class || Target.Tags HasTag Athena.Faction.Generic.Hostile || Target.Tags HasTag Pawn.Athena.NPC.Duel.IsBeingChallenged || Target.Tags HasTag Pawn.Athena.NPC.Wildlife.Predator",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Damage",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "C358D2314C0DF0E427EF6D857300416F",
+            "SourceString": "Deal damage with Mechanical weapons"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "C358D2314C0DF0E427EF6D857300416F",
+            "SourceString": "Deal damage with Mechanical weapons"
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 300,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 0.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "",
+        "Key": "C07C065643C54D73FD72ABA559A54E4E",
+        "SourceString": "Like I said, you can't beat that mechanical precision."
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Epic",
+      "DisplayName": {
+        "Namespace": "",
+        "Key": "C358D2314C0DF0E427EF6D857300416F",
+        "SourceString": "Deal damage with Mechanical weapons"
+      },
+      "ShortDescription": {
+        "Namespace": "",
+        "Key": "67799DFE45B60358B53C799C7D30E439",
+        "SourceString": "In my opinion, they're way superior to Primal weapons."
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "C358D2314C0DF0E427EF6D857300416F",
+        "SourceString": "Deal damage with Mechanical weapons"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP"
+      ]
+    }
+  }
+]

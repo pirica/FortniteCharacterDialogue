@@ -1,0 +1,138 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "Quest_S16_W7_SR_Q01c",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "QuestSubtype": "EFortQuestSubtype::Milestone",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/TheReaper/TheReaper/NPCCharacterData_TheReaper.NPCCharacterData_TheReaper",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "Threshold": 5000,
+      "RewardsTable": {
+        "ObjectName": "ChallengeReward_S16_LegendaryXP_Stage3:DataTable",
+        "ObjectPath": "/BattlepassS16/Items/QuestRewards/ChallengeReward_S16_LegendaryXP_Stage3.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_sr_s16_w07",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S16_W7_Legendary",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Damage",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "4DC23B0D48A2B099C496CBB925C72B35",
+            "SourceString": "Damage opponents"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "1301060B417323A80570BF8CF46445C9",
+            "SourceString": "Anyone can shoot. Hitting the target, that takes skill."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 7500,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "Quest_S16_W7_SR_Q01c",
+        "Key": "Quest_S16_W7_SR_Q01c_CompletionText",
+        "SourceString": "I'd say that got their attention. "
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Legendary",
+      "DisplayName": {
+        "Namespace": "Quest_S16_W7_SR_Q01c",
+        "Key": "Quest_S16_W7_SR_Q01c_DisplayName",
+        "SourceString": "Damage opponents"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S16_W7_SR_Q01c",
+        "Key": "Quest_S16_W7_SR_Q01c_ShortDescription",
+        "SourceString": "Anyone can shoot. Hitting the target, that takes skill."
+      },
+      "Description": {
+        "Namespace": "Quest_S16_W7_SR_Q01c",
+        "Key": "Quest_S16_W7_SR_Q01c_Description",
+        "SourceString": "Damage opponents"
+      },
+      "GameplayTags": [
+        "Quest.Metadata.PartyAssist",
+        "Quest.Metadata.GroupChallenge",
+        "ChallengeCategory.XP",
+        "Quest.Metadata.HideForContextualQuestDisplay"
+      ]
+    }
+  }
+]

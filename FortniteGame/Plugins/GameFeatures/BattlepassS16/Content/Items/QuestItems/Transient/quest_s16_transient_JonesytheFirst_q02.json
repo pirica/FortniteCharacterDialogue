@@ -1,0 +1,126 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "quest_s16_transient_JonesytheFirst_q02",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaTransientQuest",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/JonesyTheFirst/JonesyTheFirst/NPCCharacterData_JonesyTheFirst.NPCCharacterData_JonesyTheFirst",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "ExpirationDuration": -1,
+      "RewardsTable": {
+        "ObjectName": "ChallengeReward_S16_Transient_UC:DataTable",
+        "ObjectPath": "/BattlepassS16/Items/QuestRewards/ChallengeReward_S16_Transient_UC.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_s16_transientchallenge_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "quest_s16_transient_JonesytheFirst_q02_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "Target.Tags HasTag Homebase.Class || Target.Tags HasTag Athena.Faction.Generic.Hostile || Target.Tags HasTag Pawn.Athena.NPC.Duel.IsBeingChallenged || Target.Tags HasTag Pawn.Athena.NPC.Wildlife.Predator || Target.Tags HasTag Pawn.Athena.NPC.Mang",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Damage",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "292E0B0B49812F3E4A10A887230839E7",
+            "SourceString": "Deal damage"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "D43464B5416BF004F806DF950D729A6F",
+            "SourceString": "Show 'em how it's done."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 200,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "quest_s16_transient_JonesytheFirst_q02",
+        "Key": "quest_s16_transient_JonesytheFirst_q02_CompletionText",
+        "SourceString": "Not bad, not bad."
+      },
+      "GrantToProfileType": "athena",
+      "DisplayName": {
+        "Namespace": "quest_s16_transient_JonesytheFirst_q02",
+        "Key": "quest_s16_transient_JonesytheFirst_q02_DisplayName",
+        "SourceString": "Deal damage"
+      },
+      "ShortDescription": {
+        "Namespace": "quest_s16_transient_JonesytheFirst_q02",
+        "Key": "quest_s16_transient_JonesytheFirst_q02_ShortDescription",
+        "SourceString": "Show 'em how it's done."
+      },
+      "Description": {
+        "Namespace": "quest_s16_transient_JonesytheFirst_q02",
+        "Key": "quest_s16_transient_JonesytheFirst_q02_Description",
+        "SourceString": "Deal damage"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.Bars"
+      ]
+    }
+  }
+]

@@ -1,0 +1,145 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "Quest_S16_Milestone_Damage_PlayerVehicle_Q05",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "QuestSubtype": "EFortQuestSubtype::Milestone",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/Zenith/NPCCharacterData_Zenith.NPCCharacterData_Zenith",
+        "SubPathString": ""
+      },
+      "bSuppressQuestGrantedEvent": true,
+      "bIncludedInCategories": false,
+      "Threshold": 15000,
+      "RewardsTable": {
+        "ObjectName": "ChallengeReward_S16_MilestoneXP:DataTable",
+        "ObjectPath": "/BattlepassS16/Items/QuestRewards/ChallengeReward_S16_MilestoneXP.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_s16_milestonepunch_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S16_Milestone_Damage_PlayerVehicle_Q05_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.Vehicle"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Damage",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "EEFFDD2945BA55FBCCB0D3AAEF3F2815",
+            "SourceString": "Damage to Vehicles with a Player inside"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "E2D4CBF943F658B557B72BBA4A28F224",
+            "SourceString": "Now me, I can get a shot right through the window."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 20000,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "Quest_S16_Milestone_Damage_PlayerVehicle_Q05",
+        "Key": "Quest_S16_Milestone_Damage_PlayerVehicle_Q05_CompletionText",
+        "SourceString": "Saw a guy shoot a car in the tailpipe once. It was awesome."
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Rare",
+      "DisplayName": {
+        "Namespace": "Quest_S16_Milestone_Damage_PlayerVehicle_Q05",
+        "Key": "Quest_S16_Milestone_Damage_PlayerVehicle_Q05_DisplayName",
+        "SourceString": "Damage to Vehicles with a Player inside"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S16_Milestone_Damage_PlayerVehicle_Q05",
+        "Key": "Quest_S16_Milestone_Damage_PlayerVehicle_Q05_ShortDescription",
+        "SourceString": "Now me, I can get a shot right through the window."
+      },
+      "Description": {
+        "Namespace": "Quest_S16_Milestone_Damage_PlayerVehicle_Q05",
+        "Key": "Quest_S16_Milestone_Damage_PlayerVehicle_Q05_Description",
+        "SourceString": "Damage to Vehicles with a Player inside"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP",
+        "Quest.Metadata.HideForContextualQuestDisplay"
+      ],
+      "SmallPreviewImage": {
+        "AssetPathName": "/Game/Athena/UI/Challenges/Art/PunchCard_Icons/T_Ui_Combat_Damage.T_Ui_Combat_Damage",
+        "SubPathString": ""
+      },
+      "LargePreviewImage": {
+        "AssetPathName": "/Game/Athena/UI/Challenges/Art/PunchCard_Icons/T_Ui_Combat_Damage.T_Ui_Combat_Damage",
+        "SubPathString": ""
+      }
+    }
+  }
+]

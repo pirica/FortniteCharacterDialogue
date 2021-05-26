@@ -1,0 +1,145 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "Quest_S16_W12_Epic_Q03",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "QuestSubtype": "EFortQuestSubtype::WeeklyChallenge",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/Obsidian/Obsidian/NPCCharacterData_Obsidian.NPCCharacterData_Obsidian",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "Threshold": 1,
+      "RewardsTable": {
+        "ObjectName": "ChallengeReward_S16_WeeklyXP:DataTable",
+        "ObjectPath": "/BattlepassS16/Items/QuestRewards/ChallengeReward_S16_WeeklyXP.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athenabattlepass_s16_w12",
+          "Quantity": 1
+        },
+        {
+          "TemplateId": "Token:athenabattlepass_weeklychallenge_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S16_W12_Epic_Q03_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "AISpawnerData.Type.Boss.Outter"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::KillContribution",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "2F46A25441FECC5D5BC4EA8515AB05F1",
+            "SourceString": "Defeat a spire guardian"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "11051B6A4A33E4350C0B55A626444108",
+            "SourceString": "Those guardians won't let me near the spire. Why?"
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 1,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "Quest_S16_W12_Epic_Q03",
+        "Key": "Quest_S16_W12_Epic_Q03_CompletionText",
+        "SourceString": "Are they protecting the spires... or me?"
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Epic",
+      "DisplayName": {
+        "Namespace": "Quest_S16_W12_Epic_Q03",
+        "Key": "Quest_S16_W12_Epic_Q03_DisplayName",
+        "SourceString": "Defeat a spire guardian"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S16_W12_Epic_Q03",
+        "Key": "Quest_S16_W12_Epic_Q03_ShortDescription",
+        "SourceString": "Those guardians won't let me near the spire. Why?"
+      },
+      "Description": {
+        "Namespace": "Quest_S16_W12_Epic_Q03",
+        "Key": "Quest_S16_W12_Epic_Q03_Description",
+        "SourceString": "Defeat a spire guardian"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP",
+        "Athena.Location.UnNamedPOI.Tower.Outside.01",
+        "Athena.Location.UnNamedPOI.Tower.Outside.02",
+        "Athena.Location.UnNamedPOI.Tower.Outside.03",
+        "Athena.Location.UnNamedPOI.Tower.Outside.04",
+        "Athena.Location.UnNamedPOI.Tower.Outside.05",
+        "Athena.Location.UnNamedPOI.Tower.Outside.06"
+      ]
+    }
+  }
+]

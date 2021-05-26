@@ -1,0 +1,156 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "Quest_S16_W8_SR_Q01b",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "QuestSubtype": "EFortQuestSubtype::Milestone",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/Blaze/Blaze/NPCCharacterData_Blaze.NPCCharacterData_Blaze",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "Threshold": 100,
+      "RewardsTable": {
+        "ObjectName": "ChallengeReward_S16_LegendaryXP_Stage2:DataTable",
+        "ObjectPath": "/BattlepassS16/Items/QuestRewards/ChallengeReward_S16_LegendaryXP_Stage2.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_sr_s16_w08",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S16_W8_Legendary",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.GameOn"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.Quests.Ignite"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Building.Type"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::ComplexCustom",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "1D5D5CA144C26CE798B4AB82120D5201",
+            "SourceString": "Destroy structures with fire"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "447BDCB742B5D24CB0A9FDAA584CBB04",
+            "SourceString": "Why is nothing on fire?!"
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 200,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "Quest_S16_W8_SR_Q01b",
+        "Key": "Quest_S16_W8_SR_Q01b_CompletionText",
+        "SourceString": "Thats better."
+      },
+      "QuestAbilitySet": {
+        "AssetPathName": "/BattlepassS16/Items/QuestAbilities/Quest_Ignite/GAS_Quest_S16_Ignite_Structures.GAS_Quest_S16_Ignite_Structures",
+        "SubPathString": ""
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Legendary",
+      "DisplayName": {
+        "Namespace": "Quest_S16_W8_SR_Q01b",
+        "Key": "Quest_S16_W8_SR_Q01b_DisplayName",
+        "SourceString": "Destroy structures with fire"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S16_W8_SR_Q01b",
+        "Key": "Quest_S16_W8_SR_Q01b_ShortDescription",
+        "SourceString": "Why is nothing on fire?!"
+      },
+      "Description": {
+        "Namespace": "Quest_S16_W8_SR_Q01b",
+        "Key": "Quest_S16_W8_SR_Q01b_Description",
+        "SourceString": "Destroy structures with fire"
+      },
+      "GameplayTags": [
+        "Quest.Metadata.PartyAssist",
+        "Quest.Metadata.GroupChallenge",
+        "ChallengeCategory.XP",
+        "Quest.Metadata.HideForContextualQuestDisplay"
+      ]
+    }
+  }
+]

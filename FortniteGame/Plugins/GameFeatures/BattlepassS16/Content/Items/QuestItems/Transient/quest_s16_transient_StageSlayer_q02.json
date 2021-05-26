@@ -1,0 +1,126 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "quest_s16_transient_StageSlayer_q02",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaTransientQuest",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/StageSlayer/NPCCharacterData_StageSlayer.NPCCharacterData_StageSlayer",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "ExpirationDuration": 60,
+      "RewardsTable": {
+        "ObjectName": "ChallengeReward_S16_Transient_UC:DataTable",
+        "ObjectPath": "/BattlepassS16/Items/QuestRewards/ChallengeReward_S16_Transient_UC.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_s16_transientchallenge_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "quest_s16_transient_StageSlayer_q02_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "Target.Tags HasTag Building.Resource || Target.Tags HasTag Building.Type",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Destroy",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "8024FF874327ACFAAB1C8C8D824A91D7",
+            "SourceString": "Destroy structures at Apres Ski"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "98A3051343DB8827DC0B77913530CA48",
+            "SourceString": "Wrecking a venue is how you show the world you're a rockstar."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 3,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "quest_s16_transient_StageSlayer_q02",
+        "Key": "quest_s16_transient_StageSlayer_q02_CompletionText",
+        "SourceString": "Wow. Can't wait for your global tour."
+      },
+      "GrantToProfileType": "athena",
+      "DisplayName": {
+        "Namespace": "quest_s16_transient_StageSlayer_q02",
+        "Key": "quest_s16_transient_StageSlayer_q02_DisplayName",
+        "SourceString": "Destroy structures at Apres Ski"
+      },
+      "ShortDescription": {
+        "Namespace": "quest_s16_transient_StageSlayer_q02",
+        "Key": "quest_s16_transient_StageSlayer_q02_ShortDescription",
+        "SourceString": "Wrecking a venue is how you show the world you're a rockstar."
+      },
+      "Description": {
+        "Namespace": "quest_s16_transient_StageSlayer_q02",
+        "Key": "quest_s16_transient_StageSlayer_q02_Description",
+        "SourceString": "Destroy structures at Apres Ski"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.Bars"
+      ]
+    }
+  }
+]

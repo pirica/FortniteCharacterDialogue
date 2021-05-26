@@ -1,0 +1,142 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "Quest_S16_W10_SR_Q01c",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "QuestSubtype": "EFortQuestSubtype::Milestone",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/Dummy/Dummy/NPCCharacterData_Dummy.NPCCharacterData_Dummy",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "Threshold": 200,
+      "RewardsTable": {
+        "ObjectName": "ChallengeReward_S16_LegendaryXP_Stage3:DataTable",
+        "ObjectPath": "/BattlepassS16/Items/QuestRewards/ChallengeReward_S16_LegendaryXP_Stage3.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_sr_s16_w10",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S16_W10_SR_Q01",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.Quests.Wild.AirTime"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::ComplexCustom",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "1BC379EC44C5C901E95A3A966FFF7290",
+            "SourceString": "Time airborn using Hop Floppers and Shockwave Grenades"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "705636124B24B990D8184DBEEAC278C0",
+            "SourceString": "If I were you, I'd launch myself off of everything!"
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 300,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 4,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "Quest_S16_W10_SR_Q01c",
+        "Key": "Quest_S16_W10_SR_Q01c_CompletionText",
+        "SourceString": "Clearly you're a natural."
+      },
+      "QuestAbilitySet": {
+        "AssetPathName": "/BattlepassS16/Items/QuestAbilities/Quest_WildAirTime/GAS_Quest_WildAirTime.GAS_Quest_WildAirTime",
+        "SubPathString": ""
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Legendary",
+      "DisplayName": {
+        "Namespace": "Quest_S16_W10_SR_Q01c",
+        "Key": "Quest_S16_W10_SR_Q01c_DisplayName",
+        "SourceString": "Time airborn using Hop Floppers and Shockwave Grenades"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S16_W10_SR_Q01c",
+        "Key": "Quest_S16_W10_SR_Q01c_ShortDescription",
+        "SourceString": "If I were you, I'd launch myself off of everything!"
+      },
+      "Description": {
+        "Namespace": "Quest_S16_W10_SR_Q01c",
+        "Key": "Quest_S16_W10_SR_Q01c_Description",
+        "SourceString": "Time airborn using Hop Floppers and Shockwave Grenades"
+      },
+      "GameplayTags": [
+        "Quest.Metadata.PartyAssist",
+        "Quest.Metadata.GroupChallenge",
+        "ChallengeCategory.XP",
+        "Quest.Metadata.HideForContextualQuestDisplay"
+      ]
+    }
+  }
+]

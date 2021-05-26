@@ -1,0 +1,135 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "Quest_S16_W3_Epic_Q07",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "QuestSubtype": "EFortQuestSubtype::WeeklyChallenge",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/Deadfire/Deadfire/NPCCharacterData_Deadfire.NPCCharacterData_Deadfire",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "RewardsTable": {
+        "ObjectName": "ChallengeReward_S16_WeeklyXP:DataTable",
+        "ObjectPath": "/BattlepassS16/Items/QuestRewards/ChallengeReward_S16_WeeklyXP.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athenabattlepass_weeklychallenge_token",
+          "Quantity": 1
+        },
+        {
+          "TemplateId": "Token:athenabattlepass_s16_w03",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S16_W3_Epic_Q07_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "Target.Tags HasTag AISpawnerData.Type.Tandem.Raptor || Target.Tags HasTag AISpawnerData.Type.Tandem.Blackheart || Target.Tags HasTag AISpawnerData.Type.Tandem.Zenith",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Kill",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "1B4FE6F24D4567D96EF4999546A79DE5",
+            "SourceString": "Eliminate Raptor, Zenith, or Blackheart"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "C00928984D948B2529DE4E973CAD9F06",
+            "SourceString": "It's time to take 'em out, partner."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 1,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "Quest_S16_W3_Epic_Q07",
+        "Key": "Quest_S16_W3_Epic_Q07_CompletionText",
+        "SourceString": "Well, that's one less outlaw roaming the land."
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Epic",
+      "DisplayName": {
+        "Namespace": "Quest_S16_W3_Epic_Q07",
+        "Key": "Quest_S16_W3_Epic_Q07_DisplayName",
+        "SourceString": "Eliminate Raptor, Zenith, or Blackheart"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S16_W3_Epic_Q07",
+        "Key": "Quest_S16_W3_Epic_Q07_ShortDescription",
+        "SourceString": "It's time to take 'em out, partner."
+      },
+      "Description": {
+        "Namespace": "Quest_S16_W3_Epic_Q07",
+        "Key": "Quest_S16_W3_Epic_Q07_Description",
+        "SourceString": "Eliminate Raptor, Zenith, or Blackheart"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP",
+        "Athena.Location.UnnamedPOI.WeatherStation",
+        "Athena.Location.UnnamedPOI.CrashedAirplane",
+        "Athena.Location.UnNamedPOI.VikingShip",
+        "Quest.ChallengeIcon.Elim"
+      ]
+    }
+  }
+]

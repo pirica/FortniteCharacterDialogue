@@ -1,0 +1,137 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "quest_s16_transient_ShotStopper_q03",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaTransientQuest",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/ShotStopper/ShotStopper/NPCCharacterData_ShotStopper.NPCCharacterData_ShotStopper",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "ExpirationDuration": 60,
+      "RewardsTable": {
+        "ObjectName": "ChallengeReward_S16_Transient_UC:DataTable",
+        "ObjectPath": "/BattlepassS16/Items/QuestRewards/ChallengeReward_S16_Transient_UC.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_s16_bicycle_transient_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "quest_s16_transient_ShotStopper_q03_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.Quests.Distance.OnFoot"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::ComplexCustom",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "7E4AFCBF4F86BACB48834CBC14284558",
+            "SourceString": "Travel distance on foot"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "DEBEDBC84C9F77788EB6148E6602F766",
+            "SourceString": "Running laps is a great way to keep in shape."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 300,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 20,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "quest_s16_transient_ShotStopper_q03",
+        "Key": "quest_s16_transient_ShotStopper_q03_CompletionText",
+        "SourceString": "The only better exercise than running... is more running!"
+      },
+      "QuestAbilitySet": {
+        "AssetPathName": "/BattlepassS16/Items/QuestAbilities/Quest_Distance_OnFoot/GAS_Quest_Distance_OnFoot.GAS_Quest_Distance_OnFoot",
+        "SubPathString": ""
+      },
+      "GrantToProfileType": "athena",
+      "DisplayName": {
+        "Namespace": "quest_s16_transient_ShotStopper_q03",
+        "Key": "quest_s16_transient_ShotStopper_q03_DisplayName",
+        "SourceString": "Travel distance on foot"
+      },
+      "ShortDescription": {
+        "Namespace": "quest_s16_transient_ShotStopper_q03",
+        "Key": "quest_s16_transient_ShotStopper_q03_ShortDescription",
+        "SourceString": "Running laps is a great way to keep in shape."
+      },
+      "Description": {
+        "Namespace": "quest_s16_transient_ShotStopper_q03",
+        "Key": "quest_s16_transient_ShotStopper_q03_Description",
+        "SourceString": "Travel distance on foot"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.Bars"
+      ]
+    }
+  }
+]

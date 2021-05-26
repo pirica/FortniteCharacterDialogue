@@ -1,0 +1,154 @@
+[
+  {
+    "Type": "FortUrgentQuestItemDefinition",
+    "Name": "quest_s16_transient_BunkerJonesy_Q03",
+    "Properties": {
+      "UrgentQuestData": {
+        "EventTag": {
+          "TagName": "SpecialEvent.SearchChests"
+        },
+        "TotalEventTime": 120.0,
+        "EventTitle": {
+          "Namespace": "",
+          "Key": "1ED15839452048DED37F269864CFC2C2",
+          "SourceString": "Urgent Quest"
+        },
+        "EventSubtitle": {
+          "Namespace": "",
+          "Key": "763534994CD3164E57025B95867606F5",
+          "SourceString": "Started"
+        },
+        "EventDescription": {
+          "Namespace": "",
+          "Key": "28DD46D744D6A28C282E75AF31DF8BE7",
+          "SourceString": "Search 3 Chests Or Ammo Boxes"
+        },
+        "SpecialEventStartedSound": {
+          "AssetPathName": "/Game/Sounds/Fort_UI_Sounds/Gameplay/Bounty/Urgent_Quest_Accepted_Cue.Urgent_Quest_Accepted_Cue",
+          "SubPathString": ""
+        }
+      },
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/BunkerJonesy/BunkerJonesy/NPCCharacterData_BunkerJonesy.NPCCharacterData_BunkerJonesy",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "ExpirationDuration": 2,
+      "RewardsTable": {
+        "ObjectName": "ChallengeReward_S16_Transient_UC:DataTable",
+        "ObjectPath": "/BattlepassS16/Items/QuestRewards/ChallengeReward_S16_Transient_UC.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_s16_transientchallenge_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S16_Transient_BunkerJonesy_Q03_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "Target.Tags HasTag Building.Type.Container.TreasureChest || Target.Tags HasTag Building.Type.Container.Ammobox",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Interact",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "18D0B4B24CB6465793CAE18ED986595A",
+            "SourceString": "Search Chests or Ammo Boxes"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "7DEA161C48EE6451E7FAD1844B7F4E1F",
+            "SourceString": "Search Chests or Ammo Boxes"
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 3,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "Quest_S15_Transient_BunkerJonesy_UC_Q02",
+        "Key": "Quest_S15_Transient_BunkerJonesy_UC_Q02_CompletionText",
+        "SourceString": "Don't think it'll work, but at least that stuff'll come in handy.."
+      },
+      "QuestAbilitySet": {
+        "AssetPathName": "/BattlepassS16/Items/QuestAbilities/Quest_Search_Under120seconds/GAS_Quest_Search_Under120sec.GAS_Quest_Search_Under120sec",
+        "SubPathString": ""
+      },
+      "GrantToProfileType": "athena",
+      "DisplayName": {
+        "Namespace": "Quest_S15_Transient_BunkerJonesy_UC_Q02",
+        "Key": "Quest_S15_Transient_BunkerJonesy_UC_Q02_DisplayName",
+        "SourceString": "Search Chests or Ammo Boxes"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S15_Transient_BunkerJonesy_UC_Q02",
+        "Key": "Quest_S15_Transient_BunkerJonesy_UC_Q02_ShortDescription",
+        "SourceString": "Maybe... if we can grab something fast enough... the Loop won't get it."
+      },
+      "Description": {
+        "Namespace": "Quest_S15_Transient_BunkerJonesy_UC_Q02",
+        "Key": "Quest_S15_Transient_BunkerJonesy_UC_Q02_Description",
+        "SourceString": "Search Chests or Ammo Boxes"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.Bars"
+      ]
+    }
+  }
+]
