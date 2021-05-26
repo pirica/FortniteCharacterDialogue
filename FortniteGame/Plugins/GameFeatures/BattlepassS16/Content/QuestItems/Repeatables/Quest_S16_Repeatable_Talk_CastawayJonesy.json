@@ -1,0 +1,132 @@
+[
+  {
+    "Type": "AthenaDailyQuestDefinition",
+    "Name": "Quest_S16_Repeatable_Talk_CastawayJonesy",
+    "Properties": {
+      "QuestSubtype": "EFortQuestSubtype::QuickChallenge",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/CastawayJonesy/CastawayJonesy/NPCCharacterData_CastawayJonesy.NPCCharacterData_CastawayJonesy",
+        "SubPathString": ""
+      },
+      "RewardsTable": {
+        "ObjectName": "AthenaChallengeReward_DailyChallenge_SeasonAgnostic:DataTable",
+        "ObjectPath": "/Game/Athena/Items/Quests/Rewards/AthenaChallengeReward_DailyChallenge_SeasonAgnostic.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_dailychallenge_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S16_Repeatable_Talk_CastawayJonesy_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "AISpawnerData.Type.Tandem.CastawayJonesy"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::InitiatedNPCConversation",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": false,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "9C9787804FB8BD87BED4F59508A0A3FC",
+            "SourceString": "Talk to Castaway Jonesy"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "2927C667411859E65A5BB187E1481EC9",
+            "SourceString": "Hello? Is there anyone out there?"
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 1,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "Weight": 0.2,
+      "Category": {
+        "DataTable": {
+          "ObjectName": "QuestCategoryTable:DataTable",
+          "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
+        },
+        "RowName": "BRDailyChallenges"
+      },
+      "CompletionText": {
+        "Namespace": "Quest_S16_Repeatable_Talk_CastawayJonesy",
+        "Key": "Quest_S16_Repeatable_Talk_CastawayJonesy_CompletionText",
+        "SourceString": "You're not a mirage, right?"
+      },
+      "DisplayName": {
+        "Namespace": "Quest_S16_Repeatable_Talk_CastawayJonesy",
+        "Key": "Quest_S16_Repeatable_Talk_CastawayJonesy_DisplayName",
+        "SourceString": "Talk to Castaway Jonesy"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S16_Repeatable_Talk_CastawayJonesy",
+        "Key": "Quest_S16_Repeatable_Talk_CastawayJonesy_ShortDescription",
+        "SourceString": "Hello? Is there anyone out there?"
+      },
+      "Description": {
+        "Namespace": "Quest_S16_Repeatable_Talk_CastawayJonesy",
+        "Key": "Quest_S16_Repeatable_Talk_CastawayJonesy_Description",
+        "SourceString": "Talk to Castaway Jonesy"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP",
+        "Athena.Location.POI.PowerPlant"
+      ]
+    }
+  }
+]

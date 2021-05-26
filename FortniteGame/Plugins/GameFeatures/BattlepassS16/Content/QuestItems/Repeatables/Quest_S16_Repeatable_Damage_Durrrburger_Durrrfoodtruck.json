@@ -1,0 +1,140 @@
+[
+  {
+    "Type": "AthenaDailyQuestDefinition",
+    "Name": "Quest_S16_Repeatable_Damage_Durrrburger_Durrrfoodtruck",
+    "Properties": {
+      "QuestSubtype": "EFortQuestSubtype::QuickChallenge",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/Crustina/Crustina/NPCCharacterData_Crustina.NPCCharacterData_Crustina",
+        "SubPathString": ""
+      },
+      "RewardsTable": {
+        "ObjectName": "AthenaChallengeReward_DailyChallenge_SeasonAgnostic:DataTable",
+        "ObjectPath": "/Game/Athena/Items/Quests/Rewards/AthenaChallengeReward_DailyChallenge_SeasonAgnostic.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_dailychallenge_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S16_Repeatable_Damage_Durrrburger_Durrrfoodtruck_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "Source.Tags HasTag Athena.Location.UnNamedPOI.PretzelRestaurant_B || Source.Tags HasTag Athena.Location.UnnamedPOI.DurrrBurger || Target.Tags HasTag Athena.Location.UnNamedPOI.PretzelRestaurant_B || Target.Tags HasTag Athena.Location.UnnamedPOI.DurrrBurger",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Damage",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "9B7DCD364641E7D9A594B0A639ACF0C9",
+            "SourceString": "Damage opponents at Durrr Burger Restaurant or Durrr Burger Food Truck"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "0113E81548E65576A83A0BB14A03494A",
+            "SourceString": "He wants a pizza the pie, but I am not sharing the dough."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 100,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "Weight": 0.0,
+      "Category": {
+        "DataTable": {
+          "ObjectName": "QuestCategoryTable:DataTable",
+          "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
+        },
+        "RowName": "BRDailyChallenges"
+      },
+      "CompletionText": {
+        "Namespace": "Quest_S16_Repeatable_Damage_Durrrburger_Durrrfoodtruck",
+        "Key": "Quest_S16_Repeatable_Damage_Durrrburger_Durrrfoodtruck_CompletionText",
+        "SourceString": "With your help, the Pizza Pit will rise again!"
+      },
+      "DisplayName": {
+        "Namespace": "Quest_S16_Repeatable_Damage_Durrrburger_Durrrfoodtruck",
+        "Key": "Quest_S16_Repeatable_Damage_Durrrburger_Durrrfoodtruck_DisplayName",
+        "SourceString": "Damage opponents at Durrr Burger Restaurant or Durrr Burger Food Truck"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S16_Repeatable_Damage_Durrrburger_Durrrfoodtruck",
+        "Key": "Quest_S16_Repeatable_Damage_Durrrburger_Durrrfoodtruck_ShortDescription",
+        "SourceString": "He wants a pizza the pie, but I am not sharing the dough."
+      },
+      "Description": {
+        "Namespace": "Quest_S16_Repeatable_Damage_Durrrburger_Durrrfoodtruck",
+        "Key": "Quest_S16_Repeatable_Damage_Durrrburger_Durrrfoodtruck_Description",
+        "SourceString": "Damage opponents at Durrr Burger Restaurant or Durrr Burger Food Truck"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP",
+        "Athena.Location.UnnamedPOI.DurrrBurger",
+        "Athena.Location.UnNamedPOI.PretzelRestaurant_B"
+      ]
+    }
+  }
+]

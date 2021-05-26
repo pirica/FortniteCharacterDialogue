@@ -1,0 +1,123 @@
+[
+  {
+    "Type": "AthenaDailyQuestDefinition",
+    "Name": "Quest_S16_Repeatable_OutlastOpponents",
+    "Properties": {
+      "QuestSubtype": "EFortQuestSubtype::QuickChallenge",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/Bandolette/Bandolette/NPCCharacterData_Bandolette.NPCCharacterData_Bandolette",
+        "SubPathString": ""
+      },
+      "RewardsTable": {
+        "ObjectName": "AthenaChallengeReward_DailyChallenge_SeasonAgnostic:DataTable",
+        "ObjectPath": "/Game/Athena/Items/Quests/Rewards/AthenaChallengeReward_DailyChallenge_SeasonAgnostic.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_dailychallenge_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S16_Repeatable_OutlastOpponents_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::AthenaOutlive",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": false,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "774233D3471CBF25C53F8B9ACC15B035",
+            "SourceString": "Outlast opponents"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "22D9990D4DF2CA7E55FDECBFE5F1FFE1",
+            "SourceString": "You wanna be the best, you gotta start with the basics."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 75,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 5,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "Category": {
+        "DataTable": {
+          "ObjectName": "QuestCategoryTable:DataTable",
+          "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
+        },
+        "RowName": "BRDailyChallenges"
+      },
+      "CompletionText": {
+        "Namespace": "Quest_S16_Repeatable_OutlastOpponents",
+        "Key": "Quest_S16_Repeatable_OutlastOpponents_CompletionText",
+        "SourceString": "Oh yeah, they'll be looking out for you next time."
+      },
+      "DisplayName": {
+        "Namespace": "Quest_S16_Repeatable_OutlastOpponents",
+        "Key": "Quest_S16_Repeatable_OutlastOpponents_DisplayName",
+        "SourceString": "Outlast opponents"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S16_Repeatable_OutlastOpponents",
+        "Key": "Quest_S16_Repeatable_OutlastOpponents_ShortDescription",
+        "SourceString": "You wanna be the best, you gotta start with the basics."
+      },
+      "Description": {
+        "Namespace": "Quest_S16_Repeatable_OutlastOpponents",
+        "Key": "Quest_S16_Repeatable_OutlastOpponents_Description",
+        "SourceString": "Outlast opponents"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP"
+      ]
+    }
+  }
+]

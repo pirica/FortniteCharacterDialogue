@@ -1,0 +1,138 @@
+[
+  {
+    "Type": "AthenaDailyQuestDefinition",
+    "Name": "Quest_S16_Repeatable_Destroy_Restaurant_Props",
+    "Properties": {
+      "QuestSubtype": "EFortQuestSubtype::QuickChallenge",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/Triggerfish/Triggerfish/NPCCharacterData_Triggerfish.NPCCharacterData_Triggerfish",
+        "SubPathString": ""
+      },
+      "RewardsTable": {
+        "ObjectName": "AthenaChallengeReward_DailyChallenge_SeasonAgnostic:DataTable",
+        "ObjectPath": "/Game/Athena/Items/Quests/Rewards/AthenaChallengeReward_DailyChallenge_SeasonAgnostic.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_dailychallenge_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S16_Repeatable_Destroy_Restaurant_Props_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.Achievements.FishstickHead"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Destroy",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "774F6D394B8259B027F958B4CD0AD9A2",
+            "SourceString": "Destroy Sticks restaurant decorations"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "DEE28B884EC520DD79F8F0A985CCC8AE",
+            "SourceString": "Destroy the temple of mockery."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 2,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "Category": {
+        "DataTable": {
+          "ObjectName": "QuestCategoryTable:DataTable",
+          "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
+        },
+        "RowName": "BRDailyChallenges"
+      },
+      "CompletionText": {
+        "Namespace": "Quest_S16_Repeatable_Destroy_Restaurant_Props",
+        "Key": "Quest_S16_Repeatable_Destroy_Restaurant_Props_CompletionText",
+        "SourceString": "You have been helpful, landwalker. Thank you."
+      },
+      "DisplayName": {
+        "Namespace": "Quest_S16_Repeatable_Destroy_Restaurant_Props",
+        "Key": "Quest_S16_Repeatable_Destroy_Restaurant_Props_DisplayName",
+        "SourceString": "Destroy Sticks restaurant decorations"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S16_Repeatable_Destroy_Restaurant_Props",
+        "Key": "Quest_S16_Repeatable_Destroy_Restaurant_Props_ShortDescription",
+        "SourceString": "Destroy the temple of mockery."
+      },
+      "Description": {
+        "Namespace": "Quest_S16_Repeatable_Destroy_Restaurant_Props",
+        "Key": "Quest_S16_Repeatable_Destroy_Restaurant_Props_Description",
+        "SourceString": "Destroy Sticks restaurant decorations"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP",
+        "Athena.Location.POI.BeachyBluffs"
+      ]
+    }
+  }
+]
