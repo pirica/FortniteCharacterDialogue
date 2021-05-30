@@ -1,0 +1,94 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "TinyBalloon_Music_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "TinyBalloon_Music_Cue:SoundNodeMixer_1:SoundNodeMixer",
+        "ObjectPath": "/TinyBalloon/NPCs/TinyBalloon/TinyBalloon/Audio/Music/TinyBalloon_Music_Cue.1"
+      },
+      "VolumeMultiplier": 1.0,
+      "bHasPlayWhenSilent": true,
+      "SoundClassObject": {
+        "ObjectName": "Fort_Music_NPC:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Music_NPC.0"
+      },
+      "Duration": 10000.0,
+      "MaxDistance": 2097152.0
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_1",
+    "Properties": {
+      "InputVolume": [
+        0.85,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "TinyBalloon_Music_Cue:SoundNodeModulatorContinuous_0:SoundNodeModulatorContinuous",
+          "ObjectPath": "/TinyBalloon/NPCs/TinyBalloon/TinyBalloon/Audio/Music/TinyBalloon_Music_Cue.2"
+        },
+        {
+          "ObjectName": "TinyBalloon_Music_Cue:SoundNodeModulatorContinuous_2:SoundNodeModulatorContinuous",
+          "ObjectPath": "/TinyBalloon/NPCs/TinyBalloon/TinyBalloon/Audio/Music/TinyBalloon_Music_Cue.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulatorContinuous",
+    "Name": "SoundNodeModulatorContinuous_0",
+    "Properties": {
+      "VolumeModulationParams": {
+        "ParameterName": "Unaware",
+        "Default": 0.0
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "TinyBalloon_Music_Cue:SoundNodeWavePlayer_1:SoundNodeWavePlayer",
+          "ObjectPath": "/TinyBalloon/NPCs/TinyBalloon/TinyBalloon/Audio/Music/TinyBalloon_Music_Cue.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulatorContinuous",
+    "Name": "SoundNodeModulatorContinuous_2",
+    "Properties": {
+      "VolumeModulationParams": {
+        "ParameterName": "Aggressive",
+        "Default": 0.0
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "TinyBalloon_Music_Cue:SoundNodeWavePlayer_0:SoundNodeWavePlayer",
+          "ObjectPath": "/TinyBalloon/NPCs/TinyBalloon/TinyBalloon/Audio/Music/TinyBalloon_Music_Cue.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/TinyBalloon/NPCs/TinyBalloon/TinyBalloon/Audio/Music/TinyBalloon_Music_Threatened.TinyBalloon_Music_Threatened",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/TinyBalloon/NPCs/TinyBalloon/TinyBalloon/Audio/Music/TinyBalloon_Music_Unaware.TinyBalloon_Music_Unaware",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    }
+  }
+]

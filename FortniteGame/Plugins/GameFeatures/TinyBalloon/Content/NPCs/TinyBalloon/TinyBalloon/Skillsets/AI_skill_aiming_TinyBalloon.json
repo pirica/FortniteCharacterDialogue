@@ -1,0 +1,3034 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "AI_skill_aiming_TinyBalloon_C",
+    "Properties": {}
+  },
+  {
+    "Type": "AI_skill_aiming_TinyBalloon_C",
+    "Name": "Default__AI_skill_aiming_TinyBalloon_C",
+    "Properties": {
+      "WeaponAccuracies": [
+        {
+          "Tags": [
+            "phoebe.weapon.ranged.pistol"
+          ],
+          "WeaponAccuracy": {
+            "MaxTrackingOffsetError": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.HipFire.Pistol.MaxTrackingOffsetError"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingMaxTrackingOffsetError": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.Pistol.MaxTrackingOffsetError"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MaxTrackingDistanceFarError": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingMaxTrackingDistanceFarError": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MaxTrackingDistanceNearError": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingMaxTrackingDistanceNearError": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TrackingDistanceNearErrorProbability": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingActivationProbability": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.Pistol.ActivationProbability"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "FiringRestrictedToTargetingActive": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.Pistol.FiringRestrictedToTargetingActive"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "IdealAttackRange": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.HipFire.Pistol.IdealAttackRange"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingIdealAttackRange": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.Pistol.IdealAttackRange"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MaxAttackRangeFactor": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Pistol.MaxAttackRangeFactor"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "ShouldAimAtTargetsFeet": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "Phoebe_SkillSets:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/PhoebeSkillSets/Phoebe_SkillSets.0"
+                },
+                "RowName": "Phoebe.Skill.Aiming.ChanceToAimAtTargetFeet.Pistol"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "ShouldUseProjectileArcForAiming": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          },
+          "Specializations": []
+        },
+        {
+          "Tags": [
+            "phoebe.weapon.ranged.shotgun"
+          ],
+          "WeaponAccuracy": {
+            "MaxTrackingOffsetError": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.HipFire.Shotgun.MaxTrackingOffsetError"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingMaxTrackingOffsetError": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.Shotgun.MaxTrackingOffsetError"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MaxTrackingDistanceFarError": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingMaxTrackingDistanceFarError": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MaxTrackingDistanceNearError": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingMaxTrackingDistanceNearError": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TrackingDistanceNearErrorProbability": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingActivationProbability": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.Shotgun.ActivationProbability"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "FiringRestrictedToTargetingActive": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.Shotgun.FiringRestrictedToTargetingActive"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "IdealAttackRange": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.HipFire.Shotgun.IdealAttackRange"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingIdealAttackRange": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.Shotgun.IdealAttackRange"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MaxAttackRangeFactor": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Shotgun.MaxAttackRangeFactor"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "ShouldAimAtTargetsFeet": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "Phoebe_SkillSets:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/PhoebeSkillSets/Phoebe_SkillSets.0"
+                },
+                "RowName": "Phoebe.Skill.Aiming.ChanceToAimAtTargetFeet.Shotgun"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "ShouldUseProjectileArcForAiming": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          },
+          "Specializations": []
+        },
+        {
+          "Tags": [
+            "phoebe.weapon.ranged.rifle"
+          ],
+          "WeaponAccuracy": {
+            "MaxTrackingOffsetError": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.HipFire.Rifle.MaxTrackingOffsetError"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingMaxTrackingOffsetError": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.Rifle.MaxTrackingOffsetError"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MaxTrackingDistanceFarError": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingMaxTrackingDistanceFarError": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MaxTrackingDistanceNearError": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingMaxTrackingDistanceNearError": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TrackingDistanceNearErrorProbability": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingActivationProbability": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.Rifle.ActivationProbability"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "FiringRestrictedToTargetingActive": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.Rifle.FiringRestrictedToTargetingActive"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "IdealAttackRange": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.HipFire.Rifle.IdealAttackRange"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingIdealAttackRange": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.Rifle.IdealAttackRange"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MaxAttackRangeFactor": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Rifle.MaxAttackRangeFactor"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "ShouldAimAtTargetsFeet": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "Phoebe_SkillSets:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/PhoebeSkillSets/Phoebe_SkillSets.0"
+                },
+                "RowName": "Phoebe.Skill.Aiming.ChanceToAimAtTargetFeet.Rifle"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "ShouldUseProjectileArcForAiming": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          },
+          "Specializations": []
+        },
+        {
+          "Tags": [
+            "phoebe.weapon.ranged.GalileoBun"
+          ],
+          "WeaponAccuracy": {
+            "MaxTrackingOffsetError": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.HipFire.GalileoBun.MaxTrackingOffsetError"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingMaxTrackingOffsetError": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.GalileoBun.MaxTrackingOffsetError"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MaxTrackingDistanceFarError": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingMaxTrackingDistanceFarError": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MaxTrackingDistanceNearError": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingMaxTrackingDistanceNearError": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TrackingDistanceNearErrorProbability": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingActivationProbability": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.GalileoBun.ActivationProbability"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "FiringRestrictedToTargetingActive": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.GalileoBun.FiringRestrictedToTargetingActive"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "IdealAttackRange": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.HipFire.GalileoBun.IdealAttackRange"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingIdealAttackRange": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.GalileoBun.IdealAttackRange"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MaxAttackRangeFactor": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.GalileoBun.MaxAttackRangeFactor"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "ShouldAimAtTargetsFeet": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "Phoebe_SkillSets:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/PhoebeSkillSets/Phoebe_SkillSets.0"
+                },
+                "RowName": "Phoebe.Skill.Aiming.ChanceToAimAtTargetFeet.GalileoBun"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "ShouldUseProjectileArcForAiming": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          },
+          "Specializations": []
+        },
+        {
+          "Tags": [
+            "phoebe.weapon.ranged.smg"
+          ],
+          "WeaponAccuracy": {
+            "MaxTrackingOffsetError": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.HipFire.SMG.MaxTrackingOffsetError"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingMaxTrackingOffsetError": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.SMG.MaxTrackingOffsetError"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MaxTrackingDistanceFarError": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingMaxTrackingDistanceFarError": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MaxTrackingDistanceNearError": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingMaxTrackingDistanceNearError": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TrackingDistanceNearErrorProbability": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingActivationProbability": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.SMG.ActivationProbability"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "FiringRestrictedToTargetingActive": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.SMG.FiringRestrictedToTargetingActive"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "IdealAttackRange": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.HipFire.SMG.IdealAttackRange"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingIdealAttackRange": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.SMG.IdealAttackRange"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MaxAttackRangeFactor": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.SMG.MaxAttackRangeFactor"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "ShouldAimAtTargetsFeet": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "Phoebe_SkillSets:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/PhoebeSkillSets/Phoebe_SkillSets.0"
+                },
+                "RowName": "Phoebe.Skill.Aiming.ChanceToAimAtTargetFeet.smg"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "ShouldUseProjectileArcForAiming": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          },
+          "Specializations": []
+        },
+        {
+          "Tags": [
+            "phoebe.weapon.ranged.sniper"
+          ],
+          "WeaponAccuracy": {
+            "MaxTrackingOffsetError": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.HipFire.Sniper.MaxTrackingOffsetError"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingMaxTrackingOffsetError": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.Sniper.MaxTrackingOffsetError"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MaxTrackingDistanceFarError": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingMaxTrackingDistanceFarError": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MaxTrackingDistanceNearError": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingMaxTrackingDistanceNearError": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TrackingDistanceNearErrorProbability": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingActivationProbability": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.Sniper.ActivationProbability"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "FiringRestrictedToTargetingActive": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.Sniper.FiringRestrictedToTargetingActive"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "IdealAttackRange": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.HipFire.Sniper.IdealAttackRange"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingIdealAttackRange": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.Sniper.IdealAttackRange"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MaxAttackRangeFactor": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Sniper.MaxAttackRangeFactor"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "ShouldAimAtTargetsFeet": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "Phoebe_SkillSets:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/PhoebeSkillSets/Phoebe_SkillSets.0"
+                },
+                "RowName": "Phoebe.Skill.Aiming.ChanceToAimAtTargetFeet.Sniper"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "ShouldUseProjectileArcForAiming": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Sniper.ShouldUseProjectileArcForAiming"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          },
+          "Specializations": []
+        },
+        {
+          "Tags": [
+            "phoebe.weapon.ranged.grenade_launcher"
+          ],
+          "WeaponAccuracy": {
+            "MaxTrackingOffsetError": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.HipFire.GrenadeLauncher.MaxTrackingOffsetError"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingMaxTrackingOffsetError": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.GrenadeLauncher.MaxTrackingOffsetError"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MaxTrackingDistanceFarError": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.GrenadeLauncher.HipFireMaxTrackingDistanceFarError"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingMaxTrackingDistanceFarError": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.GrenadeLauncher.TargetingMaxTrackingDistanceFarError"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MaxTrackingDistanceNearError": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.GrenadeLauncher.HipFireMaxTrackingDistanceNearError"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingMaxTrackingDistanceNearError": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.GrenadeLauncher.TargetingMaxTrackingDistanceNearError"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TrackingDistanceNearErrorProbability": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.GrenadeLauncher.TrackingDistanceNearErrorProbability"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingActivationProbability": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.GrenadeLauncher.ActivationProbability"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "FiringRestrictedToTargetingActive": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.GrenadeLauncher.FiringRestrictedToTargetingActive"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "IdealAttackRange": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.HipFire.GrenadeLauncher.IdealAttackRange"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingIdealAttackRange": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.GrenadeLauncher.IdealAttackRange"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MaxAttackRangeFactor": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.GrenadeLauncher.MaxAttackRangeFactor"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "ShouldAimAtTargetsFeet": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "Phoebe_SkillSets:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/PhoebeSkillSets/Phoebe_SkillSets.0"
+                },
+                "RowName": "Phoebe.Skill.Aiming.ChanceToAimAtTargetFeet.GrenadeLauncher"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "ShouldUseProjectileArcForAiming": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.GrenadeLauncher.ShouldUseProjectileArcForAiming"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          },
+          "Specializations": []
+        },
+        {
+          "Tags": [
+            "phoebe.weapon.ranged.rocket_launcher"
+          ],
+          "WeaponAccuracy": {
+            "MaxTrackingOffsetError": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.HipFire.RocketLauncher.MaxTrackingOffsetError"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingMaxTrackingOffsetError": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.RocketLauncher.MaxTrackingOffsetError"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MaxTrackingDistanceFarError": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.RocketLauncher.HipFireMaxTrackingDistanceFarError"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingMaxTrackingDistanceFarError": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.RocketLauncher.TargetingMaxTrackingDistanceFarError"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MaxTrackingDistanceNearError": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.RocketLauncher.HipFireMaxTrackingDistanceNearError"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingMaxTrackingDistanceNearError": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.RocketLauncher.TargetingMaxTrackingDistanceNearError"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TrackingDistanceNearErrorProbability": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.RocketLauncher.TrackingDistanceNearErrorProbability"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingActivationProbability": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.RocketLauncher.ActivationProbability"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "FiringRestrictedToTargetingActive": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.RocketLauncher.FiringRestrictedToTargetingActive"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "IdealAttackRange": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.HipFire.RocketLauncher.IdealAttackRange"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingIdealAttackRange": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.RocketLauncher.IdealAttackRange"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MaxAttackRangeFactor": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.RocketLauncher.MaxAttackRangeFactor"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "ShouldAimAtTargetsFeet": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "Phoebe_SkillSets:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/PhoebeSkillSets/Phoebe_SkillSets.0"
+                },
+                "RowName": "Phoebe.Skill.Aiming.ChanceToAimAtTargetFeet.RocketLauncher"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "ShouldUseProjectileArcForAiming": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.RocketLauncher.ShouldUseProjectileArcForAiming"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          },
+          "Specializations": []
+        },
+        {
+          "Tags": [
+            "phoebe.weapon.ranged.bow"
+          ],
+          "WeaponAccuracy": {
+            "MaxTrackingOffsetError": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.HipFire.Bow.MaxTrackingOffsetError"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingMaxTrackingOffsetError": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.Bow.MaxTrackingOffsetError"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MaxTrackingDistanceFarError": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Bow.HipFireMaxTrackingDistanceFarError"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingMaxTrackingDistanceFarError": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Bow.TargetingMaxTrackingDistanceFarError"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MaxTrackingDistanceNearError": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Bow.HipFireMaxTrackingDistanceNearError"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingMaxTrackingDistanceNearError": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Bow.TargetingMaxTrackingDistanceNearError"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TrackingDistanceNearErrorProbability": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Bow.TrackingDistanceNearErrorProbability"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingActivationProbability": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.Bow.ActivationProbability"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "FiringRestrictedToTargetingActive": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.Bow.FiringRestrictedToTargetingActive"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "IdealAttackRange": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.HipFire.Bow.IdealAttackRange"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingIdealAttackRange": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.Bow.IdealAttackRange"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MaxAttackRangeFactor": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Bow.MaxAttackRangeFactor"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "ShouldAimAtTargetsFeet": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "TinyBalloon_Skillset:CurveTable",
+                  "ObjectPath": "/TinyBalloon/DataTables/TinyBalloon_Skillset.0"
+                },
+                "RowName": "TinyBalloon.Skill.Aiming.ChanceToAimAtTargetsFeet"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "ShouldUseProjectileArcForAiming": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Bow.ShouldUseProjectileArcForAiming"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          },
+          "Specializations": [
+            {
+              "Tags": [
+                "phoebe.weapon.trait.directhit"
+              ],
+              "WeaponAccuracy": {
+                "MaxTrackingOffsetError": {
+                  "Value": 1.0,
+                  "Curve": {
+                    "CurveTable": {
+                      "ObjectName": "WeaponTypeInformation:CurveTable",
+                      "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                    },
+                    "RowName": "Phoebe.WeaponInfo.HipFire.Bow.MaxTrackingOffsetError"
+                  },
+                  "RegistryType": {
+                    "Name": null
+                  }
+                },
+                "TargetingMaxTrackingOffsetError": {
+                  "Value": 1.0,
+                  "Curve": {
+                    "CurveTable": {
+                      "ObjectName": "WeaponTypeInformation:CurveTable",
+                      "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                    },
+                    "RowName": "Phoebe.WeaponInfo.Targeting.Bow.MaxTrackingOffsetError"
+                  },
+                  "RegistryType": {
+                    "Name": null
+                  }
+                },
+                "MaxTrackingDistanceFarError": {
+                  "Value": 1.0,
+                  "Curve": {
+                    "CurveTable": {
+                      "ObjectName": "WeaponTypeInformation:CurveTable",
+                      "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                    },
+                    "RowName": "Phoebe.WeaponInfo.Bow.HipFireMaxTrackingDistanceFarError"
+                  },
+                  "RegistryType": {
+                    "Name": null
+                  }
+                },
+                "TargetingMaxTrackingDistanceFarError": {
+                  "Value": 1.0,
+                  "Curve": {
+                    "CurveTable": {
+                      "ObjectName": "WeaponTypeInformation:CurveTable",
+                      "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                    },
+                    "RowName": "Phoebe.WeaponInfo.Bow.TargetingMaxTrackingDistanceFarError"
+                  },
+                  "RegistryType": {
+                    "Name": null
+                  }
+                },
+                "MaxTrackingDistanceNearError": {
+                  "Value": 1.0,
+                  "Curve": {
+                    "CurveTable": {
+                      "ObjectName": "WeaponTypeInformation:CurveTable",
+                      "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                    },
+                    "RowName": "Phoebe.WeaponInfo.Bow.HipFireMaxTrackingDistanceNearError"
+                  },
+                  "RegistryType": {
+                    "Name": null
+                  }
+                },
+                "TargetingMaxTrackingDistanceNearError": {
+                  "Value": 1.0,
+                  "Curve": {
+                    "CurveTable": {
+                      "ObjectName": "WeaponTypeInformation:CurveTable",
+                      "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                    },
+                    "RowName": "Phoebe.WeaponInfo.Bow.TargetingMaxTrackingDistanceNearError"
+                  },
+                  "RegistryType": {
+                    "Name": null
+                  }
+                },
+                "TrackingDistanceNearErrorProbability": {
+                  "Value": 1.0,
+                  "Curve": {
+                    "CurveTable": {
+                      "ObjectName": "WeaponTypeInformation:CurveTable",
+                      "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                    },
+                    "RowName": "Phoebe.WeaponInfo.Bow.TrackingDistanceNearErrorProbability"
+                  },
+                  "RegistryType": {
+                    "Name": null
+                  }
+                },
+                "TargetingActivationProbability": {
+                  "Value": 1.0,
+                  "Curve": {
+                    "CurveTable": {
+                      "ObjectName": "WeaponTypeInformation:CurveTable",
+                      "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                    },
+                    "RowName": "Phoebe.WeaponInfo.Targeting.Bow.ActivationProbability"
+                  },
+                  "RegistryType": {
+                    "Name": null
+                  }
+                },
+                "FiringRestrictedToTargetingActive": {
+                  "Value": 1.0,
+                  "Curve": {
+                    "CurveTable": {
+                      "ObjectName": "WeaponTypeInformation:CurveTable",
+                      "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                    },
+                    "RowName": "Phoebe.WeaponInfo.Targeting.Bow.FiringRestrictedToTargetingActive"
+                  },
+                  "RegistryType": {
+                    "Name": null
+                  }
+                },
+                "IdealAttackRange": {
+                  "Value": 1.0,
+                  "Curve": {
+                    "CurveTable": {
+                      "ObjectName": "WeaponTypeInformation:CurveTable",
+                      "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                    },
+                    "RowName": "Phoebe.WeaponInfo.HipFire.Bow.IdealAttackRange"
+                  },
+                  "RegistryType": {
+                    "Name": null
+                  }
+                },
+                "TargetingIdealAttackRange": {
+                  "Value": 1.0,
+                  "Curve": {
+                    "CurveTable": {
+                      "ObjectName": "WeaponTypeInformation:CurveTable",
+                      "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                    },
+                    "RowName": "Phoebe.WeaponInfo.Targeting.Bow.IdealAttackRange"
+                  },
+                  "RegistryType": {
+                    "Name": null
+                  }
+                },
+                "MaxAttackRangeFactor": {
+                  "Value": 1.0,
+                  "Curve": {
+                    "CurveTable": {
+                      "ObjectName": "WeaponTypeInformation:CurveTable",
+                      "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                    },
+                    "RowName": "Phoebe.WeaponInfo.Bow.MaxAttackRangeFactor"
+                  },
+                  "RegistryType": {
+                    "Name": null
+                  }
+                },
+                "ShouldAimAtTargetsFeet": {
+                  "Value": 1.0,
+                  "Curve": {
+                    "CurveTable": {
+                      "ObjectName": "Phoebe_SkillSets:CurveTable",
+                      "ObjectPath": "/Game/Athena/AI/Phoebe/PhoebeSkillSets/Phoebe_SkillSets.0"
+                    },
+                    "RowName": "Phoebe.Skill.Aiming.ChanceToAimAtTargetFeet.Bow.DirectHit"
+                  },
+                  "RegistryType": {
+                    "Name": null
+                  }
+                },
+                "ShouldUseProjectileArcForAiming": {
+                  "Value": 1.0,
+                  "Curve": {
+                    "CurveTable": {
+                      "ObjectName": "WeaponTypeInformation:CurveTable",
+                      "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                    },
+                    "RowName": "Phoebe.WeaponInfo.Bow.ShouldUseProjectileArcForAiming"
+                  },
+                  "RegistryType": {
+                    "Name": null
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "Tags": [
+            "phoebe.weapon.ranged.minigun"
+          ],
+          "WeaponAccuracy": {
+            "MaxTrackingOffsetError": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.HipFire.Minigun.MaxTrackingOffsetError"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingMaxTrackingOffsetError": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.Minigun.MaxTrackingOffsetError"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MaxTrackingDistanceFarError": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingMaxTrackingDistanceFarError": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MaxTrackingDistanceNearError": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingMaxTrackingDistanceNearError": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TrackingDistanceNearErrorProbability": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingActivationProbability": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.Minigun.ActivationProbability"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "FiringRestrictedToTargetingActive": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.Minigun.FiringRestrictedToTargetingActive"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "IdealAttackRange": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.HipFire.Minigun.IdealAttackRange"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingIdealAttackRange": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.Minigun.IdealAttackRange"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MaxAttackRangeFactor": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Minigun.MaxAttackRangeFactor"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "ShouldAimAtTargetsFeet": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "Phoebe_SkillSets:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/PhoebeSkillSets/Phoebe_SkillSets.0"
+                },
+                "RowName": "Phoebe.Skill.Aiming.ChanceToAimAtTargetFeet.Minigun"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "ShouldUseProjectileArcForAiming": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          },
+          "Specializations": []
+        },
+        {
+          "Tags": [
+            "phoebe.weapon.ranged.lmg"
+          ],
+          "WeaponAccuracy": {
+            "MaxTrackingOffsetError": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.HipFire.LMG.MaxTrackingOffsetError"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingMaxTrackingOffsetError": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.LMG.MaxTrackingOffsetError"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MaxTrackingDistanceFarError": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingMaxTrackingDistanceFarError": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MaxTrackingDistanceNearError": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingMaxTrackingDistanceNearError": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TrackingDistanceNearErrorProbability": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingActivationProbability": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.LMG.ActivationProbability"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "FiringRestrictedToTargetingActive": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.LMG.FiringRestrictedToTargetingActive"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "IdealAttackRange": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.HipFire.LMG.IdealAttackRange"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingIdealAttackRange": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.LMG.IdealAttackRange"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MaxAttackRangeFactor": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.LMG.MaxAttackRangeFactor"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "ShouldAimAtTargetsFeet": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "Phoebe_SkillSets:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/PhoebeSkillSets/Phoebe_SkillSets.0"
+                },
+                "RowName": "Phoebe.Skill.Aiming.ChanceToAimAtTargetFeet.lmg"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "ShouldUseProjectileArcForAiming": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          },
+          "Specializations": []
+        },
+        {
+          "Tags": [
+            "phoebe.weapon.throwable"
+          ],
+          "WeaponAccuracy": {
+            "MaxTrackingOffsetError": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.HipFire.Grenade.MaxTrackingOffsetError"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingMaxTrackingOffsetError": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.Grenade.MaxTrackingOffsetError"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MaxTrackingDistanceFarError": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Grenade.HipFireMaxTrackingDistanceFarError"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingMaxTrackingDistanceFarError": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Grenade.TargetingMaxTrackingDistanceFarError"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MaxTrackingDistanceNearError": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Grenade.HipFireMaxTrackingDistanceNearError"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingMaxTrackingDistanceNearError": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Grenade.TargetingMaxTrackingDistanceNearError"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TrackingDistanceNearErrorProbability": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Grenade.TrackingDistanceNearErrorProbability"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingActivationProbability": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.Grenade.ActivationProbability"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "FiringRestrictedToTargetingActive": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.Grenade.FiringRestrictedToTargetingActive"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "IdealAttackRange": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.HipFire.Grenade.IdealAttackRange"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingIdealAttackRange": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.Grenade.IdealAttackRange"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MaxAttackRangeFactor": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Grenade.MaxAttackRangeFactor"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "ShouldAimAtTargetsFeet": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "Phoebe_SkillSets:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/PhoebeSkillSets/Phoebe_SkillSets.0"
+                },
+                "RowName": "Phoebe.Skill.Aiming.ChanceToAimAtTargetFeet.Throwable"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "ShouldUseProjectileArcForAiming": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Grenade.ShouldUseProjectileArcForAiming"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          },
+          "Specializations": []
+        },
+        {
+          "Tags": [
+            "phoebe.weapon.ranged.hightower.date"
+          ],
+          "WeaponAccuracy": {
+            "MaxTrackingOffsetError": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.HipFire.Hightower.Date.MaxTrackingOffsetError"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingMaxTrackingOffsetError": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.Hightower.Date.MaxTrackingOffsetError"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MaxTrackingDistanceFarError": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingMaxTrackingDistanceFarError": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MaxTrackingDistanceNearError": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingMaxTrackingDistanceNearError": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TrackingDistanceNearErrorProbability": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingActivationProbability": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.Hightower.Date.ActivationProbability"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "FiringRestrictedToTargetingActive": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.Hightower.Date.FiringRestrictedToTargetingActive"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "IdealAttackRange": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.HipFire.Hightower.Date.IdealAttackRange"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingIdealAttackRange": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.Hightower.Date.IdealAttackRange"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MaxAttackRangeFactor": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Hightower.Date.MaxAttackRangeFactor"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "ShouldAimAtTargetsFeet": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "Phoebe_SkillSets:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/PhoebeSkillSets/Phoebe_SkillSets.0"
+                },
+                "RowName": "Phoebe.Skill.Aiming.ChanceToAimAtTargetFeet.HightowerDate"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "ShouldUseProjectileArcForAiming": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          },
+          "Specializations": []
+        },
+        {
+          "Tags": [
+            "phoebe.weapon.ranged.hightower.tomato"
+          ],
+          "WeaponAccuracy": {
+            "MaxTrackingOffsetError": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.HipFire.Hightower.Tomato.MaxTrackingOffsetError"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingMaxTrackingOffsetError": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.Hightower.Tomato.MaxTrackingOffsetError"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MaxTrackingDistanceFarError": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingMaxTrackingDistanceFarError": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MaxTrackingDistanceNearError": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingMaxTrackingDistanceNearError": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TrackingDistanceNearErrorProbability": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingActivationProbability": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.Hightower.Tomato.ActivationProbability"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "FiringRestrictedToTargetingActive": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.Hightower.Tomato.FiringRestrictedToTargetingActive"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "IdealAttackRange": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.HipFire.Hightower.Tomato.IdealAttackRange"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingIdealAttackRange": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.Hightower.Tomato.IdealAttackRange"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MaxAttackRangeFactor": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Hightower.Tomato.MaxAttackRangeFactor"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "ShouldAimAtTargetsFeet": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "Phoebe_SkillSets:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/PhoebeSkillSets/Phoebe_SkillSets.0"
+                },
+                "RowName": "Phoebe.Skill.Aiming.ChanceToAimAtTargetFeet.HightowerTomato"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "ShouldUseProjectileArcForAiming": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          },
+          "Specializations": []
+        },
+        {
+          "Tags": [
+            "phoebe.weapon.ranged"
+          ],
+          "WeaponAccuracy": {
+            "MaxTrackingOffsetError": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.HipFire.Default.MaxTrackingOffsetError"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingMaxTrackingOffsetError": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.Default.MaxTrackingOffsetError"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MaxTrackingDistanceFarError": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingMaxTrackingDistanceFarError": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MaxTrackingDistanceNearError": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingMaxTrackingDistanceNearError": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TrackingDistanceNearErrorProbability": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingActivationProbability": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.Default.ActivationProbability"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "FiringRestrictedToTargetingActive": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.Default.FiringRestrictedToTargetingActive"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "IdealAttackRange": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.HipFire.Default.IdealAttackRange"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingIdealAttackRange": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.Default.IdealAttackRange"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MaxAttackRangeFactor": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Default.MaxAttackRangeFactor"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "ShouldAimAtTargetsFeet": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "Phoebe_SkillSets:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/PhoebeSkillSets/Phoebe_SkillSets.0"
+                },
+                "RowName": "Phoebe.Skill.Aiming.ChanceToAimAtTargetFeet.Ranged"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "ShouldUseProjectileArcForAiming": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          },
+          "Specializations": []
+        },
+        {
+          "Tags": [
+            "Weapon.Melee.Impact.Pickaxe",
+            "phoebe.items.BuildingTool",
+            "phoebe.items.consumable"
+          ],
+          "WeaponAccuracy": {
+            "MaxTrackingOffsetError": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.HipFire.Melee.MaxTrackingOffsetError"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingMaxTrackingOffsetError": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.Melee.MaxTrackingOffsetError"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MaxTrackingDistanceFarError": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingMaxTrackingDistanceFarError": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MaxTrackingDistanceNearError": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingMaxTrackingDistanceNearError": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TrackingDistanceNearErrorProbability": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingActivationProbability": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.Melee.ActivationProbability"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "FiringRestrictedToTargetingActive": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.Melee.FiringRestrictedToTargetingActive"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "IdealAttackRange": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.HipFire.Melee.IdealAttackRange"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "TargetingIdealAttackRange": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Targeting.Melee.IdealAttackRange"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MaxAttackRangeFactor": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "WeaponTypeInformation:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/Weapon/WeaponTypeInformation.0"
+                },
+                "RowName": "Phoebe.WeaponInfo.Melee.MaxAttackRangeFactor"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "ShouldAimAtTargetsFeet": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "Phoebe_SkillSets:CurveTable",
+                  "ObjectPath": "/Game/Athena/AI/Phoebe/PhoebeSkillSets/Phoebe_SkillSets.0"
+                },
+                "RowName": "Phoebe.Skill.Aiming.ChanceToAimAtTargetFeet.Melee"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "ShouldUseProjectileArcForAiming": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          },
+          "Specializations": []
+        }
+      ]
+    }
+  }
+]
