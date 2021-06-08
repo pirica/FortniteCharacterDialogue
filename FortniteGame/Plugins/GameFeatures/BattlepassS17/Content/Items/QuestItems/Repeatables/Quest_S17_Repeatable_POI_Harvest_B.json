@@ -1,0 +1,144 @@
+[
+  {
+    "Type": "AthenaDailyQuestDefinition",
+    "Name": "Quest_S17_Repeatable_POI_Harvest_B",
+    "Properties": {
+      "QuestSubtype": "EFortQuestSubtype::QuickChallenge",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/Hayseed/Hayseed/NPCCharacterData_Hayseed.NPCCharacterData_Hayseed",
+        "SubPathString": ""
+      },
+      "RewardsTable": {
+        "ObjectName": "AthenaChallengeReward_DailyChallenge_SeasonAgnostic:DataTable",
+        "ObjectPath": "/Game/Athena/Items/Quests/Rewards/AthenaChallengeReward_DailyChallenge_SeasonAgnostic.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_dailychallenge_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S17_Repeatable_POI_Harvest_B_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.GameOn"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.Location.POI.WeepingWoods"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Building.Resource.Wood"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Collect",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "B1B89613419A2BF1A2DE82B6456B4749",
+            "SourceString": "Harvest Wood from Weeping Woods"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "7A1E2DB1442FE64D22262BB8D403CBFC",
+            "SourceString": "Weeping Woods has got PLENTY of wood. It's right in the name!"
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 200,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 5,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "Category": {
+        "DataTable": {
+          "ObjectName": "QuestCategoryTable:DataTable",
+          "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
+        },
+        "RowName": "BRDailyChallenges"
+      },
+      "CompletionText": {
+        "Namespace": "Quest_S17_Repeatable_POI_Harvest_B",
+        "Key": "Quest_S17_Repeatable_POI_Harvest_B_CompletionText",
+        "SourceString": "No one'll notice. But, uh, don't tell Bushranger."
+      },
+      "DisplayName": {
+        "Namespace": "Quest_S17_Repeatable_POI_Harvest_B",
+        "Key": "Quest_S17_Repeatable_POI_Harvest_B_DisplayName",
+        "SourceString": "Harvest Wood from Weeping Woods"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S17_Repeatable_POI_Harvest_B",
+        "Key": "Quest_S17_Repeatable_POI_Harvest_B_ShortDescription",
+        "SourceString": "Weeping Woods has got PLENTY of wood. It's right in the name!"
+      },
+      "Description": {
+        "Namespace": "Quest_S17_Repeatable_POI_Harvest_B",
+        "Key": "Quest_S17_Repeatable_POI_Harvest_B_Description",
+        "SourceString": "Harvest Wood from Weeping Woods"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP"
+      ]
+    }
+  }
+]

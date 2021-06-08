@@ -1,0 +1,1508 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BPs17_ContextualButton",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "FillComplete",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "PlayFillSound",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "Destruct",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "PreConstruct",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "Construct",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "BP_OnHovered",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "BP_OnUnhovered",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "BP_OnPressed",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "BP_OnHoldReset",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "BP_OnHoldDecreased",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "BP_OnHoldIncreased",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "BP_OnHoldCompleted",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "BP_OnHoldEnded",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "BP_OnHoldStarted",
+    "Properties": {}
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "BPs17_ContextualButton_C",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "BPs17_ContextualButton_C:WidgetTree:WidgetTree",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.81"
+      },
+      "bClassRequiresNativeTick": true,
+      "Animations": [
+        {
+          "ObjectName": "BPs17_ContextualButton_C:Hover_INST:WidgetAnimation",
+          "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.80"
+        },
+        {
+          "ObjectName": "BPs17_ContextualButton_C:HoldProgress_INST:WidgetAnimation",
+          "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.79"
+        },
+        {
+          "ObjectName": "BPs17_ContextualButton_C:HoldCompleted_INST:WidgetAnimation",
+          "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.78"
+        }
+      ],
+      "UberGraphFunction": {
+        "ObjectName": "BPs17_ContextualButton_C:ExecuteUbergraph_BPs17_ContextualButton:Function",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.0"
+      }
+    }
+  },
+  {
+    "Type": "BPs17_ContextualButton_C",
+    "Name": "Default__BPs17_ContextualButton_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "In Text": {
+        "Namespace": "",
+        "Key": "DF1B40E64C7C6991CEA0C587E4AF108D",
+        "SourceString": "button text"
+      },
+      "In Width Override": 450.0,
+      "Material": {
+        "ObjectName": "M_UI_Circle_VariantCyle_ClaimButton:MaterialInstanceConstant",
+        "ObjectPath": "/Game/UI/Art_ToolKit/Tools/M_UI_Circle_VariantCyle_ClaimButton.0"
+      },
+      "Justification": "ETextJustify::Center",
+      "In SubText": {
+        "Namespace": "",
+        "Key": "91316081465C8370B6C096A9CFBE1EEE",
+        "SourceString": "Subtext"
+      },
+      "Size": 22,
+      "In Height Override": 70.0,
+      "FillingSoundOverride": {
+        "ObjectName": "BattlePass_ClaimRewardFill_Loop_Cue:SoundCue",
+        "ObjectPath": "/Game/Sounds/Fort_UI_Sounds/FrontEnd/BattlePass/BattlePass_ClaimRewardFill_Loop_Cue.0"
+      },
+      "FillCompleteSoundOverride": {
+        "ObjectName": "BattlePass_ClaimRewardFillComplete_Cue:SoundCue",
+        "ObjectPath": "/Game/Sounds/Fort_UI_Sounds/FrontEnd/BattlePass/BattlePass_ClaimRewardFillComplete_Cue.0"
+      },
+      "HoldTime": 3.0,
+      "StartingHoldPercentage": 0.1,
+      "QualifyingHoldTime": 0.1,
+      "Style": {
+        "ObjectName": "ButtonStyle-Empty_C:BlueprintGeneratedClass",
+        "ObjectPath": "/Game/UI/Foundation/Buttons/ButtonStyles/ButtonStyle-Empty.0"
+      },
+      "bIsFocusable": false,
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "CommonActionWidget",
+    "Name": "UnbindedInputActionWidget",
+    "Properties": {
+      "IconRimBrush": {
+        "ImageSize": {
+          "X": 32.0,
+          "Y": 32.0
+        },
+        "ResourceObject": {
+          "ObjectName": "M-Button-Console-WhiteOutline:MaterialInstanceConstant",
+          "ObjectPath": "/Game/UI/Foundation/Buttons/Materials/M-Button-Console-WhiteOutline.0"
+        },
+        "DrawAs": "ESlateBrushDrawType::Image"
+      },
+      "InputActions": [
+        {
+          "DataTable": {
+            "ObjectName": "InputActionDataTable:DataTable",
+            "ObjectPath": "/Game/UI/Foundation/Input/InputActionDataTable.0"
+          },
+          "RowName": "GenericForward"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "InputActionBox:SizeBoxSlot_0:SizeBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.72"
+      }
+    }
+  },
+  {
+    "Type": "CommonTextBlock",
+    "Name": "Button_text",
+    "Properties": {
+      "ScrollStyle": {
+        "ObjectName": "TextScrollStyle-Base_C:BlueprintGeneratedClass",
+        "ObjectPath": "/Game/UI/Foundation/Text/TextScrollStyle-Base.0"
+      },
+      "Text": {
+        "Namespace": "UMG",
+        "Key": "TextBlockDefaultValue",
+        "SourceString": "Text Block"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Burbank:Font",
+          "ObjectPath": "/Game/UI/Foundation/Fonts/Burbank.0"
+        },
+        "TypefaceFontName": "BurbankRegular-Black",
+        "Size": 22
+      },
+      "ShadowOffset": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TextTransformPolicy": "ETextTransformPolicy::ToUpper",
+      "Justification": "ETextJustify::Center",
+      "Slot": {
+        "ObjectName": "VerticalBox_0:VerticalBoxSlot_0:VerticalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.76"
+      },
+      "RenderTransform": {
+        "Shear": {
+          "X": -8.0,
+          "Y": 0.0
+        }
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "CommonTextBlock",
+    "Name": "Text_subtitle",
+    "Properties": {
+      "ScrollStyle": {
+        "ObjectName": "TextScrollStyle-Base_C:BlueprintGeneratedClass",
+        "ObjectPath": "/Game/UI/Foundation/Text/TextScrollStyle-Base.0"
+      },
+      "bAutoCollapseWithEmptyText": true,
+      "Text": {
+        "Namespace": "UMG",
+        "Key": "TextBlockDefaultValue",
+        "SourceString": "Text Block"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "BurbankSmall:Font",
+          "ObjectPath": "/Game/UI/Foundation/Fonts/BurbankSmall.0"
+        },
+        "FontMaterial": {
+          "ObjectName": "M_UI_BP_ButtonColor_Landing_Purple:MaterialInstanceConstant",
+          "ObjectPath": "/BattlePassBase/UI/M_UI_BP_ButtonColor_Landing_Purple.0"
+        },
+        "TypefaceFontName": "Black",
+        "Size": 14
+      },
+      "ShadowOffset": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TextTransformPolicy": "ETextTransformPolicy::ToUpper",
+      "Justification": "ETextJustify::Center",
+      "LineHeightPercentage": 0.85,
+      "Slot": {
+        "ObjectName": "VerticalBox_0:VerticalBoxSlot_1:VerticalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.77"
+      },
+      "RenderTransform": {
+        "Shear": {
+          "X": -8.0,
+          "Y": 0.0
+        }
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBox_0:HorizontalBoxSlot_0:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.21"
+        },
+        {
+          "ObjectName": "HorizontalBox_0:HorizontalBoxSlot_4:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.22"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "Overlay_25:OverlaySlot_3:OverlaySlot",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.66"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:HorizontalBox_0:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.20"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:VerticalBox_0:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.75"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_4",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetTree:HorizontalBox_0:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.20"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Spacer_Icon:Spacer",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.74"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Icon",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 64.0,
+          "Y": 64.0
+        },
+        "ResourceObject": {
+          "ObjectName": "M_UI_BPS17_BattlePassBadge:MaterialInstanceConstant",
+          "ObjectPath": "/BattlepassS17/UI/UI_Art/M_UI_BPS17_BattlePassBadge.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "Overlay_25:OverlaySlot_6:OverlaySlot",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.69"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": -6.0,
+          "Y": 1.0
+        },
+        "Scale": {
+          "X": 1.2,
+          "Y": 1.2
+        }
+      },
+      "RenderTransformPivot": {
+        "X": 1.0,
+        "Y": 1.0
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_material",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 70.0,
+          "Y": 70.0
+        },
+        "Margin": {
+          "Left": 0.495,
+          "Right": 0.495
+        },
+        "ResourceObject": {
+          "ObjectName": "M_UI_Circle_VariantCyle_ClaimButton:MaterialInstanceConstant",
+          "ObjectPath": "/Game/UI/Art_ToolKit/Tools/M_UI_Circle_VariantCyle_ClaimButton.0"
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "Slot": {
+        "ObjectName": "Overlay_25:OverlaySlot_4:OverlaySlot",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.67"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Progress",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 70.0,
+          "Y": 70.0
+        },
+        "Margin": {
+          "Left": 0.495,
+          "Right": 0.495
+        },
+        "ResourceObject": {
+          "ObjectName": "M_UI_Circle_VariantCyle_ClaimButton_Progress:MaterialInstanceConstant",
+          "ObjectPath": "/Game/UI/Art_ToolKit/Tools/M_UI_Circle_VariantCyle_ClaimButton_Progress.0"
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "Slot": {
+        "ObjectName": "Overlay_25:OverlaySlot_1:OverlaySlot",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.65"
+      }
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "HoldCompleted",
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "89188FCC-4763DB7D-67CD1696-D63200AE",
+          "Name": "Image_Progress",
+          "PossessedObjectClass": {
+            "ObjectName": "Image:Class",
+            "ObjectPath": 0
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "89188FCC-4763DB7D-67CD1696-D63200AE",
+          "BindingName": "Image_Progress",
+          "Tracks": [
+            {
+              "ObjectName": "HoldCompleted:MovieSceneWidgetMaterialTrack_0:MovieSceneWidgetMaterialTrack",
+              "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.58"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "FrameRangeValue": {
+          "LowerBound": {
+            "BoundType": 1,
+            "BoundValue": {
+              "FrameNumberValue": 196673536
+            }
+          },
+          "UpperBound": {
+            "BoundType": 0,
+            "BoundValue": {
+              "FrameNumberValue": 20
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 1515305519,
+        "Denominator": 1106982625
+      },
+      "Signature": "A67E38B4-E51705F4-00000000-00000101"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "HoldProgress",
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "89188FCC-4763DB7D-67CD1696-D63200AE",
+          "Name": "Image_Progress",
+          "PossessedObjectClass": {
+            "ObjectName": "Image:Class",
+            "ObjectPath": 0
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "89188FCC-4763DB7D-67CD1696-D63200AE",
+          "BindingName": "Image_Progress",
+          "Tracks": [
+            {
+              "ObjectName": "HoldProgress:MovieSceneWidgetMaterialTrack_0:MovieSceneWidgetMaterialTrack",
+              "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.59"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "FrameRangeValue": {
+          "LowerBound": {
+            "BoundType": 1,
+            "BoundValue": {
+              "FrameNumberValue": -725614592
+            }
+          },
+          "UpperBound": {
+            "BoundType": 1,
+            "BoundValue": {
+              "FrameNumberValue": 20
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 101020537,
+        "Denominator": 1149448199
+      },
+      "Signature": "F4DABBB5-F4F9BF74-00000000-00000101"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "hover",
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "0365C101-40BAF29D-B102F4B0-1C3B941B",
+          "Name": "Image_material",
+          "PossessedObjectClass": {
+            "ObjectName": "Image:Class",
+            "ObjectPath": 0
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "EDAE3F01-4E824B4B-3EB0D5A7-8EC463D7",
+          "Name": "Image_Icon",
+          "PossessedObjectClass": {
+            "ObjectName": "Image:Class",
+            "ObjectPath": 0
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "95949CCC-48A4A262-4A7D16BF-E07C65BE",
+          "Name": "Button_text",
+          "PossessedObjectClass": {
+            "ObjectName": "CommonTextBlock:Class",
+            "ObjectPath": 0
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "7BC9DB05-4089C621-B12FF18C-FC83754B",
+          "Name": "Text_subtitle",
+          "PossessedObjectClass": {
+            "ObjectName": "CommonTextBlock:Class",
+            "ObjectPath": 0
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "8BF33908-42418E02-D2D49AB5-4C72BFE2",
+          "Name": "Image_Progress",
+          "PossessedObjectClass": {
+            "ObjectName": "Image:Class",
+            "ObjectPath": 0
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "0365C101-40BAF29D-B102F4B0-1C3B941B",
+          "BindingName": "Image_material",
+          "Tracks": [
+            {
+              "ObjectName": "hover:MovieSceneWidgetMaterialTrack_0:MovieSceneWidgetMaterialTrack",
+              "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.60"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "EDAE3F01-4E824B4B-3EB0D5A7-8EC463D7",
+          "BindingName": "Image_Icon",
+          "Tracks": [
+            {
+              "ObjectName": "hover:MovieScene2DTransformTrack_0:MovieScene2DTransformTrack",
+              "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.30"
+            },
+            {
+              "ObjectName": "hover:MovieSceneWidgetMaterialTrack_3:MovieSceneWidgetMaterialTrack",
+              "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.63"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "95949CCC-48A4A262-4A7D16BF-E07C65BE",
+          "BindingName": "Button_text",
+          "Tracks": [
+            {
+              "ObjectName": "hover:MovieSceneColorTrack_0:MovieSceneColorTrack",
+              "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.48"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "7BC9DB05-4089C621-B12FF18C-FC83754B",
+          "BindingName": "Text_subtitle",
+          "Tracks": [
+            {
+              "ObjectName": "hover:MovieSceneWidgetMaterialTrack_1:MovieSceneWidgetMaterialTrack",
+              "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.61"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "8BF33908-42418E02-D2D49AB5-4C72BFE2",
+          "BindingName": "Image_Progress",
+          "Tracks": [
+            {
+              "ObjectName": "hover:MovieSceneWidgetMaterialTrack_2:MovieSceneWidgetMaterialTrack",
+              "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.62"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "FrameRangeValue": {
+          "LowerBound": {
+            "BoundType": 1,
+            "BoundValue": {
+              "FrameNumberValue": 589889536
+            }
+          },
+          "UpperBound": {
+            "BoundType": 0,
+            "BoundValue": {
+              "FrameNumberValue": 20
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": -1262992731,
+        "Denominator": 1110085654
+      },
+      "Signature": "AFAF7BBE-2731E7AF-00000000-00000101"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_0",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformTrack_0:MovieScene2DTransformSection_0:MovieScene2DTransformSection",
+          "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.29"
+        }
+      ],
+      "EvaluationFieldGuid": "07339D5F-4FF0228F-85C915AC-0289004C",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformTrack_0:MovieScene2DTransformSection_0:MovieScene2DTransformSection",
+              "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.29"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "07339D5F-4FF0228F-85C915AC-0289004C"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneColorSection",
+    "Name": "MovieSceneColorSection_0",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneColorTrack",
+    "Name": "MovieSceneColorTrack_0",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "ColorAndOpacity",
+        "PropertyPath": "ColorAndOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneColorTrack_0:MovieSceneColorSection_0:MovieSceneColorSection",
+          "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.47"
+        }
+      ],
+      "EvaluationFieldGuid": "6BCFCDB3-42768FC5-AB9D4A98-C74CD1B4",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneColorTrack_0:MovieSceneColorSection_0:MovieSceneColorSection",
+              "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.47"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "FrameNumberValue": 9000
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "6BCFCDB3-42768FC5-AB9D4A98-C74CD1B4"
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneParameterSection",
+    "Name": "MovieSceneParameterSection_0",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneParameterSection",
+    "Name": "MovieSceneParameterSection_0",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneParameterSection",
+    "Name": "MovieSceneParameterSection_0",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneParameterSection",
+    "Name": "MovieSceneParameterSection_0",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneParameterSection",
+    "Name": "MovieSceneParameterSection_0",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneParameterSection",
+    "Name": "MovieSceneParameterSection_0",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneWidgetMaterialTrack",
+    "Name": "MovieSceneWidgetMaterialTrack_0",
+    "Properties": {
+      "BrushPropertyNamePath": [
+        "Brush"
+      ],
+      "TrackName": "Brush",
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneWidgetMaterialTrack_0:MovieSceneParameterSection_0:MovieSceneParameterSection",
+          "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.52"
+        }
+      ],
+      "EvaluationFieldGuid": "F1BE6655-42D4D24B-C3537BBD-10C02E9F",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneWidgetMaterialTrack_0:MovieSceneParameterSection_0:MovieSceneParameterSection",
+              "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.52"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "FrameNumberValue": 3001
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "F1BE6655-42D4D24B-C3537BBD-10C02E9F"
+    }
+  },
+  {
+    "Type": "MovieSceneWidgetMaterialTrack",
+    "Name": "MovieSceneWidgetMaterialTrack_0",
+    "Properties": {
+      "BrushPropertyNamePath": [
+        "Brush"
+      ],
+      "TrackName": "Brush",
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneWidgetMaterialTrack_0:MovieSceneParameterSection_0:MovieSceneParameterSection",
+          "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.53"
+        }
+      ],
+      "EvaluationFieldGuid": "9A715155-4B37FD88-291BAF8C-ACC4E931",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneWidgetMaterialTrack_0:MovieSceneParameterSection_0:MovieSceneParameterSection",
+              "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.53"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "FrameNumberValue": 120000
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "9A715155-4B37FD88-291BAF8C-ACC4E931"
+    }
+  },
+  {
+    "Type": "MovieSceneWidgetMaterialTrack",
+    "Name": "MovieSceneWidgetMaterialTrack_0",
+    "Properties": {
+      "BrushPropertyNamePath": [
+        "Brush"
+      ],
+      "TrackName": "Brush",
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneWidgetMaterialTrack_0:MovieSceneParameterSection_0:MovieSceneParameterSection",
+          "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.54"
+        }
+      ],
+      "EvaluationFieldGuid": "BC386E9A-4F0E4608-F017C8BB-94FD2B0C",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneWidgetMaterialTrack_0:MovieSceneParameterSection_0:MovieSceneParameterSection",
+              "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.54"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "BC386E9A-4F0E4608-F017C8BB-94FD2B0C"
+    }
+  },
+  {
+    "Type": "MovieSceneWidgetMaterialTrack",
+    "Name": "MovieSceneWidgetMaterialTrack_1",
+    "Properties": {
+      "BrushPropertyNamePath": [
+        "Font"
+      ],
+      "TrackName": "Font",
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneWidgetMaterialTrack_1:MovieSceneParameterSection_0:MovieSceneParameterSection",
+          "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.55"
+        }
+      ],
+      "EvaluationFieldGuid": "D041006D-46AAF7DB-5C91FB85-3A5F29C4",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneWidgetMaterialTrack_1:MovieSceneParameterSection_0:MovieSceneParameterSection",
+              "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.55"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "FrameNumberValue": 9000
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "D041006D-46AAF7DB-5C91FB85-3A5F29C4"
+    }
+  },
+  {
+    "Type": "MovieSceneWidgetMaterialTrack",
+    "Name": "MovieSceneWidgetMaterialTrack_2",
+    "Properties": {
+      "BrushPropertyNamePath": [
+        "Brush"
+      ],
+      "TrackName": "Brush",
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneWidgetMaterialTrack_2:MovieSceneParameterSection_0:MovieSceneParameterSection",
+          "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.56"
+        }
+      ],
+      "EvaluationFieldGuid": "67FCBD08-45E36C37-9FA610A0-00842243",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneWidgetMaterialTrack_2:MovieSceneParameterSection_0:MovieSceneParameterSection",
+              "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.56"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "67FCBD08-45E36C37-9FA610A0-00842243"
+    }
+  },
+  {
+    "Type": "MovieSceneWidgetMaterialTrack",
+    "Name": "MovieSceneWidgetMaterialTrack_3",
+    "Properties": {
+      "BrushPropertyNamePath": [
+        "Brush"
+      ],
+      "TrackName": "Brush",
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneWidgetMaterialTrack_3:MovieSceneParameterSection_0:MovieSceneParameterSection",
+          "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.57"
+        }
+      ],
+      "EvaluationFieldGuid": "B8D3173F-42AED039-C9D9D5A3-20A61222",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneWidgetMaterialTrack_3:MovieSceneParameterSection_0:MovieSceneParameterSection",
+              "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.57"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "B8D3173F-42AED039-C9D9D5A3-20A61222"
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_25",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "Overlay_25:OverlaySlot_4:OverlaySlot",
+          "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.67"
+        },
+        {
+          "ObjectName": "Overlay_25:OverlaySlot_1:OverlaySlot",
+          "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.65"
+        },
+        {
+          "ObjectName": "Overlay_25:OverlaySlot_5:OverlaySlot",
+          "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.68"
+        },
+        {
+          "ObjectName": "Overlay_25:OverlaySlot_3:OverlaySlot",
+          "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.66"
+        },
+        {
+          "ObjectName": "Overlay_25:OverlaySlot_6:OverlaySlot",
+          "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.69"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBox_0:SizeBoxSlot_0:SizeBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.73"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Fill",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
+      "Parent": {
+        "ObjectName": "WidgetTree:Overlay_25:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.64"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Image_Progress:Image",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.25"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_3",
+    "Properties": {
+      "Padding": {
+        "Left": 50.0,
+        "Right": 50.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Fill",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:Overlay_25:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.64"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:HorizontalBox_0:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.20"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_4",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Fill",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
+      "Parent": {
+        "ObjectName": "WidgetTree:Overlay_25:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.64"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Image_material:Image",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.24"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_5",
+    "Properties": {
+      "Padding": {
+        "Left": 10.0,
+        "Right": 10.0
+      },
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:Overlay_25:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.64"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:InputActionBox:SizeBox",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.70"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_6",
+    "Properties": {
+      "Padding": {
+        "Left": 20.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Right",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "WidgetTree:Overlay_25:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.64"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Image_Icon:Image",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.23"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "InputActionBox",
+    "Properties": {
+      "WidthOverride": 40.0,
+      "HeightOverride": 40.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "InputActionBox:SizeBoxSlot_0:SizeBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.72"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "Overlay_25:OverlaySlot_5:OverlaySlot",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.68"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_0",
+    "Properties": {
+      "HeightOverride": 70.0,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBox_0:SizeBoxSlot_0:SizeBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.73"
+        }
+      ],
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetTree:InputActionBox:SizeBox",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.70"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:UnbindedInputActionWidget:CommonActionWidget",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.17"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetTree:SizeBox_0:SizeBox",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.71"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Overlay_25:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.64"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "Spacer_Icon",
+    "Properties": {
+      "Size": {
+        "X": 35.0,
+        "Y": 1.0
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBox_0:HorizontalBoxSlot_4:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.22"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBox_0:VerticalBoxSlot_0:VerticalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.76"
+        },
+        {
+          "ObjectName": "VerticalBox_0:VerticalBoxSlot_1:VerticalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.77"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBox_0:HorizontalBoxSlot_0:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.21"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetTree:VerticalBox_0:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.75"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Button_text:CommonTextBlock",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.18"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Properties": {
+      "Padding": {
+        "Top": -4.0
+      },
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:VerticalBox_0:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.75"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Text_subtitle:CommonTextBlock",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.19"
+      }
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "HoldCompleted_INST",
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "HoldCompleted_INST:HoldCompleted:MovieScene",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.26"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "Image_Progress",
+          "SlotWidgetName": null,
+          "AnimationGuid": "89188FCC-4763DB7D-67CD1696-D63200AE",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "HoldCompleted",
+      "CompiledData": {
+        "ObjectName": "HoldCompleted_INST:CompiledData:MovieSceneCompiledData",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.49"
+      },
+      "Signature": "C1A07266-4DBD26F7-9375DEBF-DF0E4BE2"
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "HoldProgress_INST",
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "HoldProgress_INST:HoldProgress:MovieScene",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.27"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "Image_Progress",
+          "SlotWidgetName": null,
+          "AnimationGuid": "89188FCC-4763DB7D-67CD1696-D63200AE",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "HoldProgress",
+      "CompiledData": {
+        "ObjectName": "HoldProgress_INST:CompiledData:MovieSceneCompiledData",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.50"
+      },
+      "Signature": "65146882-4E63E6FC-C7ADBC90-83433C1C"
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "Hover_INST",
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "Hover_INST:hover:MovieScene",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.28"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "Image_material",
+          "SlotWidgetName": null,
+          "AnimationGuid": "0365C101-40BAF29D-B102F4B0-1C3B941B",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "Image_Icon",
+          "SlotWidgetName": null,
+          "AnimationGuid": "EDAE3F01-4E824B4B-3EB0D5A7-8EC463D7",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "Button_text",
+          "SlotWidgetName": null,
+          "AnimationGuid": "95949CCC-48A4A262-4A7D16BF-E07C65BE",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "Text_subtitle",
+          "SlotWidgetName": null,
+          "AnimationGuid": "7BC9DB05-4089C621-B12FF18C-FC83754B",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "Image_Progress",
+          "SlotWidgetName": null,
+          "AnimationGuid": "8BF33908-42418E02-D2D49AB5-4C72BFE2",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "Hover",
+      "CompiledData": {
+        "ObjectName": "Hover_INST:CompiledData:MovieSceneCompiledData",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.51"
+      },
+      "Signature": "21FE72B3-4CA846AC-A37E869F-007FAE00"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "WidgetTree:SizeBox_0:SizeBox",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.71"
+      }
+    }
+  }
+]

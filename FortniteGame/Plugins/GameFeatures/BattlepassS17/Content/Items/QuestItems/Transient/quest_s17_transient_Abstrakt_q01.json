@@ -1,0 +1,129 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "quest_s17_transient_Abstrakt_q01",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaTransientQuest",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/Abstrakt/Abstrakt/NPCCharacterData_Abstrakt.NPCCharacterData_Abstrakt",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "bIsShared": true,
+      "ExpirationDuration": -1,
+      "RewardsTable": {
+        "ObjectName": "ChallengeReward_S17_Transient_C:DataTable",
+        "ObjectPath": "/BattlepassS17/Items/QuestRewards/ChallengeReward_S17_Transient_C.0"
+      },
+      "Objectives": [
+        {
+          "BackendName": "quest_s17_transient_Abstrakt_q01_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Item.Weapon.Ranged.SMG"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "Target.Tags HasTag Homebase.Class || Target.Tags HasTag Athena.Faction.Generic.Hostile || Target.Tags HasTag Pawn.Athena.NPC.Duel.IsBeingChallenged || Target.Tags HasTag Pawn.Athena.NPC.Wildlife.Predator || Target.Tags HasTag Pawn.Athena.NPC.Mang || Target.Tags HasTag Pawn.Athena.NPC.IO || Target.Tags HasTag AISpawnerData.Type.MotherWall || Target.Tags HasTag Pawn.Athena.NPC.Labrador",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Damage",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "2E7EF780438EDD55196A5AA075456E11",
+            "SourceString": "SMG Damage"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "70B156C640ADA8872A93ED8E1BCFEE56",
+            "SourceString": "What can I say? I'm all about \"spray and pray.\""
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 100,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "quest_s17_transient_Abstrakt_q01",
+        "Key": "quest_s17_transient_Abstrakt_q01_CompletionText",
+        "SourceString": "Just make sure you don't start something you're not gonna finish."
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Common",
+      "DisplayName": {
+        "Namespace": "quest_s17_transient_Abstrakt_q01",
+        "Key": "quest_s17_transient_Abstrakt_q01_DisplayName",
+        "SourceString": "SMG Damage"
+      },
+      "ShortDescription": {
+        "Namespace": "",
+        "Key": "6BCBE36443DE5C118EFDE094733DAF0C",
+        "SourceString": "What can I say? I'm all about \"spray and pray.\""
+      },
+      "Description": {
+        "Namespace": "quest_s17_transient_Abstrakt_q01",
+        "Key": "quest_s17_transient_Abstrakt_q01_Description",
+        "SourceString": "SMG Damage"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.Bars"
+      ]
+    }
+  }
+]

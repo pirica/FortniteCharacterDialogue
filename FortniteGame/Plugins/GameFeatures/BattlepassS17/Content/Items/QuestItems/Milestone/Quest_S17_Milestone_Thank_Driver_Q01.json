@@ -1,0 +1,130 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "Quest_S17_Milestone_Thank_Driver_Q01",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "QuestSubtype": "EFortQuestSubtype::Milestone",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/Maven/Maven/NPCCharacterData_Maven.NPCCharacterData_Maven",
+        "SubPathString": ""
+      },
+      "bSuppressQuestGrantedEvent": true,
+      "bIncludedInCategories": false,
+      "Threshold": 8,
+      "RewardsTable": {
+        "ObjectName": "ChallengeReward_S17_MilestoneXP:DataTable",
+        "ObjectPath": "/BattlepassS17/Items/QuestRewards/ChallengeReward_S17_MilestoneXP.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_s17_milestonepunch_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S17_Milestone_Thank_Driver_Q01_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "Source.Tags HasTag Gameplay.Action.Player.ThankBusDriver",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::ComplexCustom",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "B535DB4D4147F5227EA14696C4A4B18F",
+            "SourceString": "Thank the Bus Driver"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "557E6A7C441D85E436F8C7B18DA01C8F",
+            "SourceString": "The annihilation of our species is no excuse for rudeness."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 10,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "Quest_S17_Milestone_Thank_Driver_Q01",
+        "Key": "Quest_S17_Milestone_Thank_Driver_Q01_CompletionText",
+        "SourceString": "Nothing beats public transportation."
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Rare",
+      "DisplayName": {
+        "Namespace": "Quest_S17_Milestone_Thank_Driver_Q01",
+        "Key": "Quest_S17_Milestone_Thank_Driver_Q01_DisplayName",
+        "SourceString": "Thank the Bus Driver"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S17_Milestone_Thank_Driver_Q01",
+        "Key": "Quest_S17_Milestone_Thank_Driver_Q01_ShortDescription",
+        "SourceString": "The annihilation of our species is no excuse for rudeness."
+      },
+      "Description": {
+        "Namespace": "Quest_S17_Milestone_Thank_Driver_Q01",
+        "Key": "Quest_S17_Milestone_Thank_Driver_Q01_Description",
+        "SourceString": "Thank the Bus Driver"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP",
+        "Quest.Metadata.HideForContextualQuestDisplay"
+      ]
+    }
+  }
+]

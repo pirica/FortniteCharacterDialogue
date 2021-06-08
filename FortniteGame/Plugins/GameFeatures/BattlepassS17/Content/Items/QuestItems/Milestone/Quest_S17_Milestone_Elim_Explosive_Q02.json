@@ -1,0 +1,151 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "Quest_S17_Milestone_Elim_Explosive_Q02",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "QuestSubtype": "EFortQuestSubtype::Milestone",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/SpecialForces/SpecialForces/NPCCharacterData_SpecialForces.NPCCharacterData_SpecialForces",
+        "SubPathString": ""
+      },
+      "bSuppressQuestGrantedEvent": true,
+      "bIncludedInCategories": false,
+      "Threshold": 8,
+      "RewardsTable": {
+        "ObjectName": "ChallengeReward_S17_MilestoneXP:DataTable",
+        "ObjectPath": "/BattlepassS17/Items/QuestRewards/ChallengeReward_S17_MilestoneXP.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_s17_milestonepunch_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S17_Milestone_Elim_Explosive_Q02_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.GameOn"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Pawn.Athena.NPC.Bud"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": false
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "Source.Tags HasTag Weapon.Ranged.Heavy.rocket_launcher || Source.Tags HasTag Weapon.Ranged.Heavy.grenade_launcher || Source.Tags HasTag Weapon.Ranged.Heavy.grenade || Source.Tags HasTag Weapon.Ranged.Heavy.C4 || Source.Tags HasTag Weapon.Ranged.Crossbow.Explosive || Source.Tags HasTag Gameplay.Damage.Physical.Explosive",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Kill",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "9B9C7B7D4815EEFD339BA88CC36307C7",
+            "SourceString": "Explosives eliminations"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "15CDB32140EDEF0F70FFE49CD078E783",
+            "SourceString": "Now just be careful - These things are dangerous!"
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 10,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "Quest_S17_Milestone_Elim_Explosive_Q02",
+        "Key": "Quest_S17_Milestone_Elim_Explosive_Q02_CompletionText",
+        "SourceString": "Explosions scare me, but they're also kind of pretty?"
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Rare",
+      "DisplayName": {
+        "Namespace": "Quest_S15_Milestone_Elim_Explosive_Q02",
+        "Key": "Quest_S15_Milestone_Elim_Explosive_Q02_DisplayName",
+        "SourceString": "Explosives eliminations"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S17_Milestone_Elim_Explosive_Q02",
+        "Key": "Quest_S17_Milestone_Elim_Explosive_Q02_ShortDescription",
+        "SourceString": "Now just be careful - These things are dangerous!"
+      },
+      "Description": {
+        "Namespace": "Quest_S15_Milestone_Elim_Explosive_Q02",
+        "Key": "Quest_S15_Milestone_Elim_Explosive_Q02_Description",
+        "SourceString": "Explosives eliminations"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP",
+        "Quest.Metadata.HideForContextualQuestDisplay"
+      ]
+    }
+  }
+]

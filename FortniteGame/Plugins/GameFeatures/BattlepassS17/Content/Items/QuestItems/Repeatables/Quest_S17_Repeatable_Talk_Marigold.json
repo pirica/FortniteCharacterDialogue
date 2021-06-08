@@ -1,0 +1,132 @@
+[
+  {
+    "Type": "AthenaDailyQuestDefinition",
+    "Name": "Quest_S17_Repeatable_Talk_Marigold",
+    "Properties": {
+      "QuestSubtype": "EFortQuestSubtype::QuickChallenge",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/Marigold/Marigold/NPCCharacterData_Marigold.NPCCharacterData_Marigold",
+        "SubPathString": ""
+      },
+      "RewardsTable": {
+        "ObjectName": "AthenaChallengeReward_DailyChallenge_SeasonAgnostic:DataTable",
+        "ObjectPath": "/Game/Athena/Items/Quests/Rewards/AthenaChallengeReward_DailyChallenge_SeasonAgnostic.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_dailychallenge_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S17_Repeatable_Talk_Marigold_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "AISpawnerData.Type.Tandem.Marigold"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::InitiatedNPCConversation",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": false,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "E65F959748A787E05EF099B0E3B03DFE",
+            "SourceString": "Talk to Marigold"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "E0DFC3D94F4AE58EC08D5E89FC8ECFBF",
+            "SourceString": "I'll take whatever information you can give me."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 1,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "Weight": 0.5,
+      "Category": {
+        "DataTable": {
+          "ObjectName": "QuestCategoryTable:DataTable",
+          "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
+        },
+        "RowName": "BRDailyChallenges"
+      },
+      "CompletionText": {
+        "Namespace": "Quest_S17_Repeatable_Talk_Marigold",
+        "Key": "Quest_S17_Repeatable_Talk_Marigold_CompletionText",
+        "SourceString": "I don't understand how Midas could've just... vanished."
+      },
+      "DisplayName": {
+        "Namespace": "Quest_S17_Repeatable_Talk_Marigold",
+        "Key": "Quest_S17_Repeatable_Talk_Marigold_DisplayName",
+        "SourceString": "Talk to Marigold"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S17_Repeatable_Talk_Marigold",
+        "Key": "Quest_S17_Repeatable_Talk_Marigold_ShortDescription",
+        "SourceString": "I'll take whatever information you can give me."
+      },
+      "Description": {
+        "Namespace": "Quest_S17_Repeatable_Talk_Marigold",
+        "Key": "Quest_S17_Repeatable_Talk_Marigold_Description",
+        "SourceString": "Talk to Marigold"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP",
+        "Athena.Location.POI.LazyLake"
+      ]
+    }
+  }
+]

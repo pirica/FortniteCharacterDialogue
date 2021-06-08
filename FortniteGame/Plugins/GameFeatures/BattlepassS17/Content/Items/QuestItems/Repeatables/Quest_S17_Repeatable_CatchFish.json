@@ -1,0 +1,144 @@
+[
+  {
+    "Type": "AthenaDailyQuestDefinition",
+    "Name": "Quest_S17_Repeatable_CatchFish",
+    "Properties": {
+      "QuestSubtype": "EFortQuestSubtype::QuickChallenge",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/SwampStalker/SwampStalker/NPCCharacterData_SwampStalker.NPCCharacterData_SwampStalker",
+        "SubPathString": ""
+      },
+      "RewardsTable": {
+        "ObjectName": "AthenaChallengeReward_DailyChallenge_SeasonAgnostic:DataTable",
+        "ObjectPath": "/Game/Athena/Items/Quests/Rewards/AthenaChallengeReward_DailyChallenge_SeasonAgnostic.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_dailychallenge_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S17_Repeatable_CatchFish_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "FlopperSpawn"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Item.Consumable.Fish"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::ComplexCustom",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "0B4DA9AD4801C5ADF5B9F3B4CF9D3D26",
+            "SourceString": "Catch Fish"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "41E04C974DCCAED043FAB88DD57FB68A",
+            "SourceString": "I use my hands, but a pole works too."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 3,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "Category": {
+        "DataTable": {
+          "ObjectName": "QuestCategoryTable:DataTable",
+          "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
+        },
+        "RowName": "BRDailyChallenges"
+      },
+      "CompletionText": {
+        "Namespace": "Quest_S17_Repeatable_CatchFish",
+        "Key": "Quest_S17_Repeatable_CatchFish_CompletionText",
+        "SourceString": "Hope you caught something good."
+      },
+      "DisplayName": {
+        "Namespace": "Quest_S17_Repeatable_CatchFish",
+        "Key": "Quest_S17_Repeatable_CatchFish_DisplayName",
+        "SourceString": "Catch Fish"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S17_Repeatable_CatchFish",
+        "Key": "Quest_S17_Repeatable_CatchFish_ShortDescription",
+        "SourceString": "I use my hands, but a pole works too."
+      },
+      "Description": {
+        "Namespace": "Quest_S17_Repeatable_CatchFish",
+        "Key": "Quest_S17_Repeatable_CatchFish_Description",
+        "SourceString": "Catch Fish"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP"
+      ]
+    }
+  }
+]

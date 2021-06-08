@@ -1,0 +1,141 @@
+[
+  {
+    "Type": "AthenaDailyQuestDefinition",
+    "Name": "Quest_S17_Repeatable_Drive_Meters",
+    "Properties": {
+      "QuestSubtype": "EFortQuestSubtype::QuickChallenge",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/Marigold/Marigold/NPCCharacterData_Marigold.NPCCharacterData_Marigold",
+        "SubPathString": ""
+      },
+      "RewardsTable": {
+        "ObjectName": "AthenaChallengeReward_DailyChallenge_SeasonAgnostic:DataTable",
+        "ObjectPath": "/Game/Athena/Items/Quests/Rewards/AthenaChallengeReward_DailyChallenge_SeasonAgnostic.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_dailychallenge_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S17_Repeatable_Drive_Meters_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.Quests.VehicleDistance"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::ComplexCustom",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "B40748404643663B10EDF0B1927519BB",
+            "SourceString": "Drive 1000 meters"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "8C2DC9D34B6048E98FEFFB9B4B75F7D8",
+            "SourceString": "Consider this a basic driving test."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 1000,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "Category": {
+        "DataTable": {
+          "ObjectName": "QuestCategoryTable:DataTable",
+          "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
+        },
+        "RowName": "BRDailyChallenges"
+      },
+      "CompletionText": {
+        "Namespace": "Quest_S17_Repeatable_Drive_Meters",
+        "Key": "Quest_S17_Repeatable_Drive_Meters_CompletionText",
+        "SourceString": "You passed. Barely."
+      },
+      "QuestAbilitySet": {
+        "AssetPathName": "/BattlepassS17/Items/QuestAbilities/Milestone/VehicleDistance/GAS_Quest_Milestone_VehicleDistance.GAS_Quest_Milestone_VehicleDistance",
+        "SubPathString": ""
+      },
+      "DisplayName": {
+        "Namespace": "Quest_S17_Repeatable_Drive_Meters",
+        "Key": "Quest_S17_Repeatable_Drive_Meters_DisplayName",
+        "SourceString": "Drive 1000 meters"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S17_Repeatable_Drive_Meters",
+        "Key": "Quest_S17_Repeatable_Drive_Meters_ShortDescription",
+        "SourceString": "Consider this a basic driving test."
+      },
+      "Description": {
+        "Namespace": "Quest_S17_Repeatable_Drive_Meters",
+        "Key": "Quest_S17_Repeatable_Drive_Meters_Description",
+        "SourceString": "Drive 1000 meters"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP"
+      ]
+    }
+  }
+]

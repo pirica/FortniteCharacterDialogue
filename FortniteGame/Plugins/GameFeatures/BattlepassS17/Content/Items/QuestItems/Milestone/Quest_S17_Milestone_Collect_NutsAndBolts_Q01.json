@@ -1,0 +1,144 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "Quest_S17_Milestone_Collect_NutsAndBolts_Q01",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "QuestSubtype": "EFortQuestSubtype::Milestone",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/Rickus/Rickus/NPCCharacterData_Rickus.NPCCharacterData_Rickus",
+        "SubPathString": ""
+      },
+      "bSuppressQuestGrantedEvent": true,
+      "bIncludedInCategories": false,
+      "Threshold": 19,
+      "RewardsTable": {
+        "ObjectName": "ChallengeReward_S17_MilestoneXP:DataTable",
+        "ObjectPath": "/BattlepassS17/Items/QuestRewards/ChallengeReward_S17_MilestoneXP.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_s17_milestonepunch_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S17_Milestone_Collect_NutsAndBolts_Q01_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.GameOn"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Item.Ingredient.NutsBolts"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Collect",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "A7FBD4B149CE18D9F092AA9C3D6F711F",
+            "SourceString": "Collect Nuts and Bolts"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "E75DB04A4D7ABAC6F96F74BCE82BE258",
+            "SourceString": "There's only so much I can do with wood, stone, and metal. Throw me a bone here."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 25,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "Quest_S17_Milestone_Collect_NutsAndBolts_Q01",
+        "Key": "Quest_S17_Milestone_Collect_NutsAndBolts_Q01_CompletionText",
+        "SourceString": "Nuts AND bolts. You really went all out. "
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Rare",
+      "DisplayName": {
+        "Namespace": "Quest_S17_Milestone_Collect_NutsAndBolts_Q01",
+        "Key": "Quest_S17_Milestone_Collect_NutsAndBolts_Q01_DisplayName",
+        "SourceString": "Collect Nuts and Bolts"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S17_Milestone_Collect_NutsAndBolts_Q01",
+        "Key": "Quest_S17_Milestone_Collect_NutsAndBolts_Q01_ShortDescription",
+        "SourceString": "There's only so much I can do with wood, stone, and metal. Throw me a bone here."
+      },
+      "Description": {
+        "Namespace": "Quest_S17_Milestone_Collect_NutsAndBolts_Q01",
+        "Key": "Quest_S17_Milestone_Collect_NutsAndBolts_Q01_Description",
+        "SourceString": "Collect Nuts and Bolts"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP",
+        "Quest.Metadata.HideForContextualQuestDisplay"
+      ]
+    }
+  }
+]

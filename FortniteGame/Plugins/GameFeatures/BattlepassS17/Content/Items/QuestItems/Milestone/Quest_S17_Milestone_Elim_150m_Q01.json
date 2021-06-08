@@ -1,0 +1,151 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "Quest_S17_Milestone_Elim_150m_Q01",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "QuestSubtype": "EFortQuestSubtype::Milestone",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/Rook/Rook/NPCCharacterData_Rook.NPCCharacterData_Rook",
+        "SubPathString": ""
+      },
+      "bSuppressQuestGrantedEvent": true,
+      "bIncludedInCategories": false,
+      "Threshold": 3,
+      "RewardsTable": {
+        "ObjectName": "ChallengeReward_S17_MilestoneXP:DataTable",
+        "ObjectPath": "/BattlepassS17/Items/QuestRewards/ChallengeReward_S17_MilestoneXP.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_s17_milestonepunch_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S17_Milestone_Elim_150m_Q01_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.GameOn"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Pawn.Athena.NPC.Bud"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": false
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "Athena.KillDistance>=150",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Kill",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "53A498014205135412976EA113A1F3C9",
+            "SourceString": "Eliminate opponents from 150m"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "0A437995496E808816F3C49DB4DB0F03",
+            "SourceString": "Don't forget to practice at a distance, too."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 3,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "Quest_S17_Milestone_Elim_150m_Q01",
+        "Key": "Quest_S17_Milestone_Elim_150m_Q01_CompletionText",
+        "SourceString": "Good. Your opponents won't always be on top of you."
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Rare",
+      "DisplayName": {
+        "Namespace": "Quest_S15_Milestone_Elim_150m_Q01",
+        "Key": "Quest_S15_Milestone_Elim_150m_Q01_DisplayName",
+        "SourceString": "Eliminate opponents from 150m"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S17_Milestone_Elim_150m_Q01",
+        "Key": "Quest_S17_Milestone_Elim_150m_Q01_ShortDescription",
+        "SourceString": "Don't forget to practice at a distance, too."
+      },
+      "Description": {
+        "Namespace": "Quest_S15_Milestone_Elim_150m_Q01",
+        "Key": "Quest_S15_Milestone_Elim_150m_Q01_Description",
+        "SourceString": "Eliminate opponents from 150m"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP",
+        "Quest.Metadata.HideForContextualQuestDisplay"
+      ]
+    }
+  }
+]

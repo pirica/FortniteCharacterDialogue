@@ -1,0 +1,157 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "S17_IOGuard_Music_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "S17_IOGuard_Music_Cue:SoundNodeMixer_1:SoundNodeMixer",
+        "ObjectPath": "/Slone/Sounds/Music/S17_IOGuard_Music_Cue.1"
+      },
+      "bHasPlayWhenSilent": true,
+      "SoundClassObject": {
+        "ObjectName": "Fort_Music_NPC:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Music_NPC.0"
+      },
+      "Duration": 10000.0,
+      "MaxDistance": 2097152.0
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_1",
+    "Properties": {
+      "InputVolume": [
+        0.7,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "S17_IOGuard_Music_Cue:SoundNodeModulatorContinuous_0:SoundNodeModulatorContinuous",
+          "ObjectPath": "/Slone/Sounds/Music/S17_IOGuard_Music_Cue.2"
+        },
+        {
+          "ObjectName": "S17_IOGuard_Music_Cue:SoundNodeModulatorContinuous_1:SoundNodeModulatorContinuous",
+          "ObjectPath": "/Slone/Sounds/Music/S17_IOGuard_Music_Cue.3"
+        },
+        {
+          "ObjectName": "S17_IOGuard_Music_Cue:SoundNodeModulatorContinuous_2:SoundNodeModulatorContinuous",
+          "ObjectPath": "/Slone/Sounds/Music/S17_IOGuard_Music_Cue.4"
+        },
+        {
+          "ObjectName": "S17_IOGuard_Music_Cue:SoundNodeModulatorContinuous_4:SoundNodeModulatorContinuous",
+          "ObjectPath": "/Slone/Sounds/Music/S17_IOGuard_Music_Cue.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulatorContinuous",
+    "Name": "SoundNodeModulatorContinuous_0",
+    "Properties": {
+      "VolumeModulationParams": {
+        "ParameterName": "Unaware",
+        "Default": 0.0
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "S17_IOGuard_Music_Cue:SoundNodeWavePlayer_6:SoundNodeWavePlayer",
+          "ObjectPath": "/Slone/Sounds/Music/S17_IOGuard_Music_Cue.9"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulatorContinuous",
+    "Name": "SoundNodeModulatorContinuous_1",
+    "Properties": {
+      "VolumeModulationParams": {
+        "ParameterName": "Base",
+        "Default": 0.0
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "S17_IOGuard_Music_Cue:SoundNodeWavePlayer_3:SoundNodeWavePlayer",
+          "ObjectPath": "/Slone/Sounds/Music/S17_IOGuard_Music_Cue.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulatorContinuous",
+    "Name": "SoundNodeModulatorContinuous_2",
+    "Properties": {
+      "VolumeModulationParams": {
+        "ParameterName": "Guard",
+        "Default": 0.0
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "S17_IOGuard_Music_Cue:SoundNodeWavePlayer_5:SoundNodeWavePlayer",
+          "ObjectPath": "/Slone/Sounds/Music/S17_IOGuard_Music_Cue.8"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulatorContinuous",
+    "Name": "SoundNodeModulatorContinuous_4",
+    "Properties": {
+      "VolumeModulationParams": {
+        "ParameterName": "Boss",
+        "Default": 0.0
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "S17_IOGuard_Music_Cue:SoundNodeWavePlayer_4:SoundNodeWavePlayer",
+          "ObjectPath": "/Slone/Sounds/Music/S17_IOGuard_Music_Cue.7"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Slone/Sounds/Music/S17_IOGuard_Music_Base.S17_IOGuard_Music_Base",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_4",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Slone/Sounds/Music/S17_IOGuard_Music_Boss.S17_IOGuard_Music_Boss",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_5",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Slone/Sounds/Music/S17_IOGuard_Music_Guard.S17_IOGuard_Music_Guard",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_6",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Slone/Sounds/Music/S17_IOGuard_Music_Idle.S17_IOGuard_Music_Idle",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    }
+  }
+]

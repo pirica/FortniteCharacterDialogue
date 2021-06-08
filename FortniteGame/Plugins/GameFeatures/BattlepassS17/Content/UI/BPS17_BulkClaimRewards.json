@@ -1,0 +1,2372 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BPS17_BulkClaimRewards",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "BP_OnActivated",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "OnCostChanged",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "OnRewardCountChanged",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "OnPageRangeChanged",
+    "Properties": {}
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "BPS17_BulkClaimRewards_C",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "BPS17_BulkClaimRewards_C:WidgetTree:WidgetTree",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.117"
+      },
+      "Animations": [
+        {
+          "ObjectName": "BPS17_BulkClaimRewards_C:Intro_INST:WidgetAnimation",
+          "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.116"
+        }
+      ],
+      "UberGraphFunction": {
+        "ObjectName": "BPS17_BulkClaimRewards_C:ExecuteUbergraph_BPS17_BulkClaimRewards:Function",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.0"
+      }
+    }
+  },
+  {
+    "Type": "BPS17_BulkClaimRewards_C",
+    "Name": "Default__BPS17_BulkClaimRewards_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "First Page to Claim": 1,
+      "Last Page to Claim": 2,
+      "Add One": 1,
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "BPs17_ContextualButton_C",
+    "Name": "Button_BuyLevels",
+    "Properties": {
+      "In Text": {
+        "Namespace": "",
+        "Key": "6C5D9207488E01B8E3CD028759D4E011",
+        "SourceString": "Buy levels"
+      },
+      "In Width Override": 650.0,
+      "Material": {
+        "ObjectName": "M_UI_Circle_VariantCyle_Level_Button:MaterialInstanceConstant",
+        "ObjectPath": "/Game/UI/Art_ToolKit/Tools/M_UI_Circle_VariantCyle_Level_Button.0"
+      },
+      "In SubText": {
+        "Namespace": "",
+        "Key": "2C99FB31405D6DFA9088568607C6096F",
+        "SourceString": "And Get Battle Stars"
+      },
+      "Size": 28,
+      "In Height Override": 80.0,
+      "HoldTime": 0.0,
+      "StartingHoldPercentage": 0.0,
+      "QualifyingHoldTime": 0.0,
+      "TriggeringInputAction": {
+        "DataTable": {
+          "ObjectName": "InputActionDataTable:DataTable",
+          "ObjectPath": "/Game/UI/Foundation/Input/InputActionDataTable.0"
+        },
+        "RowName": "GenericFaceButtonBottom"
+      },
+      "Slot": {
+        "ObjectName": "Switcher_BottomButtons:CommonVisibilitySwitcherSlot_3:CommonVisibilitySwitcherSlot",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.17"
+      }
+    }
+  },
+  {
+    "Type": "BPs17_ContextualButton_C",
+    "Name": "Button_ClaimReward",
+    "Properties": {
+      "In Text": {
+        "Namespace": "",
+        "Key": "85F2BC584A0A21AA5CF74CAA2F12A203",
+        "SourceString": "(HOLD) CLAIM ALL REWARDS"
+      },
+      "In Width Override": 650.0,
+      "In SubText": {
+        "CultureInvariantString": null
+      },
+      "Size": 28,
+      "In Height Override": 80.0,
+      "bIsHoldableButton": true,
+      "HoldTime": 1.2,
+      "Slot": {
+        "ObjectName": "Switcher_BottomButtons:CommonVisibilitySwitcherSlot_0:CommonVisibilitySwitcherSlot",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.16"
+      }
+    }
+  },
+  {
+    "Type": "CommonRichTextBlock",
+    "Name": "CommonRichTextBlock_185",
+    "Properties": {
+      "ScrollStyle": {
+        "ObjectName": "TextScrollStyle-Base_C:BlueprintGeneratedClass",
+        "ObjectPath": "/Game/UI/Foundation/Text/TextScrollStyle-Base.0"
+      },
+      "Text": {
+        "Namespace": "",
+        "Key": "3EAC1CBF46C1692214FF889F2B1D4226",
+        "SourceString": "CLAIM <text color=\"fff\">ALL REWARDS</> FROM"
+      },
+      "bOverrideDefaultStyle": true,
+      "DefaultTextStyleOverride": {
+        "Font": {
+          "FontObject": {
+            "ObjectName": "BurbankSmall:Font",
+            "ObjectPath": "/Game/UI/Foundation/Fonts/BurbankSmall.0"
+          },
+          "TypefaceFontName": "Black",
+          "Size": 20
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "R": 0.033105,
+            "G": 0.854993,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "08DAFF"
+          }
+        }
+      },
+      "Slot": {
+        "ObjectName": "VerticalBox_133:VerticalBoxSlot_5:VerticalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.115"
+      },
+      "RenderTransform": {
+        "Shear": {
+          "X": -8.0,
+          "Y": 0.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "CommonTextBlock",
+    "Name": "CommonTextBlock_84",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "1C5F64E14DBFEC9527822FA07E2C7597",
+        "SourceString": "Total Price"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.215861,
+          "G": 0.658375,
+          "B": 1.0,
+          "A": 1.0,
+          "Hex": "37A8FF"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "BurbankSmall:Font",
+          "ObjectPath": "/Game/UI/Foundation/Fonts/BurbankSmall.0"
+        },
+        "Size": 20
+      },
+      "ShadowOffset": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "LineHeightPercentage": 0.742857,
+      "Slot": {
+        "ObjectName": "HorizontalBox_209:HorizontalBoxSlot_0:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.24"
+      },
+      "RenderTransform": {
+        "Shear": {
+          "X": -8.0,
+          "Y": 0.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "CommonTextBlock",
+    "Name": "Cost",
+    "Properties": {
+      "Text": {
+        "CultureInvariantString": "0"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "BurbankSmall:Font",
+          "ObjectPath": "/Game/UI/Foundation/Fonts/BurbankSmall.0"
+        },
+        "TypefaceFontName": "Black"
+      },
+      "ShadowOffset": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "LineHeightPercentage": 0.761905,
+      "Slot": {
+        "ObjectName": "HorizontalBox_209:HorizontalBoxSlot_1:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.25"
+      },
+      "RenderTransform": {
+        "Shear": {
+          "X": -8.0,
+          "Y": 0.0
+        }
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "CommonTextBlock",
+    "Name": "SubTitle",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "C9B76A0747FCB0BC63267D8C78222F53",
+        "SourceString": "Battle Pass"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.033105,
+          "G": 0.854993,
+          "B": 1.0,
+          "A": 1.0,
+          "Hex": "08DAFF"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "BurbankSmall:Font",
+          "ObjectPath": "/Game/UI/Foundation/Fonts/BurbankSmall.0"
+        },
+        "TypefaceFontName": "Black"
+      },
+      "ShadowOffset": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TextTransformPolicy": "ETextTransformPolicy::ToUpper",
+      "LineHeightPercentage": 0.7,
+      "Slot": {
+        "ObjectName": "VBox_Header:VerticalBoxSlot_0:VerticalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.107"
+      },
+      "RenderTransform": {
+        "Shear": {
+          "X": -10.0,
+          "Y": 0.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "CommonTextBlock",
+    "Name": "Text_LevelsAmount",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "6E95A2554463B0B0D8C1C58F589E11DF",
+        "SourceString": "Page {XX}"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Burbank:Font",
+          "ObjectPath": "/Game/UI/Foundation/Fonts/Burbank.0"
+        },
+        "TypefaceFontName": "BurbankRegular-Black",
+        "Size": 32
+      },
+      "ShadowOffset": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TextTransformPolicy": "ETextTransformPolicy::ToUpper",
+      "Slot": {
+        "ObjectName": "Overlay_48:OverlaySlot_1:OverlaySlot",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.91"
+      },
+      "RenderTransform": {
+        "Shear": {
+          "X": -10.0,
+          "Y": 0.0
+        }
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "CommonTextBlock",
+    "Name": "Title",
+    "Properties": {
+      "Text": {
+        "CultureInvariantString": "Claim 0 Rewards"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Burbank:Font",
+          "ObjectPath": "/Game/UI/Foundation/Fonts/Burbank.0"
+        },
+        "TypefaceFontName": "BurbankRegular-Black",
+        "Size": 48
+      },
+      "ShadowOffset": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TextTransformPolicy": "ETextTransformPolicy::ToUpper",
+      "LineHeightPercentage": 0.8,
+      "Slot": {
+        "ObjectName": "VBox_Header:VerticalBoxSlot_1:VerticalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.108"
+      },
+      "RenderTransform": {
+        "Shear": {
+          "X": -10.0,
+          "Y": 0.0
+        }
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "CommonVisibilitySwitcher",
+    "Name": "Switcher_BottomButtons",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "Switcher_BottomButtons:CommonVisibilitySwitcherSlot_0:CommonVisibilitySwitcherSlot",
+          "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.16"
+        },
+        {
+          "ObjectName": "Switcher_BottomButtons:CommonVisibilitySwitcherSlot_3:CommonVisibilitySwitcherSlot",
+          "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.17"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBox_133:VerticalBoxSlot_4:VerticalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.114"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "CommonVisibilitySwitcherSlot",
+    "Name": "CommonVisibilitySwitcherSlot_0",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetTree:Switcher_BottomButtons:CommonVisibilitySwitcher",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.15"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Button_ClaimReward:BPs17_ContextualButton_C",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.8"
+      }
+    }
+  },
+  {
+    "Type": "CommonVisibilitySwitcherSlot",
+    "Name": "CommonVisibilitySwitcherSlot_3",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetTree:Switcher_BottomButtons:CommonVisibilitySwitcher",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.15"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Button_BuyLevels:BPs17_ContextualButton_C",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.7"
+      }
+    }
+  },
+  {
+    "Type": "DynamicEntryBox",
+    "Name": "DynamicEntryBox_TilesEntries",
+    "Properties": {
+      "EntryWidgetClass": {
+        "ObjectName": "BattlePassTile_C:WidgetBlueprintGeneratedClass",
+        "ObjectPath": "/BattlepassS17/UI/BattlePassTile.20"
+      },
+      "EntryBoxType": "EDynamicBoxType::Wrap",
+      "EntrySpacing": {
+        "X": 16.0,
+        "Y": 16.0
+      },
+      "Slot": {
+        "ObjectName": "ScrollBox_Pages:ScrollBoxSlot_0:ScrollBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.95"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HB_LevelButtons",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HB_LevelButtons:HorizontalBoxSlot_1:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.21"
+        },
+        {
+          "ObjectName": "HB_LevelButtons:HorizontalBoxSlot_4:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.23"
+        },
+        {
+          "ObjectName": "HB_LevelButtons:HorizontalBoxSlot_2:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.22"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBox_133:VerticalBoxSlot_1:VerticalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.112"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_209",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBox_209:HorizontalBoxSlot_0:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.24"
+        },
+        {
+          "ObjectName": "HorizontalBox_209:HorizontalBoxSlot_3:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.26"
+        },
+        {
+          "ObjectName": "HorizontalBox_209:HorizontalBoxSlot_1:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.25"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBox_133:VerticalBoxSlot_3:VerticalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.113"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Properties": {
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:HB_LevelButtons:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.19"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:SizeBox_90:SizeBox",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.99"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Properties": {
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:HB_LevelButtons:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.19"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:SizeBox:SizeBox",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.96"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_4",
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "Parent": {
+        "ObjectName": "WidgetTree:HB_LevelButtons:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.19"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Overlay_48:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.88"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Properties": {
+      "Padding": {
+        "Right": 4.0
+      },
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:HorizontalBox_209:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.20"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:CommonTextBlock_84:CommonTextBlock",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.10"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Properties": {
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:HorizontalBox_209:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.20"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Cost:CommonTextBlock",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.11"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_3",
+    "Properties": {
+      "Padding": {
+        "Bottom": -3.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:HorizontalBox_209:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.20"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Image_131:Image",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.27"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_131",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 40.0,
+          "Y": 40.0
+        },
+        "ResourceObject": {
+          "ObjectName": "T_UI_BP_BattleStar_64:Texture2D",
+          "ObjectPath": "/Game/Athena/UI/Frontend/Art/T_UI_BP_BattleStar_64.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBox_209:HorizontalBoxSlot_3:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.26"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_231",
+    "Properties": {
+      "ColorAndOpacity": {
+        "R": 0.002428,
+        "G": 0.072272,
+        "B": 0.752942,
+        "A": 1.0,
+        "Hex": "0112C0"
+      },
+      "Slot": {
+        "ObjectName": "SizeBox_120:SizeBoxSlot_0:SizeBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.102"
+      }
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "Intro",
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "ECE6BB8D-41AC736F-1CF28599-D2C231BC",
+          "Name": "Title",
+          "PossessedObjectClass": {
+            "ObjectName": "CommonTextBlock:Class",
+            "ObjectPath": 0
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "35D5C851-43CBE7D7-F36722B2-F5CEDAE9",
+          "Name": "SubTitle",
+          "PossessedObjectClass": {
+            "ObjectName": "CommonTextBlock:Class",
+            "ObjectPath": 0
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "102BC522-40012765-24CBAFA1-D5B5C058",
+          "Name": "CommonRichTextBlock_185",
+          "PossessedObjectClass": {
+            "ObjectName": "CommonRichTextBlock:Class",
+            "ObjectPath": 0
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "C8441C9E-40FC24E1-56FA68BE-DD5299AA",
+          "Name": "HB_LevelButtons",
+          "PossessedObjectClass": {
+            "ObjectName": "HorizontalBox:Class",
+            "ObjectPath": 0
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "73FD49B5-47F9ADFA-3501CEBC-018CC4D4",
+          "Name": "Button_ClaimReward",
+          "PossessedObjectClass": {
+            "ObjectName": "BPs17_ContextualButton_C:WidgetBlueprintGeneratedClass",
+            "ObjectPath": "/BattlepassS17/UI/RewardOverview/BPs17_ContextualButton.15"
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "1549A29B-4AB3AAB1-73CA88A0-47D7A1EB",
+          "Name": "HorizontalBox_209",
+          "PossessedObjectClass": {
+            "ObjectName": "HorizontalBox:Class",
+            "ObjectPath": 0
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "7B068660-4049B093-CCBEDA95-CD5228BB",
+          "Name": "SizeBox_0",
+          "PossessedObjectClass": {
+            "ObjectName": "SizeBox:Class",
+            "ObjectPath": 0
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "ECE6BB8D-41AC736F-1CF28599-D2C231BC",
+          "BindingName": "Title",
+          "Tracks": [
+            {
+              "ObjectName": "Intro:MovieScene2DTransformTrack_0:MovieScene2DTransformTrack",
+              "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.37"
+            },
+            {
+              "ObjectName": "Intro:MovieSceneFloatTrack_0:MovieSceneFloatTrack",
+              "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.80"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "35D5C851-43CBE7D7-F36722B2-F5CEDAE9",
+          "BindingName": "SubTitle",
+          "Tracks": [
+            {
+              "ObjectName": "Intro:MovieScene2DTransformTrack_1:MovieScene2DTransformTrack",
+              "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.38"
+            },
+            {
+              "ObjectName": "Intro:MovieSceneFloatTrack_1:MovieSceneFloatTrack",
+              "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.81"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "102BC522-40012765-24CBAFA1-D5B5C058",
+          "BindingName": "CommonRichTextBlock_185",
+          "Tracks": [
+            {
+              "ObjectName": "Intro:MovieScene2DTransformTrack_2:MovieScene2DTransformTrack",
+              "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.39"
+            },
+            {
+              "ObjectName": "Intro:MovieSceneFloatTrack_6:MovieSceneFloatTrack",
+              "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.86"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "C8441C9E-40FC24E1-56FA68BE-DD5299AA",
+          "BindingName": "HB_LevelButtons",
+          "Tracks": [
+            {
+              "ObjectName": "Intro:MovieSceneFloatTrack_2:MovieSceneFloatTrack",
+              "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.82"
+            },
+            {
+              "ObjectName": "Intro:MovieScene2DTransformTrack_3:MovieScene2DTransformTrack",
+              "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.40"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "73FD49B5-47F9ADFA-3501CEBC-018CC4D4",
+          "BindingName": "Button_ClaimReward",
+          "Tracks": [
+            {
+              "ObjectName": "Intro:MovieSceneFloatTrack_3:MovieSceneFloatTrack",
+              "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.83"
+            },
+            {
+              "ObjectName": "Intro:MovieScene2DTransformTrack_6:MovieScene2DTransformTrack",
+              "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.43"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "1549A29B-4AB3AAB1-73CA88A0-47D7A1EB",
+          "BindingName": "HorizontalBox_209",
+          "Tracks": [
+            {
+              "ObjectName": "Intro:MovieSceneFloatTrack_4:MovieSceneFloatTrack",
+              "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.84"
+            },
+            {
+              "ObjectName": "Intro:MovieScene2DTransformTrack_5:MovieScene2DTransformTrack",
+              "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.42"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "7B068660-4049B093-CCBEDA95-CD5228BB",
+          "BindingName": "SizeBox_0",
+          "Tracks": [
+            {
+              "ObjectName": "Intro:MovieSceneFloatTrack_5:MovieSceneFloatTrack",
+              "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.85"
+            },
+            {
+              "ObjectName": "Intro:MovieScene2DTransformTrack_4:MovieScene2DTransformTrack",
+              "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.41"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "FrameRangeValue": {
+          "LowerBound": {
+            "BoundType": 1,
+            "BoundValue": {
+              "FrameNumberValue": 1966145536
+            }
+          },
+          "UpperBound": {
+            "BoundType": 0,
+            "BoundValue": {
+              "FrameNumberValue": 20
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 527450416,
+        "Denominator": 1226833521
+      },
+      "Signature": "01E22BA4-37251098-00000000-00000101"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_0",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformTrack_0:MovieScene2DTransformSection_0:MovieScene2DTransformSection",
+          "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.30"
+        }
+      ],
+      "EvaluationFieldGuid": "1FCA8394-4C7BE7D6-77CAF7A1-DFFCE376",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformTrack_0:MovieScene2DTransformSection_0:MovieScene2DTransformSection",
+              "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.30"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "1FCA8394-4C7BE7D6-77CAF7A1-DFFCE376"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_1",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformTrack_1:MovieScene2DTransformSection_0:MovieScene2DTransformSection",
+          "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.31"
+        }
+      ],
+      "EvaluationFieldGuid": "5BB5A4FF-4227AD3D-6265F395-D07B07EE",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformTrack_1:MovieScene2DTransformSection_0:MovieScene2DTransformSection",
+              "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.31"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "5BB5A4FF-4227AD3D-6265F395-D07B07EE"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_2",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformTrack_2:MovieScene2DTransformSection_0:MovieScene2DTransformSection",
+          "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.32"
+        }
+      ],
+      "EvaluationFieldGuid": "0D01672B-45679537-47653AAF-B38EE139",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformTrack_2:MovieScene2DTransformSection_0:MovieScene2DTransformSection",
+              "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.32"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "0D01672B-45679537-47653AAF-B38EE139"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_3",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformTrack_3:MovieScene2DTransformSection_0:MovieScene2DTransformSection",
+          "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.33"
+        }
+      ],
+      "EvaluationFieldGuid": "B9B0F823-471A321F-31179CAF-04DEC1E7",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformTrack_3:MovieScene2DTransformSection_0:MovieScene2DTransformSection",
+              "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.33"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "B9B0F823-471A321F-31179CAF-04DEC1E7"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_4",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformTrack_4:MovieScene2DTransformSection_0:MovieScene2DTransformSection",
+          "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.34"
+        }
+      ],
+      "EvaluationFieldGuid": "D2EB7A19-402730FA-AEDD7EBC-A0193B3F",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformTrack_4:MovieScene2DTransformSection_0:MovieScene2DTransformSection",
+              "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.34"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "D2EB7A19-402730FA-AEDD7EBC-A0193B3F"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_5",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformTrack_5:MovieScene2DTransformSection_0:MovieScene2DTransformSection",
+          "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.35"
+        }
+      ],
+      "EvaluationFieldGuid": "1F4788BF-4E01C988-F69BD8AE-CCDC01F8",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformTrack_5:MovieScene2DTransformSection_0:MovieScene2DTransformSection",
+              "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.35"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "1F4788BF-4E01C988-F69BD8AE-CCDC01F8"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_6",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformTrack_6:MovieScene2DTransformSection_0:MovieScene2DTransformSection",
+          "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.36"
+        }
+      ],
+      "EvaluationFieldGuid": "AA2EE17E-482350F5-95364D89-BD19A739",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformTrack_6:MovieScene2DTransformSection_0:MovieScene2DTransformSection",
+              "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.36"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "AA2EE17E-482350F5-95364D89-BD19A739"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_0",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatTrack_0:MovieSceneFloatSection_0:MovieSceneFloatSection",
+          "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.73"
+        }
+      ],
+      "EvaluationFieldGuid": "5A643D55-4ECA243D-D492D2A0-6A545B00",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatTrack_0:MovieSceneFloatSection_0:MovieSceneFloatSection",
+              "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.73"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "5A643D55-4ECA243D-D492D2A0-6A545B00"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_1",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatTrack_1:MovieSceneFloatSection_0:MovieSceneFloatSection",
+          "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.74"
+        }
+      ],
+      "EvaluationFieldGuid": "C0EEAE6A-448D1B49-7C250B99-91476E3C",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatTrack_1:MovieSceneFloatSection_0:MovieSceneFloatSection",
+              "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.74"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "C0EEAE6A-448D1B49-7C250B99-91476E3C"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_2",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatTrack_2:MovieSceneFloatSection_0:MovieSceneFloatSection",
+          "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.75"
+        }
+      ],
+      "EvaluationFieldGuid": "DA30A8C7-448B1824-E1B128A1-7650BBE0",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatTrack_2:MovieSceneFloatSection_0:MovieSceneFloatSection",
+              "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.75"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "DA30A8C7-448B1824-E1B128A1-7650BBE0"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_3",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatTrack_3:MovieSceneFloatSection_0:MovieSceneFloatSection",
+          "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.76"
+        }
+      ],
+      "EvaluationFieldGuid": "546767F6-4A8AE28C-99234397-C961E7E0",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatTrack_3:MovieSceneFloatSection_0:MovieSceneFloatSection",
+              "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.76"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "546767F6-4A8AE28C-99234397-C961E7E0"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_4",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatTrack_4:MovieSceneFloatSection_0:MovieSceneFloatSection",
+          "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.77"
+        }
+      ],
+      "EvaluationFieldGuid": "C8C89789-48C5BE47-FE5798A2-E4D4A39C",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatTrack_4:MovieSceneFloatSection_0:MovieSceneFloatSection",
+              "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.77"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "C8C89789-48C5BE47-FE5798A2-E4D4A39C"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_5",
+    "Properties": {
+      "SectionToKey": {
+        "ObjectName": "MovieSceneFloatTrack_5:MovieSceneFloatSection_0:MovieSceneFloatSection",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.78"
+      },
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatTrack_5:MovieSceneFloatSection_0:MovieSceneFloatSection",
+          "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.78"
+        }
+      ],
+      "EvaluationFieldGuid": "B2F55970-4DF91CE5-60E1A889-7A1FD4D8",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatTrack_5:MovieSceneFloatSection_0:MovieSceneFloatSection",
+              "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.78"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "B2F55970-4DF91CE5-60E1A889-7A1FD4D8"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_6",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatTrack_6:MovieSceneFloatSection_0:MovieSceneFloatSection",
+          "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.79"
+        }
+      ],
+      "EvaluationFieldGuid": "D84E6CE8-4DD0C1BD-89B35691-BC7EA3F7",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatTrack_6:MovieSceneFloatSection_0:MovieSceneFloatSection",
+              "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.79"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "D84E6CE8-4DD0C1BD-89B35691-BC7EA3F7"
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_23",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "Overlay_23:OverlaySlot_3:OverlaySlot",
+          "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.89"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_48",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "Overlay_48:OverlaySlot_0:OverlaySlot",
+          "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.90"
+        },
+        {
+          "ObjectName": "Overlay_48:OverlaySlot_1:OverlaySlot",
+          "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.91"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HB_LevelButtons:HorizontalBoxSlot_4:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.23"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_3",
+    "Properties": {
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
+      "Parent": {
+        "ObjectName": "WidgetTree:Overlay_23:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.87"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:VerticalBox_131:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.105"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Fill",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
+      "Parent": {
+        "ObjectName": "WidgetTree:Overlay_48:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.88"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:SizeBox_120:SizeBox",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.98"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Properties": {
+      "Padding": {
+        "Left": 34.0,
+        "Right": 34.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:Overlay_48:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.88"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Text_LevelsAmount:CommonTextBlock",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.13"
+      }
+    }
+  },
+  {
+    "Type": "PlusMinusButton_C",
+    "Name": "Button_Addition",
+    "Properties": {
+      "In Text": {
+        "CultureInvariantString": "+"
+      },
+      "Font Size": 50,
+      "IsLeft": false,
+      "IsBottom": false,
+      "TriggeringInputAction": {
+        "DataTable": {
+          "ObjectName": "InputActionDataTable:DataTable",
+          "ObjectPath": "/Game/UI/Foundation/Input/InputActionDataTable.0"
+        },
+        "RowName": "GenericRightShoulder"
+      },
+      "Slot": {
+        "ObjectName": "SizeBox:SizeBoxSlot_0:SizeBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.100"
+      }
+    }
+  },
+  {
+    "Type": "PlusMinusButton_C",
+    "Name": "Button_Subtraction",
+    "Properties": {
+      "In Text": {
+        "CultureInvariantString": "-"
+      },
+      "Font Size": 50,
+      "IsBottom": false,
+      "TriggeringInputAction": {
+        "DataTable": {
+          "ObjectName": "InputActionDataTable:DataTable",
+          "ObjectPath": "/Game/UI/Foundation/Input/InputActionDataTable.0"
+        },
+        "RowName": "GenericLeftShoulder"
+      },
+      "Slot": {
+        "ObjectName": "SizeBox_90:SizeBoxSlot_0:SizeBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.103"
+      }
+    }
+  },
+  {
+    "Type": "ScrollBox",
+    "Name": "ScrollBox_Pages",
+    "Properties": {
+      "WidgetBarStyle": {
+        "VerticalBackgroundImage": {
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.013702,
+              "G": 0.012983,
+              "B": 0.014444,
+              "A": 1.0,
+              "Hex": "030304"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "M_Ui_Skewed_Vfor9slices_BG_Separator_Inst_Inst:MaterialInstanceConstant",
+            "ObjectPath": "/Game/Athena/UI/ReplayBrowser/M_Ui_Skewed_Vfor9slices_BG_Separator_Inst_Inst.0"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "VerticalTopSlotImage": {
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "HorizontalTopSlotImage": {
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "VerticalBottomSlotImage": {
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "HorizontalBottomSlotImage": {
+          "DrawAs": "ESlateBrushDrawType::NoDrawType"
+        },
+        "NormalThumbImage": {
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.191202,
+              "G": 0.042311,
+              "B": 0.838799,
+              "A": 1.0,
+              "Hex": "310BD6"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "M_Ui_Skewed_Vfor9slices_BG_Separator_Inst:MaterialInstanceConstant",
+            "ObjectPath": "/Game/Athena/UI/ReplayBrowser/M_Ui_Skewed_Vfor9slices_BG_Separator_Inst.0"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "HoveredThumbImage": {
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.191202,
+              "G": 0.042311,
+              "B": 0.838799,
+              "A": 1.0,
+              "Hex": "310BD6"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "M_Ui_Skewed_Vfor9slices_BG_Separator_Inst:MaterialInstanceConstant",
+            "ObjectPath": "/Game/Athena/UI/ReplayBrowser/M_Ui_Skewed_Vfor9slices_BG_Separator_Inst.0"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "DraggedThumbImage": {
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.412543,
+              "G": 0.242281,
+              "B": 1.0,
+              "A": 1.0,
+              "Hex": "693EFF"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "M_Ui_Skewed_Vfor9slices_BG_Separator_Inst:MaterialInstanceConstant",
+            "ObjectPath": "/Game/Athena/UI/ReplayBrowser/M_Ui_Skewed_Vfor9slices_BG_Separator_Inst.0"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        }
+      },
+      "NavigationDestination": "EDescendantScrollDestination::Center",
+      "ScrollWhenFocusChanges": "EScrollWhenFocusChanges::AnimatedScroll",
+      "Slots": [
+        {
+          "ObjectName": "ScrollBox_Pages:ScrollBoxSlot_0:ScrollBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.95"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBox_0:SizeBoxSlot_0:SizeBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.101"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "ScrollBoxSlot",
+    "Name": "ScrollBoxSlot_0",
+    "Properties": {
+      "Padding": {
+        "Left": 8.0,
+        "Top": 8.0
+      },
+      "Parent": {
+        "ObjectName": "WidgetTree:ScrollBox_Pages:ScrollBox",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.94"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:DynamicEntryBox_TilesEntries:DynamicEntryBox",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.18"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Properties": {
+      "WidthOverride": 64.0,
+      "HeightOverride": 64.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBox:SizeBoxSlot_0:SizeBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.100"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HB_LevelButtons:HorizontalBoxSlot_2:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.22"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_0",
+    "Properties": {
+      "WidthOverride": 900.0,
+      "bOverride_WidthOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBox_0:SizeBoxSlot_0:SizeBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.101"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBox_133:VerticalBoxSlot_0:VerticalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.111"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_120",
+    "Properties": {
+      "WidthOverride": 600.0,
+      "MinDesiredWidth": 400.0,
+      "bOverride_MinDesiredWidth": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBox_120:SizeBoxSlot_0:SizeBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.102"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "Overlay_48:OverlaySlot_0:OverlaySlot",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.90"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_90",
+    "Properties": {
+      "WidthOverride": 64.0,
+      "HeightOverride": 64.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBox_90:SizeBoxSlot_0:SizeBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.103"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HB_LevelButtons:HorizontalBoxSlot_1:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.21"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetTree:SizeBox:SizeBox",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.96"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Button_Addition:PlusMinusButton_C",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.92"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetTree:SizeBox_0:SizeBox",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.97"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:ScrollBox_Pages:ScrollBox",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.94"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetTree:SizeBox_120:SizeBox",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.98"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Image_231:Image",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.28"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetTree:SizeBox_90:SizeBox",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.99"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Button_Subtraction:PlusMinusButton_C",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.93"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VBox_Header",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VBox_Header:VerticalBoxSlot_0:VerticalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.107"
+        },
+        {
+          "ObjectName": "VBox_Header:VerticalBoxSlot_1:VerticalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.108"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBox_131:VerticalBoxSlot_0:VerticalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.109"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_131",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBox_131:VerticalBoxSlot_0:VerticalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.109"
+        },
+        {
+          "ObjectName": "VerticalBox_131:VerticalBoxSlot_1:VerticalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.110"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "Overlay_23:OverlaySlot_3:OverlaySlot",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.89"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_133",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBox_133:VerticalBoxSlot_5:VerticalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.115"
+        },
+        {
+          "ObjectName": "VerticalBox_133:VerticalBoxSlot_1:VerticalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.112"
+        },
+        {
+          "ObjectName": "VerticalBox_133:VerticalBoxSlot_0:VerticalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.111"
+        },
+        {
+          "ObjectName": "VerticalBox_133:VerticalBoxSlot_3:VerticalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.113"
+        },
+        {
+          "ObjectName": "VerticalBox_133:VerticalBoxSlot_4:VerticalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.114"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBox_131:VerticalBoxSlot_1:VerticalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.110"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Left",
+      "Parent": {
+        "ObjectName": "WidgetTree:VBox_Header:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.104"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:SubTitle:CommonTextBlock",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.12"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Left",
+      "Parent": {
+        "ObjectName": "WidgetTree:VBox_Header:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.104"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Title:CommonTextBlock",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.14"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Properties": {
+      "Padding": {
+        "Left": 60.0,
+        "Top": 50.0,
+        "Bottom": 50.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Left",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Top",
+      "Parent": {
+        "ObjectName": "WidgetTree:VerticalBox_131:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.105"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:VBox_Header:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.104"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "Padding": {
+        "Left": 120.0,
+        "Bottom": 100.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Left",
+      "Parent": {
+        "ObjectName": "WidgetTree:VerticalBox_131:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.105"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:VerticalBox_133:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.106"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "Padding": {
+        "Left": -8.0,
+        "Right": -30.0
+      },
+      "Parent": {
+        "ObjectName": "WidgetTree:VerticalBox_133:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.106"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:SizeBox_0:SizeBox",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.97"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Properties": {
+      "Padding": {
+        "Bottom": 32.0
+      },
+      "Parent": {
+        "ObjectName": "WidgetTree:VerticalBox_133:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.106"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:HB_LevelButtons:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.19"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_3",
+    "Properties": {
+      "Padding": {
+        "Top": 12.0,
+        "Bottom": 10.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:VerticalBox_133:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.106"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:HorizontalBox_209:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.20"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_4",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:VerticalBox_133:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.106"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Switcher_BottomButtons:CommonVisibilitySwitcher",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.15"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_5",
+    "Properties": {
+      "Padding": {
+        "Bottom": 6.0
+      },
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Top",
+      "Parent": {
+        "ObjectName": "WidgetTree:VerticalBox_133:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.106"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:CommonRichTextBlock_185:CommonRichTextBlock",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.9"
+      }
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "Intro_INST",
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "Intro_INST:Intro:MovieScene",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.29"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "Title",
+          "SlotWidgetName": null,
+          "AnimationGuid": "ECE6BB8D-41AC736F-1CF28599-D2C231BC",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "SubTitle",
+          "SlotWidgetName": null,
+          "AnimationGuid": "35D5C851-43CBE7D7-F36722B2-F5CEDAE9",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "CommonRichTextBlock_185",
+          "SlotWidgetName": null,
+          "AnimationGuid": "102BC522-40012765-24CBAFA1-D5B5C058",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "HB_LevelButtons",
+          "SlotWidgetName": null,
+          "AnimationGuid": "C8441C9E-40FC24E1-56FA68BE-DD5299AA",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "HorizontalBox_209",
+          "SlotWidgetName": null,
+          "AnimationGuid": "1549A29B-4AB3AAB1-73CA88A0-47D7A1EB",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "Switcher_BottomButtons",
+          "SlotWidgetName": null,
+          "AnimationGuid": "73FD49B5-47F9ADFA-3501CEBC-018CC4D4",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "SizeBox_0",
+          "SlotWidgetName": null,
+          "AnimationGuid": "7B068660-4049B093-CCBEDA95-CD5228BB",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "Intro",
+      "CompiledData": {
+        "ObjectName": "Intro_INST:CompiledData:MovieSceneCompiledData",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.72"
+      },
+      "Signature": "A8F0D203-4AF34034-37574DBB-17ED851C"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "WidgetTree:Overlay_23:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/BPS17_BulkClaimRewards.87"
+      }
+    }
+  }
+]

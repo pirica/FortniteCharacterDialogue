@@ -1,0 +1,58 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_GA_Quest_Vehicle_Speed80_Whiplash",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "Check Speed",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "K2_ActivateAbilityFromEvent",
+    "Properties": {}
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GA_Quest_Vehicle_Speed80_Whiplash_C",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "GA_Quest_Vehicle_Speed80_Whiplash_C:ExecuteUbergraph_GA_Quest_Vehicle_Speed80_Whiplash:Function",
+        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_Vehicle_Whiplash/GA_Quest_Vehicle_Speed80_Whiplash.0"
+      }
+    }
+  },
+  {
+    "Type": "GA_Quest_Vehicle_Speed80_Whiplash_C",
+    "Name": "Default__GA_Quest_Vehicle_Speed80_Whiplash_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "Timer Handle": {
+        "Handle": 0
+      },
+      "Required Speed": 80.0,
+      "T_Car": {
+        "TagName": "Athena.Quests.Vehicle.SportsCar.Whiplash"
+      },
+      "T_Quest": [
+        "Athena.Quests.Speed.Vehicle.80.Whiplash"
+      ],
+      "AbilityTriggers": [
+        {
+          "TriggerTag": {
+            "TagName": "Event.Vehicle.Entered"
+          },
+          "TriggerSource": "EGameplayAbilityTriggerSource::GameplayEvent"
+        },
+        {
+          "TriggerTag": {
+            "TagName": "Event.Vehicle.Exit"
+          },
+          "TriggerSource": "EGameplayAbilityTriggerSource::GameplayEvent"
+        }
+      ]
+    }
+  }
+]

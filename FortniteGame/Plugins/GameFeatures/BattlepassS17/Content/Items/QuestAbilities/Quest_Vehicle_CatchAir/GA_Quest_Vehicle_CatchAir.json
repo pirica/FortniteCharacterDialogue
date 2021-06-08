@@ -1,0 +1,57 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_GA_Quest_Vehicle_CatchAir",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "K2_ActivateAbilityFromEvent",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "Check In Air",
+    "Properties": {}
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GA_Quest_Vehicle_CatchAir_C",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "GA_Quest_Vehicle_CatchAir_C:ExecuteUbergraph_GA_Quest_Vehicle_CatchAir:Function",
+        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_Vehicle_CatchAir/GA_Quest_Vehicle_CatchAir.0"
+      }
+    }
+  },
+  {
+    "Type": "GA_Quest_Vehicle_CatchAir_C",
+    "Name": "Default__GA_Quest_Vehicle_CatchAir_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "Timer Handle": {
+        "Handle": 0
+      },
+      "T_Car": {
+        "TagName": "Athena.Vehicle.Valet"
+      },
+      "T_Quest": [
+        "Athena.Quests.CatchAir.Vehicle"
+      ],
+      "AbilityTriggers": [
+        {
+          "TriggerTag": {
+            "TagName": "Event.Vehicle.Entered"
+          },
+          "TriggerSource": "EGameplayAbilityTriggerSource::GameplayEvent"
+        },
+        {
+          "TriggerTag": {
+            "TagName": "Event.Vehicle.Exit"
+          },
+          "TriggerSource": "EGameplayAbilityTriggerSource::GameplayEvent"
+        }
+      ]
+    }
+  }
+]

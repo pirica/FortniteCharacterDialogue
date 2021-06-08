@@ -1,0 +1,919 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BattlePassAlienTrooperCategoryTile",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "OnLockedStateChanged",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "OnLockedProgressUpdated",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "OnOwnedTilesUpdated",
+    "Properties": {}
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "BattlePassAlienTrooperCategoryTile_C",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "BattlePassAlienTrooperCategoryTile_C:WidgetTree:WidgetTree",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.41"
+      },
+      "bClassRequiresNativeTick": true,
+      "UberGraphFunction": {
+        "ObjectName": "BattlePassAlienTrooperCategoryTile_C:ExecuteUbergraph_BattlePassAlienTrooperCategoryTile:Function",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.0"
+      }
+    }
+  },
+  {
+    "Type": "BattlePassAlienTrooperCategoryTile_C",
+    "Name": "Default__BattlePassAlienTrooperCategoryTile_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "CommonRichTextBlock",
+    "Name": "Text_CategoryTitle",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "FAC4BD684B1CC6F06E7DBEACDC8906EF",
+        "SourceString": "Title <text color=\"ac87ffff\" size=\"20\">(SUBTITLE)</>"
+      },
+      "bOverrideDefaultStyle": true,
+      "DefaultTextStyleOverride": {
+        "Font": {
+          "FontObject": {
+            "ObjectName": "Burbank:Font",
+            "ObjectPath": "/Game/UI/Foundation/Fonts/Burbank.0"
+          },
+          "TypefaceFontName": "BurbankRegular-Black",
+          "Size": 27
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 1.0,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "FFFFFF"
+          }
+        }
+      },
+      "TextTransformPolicy": "ETextTransformPolicy::ToUpper",
+      "LineHeightPercentage": 0.75,
+      "Slot": {
+        "ObjectName": "HorizontalBox_78:HorizontalBoxSlot_2:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.20"
+      },
+      "RenderTransform": {
+        "Shear": {
+          "X": -8.0,
+          "Y": 0.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "CommonRichTextBlock",
+    "Name": "Text_Progress",
+    "Properties": {
+      "MobileTextBlockScale": 1.3,
+      "Text": {
+        "Namespace": "",
+        "Key": "621D3CA44C81D0BDF7FBF0BCA533B503",
+        "SourceString": "<text color=\"FFF\">{Current}</> / {Total} claimed"
+      },
+      "bOverrideDefaultStyle": true,
+      "DefaultTextStyleOverride": {
+        "Font": {
+          "FontObject": {
+            "ObjectName": "BurbankSmall:Font",
+            "ObjectPath": "/Game/UI/Foundation/Fonts/BurbankSmall.0"
+          },
+          "TypefaceFontName": "Black",
+          "Size": 12
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "R": 0.033105,
+            "G": 0.854993,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "08DAFF"
+          }
+        }
+      },
+      "TextTransformPolicy": "ETextTransformPolicy::ToUpper",
+      "Justification": "ETextJustify::Right",
+      "Slot": {
+        "ObjectName": "VerticalBox_Unlocked:VerticalBoxSlot_3:VerticalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.40"
+      },
+      "RenderTransform": {
+        "Shear": {
+          "X": -10.0,
+          "Y": 0.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "CommonRichTextBlock",
+    "Name": "Text_Progress_Locked",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "FA5D98F7409282B698A7498DD5782DC6",
+        "SourceString": "<text color=\"FFF\">{Current}</> / {Total}"
+      },
+      "bOverrideDefaultStyle": true,
+      "DefaultTextStyleOverride": {
+        "Font": {
+          "FontObject": {
+            "ObjectName": "BurbankSmall:Font",
+            "ObjectPath": "/Game/UI/Foundation/Fonts/BurbankSmall.0"
+          },
+          "TypefaceFontName": "Black",
+          "Size": 12
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "R": 0.412543,
+            "G": 0.242281,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "693EFF"
+          }
+        }
+      },
+      "Justification": "ETextJustify::Right",
+      "Slot": {
+        "ObjectName": "HorizontalBox:HorizontalBoxSlot_0:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.17"
+      },
+      "RenderTransform": {
+        "Shear": {
+          "X": -10.0,
+          "Y": 0.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "CommonRichTextBlock",
+    "Name": "Text_UnlockCondition",
+    "Properties": {
+      "ScrollStyle": {
+        "ObjectName": "TextScrollStyle-Base_C:BlueprintGeneratedClass",
+        "ObjectPath": "/Game/UI/Foundation/Text/TextScrollStyle-Base.0"
+      },
+      "Text": {
+        "CultureInvariantString": "Claim <text color=\"fff\" Fontface=\"black\">{Number}</> <text color=\"33eeff\" Fontface=\"black\">more Alien Variants</> to unlock eyes variants."
+      },
+      "bOverrideDefaultStyle": true,
+      "DefaultTextStyleOverride": {
+        "Font": {
+          "FontObject": {
+            "ObjectName": "BurbankSmall:Font",
+            "ObjectPath": "/Game/UI/Foundation/Fonts/BurbankSmall.0"
+          },
+          "TypefaceFontName": "Bold",
+          "Size": 12
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "R": 0.412543,
+            "G": 0.242281,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "693EFF"
+          }
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBox:HorizontalBoxSlot_1:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.18"
+      },
+      "RenderTransform": {
+        "Shear": {
+          "X": -10.0,
+          "Y": 0.0
+        }
+      },
+      "Visibility": "ESlateVisibility::Hidden"
+    }
+  },
+  {
+    "Type": "CommonTextBlock",
+    "Name": "Text_CategoryTitle_old",
+    "Properties": {
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Burbank:Font",
+          "ObjectPath": "/Game/UI/Foundation/Fonts/Burbank.0"
+        },
+        "TypefaceFontName": "BurbankRegular-Black",
+        "Size": 27
+      },
+      "ShadowOffset": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TextTransformPolicy": "ETextTransformPolicy::ToUpper",
+      "LineHeightPercentage": 0.752381,
+      "Slot": {
+        "ObjectName": "HorizontalBox_78:HorizontalBoxSlot_4:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.21"
+      },
+      "RenderTransform": {
+        "Shear": {
+          "X": -10.0,
+          "Y": 0.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "CommonVisibilitySwitcher",
+    "Name": "Switcher_State",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "Switcher_State:CommonVisibilitySwitcherSlot_0:CommonVisibilitySwitcherSlot",
+          "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.12"
+        },
+        {
+          "ObjectName": "Switcher_State:CommonVisibilitySwitcherSlot_1:CommonVisibilitySwitcherSlot",
+          "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.13"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBox_78:HorizontalBoxSlot_1:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.19"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "CommonVisibilitySwitcherSlot",
+    "Name": "CommonVisibilitySwitcherSlot_0",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetTree:Switcher_State:CommonVisibilitySwitcher",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.11"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:VerticalBox_Unlocked:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.32"
+      }
+    }
+  },
+  {
+    "Type": "CommonVisibilitySwitcherSlot",
+    "Name": "CommonVisibilitySwitcherSlot_1",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetTree:Switcher_State:CommonVisibilitySwitcher",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.11"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:VerticalBox_Locked:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.31"
+      }
+    }
+  },
+  {
+    "Type": "FortDynamicEntryBox",
+    "Name": "FortDynamicEntryBox_Items",
+    "Properties": {
+      "EntryWidgetClass": {
+        "ObjectName": "BattlePassTile_C:WidgetBlueprintGeneratedClass",
+        "ObjectPath": "/BattlepassS17/UI/BattlePassTile.20"
+      },
+      "EntrySpacing": {
+        "X": 16.0,
+        "Y": 0.0
+      },
+      "Slot": {
+        "ObjectName": "VerticalBox_71:VerticalBoxSlot_4:VerticalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.34"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBox:HorizontalBoxSlot_1:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.18"
+        },
+        {
+          "ObjectName": "HorizontalBox:HorizontalBoxSlot_0:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.17"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBox_Locked:VerticalBoxSlot_2:VerticalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.37"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_78",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBox_78:HorizontalBoxSlot_4:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.21"
+        },
+        {
+          "ObjectName": "HorizontalBox_78:HorizontalBoxSlot_6:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.22"
+        },
+        {
+          "ObjectName": "HorizontalBox_78:HorizontalBoxSlot_2:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.20"
+        },
+        {
+          "ObjectName": "HorizontalBox_78:HorizontalBoxSlot_1:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.19"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBox_0:SizeBoxSlot_0:SizeBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.29"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Right",
+      "Parent": {
+        "ObjectName": "WidgetTree:HorizontalBox:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.15"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Text_Progress_Locked:CommonRichTextBlock",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.8"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Properties": {
+      "Padding": {
+        "Left": 3.0,
+        "Right": 8.0
+      },
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "Parent": {
+        "ObjectName": "WidgetTree:HorizontalBox:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.15"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Text_UnlockCondition:CommonRichTextBlock",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.9"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Properties": {
+      "Padding": {
+        "Left": 8.0
+      },
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "WidgetTree:HorizontalBox_78:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.16"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Switcher_State:CommonVisibilitySwitcher",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.11"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Properties": {
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:HorizontalBox_78:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.16"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Text_CategoryTitle:CommonRichTextBlock",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.6"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_4",
+    "Properties": {
+      "Padding": {
+        "Left": 3.0
+      },
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "WidgetTree:HorizontalBox_78:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.16"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Text_CategoryTitle_old:CommonTextBlock",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.10"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_6",
+    "Properties": {
+      "Padding": {
+        "Top": -2.0,
+        "Right": 12.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Right",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "WidgetTree:HorizontalBox_78:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.16"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Image_Lock:Image",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.23"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Lock",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 26.0,
+          "Y": 26.0
+        },
+        "ResourceObject": {
+          "ObjectName": "M_UI_AngledLockedBox_Purple:MaterialInstanceConstant",
+          "ObjectPath": "/Game/UI/Art_ToolKit/AngledBoxes/M_UI_AngledLockedBox_Purple.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBox_78:HorizontalBoxSlot_6:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.22"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": 1.25,
+          "Y": 1.25
+        }
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Progress",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 6.0,
+          "Y": 6.0
+        },
+        "Margin": {
+          "Left": 0.4,
+          "Right": 0.4
+        },
+        "ResourceObject": {
+          "ObjectName": "M_Ui_Skewed_ProgressBar_Category:MaterialInstanceConstant",
+          "ObjectPath": "/BattlePassBase/UI/M_Ui_Skewed_ProgressBar_Category.0"
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "Slot": {
+        "ObjectName": "VerticalBox_Unlocked:VerticalBoxSlot_1:VerticalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.39"
+      },
+      "RenderTransform": {
+        "Shear": {
+          "X": -10.0,
+          "Y": 0.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Progress_Locked",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 6.0,
+          "Y": 6.0
+        },
+        "Margin": {
+          "Left": 0.4,
+          "Right": 0.4
+        },
+        "ResourceObject": {
+          "ObjectName": "M_Ui_Skewed_ProgressBar_Category_Locked:MaterialInstanceConstant",
+          "ObjectPath": "/BattlePassBase/UI/M_Ui_Skewed_ProgressBar_Category_Locked.0"
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "Slot": {
+        "ObjectName": "VerticalBox_Locked:VerticalBoxSlot_1:VerticalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.36"
+      },
+      "RenderTransform": {
+        "Shear": {
+          "X": -10.0,
+          "Y": 0.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "ProgressBar",
+    "Properties": {
+      "WidgetStyle": {
+        "BackgroundImage": {
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.013702,
+              "G": 0.012983,
+              "B": 0.014444,
+              "A": 1.0,
+              "Hex": "030304"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "M_Ui_Skewed_Vfor9slices_BG_Separator_Inst:MaterialInstanceConstant",
+            "ObjectPath": "/Game/Athena/UI/ReplayBrowser/M_Ui_Skewed_Vfor9slices_BG_Separator_Inst.0"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "FillImage": {
+          "ResourceObject": {
+            "ObjectName": "M_Ui_Skewed_Vfor9slices_BG_Separator_Inst:MaterialInstanceConstant",
+            "ObjectPath": "/Game/Athena/UI/ReplayBrowser/M_Ui_Skewed_Vfor9slices_BG_Separator_Inst.0"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "MarqueeImage": {
+          "ImageSize": {
+            "X": 20.0,
+            "Y": 8.0
+          }
+        }
+      },
+      "Percent": 0.25,
+      "FillColorAndOpacity": {
+        "R": 0.033105,
+        "G": 0.854993,
+        "B": 1.0,
+        "A": 1.0,
+        "Hex": "08DAFF"
+      },
+      "Slot": {
+        "ObjectName": "VerticalBox_Unlocked:VerticalBoxSlot_0:VerticalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.38"
+      },
+      "RenderTransform": {
+        "Shear": {
+          "X": -10.0,
+          "Y": 0.0
+        }
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "ProgressBar",
+    "Name": "ProgressBar_1",
+    "Properties": {
+      "WidgetStyle": {
+        "BackgroundImage": {
+          "TintColor": {
+            "SpecifiedColor": {
+              "R": 0.013702,
+              "G": 0.012983,
+              "B": 0.014444,
+              "A": 1.0,
+              "Hex": "030304"
+            }
+          },
+          "ResourceObject": {
+            "ObjectName": "M_Ui_Skewed_Vfor9slices_BG_Separator_Inst:MaterialInstanceConstant",
+            "ObjectPath": "/Game/Athena/UI/ReplayBrowser/M_Ui_Skewed_Vfor9slices_BG_Separator_Inst.0"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "FillImage": {
+          "ResourceObject": {
+            "ObjectName": "M_Ui_Skewed_Vfor9slices_BG_Separator_Inst:MaterialInstanceConstant",
+            "ObjectPath": "/Game/Athena/UI/ReplayBrowser/M_Ui_Skewed_Vfor9slices_BG_Separator_Inst.0"
+          },
+          "DrawAs": "ESlateBrushDrawType::Image"
+        },
+        "MarqueeImage": {
+          "ImageSize": {
+            "X": 20.0,
+            "Y": 8.0
+          }
+        }
+      },
+      "Percent": 0.25,
+      "FillColorAndOpacity": {
+        "R": 0.033105,
+        "G": 0.854993,
+        "B": 1.0,
+        "A": 1.0,
+        "Hex": "08DAFF"
+      },
+      "Slot": {
+        "ObjectName": "VerticalBox_Locked:VerticalBoxSlot_0:VerticalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.35"
+      },
+      "RenderTransform": {
+        "Shear": {
+          "X": -10.0,
+          "Y": 0.0
+        }
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_0",
+    "Properties": {
+      "WidthOverride": 868.0,
+      "bOverride_WidthOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBox_0:SizeBoxSlot_0:SizeBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.29"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBox_71:VerticalBoxSlot_0:VerticalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.33"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetTree:SizeBox_0:SizeBox",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.28"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:HorizontalBox_78:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.16"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_71",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBox_71:VerticalBoxSlot_0:VerticalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.33"
+        },
+        {
+          "ObjectName": "VerticalBox_71:VerticalBoxSlot_4:VerticalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.34"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_Locked",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBox_Locked:VerticalBoxSlot_2:VerticalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.37"
+        },
+        {
+          "ObjectName": "VerticalBox_Locked:VerticalBoxSlot_0:VerticalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.35"
+        },
+        {
+          "ObjectName": "VerticalBox_Locked:VerticalBoxSlot_1:VerticalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.36"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "Switcher_State:CommonVisibilitySwitcherSlot_1:CommonVisibilitySwitcherSlot",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.13"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_Unlocked",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBox_Unlocked:VerticalBoxSlot_3:VerticalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.40"
+        },
+        {
+          "ObjectName": "VerticalBox_Unlocked:VerticalBoxSlot_0:VerticalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.38"
+        },
+        {
+          "ObjectName": "VerticalBox_Unlocked:VerticalBoxSlot_1:VerticalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.39"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "Switcher_State:CommonVisibilitySwitcherSlot_0:CommonVisibilitySwitcherSlot",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.12"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Properties": {
+      "Padding": {
+        "Bottom": 16.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Left",
+      "Parent": {
+        "ObjectName": "WidgetTree:VerticalBox_71:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.30"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:SizeBox_0:SizeBox",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.28"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_4",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Left",
+      "Parent": {
+        "ObjectName": "WidgetTree:VerticalBox_71:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.30"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:FortDynamicEntryBox_Items:FortDynamicEntryBox",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.14"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "WidgetTree:VerticalBox_Locked:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.31"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:ProgressBar_1:ProgressBar",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.27"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Properties": {
+      "Padding": {
+        "Right": 1.0
+      },
+      "Parent": {
+        "ObjectName": "WidgetTree:VerticalBox_Locked:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.31"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Image_Progress_Locked:Image",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.25"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_2",
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "Padding": {
+        "Bottom": 2.0
+      },
+      "Parent": {
+        "ObjectName": "WidgetTree:VerticalBox_Locked:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.31"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:HorizontalBox:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.15"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "WidgetTree:VerticalBox_Unlocked:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.32"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:ProgressBar:ProgressBar",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.26"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Properties": {
+      "Padding": {
+        "Right": 1.0
+      },
+      "Parent": {
+        "ObjectName": "WidgetTree:VerticalBox_Unlocked:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.32"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Image_Progress:Image",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.24"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_3",
+    "Properties": {
+      "Padding": {
+        "Bottom": 2.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Right",
+      "Parent": {
+        "ObjectName": "WidgetTree:VerticalBox_Unlocked:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.32"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Text_Progress:CommonRichTextBlock",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.7"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "WidgetTree:VerticalBox_71:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/AlienTrooperSkin/BattlePassAlienTrooperCategoryTile.30"
+      }
+    }
+  }
+]

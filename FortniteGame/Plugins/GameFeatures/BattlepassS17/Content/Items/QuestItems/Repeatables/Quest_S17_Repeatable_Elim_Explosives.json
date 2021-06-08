@@ -1,0 +1,144 @@
+[
+  {
+    "Type": "AthenaDailyQuestDefinition",
+    "Name": "Quest_S17_Repeatable_Elim_Explosives",
+    "Properties": {
+      "QuestSubtype": "EFortQuestSubtype::QuickChallenge",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/SpecialForces/SpecialForces/NPCCharacterData_SpecialForces.NPCCharacterData_SpecialForces",
+        "SubPathString": ""
+      },
+      "RewardsTable": {
+        "ObjectName": "AthenaChallengeReward_DailyChallenge_SeasonAgnostic:DataTable",
+        "ObjectPath": "/Game/Athena/Items/Quests/Rewards/AthenaChallengeReward_DailyChallenge_SeasonAgnostic.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_dailychallenge_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S17_Repeatable_Elim_Explosives_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Pawn.Athena.NPC.Bud"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": false
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "Source.Tags HasTag Weapon.Ranged.Heavy.rocket_launcher || Source.Tags HasTag Weapon.Ranged.Heavy.grenade_launcher || Source.Tags HasTag Weapon.Ranged.Heavy.grenade || Source.Tags HasTag Weapon.Ranged.Heavy.C4 || Source.Tags HasTag Weapon.Ranged.Crossbow.Explosive || Source.Tags HasTag Gameplay.Damage.Physical.Explosive",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Kill",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "406AC39C4B21E2FDA266308AA7B46F62",
+            "SourceString": "Explosive weapon Eliminations"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "3730B1E64CCAE56099F5FFB7C971F215",
+            "SourceString": "Just don't get blown up yourself, okay??"
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 1,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "Category": {
+        "DataTable": {
+          "ObjectName": "QuestCategoryTable:DataTable",
+          "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
+        },
+        "RowName": "BRDailyChallenges"
+      },
+      "CompletionText": {
+        "Namespace": "Quest_S17_Repeatable_Elim_Explosives",
+        "Key": "Quest_S17_Repeatable_Elim_Explosives_CompletionText",
+        "SourceString": "Between you and me, I find explosions a little scary."
+      },
+      "DisplayName": {
+        "Namespace": "Quest_S17_Repeatable_Elim_Explosives",
+        "Key": "Quest_S17_Repeatable_Elim_Explosives_DisplayName",
+        "SourceString": "Explosive weapon Eliminations"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S17_Repeatable_Elim_Explosives",
+        "Key": "Quest_S17_Repeatable_Elim_Explosives_ShortDescription",
+        "SourceString": "Just don't get blown up yourself, okay??"
+      },
+      "Description": {
+        "Namespace": "Quest_S17_Repeatable_Elim_Explosives",
+        "Key": "Quest_S17_Repeatable_Elim_Explosives_Description",
+        "SourceString": "Explosive weapon Eliminations"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP"
+      ]
+    }
+  }
+]

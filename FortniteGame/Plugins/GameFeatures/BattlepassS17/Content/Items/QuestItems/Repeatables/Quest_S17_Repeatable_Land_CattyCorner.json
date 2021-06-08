@@ -1,0 +1,146 @@
+[
+  {
+    "Type": "AthenaDailyQuestDefinition",
+    "Name": "Quest_S17_Repeatable_Land_CattyCorner",
+    "Properties": {
+      "QuestSubtype": "EFortQuestSubtype::QuickChallenge",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/Abstrakt/Abstrakt/NPCCharacterData_Abstrakt.NPCCharacterData_Abstrakt",
+        "SubPathString": ""
+      },
+      "RewardsTable": {
+        "ObjectName": "AthenaChallengeReward_DailyChallenge_SeasonAgnostic:DataTable",
+        "ObjectPath": "/Game/Athena/Items/Quests/Rewards/AthenaChallengeReward_DailyChallenge_SeasonAgnostic.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_dailychallenge_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S17_Repeatable_Land_CattyCorner_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.Location.POI.CattyCorner"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Land",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "FF1D935A4077C30B4CCA24BCA2899203",
+            "SourceString": "Land at Catty Corner"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "07F6EFBB464C8F49B31611970ADA494D",
+            "SourceString": "Catty Corner's got some of the best tagging spots on the island."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 1,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "Weight": 0.5,
+      "Category": {
+        "DataTable": {
+          "ObjectName": "QuestCategoryTable:DataTable",
+          "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
+        },
+        "RowName": "BRDailyChallenges"
+      },
+      "CompletionText": {
+        "Namespace": "Quest_S17_Repeatable_Land_CattyCorner",
+        "Key": "Quest_S17_Repeatable_Land_CattyCorner_CompletionText",
+        "SourceString": "Just don't mess with the scratching posts. I made that mistake once."
+      },
+      "DisplayName": {
+        "Namespace": "Quest_S17_Repeatable_Land_CattyCorner",
+        "Key": "Quest_S17_Repeatable_Land_CattyCorner_DisplayName",
+        "SourceString": "Land at Catty Corner"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S17_Repeatable_Land_CattyCorner",
+        "Key": "Quest_S17_Repeatable_Land_CattyCorner_ShortDescription",
+        "SourceString": "Catty Corner's got some of the best tagging spots on the island."
+      },
+      "Description": {
+        "Namespace": "Quest_S17_Repeatable_Land_CattyCorner",
+        "Key": "Quest_S17_Repeatable_Land_CattyCorner_Description",
+        "SourceString": "Land at Catty Corner"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP"
+      ],
+      "SmallPreviewImage": {
+        "AssetPathName": "/Game/Athena/UI/Challenges/Art/MiniChallenges/T_UI_Icon_Mini_LandLocations.T_UI_Icon_Mini_LandLocations",
+        "SubPathString": ""
+      },
+      "LargePreviewImage": {
+        "AssetPathName": "/Game/Athena/UI/Challenges/Art/MiniChallenges/T_UI_Icon_Mini_LandLocations.T_UI_Icon_Mini_LandLocations",
+        "SubPathString": ""
+      }
+    }
+  }
+]

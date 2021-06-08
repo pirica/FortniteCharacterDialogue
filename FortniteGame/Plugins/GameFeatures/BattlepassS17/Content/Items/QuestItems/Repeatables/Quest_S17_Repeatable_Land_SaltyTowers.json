@@ -1,0 +1,146 @@
+[
+  {
+    "Type": "AthenaDailyQuestDefinition",
+    "Name": "Quest_S17_Repeatable_Land_SaltyTowers",
+    "Properties": {
+      "QuestSubtype": "EFortQuestSubtype::QuickChallenge",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/Faux/Faux/NPCCharacterData_Faux.NPCCharacterData_Faux",
+        "SubPathString": ""
+      },
+      "RewardsTable": {
+        "ObjectName": "AthenaChallengeReward_DailyChallenge_SeasonAgnostic:DataTable",
+        "ObjectPath": "/Game/Athena/Items/Quests/Rewards/AthenaChallengeReward_DailyChallenge_SeasonAgnostic.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_dailychallenge_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S17_Repeatable_Land_SaltyTowers_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.Location.POI.SaltyTowers"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Land",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "4770716D47BB868C8894A197BC826281",
+            "SourceString": "Land at Boney Burbs"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "D04A8E974F1A503FF4F94FAC329199EB",
+            "SourceString": "Potential landing site needs investigation."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 1,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "Weight": 0.5,
+      "Category": {
+        "DataTable": {
+          "ObjectName": "QuestCategoryTable:DataTable",
+          "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
+        },
+        "RowName": "BRDailyChallenges"
+      },
+      "CompletionText": {
+        "Namespace": "Quest_S17_Repeatable_Land_SaltyTowers",
+        "Key": "Quest_S17_Repeatable_Land_SaltyTowers_CompletionText",
+        "SourceString": "Findings? Too boney."
+      },
+      "DisplayName": {
+        "Namespace": "Quest_S17_Repeatable_Land_SaltyTowers",
+        "Key": "Quest_S17_Repeatable_Land_SaltyTowers_DisplayName",
+        "SourceString": "Land at Boney Burbs"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S17_Repeatable_Land_SaltyTowers",
+        "Key": "Quest_S17_Repeatable_Land_SaltyTowers_ShortDescription",
+        "SourceString": "Potential landing site needs investigation."
+      },
+      "Description": {
+        "Namespace": "Quest_S17_Repeatable_Land_SaltyTowers",
+        "Key": "Quest_S17_Repeatable_Land_SaltyTowers_Description",
+        "SourceString": "Land at Boney Burbs"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP"
+      ],
+      "SmallPreviewImage": {
+        "AssetPathName": "/Game/Athena/UI/Challenges/Art/MiniChallenges/T_UI_Icon_Mini_LandLocations.T_UI_Icon_Mini_LandLocations",
+        "SubPathString": ""
+      },
+      "LargePreviewImage": {
+        "AssetPathName": "/Game/Athena/UI/Challenges/Art/MiniChallenges/T_UI_Icon_Mini_LandLocations.T_UI_Icon_Mini_LandLocations",
+        "SubPathString": ""
+      }
+    }
+  }
+]

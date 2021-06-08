@@ -1,0 +1,146 @@
+[
+  {
+    "Type": "AthenaDailyQuestDefinition",
+    "Name": "Quest_S17_Repeatable_Land_PleasantPark",
+    "Properties": {
+      "QuestSubtype": "EFortQuestSubtype::QuickChallenge",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/Dreamflower/Dreamflower/NPCCharacterData_Dreamflower.NPCCharacterData_Dreamflower",
+        "SubPathString": ""
+      },
+      "RewardsTable": {
+        "ObjectName": "AthenaChallengeReward_DailyChallenge_SeasonAgnostic:DataTable",
+        "ObjectPath": "/Game/Athena/Items/Quests/Rewards/AthenaChallengeReward_DailyChallenge_SeasonAgnostic.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_dailychallenge_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S17_Repeatable_Land_PleasantPark_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.Location.POI.PleasantPark"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Land",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "97D4DF674430EF04BF4EBCAF73AB5DF2",
+            "SourceString": "Land at Pleasant Park"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "B9EB3B274E8423EDD644359CFC94DCC0",
+            "SourceString": "Why would you want to go anywhere NOT pleasant?"
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 1,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "Weight": 0.5,
+      "Category": {
+        "DataTable": {
+          "ObjectName": "QuestCategoryTable:DataTable",
+          "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
+        },
+        "RowName": "BRDailyChallenges"
+      },
+      "CompletionText": {
+        "Namespace": "Quest_S17_Repeatable_Land_PleasantPark",
+        "Key": "Quest_S17_Repeatable_Land_PleasantPark_CompletionText",
+        "SourceString": "Like, that wasn't as pleasant as I hoped it'd be."
+      },
+      "DisplayName": {
+        "Namespace": "Quest_S17_Repeatable_Land_PleasantPark",
+        "Key": "Quest_S17_Repeatable_Land_PleasantPark_DisplayName",
+        "SourceString": "Land at Pleasant Park"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S17_Repeatable_Land_PleasantPark",
+        "Key": "Quest_S17_Repeatable_Land_PleasantPark_ShortDescription",
+        "SourceString": "Why would you want to go anywhere NOT pleasant?"
+      },
+      "Description": {
+        "Namespace": "Quest_S17_Repeatable_Land_PleasantPark",
+        "Key": "Quest_S17_Repeatable_Land_PleasantPark_Description",
+        "SourceString": "Land at Pleasant Park"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP"
+      ],
+      "SmallPreviewImage": {
+        "AssetPathName": "/Game/Athena/UI/Challenges/Art/MiniChallenges/T_UI_Icon_Mini_LandLocations.T_UI_Icon_Mini_LandLocations",
+        "SubPathString": ""
+      },
+      "LargePreviewImage": {
+        "AssetPathName": "/Game/Athena/UI/Challenges/Art/MiniChallenges/T_UI_Icon_Mini_LandLocations.T_UI_Icon_Mini_LandLocations",
+        "SubPathString": ""
+      }
+    }
+  }
+]

@@ -1,0 +1,149 @@
+[
+  {
+    "Type": "AthenaDailyQuestDefinition",
+    "Name": "Quest_S17_Repeatable_Hit_Weakpoints",
+    "Properties": {
+      "QuestSubtype": "EFortQuestSubtype::QuickChallenge",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/Hayseed/Hayseed/NPCCharacterData_Hayseed.NPCCharacterData_Hayseed",
+        "SubPathString": ""
+      },
+      "RewardsTable": {
+        "ObjectName": "AthenaChallengeReward_DailyChallenge_SeasonAgnostic:DataTable",
+        "ObjectPath": "/Game/Athena/Items/Quests/Rewards/AthenaChallengeReward_DailyChallenge_SeasonAgnostic.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_dailychallenge_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S17_Repeatable_Hit_Weakpoints_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.GameOn"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.Quests.HitWeakPoints"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::ComplexCustom",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "48E1BA0D4100F960665C4F92E27154AF",
+            "SourceString": "Hit weak points"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "DB4ED7A84D2F527AD2F8F6937325F460",
+            "SourceString": "I learned how to do this from one o' them tai-chi videos."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 25,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "Category": {
+        "DataTable": {
+          "ObjectName": "QuestCategoryTable:DataTable",
+          "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
+        },
+        "RowName": "BRDailyChallenges"
+      },
+      "CompletionText": {
+        "Namespace": "Quest_S17_Repeatable_Hit_Weakpoints",
+        "Key": "Quest_S17_Repeatable_Hit_Weakpoints_CompletionText",
+        "SourceString": "Master the weak points and you'll be just fine."
+      },
+      "QuestAbilitySet": {
+        "AssetPathName": "/BattlepassS17/Items/QuestAbilities/Quest_HitWeakPoints/GAS_Quest_HitWeakpoints.GAS_Quest_HitWeakpoints",
+        "SubPathString": ""
+      },
+      "DisplayName": {
+        "Namespace": "Quest_S17_Repeatable_Hit_Weakpoints",
+        "Key": "Quest_S17_Repeatable_Hit_Weakpoints_DisplayName",
+        "SourceString": "Hit weak points"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S17_Repeatable_Hit_Weakpoints",
+        "Key": "Quest_S17_Repeatable_Hit_Weakpoints_ShortDescription",
+        "SourceString": "I learned how to do this from one o' them tai-chi videos."
+      },
+      "Description": {
+        "Namespace": "Quest_S17_Repeatable_Hit_Weakpoints",
+        "Key": "Quest_S17_Repeatable_Hit_Weakpoints_Description",
+        "SourceString": "Hit weak points"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP"
+      ],
+      "SmallPreviewImage": {
+        "AssetPathName": "/Game/Athena/UI/Challenges/Art/MiniChallenges/T_UI_Icon_Mini_HarvestWeakpoints.T_UI_Icon_Mini_HarvestWeakpoints",
+        "SubPathString": ""
+      },
+      "LargePreviewImage": {
+        "AssetPathName": "/Game/Athena/UI/Challenges/Art/MiniChallenges/T_UI_Icon_Mini_HarvestWeakpoints.T_UI_Icon_Mini_HarvestWeakpoints",
+        "SubPathString": ""
+      }
+    }
+  }
+]

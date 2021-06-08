@@ -1,0 +1,4536 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BPS17_BattleStarModal",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "PreConstruct",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "Construct",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "OnOfferUnavailable",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "OnPurchaseAmountChanged",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "OnTotalPriceChanged",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "BP_OnActivated",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "Randomize stars hovering",
+    "Properties": {}
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "BPS17_BattleStarModal_C",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "BPS17_BattleStarModal_C:WidgetTree:WidgetTree",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.215"
+      },
+      "bClassRequiresNativeTick": true,
+      "Animations": [
+        {
+          "ObjectName": "BPS17_BattleStarModal_C:Intro_INST:WidgetAnimation",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.213"
+        },
+        {
+          "ObjectName": "BPS17_BattleStarModal_C:PageEnough_INST:WidgetAnimation",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.214"
+        }
+      ],
+      "UberGraphFunction": {
+        "ObjectName": "BPS17_BattleStarModal_C:ExecuteUbergraph_BPS17_BattleStarModal:Function",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.0"
+      }
+    }
+  },
+  {
+    "Type": "BPS17_BattleStarModal_C",
+    "Name": "Default__BPS17_BattleStarModal_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "BattleStarAmount": 1,
+      "Rebate Amount": 1900,
+      "Last Page to unlock": 1,
+      "New Page to unlock": 1,
+      "BatchNum": 10,
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "BackgroundBlur",
+    "Name": "Background_Blur",
+    "Properties": {
+      "BlurStrength": 20.0,
+      "Slots": [
+        {
+          "ObjectName": "Background_Blur:BackgroundBlurSlot_0:BackgroundBlurSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.11"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "Overlay_16:OverlaySlot_0:OverlaySlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.152"
+      }
+    }
+  },
+  {
+    "Type": "BackgroundBlurSlot",
+    "Name": "BackgroundBlurSlot_0",
+    "Properties": {
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "Parent": {
+        "ObjectName": "WidgetTree:Background_Blur:BackgroundBlur",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.10"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Image_DarkBackground:Image",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.86"
+      }
+    }
+  },
+  {
+    "Type": "Border",
+    "Name": "Border_0",
+    "Properties": {
+      "Padding": {
+        "Left": 12.0,
+        "Right": 12.0
+      },
+      "Background": {
+        "Margin": {
+          "Left": 0.5,
+          "Right": 0.5
+        },
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.930111,
+            "G": 1.0,
+            "B": 0.01033,
+            "A": 1.0,
+            "Hex": "EDFF03"
+          }
+        },
+        "ResourceObject": {
+          "ObjectName": "M_Ui_Skewed_NoV1:MaterialInstanceConstant",
+          "ObjectPath": "/Game/Athena/UI/ReplayBrowser/M_Ui_Skewed_NoV1.0"
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "Slots": [
+        {
+          "ObjectName": "Border_0:BorderSlot_0:BorderSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.13"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBox_Header:VerticalBoxSlot_1:VerticalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.212"
+      }
+    }
+  },
+  {
+    "Type": "BorderSlot",
+    "Name": "BorderSlot_0",
+    "Properties": {
+      "Padding": {
+        "Left": 12.0,
+        "Right": 12.0
+      },
+      "Parent": {
+        "ObjectName": "WidgetTree:Border_0:Border",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.12"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:RichText_UnlockPage:CommonRichTextBlock",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.17"
+      }
+    }
+  },
+  {
+    "Type": "BPs17_HoldableButton_BuyLevel_C",
+    "Name": "Button_Purchase",
+    "Properties": {
+      "In Text": {
+        "Namespace": "",
+        "Key": "50FB5F0B4D90BAD9A7A4248A06D88AA4",
+        "SourceString": "Buy levels"
+      },
+      "In Width Override": 500.0,
+      "In Height Override": 140.0,
+      "bIsHoldableButton": true,
+      "HoldTime": 0.7,
+      "StartingHoldPercentage": 0.0,
+      "QualifyingHoldTime": 0.05,
+      "bApplyAlphaOnDisable": false,
+      "bIsFocusable": true,
+      "Slot": {
+        "ObjectName": "Switcher_PurchaseButtons:CommonVisibilitySwitcherSlot_0:CommonVisibilitySwitcherSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.30"
+      },
+      "Visibility": "ESlateVisibility::Visible"
+    }
+  },
+  {
+    "Type": "BuyResourcesBundleCheckBox_C",
+    "Name": "CheckBox_Bundle",
+    "Properties": {
+      "TriggeringInputAction": {
+        "DataTable": {
+          "ObjectName": "InputActionDataTable:DataTable",
+          "ObjectPath": "/Game/UI/Foundation/Input/InputActionDataTable.0"
+        },
+        "RowName": "GenericFaceButtonLeft"
+      },
+      "bIsFocusable": false,
+      "Slot": {
+        "ObjectName": "VB_MainContent:VerticalBoxSlot_4:VerticalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.203"
+      }
+    }
+  },
+  {
+    "Type": "CloseButton_C",
+    "Name": "Button_CloseMobile",
+    "Properties": {
+      "OnSelectedChangedBase": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "WidgetTree:Button_CloseMobile:CloseButton_C",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.16"
+            },
+            "FunctionName": "HandleOnSelectedChanged"
+          }
+        ]
+      },
+      "OnButtonBaseClicked": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "WidgetTree:Button_CloseMobile:CloseButton_C",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.16"
+            },
+            "FunctionName": "HandleOnButtonClicked"
+          }
+        ]
+      },
+      "OnButtonBaseDoubleClicked": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "WidgetTree:Button_CloseMobile:CloseButton_C",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.16"
+            },
+            "FunctionName": "HandleOnButtonDoubleClicked"
+          }
+        ]
+      },
+      "OnButtonBaseHovered": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "WidgetTree:Button_CloseMobile:CloseButton_C",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.16"
+            },
+            "FunctionName": "HandleOnButtonHovered"
+          }
+        ]
+      },
+      "OnButtonBaseUnhovered": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "WidgetTree:Button_CloseMobile:CloseButton_C",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.16"
+            },
+            "FunctionName": "HandleOnButtonUnhovered"
+          }
+        ]
+      },
+      "Slot": {
+        "ObjectName": "HB_CurrencyContainer:HorizontalBoxSlot_3:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.51"
+      }
+    }
+  },
+  {
+    "Type": "CommonRichTextBlock",
+    "Name": "RichText_UnlockPage",
+    "Properties": {
+      "Text": {
+        "CultureInvariantString": "Enough to unlock page X"
+      },
+      "bOverrideDefaultStyle": true,
+      "DefaultTextStyleOverride": {
+        "Font": {
+          "FontObject": {
+            "ObjectName": "Burbank:Font",
+            "ObjectPath": "/Game/UI/Foundation/Fonts/Burbank.0"
+          },
+          "TypefaceFontName": "Burbank-PlayerPower"
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "R": 0.0,
+            "G": 0.0,
+            "B": 0.0,
+            "A": 1.0,
+            "Hex": "000000"
+          }
+        }
+      },
+      "Slot": {
+        "ObjectName": "Border_0:BorderSlot_0:BorderSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.13"
+      },
+      "RenderTransform": {
+        "Shear": {
+          "X": -8.0,
+          "Y": 0.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "CommonTextBlock",
+    "Name": "BattlerStarHeader",
+    "Properties": {
+      "Text": {
+        "CultureInvariantString": "{+XXX} BATTLE STARS"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Burbank:Font",
+          "ObjectPath": "/Game/UI/Foundation/Fonts/Burbank.0"
+        },
+        "TypefaceFontName": "BurbankRegular-Black",
+        "Size": 28
+      },
+      "ShadowOffset": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TextTransformPolicy": "ETextTransformPolicy::ToUpper",
+      "Slot": {
+        "ObjectName": "HB_BattleStar:HorizontalBoxSlot_0:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.43"
+      },
+      "RenderTransform": {
+        "Shear": {
+          "X": -10.0,
+          "Y": 0.0
+        }
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "CommonTextBlock",
+    "Name": "CommonTextBlock_1",
+    "Properties": {
+      "ScrollStyle": {
+        "ObjectName": "TextScrollStyle-Base_C:BlueprintGeneratedClass",
+        "ObjectPath": "/Game/UI/Foundation/Text/TextScrollStyle-Base.0"
+      },
+      "Text": {
+        "Namespace": "",
+        "Key": "0EE547BA4B4AC3D59CF66F9646AC2264",
+        "SourceString": "YOU HAVE"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.0,
+          "G": 0.090842,
+          "B": 1.0,
+          "A": 1.0,
+          "Hex": "0017FF"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "BurbankSmall:Font",
+          "ObjectPath": "/Game/UI/Foundation/Fonts/BurbankSmall.0"
+        },
+        "Size": 20
+      },
+      "ShadowOffset": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBox:HorizontalBoxSlot_2:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.61"
+      },
+      "RenderTransform": {
+        "Shear": {
+          "X": -8.0,
+          "Y": 0.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "CommonTextBlock",
+    "Name": "CommonTextBlock_112",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "EA663DD2441ADE2B81D0BBA15E360E5B",
+        "SourceString": "PRICE"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.215861,
+          "G": 0.658375,
+          "B": 1.0,
+          "A": 1.0,
+          "Hex": "37A8FF"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "BurbankSmall:Font",
+          "ObjectPath": "/Game/UI/Foundation/Fonts/BurbankSmall.0"
+        },
+        "Size": 20
+      },
+      "ShadowOffset": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBox_146:HorizontalBoxSlot_2:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.64"
+      },
+      "RenderTransform": {
+        "Shear": {
+          "X": -8.0,
+          "Y": 0.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "CommonTextBlock",
+    "Name": "CommonTextBlock_28",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "D4BD49E44A71BA8812EC14AD7AF99140",
+        "SourceString": "Not eligible for refund. Chapter 2 - Season 7 through September 12th.\r\nDiscount bundle 1 per season. Levels purchase only to 100.\r\nUnspent Battle Stars exchanged for rewards at season end."
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 1.0,
+          "G": 1.0,
+          "B": 1.0,
+          "A": 0.6,
+          "Hex": "99FFFFFF"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "BurbankSmall:Font",
+          "ObjectPath": "/Game/UI/Foundation/Fonts/BurbankSmall.0"
+        },
+        "Size": 13
+      },
+      "ShadowOffset": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "LineHeightPercentage": 0.9,
+      "Slot": {
+        "ObjectName": "VerticalBox_34:VerticalBoxSlot_3:VerticalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.208"
+      }
+    }
+  },
+  {
+    "Type": "CommonTextBlock",
+    "Name": "HeaderMainText",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "DAFAAED64C82EF1EAF4E71880E10571A",
+        "SourceString": "BATTLE PASS"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.033105,
+          "G": 0.854993,
+          "B": 1.0,
+          "A": 1.0,
+          "Hex": "08DAFF"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Burbank:Font",
+          "ObjectPath": "/Game/UI/Foundation/Fonts/Burbank.0"
+        },
+        "TypefaceFontName": "BurbankRegular-Black",
+        "Size": 28
+      },
+      "ShadowOffset": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TextTransformPolicy": "ETextTransformPolicy::ToUpper",
+      "Margin": {
+        "Left": 4.0,
+        "Right": 4.0
+      },
+      "LineHeightPercentage": 0.695238,
+      "Slot": {
+        "ObjectName": "VerticalBox_41:VerticalBoxSlot_0:VerticalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.209"
+      }
+    }
+  },
+  {
+    "Type": "CommonTextBlock",
+    "Name": "Text_CurrentBattleStar",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "3B6FF2EE44A0A0C57FA8ADAE7DCC294D",
+        "SourceString": "XX"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "BurbankSmall:Font",
+          "ObjectPath": "/Game/UI/Foundation/Fonts/BurbankSmall.0"
+        },
+        "TypefaceFontName": "Black",
+        "Size": 28
+      },
+      "ShadowOffset": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "Slot": {
+        "ObjectName": "HB_BattleStars:HorizontalBoxSlot_1:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.46"
+      },
+      "RenderTransform": {
+        "Shear": {
+          "X": -8.0,
+          "Y": 0.0
+        }
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "CommonTextBlock",
+    "Name": "Text_CurrentVBucks",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "3B6FF2EE44A0A0C57FA8ADAE7DCC294D",
+        "SourceString": "XX"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "BurbankSmall:Font",
+          "ObjectPath": "/Game/UI/Foundation/Fonts/BurbankSmall.0"
+        },
+        "TypefaceFontName": "Black",
+        "Size": 30
+      },
+      "ShadowOffset": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "Slot": {
+        "ObjectName": "HB_VBucks:HorizontalBoxSlot_1:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.58"
+      },
+      "RenderTransform": {
+        "Shear": {
+          "X": -8.0,
+          "Y": 0.0
+        }
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "CommonTextBlock",
+    "Name": "Text_FinalCoin",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "197AF20B4EBF8BFE60CDF1B94BD19475",
+        "SourceString": "1,250"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "BurbankSmall:Font",
+          "ObjectPath": "/Game/UI/Foundation/Fonts/BurbankSmall.0"
+        },
+        "TypefaceFontName": "Black",
+        "Size": 40
+      },
+      "ShadowOffset": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "Slot": {
+        "ObjectName": "HB_Coin:HorizontalBoxSlot_1:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.48"
+      },
+      "RenderTransform": {
+        "Shear": {
+          "X": -10.0,
+          "Y": 0.0
+        }
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "CommonTextBlock",
+    "Name": "Text_HeaderTitle",
+    "Properties": {
+      "Text": {
+        "CultureInvariantString": "GET LEVEL {XX-XX}"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Burbank:Font",
+          "ObjectPath": "/Game/UI/Foundation/Fonts/Burbank.0"
+        },
+        "TypefaceFontName": "BurbankRegular-Black",
+        "Size": 50
+      },
+      "ShadowOffset": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TextTransformPolicy": "ETextTransformPolicy::ToUpper",
+      "LineHeightPercentage": 0.9,
+      "Slot": {
+        "ObjectName": "VerticalBox_41:VerticalBoxSlot_1:VerticalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.210"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "CommonTextBlock",
+    "Name": "Text_LevelsAmount",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "46FB62684C19F1D2C70BF8B7709D5879",
+        "SourceString": "{XX} LEVELS"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Burbank:Font",
+          "ObjectPath": "/Game/UI/Foundation/Fonts/Burbank.0"
+        },
+        "TypefaceFontName": "BurbankRegular-Black",
+        "Size": 50
+      },
+      "ShadowOffset": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TextTransformPolicy": "ETextTransformPolicy::ToUpper",
+      "Slot": {
+        "ObjectName": "Overlay_48:OverlaySlot_1:OverlaySlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.166"
+      },
+      "RenderTransform": {
+        "Shear": {
+          "X": -10.0,
+          "Y": 0.0
+        }
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "CommonTextBlock",
+    "Name": "Text_OriginalCost",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "FF04CEFB4E54547F2E9D289B09301E7F",
+        "SourceString": "3,750"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.033105,
+          "G": 0.401978,
+          "B": 1.0,
+          "A": 1.0,
+          "Hex": "0867FF"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "BurbankSmall:Font",
+          "ObjectPath": "/Game/UI/Foundation/Fonts/BurbankSmall.0"
+        },
+        "TypefaceFontName": "Black",
+        "Size": 40
+      },
+      "ShadowOffset": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "Slot": {
+        "ObjectName": "OriginalCostContainer:OverlaySlot_0:OverlaySlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.147"
+      },
+      "RenderTransform": {
+        "Shear": {
+          "X": -10.0,
+          "Y": 0.0
+        }
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "CommonVisibilitySwitcher",
+    "Name": "Switcher_PurchaseButtons",
+    "Properties": {
+      "ShownVisibility": "ESlateVisibility::Visible",
+      "Slots": [
+        {
+          "ObjectName": "Switcher_PurchaseButtons:CommonVisibilitySwitcherSlot_0:CommonVisibilitySwitcherSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.30"
+        },
+        {
+          "ObjectName": "Switcher_PurchaseButtons:CommonVisibilitySwitcherSlot_1:CommonVisibilitySwitcherSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.31"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SB_ButtonBuyLevels:SizeBoxSlot_1:SizeBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.186"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "CommonVisibilitySwitcherSlot",
+    "Name": "CommonVisibilitySwitcherSlot_0",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetTree:Switcher_PurchaseButtons:CommonVisibilitySwitcher",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.29"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Button_Purchase:BPs17_HoldableButton_BuyLevel_C",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.14"
+      }
+    }
+  },
+  {
+    "Type": "CommonVisibilitySwitcherSlot",
+    "Name": "CommonVisibilitySwitcherSlot_1",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetTree:Switcher_PurchaseButtons:CommonVisibilitySwitcher",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.29"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Button_GetVBucks:Spatial_Specialbutton_C",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.193"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HB_BattleStar",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HB_BattleStar:HorizontalBoxSlot_0:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.43"
+        },
+        {
+          "ObjectName": "HB_BattleStar:HorizontalBoxSlot_1:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.44"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VB_MainContent:VerticalBoxSlot_0:VerticalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.200"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HB_BattleStars",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HB_BattleStars:HorizontalBoxSlot_0:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.45"
+        },
+        {
+          "ObjectName": "HB_BattleStars:HorizontalBoxSlot_1:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.46"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBox_1:VerticalBoxSlot_0:VerticalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.206"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HB_Coin",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HB_Coin:HorizontalBoxSlot_0:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.47"
+        },
+        {
+          "ObjectName": "HB_Coin:HorizontalBoxSlot_1:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.48"
+        },
+        {
+          "ObjectName": "HB_Coin:HorizontalBoxSlot_2:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.49"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VB_MainContent:VerticalBoxSlot_6:VerticalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.204"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HB_CurrencyContainer",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HB_CurrencyContainer:HorizontalBoxSlot_1:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.50"
+        },
+        {
+          "ObjectName": "HB_CurrencyContainer:HorizontalBoxSlot_3:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.51"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SZ_Currency:SafeZoneSlot_0:SafeZoneSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.176"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HB_LevelButtons",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HB_LevelButtons:HorizontalBoxSlot_1:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.52"
+        },
+        {
+          "ObjectName": "HB_LevelButtons:HorizontalBoxSlot_6:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.56"
+        },
+        {
+          "ObjectName": "HB_LevelButtons:HorizontalBoxSlot_4:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.55"
+        },
+        {
+          "ObjectName": "HB_LevelButtons:HorizontalBoxSlot_2:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.53"
+        },
+        {
+          "ObjectName": "HB_LevelButtons:HorizontalBoxSlot_3:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.54"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VB_MainContent:VerticalBoxSlot_2:VerticalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.202"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HB_VBucks",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HB_VBucks:HorizontalBoxSlot_0:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.57"
+        },
+        {
+          "ObjectName": "HB_VBucks:HorizontalBoxSlot_1:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.58"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBox_0:VerticalBoxSlot_2:VerticalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.205"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBox:HorizontalBoxSlot_0:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.59"
+        },
+        {
+          "ObjectName": "HorizontalBox:HorizontalBoxSlot_2:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.61"
+        },
+        {
+          "ObjectName": "HorizontalBox:HorizontalBoxSlot_1:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.60"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBox_1:VerticalBoxSlot_2:VerticalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.207"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_146",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBox_146:HorizontalBoxSlot_0:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.62"
+        },
+        {
+          "ObjectName": "HorizontalBox_146:HorizontalBoxSlot_2:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.64"
+        },
+        {
+          "ObjectName": "HorizontalBox_146:HorizontalBoxSlot_1:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.63"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VB_MainContent:VerticalBoxSlot_1:VerticalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.201"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_27",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBox_27:HorizontalBoxSlot_1:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.65"
+        },
+        {
+          "ObjectName": "HorizontalBox_27:HorizontalBoxSlot_2:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.66"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SafeZone_26:SafeZoneSlot_0:SafeZoneSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.175"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_BottomBar",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBox_BottomBar:HorizontalBoxSlot_0:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.67"
+        },
+        {
+          "ObjectName": "HorizontalBox_BottomBar:HorizontalBoxSlot_1:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.68"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SZ_Legal:SafeZoneSlot_0:SafeZoneSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.177"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "ModalHeader",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "ModalHeader:HorizontalBoxSlot_0:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.69"
+        },
+        {
+          "ObjectName": "ModalHeader:HorizontalBoxSlot_1:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.70"
+        },
+        {
+          "ObjectName": "ModalHeader:HorizontalBoxSlot_2:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.71"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBox_Header:VerticalBoxSlot_0:VerticalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.211"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Properties": {
+      "Padding": {
+        "Right": 8.0
+      },
+      "Parent": {
+        "ObjectName": "WidgetTree:HB_BattleStar:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.32"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:BattlerStarHeader:CommonTextBlock",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.18"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:HB_BattleStar:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.32"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Image_209:Image",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.80"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Properties": {
+      "Padding": {
+        "Right": 4.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:HB_BattleStars:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.33"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:BattleStarIcon:Image",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.73"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Properties": {
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:HB_BattleStars:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.33"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Text_CurrentBattleStar:CommonTextBlock",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.23"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Properties": {
+      "Padding": {
+        "Right": 8.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:HB_Coin:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.34"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:VBuck:Image",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.90"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Properties": {
+      "Padding": {
+        "Right": 24.0
+      },
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:HB_Coin:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.34"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Text_FinalCoin:CommonTextBlock",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.25"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Left",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:HB_Coin:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.34"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:OriginalCostContainer:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.140"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Properties": {
+      "Padding": {
+        "Right": 30.0
+      },
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Top",
+      "Parent": {
+        "ObjectName": "WidgetTree:HB_CurrencyContainer:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.35"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:VerticalBox_0:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.195"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_3",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Right",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:HB_CurrencyContainer:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.35"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Button_CloseMobile:CloseButton_C",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.16"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Properties": {
+      "Padding": {
+        "Left": 8.0,
+        "Right": 8.0
+      },
+      "Parent": {
+        "ObjectName": "WidgetTree:HB_LevelButtons:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.36"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:SizeBox_90:SizeBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.185"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetTree:HB_LevelButtons:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.36"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:SizeBox:SizeBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.180"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_3",
+    "Properties": {
+      "Padding": {
+        "Left": 8.0,
+        "Right": 8.0
+      },
+      "Parent": {
+        "ObjectName": "WidgetTree:HB_LevelButtons:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.36"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:SizeBox_2:SizeBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.183"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_4",
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "Parent": {
+        "ObjectName": "WidgetTree:HB_LevelButtons:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.36"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Overlay_48:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.146"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_6",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetTree:HB_LevelButtons:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.36"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:SizeBox_1:SizeBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.181"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Properties": {
+      "Padding": {
+        "Right": 4.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:HB_VBucks:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.37"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:VBuckIcon:Image",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.91"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Properties": {
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:HB_VBucks:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.37"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Text_CurrentVBucks:CommonTextBlock",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.24"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:HorizontalBox:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.38"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Image:Image",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.76"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:HorizontalBox:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.38"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Image_1:Image",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.77"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Properties": {
+      "Padding": {
+        "Left": 12.0,
+        "Right": 12.0
+      },
+      "Parent": {
+        "ObjectName": "WidgetTree:HorizontalBox:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.38"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:CommonTextBlock_1:CommonTextBlock",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.19"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:HorizontalBox_146:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.39"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Image_121:Image",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.78"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:HorizontalBox_146:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.39"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Image_241:Image",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.82"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Properties": {
+      "Padding": {
+        "Left": 12.0,
+        "Right": 12.0
+      },
+      "Parent": {
+        "ObjectName": "WidgetTree:HorizontalBox_146:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.39"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:CommonTextBlock_112:CommonTextBlock",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.20"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Properties": {
+      "Padding": {
+        "Top": -80.0,
+        "Bottom": -100.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:HorizontalBox_27:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.40"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Overlay_0:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.141"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:HorizontalBox_27:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.40"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:VB_MainContent:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.194"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "Parent": {
+        "ObjectName": "WidgetTree:HorizontalBox_BottomBar:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.41"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:VerticalBox_34:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.197"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Properties": {
+      "Padding": {
+        "Left": 8.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Right",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "WidgetTree:HorizontalBox_BottomBar:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.41"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Button_BAck:IconTextButton_C",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.72"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Properties": {
+      "Padding": {
+        "Right": 8.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Left",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:ModalHeader:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.42"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:HeaderIcon:Image",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.75"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Properties": {
+      "Padding": {
+        "Left": -4.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Left",
+      "Parent": {
+        "ObjectName": "WidgetTree:ModalHeader:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.42"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:DividerLine:Image",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.74"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Properties": {
+      "Padding": {
+        "Left": 4.0
+      },
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:ModalHeader:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.42"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:VerticalBox_41:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.198"
+      }
+    }
+  },
+  {
+    "Type": "IconTextButton_C",
+    "Name": "Button_BAck",
+    "Properties": {
+      "ButtonText": {
+        "Namespace": "",
+        "Key": "DC974D5449D13B6A36555588FC133796",
+        "SourceString": "Back"
+      },
+      "ControllerInputStyle": {
+        "ObjectName": "ButtonStyle-BottomBar-Console_C:BlueprintGeneratedClass",
+        "ObjectPath": "/Game/UI/Foundation/Buttons/ButtonStyles/ButtonStyle-BottomBar-Console.0"
+      },
+      "ContentAlignment": "EHorizontalAlignment::HAlign_Center",
+      "MinWidth": 192,
+      "MinHeight": 48,
+      "Style": {
+        "ObjectName": "ButtonStyle-BottomBar_Refresh_C:BlueprintGeneratedClass",
+        "ObjectPath": "/Game/UI/Foundation/Buttons/ButtonStyles/ButtonStyle-BottomBar_Refresh.0"
+      },
+      "TriggeringInputAction": {
+        "DataTable": {
+          "ObjectName": "InputActionDataTable:DataTable",
+          "ObjectPath": "/Game/UI/Foundation/Input/InputActionDataTable.0"
+        },
+        "RowName": "Close"
+      },
+      "OnSelectedChangedBase": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "WidgetTree:Button_BAck:IconTextButton_C",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.72"
+            },
+            "FunctionName": "HandleOnSelectedChanged"
+          }
+        ]
+      },
+      "OnButtonBaseClicked": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "WidgetTree:Button_BAck:IconTextButton_C",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.72"
+            },
+            "FunctionName": "HandleOnButtonClicked"
+          }
+        ]
+      },
+      "OnButtonBaseDoubleClicked": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "WidgetTree:Button_BAck:IconTextButton_C",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.72"
+            },
+            "FunctionName": "HandleOnButtonDoubleClicked"
+          }
+        ]
+      },
+      "OnButtonBaseHovered": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "WidgetTree:Button_BAck:IconTextButton_C",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.72"
+            },
+            "FunctionName": "HandleOnButtonHovered"
+          }
+        ]
+      },
+      "OnButtonBaseUnhovered": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "WidgetTree:Button_BAck:IconTextButton_C",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.72"
+            },
+            "FunctionName": "HandleOnButtonUnhovered"
+          }
+        ]
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBox_BottomBar:HorizontalBoxSlot_1:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.68"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "BattleStarIcon",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 40.0,
+          "Y": 40.0
+        },
+        "ResourceObject": {
+          "ObjectName": "M_UI_BP_BattleStar:MaterialInstanceConstant",
+          "ObjectPath": "/Game/Athena/UI/Frontend/Art/M_UI_BP_BattleStar.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HB_BattleStars:HorizontalBoxSlot_0:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.45"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 0.0,
+          "Y": -2.0
+        },
+        "Scale": {
+          "X": 1.2,
+          "Y": 1.2
+        }
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "DividerLine",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 37.87791,
+          "Y": 32.0
+        },
+        "ResourceObject": {
+          "ObjectName": "M_UI_ActionDividerLine:Material",
+          "ObjectPath": "/Game/Items/Traps/Blueprints/Toys/UI_Art_Assets/M_UI_ActionDividerLine.0"
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 0.033105,
+        "G": 0.854993,
+        "B": 1.0,
+        "A": 1.0,
+        "Hex": "08DAFF"
+      },
+      "Slot": {
+        "ObjectName": "ModalHeader:HorizontalBoxSlot_1:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.70"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": 1.0,
+          "Y": 1.2
+        },
+        "Shear": {
+          "X": 3.0,
+          "Y": 3.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "HeaderIcon",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 128.0,
+          "Y": 128.0
+        },
+        "ResourceObject": {
+          "ObjectName": "M-BattlePassBadge:MaterialInstanceConstant",
+          "ObjectPath": "/Game/UI/Foundation/XPBoost/M-BattlePassBadge.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "ModalHeader:HorizontalBoxSlot_0:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.69"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 64.0,
+          "Y": 4.0
+        },
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.0,
+            "G": 0.090842,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "0017FF"
+          }
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBox:HorizontalBoxSlot_0:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.59"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_1",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 64.0,
+          "Y": 4.0
+        },
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.0,
+            "G": 0.090842,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "0017FF"
+          }
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBox:HorizontalBoxSlot_1:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.60"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_121",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 64.0,
+          "Y": 4.0
+        },
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.215861,
+            "G": 0.658375,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "37A8FF"
+          }
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBox_146:HorizontalBoxSlot_0:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.62"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_178",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 512.0,
+          "Y": 512.0
+        },
+        "ResourceObject": {
+          "ObjectName": "T_UI_BP_BuyBattleStars:Texture2D",
+          "ObjectPath": "/BattlepassS17/UI/UI_Art/Textures/T_UI_BP_BuyBattleStars.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "Overlay_3:OverlaySlot_0:OverlaySlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.157"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 0.0,
+          "Y": -23.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_209",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 36.0,
+          "Y": 36.0
+        },
+        "ResourceObject": {
+          "ObjectName": "M_UI_BP_BattleStar_32:Material",
+          "ObjectPath": "/Game/Athena/UI/Frontend/Art/M_UI_BP_BattleStar_32.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HB_BattleStar:HorizontalBoxSlot_1:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.44"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 0.0,
+          "Y": -2.0
+        },
+        "Scale": {
+          "X": 1.25,
+          "Y": 1.25
+        }
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_231",
+    "Properties": {
+      "ColorAndOpacity": {
+        "R": 0.002428,
+        "G": 0.072272,
+        "B": 0.752942,
+        "A": 1.0,
+        "Hex": "0112C0"
+      },
+      "Slot": {
+        "ObjectName": "SizeBox_120:SizeBoxSlot_0:SizeBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.189"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_241",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 64.0,
+          "Y": 4.0
+        },
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.215861,
+            "G": 0.658375,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "37A8FF"
+          }
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBox_146:HorizontalBoxSlot_1:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.63"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Background",
+    "Properties": {
+      "Brush": {
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.0,
+            "G": 0.090842,
+            "B": 1.0,
+            "A": 0.431373,
+            "Hex": "6E0017FF"
+          }
+        }
+      },
+      "Slot": {
+        "ObjectName": "Overlay_46:OverlaySlot_0:OverlaySlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.161"
+      },
+      "bIsVariable": false
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_bigstar",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 450.0,
+          "Y": 450.0
+        },
+        "ResourceObject": {
+          "ObjectName": "M_Ui_About_Star_Inst:MaterialInstanceConstant",
+          "ObjectPath": "/BattlepassS17/UI/AboutModal/M_Ui_About_Star_Inst.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "Overlay_3:OverlaySlot_1:OverlaySlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.158"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_bottomLine",
+    "Properties": {
+      "Brush": {
+        "ResourceObject": {
+          "ObjectName": "M_UI_MoreInfo_BottomDividerLIne_Blue:MaterialInstanceConstant",
+          "ObjectPath": "/Game/UI/Art_ToolKit/AngledBoxes/M_UI_MoreInfo_BottomDividerLIne_Blue.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "Overlay_46:OverlaySlot_1:OverlaySlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.162"
+      },
+      "bIsVariable": false
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_DarkBackground",
+    "Properties": {
+      "Brush": {
+        "ResourceObject": {
+          "ObjectName": "M_UI_RadialGradientMaster_Dark:MaterialInstanceConstant",
+          "ObjectPath": "/Game/Athena/UI/Frontend/Art/M_UI_RadialGradientMaster_Dark.0"
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 1.0,
+        "G": 1.0,
+        "B": 1.0,
+        "A": 0.75,
+        "Hex": "BFFFFFFF"
+      },
+      "Slot": {
+        "ObjectName": "Background_Blur:BackgroundBlurSlot_0:BackgroundBlurSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.11"
+      },
+      "Visibility": "ESlateVisibility::HitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Left",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 328.60397,
+          "Y": 316.17743
+        },
+        "ResourceObject": {
+          "ObjectName": "M_Ui_About_Star_Small:MaterialInstanceConstant",
+          "ObjectPath": "/BattlepassS17/UI/AboutModal/M_Ui_About_Star_Small.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "Overlay_3:OverlaySlot_3:OverlaySlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.159"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": -60.0,
+          "Y": 63.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Right",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 328.60397,
+          "Y": 316.17743
+        },
+        "ResourceObject": {
+          "ObjectName": "M_Ui_About_Star_Small:MaterialInstanceConstant",
+          "ObjectPath": "/BattlepassS17/UI/AboutModal/M_Ui_About_Star_Small.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "Overlay_3:OverlaySlot_5:OverlaySlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.160"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 55.0,
+          "Y": 75.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "StrikeThrough",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 32.0,
+          "Y": 8.0
+        },
+        "ResourceObject": {
+          "ObjectName": "M_UI_StrikeThrough_Line_BPPurchase_Inst:MaterialInstanceConstant",
+          "ObjectPath": "/Game/UI/Art_ToolKit/AngledBoxes/M_UI_StrikeThrough_Line_BPPurchase_Inst.0"
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 0.791298,
+        "G": 0.008568,
+        "B": 0.184475,
+        "A": 1.0,
+        "Hex": "CA022F"
+      },
+      "Slot": {
+        "ObjectName": "OriginalCostContainer:OverlaySlot_1:OverlaySlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.148"
+      },
+      "RenderTransform": {
+        "Shear": {
+          "X": 0.0,
+          "Y": -8.0
+        },
+        "Angle": -2.0
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "VBuck",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 52.0,
+          "Y": 52.0
+        },
+        "ResourceObject": {
+          "ObjectName": "T-Icon-VBucks-L:Texture2D",
+          "ObjectPath": "/Game/UI/Foundation/Shell/Textures/T-Icon-VBucks-L.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HB_Coin:HorizontalBoxSlot_0:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.47"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "VBuckIcon",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 48.0,
+          "Y": 48.0
+        },
+        "ResourceObject": {
+          "ObjectName": "T-Icon-VBucks-L:Texture2D",
+          "ObjectPath": "/Game/UI/Foundation/Shell/Textures/T-Icon-VBucks-L.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HB_VBucks:HorizontalBoxSlot_0:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.57"
+      }
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "Intro",
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "3DB32E6D-4B0156BC-D5E15F9C-1644E518",
+          "Name": "SizeBox_21",
+          "PossessedObjectClass": {
+            "ObjectName": "SizeBox:Class",
+            "ObjectPath": 0
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "64AE0A77-43C8F24A-928F6CA9-B54A2443",
+          "Name": "Background_Blur",
+          "PossessedObjectClass": {
+            "ObjectName": "BackgroundBlur:Class",
+            "ObjectPath": 0
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "AA8380C8-4445226C-598B0BBB-62B57426",
+          "Name": "Image_DarkBackground",
+          "PossessedObjectClass": {
+            "ObjectName": "Image:Class",
+            "ObjectPath": 0
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "C5BBCBF5-479C24C3-79994A8B-5984336D",
+          "Name": "VerticalBox_Header",
+          "PossessedObjectClass": {
+            "ObjectName": "VerticalBox:Class",
+            "ObjectPath": 0
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "E026616E-4E7812C6-643186BE-D461DC3D",
+          "Name": "HorizontalBox_BottomBar",
+          "PossessedObjectClass": {
+            "ObjectName": "HorizontalBox:Class",
+            "ObjectPath": 0
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "2E55D398-4B9DAF6F-7CCE08AF-823DABD7",
+          "Name": "HB_CurrencyContainer",
+          "PossessedObjectClass": {
+            "ObjectName": "HorizontalBox:Class",
+            "ObjectPath": 0
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "20653D4B-4B25CD56-3C95108C-3C367632",
+          "Name": "Image_bottomLine",
+          "PossessedObjectClass": {
+            "ObjectName": "Image:Class",
+            "ObjectPath": 0
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "CD649D89-47A8BEA2-1DA0028A-650D2F57",
+          "Name": "Switcher_PurchaseButtons",
+          "PossessedObjectClass": {
+            "ObjectName": "CommonVisibilitySwitcher:Class",
+            "ObjectPath": 0
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "3DB32E6D-4B0156BC-D5E15F9C-1644E518",
+          "BindingName": "SizeBox_21",
+          "Tracks": [
+            {
+              "ObjectName": "Intro:MovieScene2DTransformTrack_0:MovieScene2DTransformTrack",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.98"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "64AE0A77-43C8F24A-928F6CA9-B54A2443",
+          "BindingName": "BackgroundBlur_11",
+          "Tracks": [
+            {
+              "ObjectName": "Intro:MovieSceneFloatTrack_0:MovieSceneFloatTrack",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.132"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "AA8380C8-4445226C-598B0BBB-62B57426",
+          "BindingName": "Image_15",
+          "Tracks": [
+            {
+              "ObjectName": "Intro:MovieSceneFloatTrack_1:MovieSceneFloatTrack",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.133"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "C5BBCBF5-479C24C3-79994A8B-5984336D",
+          "BindingName": "VerticalBox_1",
+          "Tracks": [
+            {
+              "ObjectName": "Intro:MovieSceneFloatTrack_2:MovieSceneFloatTrack",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.134"
+            },
+            {
+              "ObjectName": "Intro:MovieScene2DTransformTrack_1:MovieScene2DTransformTrack",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.99"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "E026616E-4E7812C6-643186BE-D461DC3D",
+          "BindingName": "HorizontalBox_0",
+          "Tracks": [
+            {
+              "ObjectName": "Intro:MovieSceneFloatTrack_3:MovieSceneFloatTrack",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.135"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "2E55D398-4B9DAF6F-7CCE08AF-823DABD7",
+          "BindingName": "HB_CurrencyContainer",
+          "Tracks": [
+            {
+              "ObjectName": "Intro:MovieSceneFloatTrack_4:MovieSceneFloatTrack",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.136"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "20653D4B-4B25CD56-3C95108C-3C367632",
+          "BindingName": "Image_bottomLine",
+          "Tracks": [
+            {
+              "ObjectName": "Intro:MovieSceneWidgetMaterialTrack_0:MovieSceneWidgetMaterialTrack",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.139"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "CD649D89-47A8BEA2-1DA0028A-650D2F57",
+          "BindingName": "Switcher_PurchaseButtons",
+          "Tracks": [
+            {
+              "ObjectName": "Intro:MovieScene2DTransformTrack_2:MovieScene2DTransformTrack",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.100"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "FrameRangeValue": {
+          "LowerBound": {
+            "BoundType": 1,
+            "BoundValue": {
+              "FrameNumberValue": -1935605760
+            }
+          },
+          "UpperBound": {
+            "BoundType": 0,
+            "BoundValue": {
+              "FrameNumberValue": 20
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": -2084568890,
+        "Denominator": 1175081654
+      },
+      "Signature": "03A459A3-00270137-00000000-00000101"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "PageEnough",
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "C6D884C1-4722A1F2-764929A8-CB09C8D4",
+          "Name": "RichText_UnlockPage",
+          "PossessedObjectClass": {
+            "ObjectName": "CommonRichTextBlock:Class",
+            "ObjectPath": 0
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "C6D884C1-4722A1F2-764929A8-CB09C8D4",
+          "BindingName": "RichText_UnlockPage",
+          "Tracks": [
+            {
+              "ObjectName": "PageEnough:MovieScene2DTransformTrack_0:MovieScene2DTransformTrack",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.101"
+            },
+            {
+              "ObjectName": "PageEnough:MovieSceneFloatTrack_0:MovieSceneFloatTrack",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.137"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "FrameRangeValue": {
+          "LowerBound": {
+            "BoundType": 1,
+            "BoundValue": {
+              "FrameNumberValue": 1572929536
+            }
+          },
+          "UpperBound": {
+            "BoundType": 0,
+            "BoundValue": {
+              "FrameNumberValue": 20
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": -661372846,
+        "Denominator": 1280694806
+      },
+      "Signature": "AEA1F08E-A315D96E-00000000-00000101"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_0",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformTrack_0:MovieScene2DTransformSection_0:MovieScene2DTransformSection",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.94"
+        }
+      ],
+      "EvaluationFieldGuid": "DD9E9A5D-45CE4369-E5ED7997-C194D8DB",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformTrack_0:MovieScene2DTransformSection_0:MovieScene2DTransformSection",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.94"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "DD9E9A5D-45CE4369-E5ED7997-C194D8DB"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_1",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformTrack_1:MovieScene2DTransformSection_0:MovieScene2DTransformSection",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.95"
+        }
+      ],
+      "EvaluationFieldGuid": "163FE8B2-4AB213D1-3B187CBF-DD1129E0",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformTrack_1:MovieScene2DTransformSection_0:MovieScene2DTransformSection",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.95"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "163FE8B2-4AB213D1-3B187CBF-DD1129E0"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_2",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformTrack_2:MovieScene2DTransformSection_0:MovieScene2DTransformSection",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.96"
+        }
+      ],
+      "EvaluationFieldGuid": "0A68B15D-40807B6B-834E2CB5-F0A66160",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformTrack_2:MovieScene2DTransformSection_0:MovieScene2DTransformSection",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.96"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "0A68B15D-40807B6B-834E2CB5-F0A66160"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_0",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformTrack_0:MovieScene2DTransformSection_0:MovieScene2DTransformSection",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.97"
+        }
+      ],
+      "EvaluationFieldGuid": "EC839B3C-47555188-FD8A3F83-3541FA61",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformTrack_0:MovieScene2DTransformSection_0:MovieScene2DTransformSection",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.97"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "EC839B3C-47555188-FD8A3F83-3541FA61"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_0",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "BlurStrength",
+        "PropertyPath": "BlurStrength",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatTrack_0:MovieSceneFloatSection_0:MovieSceneFloatSection",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.126"
+        }
+      ],
+      "EvaluationFieldGuid": "039D1451-43376B2D-756FC9A3-CBB6355D",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatTrack_0:MovieSceneFloatSection_0:MovieSceneFloatSection",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.126"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "039D1451-43376B2D-756FC9A3-CBB6355D"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_1",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatTrack_1:MovieSceneFloatSection_0:MovieSceneFloatSection",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.127"
+        }
+      ],
+      "EvaluationFieldGuid": "71B9C0B3-446F7DDD-7308C284-67AB69A1",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatTrack_1:MovieSceneFloatSection_0:MovieSceneFloatSection",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.127"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "71B9C0B3-446F7DDD-7308C284-67AB69A1"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_2",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatTrack_2:MovieSceneFloatSection_0:MovieSceneFloatSection",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.128"
+        }
+      ],
+      "EvaluationFieldGuid": "1EA2087A-444751F1-3B8EFCBA-51BCE09E",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatTrack_2:MovieSceneFloatSection_0:MovieSceneFloatSection",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.128"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "1EA2087A-444751F1-3B8EFCBA-51BCE09E"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_3",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatTrack_3:MovieSceneFloatSection_0:MovieSceneFloatSection",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.129"
+        }
+      ],
+      "EvaluationFieldGuid": "067AC140-450C352B-C5827198-CD5E4CFA",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatTrack_3:MovieSceneFloatSection_0:MovieSceneFloatSection",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.129"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "067AC140-450C352B-C5827198-CD5E4CFA"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_4",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatTrack_4:MovieSceneFloatSection_0:MovieSceneFloatSection",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.130"
+        }
+      ],
+      "EvaluationFieldGuid": "A2A86DFD-44A635C2-DFF289A5-5F759FE6",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatTrack_4:MovieSceneFloatSection_0:MovieSceneFloatSection",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.130"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "A2A86DFD-44A635C2-DFF289A5-5F759FE6"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_0",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatTrack_0:MovieSceneFloatSection_0:MovieSceneFloatSection",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.131"
+        }
+      ],
+      "EvaluationFieldGuid": "204096C2-4ED651FF-94E64992-89DB1D3B",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatTrack_0:MovieSceneFloatSection_0:MovieSceneFloatSection",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.131"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "204096C2-4ED651FF-94E64992-89DB1D3B"
+    }
+  },
+  {
+    "Type": "MovieSceneParameterSection",
+    "Name": "MovieSceneParameterSection_0",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneWidgetMaterialTrack",
+    "Name": "MovieSceneWidgetMaterialTrack_0",
+    "Properties": {
+      "BrushPropertyNamePath": [
+        "Brush"
+      ],
+      "TrackName": "Brush",
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneWidgetMaterialTrack_0:MovieSceneParameterSection_0:MovieSceneParameterSection",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.138"
+        }
+      ],
+      "EvaluationFieldGuid": "78E44654-4AAF00F6-4211E499-D08F674A",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneWidgetMaterialTrack_0:MovieSceneParameterSection_0:MovieSceneParameterSection",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.138"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "FrameNumberValue": 36000
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "78E44654-4AAF00F6-4211E499-D08F674A"
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "OriginalCostContainer",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OriginalCostContainer:OverlaySlot_0:OverlaySlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.147"
+        },
+        {
+          "ObjectName": "OriginalCostContainer:OverlaySlot_1:OverlaySlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.148"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HB_Coin:HorizontalBoxSlot_2:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.49"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "Overlay_0:OverlaySlot_0:OverlaySlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.149"
+        },
+        {
+          "ObjectName": "Overlay_0:OverlaySlot_1:OverlaySlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.150"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBox_27:HorizontalBoxSlot_1:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.65"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_1",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "Overlay_1:OverlaySlot_0:OverlaySlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.151"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "Overlay_0:OverlaySlot_1:OverlaySlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.150"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_16",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "Overlay_16:OverlaySlot_0:OverlaySlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.152"
+        },
+        {
+          "ObjectName": "Overlay_16:OverlaySlot_12:OverlaySlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.155"
+        },
+        {
+          "ObjectName": "Overlay_16:OverlaySlot_5:OverlaySlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.156"
+        },
+        {
+          "ObjectName": "Overlay_16:OverlaySlot_11:OverlaySlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.154"
+        },
+        {
+          "ObjectName": "Overlay_16:OverlaySlot_1:OverlaySlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.153"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_3",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "Overlay_3:OverlaySlot_0:OverlaySlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.157"
+        },
+        {
+          "ObjectName": "Overlay_3:OverlaySlot_5:OverlaySlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.160"
+        },
+        {
+          "ObjectName": "Overlay_3:OverlaySlot_3:OverlaySlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.159"
+        },
+        {
+          "ObjectName": "Overlay_3:OverlaySlot_1:OverlaySlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.158"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "Overlay_0:OverlaySlot_0:OverlaySlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.149"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_46",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "Overlay_46:OverlaySlot_0:OverlaySlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.161"
+        },
+        {
+          "ObjectName": "Overlay_46:OverlaySlot_1:OverlaySlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.162"
+        },
+        {
+          "ObjectName": "Overlay_46:OverlaySlot_2:OverlaySlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.163"
+        },
+        {
+          "ObjectName": "Overlay_46:OverlaySlot_4:OverlaySlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.164"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBox_21:SizeBoxSlot_0:SizeBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.191"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_48",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "Overlay_48:OverlaySlot_0:OverlaySlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.165"
+        },
+        {
+          "ObjectName": "Overlay_48:OverlaySlot_1:OverlaySlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.166"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HB_LevelButtons:HorizontalBoxSlot_4:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.55"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Properties": {
+      "Padding": {
+        "Left": 14.0,
+        "Right": 14.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:OriginalCostContainer:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.140"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Text_OriginalCost:CommonTextBlock",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.28"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Fill",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:OriginalCostContainer:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.140"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:StrikeThrough:Image",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.89"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetTree:Overlay_0:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.141"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Overlay_3:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.144"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "WidgetTree:Overlay_0:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.141"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Overlay_1:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.142"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetTree:Overlay_1:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.142"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:VerticalBox_1:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.196"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Fill",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
+      "Parent": {
+        "ObjectName": "WidgetTree:Overlay_16:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.143"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Background_Blur:BackgroundBlur",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.10"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Properties": {
+      "Padding": {
+        "Left": 16.0,
+        "Right": 16.0,
+        "Bottom": 16.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Fill",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "WidgetTree:Overlay_16:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.143"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:SZ_Legal:SafeZone",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.173"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_11",
+    "Properties": {
+      "Padding": {
+        "Left": 70.0,
+        "Top": 70.0
+      },
+      "Parent": {
+        "ObjectName": "WidgetTree:Overlay_16:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.143"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:SZ_MainHeader:SafeZone",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.174"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_12",
+    "Properties": {
+      "Padding": {
+        "Top": 32.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Fill",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:Overlay_16:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.143"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:SizeBox_21:SizeBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.184"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_5",
+    "Properties": {
+      "Padding": {
+        "Top": 40.0,
+        "Right": 40.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Right",
+      "Parent": {
+        "ObjectName": "WidgetTree:Overlay_16:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.143"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:SZ_Currency:SafeZone",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.172"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetTree:Overlay_3:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.144"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Image_178:Image",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.79"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:Overlay_3:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.144"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Image_bigstar:Image",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.84"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_3",
+    "Properties": {
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:Overlay_3:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.144"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Image_Left:Image",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.87"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_5",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Right",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:Overlay_3:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.144"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Image_Right:Image",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.88"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Fill",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
+      "Parent": {
+        "ObjectName": "WidgetTree:Overlay_46:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.145"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Image_Background:Image",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.83"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Fill",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "WidgetTree:Overlay_46:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.145"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Image_bottomLine:Image",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.85"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_2",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Fill",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
+      "Parent": {
+        "ObjectName": "WidgetTree:Overlay_46:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.145"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:SafeZone_26:SafeZone",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.171"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_4",
+    "Properties": {
+      "Padding": {
+        "Left": 20.0,
+        "Top": 20.0,
+        "Right": 10.0,
+        "Bottom": -50.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "WidgetTree:Overlay_46:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.145"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:SB_ButtonBuyLevels:SizeBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.179"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Fill",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
+      "Parent": {
+        "ObjectName": "WidgetTree:Overlay_48:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.146"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:SizeBox_120:SizeBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.182"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Properties": {
+      "Padding": {
+        "Left": 34.0,
+        "Right": 34.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:Overlay_48:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.146"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Text_LevelsAmount:CommonTextBlock",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.27"
+      }
+    }
+  },
+  {
+    "Type": "PlusMinusButton_C",
+    "Name": "Button_Addition",
+    "Properties": {
+      "In Text": {
+        "CultureInvariantString": "+"
+      },
+      "Font Size": 72,
+      "IsLeft": false,
+      "TriggeringInputAction": {
+        "DataTable": {
+          "ObjectName": "InputActionDataTable:DataTable",
+          "ObjectPath": "/Game/UI/Foundation/Input/InputActionDataTable.0"
+        },
+        "RowName": "GenericRightShoulder"
+      },
+      "Slot": {
+        "ObjectName": "SizeBox:SizeBoxSlot_0:SizeBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.187"
+      }
+    }
+  },
+  {
+    "Type": "PlusMinusButton_C",
+    "Name": "Button_BatchAddition",
+    "Properties": {
+      "In Text": {
+        "Namespace": "",
+        "Key": "3ED08463479DF9C93A48EDB37242594D",
+        "SourceString": "+10"
+      },
+      "Font Size": 40,
+      "IsLeft": false,
+      "TriggeringInputAction": {
+        "DataTable": {
+          "ObjectName": "InputActionDataTable:DataTable",
+          "ObjectPath": "/Game/UI/Foundation/Input/InputActionDataTable.0"
+        },
+        "RowName": "GenericRightTrigger"
+      },
+      "Slot": {
+        "ObjectName": "SizeBox_2:SizeBoxSlot_0:SizeBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.190"
+      }
+    }
+  },
+  {
+    "Type": "PlusMinusButton_C",
+    "Name": "Button_BatchSubtraction",
+    "Properties": {
+      "In Text": {
+        "Namespace": "",
+        "Key": "F0BC294F4FEFBE6299E6D9946B8AC097",
+        "SourceString": "-10"
+      },
+      "Font Size": 40,
+      "TriggeringInputAction": {
+        "DataTable": {
+          "ObjectName": "InputActionDataTable:DataTable",
+          "ObjectPath": "/Game/UI/Foundation/Input/InputActionDataTable.0"
+        },
+        "RowName": "GenericLeftTrigger"
+      },
+      "Slot": {
+        "ObjectName": "SizeBox_90:SizeBoxSlot_0:SizeBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.192"
+      }
+    }
+  },
+  {
+    "Type": "PlusMinusButton_C",
+    "Name": "Button_Subtraction",
+    "Properties": {
+      "In Text": {
+        "CultureInvariantString": "-"
+      },
+      "Font Size": 72,
+      "TriggeringInputAction": {
+        "DataTable": {
+          "ObjectName": "InputActionDataTable:DataTable",
+          "ObjectPath": "/Game/UI/Foundation/Input/InputActionDataTable.0"
+        },
+        "RowName": "GenericLeftShoulder"
+      },
+      "Slot": {
+        "ObjectName": "SizeBox_1:SizeBoxSlot_0:SizeBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.188"
+      }
+    }
+  },
+  {
+    "Type": "SafeZone",
+    "Name": "SafeZone_26",
+    "Properties": {
+      "PadTop": false,
+      "PadBottom": false,
+      "Slots": [
+        {
+          "ObjectName": "SafeZone_26:SafeZoneSlot_0:SafeZoneSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.175"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "Overlay_46:OverlaySlot_2:OverlaySlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.163"
+      }
+    }
+  },
+  {
+    "Type": "SafeZone",
+    "Name": "SZ_Currency",
+    "Properties": {
+      "PadLeft": false,
+      "PadBottom": false,
+      "Slots": [
+        {
+          "ObjectName": "SZ_Currency:SafeZoneSlot_0:SafeZoneSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.176"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "Overlay_16:OverlaySlot_5:OverlaySlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.156"
+      }
+    }
+  },
+  {
+    "Type": "SafeZone",
+    "Name": "SZ_Legal",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "SZ_Legal:SafeZoneSlot_0:SafeZoneSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.177"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "Overlay_16:OverlaySlot_1:OverlaySlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.153"
+      }
+    }
+  },
+  {
+    "Type": "SafeZone",
+    "Name": "SZ_MainHeader",
+    "Properties": {
+      "PadRight": false,
+      "PadBottom": false,
+      "Slots": [
+        {
+          "ObjectName": "SZ_MainHeader:SafeZoneSlot_0:SafeZoneSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.178"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "Overlay_16:OverlaySlot_11:OverlaySlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.154"
+      }
+    }
+  },
+  {
+    "Type": "SafeZoneSlot",
+    "Name": "SafeZoneSlot_0",
+    "Properties": {
+      "Padding": {
+        "Left": 128.0,
+        "Top": 4.0,
+        "Right": 128.0,
+        "Bottom": 80.0
+      },
+      "Parent": {
+        "ObjectName": "WidgetTree:SafeZone_26:SafeZone",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.171"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:HorizontalBox_27:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.40"
+      }
+    }
+  },
+  {
+    "Type": "SafeZoneSlot",
+    "Name": "SafeZoneSlot_0",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetTree:SZ_Currency:SafeZone",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.172"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:HB_CurrencyContainer:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.35"
+      }
+    }
+  },
+  {
+    "Type": "SafeZoneSlot",
+    "Name": "SafeZoneSlot_0",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetTree:SZ_Legal:SafeZone",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.173"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:HorizontalBox_BottomBar:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.41"
+      }
+    }
+  },
+  {
+    "Type": "SafeZoneSlot",
+    "Name": "SafeZoneSlot_0",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetTree:SZ_MainHeader:SafeZone",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.174"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:VerticalBox_Header:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.199"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SB_ButtonBuyLevels",
+    "Properties": {
+      "HeightOverride": 128.0,
+      "MinDesiredWidth": 416.0,
+      "bOverride_HeightOverride": true,
+      "bOverride_MinDesiredWidth": true,
+      "Slots": [
+        {
+          "ObjectName": "SB_ButtonBuyLevels:SizeBoxSlot_1:SizeBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.186"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "Overlay_46:OverlaySlot_4:OverlaySlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.164"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Properties": {
+      "WidthOverride": 100.0,
+      "HeightOverride": 100.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBox:SizeBoxSlot_0:SizeBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.187"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HB_LevelButtons:HorizontalBoxSlot_2:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.53"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_1",
+    "Properties": {
+      "WidthOverride": 100.0,
+      "HeightOverride": 100.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBox_1:SizeBoxSlot_0:SizeBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.188"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HB_LevelButtons:HorizontalBoxSlot_6:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.56"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_120",
+    "Properties": {
+      "WidthOverride": 600.0,
+      "MinDesiredWidth": 512.0,
+      "bOverride_MinDesiredWidth": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBox_120:SizeBoxSlot_0:SizeBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.189"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "Overlay_48:OverlaySlot_0:OverlaySlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.165"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_2",
+    "Properties": {
+      "WidthOverride": 100.0,
+      "HeightOverride": 100.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBox_2:SizeBoxSlot_0:SizeBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.190"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HB_LevelButtons:HorizontalBoxSlot_3:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.54"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_21",
+    "Properties": {
+      "MinDesiredHeight": 550.0,
+      "bOverride_MinDesiredHeight": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBox_21:SizeBoxSlot_0:SizeBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.191"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "Overlay_16:OverlaySlot_12:OverlaySlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.155"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_90",
+    "Properties": {
+      "WidthOverride": 100.0,
+      "HeightOverride": 100.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBox_90:SizeBoxSlot_0:SizeBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.192"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HB_LevelButtons:HorizontalBoxSlot_1:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.52"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_1",
+    "Properties": {
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:SB_ButtonBuyLevels:SizeBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.179"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Switcher_PurchaseButtons:CommonVisibilitySwitcher",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.29"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetTree:SizeBox:SizeBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.180"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Button_Addition:PlusMinusButton_C",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.167"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetTree:SizeBox_1:SizeBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.181"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Button_Subtraction:PlusMinusButton_C",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.170"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetTree:SizeBox_120:SizeBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.182"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Image_231:Image",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.81"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetTree:SizeBox_2:SizeBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.183"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Button_BatchAddition:PlusMinusButton_C",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.168"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetTree:SizeBox_21:SizeBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.184"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Overlay_46:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.145"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetTree:SizeBox_90:SizeBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.185"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Button_BatchSubtraction:PlusMinusButton_C",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.169"
+      }
+    }
+  },
+  {
+    "Type": "Spatial_Specialbutton_C",
+    "Name": "Button_GetVBucks",
+    "Properties": {
+      "Button text": {
+        "Namespace": "",
+        "Key": "EE4618444E53681F310528BB89957EB8",
+        "SourceString": "Get V-BUCKS!"
+      },
+      "Material Brush": {
+        "ObjectName": "M_Ui_Skewed_SpatialButton_MoreInfo_Blue:MaterialInstanceConstant",
+        "ObjectPath": "/Game/Athena/UI/Frontend/Spatial/Art/M_Ui_Skewed_SpatialButton_MoreInfo_Blue.0"
+      },
+      "Right Image": null,
+      "Justifiction": "ETextJustify::Center",
+      "Auto wrap text": false,
+      "SimpleHover": true,
+      "FontSizeOverride": true,
+      "FontSize": 40,
+      "ShearText": true,
+      "PressedSlateSoundOverride": {
+        "ResourceObject": {
+          "ObjectName": "Fortnite_UI_RogerThat_Pressed_Cue:SoundCue",
+          "ObjectPath": "/Game/Sounds/Fort_UI_Sounds/FrontEnd/New_FrontEnd/Fortnite_UI_RogerThat_Pressed_Cue.0"
+        }
+      },
+      "HoveredSlateSoundOverride": {
+        "ResourceObject": {
+          "ObjectName": "Fortnite_UI_Map_Hover_01_Cue:SoundCue",
+          "ObjectPath": "/Game/Sounds/Fort_UI_Sounds/FrontEnd/New_FrontEnd/Fortnite_UI_Map_Hover_01_Cue.0"
+        }
+      },
+      "TriggeringInputAction": {
+        "DataTable": {
+          "ObjectName": "InputActionDataTable:DataTable",
+          "ObjectPath": "/Game/UI/Foundation/Input/InputActionDataTable.0"
+        },
+        "RowName": "GenericForward"
+      },
+      "OnSelectedChangedBase": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "WidgetTree:Button_GetVBucks:Spatial_Specialbutton_C",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.193"
+            },
+            "FunctionName": "HandleOnSelectedChanged"
+          }
+        ]
+      },
+      "OnButtonBaseClicked": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "WidgetTree:Button_GetVBucks:Spatial_Specialbutton_C",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.193"
+            },
+            "FunctionName": "HandleOnButtonClicked"
+          }
+        ]
+      },
+      "OnButtonBaseDoubleClicked": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "WidgetTree:Button_GetVBucks:Spatial_Specialbutton_C",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.193"
+            },
+            "FunctionName": "HandleOnButtonDoubleClicked"
+          }
+        ]
+      },
+      "OnButtonBaseHovered": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "WidgetTree:Button_GetVBucks:Spatial_Specialbutton_C",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.193"
+            },
+            "FunctionName": "HandleOnButtonHovered"
+          }
+        ]
+      },
+      "OnButtonBaseUnhovered": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "WidgetTree:Button_GetVBucks:Spatial_Specialbutton_C",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.193"
+            },
+            "FunctionName": "HandleOnButtonUnhovered"
+          }
+        ]
+      },
+      "Slot": {
+        "ObjectName": "Switcher_PurchaseButtons:CommonVisibilitySwitcherSlot_1:CommonVisibilitySwitcherSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.31"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VB_MainContent",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VB_MainContent:VerticalBoxSlot_0:VerticalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.200"
+        },
+        {
+          "ObjectName": "VB_MainContent:VerticalBoxSlot_2:VerticalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.202"
+        },
+        {
+          "ObjectName": "VB_MainContent:VerticalBoxSlot_4:VerticalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.203"
+        },
+        {
+          "ObjectName": "VB_MainContent:VerticalBoxSlot_1:VerticalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.201"
+        },
+        {
+          "ObjectName": "VB_MainContent:VerticalBoxSlot_6:VerticalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.204"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBox_27:HorizontalBoxSlot_2:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.66"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBox_0:VerticalBoxSlot_2:VerticalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.205"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HB_CurrencyContainer:HorizontalBoxSlot_1:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.50"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_1",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBox_1:VerticalBoxSlot_2:VerticalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.207"
+        },
+        {
+          "ObjectName": "VerticalBox_1:VerticalBoxSlot_0:VerticalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.206"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "Overlay_1:OverlaySlot_0:OverlaySlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.151"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_34",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBox_34:VerticalBoxSlot_3:VerticalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.208"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBox_BottomBar:HorizontalBoxSlot_0:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.67"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_41",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBox_41:VerticalBoxSlot_0:VerticalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.209"
+        },
+        {
+          "ObjectName": "VerticalBox_41:VerticalBoxSlot_1:VerticalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.210"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "ModalHeader:HorizontalBoxSlot_2:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.71"
+      },
+      "RenderTransform": {
+        "Shear": {
+          "X": -10.0,
+          "Y": 0.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_Header",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBox_Header:VerticalBoxSlot_0:VerticalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.211"
+        },
+        {
+          "ObjectName": "VerticalBox_Header:VerticalBoxSlot_1:VerticalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.212"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SZ_MainHeader:SafeZoneSlot_0:SafeZoneSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.178"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Properties": {
+      "Padding": {
+        "Bottom": 20.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:VB_MainContent:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.194"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:HB_BattleStar:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.32"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Properties": {
+      "Padding": {
+        "Bottom": -6.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:VB_MainContent:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.194"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:HorizontalBox_146:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.39"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_2",
+    "Properties": {
+      "Padding": {
+        "Bottom": 32.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:VB_MainContent:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.194"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:HB_LevelButtons:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.36"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_4",
+    "Properties": {
+      "Padding": {
+        "Bottom": 10.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:VB_MainContent:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.194"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:CheckBox_Bundle:BuyResourcesBundleCheckBox_C",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.15"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_6",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:VB_MainContent:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.194"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:HB_Coin:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.34"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_2",
+    "Properties": {
+      "Padding": {
+        "Bottom": 10.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Right",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Top",
+      "Parent": {
+        "ObjectName": "WidgetTree:VerticalBox_0:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.195"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:HB_VBucks:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.37"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:VerticalBox_1:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.196"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:HB_BattleStars:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.33"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_2",
+    "Properties": {
+      "Padding": {
+        "Bottom": -2.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:VerticalBox_1:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.196"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:HorizontalBox:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.38"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_3",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetTree:VerticalBox_34:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.197"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:CommonTextBlock_28:CommonTextBlock",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.21"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetTree:VerticalBox_41:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.198"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:HeaderMainText:CommonTextBlock",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.22"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Properties": {
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Top",
+      "Parent": {
+        "ObjectName": "WidgetTree:VerticalBox_41:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.198"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Text_HeaderTitle:CommonTextBlock",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.26"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetTree:VerticalBox_Header:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.199"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:ModalHeader:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.42"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "Padding": {
+        "Left": 256.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Left",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "WidgetTree:VerticalBox_Header:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.199"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Border_0:Border",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.12"
+      }
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "Intro_INST",
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "Intro_INST:Intro:MovieScene",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.92"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "SizeBox_21",
+          "SlotWidgetName": null,
+          "AnimationGuid": "3DB32E6D-4B0156BC-D5E15F9C-1644E518",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "Background_Blur",
+          "SlotWidgetName": null,
+          "AnimationGuid": "64AE0A77-43C8F24A-928F6CA9-B54A2443",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "Image_DarkBackground",
+          "SlotWidgetName": null,
+          "AnimationGuid": "AA8380C8-4445226C-598B0BBB-62B57426",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "VerticalBox_Header",
+          "SlotWidgetName": null,
+          "AnimationGuid": "C5BBCBF5-479C24C3-79994A8B-5984336D",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "HorizontalBox_BottomBar",
+          "SlotWidgetName": null,
+          "AnimationGuid": "E026616E-4E7812C6-643186BE-D461DC3D",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "HB_CurrencyContainer",
+          "SlotWidgetName": null,
+          "AnimationGuid": "2E55D398-4B9DAF6F-7CCE08AF-823DABD7",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "Image_bottomLine",
+          "SlotWidgetName": null,
+          "AnimationGuid": "20653D4B-4B25CD56-3C95108C-3C367632",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "Switcher_PurchaseButtons",
+          "SlotWidgetName": null,
+          "AnimationGuid": "CD649D89-47A8BEA2-1DA0028A-650D2F57",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "Intro",
+      "CompiledData": {
+        "ObjectName": "Intro_INST:CompiledData:MovieSceneCompiledData",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.124"
+      },
+      "Signature": "FD019526-4AB42C21-18F6D28C-2CB9C56A"
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "PageEnough_INST",
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "PageEnough_INST:PageEnough:MovieScene",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.93"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "RichText_UnlockPage",
+          "SlotWidgetName": null,
+          "AnimationGuid": "C6D884C1-4722A1F2-764929A8-CB09C8D4",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "PageEnough",
+      "CompiledData": {
+        "ObjectName": "PageEnough_INST:CompiledData:MovieSceneCompiledData",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.125"
+      },
+      "Signature": "DCFED88D-4D17A77A-DED1F887-57877190"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "WidgetTree:Overlay_16:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BPS17_BattleStarModal.143"
+      }
+    }
+  }
+]

@@ -1,0 +1,128 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "quest_s17_transient_SpecialForces_q01",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaTransientQuest",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/SpecialForces/SpecialForces/NPCCharacterData_SpecialForces.NPCCharacterData_SpecialForces",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "ExpirationDuration": -1,
+      "RewardsTable": {
+        "ObjectName": "ChallengeReward_S17_Transient_C:DataTable",
+        "ObjectPath": "/BattlepassS17/Items/QuestRewards/ChallengeReward_S17_Transient_C.0"
+      },
+      "Objectives": [
+        {
+          "BackendName": "quest_s17_transient_SpecialForces_q01_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Item.Weapon.Ranged.Assault"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "Target.Tags HasTag Homebase.Class || Target.Tags HasTag Athena.Faction.Generic.Hostile || Target.Tags HasTag Pawn.Athena.NPC.Duel.IsBeingChallenged || Target.Tags HasTag Pawn.Athena.NPC.Wildlife.Predator || Target.Tags HasTag Pawn.Athena.NPC.Mang || Target.Tags HasTag Pawn.Athena.NPC.IO || Target.Tags HasTag AISpawnerData.Type.MotherWall || Target.Tags HasTag Pawn.Athena.NPC.Labrador",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Damage",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "CBEF8B14446E518EB2C5718D638351B9",
+            "SourceString": "Assault Rifle Damage"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "CFF73D9B42ADBEFE2EFD10B56C0266ED",
+            "SourceString": "Hey, um, do you know Maven? She works at IO?"
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 100,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "quest_s17_transient_SpecialForces_q01",
+        "Key": "quest_s17_transient_SpecialForces_q01_CompletionText",
+        "SourceString": "If you ever wanted to intro me and Maven.. I mean, that'd be cool."
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Common",
+      "DisplayName": {
+        "Namespace": "quest_s17_transient_SpecialForces_q01",
+        "Key": "quest_s17_transient_SpecialForces_q01_DisplayName",
+        "SourceString": "Assault Rifle Damage"
+      },
+      "ShortDescription": {
+        "Namespace": "",
+        "Key": "DE46C26A4D0C9DA21E983A8B4D32E5AF",
+        "SourceString": "Hey, um, do you know Maven? She works at IO?"
+      },
+      "Description": {
+        "Namespace": "quest_s17_transient_SpecialForces_q01",
+        "Key": "quest_s17_transient_SpecialForces_q01_Description",
+        "SourceString": "Assault Rifle Damage"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.Bars"
+      ]
+    }
+  }
+]

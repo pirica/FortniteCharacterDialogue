@@ -1,0 +1,58 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_GA_Quest_Repeatable_Vehicle_Speed80",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "Check Speed",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "K2_ActivateAbilityFromEvent",
+    "Properties": {}
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GA_Quest_Repeatable_Vehicle_Speed80_C",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "GA_Quest_Repeatable_Vehicle_Speed80_C:ExecuteUbergraph_GA_Quest_Repeatable_Vehicle_Speed80:Function",
+        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_Vehicle_Speed/GA_Quest_Repeatable_Vehicle_Speed80.0"
+      }
+    }
+  },
+  {
+    "Type": "GA_Quest_Repeatable_Vehicle_Speed80_C",
+    "Name": "Default__GA_Quest_Repeatable_Vehicle_Speed80_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "Timer Handle": {
+        "Handle": 0
+      },
+      "Required Speed": 80.0,
+      "T_Car": {
+        "TagName": "Athena.Vehicle.Valet"
+      },
+      "T_Quest": [
+        "Athena.Quests.Speed.Vehicle.80"
+      ],
+      "AbilityTriggers": [
+        {
+          "TriggerTag": {
+            "TagName": "Event.Vehicle.Entered"
+          },
+          "TriggerSource": "EGameplayAbilityTriggerSource::GameplayEvent"
+        },
+        {
+          "TriggerTag": {
+            "TagName": "Event.Vehicle.Exit"
+          },
+          "TriggerSource": "EGameplayAbilityTriggerSource::GameplayEvent"
+        }
+      ]
+    }
+  }
+]

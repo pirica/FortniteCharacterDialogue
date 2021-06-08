@@ -1,0 +1,748 @@
+[
+  {
+    "Type": "Function",
+    "Name": "On Bp Owned__DelegateSignature",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_SeasonalDataWidget",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "OnSuperCharged",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "OnProgressUpdated",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "OnLevelChanged",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "OnBattlePassOwned",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "UpdateText",
+    "Properties": {}
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "SeasonalDataWidget_C",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "SeasonalDataWidget_C:WidgetTree:WidgetTree",
+        "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.40"
+      },
+      "bClassRequiresNativeTick": true,
+      "UberGraphFunction": {
+        "ObjectName": "SeasonalDataWidget_C:ExecuteUbergraph_SeasonalDataWidget:Function",
+        "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.1"
+      }
+    }
+  },
+  {
+    "Type": "SeasonalDataWidget_C",
+    "Name": "Default__SeasonalDataWidget_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "Bp Material": {
+        "ObjectName": "M-BattlePassBadge:MaterialInstanceConstant",
+        "ObjectPath": "/Game/UI/Foundation/XPBoost/M-BattlePassBadge.0"
+      },
+      "MaxBPLevelForRewards": 200,
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "CommonRichTextBlock",
+    "Name": "RichText_CurrentLevel",
+    "Properties": {
+      "Text": {
+        "CultureInvariantString": "Season LEVEL <text color=\"CCF2FFFF\">X</>"
+      },
+      "bOverrideDefaultStyle": true,
+      "DefaultTextStyleOverride": {
+        "Font": {
+          "FontObject": {
+            "ObjectName": "BurbankSmall:Font",
+            "ObjectPath": "/Game/UI/Foundation/Fonts/BurbankSmall.0"
+          },
+          "TypefaceFontName": "Black"
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "R": 0.033105,
+            "G": 0.854993,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "08DAFF"
+          }
+        }
+      },
+      "TextTransformPolicy": "ETextTransformPolicy::ToUpper",
+      "Slot": {
+        "ObjectName": "VerticalBox_3:VerticalBoxSlot_2:VerticalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.35"
+      }
+    }
+  },
+  {
+    "Type": "CommonRichTextBlock",
+    "Name": "RichText_Level",
+    "Properties": {
+      "MobileTextBlockScale": 1.3,
+      "Text": {
+        "CultureInvariantString": "<text size=\"14\">0 XP to</> <text fontface=\"black\">LVL 0</>"
+      },
+      "bOverrideDefaultStyle": true,
+      "DefaultTextStyleOverride": {
+        "Font": {
+          "FontObject": {
+            "ObjectName": "Burbank:Font",
+            "ObjectPath": "/Game/UI/Foundation/Fonts/Burbank.0"
+          },
+          "TypefaceFontName": "Burbank-PlayerPower",
+          "Size": 18
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "R": 0.121121,
+            "G": 0.150776,
+            "B": 0.244792,
+            "A": 1.0,
+            "Hex": "1F263E"
+          }
+        }
+      },
+      "Slot": {
+        "ObjectName": "Overlay_1:OverlaySlot_2:OverlaySlot",
+        "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.28"
+      },
+      "RenderTransform": {
+        "Shear": {
+          "X": -8.0,
+          "Y": 0.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "CommonTextBlock",
+    "Name": "CommonTextBlock_209",
+    "Properties": {
+      "MobileFontSizeMultiplier": 1.4,
+      "Text": {
+        "Namespace": "",
+        "Key": "7E0A6E174F363E0E7622D9A0972B216D",
+        "SourceString": "+5"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "BurbankSmall:Font",
+          "ObjectPath": "/Game/UI/Foundation/Fonts/BurbankSmall.0"
+        },
+        "TypefaceFontName": "Black",
+        "Size": 16
+      },
+      "ShadowOffset": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "LineHeightPercentage": 0.75,
+      "Slot": {
+        "ObjectName": "VerticalBox_5stars:VerticalBoxSlot_0:VerticalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.38"
+      },
+      "RenderTransform": {
+        "Shear": {
+          "X": -10.0,
+          "Y": 0.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "CommonTextBlock",
+    "Name": "Text_BattlePass",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "71833B13447802E36D3B5DB1E1824188",
+        "SourceString": "Battle Pass"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Burbank:Font",
+          "ObjectPath": "/Game/UI/Foundation/Fonts/Burbank.0"
+        },
+        "TypefaceFontName": "BurbankRegular-Black",
+        "Size": 44
+      },
+      "ShadowOffset": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TextTransformPolicy": "ETextTransformPolicy::ToUpper",
+      "LineHeightPercentage": 0.8,
+      "Slot": {
+        "ObjectName": "VerticalBox_3:VerticalBoxSlot_1:VerticalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.34"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "CommonTextBlock",
+    "Name": "Text_Season",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "D01585D54B2E61C9214A1093241123EA",
+        "SourceString": "Season 7"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.033105,
+          "G": 0.854993,
+          "B": 1.0,
+          "A": 1.0,
+          "Hex": "08DAFF"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "BurbankSmall:Font",
+          "ObjectPath": "/Game/UI/Foundation/Fonts/BurbankSmall.0"
+        },
+        "TypefaceFontName": "Black"
+      },
+      "ShadowOffset": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TextTransformPolicy": "ETextTransformPolicy::ToUpper",
+      "LineHeightPercentage": 0.664286,
+      "Slot": {
+        "ObjectName": "VerticalBox_3:VerticalBoxSlot_0:VerticalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.33"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_1",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBox_1:HorizontalBoxSlot_2:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.18"
+        },
+        {
+          "ObjectName": "HorizontalBox_1:HorizontalBoxSlot_1:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.17"
+        },
+        {
+          "ObjectName": "HorizontalBox_1:HorizontalBoxSlot_0:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.16"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBox_31:VerticalBoxSlot_0:VerticalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.36"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_2",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBox_2:HorizontalBoxSlot_5:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.19"
+        },
+        {
+          "ObjectName": "HorizontalBox_2:HorizontalBoxSlot_6:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.20"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "Overlay_92:OverlaySlot_2:OverlaySlot",
+        "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.29"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Properties": {
+      "Padding": {
+        "Left": 10.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Left",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:HorizontalBox_1:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.14"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:VerticalBox_3:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.30"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Properties": {
+      "Padding": {
+        "Left": -4.0,
+        "Top": -16.0,
+        "Bottom": -8.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Left",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:HorizontalBox_1:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.14"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Image_BattlePass_Free:Image",
+        "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.22"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Properties": {
+      "Padding": {
+        "Left": -4.0,
+        "Bottom": -8.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Left",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:HorizontalBox_1:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.14"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Image_BattlePass_Owned:Image",
+        "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.23"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_5",
+    "Properties": {
+      "Padding": {
+        "Left": 2.0
+      },
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "WidgetTree:HorizontalBox_2:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.15"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Overlay_1:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.25"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_6",
+    "Properties": {
+      "Padding": {
+        "Left": 8.0,
+        "Top": -16.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Left",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "WidgetTree:HorizontalBox_2:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.15"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:VerticalBox_5stars:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.32"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_392",
+    "Properties": {
+      "Brush": {
+        "ResourceObject": {
+          "ObjectName": "M_UI_BP_BattleStar:MaterialInstanceConstant",
+          "ObjectPath": "/Game/Athena/UI/Frontend/Art/M_UI_BP_BattleStar.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "VerticalBox_5stars:VerticalBoxSlot_2:VerticalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.39"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_BattlePass_Free",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 128.0,
+          "Y": 128.0
+        },
+        "ResourceObject": {
+          "ObjectName": "T-FNBR-BattlePass-Default:Texture2D",
+          "ObjectPath": "/Game/UI/Foundation/Textures/Icons/Items/T-FNBR-BattlePass-Default.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBox_1:HorizontalBoxSlot_1:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.17"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_BattlePass_Owned",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 128.0,
+          "Y": 128.0
+        },
+        "ResourceObject": {
+          "ObjectName": "T-FNBR-BattlePass-Default:Texture2D",
+          "ObjectPath": "/Game/UI/Foundation/Textures/Icons/Items/T-FNBR-BattlePass-Default.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBox_1:HorizontalBoxSlot_2:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.18"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_RaceTrack",
+    "Properties": {
+      "Brush": {
+        "Margin": {
+          "Left": 0.5,
+          "Right": 0.5
+        },
+        "ResourceObject": {
+          "ObjectName": "M_Ui_SkewedProgressBar_LandingPage:MaterialInstanceConstant",
+          "ObjectPath": "/BattlepassS17/UI/LandingPage/MI_LandingPage/M_Ui_SkewedProgressBar_LandingPage.0"
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "Slot": {
+        "ObjectName": "Overlay_1:OverlaySlot_0:OverlaySlot",
+        "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.27"
+      },
+      "RenderTransform": {
+        "Shear": {
+          "X": -10.0,
+          "Y": 0.0
+        }
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_1",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "Overlay_1:OverlaySlot_0:OverlaySlot",
+          "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.27"
+        },
+        {
+          "ObjectName": "Overlay_1:OverlaySlot_2:OverlaySlot",
+          "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.28"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBox_2:HorizontalBoxSlot_5:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.19"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_92",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "Overlay_92:OverlaySlot_2:OverlaySlot",
+          "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.29"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBox_31:VerticalBoxSlot_4:VerticalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.37"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Fill",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
+      "Parent": {
+        "ObjectName": "WidgetTree:Overlay_1:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.25"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Image_RaceTrack:Image",
+        "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.24"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_2",
+    "Properties": {
+      "Padding": {
+        "Right": 8.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Right",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:Overlay_1:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.25"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:RichText_Level:CommonRichTextBlock",
+        "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.10"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_2",
+    "Properties": {
+      "Padding": {
+        "Bottom": 20.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Fill",
+      "Parent": {
+        "ObjectName": "WidgetTree:Overlay_92:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.26"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:HorizontalBox_2:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.15"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_3",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBox_3:VerticalBoxSlot_0:VerticalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.33"
+        },
+        {
+          "ObjectName": "VerticalBox_3:VerticalBoxSlot_1:VerticalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.34"
+        },
+        {
+          "ObjectName": "VerticalBox_3:VerticalBoxSlot_2:VerticalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.35"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBox_1:HorizontalBoxSlot_0:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.16"
+      },
+      "RenderTransform": {
+        "Shear": {
+          "X": -10.0,
+          "Y": 0.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_31",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBox_31:VerticalBoxSlot_0:VerticalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.36"
+        },
+        {
+          "ObjectName": "VerticalBox_31:VerticalBoxSlot_4:VerticalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.37"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_5stars",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBox_5stars:VerticalBoxSlot_2:VerticalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.39"
+        },
+        {
+          "ObjectName": "VerticalBox_5stars:VerticalBoxSlot_0:VerticalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.38"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBox_2:HorizontalBoxSlot_6:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.20"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Properties": {
+      "Padding": {
+        "Left": -2.0
+      },
+      "Parent": {
+        "ObjectName": "WidgetTree:VerticalBox_3:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.30"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Text_Season:CommonTextBlock",
+        "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.13"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Properties": {
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Top",
+      "Parent": {
+        "ObjectName": "WidgetTree:VerticalBox_3:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.30"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Text_BattlePass:CommonTextBlock",
+        "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.12"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_2",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Left",
+      "Parent": {
+        "ObjectName": "WidgetTree:VerticalBox_3:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.30"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:RichText_CurrentLevel:CommonRichTextBlock",
+        "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.9"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Left",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:VerticalBox_31:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.31"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:HorizontalBox_1:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.14"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_4",
+    "Properties": {
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:VerticalBox_31:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.31"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Overlay_92:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.26"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Properties": {
+      "Padding": {
+        "Top": -4.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:VerticalBox_5stars:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.32"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:CommonTextBlock_209:CommonTextBlock",
+        "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.11"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_2",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:VerticalBox_5stars:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.32"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Image_392:Image",
+        "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.21"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "WidgetTree:VerticalBox_31:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/LandingPage/SeasonalDataWidget.31"
+      }
+    }
+  }
+]

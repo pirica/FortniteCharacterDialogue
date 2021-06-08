@@ -1,0 +1,94 @@
+[
+  {
+    "Type": "FortGameFeatureData",
+    "Name": "GameFeatureData",
+    "Properties": {
+      "LevelOverlayConfig": {
+        "ObjectName": "LevelOverlayConfig_Slone:FortLevelOverlayConfig",
+        "ObjectPath": "/Slone/LevelOverlays/LevelOverlayConfig_Slone.0"
+      },
+      "Actions": [
+        {
+          "ObjectName": "GameFeatureData:GameFeatureAction_AddComponents_0:GameFeatureAction_AddComponents",
+          "ObjectPath": "/Slone/GameFeatureData.1"
+        }
+      ],
+      "PrimaryAssetTypesToScan": [
+        {
+          "PrimaryAssetType": "AISpawnerData",
+          "AssetBaseClass": {
+            "AssetPathName": "/Script/FortniteGame.FortAthenaAISpawnerData",
+            "SubPathString": ""
+          },
+          "bHasBlueprintClasses": true,
+          "bIsEditorOnly": false,
+          "Directories": [
+            {
+              "Path": "NPCs"
+            }
+          ],
+          "SpecificAssets": [],
+          "Rules": {
+            "Priority": -1,
+            "ChunkId": -1,
+            "bApplyRecursively": true,
+            "CookRule": "EPrimaryAssetCookRule::Unknown"
+          }
+        },
+        {
+          "PrimaryAssetType": "FortTandemCharacterData",
+          "AssetBaseClass": {
+            "AssetPathName": "/Script/FortniteGame.FortTandemCharacterData",
+            "SubPathString": ""
+          },
+          "bHasBlueprintClasses": false,
+          "bIsEditorOnly": false,
+          "Directories": [
+            {
+              "Path": "NPCs"
+            }
+          ],
+          "SpecificAssets": [],
+          "Rules": {
+            "Priority": -1,
+            "ChunkId": -1,
+            "bApplyRecursively": true,
+            "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "GameFeatureAction_AddComponents",
+    "Name": "GameFeatureAction_AddComponents_0",
+    "Properties": {
+      "ComponentList": [
+        {
+          "ActorClass": {
+            "AssetPathName": "/Script/FortniteGame.FortGameStateAthena",
+            "SubPathString": ""
+          },
+          "ComponentClass": {
+            "AssetPathName": "/Slone/GameplayDataTracker/MusicDataTrackerBase_Slone.MusicDataTrackerBase_Slone_C",
+            "SubPathString": ""
+          },
+          "bClientComponent": true,
+          "bServerComponent": true
+        },
+        {
+          "ActorClass": {
+            "AssetPathName": "/Game/Sounds/Fort_Music/MusicController/Quartz/BP_QuartzMusicController.BP_QuartzMusicController_C",
+            "SubPathString": ""
+          },
+          "ComponentClass": {
+            "AssetPathName": "/Slone/Sounds/QuartzMusicTrackComponent_Slone.QuartzMusicTrackComponent_Slone_C",
+            "SubPathString": ""
+          },
+          "bClientComponent": true,
+          "bServerComponent": false
+        }
+      ]
+    }
+  }
+]

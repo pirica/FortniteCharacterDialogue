@@ -1,0 +1,973 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BattlePassRewardGridHeaderS17",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "OnSetPageType",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "OnPageUnlocked",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "OnPageNumberSet",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "OnPageLocked",
+    "Properties": {}
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "BattlePassRewardGridHeaderS17_C",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "BattlePassRewardGridHeaderS17_C:WidgetTree:WidgetTree",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.49"
+      },
+      "Animations": [
+        {
+          "ObjectName": "BattlePassRewardGridHeaderS17_C:burst_INST:WidgetAnimation",
+          "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.48"
+        }
+      ],
+      "UberGraphFunction": {
+        "ObjectName": "BattlePassRewardGridHeaderS17_C:ExecuteUbergraph_BattlePassRewardGridHeaderS17:Function",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.0"
+      }
+    }
+  },
+  {
+    "Type": "BattlePassRewardGridHeaderS17_C",
+    "Name": "Default__BattlePassRewardGridHeaderS17_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "Complete text": {
+        "Namespace": "",
+        "Key": "25D304B0487C82AD80CCD1B9D38D4DF7",
+        "SourceString": "Page Complete!"
+      },
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "Border",
+    "Name": "Border_Locked",
+    "Properties": {
+      "Padding": {
+        "Left": 3.0,
+        "Top": 4.0,
+        "Right": 8.0,
+        "Bottom": 4.0
+      },
+      "Background": {
+        "Margin": {
+          "Left": 0.25,
+          "Top": 0.25,
+          "Right": 0.25,
+          "Bottom": 0.25
+        },
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.191202,
+            "G": 0.042311,
+            "B": 0.838799,
+            "A": 1.0,
+            "Hex": "310BD6"
+          }
+        },
+        "ResourceObject": {
+          "ObjectName": "M_Ui_Skewed_NoV1:MaterialInstanceConstant",
+          "ObjectPath": "/Game/Athena/UI/ReplayBrowser/M_Ui_Skewed_NoV1.0"
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "Slots": [
+        {
+          "ObjectName": "Border_Locked:BorderSlot_0:BorderSlot",
+          "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.8"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "Switcher_PageState:CommonVisibilitySwitcherSlot_0:CommonVisibilitySwitcherSlot",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.14"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "BorderSlot",
+    "Name": "BorderSlot_0",
+    "Properties": {
+      "Padding": {
+        "Left": 3.0,
+        "Top": 4.0,
+        "Right": 8.0,
+        "Bottom": 4.0
+      },
+      "Parent": {
+        "ObjectName": "WidgetTree:Border_Locked:Border",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.7"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:HorizontalBox_1:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.17"
+      }
+    }
+  },
+  {
+    "Type": "CommonRichTextBlock",
+    "Name": "PageNumberText",
+    "Properties": {
+      "Text": {
+        "CultureInvariantString": "Page X"
+      },
+      "bOverrideDefaultStyle": true,
+      "DefaultTextStyleOverride": {
+        "Font": {
+          "FontObject": {
+            "ObjectName": "Burbank:Font",
+            "ObjectPath": "/Game/UI/Foundation/Fonts/Burbank.0"
+          },
+          "TypefaceFontName": "BurbankRegular-Black",
+          "Size": 33
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 1.0,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "FFFFFF"
+          }
+        }
+      },
+      "TextTransformPolicy": "ETextTransformPolicy::ToUpper",
+      "LineHeightPercentage": 0.8,
+      "Slot": {
+        "ObjectName": "HorizontalBox_45:HorizontalBoxSlot_5:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.22"
+      },
+      "RenderTransform": {
+        "Shear": {
+          "X": -8.0,
+          "Y": 0.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "CommonRichTextBlock",
+    "Name": "RichText_LockDescription",
+    "Properties": {
+      "MobileTextBlockScale": 1.1,
+      "ScrollStyle": {
+        "ObjectName": "TextScrollStyle-Base_C:BlueprintGeneratedClass",
+        "ObjectPath": "/Game/UI/Foundation/Text/TextScrollStyle-Base.0"
+      },
+      "Text": {
+        "CultureInvariantString": "Claim <text color=\"fff\">{item} more {Plural}</> or reach <text color=\"fff\">Level {level}</> to unlock page!"
+      },
+      "bOverrideDefaultStyle": true,
+      "DefaultTextStyleOverride": {
+        "Font": {
+          "FontObject": {
+            "ObjectName": "BurbankSmall:Font",
+            "ObjectPath": "/Game/UI/Foundation/Fonts/BurbankSmall.0"
+          },
+          "TypefaceFontName": "Bold",
+          "Size": 14
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "R": 0.585677,
+            "G": 0.328125,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "9554FF"
+          }
+        }
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBox_1:HorizontalBoxSlot_0:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.20"
+      },
+      "RenderTransform": {
+        "Shear": {
+          "X": -8.0,
+          "Y": 0.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "CommonRichTextBlock",
+    "Name": "Text_Progress",
+    "Properties": {
+      "MobileTextBlockScale": 1.3,
+      "Text": {
+        "CultureInvariantString": "<text color=\"FFF\">XX</> / XX claimed"
+      },
+      "bOverrideDefaultStyle": true,
+      "DefaultTextStyleOverride": {
+        "Font": {
+          "FontObject": {
+            "ObjectName": "BurbankSmall:Font",
+            "ObjectPath": "/Game/UI/Foundation/Fonts/BurbankSmall.0"
+          },
+          "TypefaceFontName": "Black",
+          "Size": 12
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "R": 0.033105,
+            "G": 0.854993,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "08DAFF"
+          }
+        }
+      },
+      "TextTransformPolicy": "ETextTransformPolicy::ToUpper",
+      "Justification": "ETextJustify::Right",
+      "Slot": {
+        "ObjectName": "VerticalBox_Unlocked:VerticalBoxSlot_2:VerticalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.47"
+      },
+      "RenderTransform": {
+        "Shear": {
+          "X": -10.0,
+          "Y": 0.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "CommonTextBlock",
+    "Name": "Text_BattlePass",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "DE3D24F6458D32751148D5BCF8CB6658",
+        "SourceString": "Battle Pass"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 0.033105,
+          "G": 0.854993,
+          "B": 1.0,
+          "A": 1.0,
+          "Hex": "08DAFF"
+        }
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "BurbankSmall:Font",
+          "ObjectPath": "/Game/UI/Foundation/Fonts/BurbankSmall.0"
+        },
+        "TypefaceFontName": "Black",
+        "Size": 18
+      },
+      "ShadowOffset": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TextTransformPolicy": "ETextTransformPolicy::ToUpper",
+      "LineHeightPercentage": 0.75,
+      "Slot": {
+        "ObjectName": "HorizontalBox_0:HorizontalBoxSlot_0:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.19"
+      },
+      "RenderTransform": {
+        "Shear": {
+          "X": -8.0,
+          "Y": 0.0
+        }
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "CommonVisibilitySwitcher",
+    "Name": "Switcher_PageState",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "Switcher_PageState:CommonVisibilitySwitcherSlot_0:CommonVisibilitySwitcherSlot",
+          "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.14"
+        },
+        {
+          "ObjectName": "Switcher_PageState:CommonVisibilitySwitcherSlot_1:CommonVisibilitySwitcherSlot",
+          "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.15"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBox_45:HorizontalBoxSlot_6:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.23"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "CommonVisibilitySwitcherSlot",
+    "Name": "CommonVisibilitySwitcherSlot_0",
+    "Properties": {
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "WidgetTree:Switcher_PageState:CommonVisibilitySwitcher",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.13"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Border_Locked:Border",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.7"
+      }
+    }
+  },
+  {
+    "Type": "CommonVisibilitySwitcherSlot",
+    "Name": "CommonVisibilitySwitcherSlot_1",
+    "Properties": {
+      "Padding": {
+        "Left": 8.0
+      },
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "WidgetTree:Switcher_PageState:CommonVisibilitySwitcher",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.13"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:VerticalBox_Unlocked:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.43"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBox_0:HorizontalBoxSlot_0:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.19"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBox_24:VerticalBoxSlot_0:VerticalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.44"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_1",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBox_1:HorizontalBoxSlot_1:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.21"
+        },
+        {
+          "ObjectName": "HorizontalBox_1:HorizontalBoxSlot_0:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.20"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "Border_Locked:BorderSlot_0:BorderSlot",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.8"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_45",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBox_45:HorizontalBoxSlot_5:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.22"
+        },
+        {
+          "ObjectName": "HorizontalBox_45:HorizontalBoxSlot_6:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.23"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBox_24:VerticalBoxSlot_1:VerticalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.45"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "Parent": {
+        "ObjectName": "WidgetTree:HorizontalBox_0:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.16"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Text_BattlePass:CommonTextBlock",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.12"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "Parent": {
+        "ObjectName": "WidgetTree:HorizontalBox_1:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.17"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:RichText_LockDescription:CommonRichTextBlock",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.10"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Properties": {
+      "Padding": {
+        "Top": -16.0,
+        "Right": 4.0
+      },
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "WidgetTree:HorizontalBox_1:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.17"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Overlay_0:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.37"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_5",
+    "Properties": {
+      "Padding": {
+        "Right": 12.0
+      },
+      "Parent": {
+        "ObjectName": "WidgetTree:HorizontalBox_45:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.18"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:PageNumberText:CommonRichTextBlock",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.9"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_6",
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "Parent": {
+        "ObjectName": "WidgetTree:HorizontalBox_45:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.18"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Switcher_PageState:CommonVisibilitySwitcher",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.13"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 36.0,
+          "Y": 36.0
+        },
+        "ResourceObject": {
+          "ObjectName": "T-Icon-Lock-64:Texture2D",
+          "ObjectPath": "/Game/UI/Foundation/Textures/Icons/Locks/T-Icon-Lock-64.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "Overlay_0:OverlaySlot_2:OverlaySlot",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.39"
+      },
+      "RenderTransform": {
+        "Angle": -7.0
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_122",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 36.0,
+          "Y": 36.0
+        },
+        "ResourceObject": {
+          "ObjectName": "T-Icon-Lock-64:Texture2D",
+          "ObjectPath": "/Game/UI/Foundation/Textures/Icons/Locks/T-Icon-Lock-64.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "Overlay_0:OverlaySlot_0:OverlaySlot",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.38"
+      },
+      "RenderTransform": {
+        "Angle": -7.0
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Progress",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 8.0,
+          "Y": 8.0
+        },
+        "Margin": {
+          "Left": 0.4,
+          "Right": 0.4
+        },
+        "ResourceObject": {
+          "ObjectName": "M_Ui_Skewed_ProgressBar_Category:MaterialInstanceConstant",
+          "ObjectPath": "/BattlePassBase/UI/M_Ui_Skewed_ProgressBar_Category.0"
+        },
+        "DrawAs": "ESlateBrushDrawType::Box"
+      },
+      "Slot": {
+        "ObjectName": "VerticalBox_Unlocked:VerticalBoxSlot_1:VerticalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.46"
+      },
+      "RenderTransform": {
+        "Shear": {
+          "X": -10.0,
+          "Y": 0.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "burst",
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "BB5D6206-4D6B8B0A-53986C8D-6E1A39A8",
+          "Name": "Image",
+          "PossessedObjectClass": {
+            "ObjectName": "Image:Class",
+            "ObjectPath": 0
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "BB5D6206-4D6B8B0A-53986C8D-6E1A39A8",
+          "BindingName": "Image",
+          "Tracks": [
+            {
+              "ObjectName": "burst:MovieSceneFloatTrack_0:MovieSceneFloatTrack",
+              "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.36"
+            },
+            {
+              "ObjectName": "burst:MovieScene2DTransformTrack_0:MovieScene2DTransformTrack",
+              "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.29"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "FrameRangeValue": {
+          "LowerBound": {
+            "BoundType": 1,
+            "BoundValue": {
+              "FrameNumberValue": 1603338240
+            }
+          },
+          "UpperBound": {
+            "BoundType": 1,
+            "BoundValue": {
+              "FrameNumberValue": 20
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": -2113810476,
+        "Denominator": 1140712808
+      },
+      "Signature": "79B0E29B-D8ED6D69-00000000-00000101"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_0",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformTrack_0:MovieScene2DTransformSection_0:MovieScene2DTransformSection",
+          "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.28"
+        }
+      ],
+      "EvaluationFieldGuid": "83B20684-411C1A91-B4C59191-3F9DAEA2",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformTrack_0:MovieScene2DTransformSection_0:MovieScene2DTransformSection",
+              "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.28"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "83B20684-411C1A91-B4C59191-3F9DAEA2"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_0",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatTrack_0:MovieSceneFloatSection_0:MovieSceneFloatSection",
+          "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.35"
+        }
+      ],
+      "EvaluationFieldGuid": "4E7C67CC-4EBEF639-B2C448B3-FFFE3D40",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatTrack_0:MovieSceneFloatSection_0:MovieSceneFloatSection",
+              "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.35"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "4E7C67CC-4EBEF639-B2C448B3-FFFE3D40"
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "Overlay_0:OverlaySlot_2:OverlaySlot",
+          "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.39"
+        },
+        {
+          "ObjectName": "Overlay_0:OverlaySlot_0:OverlaySlot",
+          "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.38"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBox_1:HorizontalBoxSlot_1:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.21"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetTree:Overlay_0:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.37"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Image_122:Image",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.25"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_2",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetTree:Overlay_0:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.37"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Image:Image",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.24"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_1",
+    "Properties": {
+      "WidthOverride": 864.0,
+      "bOverride_WidthOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBox_1:SizeBoxSlot_0:SizeBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.41"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetTree:SizeBox_1:SizeBox",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.40"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:VerticalBox_24:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.42"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_24",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBox_24:VerticalBoxSlot_0:VerticalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.44"
+        },
+        {
+          "ObjectName": "VerticalBox_24:VerticalBoxSlot_1:VerticalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.45"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBox_1:SizeBoxSlot_0:SizeBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.41"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_Unlocked",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBox_Unlocked:VerticalBoxSlot_2:VerticalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.47"
+        },
+        {
+          "ObjectName": "VerticalBox_Unlocked:VerticalBoxSlot_1:VerticalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.46"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "Switcher_PageState:CommonVisibilitySwitcherSlot_1:CommonVisibilitySwitcherSlot",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.15"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetTree:VerticalBox_24:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.42"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:HorizontalBox_0:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.16"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetTree:VerticalBox_24:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.42"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:HorizontalBox_45:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.18"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Properties": {
+      "Padding": {
+        "Right": 1.0
+      },
+      "Parent": {
+        "ObjectName": "WidgetTree:VerticalBox_Unlocked:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.43"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Image_Progress:Image",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.26"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_2",
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "Padding": {
+        "Bottom": 2.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Right",
+      "Parent": {
+        "ObjectName": "WidgetTree:VerticalBox_Unlocked:VerticalBox",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.43"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Text_Progress:CommonRichTextBlock",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.11"
+      }
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "burst_INST",
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "burst_INST:burst:MovieScene",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.27"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "Image",
+          "SlotWidgetName": null,
+          "AnimationGuid": "BB5D6206-4D6B8B0A-53986C8D-6E1A39A8",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "burst",
+      "CompiledData": {
+        "ObjectName": "burst_INST:CompiledData:MovieSceneCompiledData",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.34"
+      },
+      "Signature": "EDD8E33F-4A162B96-931836A1-237E0A94"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "WidgetTree:SizeBox_1:SizeBox",
+        "ObjectPath": "/BattlepassS17/UI/RewardOverview/BattlePassRewardGridHeaderS17.40"
+      }
+    }
+  }
+]

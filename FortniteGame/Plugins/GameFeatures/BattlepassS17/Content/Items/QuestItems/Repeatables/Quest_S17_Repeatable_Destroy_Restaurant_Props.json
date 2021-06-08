@@ -1,0 +1,138 @@
+[
+  {
+    "Type": "AthenaDailyQuestDefinition",
+    "Name": "Quest_S17_Repeatable_Destroy_Restaurant_Props",
+    "Properties": {
+      "QuestSubtype": "EFortQuestSubtype::QuickChallenge",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/Abstrakt/Abstrakt/NPCCharacterData_Abstrakt.NPCCharacterData_Abstrakt",
+        "SubPathString": ""
+      },
+      "RewardsTable": {
+        "ObjectName": "AthenaChallengeReward_DailyChallenge_SeasonAgnostic:DataTable",
+        "ObjectPath": "/Game/Athena/Items/Quests/Rewards/AthenaChallengeReward_DailyChallenge_SeasonAgnostic.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_dailychallenge_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S17_Repeatable_Destroy_Restaurant_Props_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.Achievements.FishstickHead"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Destroy",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "D602BE1D449B70CCAE65E98818055EA1",
+            "SourceString": "Destroy Sticks restaurant decorations"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "3CACFF8A4D5AA73F99AEE996A7759B15",
+            "SourceString": "The creeps that run that place totally deserve it."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 2,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "Category": {
+        "DataTable": {
+          "ObjectName": "QuestCategoryTable:DataTable",
+          "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
+        },
+        "RowName": "BRDailyChallenges"
+      },
+      "CompletionText": {
+        "Namespace": "Quest_S17_Repeatable_Destroy_Restaurant_Props",
+        "Key": "Quest_S17_Repeatable_Destroy_Restaurant_Props_CompletionText",
+        "SourceString": "Fishstick is way too good for them, know what I mean?"
+      },
+      "DisplayName": {
+        "Namespace": "Quest_S17_Repeatable_Destroy_Restaurant_Props",
+        "Key": "Quest_S17_Repeatable_Destroy_Restaurant_Props_DisplayName",
+        "SourceString": "Destroy Sticks restaurant decorations"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S17_Repeatable_Destroy_Restaurant_Props",
+        "Key": "Quest_S17_Repeatable_Destroy_Restaurant_Props_ShortDescription",
+        "SourceString": "The creeps that run that place totally deserve it."
+      },
+      "Description": {
+        "Namespace": "Quest_S17_Repeatable_Destroy_Restaurant_Props",
+        "Key": "Quest_S17_Repeatable_Destroy_Restaurant_Props_Description",
+        "SourceString": "Destroy Sticks restaurant decorations"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP",
+        "Athena.Location.POI.BeachyBluffs"
+      ]
+    }
+  }
+]

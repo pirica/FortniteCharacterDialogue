@@ -1,0 +1,141 @@
+[
+  {
+    "Type": "AthenaDailyQuestDefinition",
+    "Name": "Quest_S17_Repeatable_Reach100HealthAndShield",
+    "Properties": {
+      "QuestSubtype": "EFortQuestSubtype::QuickChallenge",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/SwampStalker/SwampStalker/NPCCharacterData_SwampStalker.NPCCharacterData_SwampStalker",
+        "SubPathString": ""
+      },
+      "RewardsTable": {
+        "ObjectName": "AthenaChallengeReward_DailyChallenge_SeasonAgnostic:DataTable",
+        "ObjectPath": "/Game/Athena/Items/Quests/Rewards/AthenaChallengeReward_DailyChallenge_SeasonAgnostic.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_dailychallenge_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S17_Repeatable_Reach100HealthAndShield_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.Quests.MaxHealthMaxShield"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::ComplexCustom",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "49C7748F4FB991C18CE9A7BB440BC71D",
+            "SourceString": "Reach 100 of both Health and Shield"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "C254BA2440614C45704EBAAAC38E903C",
+            "SourceString": "Be like the gator: Sturdy, protected, and hidden from view."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 1,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "Category": {
+        "DataTable": {
+          "ObjectName": "QuestCategoryTable:DataTable",
+          "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
+        },
+        "RowName": "BRDailyChallenges"
+      },
+      "CompletionText": {
+        "Namespace": "Quest_S17_Repeatable_Reach100HealthAndShield",
+        "Key": "Quest_S17_Repeatable_Reach100HealthAndShield_CompletionText",
+        "SourceString": "Just don't follow the gator's nutritional habits."
+      },
+      "QuestAbilitySet": {
+        "AssetPathName": "/BattlepassS17/Items/QuestAbilities/Quest_Full_Health_Shield/GAS_Quest_Full_Health_Shield.GAS_Quest_Full_Health_Shield",
+        "SubPathString": ""
+      },
+      "DisplayName": {
+        "Namespace": "Quest_S17_Repeatable_Reach100HealthAndShield",
+        "Key": "Quest_S17_Repeatable_Reach100HealthAndShield_DisplayName",
+        "SourceString": "Reach 100 of both Health and Shield"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S17_Repeatable_Reach100HealthAndShield",
+        "Key": "Quest_S17_Repeatable_Reach100HealthAndShield_ShortDescription",
+        "SourceString": "Be like the gator: Sturdy, protected, and hidden from view."
+      },
+      "Description": {
+        "Namespace": "Quest_S17_Repeatable_Reach100HealthAndShield",
+        "Key": "Quest_S17_Repeatable_Reach100HealthAndShield_Description",
+        "SourceString": "Reach 100 of both Health and Shield"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP"
+      ]
+    }
+  }
+]

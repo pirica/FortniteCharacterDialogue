@@ -1,0 +1,127 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "quest_s17_transient_Rook_q01",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaTransientQuest",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/Rook/Rook/NPCCharacterData_Rook.NPCCharacterData_Rook",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "ExpirationDuration": 60,
+      "RewardsTable": {
+        "ObjectName": "ChallengeReward_S17_Transient_UC:DataTable",
+        "ObjectPath": "/BattlepassS17/Items/QuestRewards/ChallengeReward_S17_Transient_UC.0"
+      },
+      "Objectives": [
+        {
+          "BackendName": "quest_s17_transient_Rook_q01_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Item.Weapon.Ranged.Sniper"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "Target.Tags HasTag Homebase.Class || Target.Tags HasTag Athena.Faction.Generic.Hostile || Target.Tags HasTag Pawn.Athena.NPC.Duel.IsBeingChallenged || Target.Tags HasTag Pawn.Athena.NPC.Wildlife.Predator || Target.Tags HasTag Pawn.Athena.NPC.Mang || Target.Tags HasTag Pawn.Athena.NPC.IO || Target.Tags HasTag AISpawnerData.Type.MotherWall || Target.Tags HasTag Pawn.Athena.NPC.Labrador",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Damage",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "83065BD644B736618FA5628324B88180",
+            "SourceString": "Sniper Damage"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "EEAD32C340AB6184DDD69DAB07CB1417",
+            "SourceString": "I need snipers. Impress me."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 100,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "quest_s17_transient_Rook_q01",
+        "Key": "quest_s17_transient_Rook_q01_CompletionText",
+        "SourceString": "I'm not impressed. Yet."
+      },
+      "GrantToProfileType": "athena",
+      "DisplayName": {
+        "Namespace": "quest_s17_transient_Rook_q01",
+        "Key": "quest_s17_transient_Rook_q01_DisplayName",
+        "SourceString": "Sniper Damage"
+      },
+      "ShortDescription": {
+        "Namespace": "quest_s17_transient_Rook_q01",
+        "Key": "quest_s17_transient_Rook_q01_ShortDescription",
+        "SourceString": "I need snipers. Impress me."
+      },
+      "Description": {
+        "Namespace": "quest_s17_transient_Rook_q01",
+        "Key": "quest_s17_transient_Rook_q01_Description",
+        "SourceString": "Sniper Damage"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.Bars"
+      ]
+    }
+  }
+]

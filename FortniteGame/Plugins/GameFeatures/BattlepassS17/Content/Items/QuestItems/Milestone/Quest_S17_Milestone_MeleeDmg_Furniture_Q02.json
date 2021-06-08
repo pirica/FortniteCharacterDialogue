@@ -1,0 +1,144 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "Quest_S17_Milestone_MeleeDmg_Furniture_Q02",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "QuestSubtype": "EFortQuestSubtype::Milestone",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/Abstrakt/Abstrakt/NPCCharacterData_Abstrakt.NPCCharacterData_Abstrakt",
+        "SubPathString": ""
+      },
+      "bSuppressQuestGrantedEvent": true,
+      "bIncludedInCategories": false,
+      "Threshold": 38,
+      "RewardsTable": {
+        "ObjectName": "ChallengeReward_S17_MilestoneXP:DataTable",
+        "ObjectPath": "/BattlepassS17/Items/QuestRewards/ChallengeReward_S17_MilestoneXP.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_s17_milestonepunch_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S17_Milestone_MeleeDmg_Furniture_Q02_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Gameplay.Action.Player.AthenaInVehicle"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": false
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Granted.ItemEquipped.Melee.Harvest"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "Target.Tags HasTag Athena.Quests.Building.Chair || Target.Tags HasTag Building.Type.Container.Furniture.Couch || Target.Tags HasTag Building.Type.Container.Furniture.Bed",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Destroy",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "C6F5434E4A77BFF62E8E1BB3D3F08039",
+            "SourceString": "Destroy sofas, beds, or chairs with a pickaxe"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "4771454D4CD4F791F6EB8B98A11FCFB7",
+            "SourceString": "I'm still blocked. You gotta get me out of my comfort zone."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 50,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "Quest_S17_Milestone_MeleeDmg_Furniture_Q02",
+        "Key": "Quest_S17_Milestone_MeleeDmg_Furniture_Q02_CompletionText",
+        "SourceString": "You went very literal with that."
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Rare",
+      "DisplayName": {
+        "Namespace": "Quest_S17_Milestone_MeleeDmg_Furniture_Q02",
+        "Key": "Quest_S17_Milestone_MeleeDmg_Furniture_Q02_DisplayName",
+        "SourceString": "Destroy sofas, beds, or chairs with a pickaxe"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S17_Milestone_MeleeDmg_Furniture_Q02",
+        "Key": "Quest_S17_Milestone_MeleeDmg_Furniture_Q02_ShortDescription",
+        "SourceString": "I'm still blocked. You gotta get me out of my comfort zone."
+      },
+      "Description": {
+        "Namespace": "Quest_S17_Milestone_MeleeDmg_Furniture_Q02",
+        "Key": "Quest_S17_Milestone_MeleeDmg_Furniture_Q02_Description",
+        "SourceString": "Destroy sofas, beds, or chairs with a pickaxe"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP",
+        "Quest.Metadata.HideForContextualQuestDisplay"
+      ]
+    }
+  }
+]

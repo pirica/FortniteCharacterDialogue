@@ -1,0 +1,330 @@
+[
+  {
+    "Type": "BattlePassUIGameFeatureAction",
+    "Name": "BattlePassUIGameFeatureAction_0",
+    "Properties": {
+      "BattlePassScreenClass": {
+        "AssetPathName": "/BattlepassS17/UI/BattlePassScreenS17.BattlePassScreenS17_C",
+        "SubPathString": ""
+      },
+      "BatlePassInformationModalClass": {
+        "AssetPathName": "/BattlepassS17/UI/AboutModal/BPS17_AboutModal.BPS17_AboutModal_C",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "FortGameFeatureData",
+    "Name": "GameFeatureData",
+    "Properties": {
+      "PlaylistBaseDataTableOverrides": [
+        {
+          "BaseTable": {
+            "AssetPathName": "/BattlepassS17/DataTables/NPCQuests.NPCQuests",
+            "SubPathString": ""
+          },
+          "PlaylistToOverrideTableMap": {
+            "Athena.Playlist.TeamRumble": {
+              "AssetPathName": "/BattlepassS17/DataTables/NPCQuests_Rumble.NPCQuests_Rumble",
+              "SubPathString": ""
+            },
+            "Athena.Playlist.Low": {
+              "AssetPathName": "/BattlepassS17/DataTables/NPCQuests_Low.NPCQuests_Low",
+              "SubPathString": ""
+            },
+            "Athena.Playlist.Titanium": {
+              "AssetPathName": "/BattlepassS17/DataTables/NPCQuests_Titanium.NPCQuests_Titanium",
+              "SubPathString": ""
+            },
+            "Athena.Playlist.Sneaky": {
+              "AssetPathName": "/BattlepassS17/DataTables/NPCQuests_Sneaky.NPCQuests_Sneaky",
+              "SubPathString": ""
+            },
+            "Athena.Playlist.Vamp": {
+              "AssetPathName": "/BattlepassS17/DataTables/NPCQuests_Vamp.NPCQuests_Vamp",
+              "SubPathString": ""
+            }
+          }
+        }
+      ],
+      "DefaultLootTableData": {
+        "LootTierData": {
+          "AssetPathName": "/BattlepassS17/DataTables/Loot/CompositeLootTierData_FreshCheese.CompositeLootTierData_FreshCheese",
+          "SubPathString": ""
+        },
+        "LootPackageData": {
+          "AssetPathName": "/BattlepassS17/DataTables/Loot/CompositeLootPackageData_FreshCheese.CompositeLootPackageData_FreshCheese",
+          "SubPathString": ""
+        }
+      },
+      "PlaylistOverrideLootTableData": {
+        "Athena.Playlist.Default": {
+          "LootTierData": {
+            "AssetPathName": "/BattlepassS17/DataTables/Loot/CompositeLootTierData_FreshCheese.CompositeLootTierData_FreshCheese",
+            "SubPathString": ""
+          },
+          "LootPackageData": {
+            "AssetPathName": "/BattlepassS17/DataTables/Loot/CompositeLootPackageData_FreshCheese.CompositeLootPackageData_FreshCheese",
+            "SubPathString": ""
+          }
+        },
+        "Athena.Playlist.ItemsTest": {
+          "LootTierData": {
+            "AssetPathName": "/BattlepassS17/DataTables/Loot/CompositeLootTierData_FreshCheese.CompositeLootTierData_FreshCheese",
+            "SubPathString": ""
+          },
+          "LootPackageData": {
+            "AssetPathName": "/BattlepassS17/DataTables/Loot/CompositeLootPackageData_FreshCheese.CompositeLootPackageData_FreshCheese",
+            "SubPathString": ""
+          }
+        }
+      },
+      "LevelOverlayConfig": {
+        "ObjectName": "BattlepassS17_LevelOverlay_Config:FortLevelOverlayConfig",
+        "ObjectPath": "/BattlepassS17/Maps/BattlepassS17_LevelOverlay_Config.0"
+      },
+      "Actions": [
+        {
+          "ObjectName": "GameFeatureData:BattlePassUIGameFeatureAction_0:BattlePassUIGameFeatureAction",
+          "ObjectPath": "/BattlepassS17/GameFeatureData.0"
+        }
+      ],
+      "PrimaryAssetTypesToScan": [
+        {
+          "PrimaryAssetType": "Quest",
+          "AssetBaseClass": {
+            "AssetPathName": "/Script/FortniteGame.FortQuestItemDefinition",
+            "SubPathString": ""
+          },
+          "bHasBlueprintClasses": false,
+          "bIsEditorOnly": false,
+          "Directories": [
+            {
+              "Path": "Items"
+            }
+          ],
+          "SpecificAssets": [],
+          "Rules": {
+            "Priority": -1,
+            "ChunkId": -1,
+            "bApplyRecursively": true,
+            "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
+          }
+        },
+        {
+          "PrimaryAssetType": "RepeatableQuest",
+          "AssetBaseClass": {
+            "AssetPathName": "/Script/FortniteGame.AthenaDailyQuestDefinition",
+            "SubPathString": ""
+          },
+          "bHasBlueprintClasses": false,
+          "bIsEditorOnly": false,
+          "Directories": [
+            {
+              "Path": "Items"
+            }
+          ],
+          "SpecificAssets": [],
+          "Rules": {
+            "Priority": -1,
+            "ChunkId": -1,
+            "bApplyRecursively": true,
+            "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
+          }
+        },
+        {
+          "PrimaryAssetType": "ChallengeBundle",
+          "AssetBaseClass": {
+            "AssetPathName": "/Script/FortniteGame.FortChallengeBundleItemDefinition",
+            "SubPathString": ""
+          },
+          "bHasBlueprintClasses": false,
+          "bIsEditorOnly": false,
+          "Directories": [
+            {
+              "Path": "Items"
+            }
+          ],
+          "SpecificAssets": [],
+          "Rules": {
+            "Priority": -1,
+            "ChunkId": -1,
+            "bApplyRecursively": true,
+            "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
+          }
+        },
+        {
+          "PrimaryAssetType": "ChallengeBundleSchedule",
+          "AssetBaseClass": {
+            "AssetPathName": "/Script/FortniteGame.FortChallengeBundleScheduleDefinition",
+            "SubPathString": ""
+          },
+          "bHasBlueprintClasses": false,
+          "bIsEditorOnly": false,
+          "Directories": [
+            {
+              "Path": "Items"
+            }
+          ],
+          "SpecificAssets": [],
+          "Rules": {
+            "Priority": -1,
+            "ChunkId": -1,
+            "bApplyRecursively": true,
+            "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
+          }
+        },
+        {
+          "PrimaryAssetType": "ConversationDatabase",
+          "AssetBaseClass": {
+            "AssetPathName": "/Script/CommonConversationRuntime.ConversationDatabase",
+            "SubPathString": ""
+          },
+          "bHasBlueprintClasses": false,
+          "bIsEditorOnly": false,
+          "Directories": [
+            {
+              "Path": "TransientQuests/Conversations"
+            },
+            {
+              "Path": "Conversations"
+            }
+          ],
+          "SpecificAssets": [],
+          "Rules": {
+            "Priority": -1,
+            "ChunkId": -1,
+            "bApplyRecursively": true,
+            "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
+          }
+        },
+        {
+          "PrimaryAssetType": "AthenaSeason",
+          "AssetBaseClass": {
+            "AssetPathName": "/Script/FortniteGame.AthenaSeasonItemDefinition",
+            "SubPathString": ""
+          },
+          "bHasBlueprintClasses": false,
+          "bIsEditorOnly": false,
+          "Directories": [
+            {
+              "Path": "SeasonData"
+            }
+          ],
+          "SpecificAssets": [],
+          "Rules": {
+            "Priority": -1,
+            "ChunkId": -1,
+            "bApplyRecursively": true,
+            "CookRule": "EPrimaryAssetCookRule::Unknown"
+          }
+        },
+        {
+          "PrimaryAssetType": "Token",
+          "AssetBaseClass": {
+            "AssetPathName": "/Script/FortniteGame.FortTokenType",
+            "SubPathString": ""
+          },
+          "bHasBlueprintClasses": false,
+          "bIsEditorOnly": false,
+          "Directories": [
+            {
+              "Path": "Items/Tokens"
+            }
+          ],
+          "SpecificAssets": [],
+          "Rules": {
+            "Priority": -1,
+            "ChunkId": -1,
+            "bApplyRecursively": true,
+            "CookRule": "EPrimaryAssetCookRule::Unknown"
+          }
+        },
+        {
+          "PrimaryAssetType": "AISpawnerData",
+          "AssetBaseClass": {
+            "AssetPathName": "/Script/FortniteGame.FortAthenaAISpawnerData",
+            "SubPathString": ""
+          },
+          "bHasBlueprintClasses": true,
+          "bIsEditorOnly": false,
+          "Directories": [
+            {
+              "Path": "AI"
+            }
+          ],
+          "SpecificAssets": [],
+          "Rules": {
+            "Priority": -1,
+            "ChunkId": -1,
+            "bApplyRecursively": true,
+            "CookRule": "EPrimaryAssetCookRule::Unknown"
+          }
+        },
+        {
+          "PrimaryAssetType": "FortTandemCharacterData",
+          "AssetBaseClass": {
+            "AssetPathName": "/Script/FortniteGame.FortTandemCharacterData",
+            "SubPathString": ""
+          },
+          "bHasBlueprintClasses": false,
+          "bIsEditorOnly": false,
+          "Directories": [
+            {
+              "Path": "Items/NpcItems"
+            }
+          ],
+          "SpecificAssets": [],
+          "Rules": {
+            "Priority": -1,
+            "ChunkId": -1,
+            "bApplyRecursively": true,
+            "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
+          }
+        },
+        {
+          "PrimaryAssetType": "AccountResource",
+          "AssetBaseClass": {
+            "AssetPathName": "/Script/FortniteGame.FortPersistentResourceItemDefinition",
+            "SubPathString": ""
+          },
+          "bHasBlueprintClasses": false,
+          "bIsEditorOnly": false,
+          "Directories": [
+            {
+              "Path": "Items/PersistentResources"
+            }
+          ],
+          "SpecificAssets": [],
+          "Rules": {
+            "Priority": -1,
+            "ChunkId": -1,
+            "bApplyRecursively": true,
+            "CookRule": "EPrimaryAssetCookRule::Unknown"
+          }
+        },
+        {
+          "PrimaryAssetType": "FriendChest",
+          "AssetBaseClass": {
+            "AssetPathName": "/Script/FortniteGame.FortFriendChestItemDefinition",
+            "SubPathString": ""
+          },
+          "bHasBlueprintClasses": false,
+          "bIsEditorOnly": false,
+          "Directories": [
+            {
+              "Path": "Items"
+            }
+          ],
+          "SpecificAssets": [],
+          "Rules": {
+            "Priority": -1,
+            "ChunkId": -1,
+            "bApplyRecursively": true,
+            "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
+          }
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,120 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "Quest_S17_Emperor_q04",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "bIncludedInCategories": false,
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_s17_emperor_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "quest_s17_Emperor_q04_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "Target.Tags HasTag AISpawnerData.Type.Tandem.DerbyDominator || Target.Tags HasTag AISpawnerData.Type.Tandem.Galactico || Target.Tags HasTag AISpawnerData.Type.Tandem.ShotStopper",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::InitiatedNPCConversation",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "C780AC1844F97AA6D3642FA6E019437B",
+            "SourceString": "Talk to a soccer character"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "DC20581A477C3C8B2E0D70B65EFCEA90",
+            "SourceString": "Let's get the squad rounded up!"
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 1,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "quest_s16_Bicycle_q01",
+        "Key": "quest_s16_Bicycle_q01_CompletionText",
+        "SourceString": "Excellent. Let's hit the pitch sometime."
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Epic",
+      "DisplayName": {
+        "Namespace": "quest_s16_Bicycle_q01",
+        "Key": "quest_s16_Bicycle_q01_DisplayName",
+        "SourceString": "Talk to a soccer character"
+      },
+      "ShortDescription": {
+        "Namespace": "quest_s16_Bicycle_q01",
+        "Key": "quest_s16_Bicycle_q01_ShortDescription",
+        "SourceString": "Let's get the squad rounded up!"
+      },
+      "Description": {
+        "Namespace": "quest_s16_Bicycle_q01",
+        "Key": "quest_s16_Bicycle_q01_Description",
+        "SourceString": "Talk to a soccer character"
+      },
+      "GameplayTags": [
+        "Athena.Location.POI.PleasantPark",
+        "Athena.Location.POI.HollyHedges",
+        "Athena.Location.POI.DirtyDocks"
+      ]
+    }
+  }
+]

@@ -1,0 +1,128 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "quest_s17_transient_Faux_q01",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaTransientQuest",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/Faux/Faux/NPCCharacterData_Faux.NPCCharacterData_Faux",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "ExpirationDuration": -1,
+      "RewardsTable": {
+        "ObjectName": "ChallengeReward_S17_Transient_C:DataTable",
+        "ObjectPath": "/BattlepassS17/Items/QuestRewards/ChallengeReward_S17_Transient_C.0"
+      },
+      "Objectives": [
+        {
+          "BackendName": "quest_s17_transient_Faux_q01_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Item.Weapon.Ranged.Shotgun"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "Target.Tags HasTag Homebase.Class || Target.Tags HasTag Athena.Faction.Generic.Hostile || Target.Tags HasTag Pawn.Athena.NPC.Duel.IsBeingChallenged || Target.Tags HasTag Pawn.Athena.NPC.Wildlife.Predator || Target.Tags HasTag Pawn.Athena.NPC.Mang || Target.Tags HasTag Pawn.Athena.NPC.IO || Target.Tags HasTag AISpawnerData.Type.MotherWall || Target.Tags HasTag Pawn.Athena.NPC.Labrador",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Damage",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "333C60DB4C9BB30E786806B72E55A931",
+            "SourceString": "Shotgun Damage"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "965A2CAF4D2DA57795897AA0FC961AC4",
+            "SourceString": "Everyone's worried about the ship. I'm worried about what's inside it."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 100,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "quest_s17_transient_Faux_q01",
+        "Key": "quest_s17_transient_Faux_q01_CompletionText",
+        "SourceString": "Don't think. Don't aim. Just blast."
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Common",
+      "DisplayName": {
+        "Namespace": "quest_s17_transient_Faux_q01",
+        "Key": "quest_s17_transient_Faux_q01_DisplayName",
+        "SourceString": "Shotgun Damage"
+      },
+      "ShortDescription": {
+        "Namespace": "quest_s17_transient_Faux_q01",
+        "Key": "quest_s17_transient_Faux_q01_ShortDescription",
+        "SourceString": "Everyone's worried about the ship. I'm worried about what's inside it."
+      },
+      "Description": {
+        "Namespace": "quest_s17_transient_Faux_q01",
+        "Key": "quest_s17_transient_Faux_q01_Description",
+        "SourceString": "Shotgun Damage"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.Bars"
+      ]
+    }
+  }
+]

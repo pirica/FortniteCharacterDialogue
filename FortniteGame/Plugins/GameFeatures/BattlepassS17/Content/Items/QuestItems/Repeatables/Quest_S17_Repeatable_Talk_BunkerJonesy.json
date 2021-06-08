@@ -1,0 +1,132 @@
+[
+  {
+    "Type": "AthenaDailyQuestDefinition",
+    "Name": "Quest_S17_Repeatable_Talk_BunkerJonesy",
+    "Properties": {
+      "QuestSubtype": "EFortQuestSubtype::QuickChallenge",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/BunkerJonesy/BunkerJonesy/NPCCharacterData_BunkerJonesy.NPCCharacterData_BunkerJonesy",
+        "SubPathString": ""
+      },
+      "RewardsTable": {
+        "ObjectName": "AthenaChallengeReward_DailyChallenge_SeasonAgnostic:DataTable",
+        "ObjectPath": "/Game/Athena/Items/Quests/Rewards/AthenaChallengeReward_DailyChallenge_SeasonAgnostic.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_dailychallenge_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S17_Repeatable_Talk_BunkerJonesy_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "AISpawnerData.Type.Tandem.BunkerJonesy"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::InitiatedNPCConversation",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": false,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "678162714BFEEEF95AD626BB1D88AE3A",
+            "SourceString": "Talk to Bunker Jonesy"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "DC4343BE49C0135A735D4A941729CBBC",
+            "SourceString": "Come see me if you blow this mystery wide open."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 1,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "Weight": 0.5,
+      "Category": {
+        "DataTable": {
+          "ObjectName": "QuestCategoryTable:DataTable",
+          "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
+        },
+        "RowName": "BRDailyChallenges"
+      },
+      "CompletionText": {
+        "Namespace": "Quest_S17_Repeatable_Talk_BunkerJonesy",
+        "Key": "Quest_S17_Repeatable_Talk_BunkerJonesy_CompletionText",
+        "SourceString": "I'm not sure you're not in on it..."
+      },
+      "DisplayName": {
+        "Namespace": "Quest_S17_Repeatable_Talk_BunkerJonesy",
+        "Key": "Quest_S17_Repeatable_Talk_BunkerJonesy_DisplayName",
+        "SourceString": "Talk to Bunker Jonesy"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S17_Repeatable_Talk_BunkerJonesy",
+        "Key": "Quest_S17_Repeatable_Talk_BunkerJonesy_ShortDescription",
+        "SourceString": "Come see me if you blow this mystery wide open."
+      },
+      "Description": {
+        "Namespace": "Quest_S17_Repeatable_Talk_BunkerJonesy",
+        "Key": "Quest_S17_Repeatable_Talk_BunkerJonesy_Description",
+        "SourceString": "Talk to Bunker Jonesy"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP",
+        "Athena.Location.POI.PleasantPark"
+      ]
+    }
+  }
+]

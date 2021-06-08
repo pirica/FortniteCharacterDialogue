@@ -1,0 +1,1127 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BuyResourcesBundleCheckBox",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "Construct",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "BP_OnUnhovered",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "BP_OnHovered",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "OnStateChanged",
+    "Properties": {}
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "BuyResourcesBundleCheckBox_C",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "BuyResourcesBundleCheckBox_C:WidgetTree:WidgetTree",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.59"
+      },
+      "bClassRequiresNativeTick": true,
+      "Animations": [
+        {
+          "ObjectName": "BuyResourcesBundleCheckBox_C:Burst_INST:WidgetAnimation",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.56"
+        },
+        {
+          "ObjectName": "BuyResourcesBundleCheckBox_C:Check_INST:WidgetAnimation",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.57"
+        },
+        {
+          "ObjectName": "BuyResourcesBundleCheckBox_C:Hover_INST:WidgetAnimation",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.58"
+        }
+      ],
+      "UberGraphFunction": {
+        "ObjectName": "BuyResourcesBundleCheckBox_C:ExecuteUbergraph_BuyResourcesBundleCheckBox:Function",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.0"
+      }
+    }
+  },
+  {
+    "Type": "BuyResourcesBundleCheckBox_C",
+    "Name": "Default__BuyResourcesBundleCheckBox_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "Style": {
+        "ObjectName": "ButtonStyle-Empty_C:BlueprintGeneratedClass",
+        "ObjectPath": "/Game/UI/Foundation/Buttons/ButtonStyles/ButtonStyle-Empty.0"
+      },
+      "ForegroundColor": {
+        "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+      },
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "CommonActionWidget",
+    "Name": "InputActionWidget",
+    "Properties": {
+      "Slot": {
+        "ObjectName": "Overlay_0:OverlaySlot_3:OverlaySlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.52"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": 1.25,
+          "Y": 1.25
+        }
+      }
+    }
+  },
+  {
+    "Type": "CommonRichTextBlock",
+    "Name": "TextBlock",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "6DFC558B41A9A250063A83B71D44E3CE",
+        "SourceString": "Buy a bundle of <text color=\"fff\">25 Levels</> at a reduced price\r\nof <text color=\"fff\">1,850 V-Bucks</> (normally 3,750)."
+      },
+      "bOverrideDefaultStyle": true,
+      "DefaultTextStyleOverride": {
+        "Font": {
+          "FontObject": {
+            "ObjectName": "Burbank:Font",
+            "ObjectPath": "/Game/UI/Foundation/Fonts/Burbank.0"
+          },
+          "TypefaceFontName": "Burbank-PlayerPower",
+          "Size": 26
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "R": 0.215861,
+            "G": 0.658375,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "37A8FF"
+          }
+        }
+      },
+      "Slot": {
+        "ObjectName": "HB_BundleText:HorizontalBoxSlot_1:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.10"
+      },
+      "RenderTransform": {
+        "Shear": {
+          "X": -10.0,
+          "Y": 0.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HB_BundleText",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HB_BundleText:HorizontalBoxSlot_3:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.11"
+        },
+        {
+          "ObjectName": "HB_BundleText:HorizontalBoxSlot_1:HorizontalBoxSlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.10"
+        }
+      ],
+      "bIsVariable": true,
+      "Visibility": "ESlateVisibility::Visible"
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:HB_BundleText:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.9"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:TextBlock:CommonRichTextBlock",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.8"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_3",
+    "Properties": {
+      "Padding": {
+        "Right": 16.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Left",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:HB_BundleText:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.9"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Overlay_0:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.49"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Burst",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 64.0,
+          "Y": 64.0
+        },
+        "ResourceObject": {
+          "ObjectName": "M_UI_CheckBox_Burst:MaterialInstanceConstant",
+          "ObjectPath": "/BattlepassS17/UI/UI_Art/M_UI_CheckBox_Burst.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "Overlay_1:OverlaySlot_1:OverlaySlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.55"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible",
+      "RenderOpacity": 0.0
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Check",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 64.0,
+          "Y": 64.0
+        },
+        "ResourceObject": {
+          "ObjectName": "T-Icon-Check-64:Texture2D",
+          "ObjectPath": "/Game/UI/Foundation/Textures/Icons/Checks/T-Icon-Check-64.0"
+        }
+      },
+      "ColorAndOpacity": {
+        "R": 0.0,
+        "G": 1.0,
+        "B": 0.327778,
+        "A": 1.0,
+        "Hex": "00FF54"
+      },
+      "Slot": {
+        "ObjectName": "Overlay_0:OverlaySlot_7:OverlaySlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.53"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 4.0,
+          "Y": -11.0
+        }
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Image_Checkbox",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 64.0,
+          "Y": 64.0
+        },
+        "ResourceObject": {
+          "ObjectName": "M_UI_CheckBox_Unchecked:MaterialInstanceConstant",
+          "ObjectPath": "/BattlepassS17/UI/UI_Art/M_UI_CheckBox_Unchecked.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "Overlay_1:OverlaySlot_0:OverlaySlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.54"
+      }
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "Burst",
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "B8A2C0B2-45EA09C4-070ECA8F-A931CD1C",
+          "Name": "Image_Burst",
+          "PossessedObjectClass": {
+            "ObjectName": "Image:Class",
+            "ObjectPath": 0
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "B8A2C0B2-45EA09C4-070ECA8F-A931CD1C",
+          "BindingName": "Image_Burst",
+          "Tracks": [
+            {
+              "ObjectName": "Burst:MovieSceneFloatTrack_0:MovieSceneFloatTrack",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.44"
+            },
+            {
+              "ObjectName": "Burst:MovieScene2DTransformTrack_0:MovieScene2DTransformTrack",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.21"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "FrameRangeValue": {
+          "LowerBound": {
+            "BoundType": 1,
+            "BoundValue": {
+              "FrameNumberValue": 1603338240
+            }
+          },
+          "UpperBound": {
+            "BoundType": 1,
+            "BoundValue": {
+              "FrameNumberValue": 20
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 988193226,
+        "Denominator": 1138941922
+      },
+      "Signature": "70E98DB1-6C2953CB-00000000-00000101"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "Check",
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "06867445-4F972876-1ADBD295-C35B916A",
+          "Name": "Image_Check",
+          "PossessedObjectClass": {
+            "ObjectName": "Image:Class",
+            "ObjectPath": 0
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "06867445-4F972876-1ADBD295-C35B916A",
+          "BindingName": "Image_Check",
+          "Tracks": [
+            {
+              "ObjectName": "Check:MovieSceneColorTrack_0:MovieSceneColorTrack",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.39"
+            },
+            {
+              "ObjectName": "Check:MovieScene2DTransformTrack_0:MovieScene2DTransformTrack",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.22"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "FrameRangeValue": {
+          "LowerBound": {
+            "BoundType": 1,
+            "BoundValue": {
+              "FrameNumberValue": 1966145536
+            }
+          },
+          "UpperBound": {
+            "BoundType": 0,
+            "BoundValue": {
+              "FrameNumberValue": 20
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": -10721227,
+        "Denominator": 1168366696
+      },
+      "Signature": "49EA8993-C50AD5F2-00000000-00000101"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "Hover",
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "C727DFD8-45E5AAC9-D314158F-D7A668C8",
+          "Name": "Image_Checkbox",
+          "PossessedObjectClass": {
+            "ObjectName": "Image:Class",
+            "ObjectPath": 0
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "01BBEEBB-4E773FE7-DFF220A8-46E95642",
+          "Name": "Overlay_1",
+          "PossessedObjectClass": {
+            "ObjectName": "Overlay:Class",
+            "ObjectPath": 0
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "E61E56BF-47583F08-7A7EC4B1-63444901",
+          "Name": "Image_Burst",
+          "PossessedObjectClass": {
+            "ObjectName": "Image:Class",
+            "ObjectPath": 0
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "C727DFD8-45E5AAC9-D314158F-D7A668C8",
+          "BindingName": "Image_Checkbox",
+          "Tracks": [
+            {
+              "ObjectName": "Hover:MovieSceneWidgetMaterialTrack_0:MovieSceneWidgetMaterialTrack",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.47"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "01BBEEBB-4E773FE7-DFF220A8-46E95642",
+          "BindingName": "Overlay_1",
+          "Tracks": [
+            {
+              "ObjectName": "Hover:MovieScene2DTransformTrack_0:MovieScene2DTransformTrack",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.23"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "E61E56BF-47583F08-7A7EC4B1-63444901",
+          "BindingName": "Image_Burst",
+          "Tracks": [
+            {
+              "ObjectName": "Hover:MovieSceneWidgetMaterialTrack_1:MovieSceneWidgetMaterialTrack",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.48"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "FrameRangeValue": {
+          "LowerBound": {
+            "BoundType": 1,
+            "BoundValue": {
+              "FrameNumberValue": 589889536
+            }
+          },
+          "UpperBound": {
+            "BoundType": 0,
+            "BoundValue": {
+              "FrameNumberValue": 20
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": -1914348641,
+        "Denominator": 1237147419
+      },
+      "Signature": "452232A4-6825E9ED-00000000-00000101"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_0",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformTrack_0:MovieScene2DTransformSection_0:MovieScene2DTransformSection",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.18"
+        }
+      ],
+      "EvaluationFieldGuid": "B07691D6-48B9AB87-6B02E597-596AA7E8",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformTrack_0:MovieScene2DTransformSection_0:MovieScene2DTransformSection",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.18"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "B07691D6-48B9AB87-6B02E597-596AA7E8"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_0",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformTrack_0:MovieScene2DTransformSection_0:MovieScene2DTransformSection",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.19"
+        }
+      ],
+      "EvaluationFieldGuid": "652068BF-480E5B0E-7B160A8E-91C70DDE",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformTrack_0:MovieScene2DTransformSection_0:MovieScene2DTransformSection",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.19"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "652068BF-480E5B0E-7B160A8E-91C70DDE"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_0",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformTrack_0:MovieScene2DTransformSection_0:MovieScene2DTransformSection",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.20"
+        }
+      ],
+      "EvaluationFieldGuid": "3006BDFF-4A3C61FE-CE8FC3B3-EDEC14B4",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformTrack_0:MovieScene2DTransformSection_0:MovieScene2DTransformSection",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.20"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "3006BDFF-4A3C61FE-CE8FC3B3-EDEC14B4"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneColorSection",
+    "Name": "MovieSceneColorSection_0",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneColorTrack",
+    "Name": "MovieSceneColorTrack_0",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "ColorAndOpacity",
+        "PropertyPath": "ColorAndOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneColorTrack_0:MovieSceneColorSection_0:MovieSceneColorSection",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.38"
+        }
+      ],
+      "EvaluationFieldGuid": "C590624A-48FA82BE-BFEA3A84-BD1CD77B",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneColorTrack_0:MovieSceneColorSection_0:MovieSceneColorSection",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.38"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "C590624A-48FA82BE-BFEA3A84-BD1CD77B"
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_0",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatTrack_0:MovieSceneFloatSection_0:MovieSceneFloatSection",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.43"
+        }
+      ],
+      "EvaluationFieldGuid": "54104BBC-4628B842-7B5B8093-4840FE99",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatTrack_0:MovieSceneFloatSection_0:MovieSceneFloatSection",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.43"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "54104BBC-4628B842-7B5B8093-4840FE99"
+    }
+  },
+  {
+    "Type": "MovieSceneParameterSection",
+    "Name": "MovieSceneParameterSection_0",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneParameterSection",
+    "Name": "MovieSceneParameterSection_0",
+    "Properties": {}
+  },
+  {
+    "Type": "MovieSceneWidgetMaterialTrack",
+    "Name": "MovieSceneWidgetMaterialTrack_0",
+    "Properties": {
+      "BrushPropertyNamePath": [
+        "Brush"
+      ],
+      "TrackName": "Brush",
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneWidgetMaterialTrack_0:MovieSceneParameterSection_0:MovieSceneParameterSection",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.45"
+        }
+      ],
+      "EvaluationFieldGuid": "2739F856-45AA5BB1-78172594-5D100762",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneWidgetMaterialTrack_0:MovieSceneParameterSection_0:MovieSceneParameterSection",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.45"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "2739F856-45AA5BB1-78172594-5D100762"
+    }
+  },
+  {
+    "Type": "MovieSceneWidgetMaterialTrack",
+    "Name": "MovieSceneWidgetMaterialTrack_1",
+    "Properties": {
+      "BrushPropertyNamePath": [
+        "Brush"
+      ],
+      "TrackName": "Brush",
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneWidgetMaterialTrack_1:MovieSceneParameterSection_0:MovieSceneParameterSection",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.46"
+        }
+      ],
+      "EvaluationFieldGuid": "54241C41-4F47FDFE-D8D5F690-82E2ED2F",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneWidgetMaterialTrack_1:MovieSceneParameterSection_0:MovieSceneParameterSection",
+              "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.46"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "54241C41-4F47FDFE-D8D5F690-82E2ED2F"
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_0",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "Overlay_0:OverlaySlot_0:OverlaySlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.51"
+        },
+        {
+          "ObjectName": "Overlay_0:OverlaySlot_7:OverlaySlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.53"
+        },
+        {
+          "ObjectName": "Overlay_0:OverlaySlot_3:OverlaySlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.52"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HB_BundleText:HorizontalBoxSlot_3:HorizontalBoxSlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.11"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_1",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "Overlay_1:OverlaySlot_1:OverlaySlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.55"
+        },
+        {
+          "ObjectName": "Overlay_1:OverlaySlot_0:OverlaySlot",
+          "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.54"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "Overlay_0:OverlaySlot_0:OverlaySlot",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.51"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetTree:Overlay_0:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.49"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Overlay_1:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.50"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_3",
+    "Properties": {
+      "Padding": {
+        "Left": -16.0,
+        "Top": -24.0,
+        "Right": -16.0,
+        "Bottom": -24.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "WidgetTree:Overlay_0:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.49"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:InputActionWidget:CommonActionWidget",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.7"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_7",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetTree:Overlay_0:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.49"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Image_Check:Image",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.13"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetTree:Overlay_1:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.50"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Image_Checkbox:Image",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.14"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetTree:Overlay_1:Overlay",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.50"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Image_Burst:Image",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.12"
+      }
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "Burst_INST",
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "Burst_INST:Burst:MovieScene",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.15"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "Image_Burst",
+          "SlotWidgetName": null,
+          "AnimationGuid": "B8A2C0B2-45EA09C4-070ECA8F-A931CD1C",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "Burst",
+      "CompiledData": {
+        "ObjectName": "Burst_INST:CompiledData:MovieSceneCompiledData",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.40"
+      },
+      "Signature": "E597FCE3-4A939A2E-566DB69C-FD35CBE4"
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "Check_INST",
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "Check_INST:Check:MovieScene",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.16"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "Image_Check",
+          "SlotWidgetName": null,
+          "AnimationGuid": "06867445-4F972876-1ADBD295-C35B916A",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "Check",
+      "CompiledData": {
+        "ObjectName": "Check_INST:CompiledData:MovieSceneCompiledData",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.41"
+      },
+      "Signature": "B985A105-423F1C56-680F01A5-0466A4E2"
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "Hover_INST",
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "Hover_INST:Hover:MovieScene",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.17"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "Image_Checkbox",
+          "SlotWidgetName": null,
+          "AnimationGuid": "C727DFD8-45E5AAC9-D314158F-D7A668C8",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "Overlay_1",
+          "SlotWidgetName": null,
+          "AnimationGuid": "01BBEEBB-4E773FE7-DFF220A8-46E95642",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "Image_Burst",
+          "SlotWidgetName": null,
+          "AnimationGuid": "E61E56BF-47583F08-7A7EC4B1-63444901",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "Hover",
+      "CompiledData": {
+        "ObjectName": "Hover_INST:CompiledData:MovieSceneCompiledData",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.42"
+      },
+      "Signature": "4E1BFF06-4613DEEC-432C4785-BE5A5486"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "WidgetTree:HB_BundleText:HorizontalBox",
+        "ObjectPath": "/BattlepassS17/UI/BuyResourcesWidget/BuyResourcesBundleCheckBox.9"
+      }
+    }
+  }
+]

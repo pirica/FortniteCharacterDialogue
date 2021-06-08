@@ -1,0 +1,132 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "Quest_s17_SpecialForces_QL01_Uncommon",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaTransientQuest",
+      "bIncludedInCategories": false,
+      "bIsShared": true,
+      "ExpirationDuration": 60,
+      "Rewards": [
+        {
+          "ItemPrimaryAssetId": {
+            "PrimaryAssetType": {
+              "Name": "Quest"
+            },
+            "PrimaryAssetName": "Quest_s17_SpecialForces_QL01_Rare"
+          },
+          "Quantity": 1
+        }
+      ],
+      "RewardsTable": {
+        "ObjectName": "ChallengeReward_S17_Transient_C:DataTable",
+        "ObjectPath": "/BattlepassS17/Items/QuestRewards/ChallengeReward_S17_Transient_C.0"
+      },
+      "Objectives": [
+        {
+          "BackendName": "Quest_s17_SpecialForces_QL01_Uncommon_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Item.Weapon.Ranged.Shotgun"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "Target.Tags HasTag Homebase.Class || Target.Tags HasTag Athena.Faction.Generic.Hostile || Target.Tags HasTag Pawn.Athena.NPC.Duel.IsBeingChallenged || Target.Tags HasTag Pawn.Athena.NPC.Wildlife.Predator",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Damage",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "62B610F74C11E948E79D75AED111D0C3",
+            "SourceString": "Deal shotgun Damage"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "376F6CAE4E791A6E20BD7485A777FC37",
+            "SourceString": "[PH] Placeholder"
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 3,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "Quest_s17_SpecialForces_QL01_Uncommon",
+        "Key": "Quest_s17_SpecialForces_QL01_Uncommon_CompletionText",
+        "SourceString": "[PH] Placeholder"
+      },
+      "GrantToProfileType": "athena",
+      "DisplayName": {
+        "Namespace": "Quest_s17_SpecialForces_QL01_Uncommon",
+        "Key": "Quest_s17_SpecialForces_QL01_Uncommon_DisplayName",
+        "SourceString": "Deal shotgun Damage"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_s17_SpecialForces_QL01_Uncommon",
+        "Key": "Quest_s17_SpecialForces_QL01_Uncommon_ShortDescription",
+        "SourceString": "[PH] Placeholder"
+      },
+      "Description": {
+        "Namespace": "Quest_s17_SpecialForces_QL01_Uncommon",
+        "Key": "Quest_s17_SpecialForces_QL01_Uncommon_Description",
+        "SourceString": "Deal shotgun Damage"
+      }
+    }
+  }
+]

@@ -1,0 +1,140 @@
+[
+  {
+    "Type": "AthenaDailyQuestDefinition",
+    "Name": "Quest_S17_Repeatable_Destroy_Durrrburger_Durrrfoodtruck",
+    "Properties": {
+      "QuestSubtype": "EFortQuestSubtype::QuickChallenge",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/Abstrakt/Abstrakt/NPCCharacterData_Abstrakt.NPCCharacterData_Abstrakt",
+        "SubPathString": ""
+      },
+      "RewardsTable": {
+        "ObjectName": "AthenaChallengeReward_DailyChallenge_SeasonAgnostic:DataTable",
+        "ObjectPath": "/Game/Athena/Items/Quests/Rewards/AthenaChallengeReward_DailyChallenge_SeasonAgnostic.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_dailychallenge_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S17_Repeatable_Destroy_Durrrburger_Durrrfoodtruck_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Building.Type"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "Source.Tags HasTag Athena.Location.UnNamedPOI.PretzelRestaurant_B || Source.Tags HasTag Athena.Location.UnnamedPOI.DurrrBurger",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Destroy",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "755A4EA44A252E5AF2EABF8378CE7C1E",
+            "SourceString": "Destroy structures at Durrr Burger Restaurant or Durrr Burger Food Truck"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "0B4F9C47405EAB85A0D5EA825CD07A68",
+            "SourceString": "Don't forget to make your mark."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 3,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "Weight": 0.0,
+      "Category": {
+        "DataTable": {
+          "ObjectName": "QuestCategoryTable:DataTable",
+          "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
+        },
+        "RowName": "BRDailyChallenges"
+      },
+      "CompletionText": {
+        "Namespace": "Quest_S17_Repeatable_Destroy_Durrrburger_Durrrfoodtruck",
+        "Key": "Quest_S17_Repeatable_Destroy_Durrrburger_Durrrfoodtruck_CompletionText",
+        "SourceString": "You leave a spray? Like a calling card? That's a fun touch."
+      },
+      "DisplayName": {
+        "Namespace": "Quest_S17_Repeatable_Destroy_Durrrburger_Durrrfoodtruck",
+        "Key": "Quest_S17_Repeatable_Destroy_Durrrburger_Durrrfoodtruck_DisplayName",
+        "SourceString": "Destroy structures at Durrr Burger Restaurant or Durrr Burger Food Truck"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S17_Repeatable_Destroy_Durrrburger_Durrrfoodtruck",
+        "Key": "Quest_S17_Repeatable_Destroy_Durrrburger_Durrrfoodtruck_ShortDescription",
+        "SourceString": "Don't forget to make your mark."
+      },
+      "Description": {
+        "Namespace": "Quest_S17_Repeatable_Destroy_Durrrburger_Durrrfoodtruck",
+        "Key": "Quest_S17_Repeatable_Destroy_Durrrburger_Durrrfoodtruck_Description",
+        "SourceString": "Destroy structures at Durrr Burger Restaurant or Durrr Burger Food Truck"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP",
+        "Athena.Location.UnnamedPOI.DurrrBurger",
+        "Athena.Location.UnNamedPOI.PretzelRestaurant_B"
+      ]
+    }
+  }
+]
