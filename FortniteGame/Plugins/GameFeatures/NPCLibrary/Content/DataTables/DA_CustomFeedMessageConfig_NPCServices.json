@@ -1,0 +1,59 @@
+[
+  {
+    "Type": "FortCustomFeedMessageConfig",
+    "Name": "DA_CustomFeedMessageConfig_NPCServices",
+    "Properties": {
+      "FeedMessageGeneratorsByID": {
+        "Tandem.Service.TipBusDriverSmall": {
+          "ObjectName": "DA_CustomFeedMessageConfig_NPCServices:FortCustomFeedMessageWith2DAudio_0:FortCustomFeedMessageWith2DAudio",
+          "ObjectPath": "/NPCLibrary/DataTables/DA_CustomFeedMessageConfig_NPCServices.1"
+        },
+        "Tandem.Service.TipBusDriverLarge": {
+          "ObjectName": "DA_CustomFeedMessageConfig_NPCServices:FortCustomFeedMessageWith3DAudio_1:FortCustomFeedMessageWith3DAudio",
+          "ObjectPath": "/NPCLibrary/DataTables/DA_CustomFeedMessageConfig_NPCServices.3"
+        },
+        "Tandem.Service.SupplyDrop": {
+          "ObjectName": "DA_CustomFeedMessageConfig_NPCServices:FortCustomFeedMessageWith2DAudio_2:FortCustomFeedMessageWith2DAudio",
+          "ObjectPath": "/NPCLibrary/DataTables/DA_CustomFeedMessageConfig_NPCServices.2"
+        }
+      }
+    }
+  },
+  {
+    "Type": "FortCustomFeedMessageWith2DAudio",
+    "Name": "FortCustomFeedMessageWith2DAudio_0",
+    "Properties": {
+      "FeedMessageFormat": {
+        "Namespace": "",
+        "Key": "ACE5B8E5400B1C50B3B680AFD5563853",
+        "SourceString": "<{CalloutStyle}>{PlayerName}</> tipped the bus driver"
+      }
+    }
+  },
+  {
+    "Type": "FortCustomFeedMessageWith2DAudio",
+    "Name": "FortCustomFeedMessageWith2DAudio_2",
+    "Properties": {
+      "FeedMessageFormat": {
+        "Namespace": "",
+        "Key": "8442C0FD484D53663055A68441B64579",
+        "SourceString": "<b>Mass Supply Drop Delivery</> courtesy of the generous <{CalloutStyle}>{PlayerName}</>!"
+      }
+    }
+  },
+  {
+    "Type": "FortCustomFeedMessageWith3DAudio",
+    "Name": "FortCustomFeedMessageWith3DAudio_1",
+    "Properties": {
+      "FeedMessageFormat": {
+        "Namespace": "",
+        "Key": "8E2F3F244DAC027B49B6FBB98EAF7285",
+        "SourceString": "<{CalloutStyle}>{PlayerName}</> very generously tipped the bus driver!"
+      },
+      "OnTriggeredAudio": {
+        "ObjectName": "Athena_Bus_TipDriver_Cue:SoundCue",
+        "ObjectPath": "/Game/Athena/Sounds/Vehicles/Bus/Athena_Bus_TipDriver_Cue.0"
+      }
+    }
+  }
+]

@@ -1,0 +1,278 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_GCL_Athena_BeingDrained",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "OnRemovalGeneric",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "CE_Update Impact Rotation",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "OnLoopingStartGeneric",
+    "Properties": {}
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GCL_Athena_BeingDrained_C",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "GCL_Athena_BeingDrained_C:SimpleConstructionScript_0:SimpleConstructionScript",
+        "ObjectPath": "/NPCLibrary/GameplayCues/GCL_Athena_BeingDrained.13"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "GCL_Athena_BeingDrained_C:ExecuteUbergraph_GCL_Athena_BeingDrained:Function",
+        "ObjectPath": "/NPCLibrary/GameplayCues/GCL_Athena_BeingDrained.0"
+      }
+    }
+  },
+  {
+    "Type": "GCL_Athena_BeingDrained_C",
+    "Name": "Default__GCL_Athena_BeingDrained_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "Timer": {
+        "Handle": 0
+      },
+      "Rotation": {
+        "Pitch": 0.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      },
+      "DefaultLoopingAttachment": {
+        "SocketName": "spine_05"
+      },
+      "LoopingSounds": [
+        {
+          "LoopingSoundFadeOutDuration": 0.5,
+          "LoopingSoundVolumeLevel": 0.0,
+          "Condition": {
+            "SourceCondition": "EFortGameplayCueSourceCondition::AnySource",
+            "AllowedSurfaces": [],
+            "DisallowedSurfaces": [],
+            "ChanceToPlay": 1.0,
+            "Significance": "EParticleSignificanceLevel::High",
+            "RequiredDetailMode": 0,
+            "bRequireVisible": false
+          },
+          "Attachment": {
+            "SocketName": null,
+            "AttachType": "EFortGameplayCueAttachType::AttachToTarget",
+            "bAttachToWeapon": false,
+            "bAttachToHitResult": false,
+            "bUseUnsmoothedNetworkPosition": false,
+            "bIgnoreScale": true,
+            "bIgnoreRotation": false,
+            "OverrideScale": {
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 1.0
+            },
+            "OverrideRotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            }
+          },
+          "SoundCue": {
+            "ObjectName": "NPC_Evil_Boss_Player_Damage_Loop_Cue:SoundCue",
+            "ObjectPath": "/NPCLibrary/Audio/TinyBalloon/NPC_Evil_Boss_Player_Damage_Loop_Cue.0"
+          },
+          "DelayBeforePlayInSeconds": 0.0,
+          "bOverrideCondition": false,
+          "bOverrideAttachment": true
+        }
+      ],
+      "LoopingCameraLensEffect": {
+        "CameraLensEffect": {
+          "ObjectName": "B_LifeDrain_CameraLens_Looping_C:BlueprintGeneratedClass",
+          "ObjectPath": "/NPCLibrary/Abilities/LifeDrain/VFX/Target/B_LifeDrain_CameraLens_Looping.3"
+        }
+      },
+      "RecurringBurst": {
+        "BurstSounds": [
+          {
+            "Condition": {
+              "SourceCondition": "EFortGameplayCueSourceCondition::AnySource",
+              "AllowedSurfaces": [],
+              "DisallowedSurfaces": [],
+              "ChanceToPlay": 1.0,
+              "Significance": "EParticleSignificanceLevel::High",
+              "RequiredDetailMode": 0,
+              "bRequireVisible": false
+            },
+            "Attachment": {
+              "SocketName": null,
+              "AttachType": "EFortGameplayCueAttachType::AttachToTarget",
+              "bAttachToWeapon": false,
+              "bAttachToHitResult": false,
+              "bUseUnsmoothedNetworkPosition": false,
+              "bIgnoreScale": true,
+              "bIgnoreRotation": false,
+              "OverrideScale": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              },
+              "OverrideRotation": {
+                "Pitch": 0.0,
+                "Yaw": 0.0,
+                "Roll": 0.0
+              }
+            },
+            "SoundCue": null,
+            "DelayBeforePlayInSeconds": 0.0,
+            "bOverrideCondition": false,
+            "bOverrideAttachment": true
+          }
+        ],
+        "BurstCameraLensEffect": {
+          "CameraLensEffect": {
+            "ObjectName": "B_LifeDrain_CameraLens_End_C:BlueprintGeneratedClass",
+            "ObjectPath": "/NPCLibrary/Abilities/LifeDrain/VFX/Target/B_LifeDrain_CameraLens_End.3"
+          }
+        }
+      },
+      "RemovalBurst": {
+        "BurstSounds": [
+          {
+            "Condition": {
+              "SourceCondition": "EFortGameplayCueSourceCondition::AnySource",
+              "AllowedSurfaces": [],
+              "DisallowedSurfaces": [],
+              "ChanceToPlay": 1.0,
+              "Significance": "EParticleSignificanceLevel::High",
+              "RequiredDetailMode": 0,
+              "bRequireVisible": false
+            },
+            "Attachment": {
+              "SocketName": null,
+              "AttachType": "EFortGameplayCueAttachType::DoNotAttach",
+              "bAttachToWeapon": false,
+              "bAttachToHitResult": false,
+              "bUseUnsmoothedNetworkPosition": false,
+              "bIgnoreScale": true,
+              "bIgnoreRotation": false,
+              "OverrideScale": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              },
+              "OverrideRotation": {
+                "Pitch": 0.0,
+                "Yaw": 0.0,
+                "Roll": 0.0
+              }
+            },
+            "SoundCue": {
+              "ObjectName": "NPC_Evil_Boss_Final_Impact_Cue:SoundCue",
+              "ObjectPath": "/NPCLibrary/Audio/TinyBalloon/NPC_Evil_Boss_Final_Impact_Cue.0"
+            },
+            "DelayBeforePlayInSeconds": 0.0,
+            "bOverrideCondition": false,
+            "bOverrideAttachment": false
+          }
+        ]
+      },
+      "DefaultAttachment": {
+        "AttachType": "EFortGameplayCueAttachType::AttachToTarget"
+      },
+      "GameplayCueTag": {
+        "TagName": "GameplayCue.NPC.Inner.Drained"
+      },
+      "GameplayCueName": "GameplayCue.NPC.Inner.Drained",
+      "RootComponent": {
+        "ObjectName": "Default__GCL_Athena_BeingDrained_C:RootComponent:SceneComponent",
+        "ObjectPath": "/NPCLibrary/GameplayCues/GCL_Athena_BeingDrained.9"
+      }
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "NS_LifeDrain_Impact_Loop_GEN_VARIABLE",
+    "Properties": {}
+  },
+  {
+    "Type": "NiagaraDataInterfaceSkeletalMesh",
+    "Name": "NiagaraDataInterfaceSkeletalMesh_0",
+    "Properties": {}
+  },
+  {
+    "Type": "NiagaraDataInterfaceSkeletalMesh",
+    "Name": "NiagaraDataInterfaceSkeletalMesh_1",
+    "Properties": {}
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "RootComponent",
+    "Properties": {}
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Properties": {}
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "SceneComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": {
+        "ObjectName": "GCL_Athena_BeingDrained_C:DefaultSceneRoot_GEN_VARIABLE:SceneComponent",
+        "ObjectPath": "/NPCLibrary/GameplayCues/GCL_Athena_BeingDrained.10"
+      },
+      "VariableGuid": "8057E950-45BA5DFE-6FB0FEB0-D29884A6",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "NiagaraComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": {
+        "ObjectName": "GCL_Athena_BeingDrained_C:NS_LifeDrain_Impact_Loop_GEN_VARIABLE:NiagaraComponent",
+        "ObjectPath": "/NPCLibrary/GameplayCues/GCL_Athena_BeingDrained.6"
+      },
+      "ParentComponentOrVariableName": "RootComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "F3AF04EA-43DFF3B2-28981F8A-3E1FAC39",
+      "InternalVariableName": "NS_LifeDrain_Impact_Loop"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_1:SCS_Node",
+          "ObjectPath": "/NPCLibrary/GameplayCues/GCL_Athena_BeingDrained.12"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_1:SCS_Node",
+          "ObjectPath": "/NPCLibrary/GameplayCues/GCL_Athena_BeingDrained.12"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SimpleConstructionScript_0:SCS_Node_0:SCS_Node",
+        "ObjectPath": "/NPCLibrary/GameplayCues/GCL_Athena_BeingDrained.11"
+      }
+    }
+  }
+]

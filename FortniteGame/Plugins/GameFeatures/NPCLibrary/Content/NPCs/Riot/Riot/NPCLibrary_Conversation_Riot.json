@@ -1,0 +1,309 @@
+[
+  {
+    "Type": "ConversationDatabase",
+    "Name": "NPCLibrary_Conversation_Riot",
+    "Properties": {
+      "CompilerVersion": 2,
+      "ReachableNodeMap": {
+        "09A3E01340D26990B4BAECA80DB739A2": {
+          "ObjectName": "NPCLibrary_Conversation_Riot:ConversationEntryPointNode_7:ConversationEntryPointNode",
+          "ObjectPath": "/NPCLibrary/NPCs/Riot/Riot/NPCLibrary_Conversation_Riot.1"
+        },
+        "A560127248AB745D512468AD9C5BFE21": {
+          "ObjectName": "NPCLibrary_Conversation_Riot:Speech_C_4:Speech_C",
+          "ObjectPath": "/NPCLibrary/NPCs/Riot/Riot/NPCLibrary_Conversation_Riot.8"
+        },
+        "EF5A88BD4B84EC64832ED8918EAF9F61": {
+          "ObjectName": "NPCLibrary_Conversation_Riot:ConversationLinkNode_0:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/Riot/Riot/NPCLibrary_Conversation_Riot.2"
+        },
+        "E21F0F9C42D553300E148D817DB843D8": {
+          "ObjectName": "NPCLibrary_Conversation_Riot:ConversationLinkNode_1:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/Riot/Riot/NPCLibrary_Conversation_Riot.3"
+        },
+        "4EFC318F41CC2893F1C158A23061C794": {
+          "ObjectName": "NPCLibrary_Conversation_Riot:ConversationLinkNode_2:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/Riot/Riot/NPCLibrary_Conversation_Riot.4"
+        }
+      },
+      "EntryTags": [
+        {
+          "EntryTag": {
+            "TagName": "Conversation.Entry.Riot"
+          },
+          "DestinationList": [
+            "09A3E013-40D26990-B4BAECA8-0DB739A2"
+          ]
+        }
+      ],
+      "ExitTags": [
+        "Conversation.Entry.BasicServices",
+        "Conversation.Entry.NPCLibrary.Quests",
+        "Conversation.Entry.Season17.Week1"
+      ],
+      "InternalNodeIds": [
+        "09A3E013-40D26990-B4BAECA8-0DB739A2",
+        "A5601272-48AB745D-512468AD-9C5BFE21",
+        "EF5A88BD-4B84EC64-832ED891-8EAF9F61",
+        "E21F0F9C-42D55330-0E148D81-7DB843D8",
+        "4EFC318F-41CC2893-F1C158A2-3061C794"
+      ],
+      "Speakers": [
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.Player"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.406108,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "0068FF"
+          }
+        },
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.NPC"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.065123,
+            "B": 0.1875,
+            "A": 1.0,
+            "Hex": "001130"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ConversationEntryPointNode",
+    "Name": "ConversationEntryPointNode_7",
+    "Properties": {
+      "EntryTag": {
+        "TagName": "Conversation.Entry.Riot"
+      },
+      "OutputConnections": [
+        "A5601272-48AB745D-512468AD-9C5BFE21"
+      ],
+      "Compiled_NodeGUID": "09A3E013-40D26990-B4BAECA8-0DB739A2"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_0",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.BasicServices"
+      },
+      "Compiled_NodeGUID": "EF5A88BD-4B84EC64-832ED891-8EAF9F61"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_1",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.NPCLibrary.Quests"
+      },
+      "Compiled_NodeGUID": "E21F0F9C-42D55330-0E148D81-7DB843D8"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_2",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.Season17.Week1"
+      },
+      "Compiled_NodeGUID": "4EFC318F-41CC2893-F1C158A2-3061C794"
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch",
+    "Name": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0",
+    "Properties": {
+      "days": 7
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_HasBars",
+    "Name": "FortControllerRequirement_HasBars_0",
+    "Properties": {
+      "ThresholdTestConfig": {
+        "Requirement": "EThresholdRequirement::GreaterThanOrEqual",
+        "Quantity": {
+          "Value": 2000.0,
+          "Curve": {
+            "RowName": "Tandem.Speech.Priority.HighTotalBars"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_IsFirstEverConversationWithNPC",
+    "Name": "FortControllerRequirement_IsFirstEverConversationWithNPC_0",
+    "Properties": {}
+  },
+  {
+    "Type": "Speech_C",
+    "Name": "Speech_C_4",
+    "Properties": {
+      "SpeakerTag": {
+        "TagName": "Conversation.Participant.NPC"
+      },
+      "ListenerTag": {
+        "TagName": "Conversation.Participant.Player"
+      },
+      "GeneralConfig": {
+        "ContextualMessages": [
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "EEE953244C7EE01328D37782711CC485",
+              "SourceString": "Oh, it's you. You been on tour, mate?"
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_4:FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0:FortControllerRequirement_CheckTimeSinceLastPlayedMatch",
+                  "ObjectPath": "/NPCLibrary/NPCs/Riot/Riot/NPCLibrary_Conversation_Riot.5"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.WhileSincePlayed"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "CD388DF94B6309AAE039E48CEC2327BD",
+              "SourceString": "Name's Riot. I don't make friends."
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_4:FortControllerRequirement_IsFirstEverConversationWithNPC_0:FortControllerRequirement_IsFirstEverConversationWithNPC",
+                  "ObjectPath": "/NPCLibrary/NPCs/Riot/Riot/NPCLibrary_Conversation_Riot.7"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "BFED970B4B35A6BD13D831850E297CC2",
+              "SourceString": "It's <b>very</> punk to share Bars with me. Now hand 'em over."
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_4:FortControllerRequirement_HasBars_0:FortControllerRequirement_HasBars",
+                  "ObjectPath": "/NPCLibrary/NPCs/Riot/Riot/NPCLibrary_Conversation_Riot.6"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.HighTotalBars"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          }
+        ],
+        "DefaultMessage": {
+          "Namespace": "",
+          "Key": "427C139847BE257E54F7EF85F10376FC",
+          "SourceString": "Make it fast I'm <b>busy!</>"
+        }
+      },
+      "OutputConnections": [
+        "4EFC318F-41CC2893-F1C158A2-3061C794",
+        "E21F0F9C-42D55330-0E148D81-7DB843D8",
+        "EF5A88BD-4B84EC64-832ED891-8EAF9F61"
+      ],
+      "NodeName": "",
+      "Compiled_NodeGUID": "A5601272-48AB745D-512468AD-9C5BFE21"
+    }
+  }
+]

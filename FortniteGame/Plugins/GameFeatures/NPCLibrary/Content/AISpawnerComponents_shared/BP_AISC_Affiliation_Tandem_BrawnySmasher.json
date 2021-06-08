@@ -1,0 +1,153 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_AISC_Affiliation_Tandem_BrawnySmasher_C",
+    "Properties": {}
+  },
+  {
+    "Type": "BP_AISC_Affiliation_Tandem_BrawnySmasher_C",
+    "Name": "Default__BP_AISC_Affiliation_Tandem_BrawnySmasher_C",
+    "Properties": {
+      "DisguiseProbability": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "NPCLibrary_Data:CurveTable",
+            "ObjectPath": "/NPCLibrary/DataTables/NPCLibrary_Data.0"
+          },
+          "RowName": "Tandem.BrawnySmasher.DisguiseProbability"
+        }
+      },
+      "RevealDisguiseOnDamage": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "NPCLibrary_Data:CurveTable",
+            "ObjectPath": "/NPCLibrary/DataTables/NPCLibrary_Data.0"
+          },
+          "RowName": "Tandem.BrawnySmasher.RevealOnDamage.Enable"
+        }
+      },
+      "RevealOnDamageExcludeAIPawnDamage": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "NPCLibrary_Data:CurveTable",
+            "ObjectPath": "/NPCLibrary/DataTables/NPCLibrary_Data.0"
+          },
+          "RowName": "Tandem.BrawnySmasher.RevealOnDamageEnable.ExcludeAIPawn"
+        }
+      },
+      "RevealDisguiseOnPlayerProximity": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "NPCLibrary_Data:CurveTable",
+            "ObjectPath": "/NPCLibrary/DataTables/NPCLibrary_Data.0"
+          },
+          "RowName": "Tandem.BrawnySmasher.RevealOnPlayerProximity.Enable"
+        }
+      },
+      "RevealPlayerProximityDistance": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "NPCLibrary_Data:CurveTable",
+            "ObjectPath": "/NPCLibrary/DataTables/NPCLibrary_Data.0"
+          },
+          "RowName": "Tandem.BrawnySmasher.RevealOnPlayerProximity.Distance"
+        }
+      },
+      "RevealPlayerProximityMinDuration": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "NPCLibrary_Data:CurveTable",
+            "ObjectPath": "/NPCLibrary/DataTables/NPCLibrary_Data.0"
+          },
+          "RowName": "Tandem.BrawnySmasher.RevealOnPlayerProximity.MinDuration"
+        }
+      },
+      "RevealPlayerProximityMaxDuration": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "NPCLibrary_Data:CurveTable",
+            "ObjectPath": "/NPCLibrary/DataTables/NPCLibrary_Data.0"
+          },
+          "RowName": "Tandem.BrawnySmasher.RevealOnPlayerProximity.MaxDuration"
+        }
+      },
+      "NameSettingsAfterReveal": {
+        "ObjectName": "Default__BP_AISC_Affiliation_Tandem_BrawnySmasher_C:FortBotNameSettings_0:FortBotNameSettings",
+        "ObjectPath": "/NPCLibrary/AISpawnerComponents_shared/BP_AISC_Affiliation_Tandem_BrawnySmasher.2"
+      },
+      "DisguisedFactionsBeforeReveal": [
+        "Athena.Faction.Generic.Neutral",
+        "Athena.Faction.Mother"
+      ],
+      "DisguisedFactionsAfterReveal": [
+        "Athena.Faction.Mother"
+      ],
+      "DisguiseGameplayEffectBeforeReveal": [
+        {
+          "ObjectName": "GE_Tandem_BrawnySmasher_SetupHealth_C:BlueprintGeneratedClass",
+          "ObjectPath": "/Game/Athena/AI/NPCs/Tandem/Base/Abilities/BrawnySmasher/GE_Tandem_BrawnySmasher_SetupHealth.0"
+        },
+        {
+          "ObjectName": "GE_Tandem_BrawnySmasher_SetupShields_C:BlueprintGeneratedClass",
+          "ObjectPath": "/Game/Athena/AI/NPCs/Tandem/Base/Abilities/BrawnySmasher/GE_Tandem_BrawnySmasher_SetupShields.0"
+        },
+        {
+          "ObjectName": "GE_ImmuneFromBirds_C:BlueprintGeneratedClass",
+          "ObjectPath": "/NPCLibrary/Abilities/BrawnySmasher/GE_ImmuneFromBirds.0"
+        }
+      ],
+      "DisguiseGameplayEffectAfterReveal": [
+        {
+          "ObjectName": "GE_Tandem_BrawnySmasher_C:BlueprintGeneratedClass",
+          "ObjectPath": "/Game/Athena/AI/NPCs/Tandem/Base/Abilities/BrawnySmasher/GE_Tandem_BrawnySmasher.0"
+        }
+      ],
+      "DisguiseInventory": [
+        {
+          "Count": 1,
+          "Item": {
+            "ObjectName": "WID_Harvest_Pickaxe_Athena_C_T01:FortWeaponMeleeItemDefinition",
+            "ObjectPath": "/Game/Athena/Items/Weapons/WID_Harvest_Pickaxe_Athena_C_T01.0"
+          }
+        },
+        {
+          "Count": 1,
+          "Item": {
+            "ObjectName": "WID_Assault_LlamaRoaster_Athena_R:FortWeaponRangedItemDefinition",
+            "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/WID_Assault_LlamaRoaster_Athena_R.0"
+          }
+        }
+      ],
+      "DisguiseLootInfo": {
+        "DataTable": {
+          "ObjectName": "AILootOnDeathDataTable:DataTable",
+          "ObjectPath": "/Game/Athena/AI/Phoebe/ManagerData/AILootOnDeathDataTable.0"
+        },
+        "RowName": "NPC.BrawnySmasher"
+      },
+      "DisguiseConversationComponent": {
+        "ObjectName": "NPCConversationComponent_BrawnySmasher_C:BlueprintGeneratedClass",
+        "ObjectPath": "/NPCLibrary/Components/NPCConversationComponent_BrawnySmasher.0"
+      }
+    }
+  },
+  {
+    "Type": "FortBotNameSettings",
+    "Name": "FortBotNameSettings_0",
+    "Properties": {
+      "NamingMode": "EBotNamingMode::Custom",
+      "OverrideName": {
+        "Namespace": "",
+        "Key": "4FCE5ADB4024B0104C417BA78318674F",
+        "SourceString": "MotherWall"
+      }
+    }
+  }
+]

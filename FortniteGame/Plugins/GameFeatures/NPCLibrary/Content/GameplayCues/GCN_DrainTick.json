@@ -1,0 +1,99 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GCN_DrainTick_C",
+    "Properties": {}
+  },
+  {
+    "Type": "GCN_DrainTick_C",
+    "Name": "Default__GCN_DrainTick_C",
+    "Properties": {
+      "BurstEffectData": {
+        "BurstParticles": [
+          {
+            "Condition": {
+              "SourceCondition": "EFortGameplayCueSourceCondition::AnySource",
+              "AllowedSurfaces": [],
+              "DisallowedSurfaces": [],
+              "ChanceToPlay": 1.0,
+              "Significance": "EParticleSignificanceLevel::High",
+              "RequiredDetailMode": 0,
+              "bRequireVisible": false
+            },
+            "Attachment": {
+              "SocketName": "spine_05",
+              "AttachType": "EFortGameplayCueAttachType::AttachToTarget",
+              "bAttachToWeapon": false,
+              "bAttachToHitResult": false,
+              "bUseUnsmoothedNetworkPosition": false,
+              "bIgnoreScale": true,
+              "bIgnoreRotation": false,
+              "OverrideScale": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              },
+              "OverrideRotation": {
+                "Pitch": 0.0,
+                "Yaw": 0.0,
+                "Roll": 0.0
+              }
+            },
+            "FXType": "EFXType::GenericAnimNotify",
+            "NiagaraSystem": {
+              "ObjectName": "NS_LifeDrain_Impact_Burst:NiagaraSystem",
+              "ObjectPath": "/NPCLibrary/Abilities/LifeDrain/VFX/Target/NS_LifeDrain_Impact_Burst.129"
+            },
+            "ParticleSystem": null,
+            "bCastShadow": false,
+            "bOverrideCondition": false,
+            "bOverrideAttachment": true
+          }
+        ],
+        "BurstSounds": [
+          {
+            "Condition": {
+              "SourceCondition": "EFortGameplayCueSourceCondition::AnySource",
+              "AllowedSurfaces": [],
+              "DisallowedSurfaces": [],
+              "ChanceToPlay": 1.0,
+              "Significance": "EParticleSignificanceLevel::High",
+              "RequiredDetailMode": 0,
+              "bRequireVisible": false
+            },
+            "Attachment": {
+              "SocketName": null,
+              "AttachType": "EFortGameplayCueAttachType::AttachToTarget",
+              "bAttachToWeapon": false,
+              "bAttachToHitResult": false,
+              "bUseUnsmoothedNetworkPosition": false,
+              "bIgnoreScale": true,
+              "bIgnoreRotation": false,
+              "OverrideScale": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              },
+              "OverrideRotation": {
+                "Pitch": 0.0,
+                "Yaw": 0.0,
+                "Roll": 0.0
+              }
+            },
+            "SoundCue": {
+              "ObjectName": "NPC_Evil_Boss_Impact_Cue:SoundCue",
+              "ObjectPath": "/NPCLibrary/Audio/TinyBalloon/NPC_Evil_Boss_Impact_Cue.0"
+            },
+            "DelayBeforePlayInSeconds": 0.0,
+            "bOverrideCondition": false,
+            "bOverrideAttachment": true
+          }
+        ]
+      },
+      "GameplayCueTag": {
+        "TagName": "GameplayCue.NPC.Inner.DrainingSFX"
+      },
+      "GameplayCueName": "GameplayCue.NPC.Inner.DrainingSFX"
+    }
+  }
+]

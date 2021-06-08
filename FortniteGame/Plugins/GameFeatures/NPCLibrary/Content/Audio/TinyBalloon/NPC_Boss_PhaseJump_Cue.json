@@ -1,0 +1,134 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "NPC_Boss_PhaseJump_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "NPC_Boss_PhaseJump_Cue:SoundNodeModulator_0:SoundNodeModulator",
+        "ObjectPath": "/NPCLibrary/Audio/TinyBalloon/NPC_Boss_PhaseJump_Cue.1"
+      },
+      "VolumeMultiplier": 1.0,
+      "SoundClassObject": {
+        "ObjectName": "Fort_Gadgets:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Gadgets.0"
+      },
+      "bOverrideConcurrency": true,
+      "ConcurrencySet": [
+        {
+          "ObjectName": "Evil_Boss_Con:SoundConcurrency",
+          "ObjectPath": "/NPCLibrary/Audio/TinyBalloon/Evil_Boss_Con.0"
+        }
+      ],
+      "ConcurrencyOverrides": {
+        "MaxCount": 2
+      },
+      "Duration": 3.6693332,
+      "MaxDistance": 3800.0,
+      "AttenuationSettings": {
+        "ObjectName": "NPC_Evil_Boss_Att:SoundAttenuation",
+        "ObjectPath": "/NPCLibrary/Audio/TinyBalloon/NPC_Evil_Boss_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Properties": {
+      "PitchMin": 0.9,
+      "PitchMax": 1.1,
+      "VolumeMin": 0.7,
+      "VolumeMax": 1.0,
+      "ChildNodes": [
+        {
+          "ObjectName": "NPC_Boss_PhaseJump_Cue:SoundNodeRandom_1:SoundNodeRandom",
+          "ObjectPath": "/NPCLibrary/Audio/TinyBalloon/NPC_Boss_PhaseJump_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_1",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "NPC_Boss_PhaseJump_Cue:SoundNodeWavePlayer_3:SoundNodeWavePlayer",
+          "ObjectPath": "/NPCLibrary/Audio/TinyBalloon/NPC_Boss_PhaseJump_Cue.3"
+        },
+        {
+          "ObjectName": "NPC_Boss_PhaseJump_Cue:SoundNodeWavePlayer_4:SoundNodeWavePlayer",
+          "ObjectPath": "/NPCLibrary/Audio/TinyBalloon/NPC_Boss_PhaseJump_Cue.4"
+        },
+        {
+          "ObjectName": "NPC_Boss_PhaseJump_Cue:SoundNodeWavePlayer_5:SoundNodeWavePlayer",
+          "ObjectPath": "/NPCLibrary/Audio/TinyBalloon/NPC_Boss_PhaseJump_Cue.5"
+        },
+        {
+          "ObjectName": "NPC_Boss_PhaseJump_Cue:SoundNodeWavePlayer_6:SoundNodeWavePlayer",
+          "ObjectPath": "/NPCLibrary/Audio/TinyBalloon/NPC_Boss_PhaseJump_Cue.6"
+        },
+        {
+          "ObjectName": "NPC_Boss_PhaseJump_Cue:SoundNodeWavePlayer_7:SoundNodeWavePlayer",
+          "ObjectPath": "/NPCLibrary/Audio/TinyBalloon/NPC_Boss_PhaseJump_Cue.7"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_GamePlay_Sounds/Player/ZeroPointCrystals/ZeroPointCrystal_PhaseJump_01.ZeroPointCrystal_PhaseJump_01",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_4",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_GamePlay_Sounds/Player/ZeroPointCrystals/ZeroPointCrystal_PhaseJump_02.ZeroPointCrystal_PhaseJump_02",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_5",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_GamePlay_Sounds/Player/ZeroPointCrystals/ZeroPointCrystal_PhaseJump_03.ZeroPointCrystal_PhaseJump_03",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_6",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_GamePlay_Sounds/Player/ZeroPointCrystals/ZeroPointCrystal_PhaseJump_04.ZeroPointCrystal_PhaseJump_04",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_7",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_GamePlay_Sounds/Player/ZeroPointCrystals/ZeroPointCrystal_PhaseJump_05.ZeroPointCrystal_PhaseJump_05",
+        "SubPathString": ""
+      }
+    }
+  }
+]

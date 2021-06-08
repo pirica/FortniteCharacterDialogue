@@ -1,0 +1,109 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_GA_MultiIreCast",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "K2_ActivateAbilityFromEvent",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "OnCompleted_599B53EE4CFFB58D21EFAA95E885F1C7",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "OnBlendOut_599B53EE4CFFB58D21EFAA95E885F1C7",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "OnInterrupted_599B53EE4CFFB58D21EFAA95E885F1C7",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "OnCancelled_599B53EE4CFFB58D21EFAA95E885F1C7",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "OnNotifyBegin_599B53EE4CFFB58D21EFAA95E885F1C7",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "OnNotifyEnd_599B53EE4CFFB58D21EFAA95E885F1C7",
+    "Properties": {}
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GA_MultiIreCast_C",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "GA_MultiIreCast_C:ExecuteUbergraph_GA_MultiIreCast:Function",
+        "ObjectPath": "/NPCLibrary/Abilities/MultiIre/GA_MultiIreCast.0"
+      }
+    }
+  },
+  {
+    "Type": "GA_MultiIreCast_C",
+    "Name": "Default__GA_MultiIreCast_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "StateChangeTime": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "NPCLibrary_Data:CurveTable",
+            "ObjectPath": "/NPCLibrary/DataTables/NPCLibrary_Data.0"
+          },
+          "RowName": "Default.Abilities.MultiIre.StateChangeTime"
+        },
+        "RegistryType": {
+          "Name": null
+        }
+      },
+      "ActivationType": "EFortGameplayAbilityActivation::Triggered",
+      "bStopsAIBehaviorLogic": true,
+      "bStopsAIMovement": true,
+      "MontageInfo": {
+        "MontageToPlay": {
+          "ObjectName": "Ability_C4_Throw:AnimMontage",
+          "ObjectPath": "/Game/Animation/Game/MainPlayer/Montages/Gadgets/Ability_C4_Throw.0"
+        }
+      },
+      "InstancingPolicy": "EGameplayAbilityInstancingPolicy::InstancedPerActor",
+      "AbilityTriggers": [
+        {
+          "TriggerTag": {
+            "TagName": "NPCLibrary.Event.Cast.MultiIre"
+          },
+          "TriggerSource": "EGameplayAbilityTriggerSource::GameplayEvent"
+        }
+      ],
+      "CancelAbilitiesWithTag": [
+        "Gameplay.Action.Player.Reload",
+        "Gameplay.Action.Player.AbilityWeapon",
+        "Gameplay.Action.Player.ChangeEquipment",
+        "Gameplay.Action.Player.Crouch",
+        "Abilities.Weapons.Ranged",
+        "Gameplay.Action.Attacking"
+      ],
+      "BlockAbilitiesWithTag": [
+        "Gameplay.Action.Player.Reload",
+        "Gameplay.Action.Player.AbilityWeapon",
+        "Gameplay.Action.Player.ChangeEquipment",
+        "Gameplay.Action.Player.Crouch",
+        "Abilities.Weapons.Ranged",
+        "Gameplay.Action.Attacking"
+      ],
+      "ActivationOwnedTags": [
+        "Gameplay.Status.DisablePrimaryFire"
+      ]
+    }
+  }
+]

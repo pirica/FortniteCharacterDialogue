@@ -1,0 +1,419 @@
+[
+  {
+    "Type": "FortControllerEffect_GiveResource",
+    "Name": "FortControllerEffect_GiveResource_0",
+    "Properties": {
+      "ResourceItemDefinition": {
+        "ObjectName": "WoodItemData:FortResourceItemDefinition",
+        "ObjectPath": "/Game/Items/ResourcePickups/WoodItemData.0"
+      },
+      "Quantity": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "NPC_Gift_Data:CurveTable",
+            "ObjectPath": "/NPCLibrary/DataTables/NPC_Gift_Data.0"
+          },
+          "RowName": "Tandem.Gift.Resource.Requirements.GiftQuantity"
+        }
+      }
+    }
+  },
+  {
+    "Type": "FortControllerEffect_GiveResource",
+    "Name": "FortControllerEffect_GiveResource_1",
+    "Properties": {
+      "ResourceItemDefinition": {
+        "ObjectName": "StoneItemData:FortResourceItemDefinition",
+        "ObjectPath": "/Game/Items/ResourcePickups/StoneItemData.0"
+      },
+      "Quantity": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "NPC_Gift_Data:CurveTable",
+            "ObjectPath": "/NPCLibrary/DataTables/NPC_Gift_Data.0"
+          },
+          "RowName": "Tandem.Gift.Resource.Requirements.GiftQuantity"
+        }
+      }
+    }
+  },
+  {
+    "Type": "FortControllerEffect_GiveResource",
+    "Name": "FortControllerEffect_GiveResource_2",
+    "Properties": {
+      "ResourceItemDefinition": {
+        "ObjectName": "MetalItemData:FortResourceItemDefinition",
+        "ObjectPath": "/Game/Items/ResourcePickups/MetalItemData.0"
+      },
+      "Quantity": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "NPC_Gift_Data:CurveTable",
+            "ObjectPath": "/NPCLibrary/DataTables/NPC_Gift_Data.0"
+          },
+          "RowName": "Tandem.Gift.Resource.Requirements.GiftQuantity"
+        }
+      }
+    }
+  },
+  {
+    "Type": "FortControllerEffect_HealPlayer",
+    "Name": "FortControllerEffect_HealPlayer_0",
+    "Properties": {
+      "HealthRestoreQuantity": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "NPC_Gift_Data:CurveTable",
+            "ObjectPath": "/NPCLibrary/DataTables/NPC_Gift_Data.0"
+          },
+          "RowName": "Tandem.Gift.Health.Effects.RestoreQuantity"
+        }
+      },
+      "GameplayEffect": {
+        "ObjectName": "GE_CBGA_NPCGift_Health_C:BlueprintGeneratedClass",
+        "ObjectPath": "/NPCLibrary/GameplayEffects/GE_CBGA_NPCGift_Health.0"
+      },
+      "ParameterName": {
+        "TagName": "SetByCaller.Magnitude"
+      }
+    }
+  },
+  {
+    "Type": "FortControllerEffect_NPCGiveItem",
+    "Name": "FortControllerEffect_NPCGiveItem_0",
+    "Properties": {}
+  },
+  {
+    "Type": "FortControllerEffect_ShieldPlayer",
+    "Name": "FortControllerEffect_ShieldPlayer_0",
+    "Properties": {
+      "ShieldRestoreQuantity": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "NPC_Gift_Data:CurveTable",
+            "ObjectPath": "/NPCLibrary/DataTables/NPC_Gift_Data.0"
+          },
+          "RowName": "Tandem.Gift.Shield.Effects.RestoreQuantity"
+        }
+      },
+      "GameplayEffect": {
+        "ObjectName": "GE_CBGA_NPCGift_Shield_C:BlueprintGeneratedClass",
+        "ObjectPath": "/NPCLibrary/GameplayEffects/GE_CBGA_NPCGift_Shield.0"
+      },
+      "ParameterName": {
+        "TagName": "SetByCaller.Magnitude"
+      }
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_AttributeThresholdCheck",
+    "Name": "FortControllerRequirement_AttributeThresholdCheck_0",
+    "Properties": {
+      "QueryAttribute": {
+        "AttributeName": "Health",
+        "Attribute": {
+          "Path": [
+            "Health"
+          ],
+          "ResolvedOwner": {
+            "ObjectName": "FortHealthSet:Class",
+            "ObjectPath": 0
+          }
+        },
+        "AttributeOwner": {
+          "ObjectName": "FortHealthSet:Class",
+          "ObjectPath": 0
+        }
+      },
+      "ThresholdTestConfig": {
+        "Requirement": "EThresholdRequirement::LessThanOrEqual",
+        "Quantity": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "NPC_Gift_Data:CurveTable",
+              "ObjectPath": "/NPCLibrary/DataTables/NPC_Gift_Data.0"
+            },
+            "RowName": "Tandem.Gift.Health.Requirements.HealthThreshold"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_AttributeThresholdCheck",
+    "Name": "FortControllerRequirement_AttributeThresholdCheck_1",
+    "Properties": {
+      "QueryAttribute": {
+        "AttributeName": "CurrentShield",
+        "Attribute": {
+          "Path": [
+            "CurrentShield"
+          ],
+          "ResolvedOwner": {
+            "ObjectName": "FortHealthSet:Class",
+            "ObjectPath": 0
+          }
+        },
+        "AttributeOwner": {
+          "ObjectName": "FortHealthSet:Class",
+          "ObjectPath": 0
+        }
+      },
+      "ThresholdTestConfig": {
+        "Requirement": "EThresholdRequirement::LessThanOrEqual",
+        "Quantity": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "NPC_Gift_Data:CurveTable",
+              "ObjectPath": "/NPCLibrary/DataTables/NPC_Gift_Data.0"
+            },
+            "RowName": "Tandem.Gift.Shield.Requirements.ShieldThreshold"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_AttributeThresholdCheck",
+    "Name": "FortControllerRequirement_AttributeThresholdCheck_2",
+    "Properties": {
+      "QueryAttribute": {
+        "AttributeName": "Health",
+        "Attribute": {
+          "Path": [
+            "Health"
+          ],
+          "ResolvedOwner": {
+            "ObjectName": "FortHealthSet:Class",
+            "ObjectPath": 0
+          }
+        },
+        "AttributeOwner": {
+          "ObjectName": "FortHealthSet:Class",
+          "ObjectPath": 0
+        }
+      },
+      "ThresholdTestConfig": {
+        "Requirement": "EThresholdRequirement::GreaterThan",
+        "Quantity": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "NPC_Gift_Data:CurveTable",
+              "ObjectPath": "/NPCLibrary/DataTables/NPC_Gift_Data.0"
+            },
+            "RowName": "Tandem.Gift.Shield.Requirements.ShieldThreshold"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_HasResource",
+    "Name": "FortControllerRequirement_HasResource_0",
+    "Properties": {
+      "ThresholdTestConfig": {
+        "Quantity": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "NPC_Gift_Data:CurveTable",
+              "ObjectPath": "/NPCLibrary/DataTables/NPC_Gift_Data.0"
+            },
+            "RowName": "Tandem.Gift.Resource.Requirements.MaxGiftThreshold"
+          }
+        }
+      },
+      "ResourceItemDefinition": {
+        "ObjectName": "WoodItemData:FortResourceItemDefinition",
+        "ObjectPath": "/Game/Items/ResourcePickups/WoodItemData.0"
+      }
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_HasResource",
+    "Name": "FortControllerRequirement_HasResource_1",
+    "Properties": {
+      "ThresholdTestConfig": {
+        "Quantity": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "NPC_Gift_Data:CurveTable",
+              "ObjectPath": "/NPCLibrary/DataTables/NPC_Gift_Data.0"
+            },
+            "RowName": "Tandem.Gift.Resource.Requirements.MaxGiftThreshold"
+          }
+        }
+      },
+      "ResourceItemDefinition": {
+        "ObjectName": "StoneItemData:FortResourceItemDefinition",
+        "ObjectPath": "/Game/Items/ResourcePickups/StoneItemData.0"
+      }
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_HasResource",
+    "Name": "FortControllerRequirement_HasResource_2",
+    "Properties": {
+      "ThresholdTestConfig": {
+        "Quantity": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "NPC_Gift_Data:CurveTable",
+              "ObjectPath": "/NPCLibrary/DataTables/NPC_Gift_Data.0"
+            },
+            "RowName": "Tandem.Gift.Resource.Requirements.MaxGiftThreshold"
+          }
+        }
+      },
+      "ResourceItemDefinition": {
+        "ObjectName": "MetalItemData:FortResourceItemDefinition",
+        "ObjectPath": "/Game/Items/ResourcePickups/MetalItemData.0"
+      }
+    }
+  },
+  {
+    "Type": "FortConversationGiftTypeDefinitions",
+    "Name": "NPCGiftTypeDefinitions",
+    "Properties": {
+      "GiftDefinitionsByGiftTag": {
+        "Athena.Quests.TandemGift.Item": {
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "Requirements": [],
+          "Effects": [
+            {
+              "ObjectName": "NPCGiftTypeDefinitions:FortControllerEffect_NPCGiveItem_0:FortControllerEffect_NPCGiveItem",
+              "ObjectPath": "/NPCLibrary/DataTables/NPCGiftTypeDefinitions.4"
+            }
+          ],
+          "UINotificationType": {
+            "ObjectName": "NPCGiftTypeDefinitions:FortUINotificationHandler_ReceivedGiftItem_0:FortUINotificationHandler_ReceivedGiftItem",
+            "ObjectPath": "/NPCLibrary/DataTables/NPCGiftTypeDefinitions.13"
+          }
+        },
+        "Athena.Quests.TandemGift.Health": {
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "Requirements": [
+            {
+              "ObjectName": "NPCGiftTypeDefinitions:FortControllerRequirement_AttributeThresholdCheck_0:FortControllerRequirement_AttributeThresholdCheck",
+              "ObjectPath": "/NPCLibrary/DataTables/NPCGiftTypeDefinitions.6"
+            }
+          ],
+          "Effects": [
+            {
+              "ObjectName": "NPCGiftTypeDefinitions:FortControllerEffect_HealPlayer_0:FortControllerEffect_HealPlayer",
+              "ObjectPath": "/NPCLibrary/DataTables/NPCGiftTypeDefinitions.3"
+            }
+          ],
+          "UINotificationType": null
+        },
+        "Athena.Quests.TandemGift.Shield": {
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "Requirements": [
+            {
+              "ObjectName": "NPCGiftTypeDefinitions:FortControllerRequirement_AttributeThresholdCheck_1:FortControllerRequirement_AttributeThresholdCheck",
+              "ObjectPath": "/NPCLibrary/DataTables/NPCGiftTypeDefinitions.7"
+            },
+            {
+              "ObjectName": "NPCGiftTypeDefinitions:FortControllerRequirement_AttributeThresholdCheck_2:FortControllerRequirement_AttributeThresholdCheck",
+              "ObjectPath": "/NPCLibrary/DataTables/NPCGiftTypeDefinitions.8"
+            }
+          ],
+          "Effects": [
+            {
+              "ObjectName": "NPCGiftTypeDefinitions:FortControllerEffect_ShieldPlayer_0:FortControllerEffect_ShieldPlayer",
+              "ObjectPath": "/NPCLibrary/DataTables/NPCGiftTypeDefinitions.5"
+            }
+          ],
+          "UINotificationType": null
+        },
+        "Athena.Quests.TandemGift.Wood": {
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "Requirements": [
+            {
+              "ObjectName": "NPCGiftTypeDefinitions:FortControllerRequirement_HasResource_0:FortControllerRequirement_HasResource",
+              "ObjectPath": "/NPCLibrary/DataTables/NPCGiftTypeDefinitions.9"
+            }
+          ],
+          "Effects": [
+            {
+              "ObjectName": "NPCGiftTypeDefinitions:FortControllerEffect_GiveResource_0:FortControllerEffect_GiveResource",
+              "ObjectPath": "/NPCLibrary/DataTables/NPCGiftTypeDefinitions.0"
+            }
+          ],
+          "UINotificationType": {
+            "ObjectName": "NPCGiftTypeDefinitions:FortUINotificationHandler_ReceivedGiftItem_3:FortUINotificationHandler_ReceivedGiftItem",
+            "ObjectPath": "/NPCLibrary/DataTables/NPCGiftTypeDefinitions.16"
+          }
+        },
+        "Athena.Quests.TandemGift.Stone": {
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "Requirements": [
+            {
+              "ObjectName": "NPCGiftTypeDefinitions:FortControllerRequirement_HasResource_1:FortControllerRequirement_HasResource",
+              "ObjectPath": "/NPCLibrary/DataTables/NPCGiftTypeDefinitions.10"
+            }
+          ],
+          "Effects": [
+            {
+              "ObjectName": "NPCGiftTypeDefinitions:FortControllerEffect_GiveResource_1:FortControllerEffect_GiveResource",
+              "ObjectPath": "/NPCLibrary/DataTables/NPCGiftTypeDefinitions.1"
+            }
+          ],
+          "UINotificationType": {
+            "ObjectName": "NPCGiftTypeDefinitions:FortUINotificationHandler_ReceivedGiftItem_2:FortUINotificationHandler_ReceivedGiftItem",
+            "ObjectPath": "/NPCLibrary/DataTables/NPCGiftTypeDefinitions.15"
+          }
+        },
+        "Athena.Quests.TandemGift.Metal": {
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "Requirements": [
+            {
+              "ObjectName": "NPCGiftTypeDefinitions:FortControllerRequirement_HasResource_2:FortControllerRequirement_HasResource",
+              "ObjectPath": "/NPCLibrary/DataTables/NPCGiftTypeDefinitions.11"
+            }
+          ],
+          "Effects": [
+            {
+              "ObjectName": "NPCGiftTypeDefinitions:FortControllerEffect_GiveResource_2:FortControllerEffect_GiveResource",
+              "ObjectPath": "/NPCLibrary/DataTables/NPCGiftTypeDefinitions.2"
+            }
+          ],
+          "UINotificationType": {
+            "ObjectName": "NPCGiftTypeDefinitions:FortUINotificationHandler_ReceivedGiftItem_1:FortUINotificationHandler_ReceivedGiftItem",
+            "ObjectPath": "/NPCLibrary/DataTables/NPCGiftTypeDefinitions.14"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "FortUINotificationHandler_ReceivedGiftItem",
+    "Name": "FortUINotificationHandler_ReceivedGiftItem_0",
+    "Properties": {}
+  },
+  {
+    "Type": "FortUINotificationHandler_ReceivedGiftItem",
+    "Name": "FortUINotificationHandler_ReceivedGiftItem_1",
+    "Properties": {}
+  },
+  {
+    "Type": "FortUINotificationHandler_ReceivedGiftItem",
+    "Name": "FortUINotificationHandler_ReceivedGiftItem_2",
+    "Properties": {}
+  },
+  {
+    "Type": "FortUINotificationHandler_ReceivedGiftItem",
+    "Name": "FortUINotificationHandler_ReceivedGiftItem_3",
+    "Properties": {}
+  }
+]

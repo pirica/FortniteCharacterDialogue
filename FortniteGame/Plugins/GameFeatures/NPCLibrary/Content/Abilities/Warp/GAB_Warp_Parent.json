@@ -1,0 +1,151 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_GAB_Warp_Parent",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "K2_ActivateAbility",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "Triggered_517E673D469E366800B97CB9CD331A3A",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "Cancelled_517E673D469E366800B97CB9CD331A3A",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "Completed_517E673D469E366800B97CB9CD331A3A",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "Triggered_272C3E3E46FF95CD1F432BA1829AE986",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "Cancelled_272C3E3E46FF95CD1F432BA1829AE986",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "Completed_272C3E3E46FF95CD1F432BA1829AE986",
+    "Properties": {}
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GAB_Warp_Parent_C",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "GAB_Warp_Parent_C:ExecuteUbergraph_GAB_Warp_Parent:Function",
+        "ObjectPath": "/NPCLibrary/Abilities/Warp/GAB_Warp_Parent.0"
+      }
+    }
+  },
+  {
+    "Type": "GAB_Warp_Parent_C",
+    "Name": "Default__GAB_Warp_Parent_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "GC_Warping": {
+        "TagName": "GameplayCue.NPC.Inner.Warped"
+      },
+      "MinWarpDistance": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "NPCLibrary_Data:CurveTable",
+            "ObjectPath": "/NPCLibrary/DataTables/NPCLibrary_Data.0"
+          },
+          "RowName": "Default.Abilities.Warp.MinDistance"
+        },
+        "RegistryType": {
+          "Name": null
+        }
+      },
+      "MaxWarpDistance": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "NPCLibrary_Data:CurveTable",
+            "ObjectPath": "/NPCLibrary/DataTables/NPCLibrary_Data.0"
+          },
+          "RowName": "Default.Abilities.Warp.MaxDistance"
+        },
+        "RegistryType": {
+          "Name": null
+        }
+      },
+      "RotatedVector": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "GC_PreWarping": {
+        "TagName": "GameplayCue.NPC.Inner.PreWarp"
+      },
+      "StartWarpMontage": {
+        "ObjectName": "Boss_TeleportStart_Rifle_Montage:AnimMontage",
+        "ObjectPath": "/Game/Animation/Game/NPCs/BossTeleport/Boss_TeleportStart_Rifle_Montage.0"
+      },
+      "StopWarpMontage": {
+        "ObjectName": "Boss_TeleportEnd_Rifle_Montage:AnimMontage",
+        "ObjectPath": "/Game/Animation/Game/NPCs/BossTeleport/Boss_TeleportEnd_Rifle_Montage.0"
+      },
+      "Projected Location": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "ActivationType": "EFortGameplayAbilityActivation::Triggered",
+      "ExplicitCooldownDuration": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "NPCLibrary_Data:CurveTable",
+            "ObjectPath": "/NPCLibrary/DataTables/NPCLibrary_Data.0"
+          },
+          "RowName": "Default.Abilities.Warp.Cooldown"
+        }
+      },
+      "ExplicitCooldownTags": [
+        "NPCLibrary.Abilities.Warp.Cooldown"
+      ],
+      "bStopsAIBehaviorLogic": true,
+      "bStopsAIMovement": true,
+      "AbilityTags": [
+        "NPCLibrary.Abilities.Warp"
+      ],
+      "InstancingPolicy": "EGameplayAbilityInstancingPolicy::InstancedPerActor",
+      "CancelAbilitiesWithTag": [
+        "Gameplay.Action.Player.Reload",
+        "Gameplay.Action.Player.AbilityWeapon",
+        "Gameplay.Action.Player.ChangeEquipment",
+        "Gameplay.Action.Player.Crouch",
+        "Abilities.Weapons.Ranged",
+        "Gameplay.Action.Attacking"
+      ],
+      "BlockAbilitiesWithTag": [
+        "Gameplay.Action.Player.Reload",
+        "Gameplay.Action.Player.AbilityWeapon",
+        "Gameplay.Action.Player.ChangeEquipment",
+        "Gameplay.Action.Player.Crouch",
+        "Abilities.Weapons.Ranged",
+        "Gameplay.Action.Attacking"
+      ],
+      "ActivationOwnedTags": [
+        "Gameplay.Status.DisablePrimaryFire"
+      ],
+      "ActivationBlockedTags": [
+        "NPCLibrary.Abilities.Warp.Prevent"
+      ]
+    }
+  }
+]

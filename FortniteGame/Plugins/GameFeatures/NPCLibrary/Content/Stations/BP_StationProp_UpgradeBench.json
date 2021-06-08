@@ -1,0 +1,912 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_StationProp_UpgradeBench",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "TriggerStationUsedEffects",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "WobbleTimeline__UpdateFunc",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "WobbleTimeline__FinishedFunc",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "PlayServiceUsedEffects",
+    "Properties": {}
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_StationProp_UpgradeBench_C",
+    "Properties": {
+      "Timelines": [
+        {
+          "ObjectName": "BP_StationProp_UpgradeBench_C:WobbleTimeline_Template:TimelineTemplate",
+          "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_UpgradeBench.28"
+        }
+      ],
+      "SimpleConstructionScript": {
+        "ObjectName": "BP_StationProp_UpgradeBench_C:SimpleConstructionScript_0:SimpleConstructionScript",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_UpgradeBench.26"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "BP_StationProp_UpgradeBench_C:InheritableComponentHandler:InheritableComponentHandler",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_UpgradeBench.14"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "BP_StationProp_UpgradeBench_C:ExecuteUbergraph_BP_StationProp_UpgradeBench:Function",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_UpgradeBench.0"
+      }
+    }
+  },
+  {
+    "Type": "BP_StationProp_UpgradeBench_C",
+    "Name": "Default__BP_StationProp_UpgradeBench_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "ServiceSuccessSound": {
+        "ObjectName": "WumbaMachine_Vend_Upgrade_01_Cue:SoundCue",
+        "ObjectPath": "/Game/Sounds/Foley_Loot/Containers/Wumba/WumbaMachine_Vend_Upgrade_01_Cue.0"
+      },
+      "InitialRelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      },
+      "bCanBeMarked": true,
+      "MarkerDisplay": {
+        "DisplayName": {
+          "Namespace": "",
+          "Key": "B91914C449680FEC086047AAC4176957",
+          "SourceString": "UPGRADE BENCH"
+        },
+        "Icon": {
+          "AssetPathName": "/Game/UI/Foundation/Textures/Icons/Athena/T-T-Icon-BR-Wumba.T-T-Icon-BR-Wumba",
+          "SubPathString": ""
+        }
+      },
+      "StaticMesh": {
+        "ObjectName": "SM_UpgradeBench_PROTO:StaticMesh",
+        "ObjectPath": "/Game/Building/ActorBlueprints/Stations/SM_UpgradeBench_PROTO.1"
+      },
+      "ResourceType": "EFortResourceType::None",
+      "bAllowResourceDrop": false,
+      "StaticMeshComponent": {
+        "ObjectName": "Default__BP_StationProp_UpgradeBench_C:StaticMeshComponent0:StaticMeshComponent",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_UpgradeBench.27"
+      },
+      "InteractionText": {
+        "Namespace": "",
+        "Key": "30A8C11E4119BDAB71D53CB69BC99E31",
+        "SourceString": "USE"
+      },
+      "RootComponent": {
+        "ObjectName": "Default__BP_StationProp_UpgradeBench_C:StaticMeshComponent0:StaticMeshComponent",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_UpgradeBench.27"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "Station_Ambient_GEN_VARIABLE",
+    "Properties": {
+      "sound": {
+        "ObjectName": "VendingMachine_Ambient_Cue:SoundCue",
+        "ObjectPath": "/Game/Sounds/Foley_Loot/Containers/VendingMachine/VendingMachine_Ambient_Cue.0"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "BaseCollision_GEN_VARIABLE",
+    "Properties": {
+      "AreaClass": {
+        "ObjectName": "FortMetaNavArea_Obstacles:Class",
+        "ObjectPath": 0
+      },
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "FortBuildingMeshPhysics",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "FCC_Trace_Interaction",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Trace_WeakSpot",
+              "Response": "ECollisionResponse::ECR_Overlap"
+            },
+            {
+              "Channel": "FCC_Trace_WeaponCapsule",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_PawnAI",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Trace_WeaponMulti",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Trace_Weapon",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_Projectile",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_ProjectileIgnoreAI",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Trace_World",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_ProjectileMesh",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+              "Response": "ECollisionResponse::ECR_Overlap"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 2.0,
+        "Z": 36.0
+      },
+      "RelativeScale3D": {
+        "X": 0.75,
+        "Y": 1.0,
+        "Z": 1.0
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "PostCollision_GEN_VARIABLE",
+    "Properties": {
+      "AreaClass": {
+        "ObjectName": "FortMetaNavArea_Obstacles:Class",
+        "ObjectPath": 0
+      },
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "FortBuildingMeshPhysics",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "FCC_Trace_Interaction",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Trace_WeakSpot",
+              "Response": "ECollisionResponse::ECR_Overlap"
+            },
+            {
+              "Channel": "FCC_Trace_WeaponCapsule",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_PawnAI",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Trace_WeaponMulti",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Trace_Weapon",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_Projectile",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_ProjectileIgnoreAI",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Trace_World",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_ProjectileMesh",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+              "Response": "ECollisionResponse::ECR_Overlap"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": -2.0,
+        "Z": 110.0
+      },
+      "RelativeScale3D": {
+        "X": 0.15,
+        "Y": 0.12,
+        "Z": 1.3
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "TableCollision_GEN_VARIABLE",
+    "Properties": {
+      "AreaClass": {
+        "ObjectName": "FortMetaNavArea_Obstacles:Class",
+        "ObjectPath": 0
+      },
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "FortBuildingMeshPhysics",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "FCC_Trace_Interaction",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Trace_WeakSpot",
+              "Response": "ECollisionResponse::ECR_Overlap"
+            },
+            {
+              "Channel": "FCC_Trace_WeaponCapsule",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_PawnAI",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Trace_WeaponMulti",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Trace_Weapon",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_Projectile",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_ProjectileIgnoreAI",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Trace_World",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_ProjectileMesh",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+              "Response": "ECollisionResponse::ECR_Overlap"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": -0.666667,
+        "Y": -4.0,
+        "Z": 52.0
+      },
+      "RelativeScale3D": {
+        "X": 2.05,
+        "Y": 1.65,
+        "Z": 0.5
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "TopCollision_GEN_VARIABLE",
+    "Properties": {
+      "AreaClass": {
+        "ObjectName": "FortMetaNavArea_Obstacles:Class",
+        "ObjectPath": 0
+      },
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "FortBuildingMeshPhysics",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "FCC_Trace_Interaction",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Trace_WeakSpot",
+              "Response": "ECollisionResponse::ECR_Overlap"
+            },
+            {
+              "Channel": "FCC_Trace_WeaponCapsule",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_PawnAI",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Trace_WeaponMulti",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Trace_Weapon",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_Projectile",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_ProjectileIgnoreAI",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Trace_World",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_ProjectileMesh",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+              "Response": "ECollisionResponse::ECR_Overlap"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 154.0
+      },
+      "RelativeScale3D": {
+        "X": 1.75,
+        "Y": 1.2,
+        "Z": 0.3
+      }
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_0",
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": 0,
+            "TangentMode": 0,
+            "TangentWeightMode": 0,
+            "KeyTime": 0.0,
+            "KeyValue": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": 0,
+            "TangentMode": 0,
+            "TangentWeightMode": 80,
+            "KeyTime": 2.6598066E+17,
+            "KeyValue": 2.2632E-41,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": 0,
+            "TangentMode": 71,
+            "TangentWeightMode": 164,
+            "KeyTime": 5.5897773E-12,
+            "KeyValue": 2.68E-43,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": 214,
+            "TangentMode": 69,
+            "TangentWeightMode": 32,
+            "KeyTime": 0.919091,
+            "KeyValue": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 134217730.0
+          },
+          {
+            "InterpMode": 72,
+            "TangentMode": 93,
+            "TangentWeightMode": 62,
+            "KeyTime": 1.7594472E-38,
+            "KeyValue": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": 128,
+            "TangentMode": 62,
+            "TangentWeightMode": 143,
+            "KeyTime": 2.2827E-41,
+            "KeyValue": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": -1.9515672E-20
+          },
+          {
+            "InterpMode": 62,
+            "TangentMode": 137,
+            "TangentWeightMode": 68,
+            "KeyTime": 2.68E-43,
+            "KeyValue": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.36
+          },
+          {
+            "InterpMode": 255,
+            "TangentMode": 145,
+            "TangentWeightMode": 85,
+            "KeyTime": 0.0,
+            "KeyValue": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 6.4623485E-27,
+            "LeaveTangentWeight": 1.4760887E+28
+          },
+          {
+            "InterpMode": 19,
+            "TangentMode": 134,
+            "TangentWeightMode": 190,
+            "KeyTime": 0.0,
+            "KeyValue": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": -2.305843E+20,
+            "LeaveTangentWeight": -3.0820136E+13
+          },
+          {
+            "InterpMode": 50,
+            "TangentMode": 62,
+            "TangentWeightMode": 0,
+            "KeyTime": 0.0,
+            "KeyValue": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 9.121272E-33,
+            "LeaveTangentWeight": 8.8E-44
+          },
+          {
+            "InterpMode": 0,
+            "TangentMode": 0,
+            "TangentWeightMode": 0,
+            "KeyTime": 0.0,
+            "KeyValue": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 9.62436E-38,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "NonPlayerConversationComponent_C:BlueprintGeneratedClass",
+            "ObjectPath": "/Game/Conversation/NonPlayerConversationComponent.0"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "BP_StationProp_UpgradeBench_C:NonPlayerConversationComponent_GEN_VARIABLE:NonPlayerConversationComponent_C",
+            "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_UpgradeBench.15"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BP_StationProp_Parent_C:BlueprintGeneratedClass",
+              "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_Parent.7"
+            },
+            "SCSVariableName": "NonPlayerConversationComponent",
+            "AssociatedGuid": "B3384C1D-432431C3-C6AC48BA-EEF07559"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "AudioComponent:Class",
+            "ObjectPath": 0
+          },
+          "ComponentTemplate": {
+            "ObjectName": "BP_StationProp_UpgradeBench_C:Station_Ambient_GEN_VARIABLE:AudioComponent",
+            "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_UpgradeBench.8"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BP_StationProp_Parent_C:BlueprintGeneratedClass",
+              "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_Parent.7"
+            },
+            "SCSVariableName": "Station_Ambient",
+            "AssociatedGuid": "286D96E5-45FF6495-7ABD358C-FA3CA60C"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "NonPlayerConversationComponent_C",
+    "Name": "NonPlayerConversationComponent_GEN_VARIABLE",
+    "Properties": {
+      "ConversationEntryTag": {
+        "TagName": "Conversation.Entry.UpgradeBench"
+      },
+      "bShowIndicatorBubble": true,
+      "bShowConversationText": false,
+      "ParticipantDisplayNameOverride": {
+        "Namespace": "",
+        "Key": "B91914C449680FEC086047AAC4176957",
+        "SourceString": "UPGRADE BENCH"
+      },
+      "bOverrideRelativeLocation": true,
+      "RelativeLocationOverride": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 30.0
+      },
+      "bOverrideMaxDrawDistance": true,
+      "MaxDrawDistanceOverride": 3000.0,
+      "DialogMarkerIndicatorSoftIcon": {
+        "AssetPathName": "/Game/Athena/HUD/Interaction/T_UI_UpgradeBench.T_UI_UpgradeBench",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "P_TableLightIdle_GEN_VARIABLE",
+    "Properties": {
+      "Template": {
+        "ObjectName": "P_Wumba_IdleLight:ParticleSystem",
+        "ObjectPath": "/Game/Athena/Items/Gameplay/Wumba/FX/P_Wumba_IdleLight.103"
+      },
+      "InstanceParameters": [
+        {
+          "Name": "LightSize",
+          "ParamType": "EParticleSysParamType::PSPT_None",
+          "Scalar": 0.0,
+          "Scalar_Low": 0.0,
+          "Vector": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "Vector_Low": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "Color": {
+            "R": 0,
+            "G": 0,
+            "B": 0,
+            "A": 0,
+            "Hex": "000000"
+          },
+          "Actor": null,
+          "Material": null
+        }
+      ],
+      "RelativeLocation": {
+        "X": -1E-06,
+        "Y": 1.6E-05,
+        "Z": 0.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 89.99998,
+        "Roll": 0.0
+      },
+      "bUseAttachParentBound": true,
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "P_UpgradeFX_GEN_VARIABLE",
+    "Properties": {
+      "Template": {
+        "ObjectName": "P_Wumba_WeaponUp:ParticleSystem",
+        "ObjectPath": "/Game/Athena/Items/Gameplay/Wumba/FX/P_Wumba_WeaponUp.177"
+      },
+      "RelativeLocation": {
+        "X": -1E-06,
+        "Y": 1.6E-05,
+        "Z": 0.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 89.99998,
+        "Roll": 0.0
+      },
+      "bUseAttachParentBound": true,
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      },
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Properties": {}
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "SceneComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_StationProp_UpgradeBench_C:DefaultSceneRoot_GEN_VARIABLE:SceneComponent",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_UpgradeBench.18"
+      },
+      "VariableGuid": "39510924-4A2A9E9B-B0F6E988-E431CB1F",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BoxComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_StationProp_UpgradeBench_C:BaseCollision_GEN_VARIABLE:BoxComponent",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_UpgradeBench.9"
+      },
+      "ParentComponentOrVariableName": "StaticMeshComponent0",
+      "bIsParentComponentNative": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_2:SCS_Node",
+          "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_UpgradeBench.21"
+        },
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_3:SCS_Node",
+          "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_UpgradeBench.22"
+        },
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_4:SCS_Node",
+          "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_UpgradeBench.23"
+        }
+      ],
+      "VariableGuid": "EAB41DD5-4F45AFD7-B934BF8A-A54BADB5",
+      "InternalVariableName": "BaseCollision"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BoxComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_StationProp_UpgradeBench_C:PostCollision_GEN_VARIABLE:BoxComponent",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_UpgradeBench.10"
+      },
+      "VariableGuid": "3B73F55A-4FEE6BC7-F4A6D989-68B0CA23",
+      "InternalVariableName": "PostCollision"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BoxComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_StationProp_UpgradeBench_C:TableCollision_GEN_VARIABLE:BoxComponent",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_UpgradeBench.11"
+      },
+      "VariableGuid": "D1391904-4EA2882D-1A150C84-564E36D2",
+      "InternalVariableName": "TableCollision"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BoxComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_StationProp_UpgradeBench_C:TopCollision_GEN_VARIABLE:BoxComponent",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_UpgradeBench.12"
+      },
+      "VariableGuid": "4C16C0BF-43F556E1-E918D6AF-332E7F30",
+      "InternalVariableName": "TopCollision"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "ParticleSystemComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_StationProp_UpgradeBench_C:P_UpgradeFX_GEN_VARIABLE:ParticleSystemComponent",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_UpgradeBench.17"
+      },
+      "ParentComponentOrVariableName": "StaticMeshComponent0",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "F567AFA8-4DB1F077-92C1B9AF-6E30B511",
+      "InternalVariableName": "P_UpgradeFX"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "ParticleSystemComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_StationProp_UpgradeBench_C:P_TableLightIdle_GEN_VARIABLE:ParticleSystemComponent",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_UpgradeBench.16"
+      },
+      "ParentComponentOrVariableName": "StaticMeshComponent0",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "8C28BAAA-4E665DA9-D11B8EBE-BAA3744E",
+      "InternalVariableName": "P_TableLightIdle"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_1:SCS_Node",
+          "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_UpgradeBench.20"
+        },
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_5:SCS_Node",
+          "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_UpgradeBench.24"
+        },
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_6:SCS_Node",
+          "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_UpgradeBench.25"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_1:SCS_Node",
+          "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_UpgradeBench.20"
+        },
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_2:SCS_Node",
+          "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_UpgradeBench.21"
+        },
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_3:SCS_Node",
+          "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_UpgradeBench.22"
+        },
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_4:SCS_Node",
+          "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_UpgradeBench.23"
+        },
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_5:SCS_Node",
+          "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_UpgradeBench.24"
+        },
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_6:SCS_Node",
+          "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_UpgradeBench.25"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SimpleConstructionScript_0:SCS_Node_0:SCS_Node",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_UpgradeBench.19"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMeshComponent0",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "SM_UpgradeBench_PROTO:StaticMesh",
+        "ObjectPath": "/Game/Building/ActorBlueprints/Stations/SM_UpgradeBench_PROTO.1"
+      },
+      "Mobility": "EComponentMobility::Movable"
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "WobbleTimeline_Template",
+    "Properties": {
+      "TimelineLength": 0.65,
+      "FloatTracks": [
+        {
+          "CurveFloat": {
+            "ObjectName": "BP_StationProp_UpgradeBench_C:CurveFloat_0:CurveFloat",
+            "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_UpgradeBench.13"
+          },
+          "PropertyName": "WobbleTimeline_WobbleOverTime_6C787AA044BAB89E1FDAF5A5520714F2",
+          "TrackName": "WobbleOverTime",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "6C787AA0-44BAB89E-1FDAF5A5-520714F2",
+      "VariableName": "WobbleTimeline",
+      "DirectionPropertyName": "WobbleTimeline__Direction_6C787AA044BAB89E1FDAF5A5520714F2",
+      "UpdateFunctionName": "WobbleTimeline__UpdateFunc",
+      "FinishedFunctionName": "WobbleTimeline__FinishedFunc"
+    }
+  }
+]

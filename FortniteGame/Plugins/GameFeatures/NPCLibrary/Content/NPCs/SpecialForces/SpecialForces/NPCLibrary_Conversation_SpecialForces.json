@@ -1,0 +1,306 @@
+[
+  {
+    "Type": "ConversationDatabase",
+    "Name": "NPCLibrary_Conversation_SpecialForces",
+    "Properties": {
+      "CompilerVersion": 2,
+      "ReachableNodeMap": {
+        "F6687EEE4B4F9B79467A94B04115BD79": {
+          "ObjectName": "NPCLibrary_Conversation_SpecialForces:ConversationEntryPointNode_7:ConversationEntryPointNode",
+          "ObjectPath": "/NPCLibrary/NPCs/SpecialForces/SpecialForces/NPCLibrary_Conversation_SpecialForces.1"
+        },
+        "2BC0DEEC46D42AFFA83025A1615AA37D": {
+          "ObjectName": "NPCLibrary_Conversation_SpecialForces:Speech_C_4:Speech_C",
+          "ObjectPath": "/NPCLibrary/NPCs/SpecialForces/SpecialForces/NPCLibrary_Conversation_SpecialForces.8"
+        },
+        "0BFC6835401376840D273DB7B61B24AE": {
+          "ObjectName": "NPCLibrary_Conversation_SpecialForces:ConversationLinkNode_0:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/SpecialForces/SpecialForces/NPCLibrary_Conversation_SpecialForces.2"
+        },
+        "664309254B009F80185276ABDEED4EB4": {
+          "ObjectName": "NPCLibrary_Conversation_SpecialForces:ConversationLinkNode_1:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/SpecialForces/SpecialForces/NPCLibrary_Conversation_SpecialForces.3"
+        },
+        "9CE1B5CD40418F670500B6A31278A16F": {
+          "ObjectName": "NPCLibrary_Conversation_SpecialForces:ConversationLinkNode_2:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/SpecialForces/SpecialForces/NPCLibrary_Conversation_SpecialForces.4"
+        }
+      },
+      "EntryTags": [
+        {
+          "EntryTag": {
+            "TagName": "Conversation.Entry.SpecialForces"
+          },
+          "DestinationList": [
+            "F6687EEE-4B4F9B79-467A94B0-4115BD79"
+          ]
+        }
+      ],
+      "ExitTags": [
+        "Conversation.Entry.BasicServices",
+        "Conversation.Entry.NPCLibrary.Quests",
+        "Conversation.Entry.Season17.Week2"
+      ],
+      "InternalNodeIds": [
+        "F6687EEE-4B4F9B79-467A94B0-4115BD79",
+        "2BC0DEEC-46D42AFF-A83025A1-615AA37D",
+        "0BFC6835-40137684-0D273DB7-B61B24AE",
+        "66430925-4B009F80-185276AB-DEED4EB4",
+        "9CE1B5CD-40418F67-0500B6A3-1278A16F"
+      ],
+      "Speakers": [
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.Player"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.406108,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "0068FF"
+          }
+        },
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.NPC"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.065123,
+            "B": 0.1875,
+            "A": 1.0,
+            "Hex": "001130"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ConversationEntryPointNode",
+    "Name": "ConversationEntryPointNode_7",
+    "Properties": {
+      "EntryTag": {
+        "TagName": "Conversation.Entry.SpecialForces"
+      },
+      "OutputConnections": [
+        "2BC0DEEC-46D42AFF-A83025A1-615AA37D"
+      ],
+      "Compiled_NodeGUID": "F6687EEE-4B4F9B79-467A94B0-4115BD79"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_0",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.BasicServices"
+      },
+      "Compiled_NodeGUID": "0BFC6835-40137684-0D273DB7-B61B24AE"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_1",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.NPCLibrary.Quests"
+      },
+      "Compiled_NodeGUID": "66430925-4B009F80-185276AB-DEED4EB4"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_2",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.Season17.Week2"
+      },
+      "Compiled_NodeGUID": "9CE1B5CD-40418F67-0500B6A3-1278A16F"
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch",
+    "Name": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0",
+    "Properties": {
+      "days": 7
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_HasBars",
+    "Name": "FortControllerRequirement_HasBars_0",
+    "Properties": {
+      "ThresholdTestConfig": {
+        "Requirement": "EThresholdRequirement::GreaterThanOrEqual",
+        "Quantity": {
+          "Value": 2000.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_IsFirstEverConversationWithNPC",
+    "Name": "FortControllerRequirement_IsFirstEverConversationWithNPC_0",
+    "Properties": {}
+  },
+  {
+    "Type": "Speech_C",
+    "Name": "Speech_C_4",
+    "Properties": {
+      "SpeakerTag": {
+        "TagName": "Conversation.Participant.NPC"
+      },
+      "ListenerTag": {
+        "TagName": "Conversation.Participant.Player"
+      },
+      "GeneralConfig": {
+        "ContextualMessages": [
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "DD22AFB64A578DA17DCB4A810C1ED8F9",
+              "SourceString": "I've been awaiting your orders, <b>Captain</>. "
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_4:FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0:FortControllerRequirement_CheckTimeSinceLastPlayedMatch",
+                  "ObjectPath": "/NPCLibrary/NPCs/SpecialForces/SpecialForces/NPCLibrary_Conversation_SpecialForces.5"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.WhileSincePlayed"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "FD00F9A64A8A22BCDAF38A9AFD249C88",
+              "SourceString": "A new C.O.? At your service."
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_4:FortControllerRequirement_IsFirstEverConversationWithNPC_0:FortControllerRequirement_IsFirstEverConversationWithNPC",
+                  "ObjectPath": "/NPCLibrary/NPCs/SpecialForces/SpecialForces/NPCLibrary_Conversation_SpecialForces.7"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "EB0BC7384889F2D97AFE0B9202661F38",
+              "SourceString": "Those Bars'll buy a lot of fresh tactical gear."
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_4:FortControllerRequirement_HasBars_0:FortControllerRequirement_HasBars",
+                  "ObjectPath": "/NPCLibrary/NPCs/SpecialForces/SpecialForces/NPCLibrary_Conversation_SpecialForces.6"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          }
+        ],
+        "DefaultMessage": {
+          "Namespace": "",
+          "Key": "2BC8CF8C418FA96C4FBE8D9DC63D34BA",
+          "SourceString": "Reporting for duty!"
+        }
+      },
+      "OutputConnections": [
+        "9CE1B5CD-40418F67-0500B6A3-1278A16F",
+        "66430925-4B009F80-185276AB-DEED4EB4",
+        "0BFC6835-40137684-0D273DB7-B61B24AE"
+      ],
+      "NodeName": "",
+      "Compiled_NodeGUID": "2BC0DEEC-46D42AFF-A83025A1-615AA37D"
+    }
+  }
+]

@@ -1,0 +1,137 @@
+[
+  {
+    "Type": "ConversationDatabase",
+    "Name": "NPCLibrary_Conversation_Emperor",
+    "Properties": {
+      "CompilerVersion": 2,
+      "ReachableNodeMap": {
+        "6B6A101640D2BD6B5C537AA4841790EA": {
+          "ObjectName": "NPCLibrary_Conversation_Emperor:ConversationEntryPointNode_7:ConversationEntryPointNode",
+          "ObjectPath": "/NPCLibrary/NPCs/Emperor/Emperor/NPCLibrary_Conversation_Emperor.1"
+        },
+        "4CC8ADD5414F63FB936D36861A25F156": {
+          "ObjectName": "NPCLibrary_Conversation_Emperor:Speech_C_4:Speech_C",
+          "ObjectPath": "/NPCLibrary/NPCs/Emperor/Emperor/NPCLibrary_Conversation_Emperor.4"
+        },
+        "82E6DE59464E4AD347ED64BE807FE46E": {
+          "ObjectName": "NPCLibrary_Conversation_Emperor:ConversationLinkNode_0:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/Emperor/Emperor/NPCLibrary_Conversation_Emperor.2"
+        },
+        "16BE642F4DD15459807302A6389D1959": {
+          "ObjectName": "NPCLibrary_Conversation_Emperor:ConversationLinkNode_1:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/Emperor/Emperor/NPCLibrary_Conversation_Emperor.3"
+        }
+      },
+      "EntryTags": [
+        {
+          "EntryTag": {
+            "TagName": "Conversation.Entry.Emperor"
+          },
+          "DestinationList": [
+            "6B6A1016-40D2BD6B-5C537AA4-841790EA"
+          ]
+        }
+      ],
+      "ExitTags": [
+        "Conversation.Entry.BasicServices",
+        "Conversation.Entry.NPCLibrary.Quests"
+      ],
+      "InternalNodeIds": [
+        "6B6A1016-40D2BD6B-5C537AA4-841790EA",
+        "4CC8ADD5-414F63FB-936D3686-1A25F156",
+        "82E6DE59-464E4AD3-47ED64BE-807FE46E",
+        "16BE642F-4DD15459-807302A6-389D1959"
+      ],
+      "Speakers": [
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.Player"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.406108,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "0068FF"
+          }
+        },
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.NPC"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.065123,
+            "B": 0.1875,
+            "A": 1.0,
+            "Hex": "001130"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ConversationEntryPointNode",
+    "Name": "ConversationEntryPointNode_7",
+    "Properties": {
+      "EntryTag": {
+        "TagName": "Conversation.Entry.Emperor"
+      },
+      "OutputConnections": [
+        "4CC8ADD5-414F63FB-936D3686-1A25F156"
+      ],
+      "Compiled_NodeGUID": "6B6A1016-40D2BD6B-5C537AA4-841790EA"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_0",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.BasicServices"
+      },
+      "Compiled_NodeGUID": "82E6DE59-464E4AD3-47ED64BE-807FE46E"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_1",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.NPCLibrary.Quests"
+      },
+      "Compiled_NodeGUID": "16BE642F-4DD15459-807302A6-389D1959"
+    }
+  },
+  {
+    "Type": "Speech_C",
+    "Name": "Speech_C_4",
+    "Properties": {
+      "SpeakerTag": {
+        "TagName": "Conversation.Participant.NPC"
+      },
+      "ListenerTag": {
+        "TagName": "Conversation.Participant.Player"
+      },
+      "GeneralConfig": {
+        "DefaultMessage": {
+          "Namespace": "",
+          "Key": "4D0372B94A874F798F3D7E8DD697D415",
+          "SourceString": "Default Message: Hello!"
+        }
+      },
+      "OutputConnections": [
+        "16BE642F-4DD15459-807302A6-389D1959",
+        "82E6DE59-464E4AD3-47ED64BE-807FE46E"
+      ],
+      "NodeName": "",
+      "Compiled_NodeGUID": "4CC8ADD5-414F63FB-936D3686-1A25F156"
+    }
+  }
+]

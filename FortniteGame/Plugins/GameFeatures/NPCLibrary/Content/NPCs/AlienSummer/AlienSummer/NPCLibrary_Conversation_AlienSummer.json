@@ -1,0 +1,137 @@
+[
+  {
+    "Type": "ConversationDatabase",
+    "Name": "NPCLibrary_Conversation_AlienSummer",
+    "Properties": {
+      "CompilerVersion": 2,
+      "ReachableNodeMap": {
+        "C33059724DE0F17BC5CCCD8583C53FF3": {
+          "ObjectName": "NPCLibrary_Conversation_AlienSummer:ConversationEntryPointNode_7:ConversationEntryPointNode",
+          "ObjectPath": "/NPCLibrary/NPCs/AlienSummer/AlienSummer/NPCLibrary_Conversation_AlienSummer.1"
+        },
+        "AB4E3A254164E974EAF28D9E1A7577B0": {
+          "ObjectName": "NPCLibrary_Conversation_AlienSummer:Speech_C_4:Speech_C",
+          "ObjectPath": "/NPCLibrary/NPCs/AlienSummer/AlienSummer/NPCLibrary_Conversation_AlienSummer.4"
+        },
+        "F47D4C96427E45D605421DB710B295F9": {
+          "ObjectName": "NPCLibrary_Conversation_AlienSummer:ConversationLinkNode_0:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/AlienSummer/AlienSummer/NPCLibrary_Conversation_AlienSummer.2"
+        },
+        "C1E57BE641F1CF6FBF17108F0DAE337A": {
+          "ObjectName": "NPCLibrary_Conversation_AlienSummer:ConversationLinkNode_1:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/AlienSummer/AlienSummer/NPCLibrary_Conversation_AlienSummer.3"
+        }
+      },
+      "EntryTags": [
+        {
+          "EntryTag": {
+            "TagName": "Conversation.Entry.AlienSummer"
+          },
+          "DestinationList": [
+            "C3305972-4DE0F17B-C5CCCD85-83C53FF3"
+          ]
+        }
+      ],
+      "ExitTags": [
+        "Conversation.Entry.BasicServices",
+        "Conversation.Entry.NPCLibrary.Quests"
+      ],
+      "InternalNodeIds": [
+        "C3305972-4DE0F17B-C5CCCD85-83C53FF3",
+        "AB4E3A25-4164E974-EAF28D9E-1A7577B0",
+        "F47D4C96-427E45D6-05421DB7-10B295F9",
+        "C1E57BE6-41F1CF6F-BF17108F-0DAE337A"
+      ],
+      "Speakers": [
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.Player"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.406108,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "0068FF"
+          }
+        },
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.NPC"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.065123,
+            "B": 0.1875,
+            "A": 1.0,
+            "Hex": "001130"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ConversationEntryPointNode",
+    "Name": "ConversationEntryPointNode_7",
+    "Properties": {
+      "EntryTag": {
+        "TagName": "Conversation.Entry.AlienSummer"
+      },
+      "OutputConnections": [
+        "AB4E3A25-4164E974-EAF28D9E-1A7577B0"
+      ],
+      "Compiled_NodeGUID": "C3305972-4DE0F17B-C5CCCD85-83C53FF3"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_0",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.BasicServices"
+      },
+      "Compiled_NodeGUID": "F47D4C96-427E45D6-05421DB7-10B295F9"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_1",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.NPCLibrary.Quests"
+      },
+      "Compiled_NodeGUID": "C1E57BE6-41F1CF6F-BF17108F-0DAE337A"
+    }
+  },
+  {
+    "Type": "Speech_C",
+    "Name": "Speech_C_4",
+    "Properties": {
+      "SpeakerTag": {
+        "TagName": "Conversation.Participant.NPC"
+      },
+      "ListenerTag": {
+        "TagName": "Conversation.Participant.Player"
+      },
+      "GeneralConfig": {
+        "DefaultMessage": {
+          "Namespace": "",
+          "Key": "D90732DB42AB4466479E7BBEC2E54664",
+          "SourceString": "Default Message: Hello!"
+        }
+      },
+      "OutputConnections": [
+        "C1E57BE6-41F1CF6F-BF17108F-0DAE337A",
+        "F47D4C96-427E45D6-05421DB7-10B295F9"
+      ],
+      "NodeName": "",
+      "Compiled_NodeGUID": "AB4E3A25-4164E974-EAF28D9E-1A7577B0"
+    }
+  }
+]

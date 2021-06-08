@@ -1,0 +1,226 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GCNL_Athena_Inner_ActiveEffect_C",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "GCNL_Athena_Inner_ActiveEffect_C:SimpleConstructionScript_0:SimpleConstructionScript",
+        "ObjectPath": "/NPCLibrary/GameplayCues/GCNL_Athena_Inner_ActiveEffect.5"
+      }
+    }
+  },
+  {
+    "Type": "GCNL_Athena_Inner_ActiveEffect_C",
+    "Name": "Default__GCNL_Athena_Inner_ActiveEffect_C",
+    "Properties": {
+      "LoopingParticles": [
+        {
+          "Condition": {
+            "SourceCondition": "EFortGameplayCueSourceCondition::AnySource",
+            "AllowedSurfaces": [],
+            "DisallowedSurfaces": [],
+            "ChanceToPlay": 1.0,
+            "Significance": "EParticleSignificanceLevel::High",
+            "RequiredDetailMode": 0,
+            "bRequireVisible": false
+          },
+          "Attachment": {
+            "SocketName": null,
+            "AttachType": "EFortGameplayCueAttachType::DoNotAttach",
+            "bAttachToWeapon": false,
+            "bAttachToHitResult": false,
+            "bUseUnsmoothedNetworkPosition": false,
+            "bIgnoreScale": true,
+            "bIgnoreRotation": false,
+            "OverrideScale": {
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 1.0
+            },
+            "OverrideRotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            }
+          },
+          "FXType": "EFXType::GenericAnimNotify",
+          "NiagaraSystem": {
+            "ObjectName": "NS_Athena_ZeroPointCrystals_NPC_Looping:NiagaraSystem",
+            "ObjectPath": "/Game/Athena/Items/ForagedItems/ZeroPoint/Assets/Zero_Point_Crystals/FX/NS_Athena_ZeroPointCrystals_NPC_Looping.128"
+          },
+          "ParticleSystem": null,
+          "bCastShadow": false,
+          "bOverrideCondition": false,
+          "bOverrideAttachment": false
+        }
+      ],
+      "LoopingSounds": [
+        {
+          "LoopingSoundFadeOutDuration": 0.5,
+          "LoopingSoundVolumeLevel": 0.0,
+          "Condition": {
+            "SourceCondition": "EFortGameplayCueSourceCondition::AnySource",
+            "AllowedSurfaces": [],
+            "DisallowedSurfaces": [],
+            "ChanceToPlay": 1.0,
+            "Significance": "EParticleSignificanceLevel::High",
+            "RequiredDetailMode": 0,
+            "bRequireVisible": false
+          },
+          "Attachment": {
+            "SocketName": null,
+            "AttachType": "EFortGameplayCueAttachType::AttachToTarget",
+            "bAttachToWeapon": false,
+            "bAttachToHitResult": false,
+            "bUseUnsmoothedNetworkPosition": false,
+            "bIgnoreScale": true,
+            "bIgnoreRotation": false,
+            "OverrideScale": {
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 1.0
+            },
+            "OverrideRotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            }
+          },
+          "SoundCue": {
+            "ObjectName": "NPC_Evil_Boss_Loop_Cue:SoundCue",
+            "ObjectPath": "/NPCLibrary/Audio/TinyBalloon/NPC_Evil_Boss_Loop_Cue.0"
+          },
+          "DelayBeforePlayInSeconds": 0.0,
+          "bOverrideCondition": false,
+          "bOverrideAttachment": true
+        }
+      ],
+      "RemovalBurst": {
+        "BurstParticles": [
+          {
+            "Condition": {
+              "SourceCondition": "EFortGameplayCueSourceCondition::AnySource",
+              "AllowedSurfaces": [],
+              "DisallowedSurfaces": [],
+              "ChanceToPlay": 1.0,
+              "Significance": "EParticleSignificanceLevel::High",
+              "RequiredDetailMode": 0,
+              "bRequireVisible": false
+            },
+            "Attachment": {
+              "SocketName": "pelvis",
+              "AttachType": "EFortGameplayCueAttachType::AttachToTarget",
+              "bAttachToWeapon": false,
+              "bAttachToHitResult": false,
+              "bUseUnsmoothedNetworkPosition": false,
+              "bIgnoreScale": true,
+              "bIgnoreRotation": true,
+              "OverrideScale": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              },
+              "OverrideRotation": {
+                "Pitch": 0.0,
+                "Yaw": 0.0,
+                "Roll": 0.0
+              }
+            },
+            "FXType": "EFXType::GenericAnimNotify",
+            "NiagaraSystem": {
+              "ObjectName": "NS_Athena_ZeroPointCrystals_Player_End:NiagaraSystem",
+              "ObjectPath": "/Game/Athena/Items/ForagedItems/ZeroPoint/Assets/Zero_Point_Crystals/FX/NS_Athena_ZeroPointCrystals_Player_End.76"
+            },
+            "ParticleSystem": null,
+            "bCastShadow": false,
+            "bOverrideCondition": false,
+            "bOverrideAttachment": true
+          }
+        ],
+        "BurstSounds": [
+          {
+            "Condition": {
+              "SourceCondition": "EFortGameplayCueSourceCondition::AnySource",
+              "AllowedSurfaces": [],
+              "DisallowedSurfaces": [],
+              "ChanceToPlay": 1.0,
+              "Significance": "EParticleSignificanceLevel::High",
+              "RequiredDetailMode": 0,
+              "bRequireVisible": false
+            },
+            "Attachment": {
+              "SocketName": null,
+              "AttachType": "EFortGameplayCueAttachType::AttachToTarget",
+              "bAttachToWeapon": false,
+              "bAttachToHitResult": false,
+              "bUseUnsmoothedNetworkPosition": false,
+              "bIgnoreScale": true,
+              "bIgnoreRotation": false,
+              "OverrideScale": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              },
+              "OverrideRotation": {
+                "Pitch": 0.0,
+                "Yaw": 0.0,
+                "Roll": 0.0
+              }
+            },
+            "SoundCue": null,
+            "DelayBeforePlayInSeconds": 0.0,
+            "bOverrideCondition": false,
+            "bOverrideAttachment": true
+          }
+        ]
+      },
+      "DefaultCondition": {
+        "Significance": "EParticleSignificanceLevel::Critical"
+      },
+      "GameplayCueTag": {
+        "TagName": "GameplayCue.NPC.Inner.Ambient"
+      },
+      "GameplayCueName": "GameplayCue.NPC.Inner.Ambient",
+      "RootComponent": {
+        "ObjectName": "Default__GCNL_Athena_Inner_ActiveEffect_C:RootComponent:SceneComponent",
+        "ObjectPath": "/NPCLibrary/GameplayCues/GCNL_Athena_Inner_ActiveEffect.2"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "RootComponent",
+    "Properties": {}
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Properties": {}
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "SceneComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": {
+        "ObjectName": "GCNL_Athena_Inner_ActiveEffect_C:DefaultSceneRoot_GEN_VARIABLE:SceneComponent",
+        "ObjectPath": "/NPCLibrary/GameplayCues/GCNL_Athena_Inner_ActiveEffect.3"
+      },
+      "VariableGuid": "427836BA-45B4B9B8-B529C597-04A7516A",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SimpleConstructionScript_0:SCS_Node_0:SCS_Node",
+        "ObjectPath": "/NPCLibrary/GameplayCues/GCNL_Athena_Inner_ActiveEffect.4"
+      }
+    }
+  }
+]

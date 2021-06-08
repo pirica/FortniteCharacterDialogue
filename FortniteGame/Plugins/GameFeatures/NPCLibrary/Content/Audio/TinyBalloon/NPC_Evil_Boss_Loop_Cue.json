@@ -1,0 +1,76 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "NPC_Evil_Boss_Loop_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "NPC_Evil_Boss_Loop_Cue:SoundNodeModulator_0:SoundNodeModulator",
+        "ObjectPath": "/NPCLibrary/Audio/TinyBalloon/NPC_Evil_Boss_Loop_Cue.1"
+      },
+      "bHasPlayWhenSilent": true,
+      "SoundClassObject": {
+        "ObjectName": "Fort_Gadgets:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Gadgets.0"
+      },
+      "bOverrideConcurrency": true,
+      "VirtualizationMode": "EVirtualizationMode::PlayWhenSilent",
+      "ConcurrencyOverrides": {
+        "MaxCount": 1,
+        "VolumeScale": 0.5
+      },
+      "Duration": 10000.0,
+      "MaxDistance": 2000.0,
+      "AttenuationSettings": {
+        "ObjectName": "NPC_Glitch_Att:SoundAttenuation",
+        "ObjectPath": "/Game/Athena/Sounds/NPCs/NPC_Glitch_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "NPC_Evil_Boss_Loop_Cue:SoundNodeQualityLevel_0:SoundNodeQualityLevel",
+          "ObjectPath": "/NPCLibrary/Audio/TinyBalloon/NPC_Evil_Boss_Loop_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeQualityLevel",
+    "Name": "SoundNodeQualityLevel_0",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "NPC_Evil_Boss_Loop_Cue:SoundNodeWavePlayer_0:SoundNodeWavePlayer",
+          "ObjectPath": "/NPCLibrary/Audio/TinyBalloon/NPC_Evil_Boss_Loop_Cue.3"
+        },
+        {
+          "ObjectName": "NPC_Evil_Boss_Loop_Cue:SoundNodeWavePlayer_0:SoundNodeWavePlayer",
+          "ObjectPath": "/NPCLibrary/Audio/TinyBalloon/NPC_Evil_Boss_Loop_Cue.3"
+        },
+        {
+          "ObjectName": "NPC_Evil_Boss_Loop_Cue:SoundNodeWavePlayer_0:SoundNodeWavePlayer",
+          "ObjectPath": "/NPCLibrary/Audio/TinyBalloon/NPC_Evil_Boss_Loop_Cue.3"
+        },
+        {
+          "ObjectName": "NPC_Evil_Boss_Loop_Cue:SoundNodeWavePlayer_0:SoundNodeWavePlayer",
+          "ObjectPath": "/NPCLibrary/Audio/TinyBalloon/NPC_Evil_Boss_Loop_Cue.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/NPCLibrary/Audio/TinyBalloon/Evil_Boss_Loop.Evil_Boss_Loop",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    }
+  }
+]

@@ -1,0 +1,137 @@
+[
+  {
+    "Type": "Function",
+    "Name": "OnExecute",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "OnActive",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "OnBurstNiagara",
+    "Properties": {}
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GCN_Athena_Inner_Warp_C",
+    "Properties": {}
+  },
+  {
+    "Type": "GCN_Athena_Inner_Warp_C",
+    "Name": "Default__GCN_Athena_Inner_Warp_C",
+    "Properties": {
+      "BurstEffectData": {
+        "BurstParticles": [
+          {
+            "Condition": {
+              "SourceCondition": "EFortGameplayCueSourceCondition::AnySource",
+              "AllowedSurfaces": [],
+              "DisallowedSurfaces": [],
+              "ChanceToPlay": 1.0,
+              "Significance": "EParticleSignificanceLevel::High",
+              "RequiredDetailMode": 0,
+              "bRequireVisible": false
+            },
+            "Attachment": {
+              "SocketName": "pelvis",
+              "AttachType": "EFortGameplayCueAttachType::AttachToTarget",
+              "bAttachToWeapon": false,
+              "bAttachToHitResult": false,
+              "bUseUnsmoothedNetworkPosition": false,
+              "bIgnoreScale": true,
+              "bIgnoreRotation": false,
+              "OverrideScale": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              },
+              "OverrideRotation": {
+                "Pitch": 0.0,
+                "Yaw": 0.0,
+                "Roll": 0.0
+              }
+            },
+            "FXType": "EFXType::GenericAnimNotify",
+            "NiagaraSystem": {
+              "ObjectName": "NS_Athena_ZeroPointCrystals_Dash:NiagaraSystem",
+              "ObjectPath": "/Game/Athena/Items/ForagedItems/ZeroPoint/Assets/Zero_Point_Crystals/FX/NS_Athena_ZeroPointCrystals_Dash.95"
+            },
+            "ParticleSystem": null,
+            "bCastShadow": false,
+            "bOverrideCondition": false,
+            "bOverrideAttachment": true
+          }
+        ],
+        "BurstSounds": [
+          {
+            "Condition": {
+              "SourceCondition": "EFortGameplayCueSourceCondition::AnySource",
+              "AllowedSurfaces": [],
+              "DisallowedSurfaces": [],
+              "ChanceToPlay": 1.0,
+              "Significance": "EParticleSignificanceLevel::High",
+              "RequiredDetailMode": 0,
+              "bRequireVisible": false
+            },
+            "Attachment": {
+              "SocketName": null,
+              "AttachType": "EFortGameplayCueAttachType::AttachToTarget",
+              "bAttachToWeapon": false,
+              "bAttachToHitResult": false,
+              "bUseUnsmoothedNetworkPosition": false,
+              "bIgnoreScale": true,
+              "bIgnoreRotation": false,
+              "OverrideScale": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              },
+              "OverrideRotation": {
+                "Pitch": 0.0,
+                "Yaw": 0.0,
+                "Roll": 0.0
+              }
+            },
+            "SoundCue": {
+              "ObjectName": "NPC_Boss_PhaseJump_Cue:SoundCue",
+              "ObjectPath": "/NPCLibrary/Audio/TinyBalloon/NPC_Boss_PhaseJump_Cue.0"
+            },
+            "DelayBeforePlayInSeconds": 0.0,
+            "bOverrideCondition": false,
+            "bOverrideAttachment": true
+          }
+        ],
+        "BurstCameraShake": {
+          "Shake": {
+            "ObjectName": "CamShake_ZeroPointCrystal_Dash_C:BlueprintGeneratedClass",
+            "ObjectPath": "/Game/Athena/Items/ForagedItems/ZeroPoint/Assets/Zero_Point_Crystals/FX/CamShake_ZeroPointCrystal_Dash.0"
+          },
+          "Scale": 0.8,
+          "Falloff": {
+            "InnerRadius": 250.0,
+            "OuterRadius": 700.0
+          }
+        },
+        "BurstCameraLensEffect": {
+          "CameraLensEffect": {
+            "ObjectName": "B_CameraLens_ZeroPointCrystal_Dash_C:BlueprintGeneratedClass",
+            "ObjectPath": "/Game/Effects/Fort_Effects/Camera_Effects/B_CameraLens_ZeroPointCrystal_Dash.2"
+          }
+        },
+        "BurstForceFeedbackEffect": {
+          "ForceFeedbackEffect": {
+            "ObjectName": "FF_ShoppingCartPedal:ForceFeedbackEffect",
+            "ObjectPath": "/Game/Weapons/ForceFeedback/FF_ShoppingCartPedal.0"
+          }
+        }
+      },
+      "GameplayCueTag": {
+        "TagName": "GameplayCue.NPC.Inner.Warped"
+      },
+      "GameplayCueName": "GameplayCue.NPC.Inner.Warped"
+    }
+  }
+]

@@ -1,0 +1,142 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "B_Athena_Spawner_Payphone_C",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "B_Athena_Spawner_Payphone_C:SimpleConstructionScript_0:SimpleConstructionScript",
+        "ObjectPath": "/NPCLibrary/Stations/B_Athena_Spawner_Payphone.6"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "B_Athena_Spawner_Payphone_C:InheritableComponentHandler:InheritableComponentHandler",
+        "ObjectPath": "/NPCLibrary/Stations/B_Athena_Spawner_Payphone.2"
+      }
+    }
+  },
+  {
+    "Type": "B_Athena_Spawner_Payphone_C",
+    "Name": "Default__B_Athena_Spawner_Payphone_C",
+    "Properties": {
+      "ClassToSpawn": {
+        "ObjectName": "BP_StationProp_Payphone_C:BlueprintGeneratedClass",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.12"
+      },
+      "Row_Enabled": {
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "NPCServiceSettings:CurveTable",
+            "ObjectPath": "/Game/Athena/Balance/DataTables/NPCServiceSettings.0"
+          },
+          "RowName": "VenMachinePayphone.RowEnabled"
+        }
+      },
+      "Row_SpawnChance": {
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "NPCServiceSettings:CurveTable",
+            "ObjectPath": "/Game/Athena/Balance/DataTables/NPCServiceSettings.0"
+          },
+          "RowName": "VenMachinePayphone.RowSpawnChance"
+        }
+      },
+      "Row_EQS_SpawnDensity": {
+        "Value": 0.0,
+        "Curve": {
+          "CurveTable": null
+        }
+      },
+      "EQS_RandomYaw": false,
+      "EQS_AlignToSurfaceNormal": false,
+      "SceneRoot": {
+        "ObjectName": "Default__B_Athena_Spawner_Payphone_C:SceneRootComp:SceneComponent",
+        "ObjectPath": "/NPCLibrary/Stations/B_Athena_Spawner_Payphone.4"
+      },
+      "bEnableAutoLODGeneration": false,
+      "RootComponent": {
+        "ObjectName": "Default__B_Athena_Spawner_Payphone_C:SceneRootComp:SceneComponent",
+        "ObjectPath": "/NPCLibrary/Stations/B_Athena_Spawner_Payphone.4"
+      }
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "StaticMeshComponent:Class",
+            "ObjectPath": 0
+          },
+          "ComponentTemplate": {
+            "ObjectName": "B_Athena_Spawner_Payphone_C:PreVisMesh_GEN_VARIABLE:StaticMeshComponent",
+            "ObjectPath": "/NPCLibrary/Stations/B_Athena_Spawner_Payphone.7"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "B_ActorSpawner_Parent_C:BlueprintGeneratedClass",
+              "ObjectPath": "/Game/Athena/Items/EnvironmentalItems/B_ActorSpawner_Parent.11"
+            },
+            "SCSVariableName": "PreVisMesh",
+            "AssociatedGuid": "27323857-418D80B1-553A7590-30576DBA"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Properties": {}
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "SceneRootComp",
+    "Properties": {}
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "SceneComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": {
+        "ObjectName": "B_Athena_Spawner_Payphone_C:DefaultSceneRoot_GEN_VARIABLE:SceneComponent",
+        "ObjectPath": "/NPCLibrary/Stations/B_Athena_Spawner_Payphone.3"
+      },
+      "VariableGuid": "0B60C14D-4E69CF39-B0DA0A8F-6B061E50",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SimpleConstructionScript_0:SCS_Node_0:SCS_Node",
+        "ObjectPath": "/NPCLibrary/Stations/B_Athena_Spawner_Payphone.5"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "PreVisMesh_GEN_VARIABLE",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "gas_station_phone_booth_01:StaticMesh",
+        "ObjectPath": "/Game/Environments/Arid/Props/Gas_Station/Meshes/gas_station_phone_booth_01.1"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MI_Gadget_Pay_Phone:MaterialInstanceConstant",
+          "ObjectPath": "/Game/Gadgets/Assets/Pay_Phone/Materials/MI_Gadget_Pay_Phone.0"
+        }
+      ]
+    }
+  }
+]

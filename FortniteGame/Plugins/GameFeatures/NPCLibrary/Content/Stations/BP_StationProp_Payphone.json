@@ -1,0 +1,625 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_StationProp_Payphone",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "OnDeathPlayEffects",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "TriggerNextRing",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "StopRingWobbleTimeline",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "LocalUserInteractionStateChanged",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "RingWobbleTimeline__UpdateFunc",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "RingWobbleTimeline__FinishedFunc",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "PlayServiceUsedEffects",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "StartRinging",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "StopRinging",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "BlueprintOnLocalInteract",
+    "Properties": {}
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_StationProp_Payphone_C",
+    "Properties": {
+      "Timelines": [
+        {
+          "ObjectName": "BP_StationProp_Payphone_C:RingWobbleTimeline_Template:TimelineTemplate",
+          "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.22"
+        }
+      ],
+      "SimpleConstructionScript": {
+        "ObjectName": "BP_StationProp_Payphone_C:SimpleConstructionScript_0:SimpleConstructionScript",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.20"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "BP_StationProp_Payphone_C:InheritableComponentHandler:InheritableComponentHandler",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.16"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "BP_StationProp_Payphone_C:ExecuteUbergraph_BP_StationProp_Payphone:Function",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.0"
+      }
+    }
+  },
+  {
+    "Type": "BP_StationProp_Payphone_C",
+    "Name": "Default__BP_StationProp_Payphone_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "bDisableAmbientDuringConversation": true,
+      "InteractSound": {
+        "ObjectName": "Station_Payphone_Interact:SoundWave",
+        "ObjectPath": "/Game/Sounds/Fort_Prop_Sounds/Exterior/StationPayphone/Station_Payphone_Interact.0"
+      },
+      "Initial Relative Rotation": {
+        "Pitch": 0.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      },
+      "MaxWobbleRotator": {
+        "Pitch": 0.35,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      },
+      "LastDialogMarkerInteractionState": "EDialogMarkerInteractionState::None",
+      "RingTimerHandle": {
+        "Handle": 0
+      },
+      "StartAmbientOnBeginPlay": false,
+      "StaticMesh": {
+        "ObjectName": "gas_station_phone_booth_01:StaticMesh",
+        "ObjectPath": "/Game/Environments/Arid/Props/Gas_Station/Meshes/gas_station_phone_booth_01.1"
+      },
+      "ResourceType": "EFortResourceType::None",
+      "bAllowResourceDrop": false,
+      "bAllowCustomMaterial": true,
+      "StaticMeshComponent": {
+        "ObjectName": "Default__BP_StationProp_Payphone_C:StaticMeshComponent0:StaticMeshComponent",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.21"
+      },
+      "NavigationObstacleOverride": "ENavigationObstacleOverride::ForceEnabled",
+      "RootComponent": {
+        "ObjectName": "Default__BP_StationProp_Payphone_C:StaticMeshComponent0:StaticMeshComponent",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.21"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "Station_Ambient_GEN_VARIABLE",
+    "Properties": {
+      "sound": {
+        "ObjectName": "Station_Payphone_Ambient_Ring_Cue:SoundCue",
+        "ObjectPath": "/Game/Sounds/Fort_Prop_Sounds/Exterior/StationPayphone/Station_Payphone_Ambient_Ring_Cue.0"
+      }
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_2",
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": 0,
+            "TangentMode": 0,
+            "TangentWeightMode": 0,
+            "KeyTime": 5.638776E-39,
+            "KeyValue": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": 0,
+            "TangentMode": 0,
+            "TangentWeightMode": 205,
+            "KeyTime": -107605600.0,
+            "KeyValue": -5.609066E+12,
+            "ArriveTangent": 2.2337E-41,
+            "ArriveTangentWeight": -5.6006374E+12,
+            "LeaveTangent": 2.2337E-41,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": 0,
+            "TangentMode": 154,
+            "TangentWeightMode": 153,
+            "KeyTime": -107375090.0,
+            "KeyValue": 2.66E-43,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": 205,
+            "TangentMode": 204,
+            "TangentWeightMode": 76,
+            "KeyTime": 0.5,
+            "KeyValue": 4.4018855,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 4.4018855,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": 0,
+            "TangentMode": 128,
+            "TangentWeightMode": 62,
+            "KeyTime": 1.754058E-38,
+            "KeyValue": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": -1.5923227E-23
+          },
+          {
+            "InterpMode": 153,
+            "TangentMode": 62,
+            "TangentWeightMode": 102,
+            "KeyTime": -4.6440317E-11,
+            "KeyValue": 6.8728E-41,
+            "ArriveTangent": -4.638423E-11,
+            "ArriveTangentWeight": 6.8728E-41,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": -4.172307E-08
+          },
+          {
+            "InterpMode": 62,
+            "TangentMode": 102,
+            "TangentWeightMode": 102,
+            "KeyTime": 2.68E-43,
+            "KeyValue": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.4
+          },
+          {
+            "InterpMode": 205,
+            "TangentMode": 204,
+            "TangentWeightMode": 76,
+            "KeyTime": 0.6230522,
+            "KeyValue": 0.0,
+            "ArriveTangent": 0.6230522,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 1.5111573E+23,
+            "LeaveTangentWeight": -200173150.0
+          },
+          {
+            "InterpMode": 204,
+            "TangentMode": 76,
+            "TangentWeightMode": 191,
+            "KeyTime": 0.0,
+            "KeyValue": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 2.718266E+23
+          },
+          {
+            "InterpMode": 102,
+            "TangentMode": 63,
+            "TangentWeightMode": 223,
+            "KeyTime": 6.8724E-41,
+            "KeyValue": -9.006898E-26,
+            "ArriveTangent": 6.8724E-41,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 3.1554557E-31,
+            "LeaveTangentWeight": 2.720076E+23
+          },
+          {
+            "InterpMode": 191,
+            "TangentMode": 0,
+            "TangentWeightMode": 0,
+            "KeyTime": 0.0,
+            "KeyValue": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.6,
+            "LeaveTangentWeight": 1.0
+          },
+          {
+            "InterpMode": 37,
+            "TangentMode": 67,
+            "TangentWeightMode": 84,
+            "KeyTime": 0.0,
+            "KeyValue": 0.82914954,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 1.5111573E+23,
+            "LeaveTangent": 5.799411E-39,
+            "LeaveTangentWeight": 1.7586498E-38
+          },
+          {
+            "InterpMode": 0,
+            "TangentMode": 0,
+            "TangentWeightMode": 0,
+            "KeyTime": 0.0,
+            "KeyValue": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 4.1676685E-08,
+            "LeaveTangent": 2.2672E-41,
+            "LeaveTangentWeight": -1.2682084E+36
+          },
+          {
+            "InterpMode": 134,
+            "TangentMode": 63,
+            "TangentWeightMode": 0,
+            "KeyTime": -1.2669204E+36,
+            "KeyValue": 2.2788E-41,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 2.0,
+            "LeaveTangent": -8.8E-44,
+            "LeaveTangentWeight": 2.68E-43
+          },
+          {
+            "InterpMode": 0,
+            "TangentMode": 0,
+            "TangentWeightMode": 0,
+            "KeyTime": 0.0,
+            "KeyValue": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.8,
+            "LeaveTangent": 1.0,
+            "LeaveTangentWeight": -1.3663526
+          },
+          {
+            "InterpMode": 0,
+            "TangentMode": 0,
+            "TangentWeightMode": 0,
+            "KeyTime": -1.3663526,
+            "KeyValue": 0.0,
+            "ArriveTangent": -2.646978E-23,
+            "ArriveTangentWeight": 4.455214E-08,
+            "LeaveTangent": 1.7581905E-38,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": 0,
+            "TangentMode": 0,
+            "TangentWeightMode": 0,
+            "KeyTime": 0.0,
+            "KeyValue": 0.0,
+            "ArriveTangent": -107479040.0,
+            "ArriveTangentWeight": 4.1734367E-08,
+            "LeaveTangent": 9.865092E-26,
+            "LeaveTangentWeight": 2.2826E-41
+          },
+          {
+            "InterpMode": 0,
+            "TangentMode": 0,
+            "TangentWeightMode": 244,
+            "KeyTime": 2.2826E-41,
+            "KeyValue": 0.0,
+            "ArriveTangent": -0.0,
+            "ArriveTangentWeight": 5.4044084E+15,
+            "LeaveTangent": 2.68E-43,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": 0,
+            "TangentMode": 0,
+            "TangentWeightMode": 0,
+            "KeyTime": 0.0,
+            "KeyValue": 0.0,
+            "ArriveTangent": 1.0506402,
+            "ArriveTangentWeight": 0.85,
+            "LeaveTangent": -1.9416584,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": 67,
+            "TangentMode": 136,
+            "TangentWeightMode": 248,
+            "KeyTime": 0.0,
+            "KeyValue": 4.7683716E-07,
+            "ArriveTangent": 2.2615546E+23,
+            "ArriveTangentWeight": 1.7554355E-38,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": 0,
+            "TangentMode": 0,
+            "TangentWeightMode": 0,
+            "KeyTime": 0.0,
+            "KeyValue": -1.5923227E-23,
+            "ArriveTangent": 2.7182937E+23,
+            "ArriveTangentWeight": 1.3394648E-27,
+            "LeaveTangent": 2.2614E-41,
+            "LeaveTangentWeight": 1.3379081E-27
+          },
+          {
+            "InterpMode": 10,
+            "TangentMode": 63,
+            "TangentWeightMode": 0,
+            "KeyTime": 0.0,
+            "KeyValue": -7.9935516E-16,
+            "ArriveTangent": 3.1554705E-31,
+            "ArriveTangentWeight": 2.68E-43,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": 0,
+            "TangentMode": 0,
+            "TangentWeightMode": 0,
+            "KeyTime": 0.0,
+            "KeyValue": 1.4,
+            "ArriveTangent": 0.55,
+            "ArriveTangentWeight": -0.5033933,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": -0.5033933
+          },
+          {
+            "InterpMode": 0,
+            "TangentMode": 0,
+            "TangentWeightMode": 0,
+            "KeyTime": 0.0,
+            "KeyValue": -201064450.0,
+            "ArriveTangent": -1563033.5,
+            "ArriveTangentWeight": 5.818372E-39,
+            "LeaveTangent": -524288.0,
+            "LeaveTangentWeight": 5.818372E-39
+          },
+          {
+            "InterpMode": 0,
+            "TangentMode": 0,
+            "TangentWeightMode": 0,
+            "KeyTime": -107479040.0,
+            "KeyValue": -107609700.0,
+            "ArriveTangent": -1.4098813E+26,
+            "ArriveTangentWeight": 6.8288E-41,
+            "LeaveTangent": -1.4083986E+26,
+            "LeaveTangentWeight": 6.8288E-41
+          },
+          {
+            "InterpMode": 0,
+            "TangentMode": 0,
+            "TangentWeightMode": 0,
+            "KeyTime": -3.689349E+19,
+            "KeyValue": -1.5882129E-23,
+            "ArriveTangent": 2667823.5,
+            "ArriveTangentWeight": 8.7E-44,
+            "LeaveTangent": 2667776.0,
+            "LeaveTangentWeight": 8.7E-44
+          },
+          {
+            "InterpMode": 0,
+            "TangentMode": 0,
+            "TangentWeightMode": 0,
+            "KeyTime": 1.95,
+            "KeyValue": 0.2,
+            "ArriveTangent": -0.325847,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": -0.325847,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": 0,
+            "TangentMode": 0,
+            "TangentWeightMode": 0,
+            "KeyTime": -201352800.0,
+            "KeyValue": 2.2625922E-05,
+            "ArriveTangent": 5.77144E-39,
+            "ArriveTangentWeight": 7.6293945E-06,
+            "LeaveTangent": 5.77144E-39,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": 0,
+            "TangentMode": 0,
+            "TangentWeightMode": 51,
+            "KeyTime": 2.2985E-41,
+            "KeyValue": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": 0,
+            "TangentMode": 0,
+            "TangentWeightMode": 0,
+            "KeyTime": 3E-45,
+            "KeyValue": "NaN",
+            "ArriveTangent": 1.744873E-39,
+            "ArriveTangentWeight": 9.62965E-35,
+            "LeaveTangent": "NaN",
+            "LeaveTangentWeight": 2.26E-43
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "NonPlayerConversationComponent_C:BlueprintGeneratedClass",
+            "ObjectPath": "/Game/Conversation/NonPlayerConversationComponent.0"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "BP_StationProp_Payphone_C:NonPlayerConversationComponent_GEN_VARIABLE:NonPlayerConversationComponent_C",
+            "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.17"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BP_StationProp_Parent_C:BlueprintGeneratedClass",
+              "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_Parent.7"
+            },
+            "SCSVariableName": "NonPlayerConversationComponent",
+            "AssociatedGuid": "B3384C1D-432431C3-C6AC48BA-EEF07559"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "AudioComponent:Class",
+            "ObjectPath": 0
+          },
+          "ComponentTemplate": {
+            "ObjectName": "BP_StationProp_Payphone_C:Station_Ambient_GEN_VARIABLE:AudioComponent",
+            "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.14"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BP_StationProp_Parent_C:BlueprintGeneratedClass",
+              "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_Parent.7"
+            },
+            "SCSVariableName": "Station_Ambient",
+            "AssociatedGuid": "286D96E5-45FF6495-7ABD358C-FA3CA60C"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "NonPlayerConversationComponent_C",
+    "Name": "NonPlayerConversationComponent_GEN_VARIABLE",
+    "Properties": {
+      "ConversationEntryTag": {
+        "TagName": "Conversation.Entry.Payphone"
+      },
+      "bShowIndicatorBubble": true,
+      "bQuestsRequireProviderTagMatch": false,
+      "MaxQuestsToSupportFromSingleProvider": 1,
+      "bOverrideRelativeLocation": true,
+      "RelativeLocationOverride": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 20.0
+      },
+      "bOverrideMaxDrawDistance": true,
+      "MaxDrawDistanceOverride": 3000.0,
+      "DialogMarkerIndicatorSoftIcon": {
+        "AssetPathName": "/Game/Athena/HUD/Interaction/T_UI_PayPhone.T_UI_PayPhone",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Properties": {}
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "SceneComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_StationProp_Payphone_C:DefaultSceneRoot_GEN_VARIABLE:SceneComponent",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.18"
+      },
+      "VariableGuid": "F51484E8-4AF55254-3EAE30B5-0F90D649",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SimpleConstructionScript_0:SCS_Node_0:SCS_Node",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.19"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMeshComponent0",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "gas_station_phone_booth_01:StaticMesh",
+        "ObjectPath": "/Game/Environments/Arid/Props/Gas_Station/Meshes/gas_station_phone_booth_01.1"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MI_Gadget_Pay_Phone:MaterialInstanceConstant",
+          "ObjectPath": "/Game/Gadgets/Assets/Pay_Phone/Materials/MI_Gadget_Pay_Phone.0"
+        }
+      ],
+      "Mobility": "EComponentMobility::Movable"
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "RingWobbleTimeline_Template",
+    "Properties": {
+      "TimelineLength": 4.83,
+      "FloatTracks": [
+        {
+          "CurveFloat": {
+            "ObjectName": "BP_StationProp_Payphone_C:CurveFloat_2:CurveFloat",
+            "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.15"
+          },
+          "PropertyName": "RingWobbleTimeline_WobbleOverTime_94F48F8C41B389666A3A95B9FC6105CF",
+          "TrackName": "WobbleOverTime",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "94F48F8C-41B38966-6A3A95B9-FC6105CF",
+      "VariableName": "RingWobbleTimeline",
+      "DirectionPropertyName": "RingWobbleTimeline__Direction_94F48F8C41B389666A3A95B9FC6105CF",
+      "UpdateFunctionName": "RingWobbleTimeline__UpdateFunc",
+      "FinishedFunctionName": "RingWobbleTimeline__FinishedFunc"
+    }
+  }
+]
