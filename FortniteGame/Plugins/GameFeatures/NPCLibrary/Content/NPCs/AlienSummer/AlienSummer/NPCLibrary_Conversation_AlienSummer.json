@@ -11,7 +11,7 @@
         },
         "AB4E3A254164E974EAF28D9E1A7577B0": {
           "ObjectName": "NPCLibrary_Conversation_AlienSummer:Speech_C_4:Speech_C",
-          "ObjectPath": "/NPCLibrary/NPCs/AlienSummer/AlienSummer/NPCLibrary_Conversation_AlienSummer.4"
+          "ObjectPath": "/NPCLibrary/NPCs/AlienSummer/AlienSummer/NPCLibrary_Conversation_AlienSummer.6"
         },
         "F47D4C96427E45D605421DB710B295F9": {
           "ObjectName": "NPCLibrary_Conversation_AlienSummer:ConversationLinkNode_0:ConversationLinkNode",
@@ -110,6 +110,23 @@
     }
   },
   {
+    "Type": "FortControllerRequirement_HasBars",
+    "Name": "FortControllerRequirement_HasBars_0",
+    "Properties": {
+      "ThresholdTestConfig": {
+        "Requirement": "EThresholdRequirement::GreaterThanOrEqual",
+        "Quantity": {
+          "Value": 2000.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_IsFirstEverConversationWithNPC",
+    "Name": "FortControllerRequirement_IsFirstEverConversationWithNPC_0",
+    "Properties": {}
+  },
+  {
     "Type": "Speech_C",
     "Name": "Speech_C_4",
     "Properties": {
@@ -120,10 +137,96 @@
         "TagName": "Conversation.Participant.Player"
       },
       "GeneralConfig": {
+        "ContextualMessages": [
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "E8F843A44F38CEB763E2C2A407BB3859",
+              "SourceString": "You probably already know me. \r\nBecause of my <b>father? </>He's famous."
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_4:FortControllerRequirement_IsFirstEverConversationWithNPC_0:FortControllerRequirement_IsFirstEverConversationWithNPC",
+                  "ObjectPath": "/NPCLibrary/NPCs/AlienSummer/AlienSummer/NPCLibrary_Conversation_AlienSummer.5"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "D2B104E24175784F6DBC449CB2726916",
+              "SourceString": "Oh my, look at your Bars! \r\nWho did you <b>inherit</> those from? "
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_4:FortControllerRequirement_HasBars_0:FortControllerRequirement_HasBars",
+                  "ObjectPath": "/NPCLibrary/NPCs/AlienSummer/AlienSummer/NPCLibrary_Conversation_AlienSummer.4"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.HighTotalBars"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          }
+        ],
         "DefaultMessage": {
           "Namespace": "",
           "Key": "D90732DB42AB4466479E7BBEC2E54664",
-          "SourceString": "Default Message: Hello!"
+          "SourceString": "This island's dress code isn't black tie? <b>Pity.</>"
         }
       },
       "OutputConnections": [

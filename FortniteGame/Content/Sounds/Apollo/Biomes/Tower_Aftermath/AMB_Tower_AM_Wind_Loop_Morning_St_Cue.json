@@ -1,0 +1,82 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "AMB_Tower_AM_Wind_Loop_Morning_St_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "AMB_Tower_AM_Wind_Loop_Morning_St_Cue:SoundNodeQualityLevel_1:SoundNodeQualityLevel",
+        "ObjectPath": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Wind_Loop_Morning_St_Cue.1"
+      },
+      "VolumeMultiplier": 1.0,
+      "SoundClassObject": {
+        "ObjectName": "Fort_Ambient_Outdoors_Athena:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Ambient_Outdoors_Athena.0"
+      },
+      "Duration": 10000.0,
+      "MaxDistance": 2097152.0,
+      "AttenuationSettings": {
+        "ObjectName": "Fort_Ambient_Athena_Att:SoundAttenuation",
+        "ObjectPath": "/Game/Sounds/Attenuation/Fort_Ambient_Athena_Att.0"
+      },
+      "PreEffectBusSends": [
+        {
+          "SourceBusSendLevelControlMethod": "ESourceBusSendLevelControlMethod::Manual",
+          "SoundSourceBus": {
+            "ObjectName": "AmbientAudio_Exterior_SourceBus:SoundSourceBus",
+            "ObjectPath": "/Game/Sounds/Apollo/Biomes/Interior_Banks/AmbientAudio_Exterior_SourceBus.0"
+          },
+          "AudioBus": null,
+          "SendLevel": 1.0,
+          "MinSendLevel": 0.0,
+          "MaxSendLevel": 1.0,
+          "MinSendDistance": 100.0,
+          "MaxSendDistance": 1000.0,
+          "CustomSendLevelCurve": {
+            "EditorCurveData": {
+              "Keys": [],
+              "DefaultValue": 3.4028235E+38,
+              "PreInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant",
+              "PostInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant"
+            },
+            "ExternalCurve": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeQualityLevel",
+    "Name": "SoundNodeQualityLevel_1",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "AMB_Tower_AM_Wind_Loop_Morning_St_Cue:SoundNodeWavePlayer_1:SoundNodeWavePlayer",
+          "ObjectPath": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Wind_Loop_Morning_St_Cue.2"
+        },
+        {
+          "ObjectName": "AMB_Tower_AM_Wind_Loop_Morning_St_Cue:SoundNodeWavePlayer_1:SoundNodeWavePlayer",
+          "ObjectPath": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Wind_Loop_Morning_St_Cue.2"
+        },
+        {
+          "ObjectName": "AMB_Tower_AM_Wind_Loop_Morning_St_Cue:SoundNodeWavePlayer_1:SoundNodeWavePlayer",
+          "ObjectPath": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Wind_Loop_Morning_St_Cue.2"
+        },
+        {
+          "ObjectName": "AMB_Tower_AM_Wind_Loop_Morning_St_Cue:SoundNodeWavePlayer_1:SoundNodeWavePlayer",
+          "ObjectPath": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Wind_Loop_Morning_St_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/Amb_Tower_Aftermath_Wind_Morning.Amb_Tower_Aftermath_Wind_Morning",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    }
+  }
+]

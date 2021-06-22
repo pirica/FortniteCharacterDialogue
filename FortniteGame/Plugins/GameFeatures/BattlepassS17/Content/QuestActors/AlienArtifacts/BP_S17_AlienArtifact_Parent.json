@@ -53,7 +53,10 @@
           "Z": 80.0
         }
       },
-      "AmbientSound": null,
+      "AmbientSound": {
+        "ObjectName": "Athena_AlienArtifact_Loop_Cue:SoundCue",
+        "ObjectPath": "/Game/Athena/Sounds/Quests/Athena_AlienArtifact_Loop_Cue.0"
+      },
       "AmbientParticle": null,
       "AmbientNiagaraSystem": {
         "ObjectName": "NS_AlienArtifact_Ambient:NiagaraSystem",
@@ -108,12 +111,7 @@
     "Type": "AudioComponent",
     "Name": "AmbientAudio_GEN_VARIABLE",
     "Properties": {
-      "sound": {
-        "ObjectName": "Athena_AlienArtifact_Loop_Cue:SoundCue",
-        "ObjectPath": "/Game/Athena/Sounds/Quests/Athena_AlienArtifact_Loop_Cue.0"
-      },
-      "EnvelopeFollowerReleaseTime": 27021,
-      "bAutoActivate": true
+      "EnvelopeFollowerReleaseTime": 27021
     }
   },
   {
@@ -306,6 +304,14 @@
               },
               {
                 "PropertyName": "EnvelopeFollowerReleaseTime",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "AudioComponent:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "bAutoActivate",
                 "ArrayIndex": 0,
                 "PropertyScope": {
                   "ObjectName": "AudioComponent:Class",

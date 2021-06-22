@@ -6,7 +6,17 @@
   },
   {
     "Type": "Function",
+    "Name": "PlayQuestVOs",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
     "Name": "OnDeathPlayEffects",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
     "Properties": {}
   },
   {
@@ -22,11 +32,6 @@
   {
     "Type": "Function",
     "Name": "LocalUserInteractionStateChanged",
-    "Properties": {}
-  },
-  {
-    "Type": "Function",
-    "Name": "ReceiveBeginPlay",
     "Properties": {}
   },
   {
@@ -60,22 +65,27 @@
     "Properties": {}
   },
   {
+    "Type": "Function",
+    "Name": "Conversation Message",
+    "Properties": {}
+  },
+  {
     "Type": "BlueprintGeneratedClass",
     "Name": "BP_StationProp_Payphone_C",
     "Properties": {
       "Timelines": [
         {
           "ObjectName": "BP_StationProp_Payphone_C:RingWobbleTimeline_Template:TimelineTemplate",
-          "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.22"
+          "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.32"
         }
       ],
       "SimpleConstructionScript": {
         "ObjectName": "BP_StationProp_Payphone_C:SimpleConstructionScript_0:SimpleConstructionScript",
-        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.20"
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.27"
       },
       "InheritableComponentHandler": {
         "ObjectName": "BP_StationProp_Payphone_C:InheritableComponentHandler:InheritableComponentHandler",
-        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.16"
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.19"
       },
       "UberGraphFunction": {
         "ObjectName": "BP_StationProp_Payphone_C:ExecuteUbergraph_BP_StationProp_Payphone:Function",
@@ -108,6 +118,13 @@
         "Handle": 0
       },
       "StartAmbientOnBeginPlay": false,
+      "UseSpecialActorComponent": {
+        "Value": 1.0
+      },
+      "SpecialActorComponentClass": {
+        "ObjectName": "PayphoneSpecialActorComponent_C:BlueprintGeneratedClass",
+        "ObjectPath": "/Game/Blueprints/Components/StationProps/PayphoneSpecialActorComponent.0"
+      },
       "StaticMesh": {
         "ObjectName": "gas_station_phone_booth_01:StaticMesh",
         "ObjectPath": "/Game/Environments/Arid/Props/Gas_Station/Meshes/gas_station_phone_booth_01.1"
@@ -117,20 +134,32 @@
       "bAllowCustomMaterial": true,
       "StaticMeshComponent": {
         "ObjectName": "Default__BP_StationProp_Payphone_C:StaticMeshComponent0:StaticMeshComponent",
-        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.21"
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.31"
       },
       "NavigationObstacleOverride": "ENavigationObstacleOverride::ForceEnabled",
       "RootComponent": {
         "ObjectName": "Default__BP_StationProp_Payphone_C:StaticMeshComponent0:StaticMeshComponent",
-        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.21"
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.31"
       }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "Payphone_QuestVO_GEN_VARIABLE",
+    "Properties": {
+      "RelativeLocation": {
+        "X": -6.977612,
+        "Y": 11.999878,
+        "Z": 166.32697
+      },
+      "bAutoActivate": false
     }
   },
   {
     "Type": "AudioComponent",
     "Name": "Station_Ambient_GEN_VARIABLE",
     "Properties": {
-      "sound": {
+      "Sound": {
         "ObjectName": "Station_Payphone_Ambient_Ring_Cue:SoundCue",
         "ObjectPath": "/Game/Sounds/Fort_Prop_Sounds/Exterior/StationPayphone/Station_Payphone_Ambient_Ring_Cue.0"
       }
@@ -467,10 +496,10 @@
             "TangentWeightMode": 0,
             "KeyTime": 3E-45,
             "KeyValue": "NaN",
-            "ArriveTangent": 1.744873E-39,
+            "ArriveTangent": 2.02038E-39,
             "ArriveTangentWeight": 9.62965E-35,
             "LeaveTangent": "NaN",
-            "LeaveTangentWeight": 2.26E-43
+            "LeaveTangentWeight": 2.69E-43
           }
         ]
       }
@@ -487,7 +516,7 @@
           },
           "ComponentTemplate": {
             "ObjectName": "BP_StationProp_Payphone_C:NonPlayerConversationComponent_GEN_VARIABLE:NonPlayerConversationComponent_C",
-            "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.17"
+            "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.20"
           },
           "ComponentKey": {
             "OwnerClass": {
@@ -509,7 +538,7 @@
           },
           "ComponentTemplate": {
             "ObjectName": "BP_StationProp_Payphone_C:Station_Ambient_GEN_VARIABLE:AudioComponent",
-            "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.14"
+            "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.17"
           },
           "ComponentKey": {
             "OwnerClass": {
@@ -566,21 +595,138 @@
       },
       "ComponentTemplate": {
         "ObjectName": "BP_StationProp_Payphone_C:DefaultSceneRoot_GEN_VARIABLE:SceneComponent",
-        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.18"
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.21"
       },
       "VariableGuid": "F51484E8-4AF55254-3EAE30B5-0F90D649",
       "InternalVariableName": "DefaultSceneRoot"
     }
   },
   {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "AudioComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_StationProp_Payphone_C:Payphone_QuestVO_GEN_VARIABLE:AudioComponent",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.16"
+      },
+      "ParentComponentOrVariableName": "StaticMeshComponent0",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "3AAA43CF-486E1586-DC8C0589-3E611C8A",
+      "InternalVariableName": "Payphone_QuestVO"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "SoundConcatenatorComponent_C:BlueprintGeneratedClass",
+        "ObjectPath": "/Game/Sounds/Fort_Audio_Blueprints/SoundConcatenatorComponent/SoundConcatenatorComponent.5"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_StationProp_Payphone_C:QuestVO_01_GEN_VARIABLE:SoundConcatenatorComponent_C",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.28"
+      },
+      "VariableGuid": "76393709-45932521-657778A3-676AF305",
+      "InternalVariableName": "QuestVO_01"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "SoundConcatenatorComponent_C:BlueprintGeneratedClass",
+        "ObjectPath": "/Game/Sounds/Fort_Audio_Blueprints/SoundConcatenatorComponent/SoundConcatenatorComponent.5"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_StationProp_Payphone_C:QuestVO_02_GEN_VARIABLE:SoundConcatenatorComponent_C",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.29"
+      },
+      "VariableGuid": "5B5E8FB2-47C8312A-55E8E593-6AC341A1",
+      "InternalVariableName": "QuestVO_02"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "SoundConcatenatorComponent_C:BlueprintGeneratedClass",
+        "ObjectPath": "/Game/Sounds/Fort_Audio_Blueprints/SoundConcatenatorComponent/SoundConcatenatorComponent.5"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_StationProp_Payphone_C:QuestVO_03_GEN_VARIABLE:SoundConcatenatorComponent_C",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.30"
+      },
+      "VariableGuid": "1E169398-432D8FB3-01F0ECB0-0698C7BC",
+      "InternalVariableName": "QuestVO_03"
+    }
+  },
+  {
     "Type": "SimpleConstructionScript",
     "Name": "SimpleConstructionScript_0",
     "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_1:SCS_Node",
+          "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.23"
+        },
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_2:SCS_Node",
+          "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.24"
+        },
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_3:SCS_Node",
+          "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.25"
+        },
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_4:SCS_Node",
+          "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.26"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_1:SCS_Node",
+          "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.23"
+        },
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_2:SCS_Node",
+          "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.24"
+        },
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_3:SCS_Node",
+          "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.25"
+        },
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_4:SCS_Node",
+          "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.26"
+        }
+      ],
       "DefaultSceneRootNode": {
         "ObjectName": "SimpleConstructionScript_0:SCS_Node_0:SCS_Node",
-        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.19"
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.22"
       }
     }
+  },
+  {
+    "Type": "SoundConcatenatorComponent_C",
+    "Name": "QuestVO_01_GEN_VARIABLE",
+    "Properties": {}
+  },
+  {
+    "Type": "SoundConcatenatorComponent_C",
+    "Name": "QuestVO_02_GEN_VARIABLE",
+    "Properties": {}
+  },
+  {
+    "Type": "SoundConcatenatorComponent_C",
+    "Name": "QuestVO_03_GEN_VARIABLE",
+    "Properties": {}
   },
   {
     "Type": "StaticMeshComponent",
@@ -608,7 +754,7 @@
         {
           "CurveFloat": {
             "ObjectName": "BP_StationProp_Payphone_C:CurveFloat_2:CurveFloat",
-            "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.15"
+            "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.18"
           },
           "PropertyName": "RingWobbleTimeline_WobbleOverTime_94F48F8C41B389666A3A95B9FC6105CF",
           "TrackName": "WobbleOverTime",

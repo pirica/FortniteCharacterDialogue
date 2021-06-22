@@ -11,7 +11,7 @@
         },
         "D1D5368B4B0DA52A63CE95B2CFC30E50": {
           "ObjectName": "NPCLibrary_Conversation_Bushranger:Speech_C_4:Speech_C",
-          "ObjectPath": "/NPCLibrary/NPCs/Bushranger/Bushranger/NPCLibrary_Conversation_Bushranger.8"
+          "ObjectPath": "/NPCLibrary/NPCs/Bushranger/Bushranger/NPCLibrary_Conversation_Bushranger.9"
         },
         "F080EB5C4A53B0DF33602A885F34E19C": {
           "ObjectName": "NPCLibrary_Conversation_Bushranger:ConversationLinkNode_0:ConversationLinkNode",
@@ -133,6 +133,18 @@
     }
   },
   {
+    "Type": "FortControllerRequirement_HasBars",
+    "Name": "FortControllerRequirement_HasBars_0",
+    "Properties": {
+      "ThresholdTestConfig": {
+        "Requirement": "EThresholdRequirement::GreaterThanOrEqual",
+        "Quantity": {
+          "Value": 2000.0
+        }
+      }
+    }
+  },
+  {
     "Type": "FortControllerRequirement_HasCID",
     "Name": "FortControllerRequirement_HasCID_0",
     "Properties": {
@@ -217,7 +229,7 @@
                 },
                 "Requirement": {
                   "ObjectName": "Speech_C_4:FortControllerRequirement_IsFirstEverConversationWithNPC_0:FortControllerRequirement_IsFirstEverConversationWithNPC",
-                  "ObjectPath": "/NPCLibrary/NPCs/Bushranger/Bushranger/NPCLibrary_Conversation_Bushranger.7"
+                  "ObjectPath": "/NPCLibrary/NPCs/Bushranger/Bushranger/NPCLibrary_Conversation_Bushranger.8"
                 }
               }
             ],
@@ -259,7 +271,7 @@
                 },
                 "Requirement": {
                   "ObjectName": "Speech_C_4:FortControllerRequirement_HasCID_0:FortControllerRequirement_HasCID",
-                  "ObjectPath": "/NPCLibrary/NPCs/Bushranger/Bushranger/NPCLibrary_Conversation_Bushranger.6"
+                  "ObjectPath": "/NPCLibrary/NPCs/Bushranger/Bushranger/NPCLibrary_Conversation_Bushranger.7"
                 }
               }
             ],
@@ -271,6 +283,48 @@
                   "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
                 },
                 "RowName": "Tandem.Speech.Priority.OutfitReaction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "F65E340F46F28AF6825C68B72BD8E2E8",
+              "SourceString": "Ooh! Manymany shiny Bars!"
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_4:FortControllerRequirement_HasBars_0:FortControllerRequirement_HasBars",
+                  "ObjectPath": "/NPCLibrary/NPCs/Bushranger/Bushranger/NPCLibrary_Conversation_Bushranger.6"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.HighTotalBars"
               },
               "RegistryType": {
                 "Name": null

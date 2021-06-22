@@ -1,0 +1,363 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "AMB_Tower_AM_Alien_Call_Distant_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "AMB_Tower_AM_Alien_Call_Distant_Cue:SoundNodeQualityLevel_0:SoundNodeQualityLevel",
+        "ObjectPath": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Alien_Call_Distant_Cue.3"
+      },
+      "VolumeMultiplier": 1.0,
+      "SoundClassObject": {
+        "ObjectName": "Fort_Ambient_Outdoors_Athena:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Ambient_Outdoors_Athena.0"
+      },
+      "Duration": 10.988791,
+      "MaxDistance": 8000.0,
+      "AttenuationSettings": {
+        "ObjectName": "Fort_TileAmbient_OneShot_Wider_Att:SoundAttenuation",
+        "ObjectPath": "/Game/Sounds/Attenuation/Fort_TileAmbient_OneShot_Wider_Att.0"
+      },
+      "PreEffectBusSends": [
+        {
+          "SourceBusSendLevelControlMethod": "ESourceBusSendLevelControlMethod::Manual",
+          "SoundSourceBus": {
+            "ObjectName": "AmbientAudio_Exterior_SourceBus:SoundSourceBus",
+            "ObjectPath": "/Game/Sounds/Apollo/Biomes/Interior_Banks/AmbientAudio_Exterior_SourceBus.0"
+          },
+          "AudioBus": null,
+          "SendLevel": 1.0,
+          "MinSendLevel": 0.0,
+          "MaxSendLevel": 1.0,
+          "MinSendDistance": 100.0,
+          "MaxSendDistance": 1000.0,
+          "CustomSendLevelCurve": {
+            "EditorCurveData": {
+              "Keys": [],
+              "DefaultValue": 3.4028235E+38,
+              "PreInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant",
+              "PostInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant"
+            },
+            "ExternalCurve": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_1",
+    "Properties": {
+      "PitchMin": 0.8,
+      "PitchMax": 1.1,
+      "VolumeMin": 1.0,
+      "VolumeMax": 1.1,
+      "ChildNodes": [
+        {
+          "ObjectName": "AMB_Tower_AM_Alien_Call_Distant_Cue:SoundNodeRandom_0:SoundNodeRandom",
+          "ObjectPath": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Alien_Call_Distant_Cue.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_2",
+    "Properties": {
+      "PitchMin": 0.8,
+      "PitchMax": 1.1,
+      "VolumeMin": 1.0,
+      "VolumeMax": 1.2,
+      "ChildNodes": [
+        {
+          "ObjectName": "AMB_Tower_AM_Alien_Call_Distant_Cue:SoundNodeRandom_4:SoundNodeRandom",
+          "ObjectPath": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Alien_Call_Distant_Cue.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeQualityLevel",
+    "Name": "SoundNodeQualityLevel_0",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "AMB_Tower_AM_Alien_Call_Distant_Cue:SoundNodeModulator_1:SoundNodeModulator",
+          "ObjectPath": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Alien_Call_Distant_Cue.1"
+        },
+        {
+          "ObjectName": "AMB_Tower_AM_Alien_Call_Distant_Cue:SoundNodeModulator_1:SoundNodeModulator",
+          "ObjectPath": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Alien_Call_Distant_Cue.1"
+        },
+        {
+          "ObjectName": "AMB_Tower_AM_Alien_Call_Distant_Cue:SoundNodeModulator_2:SoundNodeModulator",
+          "ObjectPath": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Alien_Call_Distant_Cue.2"
+        },
+        {
+          "ObjectName": "AMB_Tower_AM_Alien_Call_Distant_Cue:SoundNodeModulator_2:SoundNodeModulator",
+          "ObjectPath": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Alien_Call_Distant_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "AMB_Tower_AM_Alien_Call_Distant_Cue:SoundNodeWavePlayer_11:SoundNodeWavePlayer",
+          "ObjectPath": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Alien_Call_Distant_Cue.6"
+        },
+        {
+          "ObjectName": "AMB_Tower_AM_Alien_Call_Distant_Cue:SoundNodeWavePlayer_12:SoundNodeWavePlayer",
+          "ObjectPath": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Alien_Call_Distant_Cue.7"
+        },
+        {
+          "ObjectName": "AMB_Tower_AM_Alien_Call_Distant_Cue:SoundNodeWavePlayer_13:SoundNodeWavePlayer",
+          "ObjectPath": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Alien_Call_Distant_Cue.8"
+        },
+        {
+          "ObjectName": "AMB_Tower_AM_Alien_Call_Distant_Cue:SoundNodeWavePlayer_14:SoundNodeWavePlayer",
+          "ObjectPath": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Alien_Call_Distant_Cue.9"
+        },
+        {
+          "ObjectName": "AMB_Tower_AM_Alien_Call_Distant_Cue:SoundNodeWavePlayer_15:SoundNodeWavePlayer",
+          "ObjectPath": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Alien_Call_Distant_Cue.10"
+        },
+        {
+          "ObjectName": "AMB_Tower_AM_Alien_Call_Distant_Cue:SoundNodeWavePlayer_16:SoundNodeWavePlayer",
+          "ObjectPath": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Alien_Call_Distant_Cue.11"
+        },
+        {
+          "ObjectName": "AMB_Tower_AM_Alien_Call_Distant_Cue:SoundNodeWavePlayer_17:SoundNodeWavePlayer",
+          "ObjectPath": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Alien_Call_Distant_Cue.12"
+        },
+        {
+          "ObjectName": "AMB_Tower_AM_Alien_Call_Distant_Cue:SoundNodeWavePlayer_18:SoundNodeWavePlayer",
+          "ObjectPath": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Alien_Call_Distant_Cue.13"
+        },
+        {
+          "ObjectName": "AMB_Tower_AM_Alien_Call_Distant_Cue:SoundNodeWavePlayer_19:SoundNodeWavePlayer",
+          "ObjectPath": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Alien_Call_Distant_Cue.14"
+        },
+        {
+          "ObjectName": "AMB_Tower_AM_Alien_Call_Distant_Cue:SoundNodeWavePlayer_20:SoundNodeWavePlayer",
+          "ObjectPath": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Alien_Call_Distant_Cue.15"
+        },
+        {
+          "ObjectName": "AMB_Tower_AM_Alien_Call_Distant_Cue:SoundNodeWavePlayer_21:SoundNodeWavePlayer",
+          "ObjectPath": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Alien_Call_Distant_Cue.16"
+        },
+        {
+          "ObjectName": "AMB_Tower_AM_Alien_Call_Distant_Cue:SoundNodeWavePlayer_22:SoundNodeWavePlayer",
+          "ObjectPath": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Alien_Call_Distant_Cue.17"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_4",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "AMB_Tower_AM_Alien_Call_Distant_Cue:SoundNodeWavePlayer_34:SoundNodeWavePlayer",
+          "ObjectPath": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Alien_Call_Distant_Cue.18"
+        },
+        {
+          "ObjectName": "AMB_Tower_AM_Alien_Call_Distant_Cue:SoundNodeWavePlayer_35:SoundNodeWavePlayer",
+          "ObjectPath": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Alien_Call_Distant_Cue.19"
+        },
+        {
+          "ObjectName": "AMB_Tower_AM_Alien_Call_Distant_Cue:SoundNodeWavePlayer_36:SoundNodeWavePlayer",
+          "ObjectPath": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Alien_Call_Distant_Cue.20"
+        },
+        {
+          "ObjectName": "AMB_Tower_AM_Alien_Call_Distant_Cue:SoundNodeWavePlayer_37:SoundNodeWavePlayer",
+          "ObjectPath": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Alien_Call_Distant_Cue.21"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_11",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Alien_Call_Distant_10.AMB_Tower_AM_Alien_Call_Distant_10",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_12",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Alien_Call_Distant_11.AMB_Tower_AM_Alien_Call_Distant_11",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_13",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Alien_Call_Distant_12.AMB_Tower_AM_Alien_Call_Distant_12",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_14",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Alien_Call_Distant_13.AMB_Tower_AM_Alien_Call_Distant_13",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_15",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Alien_Call_Distant_01.AMB_Tower_AM_Alien_Call_Distant_01",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_16",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Alien_Call_Distant_02.AMB_Tower_AM_Alien_Call_Distant_02",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_17",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Alien_Call_Distant_03.AMB_Tower_AM_Alien_Call_Distant_03",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_18",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Alien_Call_Distant_04.AMB_Tower_AM_Alien_Call_Distant_04",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_19",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Alien_Call_Distant_05.AMB_Tower_AM_Alien_Call_Distant_05",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_20",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Alien_Call_Distant_06.AMB_Tower_AM_Alien_Call_Distant_06",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_21",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Alien_Call_Distant_07.AMB_Tower_AM_Alien_Call_Distant_07",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_22",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Alien_Call_Distant_09.AMB_Tower_AM_Alien_Call_Distant_09",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_34",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Alien_Call_Distant_02.AMB_Tower_AM_Alien_Call_Distant_02",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_35",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Alien_Call_Distant_12.AMB_Tower_AM_Alien_Call_Distant_12",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_36",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Alien_Call_Distant_13.AMB_Tower_AM_Alien_Call_Distant_13",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_37",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Alien_Call_Distant_03.AMB_Tower_AM_Alien_Call_Distant_03",
+        "SubPathString": ""
+      }
+    }
+  }
+]

@@ -1,0 +1,348 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "AMB_Tower_AM_Wind_Oneshots_Night_02_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "AMB_Tower_AM_Wind_Oneshots_Night_02_Cue:SoundNodeQualityLevel_0:SoundNodeQualityLevel",
+        "ObjectPath": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Wind_Oneshots_Night_02_Cue.3"
+      },
+      "VolumeMultiplier": 0.4,
+      "SoundClassObject": {
+        "ObjectName": "Fort_Ambient_Outdoors_Athena:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Ambient_Outdoors_Athena.0"
+      },
+      "Duration": 14.029437,
+      "MaxDistance": 8000.0,
+      "AttenuationSettings": {
+        "ObjectName": "Fort_TileAmbient_OneShot_Wider_Att:SoundAttenuation",
+        "ObjectPath": "/Game/Sounds/Attenuation/Fort_TileAmbient_OneShot_Wider_Att.0"
+      },
+      "PreEffectBusSends": [
+        {
+          "SourceBusSendLevelControlMethod": "ESourceBusSendLevelControlMethod::Manual",
+          "SoundSourceBus": {
+            "ObjectName": "AmbientAudio_Exterior_SourceBus:SoundSourceBus",
+            "ObjectPath": "/Game/Sounds/Apollo/Biomes/Interior_Banks/AmbientAudio_Exterior_SourceBus.0"
+          },
+          "AudioBus": null,
+          "SendLevel": 1.0,
+          "MinSendLevel": 0.0,
+          "MaxSendLevel": 1.0,
+          "MinSendDistance": 100.0,
+          "MaxSendDistance": 1000.0,
+          "CustomSendLevelCurve": {
+            "EditorCurveData": {
+              "Keys": [],
+              "DefaultValue": 3.4028235E+38,
+              "PreInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant",
+              "PostInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant"
+            },
+            "ExternalCurve": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Properties": {
+      "PitchMin": 0.7,
+      "PitchMax": 1.1,
+      "VolumeMin": 0.5,
+      "VolumeMax": 1.0,
+      "ChildNodes": [
+        {
+          "ObjectName": "AMB_Tower_AM_Wind_Oneshots_Night_02_Cue:SoundNodeRandom_3:SoundNodeRandom",
+          "ObjectPath": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Wind_Oneshots_Night_02_Cue.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_1",
+    "Properties": {
+      "PitchMin": 1.0,
+      "PitchMax": 1.2,
+      "VolumeMin": 0.8,
+      "VolumeMax": 1.0,
+      "ChildNodes": [
+        {
+          "ObjectName": "AMB_Tower_AM_Wind_Oneshots_Night_02_Cue:SoundNodeRandom_2:SoundNodeRandom",
+          "ObjectPath": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Wind_Oneshots_Night_02_Cue.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeQualityLevel",
+    "Name": "SoundNodeQualityLevel_0",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "AMB_Tower_AM_Wind_Oneshots_Night_02_Cue:SoundNodeModulator_1:SoundNodeModulator",
+          "ObjectPath": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Wind_Oneshots_Night_02_Cue.2"
+        },
+        {
+          "ObjectName": "AMB_Tower_AM_Wind_Oneshots_Night_02_Cue:SoundNodeModulator_1:SoundNodeModulator",
+          "ObjectPath": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Wind_Oneshots_Night_02_Cue.2"
+        },
+        {
+          "ObjectName": "AMB_Tower_AM_Wind_Oneshots_Night_02_Cue:SoundNodeModulator_0:SoundNodeModulator",
+          "ObjectPath": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Wind_Oneshots_Night_02_Cue.1"
+        },
+        {
+          "ObjectName": "AMB_Tower_AM_Wind_Oneshots_Night_02_Cue:SoundNodeModulator_0:SoundNodeModulator",
+          "ObjectPath": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Wind_Oneshots_Night_02_Cue.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_2",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "AMB_Tower_AM_Wind_Oneshots_Night_02_Cue:SoundNodeWavePlayer_0:SoundNodeWavePlayer",
+          "ObjectPath": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Wind_Oneshots_Night_02_Cue.6"
+        },
+        {
+          "ObjectName": "AMB_Tower_AM_Wind_Oneshots_Night_02_Cue:SoundNodeWavePlayer_1:SoundNodeWavePlayer",
+          "ObjectPath": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Wind_Oneshots_Night_02_Cue.7"
+        },
+        {
+          "ObjectName": "AMB_Tower_AM_Wind_Oneshots_Night_02_Cue:SoundNodeWavePlayer_2:SoundNodeWavePlayer",
+          "ObjectPath": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Wind_Oneshots_Night_02_Cue.9"
+        },
+        {
+          "ObjectName": "AMB_Tower_AM_Wind_Oneshots_Night_02_Cue:SoundNodeWavePlayer_3:SoundNodeWavePlayer",
+          "ObjectPath": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Wind_Oneshots_Night_02_Cue.14"
+        },
+        {
+          "ObjectName": "AMB_Tower_AM_Wind_Oneshots_Night_02_Cue:SoundNodeWavePlayer_4:SoundNodeWavePlayer",
+          "ObjectPath": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Wind_Oneshots_Night_02_Cue.15"
+        },
+        {
+          "ObjectName": "AMB_Tower_AM_Wind_Oneshots_Night_02_Cue:SoundNodeWavePlayer_5:SoundNodeWavePlayer",
+          "ObjectPath": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Wind_Oneshots_Night_02_Cue.16"
+        },
+        {
+          "ObjectName": "AMB_Tower_AM_Wind_Oneshots_Night_02_Cue:SoundNodeWavePlayer_6:SoundNodeWavePlayer",
+          "ObjectPath": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Wind_Oneshots_Night_02_Cue.17"
+        },
+        {
+          "ObjectName": "AMB_Tower_AM_Wind_Oneshots_Night_02_Cue:SoundNodeWavePlayer_7:SoundNodeWavePlayer",
+          "ObjectPath": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Wind_Oneshots_Night_02_Cue.18"
+        },
+        {
+          "ObjectName": "AMB_Tower_AM_Wind_Oneshots_Night_02_Cue:SoundNodeWavePlayer_8:SoundNodeWavePlayer",
+          "ObjectPath": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Wind_Oneshots_Night_02_Cue.19"
+        },
+        {
+          "ObjectName": "AMB_Tower_AM_Wind_Oneshots_Night_02_Cue:SoundNodeWavePlayer_9:SoundNodeWavePlayer",
+          "ObjectPath": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Wind_Oneshots_Night_02_Cue.20"
+        },
+        {
+          "ObjectName": "AMB_Tower_AM_Wind_Oneshots_Night_02_Cue:SoundNodeWavePlayer_10:SoundNodeWavePlayer",
+          "ObjectPath": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Wind_Oneshots_Night_02_Cue.8"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_3",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "AMB_Tower_AM_Wind_Oneshots_Night_02_Cue:SoundNodeWavePlayer_26:SoundNodeWavePlayer",
+          "ObjectPath": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Wind_Oneshots_Night_02_Cue.10"
+        },
+        {
+          "ObjectName": "AMB_Tower_AM_Wind_Oneshots_Night_02_Cue:SoundNodeWavePlayer_27:SoundNodeWavePlayer",
+          "ObjectPath": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Wind_Oneshots_Night_02_Cue.11"
+        },
+        {
+          "ObjectName": "AMB_Tower_AM_Wind_Oneshots_Night_02_Cue:SoundNodeWavePlayer_28:SoundNodeWavePlayer",
+          "ObjectPath": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Wind_Oneshots_Night_02_Cue.12"
+        },
+        {
+          "ObjectName": "AMB_Tower_AM_Wind_Oneshots_Night_02_Cue:SoundNodeWavePlayer_29:SoundNodeWavePlayer",
+          "ObjectPath": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Wind_Oneshots_Night_02_Cue.13"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Dirty_WindGust_11.AMB_Tower_AM_Dirty_WindGust_11",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Dirty_WindGust_10.AMB_Tower_AM_Dirty_WindGust_10",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_10",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Dirty_WindGust_09.AMB_Tower_AM_Dirty_WindGust_09",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Dirty_WindGust_01.AMB_Tower_AM_Dirty_WindGust_01",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_26",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Dirty_WindGust_07.AMB_Tower_AM_Dirty_WindGust_07",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_27",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Dirty_WindGust_03.AMB_Tower_AM_Dirty_WindGust_03",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_28",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Dirty_WindGust_11.AMB_Tower_AM_Dirty_WindGust_11",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_29",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Dirty_WindGust_10.AMB_Tower_AM_Dirty_WindGust_10",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Dirty_WindGust_02.AMB_Tower_AM_Dirty_WindGust_02",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_4",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Dirty_WindGust_03.AMB_Tower_AM_Dirty_WindGust_03",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_5",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Dirty_WindGust_04.AMB_Tower_AM_Dirty_WindGust_04",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_6",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Dirty_WindGust_05.AMB_Tower_AM_Dirty_WindGust_05",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_7",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Dirty_WindGust_06.AMB_Tower_AM_Dirty_WindGust_06",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_8",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Dirty_WindGust_07.AMB_Tower_AM_Dirty_WindGust_07",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_9",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Apollo/Biomes/Tower_Aftermath/AMB_Tower_AM_Dirty_WindGust_08.AMB_Tower_AM_Dirty_WindGust_08",
+        "SubPathString": ""
+      }
+    }
+  }
+]

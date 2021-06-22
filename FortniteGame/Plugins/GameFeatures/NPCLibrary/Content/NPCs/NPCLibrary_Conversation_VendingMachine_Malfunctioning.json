@@ -46,23 +46,23 @@
         },
         "570AA9F245534441276A65BA405B29D5": {
           "ObjectName": "NPCLibrary_Conversation_VendingMachine_Malfunctioning:Speech_C_1:Speech_C",
-          "ObjectPath": "/NPCLibrary/NPCs/NPCLibrary_Conversation_VendingMachine_Malfunctioning.16"
+          "ObjectPath": "/NPCLibrary/NPCs/NPCLibrary_Conversation_VendingMachine_Malfunctioning.20"
         },
         "2B9F9564410AFFF36756F5BCAC1315B0": {
           "ObjectName": "NPCLibrary_Conversation_VendingMachine_Malfunctioning:Speech_C_2:Speech_C",
-          "ObjectPath": "/NPCLibrary/NPCs/NPCLibrary_Conversation_VendingMachine_Malfunctioning.17"
+          "ObjectPath": "/NPCLibrary/NPCs/NPCLibrary_Conversation_VendingMachine_Malfunctioning.21"
         },
         "E36D6EF644605113C275058396A8E713": {
           "ObjectName": "NPCLibrary_Conversation_VendingMachine_Malfunctioning:RollTheDice_C_1:RollTheDice_C",
-          "ObjectPath": "/NPCLibrary/NPCs/NPCLibrary_Conversation_VendingMachine_Malfunctioning.14"
+          "ObjectPath": "/NPCLibrary/NPCs/NPCLibrary_Conversation_VendingMachine_Malfunctioning.18"
         },
         "69C680E1441A7A9B5DD27290E1D4E4A0": {
           "ObjectName": "NPCLibrary_Conversation_VendingMachine_Malfunctioning:FortConversationTaskNode_ApplyDataDrivenEffect_2:FortConversationTaskNode_ApplyDataDrivenEffect",
-          "ObjectPath": "/NPCLibrary/NPCs/NPCLibrary_Conversation_VendingMachine_Malfunctioning.12"
+          "ObjectPath": "/NPCLibrary/NPCs/NPCLibrary_Conversation_VendingMachine_Malfunctioning.16"
         },
         "A5C5AAFD4DEB26EE1FB55583C33B3210": {
           "ObjectName": "NPCLibrary_Conversation_VendingMachine_Malfunctioning:Repeat_C_0:Repeat_C",
-          "ObjectPath": "/NPCLibrary/NPCs/NPCLibrary_Conversation_VendingMachine_Malfunctioning.13"
+          "ObjectPath": "/NPCLibrary/NPCs/NPCLibrary_Conversation_VendingMachine_Malfunctioning.17"
         },
         "0A3755E34B8A3B02291038B41355E7B2": {
           "ObjectName": "NPCLibrary_Conversation_VendingMachine_Malfunctioning:Back_C_1:Back_C",
@@ -153,6 +153,36 @@
     "Properties": {}
   },
   {
+    "Type": "FortControllerRequirement_CheckPitchYawRoll",
+    "Name": "FortControllerRequirement_CheckPitchYawRoll_0",
+    "Properties": {
+      "PitchErrorCheck": {
+        "bEnabled": true,
+        "ToleratedErrorInDegrees": 45.0
+      },
+      "RollErrorCheck": {
+        "bEnabled": true,
+        "ToleratedErrorInDegrees": 45.0
+      },
+      "bInverseCondition": true
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_CheckPitchYawRoll",
+    "Name": "FortControllerRequirement_CheckPitchYawRoll_1",
+    "Properties": {
+      "PitchErrorCheck": {
+        "bEnabled": true,
+        "ToleratedErrorInDegrees": 45.0
+      },
+      "RollErrorCheck": {
+        "bEnabled": true,
+        "ToleratedErrorInDegrees": 45.0
+      },
+      "bInverseCondition": true
+    }
+  },
+  {
     "Type": "FortControllerRequirement_HasOwnedTag",
     "Name": "FortControllerRequirement_HasOwnedTag_0",
     "Properties": {
@@ -176,6 +206,24 @@
     "Properties": {
       "OwnedTag": {
         "TagName": "Conversation.Context.ServiceJustPurchased"
+      }
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_HasOwnedTag",
+    "Name": "FortControllerRequirement_HasOwnedTag_3",
+    "Properties": {
+      "OwnedTag": {
+        "TagName": "Conversation.Context.ServiceJustPurchased"
+      }
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_HasOwnedTag",
+    "Name": "FortControllerRequirement_HasOwnedTag_4",
+    "Properties": {
+      "OwnedTag": {
+        "TagName": "Athena.Quests.TandemGift.Nug"
       }
     }
   },
@@ -251,7 +299,7 @@
         },
         {
           "ObjectName": "NPCLibrary_Conversation_VendingMachine_Malfunctioning:SideEffect_PlayServiceUsedEffects_C_1:SideEffect_PlayServiceUsedEffects_C",
-          "ObjectPath": "/NPCLibrary/NPCs/NPCLibrary_Conversation_VendingMachine_Malfunctioning.15"
+          "ObjectPath": "/NPCLibrary/NPCs/NPCLibrary_Conversation_VendingMachine_Malfunctioning.19"
         }
       ],
       "OutputConnections": [
@@ -363,6 +411,84 @@
                 "Name": null
               }
             }
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "4E990C92408C58F3313F2FA143339297",
+              "SourceString": "I... I'm fixed? You fixed me! I can't belie-- *glitch* 00000000h n00000..."
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.NPC"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_1:FortControllerRequirement_CheckPitchYawRoll_0:FortControllerRequirement_CheckPitchYawRoll",
+                  "ObjectPath": "/NPCLibrary/NPCs/NPCLibrary_Conversation_VendingMachine_Malfunctioning.7"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "06C8FBB14C9D4AC02F7B6FAE48AD92DB",
+              "SourceString": "w...wHy... :("
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.NPC"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_1:FortControllerRequirement_CheckPitchYawRoll_1:FortControllerRequirement_CheckPitchYawRoll",
+                  "ObjectPath": "/NPCLibrary/NPCs/NPCLibrary_Conversation_VendingMachine_Malfunctioning.8"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
           }
         ]
       },
@@ -399,7 +525,7 @@
                 },
                 "Requirement": {
                   "ObjectName": "Speech_C_2:FortControllerRequirement_HasOwnedTag_0:FortControllerRequirement_HasOwnedTag",
-                  "ObjectPath": "/NPCLibrary/NPCs/NPCLibrary_Conversation_VendingMachine_Malfunctioning.7"
+                  "ObjectPath": "/NPCLibrary/NPCs/NPCLibrary_Conversation_VendingMachine_Malfunctioning.9"
                 }
               }
             ],
@@ -438,12 +564,60 @@
                 },
                 "Requirement": {
                   "ObjectName": "Speech_C_2:FortControllerRequirement_HasOwnedTag_1:FortControllerRequirement_HasOwnedTag",
-                  "ObjectPath": "/NPCLibrary/NPCs/NPCLibrary_Conversation_VendingMachine_Malfunctioning.8"
+                  "ObjectPath": "/NPCLibrary/NPCs/NPCLibrary_Conversation_VendingMachine_Malfunctioning.10"
                 }
               }
             ],
             "Priority": {
               "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "7F5B3924458A6D49631FB7B71576C123",
+              "SourceString": "*sQ@wK!!*"
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_2:FortControllerRequirement_HasOwnedTag_3:FortControllerRequirement_HasOwnedTag",
+                  "ObjectPath": "/NPCLibrary/NPCs/NPCLibrary_Conversation_VendingMachine_Malfunctioning.12"
+                }
+              },
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_2:FortControllerRequirement_HasOwnedTag_4:FortControllerRequirement_HasOwnedTag",
+                  "ObjectPath": "/NPCLibrary/NPCs/NPCLibrary_Conversation_VendingMachine_Malfunctioning.13"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 2.0,
               "Curve": {
                 "CurveTable": null,
                 "RowName": null
@@ -477,7 +651,7 @@
                 },
                 "Requirement": {
                   "ObjectName": "Speech_C_2:FortControllerRequirement_HasOwnedTag_2:FortControllerRequirement_HasOwnedTag",
-                  "ObjectPath": "/NPCLibrary/NPCs/NPCLibrary_Conversation_VendingMachine_Malfunctioning.9"
+                  "ObjectPath": "/NPCLibrary/NPCs/NPCLibrary_Conversation_VendingMachine_Malfunctioning.11"
                 }
               }
             ],
@@ -598,11 +772,11 @@
       "SubNodes": [
         {
           "ObjectName": "NPCLibrary_Conversation_VendingMachine_Malfunctioning:FortConversationChoiceWithPreviewNode_0:FortConversationChoiceWithPreviewNode",
-          "ObjectPath": "/NPCLibrary/NPCs/NPCLibrary_Conversation_VendingMachine_Malfunctioning.10"
+          "ObjectPath": "/NPCLibrary/NPCs/NPCLibrary_Conversation_VendingMachine_Malfunctioning.14"
         },
         {
           "ObjectName": "NPCLibrary_Conversation_VendingMachine_Malfunctioning:FortConversationRequirement_HasService_1:FortConversationRequirement_HasService",
-          "ObjectPath": "/NPCLibrary/NPCs/NPCLibrary_Conversation_VendingMachine_Malfunctioning.11"
+          "ObjectPath": "/NPCLibrary/NPCs/NPCLibrary_Conversation_VendingMachine_Malfunctioning.15"
         }
       ],
       "OutputConnections": [
