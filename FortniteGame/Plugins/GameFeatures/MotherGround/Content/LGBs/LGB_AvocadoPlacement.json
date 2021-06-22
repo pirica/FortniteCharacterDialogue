@@ -1,0 +1,183 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_LGB_AvocadoPlacement",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "OnDamaged",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "OnEggDied",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "OnAbort",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "OnExecute",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "FindDamageCauserAndSetHostile",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "StartTending",
+    "Properties": {}
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "LGB_AvocadoPlacement_C",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "LGB_AvocadoPlacement_C:SimpleConstructionScript_0:SimpleConstructionScript",
+        "ObjectPath": "/MotherGround/LGBs/LGB_AvocadoPlacement.14"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "LGB_AvocadoPlacement_C:InheritableComponentHandler:InheritableComponentHandler",
+        "ObjectPath": "/MotherGround/LGBs/LGB_AvocadoPlacement.9"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "LGB_AvocadoPlacement_C:ExecuteUbergraph_LGB_AvocadoPlacement:Function",
+        "ObjectPath": "/MotherGround/LGBs/LGB_AvocadoPlacement.0"
+      }
+    }
+  },
+  {
+    "Type": "LGB_AvocadoPlacement_C",
+    "Name": "Default__LGB_AvocadoPlacement_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "PlacementTimeMin": 5.0,
+      "PlacementTimeMax": 5.0,
+      "ChanceToPlaceAvocado": 1.0,
+      "EmoteWhenEggs": {
+        "PrimaryAssetType": {
+          "Name": "AthenaDance"
+        },
+        "PrimaryAssetName": "EID_NPC_Gardener_Nurture"
+      },
+      "EmoteWhenNoEggs": {
+        "PrimaryAssetType": {
+          "Name": "AthenaDance"
+        },
+        "PrimaryAssetName": "EID_NPC_Gardener_Place"
+      },
+      "ActorToSpawn": {
+        "ObjectName": "BGA_Athena_AvacadoEater_Deployed_NoNav_C:BlueprintGeneratedClass",
+        "ObjectPath": "/MotherGameplay/Items/AvacadoEater/BGA_Athena_AvacadoEater_Deployed_NoNav.0"
+      },
+      "StartDelayNoEggs": 0.5,
+      "StartDelayWhenEggs": 0.5,
+      "TimeAfterPlacement": 3.7,
+      "RandomAngle": 180.0,
+      "TendingWaitTime": 4.47,
+      "DistanceToAggro": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGround_Data:CurveTable",
+            "ObjectPath": "/MotherGround/DataTables/MotherGround_Data.0"
+          },
+          "RowName": "Default.MotherGround.DestroyedAvacado.Distance"
+        },
+        "RegistryType": {
+          "Name": null
+        }
+      },
+      "AvacadoOffset": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGround_Data:CurveTable",
+            "ObjectPath": "/MotherGround/DataTables/MotherGround_Data.0"
+          },
+          "RowName": "Default.MotherGround.AvacadoPlacementOffset"
+        },
+        "RegistryType": {
+          "Name": null
+        }
+      },
+      "RootComponent": {
+        "ObjectName": "Default__LGB_AvocadoPlacement_C:SceneComp:SceneComponent",
+        "ObjectPath": "/MotherGround/LGBs/LGB_AvocadoPlacement.10"
+      }
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Properties": {}
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "SceneComp",
+    "Properties": {}
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Properties": {}
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "SceneComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": {
+        "ObjectName": "LGB_AvocadoPlacement_C:DefaultSceneRoot_GEN_VARIABLE:SceneComponent",
+        "ObjectPath": "/MotherGround/LGBs/LGB_AvocadoPlacement.11"
+      },
+      "VariableGuid": "9FAFA3F8-479DB072-9BDB4D87-DA7B8CAE",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "TextRenderComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": null,
+      "ParentComponentOrVariableName": "SceneComp",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "746CBBB1-4C47C4B2-B8A74AB0-96DA1302",
+      "InternalVariableName": "TextRender"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_1:SCS_Node",
+          "ObjectPath": "/MotherGround/LGBs/LGB_AvocadoPlacement.13"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_1:SCS_Node",
+          "ObjectPath": "/MotherGround/LGBs/LGB_AvocadoPlacement.13"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SimpleConstructionScript_0:SCS_Node_0:SCS_Node",
+        "ObjectPath": "/MotherGround/LGBs/LGB_AvocadoPlacement.12"
+      }
+    }
+  }
+]
