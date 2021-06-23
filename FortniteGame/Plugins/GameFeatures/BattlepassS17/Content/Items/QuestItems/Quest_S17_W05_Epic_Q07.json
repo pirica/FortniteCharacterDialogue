@@ -1,0 +1,146 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "Quest_S17_W05_Epic_Q07",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "QuestSubtype": "EFortQuestSubtype::WeeklyChallenge",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/Maven/Maven/NPCCharacterData_Maven.NPCCharacterData_Maven",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "RewardsTable": {
+        "ObjectName": "ChallengeReward_S17_WeeklyXP:DataTable",
+        "ObjectPath": "/BattlepassS17/Items/QuestRewards/ChallengeReward_S17_WeeklyXP.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athenabattlepass_weeklychallenge_token",
+          "Quantity": 1
+        },
+        {
+          "TemplateId": "Token:athenabattlepass_s17_w05",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S17_W05_Epic_Q07_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Building.Type.Container.TreasureChest.FactionChest"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "Source.Tags HasTag Athena.Location.UnnamedPOI.RadarDishBase || Source.Tags HasTag Athena.Location.POI.GovernmentComplex",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Interact",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "23579B0C4AA4C33BDFBABA8ECBFE5B4D",
+            "SourceString": "Open an IO chest at a satellite station or Corny Complex"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "CBD57EB84101010D3ECB588FC62F11DF",
+            "SourceString": "Great work, go take a reward!"
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 1,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 0,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "",
+        "Key": "A06CAF7C44D79FD6ADB7FE9E1E5C88CB",
+        "SourceString": "Sorry if anyone down there took a shot at you, we're kind of on high alert."
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Epic",
+      "DisplayName": {
+        "Namespace": "",
+        "Key": "F7FEFCD645633F32F900E1B2C2DA50BE",
+        "SourceString": "Open an IO chest at a satellite station or Corny Complex"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S17_W05_Epic_Q07",
+        "Key": "Quest_S17_W05_Epic_Q07_ShortDescription",
+        "SourceString": "Great work, go take a reward!"
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "2006A7214356615EEEF01DBBAEA5E5E4",
+        "SourceString": "Open an IO chest at a satellite station or Corny Complex"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP",
+        "Athena.Location.UnnamedPOI.RadarDishBase.01",
+        "Athena.Location.UnnamedPOI.RadarDishBase.02",
+        "Athena.Location.UnnamedPOI.RadarDishBase.03",
+        "Athena.Location.UnnamedPOI.RadarDishBase.04",
+        "Athena.Location.UnnamedPOI.RadarDishBase.06",
+        "Athena.Location.UnnamedPOI.RadarDishBase.05",
+        "Athena.Location.UnnamedPOI.RadarDishBase.07",
+        "Athena.Location.POI.GovernmentComplex"
+      ]
+    }
+  }
+]

@@ -1,0 +1,143 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "Quest_S17_W03_Epic_Q04",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "QuestSubtype": "EFortQuestSubtype::WeeklyChallenge",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/Rickus/Rickus/NPCCharacterData_Rickus.NPCCharacterData_Rickus",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "ObjectiveCompletionCount": 1,
+      "Rewards": [
+        {
+          "ItemPrimaryAssetId": {
+            "PrimaryAssetType": {
+              "Name": "Quest"
+            },
+            "PrimaryAssetName": "Quest_S17_W03_Epic_Q05"
+          },
+          "Quantity": 1
+        }
+      ],
+      "RewardsTable": {
+        "ObjectName": "ChallengeReward_S17_WeeklyXP:DataTable",
+        "ObjectPath": "/BattlepassS17/Items/QuestRewards/ChallengeReward_S17_WeeklyXP.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athenabattlepass_weeklychallenge_token",
+          "Quantity": 1
+        },
+        {
+          "TemplateId": "Token:athenabattlepass_s17_w03",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S17_W03_Epic_Q04_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "Athena.Rank <=10",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::AthenaRank",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "4EE9862F4AF558A93613CCADB654AB58",
+            "SourceString": "Finish in the top 10"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "E14954FF4BFD1B9F82623B95F2F13054",
+            "SourceString": "What, is asking for the 90th percentile too much?"
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 1,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 0,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "Quest_S17_W03_Epic_Q04",
+        "Key": "Quest_S17_W03_Epic_Q04_CompletionText",
+        "SourceString": "I don't even remember asking you to do that, but cool."
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Epic",
+      "DisplayName": {
+        "Namespace": "Quest_S17_W03_Epic_Q04",
+        "Key": "Quest_S17_W03_Epic_Q04_DisplayName",
+        "SourceString": "Finish in the top 10"
+      },
+      "ShortDescription": {
+        "Namespace": "",
+        "Key": "A110A83F4EE52AD8BEFFE883B1A964A9",
+        "SourceString": "What, is asking for the 90th percentile too much?"
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "707ACD6748229A704D39A3B5C99EF272",
+        "SourceString": "Finish in the top 10"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP"
+      ]
+    }
+  }
+]

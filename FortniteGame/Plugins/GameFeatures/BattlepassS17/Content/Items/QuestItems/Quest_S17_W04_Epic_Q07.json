@@ -1,0 +1,145 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "Quest_S17_W04_Epic_Q07",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "QuestSubtype": "EFortQuestSubtype::WeeklyChallenge",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/AlienSummer/AlienSummer/NPCCharacterData_AlienSummer.NPCCharacterData_AlienSummer",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "RewardsTable": {
+        "ObjectName": "ChallengeReward_S17_WeeklyXP:DataTable",
+        "ObjectPath": "/BattlepassS17/Items/QuestRewards/ChallengeReward_S17_WeeklyXP.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athenabattlepass_weeklychallenge_token",
+          "Quantity": 1
+        },
+        {
+          "TemplateId": "Token:athenabattlepass_s17_w04",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S17_W04_Epic_Q07_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.GameOn"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.Quests.Nevada.Tractorbeam"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "Target.Tags HasTag Homebase.Class || Target.Tags HasTag Athena.Faction.Generic.Hostile || Target.Tags HasTag Pawn.Athena.NPC.Duel.IsBeingChallenged || Target.Tags HasTag Pawn.Athena.NPC.Mang || Target.Tags HasTag Pawn.Athena.NPC.IO || Target.Tags HasTag AISpawnerData.Type.MotherWall",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::ComplexCustom",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "E306C3BA4C599B7A4224BCA600B41C5C",
+            "SourceString": "Abduct an opponent with a Saucer tractor beam"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "ED4D37A64B97D268F9680B85BAFD2914",
+            "SourceString": "Bruh, I'm behind on my close encounters quota, spot me a beam-up?"
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 1,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 0,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "",
+        "Key": "C5702B124AD6D484BB4EE08A95ACAB31",
+        "SourceString": "Ayy LMAO"
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Epic",
+      "DisplayName": {
+        "Namespace": "",
+        "Key": "97FDA79E4ABD472EAD7EFC8710586026",
+        "SourceString": "Abduct an opponent with a Saucer tractor beam"
+      },
+      "ShortDescription": {
+        "Namespace": "",
+        "Key": "3F2912EC429D70A91E4663B1F0ADF3FA",
+        "SourceString": "Bruh, I'm behind on my close encounters quota, spot me a beam-up?"
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "5485158145938BC92EDD908EB8851E62",
+        "SourceString": "Abduct an opponent with a Saucer tractor beam"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP"
+      ]
+    }
+  }
+]

@@ -1,0 +1,141 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "Quest_S17_W06_Epic_Q04",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "QuestSubtype": "EFortQuestSubtype::WeeklyChallenge",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/Maven/Maven/NPCCharacterData_Maven.NPCCharacterData_Maven",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "RewardsTable": {
+        "ObjectName": "ChallengeReward_S17_WeeklyXP:DataTable",
+        "ObjectPath": "/BattlepassS17/Items/QuestRewards/ChallengeReward_S17_WeeklyXP.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athenabattlepass_weeklychallenge_token",
+          "Quantity": 1
+        },
+        {
+          "TemplateId": "Token:athenabattlepass_s17_w06",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S17_W06_Epic_Q04_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Status.LowGravity"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "Target.Tags HasTag Building.Type.Container.AmmoBox || Target.Tags HasTag Building.Type.Container.TreasureChest",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Interact",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "1678F9104122DE0D0E6065AE08A41361",
+            "SourceString": "Open chests or ammo boxes in low-gravity areas"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "68E7EB194750B5287BAE598A18E5DAE9",
+            "SourceString": "Hey, got another mission for you!"
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 3,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 0,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "",
+        "Key": "19E8876049660F7651D30DBC0F66712F",
+        "SourceString": "Interesting, so there is alien loot."
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Epic",
+      "DisplayName": {
+        "Namespace": "",
+        "Key": "9F2F78824F1C904DF73DDB8A67E63CDE",
+        "SourceString": "Open chests or ammo boxes in low-gravity areas"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S17_W06_Epic_Q04",
+        "Key": "Quest_S17_W06_Epic_Q04_ShortDescription",
+        "SourceString": "Hey, got another mission for you!"
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "1847B4EE4685666283277593C384666E",
+        "SourceString": "Open chests or ammo boxes in low-gravity areas"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP",
+        "Quest.Metadata.PartyAssist",
+        "Quest.Metadata.GroupChallenge",
+        "Quest.Metadata.HideForContextualQuestDisplay"
+      ]
+    }
+  }
+]

@@ -1,0 +1,341 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_S17_Clue_C",
+    "Properties": {
+      "bHasCookedComponentInstancingData": true,
+      "SimpleConstructionScript": {
+        "ObjectName": "BP_S17_Clue_C:SimpleConstructionScript_0:SimpleConstructionScript",
+        "ObjectPath": "/BattlepassS17/QuestActors/Legendaries/BP_S17_Clue.12"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "BP_S17_Clue_C:InheritableComponentHandler:InheritableComponentHandler",
+        "ObjectPath": "/BattlepassS17/QuestActors/Legendaries/BP_S17_Clue.4"
+      }
+    }
+  },
+  {
+    "Type": "BP_S17_Clue_C",
+    "Name": "Default__BP_S17_Clue_C",
+    "Properties": {
+      "TestingCooldown": 10.0,
+      "Interaction Verb": {
+        "Namespace": "",
+        "Key": "4997586D45AA4AB032C44B96ECC0683B",
+        "SourceString": "Examine Clue"
+      },
+      "SM_PreInteraction": {
+        "ObjectName": "SM_AbstractClue_MagnifyingGlass:StaticMesh",
+        "ObjectPath": "/Game/Packages/Fortress_Transylvania/QuestProps/SM_AbstractClue_MagnifyingGlass.1"
+      },
+      "Ambient Particle Transform": {
+        "Translation": {
+          "X": 5.0,
+          "Y": 0.0,
+          "Z": 35.0
+        },
+        "Scale3D": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 2.0
+        }
+      },
+      "AudioAndVFXHideRadius": 5000.0,
+      "DiscoverRadius": 5500.0,
+      "PreInteraction Mesh Transform": {
+        "Rotation": {
+          "X": -0.3768695,
+          "Y": -0.16042995,
+          "Z": -0.06645224,
+          "W": 0.9098438,
+          "SizeSquared": 1.0,
+          "Size": 1.0,
+          "IsNormalized": true
+        },
+        "Translation": {
+          "X": 0.0,
+          "Y": 9.064577,
+          "Z": 35.0
+        }
+      },
+      "ConsolidatedQuestComponent": {
+        "ObjectName": "Default__BP_S17_Clue_C:ConsolidatedQuestComponent:ConsolidatedQuestComponent",
+        "ObjectPath": "/BattlepassS17/QuestActors/Legendaries/BP_S17_Clue.3"
+      },
+      "RootComponent": {
+        "ObjectName": "Default__BP_S17_Clue_C:SceneRoot:SceneComponent",
+        "ObjectPath": "/BattlepassS17/QuestActors/Legendaries/BP_S17_Clue.10"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "AmbientAudio_GEN_VARIABLE",
+    "Properties": {
+      "Sound": null
+    }
+  },
+  {
+    "Type": "ConsolidatedQuestComponent",
+    "Properties": {
+      "QuestItemDefinition": {
+        "ObjectName": "quest_s17_w04_legendary_q1:FortQuestItemDefinition",
+        "ObjectPath": "/BattlepassS17/Items/QuestItems/Legendary/quest_s17_w04_legendary_q1.0"
+      },
+      "AttachParent": {
+        "ObjectName": "Default__BP_S17_Clue_C:SceneRoot:SceneComponent",
+        "ObjectPath": "/BattlepassS17/QuestActors/Legendaries/BP_S17_Clue.10"
+      }
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "NiagaraComponent:Class",
+            "ObjectPath": 0
+          },
+          "ComponentTemplate": {
+            "ObjectName": "BP_S17_Clue_C:N_Cosmetic_GEN_VARIABLE:NiagaraComponent",
+            "ObjectPath": "/BattlepassS17/QuestActors/Legendaries/BP_S17_Clue.6"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BP_Athena_PropQuestActor_Parent_C:BlueprintGeneratedClass",
+              "ObjectPath": "/Game/Athena/Items/QuestParents/PropQuestActor/BP_Athena_PropQuestActor_Parent.49"
+            },
+            "SCSVariableName": "N_Cosmetic",
+            "AssociatedGuid": "2996F2BB-450E20BC-2BCB609B-B8ADEABE"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [
+              {
+                "PropertyName": "bAutoActivate",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "NiagaraComponent:Class",
+                  "ObjectPath": 0
+                }
+              }
+            ],
+            "bHasValidCookedData": true
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "NiagaraComponent:Class",
+            "ObjectPath": 0
+          },
+          "ComponentTemplate": {
+            "ObjectName": "BP_S17_Clue_C:N_PostInteractionAmbient_GEN_VARIABLE:NiagaraComponent",
+            "ObjectPath": "/BattlepassS17/QuestActors/Legendaries/BP_S17_Clue.7"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BP_Athena_PropQuestActor_Parent_C:BlueprintGeneratedClass",
+              "ObjectPath": "/Game/Athena/Items/QuestParents/PropQuestActor/BP_Athena_PropQuestActor_Parent.49"
+            },
+            "SCSVariableName": "N_PostInteractionAmbient",
+            "AssociatedGuid": "52A5AE39-4D03DCF2-AB2AA5AF-67883F44"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [
+              {
+                "PropertyName": "bAutoActivate",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "NiagaraComponent:Class",
+                  "ObjectPath": 0
+                }
+              }
+            ],
+            "bHasValidCookedData": true
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "NiagaraComponent:Class",
+            "ObjectPath": 0
+          },
+          "ComponentTemplate": {
+            "ObjectName": "BP_S17_Clue_C:N_Ambient_GEN_VARIABLE:NiagaraComponent",
+            "ObjectPath": "/BattlepassS17/QuestActors/Legendaries/BP_S17_Clue.5"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BP_Athena_PropQuestActor_Parent_C:BlueprintGeneratedClass",
+              "ObjectPath": "/Game/Athena/Items/QuestParents/PropQuestActor/BP_Athena_PropQuestActor_Parent.49"
+            },
+            "SCSVariableName": "N_Ambient",
+            "AssociatedGuid": "1CEE948F-4AA402BE-B7AFE78D-1302BBBD"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [
+              {
+                "PropertyName": "RelativeLocation",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "NiagaraComponent:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "Z",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Vector:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "bAutoActivate",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "NiagaraComponent:Class",
+                  "ObjectPath": 0
+                }
+              }
+            ],
+            "bHasValidCookedData": true
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "NiagaraComponent:Class",
+            "ObjectPath": 0
+          },
+          "ComponentTemplate": {
+            "ObjectName": "BP_S17_Clue_C:N_UnHide_GEN_VARIABLE:NiagaraComponent",
+            "ObjectPath": "/BattlepassS17/QuestActors/Legendaries/BP_S17_Clue.8"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BP_Athena_PropQuestActor_Parent_C:BlueprintGeneratedClass",
+              "ObjectPath": "/Game/Athena/Items/QuestParents/PropQuestActor/BP_Athena_PropQuestActor_Parent.49"
+            },
+            "SCSVariableName": "N_UnHide",
+            "AssociatedGuid": "5B5047CD-4AA21956-04AFF494-DD15835A"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [
+              {
+                "PropertyName": "bAutoActivate",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "NiagaraComponent:Class",
+                  "ObjectPath": 0
+                }
+              }
+            ],
+            "bHasValidCookedData": true
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "AudioComponent:Class",
+            "ObjectPath": 0
+          },
+          "ComponentTemplate": {
+            "ObjectName": "BP_S17_Clue_C:AmbientAudio_GEN_VARIABLE:AudioComponent",
+            "ObjectPath": "/BattlepassS17/QuestActors/Legendaries/BP_S17_Clue.2"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BP_Athena_PropQuestActor_Parent_C:BlueprintGeneratedClass",
+              "ObjectPath": "/Game/Athena/Items/QuestParents/PropQuestActor/BP_Athena_PropQuestActor_Parent.49"
+            },
+            "SCSVariableName": "AmbientAudio",
+            "AssociatedGuid": "58417A85-4EB58B12-7223CFA3-58C4EA3F"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [
+              {
+                "PropertyName": "VolumeMultiplier",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "AudioComponent:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "bAutoActivate",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "AudioComponent:Class",
+                  "ObjectPath": 0
+                }
+              }
+            ],
+            "bHasValidCookedData": true
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "N_Ambient_GEN_VARIABLE",
+    "Properties": {
+      "OverrideParameters": {}
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "N_Cosmetic_GEN_VARIABLE",
+    "Properties": {
+      "OverrideParameters": {}
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "N_PostInteractionAmbient_GEN_VARIABLE",
+    "Properties": {
+      "OverrideParameters": {}
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "N_UnHide_GEN_VARIABLE",
+    "Properties": {
+      "OverrideParameters": {}
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Properties": {}
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "SceneRoot",
+    "Properties": {}
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "SceneComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_S17_Clue_C:DefaultSceneRoot_GEN_VARIABLE:SceneComponent",
+        "ObjectPath": "/BattlepassS17/QuestActors/Legendaries/BP_S17_Clue.9"
+      },
+      "VariableGuid": "2CBD25C2-4A70792F-04182AA8-BC07E2EF",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SimpleConstructionScript_0:SCS_Node_0:SCS_Node",
+        "ObjectPath": "/BattlepassS17/QuestActors/Legendaries/BP_S17_Clue.11"
+      }
+    }
+  }
+]

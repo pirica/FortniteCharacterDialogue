@@ -1,0 +1,159 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "Quest_S17_W05_Epic_Q02",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "QuestSubtype": "EFortQuestSubtype::WeeklyChallenge",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/AlienTrooper/AlienTrooper/NPCCharacterData_AlienTrooper.NPCCharacterData_AlienTrooper",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "Rewards": [
+        {
+          "ItemPrimaryAssetId": {
+            "PrimaryAssetType": {
+              "Name": "Quest"
+            },
+            "PrimaryAssetName": "Quest_S17_W05_Epic_Q03"
+          },
+          "Quantity": 1
+        }
+      ],
+      "RewardsTable": {
+        "ObjectName": "ChallengeReward_S17_WeeklyXP:DataTable",
+        "ObjectPath": "/BattlepassS17/Items/QuestRewards/ChallengeReward_S17_WeeklyXP.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athenabattlepass_weeklychallenge_token",
+          "Quantity": 1
+        },
+        {
+          "TemplateId": "Token:athenabattlepass_s17_w05",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S17_W05_Epic_Q02_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.GameOn"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Pawn.Athena.NPC.IO"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Damage",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "Quest_S17_W05_Epic_Q02",
+            "Key": "Quest_S17_W05_Epic_Q02_DisplayName",
+            "SourceString": "Damage IO Guards"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "E19092BF409471C110DABCA486B5E62A",
+            "SourceString": "Eliminate all defenses."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 250,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 20,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "",
+        "Key": "94611F9B47D8AD67068A6AA3F87D24E4",
+        "SourceString": "Enemy meatsacks: harmed."
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Epic",
+      "DisplayName": {
+        "Namespace": "Quest_S17_W05_Epic_Q02",
+        "Key": "Quest_S17_W05_Epic_Q02_DisplayName",
+        "SourceString": "Damage IO Guards"
+      },
+      "ShortDescription": {
+        "Namespace": "",
+        "Key": "81763C364E4A61C1DEA59B91FBF6FEBE",
+        "SourceString": "Eliminate all defenses."
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "B899077545631CCBA56330AC2E932314",
+        "SourceString": "Damage IO Guards"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP",
+        "Quest.Metadata.PartyAssist",
+        "Quest.Metadata.HideForContextualQuestDisplay",
+        "Quest.Metadata.GroupChallenge"
+      ]
+    }
+  }
+]

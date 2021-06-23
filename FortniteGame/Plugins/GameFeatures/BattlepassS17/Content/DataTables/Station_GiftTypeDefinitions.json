@@ -1,0 +1,114 @@
+[
+  {
+    "Type": "BP_ControllerRequirement_CheckLivingWorldManagerBudget_C",
+    "Name": "BP_ControllerRequirement_CheckLivingWorldManagerBudget_C_0",
+    "Properties": {
+      "EventRowHandle": {
+        "DataTable": {
+          "ObjectName": "Lager_EventTable_Irwin_VendGifts:DataTable",
+          "ObjectPath": "/Lager/Lager/EventTables/Lager_EventTable_Irwin_VendGifts.0"
+        },
+        "RowName": "Nug"
+      }
+    }
+  },
+  {
+    "Type": "FortControllerEffect_ModifyGameplayTags",
+    "Name": "FortControllerEffect_ModifyGameplayTags_2",
+    "Properties": {
+      "TagModificationRequest": {
+        "TagsToModify": [
+          "Athena.Quests.TandemGift.Nug"
+        ],
+        "FiniteLifetime": 0.0
+      }
+    }
+  },
+  {
+    "Type": "FortControllerEffect_NPCGiveItem",
+    "Name": "FortControllerEffect_NPCGiveItem_0",
+    "Properties": {}
+  },
+  {
+    "Type": "FortControllerEffect_SpawnActor",
+    "Name": "FortControllerEffect_SpawnActor_1",
+    "Properties": {
+      "ActorClass": {
+        "ObjectName": "BP_VendAISpawner_Nug_C:BlueprintGeneratedClass",
+        "ObjectPath": "/BattlepassS17/Services/BP_VendAISpawner_Nug.0"
+      },
+      "SpawnDelay": 0.5,
+      "LocalSpaceSpawnOffset": {
+        "X": 0.0,
+        "Y": 130.0,
+        "Z": 40.0
+      },
+      "AdditionalRelativeRotationOffset": {
+        "Pitch": 0.0,
+        "Yaw": 90.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_CheckPitchYawRoll",
+    "Name": "FortControllerRequirement_CheckPitchYawRoll_1",
+    "Properties": {
+      "PitchErrorCheck": {
+        "bEnabled": true,
+        "ToleratedErrorInDegrees": 20.0
+      },
+      "RollErrorCheck": {
+        "bEnabled": true,
+        "ToleratedErrorInDegrees": 20.0
+      }
+    }
+  },
+  {
+    "Type": "FortConversationGiftTypeDefinitions",
+    "Name": "Station_GiftTypeDefinitions",
+    "Properties": {
+      "GiftDefinitionsByGiftTag": {
+        "Athena.Quests.TandemGift.Nug": {
+          "ServiceProviderRequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ServiceProviderRequirements": [
+            {
+              "ObjectName": "Station_GiftTypeDefinitions:FortControllerRequirement_CheckPitchYawRoll_1:FortControllerRequirement_CheckPitchYawRoll",
+              "ObjectPath": "/BattlepassS17/DataTables/Station_GiftTypeDefinitions.4"
+            },
+            {
+              "ObjectName": "Station_GiftTypeDefinitions:BP_ControllerRequirement_CheckLivingWorldManagerBudget_C_0:BP_ControllerRequirement_CheckLivingWorldManagerBudget_C",
+              "ObjectPath": "/BattlepassS17/DataTables/Station_GiftTypeDefinitions.0"
+            }
+          ],
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "Requirements": [],
+          "Effects": [
+            {
+              "ObjectName": "Station_GiftTypeDefinitions:FortControllerEffect_SpawnActor_1:FortControllerEffect_SpawnActor",
+              "ObjectPath": "/BattlepassS17/DataTables/Station_GiftTypeDefinitions.3"
+            },
+            {
+              "ObjectName": "Station_GiftTypeDefinitions:FortControllerEffect_ModifyGameplayTags_2:FortControllerEffect_ModifyGameplayTags",
+              "ObjectPath": "/BattlepassS17/DataTables/Station_GiftTypeDefinitions.1"
+            }
+          ],
+          "UINotificationType": null
+        },
+        "Athena.Quests.TandemGift.Item": {
+          "ServiceProviderRequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ServiceProviderRequirements": [],
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "Requirements": [],
+          "Effects": [
+            {
+              "ObjectName": "Station_GiftTypeDefinitions:FortControllerEffect_NPCGiveItem_0:FortControllerEffect_NPCGiveItem",
+              "ObjectPath": "/BattlepassS17/DataTables/Station_GiftTypeDefinitions.2"
+            }
+          ],
+          "UINotificationType": null
+        }
+      }
+    }
+  }
+]

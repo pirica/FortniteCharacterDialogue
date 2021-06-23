@@ -1,0 +1,157 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "Quest_S17_W05_Epic_Q01",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "QuestSubtype": "EFortQuestSubtype::WeeklyChallenge",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/AlienTrooper/AlienTrooper/NPCCharacterData_AlienTrooper.NPCCharacterData_AlienTrooper",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "RewardsTable": {
+        "ObjectName": "ChallengeReward_S17_WeeklyXP:DataTable",
+        "ObjectPath": "/BattlepassS17/Items/QuestRewards/ChallengeReward_S17_WeeklyXP.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athenabattlepass_weeklychallenge_token",
+          "Quantity": 1
+        },
+        {
+          "TemplateId": "Token:athenabattlepass_s17_w05",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S17_W05_Epic_Q01_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.GameOn"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.Quests.Building.Prop.Computer"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "Source.Tags HasTag Athena.Location.UnnamedPOI.RadarDishBase || Source.Tags HasTag Athena.Location.POI.GovernmentComplex",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Destroy",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "34B075374EC13F8EA0BDA49555BC811B",
+            "SourceString": "Destroy computer equipment at satellite stations or Corny Complex"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "AE8F063A49EDD8B5051A4180785F3A03",
+            "SourceString": "Eliminate all data."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 3,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 0,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "",
+        "Key": "7BAA61A64DCEA2C4E96F3B8B1DA09213",
+        "SourceString": "Processing disabled."
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Epic",
+      "DisplayName": {
+        "Namespace": "",
+        "Key": "2AAA8DAC47B11C56093CA7A896642AF2",
+        "SourceString": "Destroy computer equipment at satellite stations or Corny Complex"
+      },
+      "ShortDescription": {
+        "Namespace": "",
+        "Key": "DEE16D1F4E26855E38292F8FC30BDA7F",
+        "SourceString": "Eliminate all data."
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "AB40A767401875F03C1E8891F0F815DB",
+        "SourceString": "Destroy computer equipment at satellite stations or Corny Complex"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP",
+        "Athena.Location.UnnamedPOI.RadarDishBase.01",
+        "Athena.Location.UnnamedPOI.RadarDishBase.02",
+        "Athena.Location.UnnamedPOI.RadarDishBase.03",
+        "Athena.Location.UnnamedPOI.RadarDishBase.04",
+        "Athena.Location.UnnamedPOI.RadarDishBase.05",
+        "Athena.Location.UnnamedPOI.RadarDishBase.06",
+        "Athena.Location.UnnamedPOI.RadarDishBase.07",
+        "Athena.Location.POI.GovernmentComplex",
+        "Quest.ChallengeIcon.Destroy",
+        "Quest.Metadata.PartyAssist",
+        "Quest.Metadata.GroupChallenge",
+        "Quest.Metadata.HideForContextualQuestDisplay"
+      ]
+    }
+  }
+]

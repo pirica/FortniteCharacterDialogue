@@ -1,0 +1,107 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_VendAISpawner_Base",
+    "Properties": {}
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Properties": {}
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_VendAISpawner_Base_C",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "BP_VendAISpawner_Base_C:SimpleConstructionScript_0:SimpleConstructionScript",
+        "ObjectPath": "/BattlepassS17/Services/BP_VendAISpawner_Base.8"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "BP_VendAISpawner_Base_C:ExecuteUbergraph_BP_VendAISpawner_Base:Function",
+        "ObjectPath": "/BattlepassS17/Services/BP_VendAISpawner_Base.0"
+      }
+    }
+  },
+  {
+    "Type": "BP_VendAISpawner_Base_C",
+    "Name": "Default__BP_VendAISpawner_Base_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "SpawnDelay": 0.3,
+      "EventRowHandle": {
+        "DataTable": null,
+        "RowName": null
+      },
+      "bReplicates": true,
+      "InitialLifeSpan": 2.0
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "Niagara_GEN_VARIABLE",
+    "Properties": {
+      "OverrideParameters": {},
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Properties": {}
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "SceneComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_VendAISpawner_Base_C:DefaultSceneRoot_GEN_VARIABLE:SceneComponent",
+        "ObjectPath": "/BattlepassS17/Services/BP_VendAISpawner_Base.5"
+      },
+      "VariableGuid": "6ED21FA7-48BD39D8-358E56B4-22284158",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "NiagaraComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_VendAISpawner_Base_C:Niagara_GEN_VARIABLE:NiagaraComponent",
+        "ObjectPath": "/BattlepassS17/Services/BP_VendAISpawner_Base.4"
+      },
+      "VariableGuid": "0175F1E0-4AF7EB77-79DA01AC-84276156",
+      "InternalVariableName": "Niagara"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_2:SCS_Node",
+          "ObjectPath": "/BattlepassS17/Services/BP_VendAISpawner_Base.7"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_2:SCS_Node",
+          "ObjectPath": "/BattlepassS17/Services/BP_VendAISpawner_Base.7"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SimpleConstructionScript_0:SCS_Node_0:SCS_Node",
+        "ObjectPath": "/BattlepassS17/Services/BP_VendAISpawner_Base.6"
+      }
+    }
+  }
+]

@@ -1,0 +1,149 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "Quest_S17_W04_Epic_Q04",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "QuestSubtype": "EFortQuestSubtype::WeeklyChallenge",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/AlienTrooper/AlienTrooper/NPCCharacterData_AlienTrooper.NPCCharacterData_AlienTrooper",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "RewardsTable": {
+        "ObjectName": "ChallengeReward_S17_WeeklyXP:DataTable",
+        "ObjectPath": "/BattlepassS17/Items/QuestRewards/ChallengeReward_S17_WeeklyXP.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athenabattlepass_weeklychallenge_token",
+          "Quantity": 1
+        },
+        {
+          "TemplateId": "Token:athenabattlepass_s17_w04",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S17_W04_Epic_Q04_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.GameOn"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Building.Type.Prop"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "Source.Tags HasTag Athena.Location.POI.LazyLake || Source.Tags HasTag Athena.Location.POI.RetailRow || Source.Tags HasTag Athena.Location.POI.PleasantPark || Source.Tags HasTag Athena.Location.POI.HollyHedges",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Destroy",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "276AD19744A3CC9055B45AB27C5E1302",
+            "SourceString": "Destroy objects at Retail Row, Lazy Lake, Pleasant Park, or Holly Hatchery"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "DA2DC42743AF5C3BC6D7F08AD55A662B",
+            "SourceString": "Collect samples for the invasion."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 5,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 0,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "Quest_S17_W04_Epic_Q04",
+        "Key": "Quest_S17_W04_Epic_Q04_CompletionText",
+        "SourceString": "Hm, yes, it appears their objects are made of matter."
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Epic",
+      "DisplayName": {
+        "Namespace": "",
+        "Key": "7C6E2004498B584F6B66AABBB7F41739",
+        "SourceString": "Destroy objects at Retail Row, Lazy Lake, Pleasant Park, or Holly Hatchery"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S17_W04_Epic_Q04",
+        "Key": "Quest_S17_W04_Epic_Q04_ShortDescription",
+        "SourceString": "Collect samples for the invasion."
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "BEBF331141CADDF4AD1A608303671620",
+        "SourceString": "Destroy objects at Retail Row, Lazy Lake, Pleasant Park, or Holly Hatchery"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP",
+        "Athena.Location.POI.HollyHedges",
+        "Athena.Location.POI.RetailRow",
+        "Athena.Location.POI.PleasantPark",
+        "Athena.Location.POI.LazyLake"
+      ]
+    }
+  }
+]
