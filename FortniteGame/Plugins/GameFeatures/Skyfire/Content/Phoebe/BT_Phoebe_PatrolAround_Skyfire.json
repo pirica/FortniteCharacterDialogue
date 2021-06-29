@@ -1,0 +1,93 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Phoebe_PatrolAround_Skyfire",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BT_Phoebe_PatrolAround_Skyfire:BTComposite_Selector_14:BTComposite_Selector",
+        "ObjectPath": "/Skyfire/Phoebe/BT_Phoebe_PatrolAround_Skyfire.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BB_Phoebe:BlackboardData",
+        "ObjectPath": "/Game/Athena/AI/Phoebe/BehaviorTrees/BB_Phoebe.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_14",
+    "Outer": "BT_Phoebe_PatrolAround_Skyfire",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BT_Phoebe_PatrolAround_Skyfire:FortAthenaBTTask_BotMoveTo_1:FortAthenaBTTask_BotMoveTo",
+            "ObjectPath": "/Skyfire/Phoebe/BT_Phoebe_PatrolAround_Skyfire.3"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BT_Phoebe_PatrolAround_Skyfire:BTTask_Wait_0:BTTask_Wait",
+            "ObjectPath": "/Skyfire/Phoebe/BT_Phoebe_PatrolAround_Skyfire.2"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "NodeName": "Patrol Move Move Selector",
+      "TreeAsset": {
+        "ObjectName": "BT_Phoebe_PatrolAround_Skyfire:BehaviorTree",
+        "ObjectPath": "/Skyfire/Phoebe/BT_Phoebe_PatrolAround_Skyfire.0"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "BT_Phoebe_PatrolAround_Skyfire",
+    "Properties": {
+      "WaitTime": 0.1,
+      "NodeName": "Wait so above selector return success",
+      "TreeAsset": {
+        "ObjectName": "BT_Phoebe_PatrolAround_Skyfire:BehaviorTree",
+        "ObjectPath": "/Skyfire/Phoebe/BT_Phoebe_PatrolAround_Skyfire.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BT_Phoebe_PatrolAround_Skyfire:BTComposite_Selector_14:BTComposite_Selector",
+        "ObjectPath": "/Skyfire/Phoebe/BT_Phoebe_PatrolAround_Skyfire.1"
+      }
+    }
+  },
+  {
+    "Type": "FortAthenaBTTask_BotMoveTo",
+    "Name": "FortAthenaBTTask_BotMoveTo_1",
+    "Outer": "BT_Phoebe_PatrolAround_Skyfire",
+    "Properties": {
+      "MovementResultKeyName": "AIEvaluator_Patrol_MovementState",
+      "FilterClass": {
+        "ObjectName": "NavFilter_Phoebe_NoSmashable_C:BlueprintGeneratedClass",
+        "ObjectPath": "/Game/Athena/AI/Phoebe/NavFilter/NavFilter_Phoebe_NoSmashable.0"
+      },
+      "ObservedBlackboardValueTolerance": 200.0,
+      "bAllowStrafe": true,
+      "bTrackMovingGoal": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "AIEvaluator_Patrol_Destination"
+      },
+      "NodeName": "Patrol Move To",
+      "TreeAsset": {
+        "ObjectName": "BT_Phoebe_PatrolAround_Skyfire:BehaviorTree",
+        "ObjectPath": "/Skyfire/Phoebe/BT_Phoebe_PatrolAround_Skyfire.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BT_Phoebe_PatrolAround_Skyfire:BTComposite_Selector_14:BTComposite_Selector",
+        "ObjectPath": "/Skyfire/Phoebe/BT_Phoebe_PatrolAround_Skyfire.1"
+      }
+    }
+  }
+]

@@ -1,0 +1,597 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_TeleportSquadPoint",
+    "Outer": "TeleportSquadPoint_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_Player",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortPlayerStateAthena:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetCurrentPawn_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortPlayerPawn:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetActorForwardVector_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakVector_X",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakVector_Y",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakVector_Z",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Multiply_FloatFloat_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Multiply_FloatFloat_ReturnValue_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 32769,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "OnTeleportComplete",
+    "Outer": "TeleportSquadPoint_C",
+    "SuperStruct": {
+      "ObjectName": "OnTeleportComplete:Class",
+      "ObjectPath": 0
+    },
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Player",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortPlayerStateAthena:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 134350848,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "TeleportSquadPoint_C",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "TeleportSquadPoint_C:SimpleConstructionScript_0:SimpleConstructionScript",
+        "ObjectPath": "/Skyfire/Gameplay/TeleportSquadPoint.15"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "TeleportSquadPoint_C:ExecuteUbergraph_TeleportSquadPoint:Function",
+        "ObjectPath": "/Skyfire/Gameplay/TeleportSquadPoint.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "SkyfireTeleportSquadPoint:Class",
+      "ObjectPath": 0
+    },
+    "Children": [
+      {
+        "ObjectName": "TeleportSquadPoint_C:OnTeleportComplete:Function",
+        "ObjectPath": "/Skyfire/Gameplay/TeleportSquadPoint.1"
+      },
+      {
+        "ObjectName": "TeleportSquadPoint_C:ExecuteUbergraph_TeleportSquadPoint:Function",
+        "ObjectPath": "/Skyfire/Gameplay/TeleportSquadPoint.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 2105344,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "PointerToUberGraphFrame:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "EditorIcon3",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "BillboardComponent:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "EditorIcon2",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "BillboardComponent:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "EditorIcon1",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "BillboardComponent:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "EditorIcon",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "BillboardComponent:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "LaunchMultiplier",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "LaunchHeight",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlayerPawn",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 67589,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortPlayerPawn:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_TeleportSquadPoint": {
+        "ObjectName": "TeleportSquadPoint_C:ExecuteUbergraph_TeleportSquadPoint:Function",
+        "ObjectPath": "/Skyfire/Gameplay/TeleportSquadPoint.0"
+      },
+      "OnTeleportComplete": {
+        "ObjectName": "TeleportSquadPoint_C:OnTeleportComplete:Function",
+        "ObjectPath": "/Skyfire/Gameplay/TeleportSquadPoint.1"
+      }
+    },
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Engine",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__TeleportSquadPoint_C:TeleportSquadPoint_C",
+      "ObjectPath": "/Skyfire/Gameplay/TeleportSquadPoint.3"
+    }
+  },
+  {
+    "Type": "TeleportSquadPoint_C",
+    "Name": "Default__TeleportSquadPoint_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "LaunchMultiplier": 300.0,
+      "LaunchHeight": 2000.0,
+      "PlayerStarts": [
+        {
+          "ObjectName": "Default__TeleportSquadPoint_C:PlayerStart01:SceneComponent",
+          "ObjectPath": "/Skyfire/Gameplay/TeleportSquadPoint.4"
+        },
+        {
+          "ObjectName": "Default__TeleportSquadPoint_C:PlayerStart02:SceneComponent",
+          "ObjectPath": "/Skyfire/Gameplay/TeleportSquadPoint.5"
+        },
+        {
+          "ObjectName": "Default__TeleportSquadPoint_C:PlayerStart03:SceneComponent",
+          "ObjectPath": "/Skyfire/Gameplay/TeleportSquadPoint.6"
+        },
+        {
+          "ObjectName": "Default__TeleportSquadPoint_C:PlayerStart04:SceneComponent",
+          "ObjectPath": "/Skyfire/Gameplay/TeleportSquadPoint.7"
+        }
+      ],
+      "RootComponent": {
+        "ObjectName": "Default__TeleportSquadPoint_C:RootComponent:SceneComponent",
+        "ObjectPath": "/Skyfire/Gameplay/TeleportSquadPoint.8"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "PlayerStart01",
+    "Outer": "Default__TeleportSquadPoint_C",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "Default__TeleportSquadPoint_C:RootComponent:SceneComponent",
+        "ObjectPath": "/Skyfire/Gameplay/TeleportSquadPoint.8"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "PlayerStart02",
+    "Outer": "Default__TeleportSquadPoint_C",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "Default__TeleportSquadPoint_C:RootComponent:SceneComponent",
+        "ObjectPath": "/Skyfire/Gameplay/TeleportSquadPoint.8"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 100.0,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "PlayerStart03",
+    "Outer": "Default__TeleportSquadPoint_C",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "Default__TeleportSquadPoint_C:RootComponent:SceneComponent",
+        "ObjectPath": "/Skyfire/Gameplay/TeleportSquadPoint.8"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 200.0,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "PlayerStart04",
+    "Outer": "Default__TeleportSquadPoint_C",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "Default__TeleportSquadPoint_C:RootComponent:SceneComponent",
+        "ObjectPath": "/Skyfire/Gameplay/TeleportSquadPoint.8"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 300.0,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "RootComponent",
+    "Outer": "Default__TeleportSquadPoint_C"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "TeleportSquadPoint_C"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "SceneComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": {
+        "ObjectName": "TeleportSquadPoint_C:DefaultSceneRoot_GEN_VARIABLE:SceneComponent",
+        "ObjectPath": "/Skyfire/Gameplay/TeleportSquadPoint.9"
+      },
+      "VariableGuid": "FB49B368-4F0FC248-2D6C64B5-9757BE0F",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BillboardComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": null,
+      "ParentComponentOrVariableName": "PlayerStart01",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "0C9FE55D-42028A23-59046594-EE58759A",
+      "InternalVariableName": "EditorIcon"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BillboardComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": null,
+      "ParentComponentOrVariableName": "PlayerStart02",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "D422AF1B-4296CF33-C68CBBBA-DAF80F88",
+      "InternalVariableName": "EditorIcon1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BillboardComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": null,
+      "ParentComponentOrVariableName": "PlayerStart03",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "E894F4EA-44ED53DB-D2759A95-B83409FF",
+      "InternalVariableName": "EditorIcon2"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BillboardComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": null,
+      "ParentComponentOrVariableName": "PlayerStart04",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "12CC34CE-4421234C-1918D89C-E970A55A",
+      "InternalVariableName": "EditorIcon3"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "TeleportSquadPoint_C",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_1:SCS_Node",
+          "ObjectPath": "/Skyfire/Gameplay/TeleportSquadPoint.11"
+        },
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_2:SCS_Node",
+          "ObjectPath": "/Skyfire/Gameplay/TeleportSquadPoint.12"
+        },
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_3:SCS_Node",
+          "ObjectPath": "/Skyfire/Gameplay/TeleportSquadPoint.13"
+        },
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_4:SCS_Node",
+          "ObjectPath": "/Skyfire/Gameplay/TeleportSquadPoint.14"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_1:SCS_Node",
+          "ObjectPath": "/Skyfire/Gameplay/TeleportSquadPoint.11"
+        },
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_2:SCS_Node",
+          "ObjectPath": "/Skyfire/Gameplay/TeleportSquadPoint.12"
+        },
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_3:SCS_Node",
+          "ObjectPath": "/Skyfire/Gameplay/TeleportSquadPoint.13"
+        },
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_4:SCS_Node",
+          "ObjectPath": "/Skyfire/Gameplay/TeleportSquadPoint.14"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SimpleConstructionScript_0:SCS_Node_0:SCS_Node",
+        "ObjectPath": "/Skyfire/Gameplay/TeleportSquadPoint.10"
+      }
+    }
+  }
+]

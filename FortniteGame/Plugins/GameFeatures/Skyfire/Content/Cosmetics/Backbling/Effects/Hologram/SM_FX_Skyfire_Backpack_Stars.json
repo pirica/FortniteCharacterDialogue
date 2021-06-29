@@ -1,0 +1,93 @@
+[
+  {
+    "Type": "BodySetup",
+    "Name": "BodySetup_0",
+    "Outer": "SM_FX_Skyfire_Backpack_Stars",
+    "Properties": {
+      "DefaultInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::QueryOnly",
+        "CollisionProfileName": "BlockAll",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "FCC_Trace_WeaponCapsule",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_PawnAI",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Trace_WeaponMulti",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Trace_Weapon",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_Projectile",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_ProjectileIgnoreAI",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_ProjectileMesh",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_SpectatorDroneCamera",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+              "Response": "ECollisionResponse::ECR_Block"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "Type": "StaticMesh",
+    "Name": "SM_FX_Skyfire_Backpack_Stars",
+    "Properties": {
+      "StaticMaterials": [
+        {
+          "MaterialInterface": {
+            "ObjectName": "WorldGridMaterial:Material",
+            "ObjectPath": "/Engine/EngineMaterials/WorldGridMaterial.0"
+          },
+          "MaterialSlotName": "lambert1",
+          "ImportedMaterialSlotName": "lambert1",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 385.32925,
+            "LocalUVDensities": 0.0,
+            "LocalUVDensities": 0.0,
+            "LocalUVDensities": 0.0
+          }
+        }
+      ],
+      "LightmapUVDensity": 385.32925,
+      "LightMapResolution": 64,
+      "ExtendedBounds": {
+        "Origin": {
+          "X": 0.021881104,
+          "Y": -6.2650686E-15,
+          "Z": 0.0
+        },
+        "BoxExtent": {
+          "X": 192.14975,
+          "Y": 2.2950989E-15,
+          "Z": 37.481808
+        },
+        "SphereRadius": 192.48085
+      }
+    }
+  }
+]

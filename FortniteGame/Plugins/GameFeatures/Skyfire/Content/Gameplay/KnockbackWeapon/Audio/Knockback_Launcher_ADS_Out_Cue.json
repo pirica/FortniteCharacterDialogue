@@ -1,0 +1,74 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "Knockback_Launcher_ADS_Out_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "Knockback_Launcher_ADS_Out_Cue:SoundNodeQualityLevel_0:SoundNodeQualityLevel",
+        "ObjectPath": "/Skyfire/Gameplay/KnockbackWeapon/Audio/Knockback_Launcher_ADS_Out_Cue.2"
+      },
+      "VolumeMultiplier": 0.2,
+      "PitchMultiplier": 0.9,
+      "SoundClassObject": {
+        "ObjectName": "Fort_Weapon_Foley:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Weapon_Foley.0"
+      },
+      "bOverrideConcurrency": true,
+      "VirtualizationMode": "EVirtualizationMode::Disabled",
+      "ConcurrencyOverrides": {
+        "MaxCount": 1
+      },
+      "Duration": 0.5076042,
+      "MaxDistance": 2100.0,
+      "Priority": 0.0,
+      "AttenuationSettings": {
+        "ObjectName": "Fort_Weapon_Reload_Sml_Att:SoundAttenuation",
+        "ObjectPath": "/Game/Sounds/Attenuation/Fort_Weapon_Reload_Sml_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "Knockback_Launcher_ADS_Out_Cue",
+    "Properties": {
+      "PitchMax": 1.1,
+      "ChildNodes": [
+        {
+          "ObjectName": "Knockback_Launcher_ADS_Out_Cue:SoundNodeWavePlayer_0:SoundNodeWavePlayer",
+          "ObjectPath": "/Skyfire/Gameplay/KnockbackWeapon/Audio/Knockback_Launcher_ADS_Out_Cue.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeQualityLevel",
+    "Name": "SoundNodeQualityLevel_0",
+    "Outer": "Knockback_Launcher_ADS_Out_Cue",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "Knockback_Launcher_ADS_Out_Cue:SoundNodeModulator_0:SoundNodeModulator",
+          "ObjectPath": "/Skyfire/Gameplay/KnockbackWeapon/Audio/Knockback_Launcher_ADS_Out_Cue.1"
+        },
+        {
+          "ObjectName": "Knockback_Launcher_ADS_Out_Cue:SoundNodeModulator_0:SoundNodeModulator",
+          "ObjectPath": "/Skyfire/Gameplay/KnockbackWeapon/Audio/Knockback_Launcher_ADS_Out_Cue.1"
+        },
+        null,
+        null
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "Knockback_Launcher_ADS_Out_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Skyfire/Gameplay/KnockbackWeapon/Audio/Knockback_Launcher_ADS_Out_01.Knockback_Launcher_ADS_Out_01",
+        "SubPathString": ""
+      }
+    }
+  }
+]

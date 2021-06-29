@@ -1,0 +1,249 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_GA_Skyfire_Jump",
+    "Outer": "GA_Skyfire_Jump_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeGameplayCueParameters_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 200,
+        "PropertyFlags": 549755813888,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayCueParameters:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_TagToAdd",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayTag:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 8421377,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "Jump_FromGround",
+    "Outer": "GA_Skyfire_Jump_C",
+    "Super": "Jump_FromGround",
+    "SuperStruct": {
+      "ObjectName": "GA_Alpaca_Jump_C:Jump_FromGround:Function",
+      "ObjectPath": "/MotherGameplay/Items/Alpaca/GA_Alpaca_Jump.6"
+    },
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 201326592,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "Jump_InAir",
+    "Outer": "GA_Skyfire_Jump_C",
+    "Super": "Jump_InAir",
+    "SuperStruct": {
+      "ObjectName": "GA_Alpaca_Jump_C:Jump_InAir:Function",
+      "ObjectPath": "/MotherGameplay/Items/Alpaca/GA_Alpaca_Jump.5"
+    },
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 201326592,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "ApplyJumpTag",
+    "Outer": "GA_Skyfire_Jump_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "TagToAdd",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayTag:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 201326592,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GA_Skyfire_Jump_C",
+    "Super": "GA_Alpaca_Jump_C",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "GA_Skyfire_Jump_C:ExecuteUbergraph_GA_Skyfire_Jump:Function",
+        "ObjectPath": "/Skyfire/Gameplay/GA_Skyfire_Jump.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "GA_Alpaca_Jump_C:BlueprintGeneratedClass",
+      "ObjectPath": "/MotherGameplay/Items/Alpaca/GA_Alpaca_Jump.11"
+    },
+    "Children": [
+      {
+        "ObjectName": "GA_Skyfire_Jump_C:ApplyJumpTag:Function",
+        "ObjectPath": "/Skyfire/Gameplay/GA_Skyfire_Jump.3"
+      },
+      {
+        "ObjectName": "GA_Skyfire_Jump_C:Jump_InAir:Function",
+        "ObjectPath": "/Skyfire/Gameplay/GA_Skyfire_Jump.2"
+      },
+      {
+        "ObjectName": "GA_Skyfire_Jump_C:Jump_FromGround:Function",
+        "ObjectPath": "/Skyfire/Gameplay/GA_Skyfire_Jump.1"
+      },
+      {
+        "ObjectName": "GA_Skyfire_Jump_C:ExecuteUbergraph_GA_Skyfire_Jump:Function",
+        "ObjectPath": "/Skyfire/Gameplay/GA_Skyfire_Jump.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 2105344,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "PointerToUberGraphFrame:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "OnJumpFromGround",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayTag:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "OnJumpInAir",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayTag:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_GA_Skyfire_Jump": {
+        "ObjectName": "GA_Skyfire_Jump_C:ExecuteUbergraph_GA_Skyfire_Jump:Function",
+        "ObjectPath": "/Skyfire/Gameplay/GA_Skyfire_Jump.0"
+      },
+      "Jump_FromGround": {
+        "ObjectName": "GA_Skyfire_Jump_C:Jump_FromGround:Function",
+        "ObjectPath": "/Skyfire/Gameplay/GA_Skyfire_Jump.1"
+      },
+      "Jump_InAir": {
+        "ObjectName": "GA_Skyfire_Jump_C:Jump_InAir:Function",
+        "ObjectPath": "/Skyfire/Gameplay/GA_Skyfire_Jump.2"
+      },
+      "ApplyJumpTag": {
+        "ObjectName": "GA_Skyfire_Jump_C:ApplyJumpTag:Function",
+        "ObjectPath": "/Skyfire/Gameplay/GA_Skyfire_Jump.3"
+      }
+    },
+    "ClassFlags": 264208,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Engine",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__GA_Skyfire_Jump_C:GA_Skyfire_Jump_C",
+      "ObjectPath": "/Skyfire/Gameplay/GA_Skyfire_Jump.5"
+    }
+  },
+  {
+    "Type": "GA_Skyfire_Jump_C",
+    "Name": "Default__GA_Skyfire_Jump_C",
+    "Template": "Default__GA_Alpaca_Jump_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "OnJumpFromGround": {
+        "TagName": "GameplayCue.Skyfire.Backpack.OnJumpFromGroundBoostCount"
+      },
+      "OnJumpInAir": {
+        "TagName": "GameplayCue.Skyfire.Backpack.OnJumpInAirBoostCount"
+      },
+      "Tag_JumpFromGround": {
+        "TagName": "GameplayCue.Skyfire.Backpack.Jump"
+      },
+      "Tag_JumpInAir": {
+        "TagName": "GameplayCue.Skyfire.Backpack.Jump"
+      },
+      "Tag_CrouchInAir": {
+        "TagName": "GameplayCue.Skyfire.Backpack.Jump"
+      },
+      "Tag_Land": {
+        "TagName": "GameplayCue.Skyfire.Backpack.Land"
+      }
+    }
+  }
+]

@@ -1,0 +1,128 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GCNL_Skyfire_KnockbackDisablePlayer_C",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "GCNL_Skyfire_KnockbackDisablePlayer_C:SimpleConstructionScript_0:SimpleConstructionScript",
+        "ObjectPath": "/Skyfire/GameplayCues/GCNL_Skyfire_KnockbackDisablePlayer.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "FortGameplayCueNotify_Loop:Class",
+      "ObjectPath": 0
+    },
+    "Children": [],
+    "ChildProperties": [],
+    "FuncMap": {},
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Engine",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__GCNL_Skyfire_KnockbackDisablePlayer_C:GCNL_Skyfire_KnockbackDisablePlayer_C",
+      "ObjectPath": "/Skyfire/GameplayCues/GCNL_Skyfire_KnockbackDisablePlayer.1"
+    }
+  },
+  {
+    "Type": "GCNL_Skyfire_KnockbackDisablePlayer_C",
+    "Name": "Default__GCNL_Skyfire_KnockbackDisablePlayer_C",
+    "Properties": {
+      "LoopingParticles": [
+        {
+          "Condition": {
+            "SourceCondition": "EFortGameplayCueSourceCondition::AnySource",
+            "AllowedSurfaces": [],
+            "DisallowedSurfaces": [],
+            "ChanceToPlay": 1.0,
+            "Significance": "EParticleSignificanceLevel::High",
+            "RequiredDetailMode": 0,
+            "bRequireVisible": false
+          },
+          "Attachment": {
+            "SocketName": null,
+            "AttachType": "EFortGameplayCueAttachType::DoNotAttach",
+            "bAttachToWeapon": false,
+            "bAttachToHitResult": false,
+            "bUseUnsmoothedNetworkPosition": false,
+            "bIgnoreScale": true,
+            "bIgnoreRotation": false,
+            "OverrideScale": {
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 1.0
+            },
+            "OverrideRotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            }
+          },
+          "FXType": "EFXType::GenericAnimNotify",
+          "NiagaraSystem": {
+            "ObjectName": "NS_Knockback_PlayerDampen:NiagaraSystem",
+            "ObjectPath": "/Skyfire/Gameplay/KnockbackWeapon/FX/PlayerDampen/NS_Knockback_PlayerDampen.53"
+          },
+          "ParticleSystem": {
+            "ObjectName": "P_Electric_DMG_v2:ParticleSystem",
+            "ObjectPath": "/Game/Effects/Fort_Effects/Gameplay/ElementalDMG_Player/Electrical/P_Electric_DMG_v2.104"
+          },
+          "bCastShadow": false,
+          "bOverrideCondition": false,
+          "bOverrideAttachment": false
+        }
+      ],
+      "GameplayCueTag": {
+        "TagName": "GameplayCue.Skyfire.Knockback.DisablePlayer"
+      },
+      "GameplayCueName": "GameplayCue.Skyfire.Knockback.DisablePlayer",
+      "RootComponent": {
+        "ObjectName": "Default__GCNL_Skyfire_KnockbackDisablePlayer_C:RootComponent:SceneComponent",
+        "ObjectPath": "/Skyfire/GameplayCues/GCNL_Skyfire_KnockbackDisablePlayer.2"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "RootComponent",
+    "Outer": "Default__GCNL_Skyfire_KnockbackDisablePlayer_C"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "GCNL_Skyfire_KnockbackDisablePlayer_C"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "SceneComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": {
+        "ObjectName": "GCNL_Skyfire_KnockbackDisablePlayer_C:DefaultSceneRoot_GEN_VARIABLE:SceneComponent",
+        "ObjectPath": "/Skyfire/GameplayCues/GCNL_Skyfire_KnockbackDisablePlayer.3"
+      },
+      "VariableGuid": "858B51E7-44C82746-82CF54B5-959E6806",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "GCNL_Skyfire_KnockbackDisablePlayer_C",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SimpleConstructionScript_0:SCS_Node_0:SCS_Node",
+        "ObjectPath": "/Skyfire/GameplayCues/GCNL_Skyfire_KnockbackDisablePlayer.4"
+      }
+    }
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "Veh_Nevada_Damage_Fire_Spark_Loop_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "Veh_Nevada_Damage_Fire_Spark_Loop_Cue:SoundNodeEnveloper_0:SoundNodeEnveloper",
+        "ObjectPath": "/Nevada/Audio/Cues/Veh_Nevada_Damage_Fire_Spark_Loop_Cue.1"
+      },
+      "VolumeMultiplier": 0.5,
+      "SoundClassObject": {
+        "ObjectName": "Fort_Vehicles_Exterior:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Vehicles_Exterior.0"
+      },
+      "Duration": 10000.0,
+      "MaxDistance": 2900.0,
+      "AttenuationSettings": {
+        "ObjectName": "Veh_Nevada_Onboard_Close_Att:SoundAttenuation",
+        "ObjectPath": "/Nevada/Audio/Settings/Veh_Nevada_Onboard_Close_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeEnveloper",
+    "Name": "SoundNodeEnveloper_0",
+    "Outer": "Veh_Nevada_Damage_Fire_Spark_Loop_Cue"
+  },
+  {
+    "Type": "SoundNodeModulatorContinuous",
+    "Name": "SoundNodeModulatorContinuous_0",
+    "Outer": "Veh_Nevada_Damage_Fire_Spark_Loop_Cue",
+    "Properties": {
+      "VolumeModulationParams": {
+        "ParameterName": "Damage Volume",
+        "MinOutput": 0.2,
+        "MaxOutput": 1.2
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "Veh_Nevada_Damage_Fire_Spark_Loop_Cue:SoundNodeWavePlayer_0:SoundNodeWavePlayer",
+          "ObjectPath": "/Nevada/Audio/Cues/Veh_Nevada_Damage_Fire_Spark_Loop_Cue.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "Veh_Nevada_Damage_Fire_Spark_Loop_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Nevada/Audio/Cues/Veh_Nevada_Damage_Fire_Spark_Loop_01.Veh_Nevada_Damage_Fire_Spark_Loop_01",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    }
+  }
+]

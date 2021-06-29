@@ -1,0 +1,39 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "Nevada_WPN_Energy_Cannon_InAirLoop_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "Nevada_WPN_Energy_Cannon_InAirLoop_Cue:SoundNodeWavePlayer_1:SoundNodeWavePlayer",
+        "ObjectPath": "/Nevada/Audio/Cues/Weapons/Energy_Cannon/Nevada_WPN_Energy_Cannon_InAirLoop_Cue.1"
+      },
+      "VolumeMultiplier": 0.65,
+      "SoundClassObject": {
+        "ObjectName": "Fort_Weapon_Projectile_PSM:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Weapon_Projectile_PSM.0"
+      },
+      "bOverrideConcurrency": true,
+      "ConcurrencyOverrides": {
+        "MaxCount": 2
+      },
+      "Duration": 10000.0,
+      "MaxDistance": 3000.0,
+      "AttenuationSettings": {
+        "ObjectName": "Fort_Weapon_Projectile_InAirLoop_Att:SoundAttenuation",
+        "ObjectPath": "/Game/Sounds/Attenuation/Fort_Weapon_Projectile_InAirLoop_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "Nevada_WPN_Energy_Cannon_InAirLoop_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_Weapons/Retro_SciFi/Retro_SciFi_Shotgun/Retro_SciFi_Shotgun_InAir_Loop.Retro_SciFi_Shotgun_InAir_Loop",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    }
+  }
+]

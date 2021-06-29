@@ -1,0 +1,175 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GA_Skyfire_KnockbackWeapon_PrimaryFire_Launcher_C",
+    "Super": "GA_Ranged_GenericProjectileExplosive_Athena_C",
+    "SuperStruct": {
+      "ObjectName": "GA_Ranged_GenericProjectileExplosive_Athena_C:BlueprintGeneratedClass",
+      "ObjectPath": "/Game/Athena/Items/Weapons/Abilities/GA_Ranged_GenericProjectileExplosive_Athena.0"
+    },
+    "Children": [],
+    "ChildProperties": [],
+    "FuncMap": {},
+    "ClassFlags": 264208,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Engine",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__GA_Skyfire_KnockbackWeapon_PrimaryFire_Launcher_C:GA_Skyfire_KnockbackWeapon_PrimaryFire_Launcher_C",
+      "ObjectPath": "/Skyfire/Gameplay/KnockbackWeapon/Launcher/GA_Skyfire_KnockbackWeapon_PrimaryFire_Launcher.1"
+    }
+  },
+  {
+    "Type": "GA_Skyfire_KnockbackWeapon_PrimaryFire_Launcher_C",
+    "Name": "Default__GA_Skyfire_KnockbackWeapon_PrimaryFire_Launcher_C",
+    "Template": "Default__GA_Ranged_GenericProjectileExplosive_Athena_C",
+    "Properties": {
+      "EffectContainers": {
+        "TargetSelection": {
+          "List": [
+            {
+              "Shape": "EFortTargetSelectionShape::Sphere",
+              "CustomShapeComponentName": "",
+              "TestType": "EFortTargetSelectionTestType::Overlap",
+              "PrimarySource": "EFortAbilityTargetingSource::PawnForward",
+              "SecondarySource": "EFortAbilityTargetingSource::Max_None",
+              "Range": {
+                "Value": 448.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": null
+                },
+                "RegistryType": {
+                  "Name": null
+                }
+              },
+              "HalfExtents": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "bAlignShapeEdgeToSourceLocation": false,
+              "ConeYawAngle": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": null
+                },
+                "RegistryType": {
+                  "Name": null
+                }
+              },
+              "ConePitchAngle": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": null
+                },
+                "RegistryType": {
+                  "Name": null
+                }
+              },
+              "ConeMinRadius": {
+                "Value": 1.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": null
+                },
+                "RegistryType": {
+                  "Name": null
+                }
+              },
+              "TargetFilter": {
+                "ActorTypeFilter": "EFortTargetSelectionFilter::Pawns",
+                "ActorClassFilter": null,
+                "bExcludeInstigator": false,
+                "bUseTrapsOwningPawnAsInstigator": false,
+                "bExcludeRequester": true,
+                "bExcludeAllAttachedToInstigator": false,
+                "bExcludeAthenaVehicleOfInstigator": false,
+                "bExcludeAllAttachedToRequester": false,
+                "bExcludePawnFriends": false,
+                "bExcludeFriendlyAI": false,
+                "bExcludeAllAI": false,
+                "bExcludePawnNeutrals": false,
+                "bExcludePawnEnemies": false,
+                "bExcludeNonPawnFriends": false,
+                "bExcludeNonPawnEnemies": false,
+                "bConsiderFriendlyFireWhenExcludingFriends": false,
+                "bExcludeDBNOPawns": false,
+                "bExcludeWaterVolumes": false,
+                "bExcludeWaterBodies": true,
+                "bExcludeAthenaVehicleOccupiedBySource": true,
+                "bExcludeAthenaVehicleUnoccupied": false,
+                "bExcludeAthenaVehicleOccupied": false,
+                "bExcludeAthenaVehicleFromObstructionChecks": false,
+                "bExcludeWithoutNavigationCorridor": false,
+                "bExcludeNonPlayerBuiltPieces": false,
+                "bExcludePlayerBuiltPieces": false,
+                "bExcludeNonBGABuildings": false,
+                "bExcludeNonBlockingHits": false,
+                "bExcludeProjectiles": false,
+                "bTraceComplexCollision": false,
+                "bExcludeLandscape": true,
+                "bConsiderPhysicsPawnsAsNonPlayerPawns": true,
+                "ExclusionGameplayTags": [
+                  "Athena.Item.Bush",
+                  "Gameplay.Action.Player.BlockExplosionDamage"
+                ]
+              },
+              "bExcludeObstructedByWorld": true,
+              "bShouldAttachedActorsObstructTarget": false,
+              "bCreateHitResultWhenNoTargetsFound": false,
+              "bUseProjectileRotationForDamageZones": false,
+              "TargetSelectionUsage": "EFortAbilityTargetSelectionUsage::BothTargetingAndCanHit",
+              "MaxTargets": 12
+            }
+          ]
+        },
+        "TargetGameplayEffectClasses": [
+          {
+            "ObjectName": "GE_Impulse_C:BlueprintGeneratedClass",
+            "ObjectPath": "/Game/Abilities/Weapons/Ranged/GE_Impulse.0"
+          }
+        ]
+      },
+      "AbilityCosts": [
+        {
+          "CostSource": "EFortAbilityCostSource::AmmoPrimary",
+          "CostValue": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": null
+            },
+            "RegistryType": {
+              "Name": null
+            }
+          },
+          "ItemDefinition": null,
+          "bOnlyApplyCostOnHit": false
+        },
+        {
+          "CostSource": "EFortAbilityCostSource::Durability",
+          "CostValue": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": null
+            },
+            "RegistryType": {
+              "Name": null
+            }
+          },
+          "ItemDefinition": null,
+          "bOnlyApplyCostOnHit": false
+        }
+      ]
+    }
+  }
+]

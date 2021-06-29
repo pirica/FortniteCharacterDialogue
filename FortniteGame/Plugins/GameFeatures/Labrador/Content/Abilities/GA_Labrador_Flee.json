@@ -1,0 +1,864 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_GA_Labrador_Flee",
+    "Outer": "GA_Labrador_Flee_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "K2Node_Event_MoveResult_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Enum": {
+          "ObjectName": "EPathFollowingResult:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "K2Node_Event_MoveResult",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Enum": {
+          "ObjectName": "EPathFollowingResult:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetAvatarActorFromActorInfo_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetAvatarActorFromActorInfo_ReturnValue_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_AIPawn_Labrador",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "BP_AIPawn_Labrador_C:BlueprintGeneratedClass",
+          "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.19"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsFort_AIPawn",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortAIPawn:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetCharacterOwner_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Character:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetValueAtLevel_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetValueAtLevel_ReturnValue_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_GetValueAsBool_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_RandomFloatInRange_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetAvatarActorFromActorInfo_ReturnValue_2",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetAbilitySystemComponent_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "AbilitySystemComponent:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BP_ApplyGameplayEffectToSelf_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "ActiveGameplayEffectHandle:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetAvatarActorFromActorInfo_ReturnValue_3",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsFort_AIPawn_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortAIPawn:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_2",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_RandomFloatInRange_ReturnValue_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetCharacterOwner_ReturnValue_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Character:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 8421377,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "Jump",
+    "Outer": "GA_Labrador_Flee_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 201326592,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "NPC EQS MoveFinished",
+    "Outer": "GA_Labrador_Flee_C",
+    "Super": "NPC EQS MoveFinished",
+    "SuperStruct": {
+      "ObjectName": "GA_NPC_Parent_EQS_Move_C:NPC EQS MoveFinished:Function",
+      "ObjectPath": "/Game/Athena/AI/Abilities/NPC/Parents/GA_NPC_Parent_EQS_Move.5"
+    },
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "ByteProperty",
+        "Name": "MoveResult",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Enum": {
+          "ObjectName": "EPathFollowingResult:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 201326592,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "NPC EQS MoveFailed",
+    "Outer": "GA_Labrador_Flee_C",
+    "Super": "NPC EQS MoveFailed",
+    "SuperStruct": {
+      "ObjectName": "GA_NPC_Parent_EQS_Move_C:NPC EQS MoveFailed:Function",
+      "ObjectPath": "/Game/Athena/AI/Abilities/NPC/Parents/GA_NPC_Parent_EQS_Move.7"
+    },
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "ByteProperty",
+        "Name": "MoveResult",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Enum": {
+          "ObjectName": "EPathFollowingResult:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 201326592,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "NPC EQS MoveNoPointsFound",
+    "Outer": "GA_Labrador_Flee_C",
+    "Super": "NPC EQS MoveNoPointsFound",
+    "SuperStruct": {
+      "ObjectName": "GA_NPC_Parent_EQS_Move_C:NPC EQS MoveNoPointsFound:Function",
+      "ObjectPath": "/Game/Athena/AI/Abilities/NPC/Parents/GA_NPC_Parent_EQS_Move.8"
+    },
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 201326592,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "K2_ActivateAbility",
+    "Outer": "GA_Labrador_Flee_C",
+    "Super": "K2_ActivateAbility",
+    "SuperStruct": {
+      "ObjectName": "GA_NPC_Parent_EQS_Move_C:K2_ActivateAbility:Function",
+      "ObjectPath": "/Game/Athena/AI/Abilities/NPC/Parents/GA_NPC_Parent_EQS_Move.9"
+    },
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 134744064,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "Get Jump Rotation",
+    "Outer": "GA_Labrador_Flee_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Actor",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "IsRight",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 1408,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Rotator:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Direction",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 5,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetActorUpVector_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetActorRightVector_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetActorForwardVector_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Multiply_VectorFloat_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Add_VectorVector_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Normal_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeRotFromXZ_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Rotator:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 205651968,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GA_Labrador_Flee_C",
+    "Super": "GA_NPC_Parent_EQS_Move_C",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "GA_Labrador_Flee_C:ExecuteUbergraph_GA_Labrador_Flee:Function",
+        "ObjectPath": "/Labrador/Abilities/GA_Labrador_Flee.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "GA_NPC_Parent_EQS_Move_C:BlueprintGeneratedClass",
+      "ObjectPath": "/Game/Athena/AI/Abilities/NPC/Parents/GA_NPC_Parent_EQS_Move.28"
+    },
+    "Children": [
+      {
+        "ObjectName": "GA_Labrador_Flee_C:Get Jump Rotation:Function",
+        "ObjectPath": "/Labrador/Abilities/GA_Labrador_Flee.6"
+      },
+      {
+        "ObjectName": "GA_Labrador_Flee_C:K2_ActivateAbility:Function",
+        "ObjectPath": "/Labrador/Abilities/GA_Labrador_Flee.5"
+      },
+      {
+        "ObjectName": "GA_Labrador_Flee_C:NPC EQS MoveNoPointsFound:Function",
+        "ObjectPath": "/Labrador/Abilities/GA_Labrador_Flee.4"
+      },
+      {
+        "ObjectName": "GA_Labrador_Flee_C:NPC EQS MoveFailed:Function",
+        "ObjectPath": "/Labrador/Abilities/GA_Labrador_Flee.3"
+      },
+      {
+        "ObjectName": "GA_Labrador_Flee_C:NPC EQS MoveFinished:Function",
+        "ObjectPath": "/Labrador/Abilities/GA_Labrador_Flee.2"
+      },
+      {
+        "ObjectName": "GA_Labrador_Flee_C:Jump:Function",
+        "ObjectPath": "/Labrador/Abilities/GA_Labrador_Flee.1"
+      },
+      {
+        "ObjectName": "GA_Labrador_Flee_C:ExecuteUbergraph_GA_Labrador_Flee:Function",
+        "ObjectPath": "/Labrador/Abilities/GA_Labrador_Flee.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 2105344,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "PointerToUberGraphFrame:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "MiniJumpMinDelay",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 56,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "ScalableFloat:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "MiniJumpMaxDelay",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 56,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "ScalableFloat:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "MiniJumpEnable",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 56,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "ScalableFloat:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_GA_Labrador_Flee": {
+        "ObjectName": "GA_Labrador_Flee_C:ExecuteUbergraph_GA_Labrador_Flee:Function",
+        "ObjectPath": "/Labrador/Abilities/GA_Labrador_Flee.0"
+      },
+      "Jump": {
+        "ObjectName": "GA_Labrador_Flee_C:Jump:Function",
+        "ObjectPath": "/Labrador/Abilities/GA_Labrador_Flee.1"
+      },
+      "NPC EQS MoveFinished": {
+        "ObjectName": "GA_Labrador_Flee_C:NPC EQS MoveFinished:Function",
+        "ObjectPath": "/Labrador/Abilities/GA_Labrador_Flee.2"
+      },
+      "NPC EQS MoveFailed": {
+        "ObjectName": "GA_Labrador_Flee_C:NPC EQS MoveFailed:Function",
+        "ObjectPath": "/Labrador/Abilities/GA_Labrador_Flee.3"
+      },
+      "NPC EQS MoveNoPointsFound": {
+        "ObjectName": "GA_Labrador_Flee_C:NPC EQS MoveNoPointsFound:Function",
+        "ObjectPath": "/Labrador/Abilities/GA_Labrador_Flee.4"
+      },
+      "K2_ActivateAbility": {
+        "ObjectName": "GA_Labrador_Flee_C:K2_ActivateAbility:Function",
+        "ObjectPath": "/Labrador/Abilities/GA_Labrador_Flee.5"
+      },
+      "Get Jump Rotation": {
+        "ObjectName": "GA_Labrador_Flee_C:Get Jump Rotation:Function",
+        "ObjectPath": "/Labrador/Abilities/GA_Labrador_Flee.6"
+      }
+    },
+    "ClassFlags": 264208,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Engine",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__GA_Labrador_Flee_C:GA_Labrador_Flee_C",
+      "ObjectPath": "/Labrador/Abilities/GA_Labrador_Flee.8"
+    }
+  },
+  {
+    "Type": "GA_Labrador_Flee_C",
+    "Name": "Default__GA_Labrador_Flee_C",
+    "Template": "Default__GA_NPC_Parent_EQS_Move_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "MiniJumpMinDelay": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "LabradorGameData:CurveTable",
+            "ObjectPath": "/Labrador/DataTables/LabradorGameData.0"
+          },
+          "RowName": "Default.Labrador.MiniJmup.MinDelay"
+        },
+        "RegistryType": {
+          "Name": null
+        }
+      },
+      "MiniJumpMaxDelay": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "LabradorGameData:CurveTable",
+            "ObjectPath": "/Labrador/DataTables/LabradorGameData.0"
+          },
+          "RowName": "Default.Labrador.MiniJmup.MaxDelay"
+        },
+        "RegistryType": {
+          "Name": null
+        }
+      },
+      "MiniJumpEnable": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "LabradorGameData:CurveTable",
+            "ObjectPath": "/Labrador/DataTables/LabradorGameData.0"
+          },
+          "RowName": "Default.Labrador.MiniJmup.Enable"
+        },
+        "RegistryType": {
+          "Name": null
+        }
+      },
+      "MoveEQS": {
+        "ObjectName": "EQS_Labrador_FleeGoal:EnvQuery",
+        "ObjectPath": "/Labrador/EQS/EQS_Labrador_FleeGoal.0"
+      },
+      "StopAtEnd": false,
+      "AcceptableRadius": 150.0,
+      "NavFilterClass": {
+        "ObjectName": "NavFilter_Phoebe_NoSmashable_C:BlueprintGeneratedClass",
+        "ObjectPath": "/Game/Athena/AI/Phoebe/NavFilter/NavFilter_Phoebe_NoSmashable.0"
+      },
+      "NPC AlertLevelGoalIsFortPawn": "Enum_NPC_AlertLevel::NewEnumerator2",
+      "NPC AlertLevelGoalIsOther": "Enum_NPC_AlertLevel::NewEnumerator2",
+      "NPC AlertLevelGoalIsNotValid": "Enum_NPC_AlertLevel::NewEnumerator2",
+      "AbilityTags": [
+        "Gameplay.Action.NPC.Intentional",
+        "Ability.Labrador.Flee"
+      ],
+      "ActivationOwnedTags": [
+        "Ability.Labrador.Flee"
+      ],
+      "SourceBlockedTags": [
+        "MovementMode.Falling"
+      ]
+    }
+  }
+]

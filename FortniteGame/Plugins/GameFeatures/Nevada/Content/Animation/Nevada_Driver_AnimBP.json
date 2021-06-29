@@ -1,0 +1,3752 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_Nevada_Driver_AnimBP",
+    "Outer": "Nevada_Driver_AnimBP_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      }
+    ],
+    "FunctionFlags": 32769,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimGraph",
+    "Outer": "Nevada_Driver_AnimBP_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraph",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 24,
+        "PropertyFlags": 384,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "PoseLink:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 205520896,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "Nevada_Driver_AnimBP_C",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "Locomotion",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Default_InPlace",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 24,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 3,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 22,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Boosting_Intro",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 25,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 5,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 26,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": true,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 16,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                17
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Boosting_Loop",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 27,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 2,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 18,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                19
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Default",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 28,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 4,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 29,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 20,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 1,
+              "NextState": 2,
+              "CrossfadeDuration": 0.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": null
+            },
+            {
+              "PreviousState": 3,
+              "NextState": 1,
+              "CrossfadeDuration": 0.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": null
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 3,
+              "CrossfadeDuration": 0.45,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": null
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 3,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": null
+            },
+            {
+              "PreviousState": 3,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": null
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 3,
+              "CrossfadeDuration": 0.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": null
+            }
+          ]
+        },
+        {
+          "MachineName": "FullBodyAdditive",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Idle",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 46,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 5,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 47,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 6,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 48,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 7,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 49,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 8,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 50,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 4,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 32,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                33,
+                34,
+                36
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Collision_NS",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 51,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 2,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": true,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 38,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                39
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Collision_Bottom",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 52,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": true,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 40,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                41
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Collision_E",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 53,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": true,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 42,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                43
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Collision_W",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 54,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 3,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": true,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 44,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                45
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 2,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": null
+            },
+            {
+              "PreviousState": 3,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": null
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": null
+            },
+            {
+              "PreviousState": 4,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": null
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 2,
+              "CrossfadeDuration": 0.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": null
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 3,
+              "CrossfadeDuration": 0.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": null
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": null
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 4,
+              "CrossfadeDuration": 0.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": null
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": null
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Fortnite_M_Avg_Player_Skeleton:Skeleton",
+        "ObjectPath": "/Game/Characters/Player/Male/Male_Avg_Base/Fortnite_M_Avg_Player_Skeleton.90"
+      },
+      "OrderedSavedPoseIndicesMap": {
+        "AnimGraph": {
+          "OrderedSavedPoseNodeIndices": [
+            30
+          ]
+        }
+      },
+      "SyncGroupNames": [
+        "Idle"
+      ],
+      "EvaluateGraphExposedInputs": [
+        {
+          "BoundFunction": null,
+          "CopyRecords": [
+            {
+              "CopyIndex": 0,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "Path": [
+              "AnimGraphNode_LegIK"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+              "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+            }
+          }
+        },
+        {
+          "BoundFunction": null,
+          "CopyRecords": [
+            {
+              "CopyIndex": 1,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "Path": [
+              "AnimGraphNode_LegIK_1"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+              "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+            }
+          }
+        },
+        {
+          "BoundFunction": null,
+          "CopyRecords": [
+            {
+              "CopyIndex": 2,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "Path": [
+              "AnimGraphNode_LegIK_2"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+              "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+            }
+          }
+        },
+        {
+          "BoundFunction": null,
+          "CopyRecords": [
+            {
+              "CopyIndex": 3,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            },
+            {
+              "CopyIndex": 4,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            },
+            {
+              "CopyIndex": 5,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "Path": [
+              "AnimGraphNode_ModifyBone"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+              "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+            }
+          }
+        },
+        {
+          "BoundFunction": null,
+          "CopyRecords": [
+            {
+              "CopyIndex": 6,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            },
+            {
+              "CopyIndex": 7,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            },
+            {
+              "CopyIndex": 8,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "Path": [
+              "AnimGraphNode_ModifyBone_1"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+              "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+            }
+          }
+        },
+        {
+          "BoundFunction": null,
+          "CopyRecords": [
+            {
+              "CopyIndex": 9,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            },
+            {
+              "CopyIndex": 10,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            },
+            {
+              "CopyIndex": 11,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "Path": [
+              "AnimGraphNode_ModifyBone_2"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+              "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+            }
+          }
+        },
+        {
+          "BoundFunction": null,
+          "CopyRecords": [
+            {
+              "CopyIndex": 12,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            },
+            {
+              "CopyIndex": 13,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            },
+            {
+              "CopyIndex": 14,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "Path": [
+              "AnimGraphNode_ModifyBone_3"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+              "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+            }
+          }
+        },
+        {
+          "BoundFunction": null,
+          "CopyRecords": [
+            {
+              "CopyIndex": 15,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "Path": [
+              "AnimGraphNode_BlendListByEnum"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+              "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+            }
+          }
+        },
+        {
+          "BoundFunction": null,
+          "CopyRecords": [
+            {
+              "CopyIndex": 16,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "Path": [
+              "AnimGraphNode_ApplyAdditive"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+              "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+            }
+          }
+        },
+        {
+          "BoundFunction": null,
+          "CopyRecords": [
+            {
+              "CopyIndex": 17,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            },
+            {
+              "CopyIndex": 18,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "Path": [
+              "AnimGraphNode_RotationOffsetBlendSpace"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+              "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+            }
+          }
+        },
+        {
+          "BoundFunction": null,
+          "CopyRecords": [
+            {
+              "CopyIndex": 19,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "Path": [
+              "AnimGraphNode_ApplyAdditive_2"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+              "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+            }
+          }
+        },
+        {
+          "BoundFunction": null,
+          "CopyRecords": [
+            {
+              "CopyIndex": 20,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            },
+            {
+              "CopyIndex": 21,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "Path": [
+              "AnimGraphNode_BlendSpacePlayer_1"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+              "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+            }
+          }
+        },
+        {
+          "BoundFunction": null,
+          "CopyRecords": [
+            {
+              "CopyIndex": 22,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            },
+            {
+              "CopyIndex": 23,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            },
+            {
+              "CopyIndex": 24,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "Path": [
+              "AnimGraphNode_ModifyBone_4"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+              "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+            }
+          }
+        },
+        {
+          "BoundFunction": null,
+          "CopyRecords": [
+            {
+              "CopyIndex": 25,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "Path": [
+              "AnimGraphNode_TransitionResult"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+              "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+            }
+          }
+        },
+        {
+          "BoundFunction": null,
+          "CopyRecords": [
+            {
+              "CopyIndex": 26,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "Path": [
+              "AnimGraphNode_TransitionResult_1"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+              "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+            }
+          }
+        },
+        {
+          "BoundFunction": null,
+          "CopyRecords": [
+            {
+              "CopyIndex": 27,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool"
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "Path": [
+              "AnimGraphNode_TransitionResult_3"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+              "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+            }
+          }
+        },
+        {
+          "BoundFunction": null,
+          "CopyRecords": [
+            {
+              "CopyIndex": 28,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool"
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "Path": [
+              "AnimGraphNode_TransitionResult_4"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+              "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+            }
+          }
+        },
+        {
+          "BoundFunction": null,
+          "CopyRecords": [
+            {
+              "CopyIndex": 29,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "Path": [
+              "AnimGraphNode_TransitionResult_5"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+              "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+            }
+          }
+        },
+        {
+          "BoundFunction": null,
+          "CopyRecords": [
+            {
+              "CopyIndex": 30,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "Path": [
+              "AnimGraphNode_ApplyAdditive_1"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+              "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+            }
+          }
+        },
+        {
+          "BoundFunction": null,
+          "CopyRecords": [
+            {
+              "CopyIndex": 31,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "Path": [
+              "AnimGraphNode_BlendSpacePlayer"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+              "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+            }
+          }
+        },
+        {
+          "BoundFunction": null,
+          "CopyRecords": [
+            {
+              "CopyIndex": 32,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "Path": [
+              "AnimGraphNode_BlendListByBool"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+              "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+            }
+          }
+        },
+        {
+          "BoundFunction": null,
+          "CopyRecords": [
+            {
+              "CopyIndex": 33,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "Path": [
+              "AnimGraphNode_TransitionResult_6"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+              "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+            }
+          }
+        },
+        {
+          "BoundFunction": null,
+          "CopyRecords": [
+            {
+              "CopyIndex": 34,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "Path": [
+              "AnimGraphNode_TransitionResult_7"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+              "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+            }
+          }
+        },
+        {
+          "BoundFunction": null,
+          "CopyRecords": [
+            {
+              "CopyIndex": 35,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "Path": [
+              "AnimGraphNode_TransitionResult_8"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+              "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+            }
+          }
+        },
+        {
+          "BoundFunction": null,
+          "CopyRecords": [
+            {
+              "CopyIndex": 36,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "Path": [
+              "AnimGraphNode_TransitionResult_9"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+              "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+            }
+          }
+        },
+        {
+          "BoundFunction": null,
+          "CopyRecords": [
+            {
+              "CopyIndex": 37,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "Path": [
+              "AnimGraphNode_TransitionResult_10"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+              "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+            }
+          }
+        }
+      ],
+      "PropertyAccessLibrary": {
+        "PathSegments": [
+          {
+            "Name": "LegIKAlpha",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "LegIKAlpha"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "FortPlayerAnimInstance:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_LegIK",
+            "Struct": {
+              "ObjectName": "AnimNode_LegIK:Class",
+              "ObjectPath": 0
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_LegIK"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+                "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "Alpha",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "Alpha"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimNode_SkeletalControlBase:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "LeftHandIKAlpha",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "LeftHandIKAlpha"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "FortPlayerAnimInstance:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_LegIK_1",
+            "Struct": {
+              "ObjectName": "AnimNode_LegIK:Class",
+              "ObjectPath": 0
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_LegIK_1"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+                "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "Alpha",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "Alpha"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimNode_SkeletalControlBase:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "RightHandIKAlpha",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "RightHandIKAlpha"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "FortPlayerAnimInstance:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_LegIK_2",
+            "Struct": {
+              "ObjectName": "AnimNode_LegIK:Class",
+              "ObjectPath": 0
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_LegIK_2"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+                "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "Alpha",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "Alpha"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimNode_SkeletalControlBase:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "FootAttachmentLocRight",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "FootAttachmentLocRight"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "FortPlayerAnimInstance_OctopusDriver:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_ModifyBone",
+            "Struct": {
+              "ObjectName": "AnimNode_ModifyBone:Class",
+              "ObjectPath": 0
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_ModifyBone"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+                "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "Translation",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "Translation"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimNode_ModifyBone:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "FootAttachmentRotRight",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "FootAttachmentRotRight"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "FortPlayerAnimInstance_OctopusDriver:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_ModifyBone",
+            "Struct": {
+              "ObjectName": "AnimNode_ModifyBone:Class",
+              "ObjectPath": 0
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_ModifyBone"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+                "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "Rotation",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "Rotation"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimNode_ModifyBone:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "bHasDriver",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "bHasDriver"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "FortPlayerAnimInstance_OctopusDriver:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_ModifyBone",
+            "Struct": {
+              "ObjectName": "AnimNode_ModifyBone:Class",
+              "ObjectPath": 0
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_ModifyBone"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+                "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "bAlphaBoolEnabled",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "bAlphaBoolEnabled"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimNode_SkeletalControlBase:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "FootAttachmentLocLeft",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "FootAttachmentLocLeft"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "FortPlayerAnimInstance_OctopusDriver:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_ModifyBone_1",
+            "Struct": {
+              "ObjectName": "AnimNode_ModifyBone:Class",
+              "ObjectPath": 0
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_ModifyBone_1"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+                "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "Translation",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "Translation"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimNode_ModifyBone:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "FootAttachmentRotLeft",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "FootAttachmentRotLeft"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "FortPlayerAnimInstance_OctopusDriver:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_ModifyBone_1",
+            "Struct": {
+              "ObjectName": "AnimNode_ModifyBone:Class",
+              "ObjectPath": 0
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_ModifyBone_1"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+                "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "Rotation",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "Rotation"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimNode_ModifyBone:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "bHasDriver",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "bHasDriver"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "FortPlayerAnimInstance_OctopusDriver:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_ModifyBone_1",
+            "Struct": {
+              "ObjectName": "AnimNode_ModifyBone:Class",
+              "ObjectPath": 0
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_ModifyBone_1"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+                "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "bAlphaBoolEnabled",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "bAlphaBoolEnabled"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimNode_SkeletalControlBase:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "HandAttachmentLocRight",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "HandAttachmentLocRight"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "FortPlayerAnimInstance_OctopusDriver:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_ModifyBone_2",
+            "Struct": {
+              "ObjectName": "AnimNode_ModifyBone:Class",
+              "ObjectPath": 0
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_ModifyBone_2"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+                "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "Translation",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "Translation"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimNode_ModifyBone:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "HandAttachmentRotRight",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "HandAttachmentRotRight"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "FortPlayerAnimInstance_OctopusDriver:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_ModifyBone_2",
+            "Struct": {
+              "ObjectName": "AnimNode_ModifyBone:Class",
+              "ObjectPath": 0
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_ModifyBone_2"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+                "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "Rotation",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "Rotation"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimNode_ModifyBone:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "bHasDriver",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "bHasDriver"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "FortPlayerAnimInstance_OctopusDriver:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_ModifyBone_2",
+            "Struct": {
+              "ObjectName": "AnimNode_ModifyBone:Class",
+              "ObjectPath": 0
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_ModifyBone_2"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+                "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "bAlphaBoolEnabled",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "bAlphaBoolEnabled"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimNode_SkeletalControlBase:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "HandAttachmentLocLeft",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "HandAttachmentLocLeft"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "FortPlayerAnimInstance_OctopusDriver:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_ModifyBone_3",
+            "Struct": {
+              "ObjectName": "AnimNode_ModifyBone:Class",
+              "ObjectPath": 0
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_ModifyBone_3"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+                "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "Translation",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "Translation"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimNode_ModifyBone:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "HandAttachmentRotLeft",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "HandAttachmentRotLeft"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "FortPlayerAnimInstance_OctopusDriver:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_ModifyBone_3",
+            "Struct": {
+              "ObjectName": "AnimNode_ModifyBone:Class",
+              "ObjectPath": 0
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_ModifyBone_3"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+                "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "Rotation",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "Rotation"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimNode_ModifyBone:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "bHasDriver",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "bHasDriver"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "FortPlayerAnimInstance_OctopusDriver:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_ModifyBone_3",
+            "Struct": {
+              "ObjectName": "AnimNode_ModifyBone:Class",
+              "ObjectPath": 0
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_ModifyBone_3"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+                "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "bAlphaBoolEnabled",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "bAlphaBoolEnabled"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimNode_SkeletalControlBase:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "Gender",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "Gender"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "FortPlayerAnimInstance:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_BlendListByEnum",
+            "Struct": {
+              "ObjectName": "AnimNode_BlendListByEnum:Class",
+              "ObjectPath": 0
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_BlendListByEnum"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+                "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "ActiveEnumValue",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "ActiveEnumValue"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimNode_BlendListByEnum:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "bHasDriver",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "bHasDriver"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "FortPlayerAnimInstance_OctopusDriver:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_ApplyAdditive",
+            "Struct": {
+              "ObjectName": "AnimNode_ApplyAdditive:Class",
+              "ObjectPath": 0
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_ApplyAdditive"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+                "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "bAlphaBoolEnabled",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "bAlphaBoolEnabled"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimNode_ApplyAdditive:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "SeatSteerYaw",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "SeatSteerYaw"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "FortPlayerAnimInstance_OctopusDriver:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_RotationOffsetBlendSpace",
+            "Struct": {
+              "ObjectName": "AnimNode_RotationOffsetBlendSpace:Class",
+              "ObjectPath": 0
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_RotationOffsetBlendSpace"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+                "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "X",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "X"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimNode_BlendSpacePlayer:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AimPitch",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "AimPitch"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "FortAnimInstance:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_RotationOffsetBlendSpace",
+            "Struct": {
+              "ObjectName": "AnimNode_RotationOffsetBlendSpace:Class",
+              "ObjectPath": 0
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_RotationOffsetBlendSpace"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+                "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "Y",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "Y"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimNode_BlendSpacePlayer:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "bHasDriver",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "bHasDriver"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "FortPlayerAnimInstance_OctopusDriver:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_ApplyAdditive_2",
+            "Struct": {
+              "ObjectName": "AnimNode_ApplyAdditive:Class",
+              "ObjectPath": 0
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_ApplyAdditive_2"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+                "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "bAlphaBoolEnabled",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "bAlphaBoolEnabled"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimNode_ApplyAdditive:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimLeftRight",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "AnimLeftRight"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "FortPlayerAnimInstance_NevadaDriver:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_BlendSpacePlayer_1",
+            "Struct": {
+              "ObjectName": "AnimNode_BlendSpacePlayer:Class",
+              "ObjectPath": 0
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_BlendSpacePlayer_1"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+                "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "X",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "X"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimNode_BlendSpacePlayer:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimForwardBackward",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "AnimForwardBackward"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "FortPlayerAnimInstance_NevadaDriver:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_BlendSpacePlayer_1",
+            "Struct": {
+              "ObjectName": "AnimNode_BlendSpacePlayer:Class",
+              "ObjectPath": 0
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_BlendSpacePlayer_1"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+                "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "Y",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "Y"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimNode_BlendSpacePlayer:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "RootAttachmentLoc",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "RootAttachmentLoc"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "FortPlayerAnimInstance_NevadaDriver:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_ModifyBone_4",
+            "Struct": {
+              "ObjectName": "AnimNode_ModifyBone:Class",
+              "ObjectPath": 0
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_ModifyBone_4"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+                "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "Translation",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "Translation"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimNode_ModifyBone:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "RootAttachmentRot",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "RootAttachmentRot"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "FortPlayerAnimInstance_NevadaDriver:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_ModifyBone_4",
+            "Struct": {
+              "ObjectName": "AnimNode_ModifyBone:Class",
+              "ObjectPath": 0
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_ModifyBone_4"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+                "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "Rotation",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "Rotation"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimNode_ModifyBone:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "bHasDriver",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "bHasDriver"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "FortPlayerAnimInstance_OctopusDriver:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_ModifyBone_4",
+            "Struct": {
+              "ObjectName": "AnimNode_ModifyBone:Class",
+              "ObjectPath": 0
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_ModifyBone_4"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+                "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "bAlphaBoolEnabled",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "bAlphaBoolEnabled"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimNode_SkeletalControlBase:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "bIsMoving",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "bIsMoving"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "FortPlayerAnimInstance_NevadaDriver:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_TransitionResult",
+            "Struct": {
+              "ObjectName": "AnimNode_TransitionResult:Class",
+              "ObjectPath": 0
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_TransitionResult"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+                "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "bCanEnterTransition",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "bCanEnterTransition"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimNode_TransitionResult:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "bIsBoostingAgain",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "bIsBoostingAgain"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "FortPlayerAnimInstance_NevadaDriver:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_TransitionResult_1",
+            "Struct": {
+              "ObjectName": "AnimNode_TransitionResult:Class",
+              "ObjectPath": 0
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_TransitionResult_1"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+                "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "bCanEnterTransition",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "bCanEnterTransition"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimNode_TransitionResult:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "bIsBoosting",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "bIsBoosting"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "FortPlayerAnimInstance_OctopusDriver:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_TransitionResult_3",
+            "Struct": {
+              "ObjectName": "AnimNode_TransitionResult:Class",
+              "ObjectPath": 0
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_TransitionResult_3"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+                "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "bCanEnterTransition",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "bCanEnterTransition"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimNode_TransitionResult:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "bIsMoving",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "bIsMoving"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "FortPlayerAnimInstance_NevadaDriver:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_TransitionResult_4",
+            "Struct": {
+              "ObjectName": "AnimNode_TransitionResult:Class",
+              "ObjectPath": 0
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_TransitionResult_4"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+                "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "bCanEnterTransition",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "bCanEnterTransition"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimNode_TransitionResult:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "bIsBoosting",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "bIsBoosting"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "FortPlayerAnimInstance_OctopusDriver:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_TransitionResult_5",
+            "Struct": {
+              "ObjectName": "AnimNode_TransitionResult:Class",
+              "ObjectPath": 0
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_TransitionResult_5"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+                "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "bCanEnterTransition",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "bCanEnterTransition"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimNode_TransitionResult:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "bShouldApplyLeanAdditive",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "bShouldApplyLeanAdditive"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "FortPlayerAnimInstance_OctopusDriver:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_ApplyAdditive_1",
+            "Struct": {
+              "ObjectName": "AnimNode_ApplyAdditive:Class",
+              "ObjectPath": 0
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_ApplyAdditive_1"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+                "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "bAlphaBoolEnabled",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "bAlphaBoolEnabled"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimNode_ApplyAdditive:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "SeatSteerStrength",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "SeatSteerStrength"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "FortPlayerAnimInstance_OctopusDriver:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_BlendSpacePlayer",
+            "Struct": {
+              "ObjectName": "AnimNode_BlendSpacePlayer:Class",
+              "ObjectPath": 0
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_BlendSpacePlayer"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+                "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "X",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "X"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimNode_BlendSpacePlayer:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "bIsMoving",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "bIsMoving"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "FortPlayerAnimInstance_NevadaDriver:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_BlendListByBool",
+            "Struct": {
+              "ObjectName": "AnimNode_BlendListByBool:Class",
+              "ObjectPath": 0
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_BlendListByBool"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+                "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "bActiveValue",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "bActiveValue"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimNode_BlendListByBool:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "VelocityImpact",
+            "Struct": {
+              "ObjectName": "FortAnimInput_VelocityImpact:Class",
+              "ObjectPath": 0
+            },
+            "Property": {
+              "Path": [
+                "VelocityImpact"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "FortPlayerAnimInstance_OctopusDriver:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "bIsRightImpact",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "bIsRightImpact"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "FortAnimInput_VelocityImpact:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_TransitionResult_6",
+            "Struct": {
+              "ObjectName": "AnimNode_TransitionResult:Class",
+              "ObjectPath": 0
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_TransitionResult_6"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+                "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "bCanEnterTransition",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "bCanEnterTransition"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimNode_TransitionResult:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "VelocityImpact",
+            "Struct": {
+              "ObjectName": "FortAnimInput_VelocityImpact:Class",
+              "ObjectPath": 0
+            },
+            "Property": {
+              "Path": [
+                "VelocityImpact"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "FortPlayerAnimInstance_OctopusDriver:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "bIsForwardImpact",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "bIsForwardImpact"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "FortAnimInput_VelocityImpact:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_TransitionResult_7",
+            "Struct": {
+              "ObjectName": "AnimNode_TransitionResult:Class",
+              "ObjectPath": 0
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_TransitionResult_7"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+                "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "bCanEnterTransition",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "bCanEnterTransition"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimNode_TransitionResult:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "VelocityImpact",
+            "Struct": {
+              "ObjectName": "FortAnimInput_VelocityImpact:Class",
+              "ObjectPath": 0
+            },
+            "Property": {
+              "Path": [
+                "VelocityImpact"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "FortPlayerAnimInstance_OctopusDriver:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "bIsLeftImpact",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "bIsLeftImpact"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "FortAnimInput_VelocityImpact:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_TransitionResult_8",
+            "Struct": {
+              "ObjectName": "AnimNode_TransitionResult:Class",
+              "ObjectPath": 0
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_TransitionResult_8"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+                "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "bCanEnterTransition",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "bCanEnterTransition"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimNode_TransitionResult:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "VelocityImpact",
+            "Struct": {
+              "ObjectName": "FortAnimInput_VelocityImpact:Class",
+              "ObjectPath": 0
+            },
+            "Property": {
+              "Path": [
+                "VelocityImpact"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "FortPlayerAnimInstance_OctopusDriver:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "bIsBackwardImpact",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "bIsBackwardImpact"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "FortAnimInput_VelocityImpact:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_TransitionResult_9",
+            "Struct": {
+              "ObjectName": "AnimNode_TransitionResult:Class",
+              "ObjectPath": 0
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_TransitionResult_9"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+                "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "bCanEnterTransition",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "bCanEnterTransition"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimNode_TransitionResult:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "VelocityImpact",
+            "Struct": {
+              "ObjectName": "FortAnimInput_VelocityImpact:Class",
+              "ObjectPath": 0
+            },
+            "Property": {
+              "Path": [
+                "VelocityImpact"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "FortPlayerAnimInstance_OctopusDriver:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "bIsDownImpact",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "bIsDownImpact"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "FortAnimInput_VelocityImpact:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_TransitionResult_10",
+            "Struct": {
+              "ObjectName": "AnimNode_TransitionResult:Class",
+              "ObjectPath": 0
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_TransitionResult_10"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Nevada_Driver_AnimBP_C:AnimBlueprintGeneratedClass",
+                "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.2"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "bCanEnterTransition",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "bCanEnterTransition"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimNode_TransitionResult:Class",
+                "ObjectPath": 0
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          }
+        ],
+        "SrcPaths": [
+          {
+            "PathSegmentStartIndex": 0,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 3,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 6,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 9,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 12,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 15,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 18,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 21,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 24,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 27,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 30,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 33,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 36,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 39,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 42,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 45,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 48,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 51,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 54,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 57,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 60,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 63,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 66,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 69,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 72,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 75,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 78,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 81,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 84,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 87,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 90,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 93,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 96,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 99,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 103,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 107,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 111,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 115,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          }
+        ],
+        "DestPaths": [
+          {
+            "PathSegmentStartIndex": 1,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 4,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 7,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 10,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 13,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 16,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 19,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 22,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 25,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 28,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 31,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 34,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 37,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 40,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 43,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 46,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 49,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 52,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 55,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 58,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 61,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 64,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 67,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 70,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 73,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 76,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 79,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 82,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 85,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 88,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 91,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 94,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 97,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 101,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 105,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 109,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 113,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 117,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          }
+        ],
+        "CopyBatches": {
+          "Copies": [
+            {
+              "AccessIndex": 0,
+              "DestAccessStartIndex": 0,
+              "DestAccessEndIndex": 1,
+              "Type": "EPropertyAccessCopyType::Plain"
+            },
+            {
+              "AccessIndex": 1,
+              "DestAccessStartIndex": 1,
+              "DestAccessEndIndex": 2,
+              "Type": "EPropertyAccessCopyType::Plain"
+            },
+            {
+              "AccessIndex": 2,
+              "DestAccessStartIndex": 2,
+              "DestAccessEndIndex": 3,
+              "Type": "EPropertyAccessCopyType::Plain"
+            },
+            {
+              "AccessIndex": 3,
+              "DestAccessStartIndex": 3,
+              "DestAccessEndIndex": 4,
+              "Type": "EPropertyAccessCopyType::Struct"
+            },
+            {
+              "AccessIndex": 4,
+              "DestAccessStartIndex": 4,
+              "DestAccessEndIndex": 5,
+              "Type": "EPropertyAccessCopyType::Struct"
+            },
+            {
+              "AccessIndex": 5,
+              "DestAccessStartIndex": 5,
+              "DestAccessEndIndex": 6,
+              "Type": "EPropertyAccessCopyType::Bool"
+            },
+            {
+              "AccessIndex": 6,
+              "DestAccessStartIndex": 6,
+              "DestAccessEndIndex": 7,
+              "Type": "EPropertyAccessCopyType::Struct"
+            },
+            {
+              "AccessIndex": 7,
+              "DestAccessStartIndex": 7,
+              "DestAccessEndIndex": 8,
+              "Type": "EPropertyAccessCopyType::Struct"
+            },
+            {
+              "AccessIndex": 8,
+              "DestAccessStartIndex": 8,
+              "DestAccessEndIndex": 9,
+              "Type": "EPropertyAccessCopyType::Bool"
+            },
+            {
+              "AccessIndex": 9,
+              "DestAccessStartIndex": 9,
+              "DestAccessEndIndex": 10,
+              "Type": "EPropertyAccessCopyType::Struct"
+            },
+            {
+              "AccessIndex": 10,
+              "DestAccessStartIndex": 10,
+              "DestAccessEndIndex": 11,
+              "Type": "EPropertyAccessCopyType::Struct"
+            },
+            {
+              "AccessIndex": 11,
+              "DestAccessStartIndex": 11,
+              "DestAccessEndIndex": 12,
+              "Type": "EPropertyAccessCopyType::Bool"
+            },
+            {
+              "AccessIndex": 12,
+              "DestAccessStartIndex": 12,
+              "DestAccessEndIndex": 13,
+              "Type": "EPropertyAccessCopyType::Struct"
+            },
+            {
+              "AccessIndex": 13,
+              "DestAccessStartIndex": 13,
+              "DestAccessEndIndex": 14,
+              "Type": "EPropertyAccessCopyType::Struct"
+            },
+            {
+              "AccessIndex": 14,
+              "DestAccessStartIndex": 14,
+              "DestAccessEndIndex": 15,
+              "Type": "EPropertyAccessCopyType::Bool"
+            },
+            {
+              "AccessIndex": 15,
+              "DestAccessStartIndex": 15,
+              "DestAccessEndIndex": 16,
+              "Type": "EPropertyAccessCopyType::Plain"
+            },
+            {
+              "AccessIndex": 16,
+              "DestAccessStartIndex": 16,
+              "DestAccessEndIndex": 17,
+              "Type": "EPropertyAccessCopyType::Bool"
+            },
+            {
+              "AccessIndex": 17,
+              "DestAccessStartIndex": 17,
+              "DestAccessEndIndex": 18,
+              "Type": "EPropertyAccessCopyType::Plain"
+            },
+            {
+              "AccessIndex": 18,
+              "DestAccessStartIndex": 18,
+              "DestAccessEndIndex": 19,
+              "Type": "EPropertyAccessCopyType::Plain"
+            },
+            {
+              "AccessIndex": 19,
+              "DestAccessStartIndex": 19,
+              "DestAccessEndIndex": 20,
+              "Type": "EPropertyAccessCopyType::Bool"
+            },
+            {
+              "AccessIndex": 20,
+              "DestAccessStartIndex": 20,
+              "DestAccessEndIndex": 21,
+              "Type": "EPropertyAccessCopyType::Plain"
+            },
+            {
+              "AccessIndex": 21,
+              "DestAccessStartIndex": 21,
+              "DestAccessEndIndex": 22,
+              "Type": "EPropertyAccessCopyType::Plain"
+            },
+            {
+              "AccessIndex": 22,
+              "DestAccessStartIndex": 22,
+              "DestAccessEndIndex": 23,
+              "Type": "EPropertyAccessCopyType::Struct"
+            },
+            {
+              "AccessIndex": 23,
+              "DestAccessStartIndex": 23,
+              "DestAccessEndIndex": 24,
+              "Type": "EPropertyAccessCopyType::Struct"
+            },
+            {
+              "AccessIndex": 24,
+              "DestAccessStartIndex": 24,
+              "DestAccessEndIndex": 25,
+              "Type": "EPropertyAccessCopyType::Bool"
+            },
+            {
+              "AccessIndex": 25,
+              "DestAccessStartIndex": 25,
+              "DestAccessEndIndex": 26,
+              "Type": "EPropertyAccessCopyType::Bool"
+            },
+            {
+              "AccessIndex": 26,
+              "DestAccessStartIndex": 26,
+              "DestAccessEndIndex": 27,
+              "Type": "EPropertyAccessCopyType::Bool"
+            },
+            {
+              "AccessIndex": 27,
+              "DestAccessStartIndex": 27,
+              "DestAccessEndIndex": 28,
+              "Type": "EPropertyAccessCopyType::Bool"
+            },
+            {
+              "AccessIndex": 28,
+              "DestAccessStartIndex": 28,
+              "DestAccessEndIndex": 29,
+              "Type": "EPropertyAccessCopyType::Bool"
+            },
+            {
+              "AccessIndex": 29,
+              "DestAccessStartIndex": 29,
+              "DestAccessEndIndex": 30,
+              "Type": "EPropertyAccessCopyType::Bool"
+            },
+            {
+              "AccessIndex": 30,
+              "DestAccessStartIndex": 30,
+              "DestAccessEndIndex": 31,
+              "Type": "EPropertyAccessCopyType::Bool"
+            },
+            {
+              "AccessIndex": 31,
+              "DestAccessStartIndex": 31,
+              "DestAccessEndIndex": 32,
+              "Type": "EPropertyAccessCopyType::Plain"
+            },
+            {
+              "AccessIndex": 32,
+              "DestAccessStartIndex": 32,
+              "DestAccessEndIndex": 33,
+              "Type": "EPropertyAccessCopyType::Bool"
+            },
+            {
+              "AccessIndex": 33,
+              "DestAccessStartIndex": 33,
+              "DestAccessEndIndex": 34,
+              "Type": "EPropertyAccessCopyType::Bool"
+            },
+            {
+              "AccessIndex": 34,
+              "DestAccessStartIndex": 34,
+              "DestAccessEndIndex": 35,
+              "Type": "EPropertyAccessCopyType::Bool"
+            },
+            {
+              "AccessIndex": 35,
+              "DestAccessStartIndex": 35,
+              "DestAccessEndIndex": 36,
+              "Type": "EPropertyAccessCopyType::Bool"
+            },
+            {
+              "AccessIndex": 36,
+              "DestAccessStartIndex": 36,
+              "DestAccessEndIndex": 37,
+              "Type": "EPropertyAccessCopyType::Bool"
+            },
+            {
+              "AccessIndex": 37,
+              "DestAccessStartIndex": 37,
+              "DestAccessEndIndex": 38,
+              "Type": "EPropertyAccessCopyType::Bool"
+            }
+          ]
+        }
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Nevada_Driver_AnimBP_C:ExecuteUbergraph_Nevada_Driver_AnimBP:Function",
+        "ObjectPath": "/Nevada/Animation/Nevada_Driver_AnimBP.0"
+      }
+    }
+  },
+  {
+    "Type": "UObject",
+    "Name": "Default__Nevada_Driver_AnimBP_C"
+  }
+]

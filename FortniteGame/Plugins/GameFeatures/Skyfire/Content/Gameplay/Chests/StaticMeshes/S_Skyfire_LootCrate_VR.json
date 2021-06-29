@@ -1,0 +1,136 @@
+[
+  {
+    "Type": "BodySetup",
+    "Name": "BodySetup_0",
+    "Outer": "S_Skyfire_LootCrate_VR",
+    "Properties": {
+      "AggGeom": {
+        "BoxElems": [
+          {
+            "Center": {
+              "X": 2.2888184E-05,
+              "Y": -1.1444092E-05,
+              "Z": 39.77599
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            },
+            "X": 226.21072,
+            "Y": 100.06673,
+            "Z": 79.43152,
+            "RestOffset": 0.0,
+            "Name": null,
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "DefaultInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::QueryOnly",
+        "CollisionProfileName": "BlockAll",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "FCC_Trace_WeaponCapsule",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_PawnAI",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Trace_WeaponMulti",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Trace_Weapon",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_Projectile",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_ProjectileIgnoreAI",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_ProjectileMesh",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_SpectatorDroneCamera",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+              "Response": "ECollisionResponse::ECR_Block"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "Type": "StaticMesh",
+    "Name": "S_Skyfire_LootCrate_VR",
+    "Properties": {
+      "MinLOD": {
+        "bCooked": true,
+        "Default": 0,
+        "Value": 0
+      },
+      "StaticMaterials": [
+        {
+          "MaterialInterface": {
+            "ObjectName": "MI_Skyfire_Chest_Purple:MaterialInstanceConstant",
+            "ObjectPath": "/Game/Gadgets/Assets/Skyfire_Chest/Materials/MI_Skyfire_Chest_Purple.0"
+          },
+          "MaterialSlotName": "lambert1",
+          "ImportedMaterialSlotName": "M_Shared_FactionSupplyCache",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 416.5747,
+            "LocalUVDensities": 0.0,
+            "LocalUVDensities": 0.0,
+            "LocalUVDensities": 0.0
+          }
+        }
+      ],
+      "LightmapUVDensity": 416.5747,
+      "LightMapResolution": 64,
+      "LODForCollision": 2,
+      "Sockets": [
+        {
+          "ObjectName": "S_Skyfire_LootCrate_VR:StaticMeshSocket_0:StaticMeshSocket",
+          "ObjectPath": "/Skyfire/Gameplay/Chests/StaticMeshes/S_Skyfire_LootCrate_VR.2"
+        }
+      ],
+      "ExtendedBounds": {
+        "Origin": {
+          "X": 2.2888184E-05,
+          "Y": -1.1444092E-05,
+          "Z": 39.77599
+        },
+        "BoxExtent": {
+          "X": 113.10536,
+          "Y": 50.033363,
+          "Z": 39.71576
+        },
+        "SphereRadius": 123.6206
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshSocket",
+    "Name": "StaticMeshSocket_0",
+    "Outer": "S_Skyfire_LootCrate_VR",
+    "Properties": {
+      "SocketName": "FX_Death"
+    }
+  }
+]

@@ -1,0 +1,921 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_SecurityOrbSpawner_V2",
+    "Outer": "SecurityOrbSpawner_V2_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_SpawnedOrb",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsCBGA_Security_Orb",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "CBGA_SecurityOrb_C:BlueprintGeneratedClass",
+          "ObjectPath": "/Skyfire/Gameplay/Orbs/CBGA_SecurityOrb.20"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 32769,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "BP_InitialOrbSpawnCompleted",
+    "Outer": "SecurityOrbSpawner_V2_C",
+    "SuperStruct": {
+      "ObjectName": "BP_InitialOrbSpawnCompleted:Class",
+      "ObjectPath": 0
+    },
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 134744064,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "BP_OrbSpawned",
+    "Outer": "SecurityOrbSpawner_V2_C",
+    "SuperStruct": {
+      "ObjectName": "BP_OrbSpawned:Class",
+      "ObjectPath": 0
+    },
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "SpawnedOrb",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 134744064,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "TryPlayOrbSpawnSound",
+    "Outer": "SecurityOrbSpawner_V2_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetFirstLocalFortPlayerController_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortPlayerController:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetPlayerPawn_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortPlayerPawn:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetComponentByClass_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "SkyfirePlayerPawnComponent:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsInMothership_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 201457664,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "SecurityOrbSpawner_V2_C",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SecurityOrbSpawner_V2_C:SimpleConstructionScript_0:SimpleConstructionScript",
+        "ObjectPath": "/Skyfire/Gameplay/Orbs/SecurityOrbSpawner_V2.8"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "SecurityOrbSpawner_V2_C:ExecuteUbergraph_SecurityOrbSpawner_V2:Function",
+        "ObjectPath": "/Skyfire/Gameplay/Orbs/SecurityOrbSpawner_V2.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "SkyfireVaultOrbSpawner:Class",
+      "ObjectPath": 0
+    },
+    "Children": [
+      {
+        "ObjectName": "SecurityOrbSpawner_V2_C:TryPlayOrbSpawnSound:Function",
+        "ObjectPath": "/Skyfire/Gameplay/Orbs/SecurityOrbSpawner_V2.3"
+      },
+      {
+        "ObjectName": "SecurityOrbSpawner_V2_C:BP_OrbSpawned:Function",
+        "ObjectPath": "/Skyfire/Gameplay/Orbs/SecurityOrbSpawner_V2.2"
+      },
+      {
+        "ObjectName": "SecurityOrbSpawner_V2_C:BP_InitialOrbSpawnCompleted:Function",
+        "ObjectPath": "/Skyfire/Gameplay/Orbs/SecurityOrbSpawner_V2.1"
+      },
+      {
+        "ObjectName": "SecurityOrbSpawner_V2_C:ExecuteUbergraph_SecurityOrbSpawner_V2:Function",
+        "ObjectPath": "/Skyfire/Gameplay/Orbs/SecurityOrbSpawner_V2.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 2105344,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "PointerToUberGraphFrame:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DefaultSceneRoot",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "SceneComponent:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SFX_VO_LootOrb_Appear_FirstTime",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "SoundBase:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SFX_LootOrb_Appear_FirstTime",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "SoundBase:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_SecurityOrbSpawner_V2": {
+        "ObjectName": "SecurityOrbSpawner_V2_C:ExecuteUbergraph_SecurityOrbSpawner_V2:Function",
+        "ObjectPath": "/Skyfire/Gameplay/Orbs/SecurityOrbSpawner_V2.0"
+      },
+      "BP_InitialOrbSpawnCompleted": {
+        "ObjectName": "SecurityOrbSpawner_V2_C:BP_InitialOrbSpawnCompleted:Function",
+        "ObjectPath": "/Skyfire/Gameplay/Orbs/SecurityOrbSpawner_V2.1"
+      },
+      "BP_OrbSpawned": {
+        "ObjectName": "SecurityOrbSpawner_V2_C:BP_OrbSpawned:Function",
+        "ObjectPath": "/Skyfire/Gameplay/Orbs/SecurityOrbSpawner_V2.2"
+      },
+      "TryPlayOrbSpawnSound": {
+        "ObjectName": "SecurityOrbSpawner_V2_C:TryPlayOrbSpawnSound:Function",
+        "ObjectPath": "/Skyfire/Gameplay/Orbs/SecurityOrbSpawner_V2.3"
+      }
+    },
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Engine",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__SecurityOrbSpawner_V2_C:SecurityOrbSpawner_V2_C",
+      "ObjectPath": "/Skyfire/Gameplay/Orbs/SecurityOrbSpawner_V2.5"
+    }
+  },
+  {
+    "Type": "SecurityOrbSpawner_V2_C",
+    "Name": "Default__SecurityOrbSpawner_V2_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "SFX_VO_LootOrb_Appear_FirstTime": {
+        "ObjectName": "Skyfire_VO_Arena_Loot_Orb_Spawn_Cue:SoundCue",
+        "ObjectPath": "/Skyfire/Sound/VO/Skyfire_VO_Arena_Loot_Orb_Spawn_Cue.0"
+      },
+      "SFX_LootOrb_Appear_FirstTime": {
+        "ObjectName": "Skyfire_Arena_Loot_Orb_Spawn_Buzzer_Cue:SoundCue",
+        "ObjectPath": "/Skyfire/Sound/Skyfire_Arena_Loot_Orb_Spawn_Buzzer_Cue.0"
+      },
+      "OrbSpawnerNetCullDistance": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+            "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+          },
+          "RowName": "Skyfire.OrbSpawnerNetCullDistance"
+        }
+      },
+      "VaultOrbClass": {
+        "ObjectName": "CBGA_SecurityOrb_C:BlueprintGeneratedClass",
+        "ObjectPath": "/Skyfire/Gameplay/Orbs/CBGA_SecurityOrb.20"
+      },
+      "OrbSpawnPointTag": "ScannerWarp",
+      "MaximumPlayersAllowedInMothership": 20,
+      "OrbSpawnZOffset": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+            "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+          },
+          "RowName": "Skyfire.LootOrb.SpawnZoffset"
+        }
+      },
+      "DelayToInitialOrbSpawn": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+            "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+          },
+          "RowName": "Skyfire.LootOrb.InitialSpawnDelay"
+        }
+      },
+      "OrbSpawnDelayAfterPickup": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+            "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+          },
+          "RowName": "Skyfire.LootOrb.OrbSpawnDelayAfterPickup"
+        }
+      },
+      "NoOrbPickedUpSpawnTime": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+            "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+          },
+          "RowName": "Skyfire.LootOrb.NoOrbPickedUpSpawnTime"
+        }
+      },
+      "AbsoluteMaximumActiveOrbCountByCategory": {
+        "ValuesByCategory": {
+          "EOrbSpawnerConfigCategory::Solo": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+                "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+              },
+              "RowName": "Skyfire.LootOrb.AbsoluteMaxOrbCount.Solo"
+            },
+            "RegistryType": {
+              "Name": null
+            }
+          },
+          "EOrbSpawnerConfigCategory::Duos": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+                "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+              },
+              "RowName": "Skyfire.LootOrb.AbsoluteMaxOrbCount.Duos"
+            },
+            "RegistryType": {
+              "Name": null
+            }
+          },
+          "EOrbSpawnerConfigCategory::Trios": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+                "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+              },
+              "RowName": "Skyfire.LootOrb.AbsoluteMaxOrbCount.Trios"
+            },
+            "RegistryType": {
+              "Name": null
+            }
+          },
+          "EOrbSpawnerConfigCategory::Squads": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+                "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+              },
+              "RowName": "Skyfire.LootOrb.AbsoluteMaxOrbCount.Squads"
+            },
+            "RegistryType": {
+              "Name": null
+            }
+          }
+        }
+      },
+      "InitialOrbCountByCategory": {
+        "ValuesByCategory": {
+          "EOrbSpawnerConfigCategory::Solo": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+                "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+              },
+              "RowName": "Skyfire.LootOrb.InitialOrbSpawn.Solo"
+            },
+            "RegistryType": {
+              "Name": null
+            }
+          },
+          "EOrbSpawnerConfigCategory::Duos": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+                "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+              },
+              "RowName": "Skyfire.LootOrb.InitialOrbSpawn.Duos"
+            },
+            "RegistryType": {
+              "Name": null
+            }
+          },
+          "EOrbSpawnerConfigCategory::Trios": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+                "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+              },
+              "RowName": "Skyfire.LootOrb.InitialOrbSpawn.Trios"
+            },
+            "RegistryType": {
+              "Name": null
+            }
+          },
+          "EOrbSpawnerConfigCategory::Squads": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+                "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+              },
+              "RowName": "Skyfire.LootOrb.InitialOrbSpawn.Squads"
+            },
+            "RegistryType": {
+              "Name": null
+            }
+          }
+        }
+      },
+      "OrbCheckFrequencyByCategory": {
+        "ValuesByCategory": {
+          "EOrbSpawnerConfigCategory::Solo": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+                "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+              },
+              "RowName": "Skyfire.LootOrb.OrbCheckFrequency.Solo"
+            },
+            "RegistryType": {
+              "Name": null
+            }
+          },
+          "EOrbSpawnerConfigCategory::Duos": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+                "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+              },
+              "RowName": "Skyfire.LootOrb.OrbCheckFrequency.Duos"
+            },
+            "RegistryType": {
+              "Name": null
+            }
+          },
+          "EOrbSpawnerConfigCategory::Trios": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+                "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+              },
+              "RowName": "Skyfire.LootOrb.OrbCheckFrequency.Trios"
+            },
+            "RegistryType": {
+              "Name": null
+            }
+          },
+          "EOrbSpawnerConfigCategory::Squads": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+                "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+              },
+              "RowName": "Skyfire.LootOrb.OrbCheckFrequency.Squads"
+            },
+            "RegistryType": {
+              "Name": null
+            }
+          }
+        }
+      },
+      "ChanceToSpawnNewOrbByCategory": {
+        "ValuesByCategory": {
+          "EOrbSpawnerConfigCategory::Solo": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+                "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+              },
+              "RowName": "Skyfire.LootOrb.RandomChanceToSpawn.Solo"
+            },
+            "RegistryType": {
+              "Name": null
+            }
+          },
+          "EOrbSpawnerConfigCategory::Duos": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+                "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+              },
+              "RowName": "Skyfire.LootOrb.RandomChanceToSpawn.Duos"
+            },
+            "RegistryType": {
+              "Name": null
+            }
+          },
+          "EOrbSpawnerConfigCategory::Trios": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+                "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+              },
+              "RowName": "Skyfire.LootOrb.RandomChanceToSpawn.Trios"
+            },
+            "RegistryType": {
+              "Name": null
+            }
+          },
+          "EOrbSpawnerConfigCategory::Squads": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+                "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+              },
+              "RowName": "Skyfire.LootOrb.RandomChanceToSpawn.Squads"
+            },
+            "RegistryType": {
+              "Name": null
+            }
+          }
+        }
+      },
+      "OrbCountLimitsForPlayerCounts": [
+        {
+          "LimitValue": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+                "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+              },
+              "RowName": "Skyfire.LootOrb.LimitPerPlayerCountA"
+            },
+            "RegistryType": {
+              "Name": null
+            }
+          },
+          "MaximumOrbCount": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+                "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+              },
+              "RowName": "Skyfire.LootOrb.MaxOrbCount.CountA"
+            },
+            "RegistryType": {
+              "Name": null
+            }
+          }
+        },
+        {
+          "LimitValue": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+                "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+              },
+              "RowName": "Skyfire.LootOrb.LimitPerPlayerCountB"
+            },
+            "RegistryType": {
+              "Name": null
+            }
+          },
+          "MaximumOrbCount": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+                "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+              },
+              "RowName": "Skyfire.LootOrb.MaxOrbCount.CountB"
+            },
+            "RegistryType": {
+              "Name": null
+            }
+          }
+        },
+        {
+          "LimitValue": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+                "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+              },
+              "RowName": "Skyfire.LootOrb.LimitPerPlayerCountC"
+            },
+            "RegistryType": {
+              "Name": null
+            }
+          },
+          "MaximumOrbCount": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+                "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+              },
+              "RowName": "Skyfire.LootOrb.MaxOrbCount.CountC"
+            },
+            "RegistryType": {
+              "Name": null
+            }
+          }
+        },
+        {
+          "LimitValue": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+                "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+              },
+              "RowName": "Skyfire.LootOrb.LimitPerPlayerCountD"
+            },
+            "RegistryType": {
+              "Name": null
+            }
+          },
+          "MaximumOrbCount": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+                "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+              },
+              "RowName": "Skyfire.LootOrb.MaxOrbCount.CountD"
+            },
+            "RegistryType": {
+              "Name": null
+            }
+          }
+        }
+      ],
+      "OrbCountLimitsForRewardTiers": {
+        "EFortRarity::Uncommon": {
+          "LimitValue": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+                "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+              },
+              "RowName": "Skyfire.LootOrb.LimitRewardTierPercent.Uncommon"
+            },
+            "RegistryType": {
+              "Name": null
+            }
+          },
+          "MaximumOrbCount": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+                "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+              },
+              "RowName": "Skyfire.LootOrb.OrbCountLimit.Uncommon"
+            },
+            "RegistryType": {
+              "Name": null
+            }
+          }
+        },
+        "EFortRarity::Rare": {
+          "LimitValue": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+                "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+              },
+              "RowName": "Skyfire.LootOrb.LimitRewardTierPercent.Rare"
+            },
+            "RegistryType": {
+              "Name": null
+            }
+          },
+          "MaximumOrbCount": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+                "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+              },
+              "RowName": "Skyfire.LootOrb.OrbCountLimit.Rare"
+            },
+            "RegistryType": {
+              "Name": null
+            }
+          }
+        },
+        "EFortRarity::Epic": {
+          "LimitValue": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+                "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+              },
+              "RowName": "Skyfire.LootOrb.LimitRewardTierPercent.Epic"
+            },
+            "RegistryType": {
+              "Name": null
+            }
+          },
+          "MaximumOrbCount": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+                "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+              },
+              "RowName": "Skyfire.LootOrb.OrbCountLimit.Epic"
+            },
+            "RegistryType": {
+              "Name": null
+            }
+          }
+        },
+        "EFortRarity::Legendary": {
+          "LimitValue": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+                "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+              },
+              "RowName": "Skyfire.LootOrb.LimitRewardTierPercent.Legendary"
+            },
+            "RegistryType": {
+              "Name": null
+            }
+          },
+          "MaximumOrbCount": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+                "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+              },
+              "RowName": "Skyfire.LootOrb.OrbCountLimit.Legendary"
+            },
+            "RegistryType": {
+              "Name": null
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "SecurityOrbSpawner_V2_C"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "SceneComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SecurityOrbSpawner_V2_C:DefaultSceneRoot_GEN_VARIABLE:SceneComponent",
+        "ObjectPath": "/Skyfire/Gameplay/Orbs/SecurityOrbSpawner_V2.6"
+      },
+      "VariableGuid": "141BD8E9-4C5A3D03-57B15BAB-C2502E76",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "SecurityOrbSpawner_V2_C",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_0:SCS_Node",
+          "ObjectPath": "/Skyfire/Gameplay/Orbs/SecurityOrbSpawner_V2.7"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_0:SCS_Node",
+          "ObjectPath": "/Skyfire/Gameplay/Orbs/SecurityOrbSpawner_V2.7"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SimpleConstructionScript_0:SCS_Node_0:SCS_Node",
+        "ObjectPath": "/Skyfire/Gameplay/Orbs/SecurityOrbSpawner_V2.7"
+      }
+    }
+  }
+]

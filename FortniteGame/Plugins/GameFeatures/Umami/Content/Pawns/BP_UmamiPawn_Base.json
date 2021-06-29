@@ -1,0 +1,958 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_UmamiPawn_Base",
+    "Outer": "BP_UmamiPawn_Base_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_FortPlayerPawn",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortPlayerPawn:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_NewVehicle",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_OldVehicle",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetComponentByClass_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "NPC_VoiceComponent_C:BlueprintGeneratedClass",
+          "ObjectPath": "/Game/Sounds/Fort_Audio_Blueprints/VoiceComponent/NPC_VoiceComponent.4"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsNevada_Vehicle_V2",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Nevada_Vehicle_V2_C:BlueprintGeneratedClass",
+          "ObjectPath": "/Nevada/Blueprints/Vehicle/Nevada_Vehicle_V2.117"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 20,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "SignatureFunction": {
+          "ObjectName": "OnVehicleStateChangeEvent__DelegateSignature:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortTaggedSoundBank:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAuthority_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "K2Node_CustomEvent_Vehicle",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 1125899906842626,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "InterfaceClass": {
+          "ObjectName": "FortVehicleInterface:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_PlayerPawn",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortPawn:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_CustomEvent_SeatIndex",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetController_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Controller:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 20,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "SignatureFunction": {
+          "ObjectName": "VehicleSeatEvent__DelegateSignature:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsFort_Athena_AIBot_Controller",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortAthenaAIBotController:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 32769,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "PawnExitedVehicle",
+    "Outer": "BP_UmamiPawn_Base_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "InterfaceProperty",
+        "Name": "Vehicle",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 1125900041060758,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "InterfaceClass": {
+          "ObjectName": "FortVehicleInterface:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlayerPawn",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortPawn:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "SeatIndex",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      }
+    ],
+    "FunctionFlags": 205520896,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "On Vehicle State Changed",
+    "Outer": "BP_UmamiPawn_Base_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "FortPlayerPawn",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortPlayerPawn:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "NewVehicle",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "OldVehicle",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 201326592,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "BP_UmamiPawn_Base_C",
+    "Super": "ReceiveBeginPlay",
+    "SuperStruct": {
+      "ObjectName": "BP_PlayerPawn_NonParticipant_C:ReceiveBeginPlay:Function",
+      "ObjectPath": "/Game/Athena/AI/NPCs/Base/BP_PlayerPawn_NonParticipant.20"
+    },
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 134744064,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_UmamiPawn_Base_C",
+    "Super": "BP_PlayerPawn_NonParticipant_C",
+    "Properties": {
+      "bHasCookedComponentInstancingData": true,
+      "SimpleConstructionScript": {
+        "ObjectName": "BP_UmamiPawn_Base_C:SimpleConstructionScript_0:SimpleConstructionScript",
+        "ObjectPath": "/Umami/Pawns/BP_UmamiPawn_Base.26"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "BP_UmamiPawn_Base_C:InheritableComponentHandler:InheritableComponentHandler",
+        "ObjectPath": "/Umami/Pawns/BP_UmamiPawn_Base.16"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "BP_UmamiPawn_Base_C:ExecuteUbergraph_BP_UmamiPawn_Base:Function",
+        "ObjectPath": "/Umami/Pawns/BP_UmamiPawn_Base.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BP_PlayerPawn_NonParticipant_C:BlueprintGeneratedClass",
+      "ObjectPath": "/Game/Athena/AI/NPCs/Base/BP_PlayerPawn_NonParticipant.39"
+    },
+    "Children": [
+      {
+        "ObjectName": "BP_UmamiPawn_Base_C:ReceiveBeginPlay:Function",
+        "ObjectPath": "/Umami/Pawns/BP_UmamiPawn_Base.3"
+      },
+      {
+        "ObjectName": "BP_UmamiPawn_Base_C:On Vehicle State Changed:Function",
+        "ObjectPath": "/Umami/Pawns/BP_UmamiPawn_Base.2"
+      },
+      {
+        "ObjectName": "BP_UmamiPawn_Base_C:PawnExitedVehicle:Function",
+        "ObjectPath": "/Umami/Pawns/BP_UmamiPawn_Base.1"
+      },
+      {
+        "ObjectName": "BP_UmamiPawn_Base_C:ExecuteUbergraph_BP_UmamiPawn_Base:Function",
+        "ObjectPath": "/Umami/Pawns/BP_UmamiPawn_Base.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 2105344,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "PointerToUberGraphFrame:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FortActorComponent_Affiliation",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortActorComponent_Affiliation:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "OnGroundVOBank",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortTaggedSoundBank:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "InVehicleVOBank",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortTaggedSoundBank:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_UmamiPawn_Base": {
+        "ObjectName": "BP_UmamiPawn_Base_C:ExecuteUbergraph_BP_UmamiPawn_Base:Function",
+        "ObjectPath": "/Umami/Pawns/BP_UmamiPawn_Base.0"
+      },
+      "PawnExitedVehicle": {
+        "ObjectName": "BP_UmamiPawn_Base_C:PawnExitedVehicle:Function",
+        "ObjectPath": "/Umami/Pawns/BP_UmamiPawn_Base.1"
+      },
+      "On Vehicle State Changed": {
+        "ObjectName": "BP_UmamiPawn_Base_C:On Vehicle State Changed:Function",
+        "ObjectPath": "/Umami/Pawns/BP_UmamiPawn_Base.2"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "BP_UmamiPawn_Base_C:ReceiveBeginPlay:Function",
+        "ObjectPath": "/Umami/Pawns/BP_UmamiPawn_Base.3"
+      }
+    },
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Game",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__BP_UmamiPawn_Base_C:BP_UmamiPawn_Base_C",
+      "ObjectPath": "/Umami/Pawns/BP_UmamiPawn_Base.5"
+    }
+  },
+  {
+    "Type": "BP_UmamiPawn_Base_C",
+    "Name": "Default__BP_UmamiPawn_Base_C",
+    "Template": "Default__BP_PlayerPawn_NonParticipant_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "OnGroundVOBank": {
+        "ObjectName": "SoundBank_MotherWall:FortTaggedSoundBank",
+        "ObjectPath": "/MotherWall/Audio/VO/SoundBank_MotherWall.0"
+      },
+      "InVehicleVOBank": {
+        "ObjectName": "SoundBank_MotherWall_Umami:FortTaggedSoundBank",
+        "ObjectPath": "/MotherWall/Audio/VO/SoundBank_MotherWall_Umami.0"
+      },
+      "UseVO": true,
+      "PatrolAnimSetPairs": [
+        {
+          "WeaponType": "EFortWeaponCoreAnimation::Melee",
+          "DataAsset": {
+            "ObjectName": "MeleePatrolAnimSet:FortPatrolAnimAsset",
+            "ObjectPath": "/Game/Athena/AI/MANG/AnimSet/MeleePatrolAnimSet.0"
+          }
+        },
+        {
+          "WeaponType": "EFortWeaponCoreAnimation::TacticalShotgun",
+          "DataAsset": {
+            "ObjectName": "Shotgun_Patrol_AnimSet:FortPatrolAnimAsset",
+            "ObjectPath": "/Game/Athena/AI/MANG/AnimSet/Shotgun_Patrol_AnimSet.0"
+          }
+        }
+      ],
+      "FallbackPatrolAnimAsset": {
+        "ObjectName": "NoWeaponPatrolAnimSet:FortPatrolAnimAsset",
+        "ObjectPath": "/Game/Athena/AI/MANG/AnimSet/NoWeaponPatrolAnimSet.0"
+      },
+      "InAirAudioComp": {
+        "ObjectName": "Default__BP_UmamiPawn_Base_C:InAirAudioComp:AudioComponent",
+        "ObjectPath": "/Umami/Pawns/BP_UmamiPawn_Base.7"
+      },
+      "PSC_PlayerWalkLand": {
+        "ObjectName": "Default__BP_UmamiPawn_Base_C:PlayerWalkLandFX:ParticleSystemComponent",
+        "ObjectPath": "/Umami/Pawns/BP_UmamiPawn_Base.22"
+      },
+      "PSC_PlayerRunLand": {
+        "ObjectName": "Default__BP_UmamiPawn_Base_C:PlayerRunLandFX:ParticleSystemComponent",
+        "ObjectPath": "/Umami/Pawns/BP_UmamiPawn_Base.20"
+      },
+      "PSC_PlayerSlideLand": {
+        "ObjectName": "Default__BP_UmamiPawn_Base_C:PlayerSlideLandFX:ParticleSystemComponent",
+        "ObjectPath": "/Umami/Pawns/BP_UmamiPawn_Base.21"
+      },
+      "PSC_HitDamage": {
+        "ObjectName": "Default__BP_UmamiPawn_Base_C:HitDamageFX:ParticleSystemComponent",
+        "ObjectPath": "/Umami/Pawns/BP_UmamiPawn_Base.17"
+      },
+      "ConvertComponent": {
+        "ObjectName": "Default__BP_UmamiPawn_Base_C:ConvertComp:FortPawnComponent_Convert",
+        "ObjectPath": "/Umami/Pawns/BP_UmamiPawn_Base.13"
+      },
+      "AffiliationComponent": {
+        "ObjectName": "Default__BP_UmamiPawn_Base_C:AffiliationComponent:FortActorComponent_Affiliation",
+        "ObjectPath": "/Umami/Pawns/BP_UmamiPawn_Base.10"
+      },
+      "TetherComponent": {
+        "ObjectName": "Default__BP_UmamiPawn_Base_C:TetherComp:FortPawnComponent_Tether",
+        "ObjectPath": "/Umami/Pawns/BP_UmamiPawn_Base.14"
+      },
+      "PSC_PlayerInWater": {
+        "ObjectName": "Default__BP_UmamiPawn_Base_C:PlayerInWaterFX:ParticleSystemComponent",
+        "ObjectPath": "/Umami/Pawns/BP_UmamiPawn_Base.18"
+      },
+      "PSC_PlayerInWaterSurfaceSwimming": {
+        "ObjectName": "Default__BP_UmamiPawn_Base_C:PlayerInWaterSurfaceSwimmingFX:ParticleSystemComponent",
+        "ObjectPath": "/Umami/Pawns/BP_UmamiPawn_Base.19"
+      },
+      "VocalChords": [
+        {
+          "FeedbackAudioComponent": {
+            "ObjectName": "Default__BP_UmamiPawn_Base_C:FeedbackAudioComp0:AudioComponent",
+            "ObjectPath": "/Umami/Pawns/BP_UmamiPawn_Base.6"
+          },
+          "ReplicatedSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          },
+          "PendingSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          },
+          "QueuedSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          },
+          "CurrentSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          }
+        }
+      ],
+      "GameplayTags": [
+        "Class.IsCommando",
+        "NPC.EnemyType.Pawn",
+        "Pawn.Athena.Player",
+        "Athena.AI.NoiseMaker",
+        "Pawn.Athena.NonParticipant",
+        "Athena.Gameplay.Status.ForceDBNO",
+        "Gameplay.Status.AutoPickupDisabled",
+        "Gameplay.Damage.Environment.ExcludedFromStormSurge",
+        "Athena.Phoebe.IgnoreIfNoDamageDealt",
+        "Athena.AI.ShowAlertState",
+        "Pawn.Athena.NPC.Umami"
+      ],
+      "Mesh": {
+        "ObjectName": "Default__BP_UmamiPawn_Base_C:CharacterMesh0:FortPooledSkelMeshComponent",
+        "ObjectPath": "/Umami/Pawns/BP_UmamiPawn_Base.15"
+      },
+      "CharacterMovement": {
+        "ObjectName": "Default__BP_UmamiPawn_Base_C:CharMoveComp:FortMovementComp_CharacterAthena",
+        "ObjectPath": "/Umami/Pawns/BP_UmamiPawn_Base.12"
+      },
+      "CapsuleComponent": {
+        "ObjectName": "Default__BP_UmamiPawn_Base_C:CollisionCylinder:CapsuleComponent",
+        "ObjectPath": "/Umami/Pawns/BP_UmamiPawn_Base.8"
+      },
+      "AIControllerClass": {
+        "ObjectName": "BP_UmamiController_Base_C:BlueprintGeneratedClass",
+        "ObjectPath": "/Umami/Controllers/BP_UmamiController_Base.0"
+      },
+      "RootComponent": {
+        "ObjectName": "Default__BP_UmamiPawn_Base_C:CollisionCylinder:CapsuleComponent",
+        "ObjectPath": "/Umami/Pawns/BP_UmamiPawn_Base.8"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "FeedbackAudioComp0",
+    "Outer": "Default__BP_UmamiPawn_Base_C",
+    "Template": "FeedbackAudioComp0",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "Default__BP_UmamiPawn_Base_C:CollisionCylinder:CapsuleComponent",
+        "ObjectPath": "/Umami/Pawns/BP_UmamiPawn_Base.8"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "InAirAudioComp",
+    "Outer": "Default__BP_UmamiPawn_Base_C",
+    "Template": "InAirAudioComp",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "Default__BP_UmamiPawn_Base_C:CharacterMesh0:FortPooledSkelMeshComponent",
+        "ObjectPath": "/Umami/Pawns/BP_UmamiPawn_Base.15"
+      }
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "CollisionCylinder",
+    "Outer": "Default__BP_UmamiPawn_Base_C",
+    "Template": "CollisionCylinder"
+  },
+  {
+    "Type": "FortActorComponent_Affiliation",
+    "Name": "FortActorComponent_Affiliation_GEN_VARIABLE",
+    "Outer": "BP_UmamiPawn_Base_C"
+  },
+  {
+    "Type": "FortActorComponent_Affiliation",
+    "Name": "AffiliationComponent",
+    "Outer": "Default__BP_UmamiPawn_Base_C",
+    "Template": "AffiliationComponent"
+  },
+  {
+    "Type": "FortGenericDataStoreManagerComponent",
+    "Name": "GeneralDataStore",
+    "Outer": "Default__BP_UmamiPawn_Base_C",
+    "Template": "GeneralDataStore"
+  },
+  {
+    "Type": "FortMovementComp_CharacterAthena",
+    "Name": "CharMoveComp",
+    "Outer": "Default__BP_UmamiPawn_Base_C",
+    "Template": "CharMoveComp"
+  },
+  {
+    "Type": "FortPawnComponent_Convert",
+    "Name": "ConvertComp",
+    "Outer": "Default__BP_UmamiPawn_Base_C",
+    "Template": "ConvertComp"
+  },
+  {
+    "Type": "FortPawnComponent_Tether",
+    "Name": "TetherComp",
+    "Outer": "Default__BP_UmamiPawn_Base_C",
+    "Template": "TetherComp"
+  },
+  {
+    "Type": "FortPooledSkelMeshComponent",
+    "Name": "CharacterMesh0",
+    "Outer": "Default__BP_UmamiPawn_Base_C",
+    "Template": "CharacterMesh0",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "Default__BP_UmamiPawn_Base_C:CollisionCylinder:CapsuleComponent",
+        "ObjectPath": "/Umami/Pawns/BP_UmamiPawn_Base.8"
+      }
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "BP_UmamiPawn_Base_C"
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "HitDamageFX",
+    "Outer": "Default__BP_UmamiPawn_Base_C",
+    "Template": "HitDamageFX",
+    "Properties": {
+      "AutoAttachParent": {
+        "ObjectName": "Default__BP_UmamiPawn_Base_C:CollisionCylinder:CapsuleComponent",
+        "ObjectPath": "/Umami/Pawns/BP_UmamiPawn_Base.8"
+      },
+      "AttachParent": {
+        "ObjectName": "Default__BP_UmamiPawn_Base_C:CollisionCylinder:CapsuleComponent",
+        "ObjectPath": "/Umami/Pawns/BP_UmamiPawn_Base.8"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "PlayerInWaterFX",
+    "Outer": "Default__BP_UmamiPawn_Base_C",
+    "Template": "PlayerInWaterFX",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "Default__BP_UmamiPawn_Base_C:CollisionCylinder:CapsuleComponent",
+        "ObjectPath": "/Umami/Pawns/BP_UmamiPawn_Base.8"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "PlayerInWaterSurfaceSwimmingFX",
+    "Outer": "Default__BP_UmamiPawn_Base_C",
+    "Template": "PlayerInWaterSurfaceSwimmingFX",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "Default__BP_UmamiPawn_Base_C:CollisionCylinder:CapsuleComponent",
+        "ObjectPath": "/Umami/Pawns/BP_UmamiPawn_Base.8"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "PlayerRunLandFX",
+    "Outer": "Default__BP_UmamiPawn_Base_C",
+    "Template": "PlayerRunLandFX",
+    "Properties": {
+      "AutoAttachParent": {
+        "ObjectName": "Default__BP_UmamiPawn_Base_C:CharacterMesh0:FortPooledSkelMeshComponent",
+        "ObjectPath": "/Umami/Pawns/BP_UmamiPawn_Base.15"
+      },
+      "AttachParent": {
+        "ObjectName": "Default__BP_UmamiPawn_Base_C:CharacterMesh0:FortPooledSkelMeshComponent",
+        "ObjectPath": "/Umami/Pawns/BP_UmamiPawn_Base.15"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "PlayerSlideLandFX",
+    "Outer": "Default__BP_UmamiPawn_Base_C",
+    "Template": "PlayerSlideLandFX",
+    "Properties": {
+      "AutoAttachParent": {
+        "ObjectName": "Default__BP_UmamiPawn_Base_C:CharacterMesh0:FortPooledSkelMeshComponent",
+        "ObjectPath": "/Umami/Pawns/BP_UmamiPawn_Base.15"
+      },
+      "AttachParent": {
+        "ObjectName": "Default__BP_UmamiPawn_Base_C:CharacterMesh0:FortPooledSkelMeshComponent",
+        "ObjectPath": "/Umami/Pawns/BP_UmamiPawn_Base.15"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "PlayerWalkLandFX",
+    "Outer": "Default__BP_UmamiPawn_Base_C",
+    "Template": "PlayerWalkLandFX",
+    "Properties": {
+      "AutoAttachParent": {
+        "ObjectName": "Default__BP_UmamiPawn_Base_C:CharacterMesh0:FortPooledSkelMeshComponent",
+        "ObjectPath": "/Umami/Pawns/BP_UmamiPawn_Base.15"
+      },
+      "AttachParent": {
+        "ObjectName": "Default__BP_UmamiPawn_Base_C:CharacterMesh0:FortPooledSkelMeshComponent",
+        "ObjectPath": "/Umami/Pawns/BP_UmamiPawn_Base.15"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_UmamiPawn_Base_C"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "SceneComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_UmamiPawn_Base_C:DefaultSceneRoot_GEN_VARIABLE:SceneComponent",
+        "ObjectPath": "/Umami/Pawns/BP_UmamiPawn_Base.23"
+      },
+      "VariableGuid": "4F50F803-4E9E9F81-934B9E8C-9ABAE52D",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "FortActorComponent_Affiliation:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_UmamiPawn_Base_C:FortActorComponent_Affiliation_GEN_VARIABLE:FortActorComponent_Affiliation",
+        "ObjectPath": "/Umami/Pawns/BP_UmamiPawn_Base.9"
+      },
+      "CookedComponentInstancingData": {
+        "bHasValidCookedData": true
+      },
+      "VariableGuid": "467C3A9B-48C44F9A-6C4D7696-34A34CA6",
+      "InternalVariableName": "FortActorComponent_Affiliation"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_UmamiPawn_Base_C",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_1:SCS_Node",
+          "ObjectPath": "/Umami/Pawns/BP_UmamiPawn_Base.25"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_1:SCS_Node",
+          "ObjectPath": "/Umami/Pawns/BP_UmamiPawn_Base.25"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SimpleConstructionScript_0:SCS_Node_0:SCS_Node",
+        "ObjectPath": "/Umami/Pawns/BP_UmamiPawn_Base.24"
+      }
+    }
+  }
+]

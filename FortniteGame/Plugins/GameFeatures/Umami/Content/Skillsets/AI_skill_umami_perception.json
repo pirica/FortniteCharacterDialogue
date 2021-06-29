@@ -1,0 +1,262 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "AI_skill_umami_perception_C",
+    "Super": "AI_Skill_NPC_Perception_Guard_C",
+    "SuperStruct": {
+      "ObjectName": "AI_Skill_NPC_Perception_Guard_C:BlueprintGeneratedClass",
+      "ObjectPath": "/Game/Athena/AI/NPCs/Base/Skillsets/Perception/AI_Skill_NPC_Perception_Guard.0"
+    },
+    "Children": [],
+    "ChildProperties": [],
+    "FuncMap": {},
+    "ClassFlags": 8656912,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Engine",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__AI_skill_umami_perception_C:AI_skill_umami_perception_C",
+      "ObjectPath": "/Umami/Skillsets/AI_skill_umami_perception.1"
+    }
+  },
+  {
+    "Type": "AI_skill_umami_perception_C",
+    "Name": "Default__AI_skill_umami_perception_C",
+    "Template": "Default__AI_Skill_NPC_Perception_Guard_C",
+    "Properties": {
+      "ChancesToHelpOnMarkedEnemy": {
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "Umami_NPC_Skillsets_Data:CurveTable",
+            "ObjectPath": "/Umami/DataTables/Umami_NPC_Skillsets_Data.0"
+          },
+          "RowName": "Umami.Base.Skill.Perception.ReactionTime.ChancesToHelpOnMarkedEnemy"
+        }
+      },
+      "AlertLevelConfigs": [
+        {
+          "ObjectName": "Default__AI_skill_umami_perception_C:FortAthenaAIBotAlertLevelConfig_0:FortAthenaAIBotAlertLevelConfig",
+          "ObjectPath": "/Umami/Skillsets/AI_skill_umami_perception.5"
+        },
+        {
+          "ObjectName": "Default__AI_skill_umami_perception_C:FortAthenaAIBotAlertLevelConfig_1:FortAthenaAIBotAlertLevelConfig",
+          "ObjectPath": "/Umami/Skillsets/AI_skill_umami_perception.6"
+        },
+        {
+          "ObjectName": "Default__AI_skill_umami_perception_C:FortAthenaAIBotAlertLevelConfig_2:FortAthenaAIBotAlertLevelConfig",
+          "ObjectPath": "/Umami/Skillsets/AI_skill_umami_perception.7"
+        }
+      ],
+      "bStealthMeterForceLKPWhenDamagedAndThreatened": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "Umami_NPC_Skillsets_Data:CurveTable",
+            "ObjectPath": "/Umami/DataTables/Umami_NPC_Skillsets_Data.0"
+          },
+          "RowName": "Umami.Base.Skill.Perception.StealthMechanics.bStealthMeterForceLKPWhenDamagedAndThreatened"
+        }
+      }
+    }
+  },
+  {
+    "Type": "AISenseScalableConfig_Sight",
+    "Name": "AISenseScalableConfig_Sight_0",
+    "Outer": "FortAthenaAIBotAlertLevelConfig_0",
+    "Template": "AISenseScalableConfig_Sight_0",
+    "Properties": {
+      "SightRadius": {
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "Umami_NPC_Skillsets_Data:CurveTable",
+            "ObjectPath": "/Umami/DataTables/Umami_NPC_Skillsets_Data.0"
+          },
+          "RowName": "Umami.Base.Skill.Perception.AlertLevel.Unaware.SightRadius"
+        }
+      },
+      "LoseSightRadius": {
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "Umami_NPC_Skillsets_Data:CurveTable",
+            "ObjectPath": "/Umami/DataTables/Umami_NPC_Skillsets_Data.0"
+          },
+          "RowName": "Umami.Base.Skill.Perception.AlertLevel.Unaware.LoseSightRadius"
+        }
+      },
+      "PeripheralVisionAngleDegrees": {
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "Umami_NPC_Skillsets_Data:CurveTable",
+            "ObjectPath": "/Umami/DataTables/Umami_NPC_Skillsets_Data.0"
+          },
+          "RowName": "Umami.Base.Skill.Perception.AlertLevel.Unaware.PeripheralVisionHalfAngle"
+        }
+      },
+      "PointOfViewBackwardOffset": {
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "Umami_NPC_Skillsets_Data:CurveTable",
+            "ObjectPath": "/Umami/DataTables/Umami_NPC_Skillsets_Data.0"
+          },
+          "RowName": "Umami.Base.Skill.Perception.AlertLevel.Unaware.PointOfViewBackwardOffset"
+        }
+      },
+      "NearClippingRadius": {
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "Umami_NPC_Skillsets_Data:CurveTable",
+            "ObjectPath": "/Umami/DataTables/Umami_NPC_Skillsets_Data.0"
+          },
+          "RowName": "Umami.Base.Skill.Perception.AlertLevel.Unaware.NearClippingRadius"
+        }
+      }
+    }
+  },
+  {
+    "Type": "AISenseScalableConfig_Sight",
+    "Name": "AISenseScalableConfig_Sight_0",
+    "Outer": "FortAthenaAIBotAlertLevelConfig_1",
+    "Template": "AISenseScalableConfig_Sight_0",
+    "Properties": {
+      "SightRadius": {
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "Umami_NPC_Skillsets_Data:CurveTable",
+            "ObjectPath": "/Umami/DataTables/Umami_NPC_Skillsets_Data.0"
+          },
+          "RowName": "Umami.Base.Skill.Perception.AlertLevel.Alerted.SightRadius"
+        }
+      },
+      "LoseSightRadius": {
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "Umami_NPC_Skillsets_Data:CurveTable",
+            "ObjectPath": "/Umami/DataTables/Umami_NPC_Skillsets_Data.0"
+          },
+          "RowName": "Umami.Base.Skill.Perception.AlertLevel.Alerted.LoseSightRadius"
+        }
+      },
+      "PeripheralVisionAngleDegrees": {
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "Umami_NPC_Skillsets_Data:CurveTable",
+            "ObjectPath": "/Umami/DataTables/Umami_NPC_Skillsets_Data.0"
+          },
+          "RowName": "Umami.Base.Skill.Perception.AlertLevel.Alerted.PeripheralVisionHalfAngle"
+        }
+      },
+      "PointOfViewBackwardOffset": {
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "Umami_NPC_Skillsets_Data:CurveTable",
+            "ObjectPath": "/Umami/DataTables/Umami_NPC_Skillsets_Data.0"
+          },
+          "RowName": "Umami.Base.Skill.Perception.AlertLevel.Alerted.PointOfViewBackwardOffset"
+        }
+      },
+      "NearClippingRadius": {
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "Umami_NPC_Skillsets_Data:CurveTable",
+            "ObjectPath": "/Umami/DataTables/Umami_NPC_Skillsets_Data.0"
+          },
+          "RowName": "Umami.Base.Skill.Perception.AlertLevel.Alerted.NearClippingRadius"
+        }
+      }
+    }
+  },
+  {
+    "Type": "AISenseScalableConfig_Sight",
+    "Name": "AISenseScalableConfig_Sight_0",
+    "Outer": "FortAthenaAIBotAlertLevelConfig_2",
+    "Template": "AISenseScalableConfig_Sight_0",
+    "Properties": {
+      "SightRadius": {
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "Umami_NPC_Skillsets_Data:CurveTable",
+            "ObjectPath": "/Umami/DataTables/Umami_NPC_Skillsets_Data.0"
+          },
+          "RowName": "Umami.Base.Skill.Perception.AlertLevel.ThreatenedAndLKP.SightRadius"
+        }
+      },
+      "LoseSightRadius": {
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "Umami_NPC_Skillsets_Data:CurveTable",
+            "ObjectPath": "/Umami/DataTables/Umami_NPC_Skillsets_Data.0"
+          },
+          "RowName": "Umami.Base.Skill.Perception.AlertLevel.ThreatenedAndLKP.LoseSightRadius"
+        }
+      },
+      "PeripheralVisionAngleDegrees": {
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "Umami_NPC_Skillsets_Data:CurveTable",
+            "ObjectPath": "/Umami/DataTables/Umami_NPC_Skillsets_Data.0"
+          },
+          "RowName": "Umami.Base.Skill.Perception.AlertLevel.ThreatenedAndLKP.PeripheralVisionHalfAngle"
+        }
+      },
+      "PointOfViewBackwardOffset": {
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "Umami_NPC_Skillsets_Data:CurveTable",
+            "ObjectPath": "/Umami/DataTables/Umami_NPC_Skillsets_Data.0"
+          },
+          "RowName": "Umami.Base.Skill.Perception.AlertLevel.ThreatenedAndLKP.PointOfViewBackwardOffset"
+        }
+      },
+      "NearClippingRadius": {
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "Umami_NPC_Skillsets_Data:CurveTable",
+            "ObjectPath": "/Umami/DataTables/Umami_NPC_Skillsets_Data.0"
+          },
+          "RowName": "Umami.Base.Skill.Perception.AlertLevel.ThreatenedAndLKP.NearClippingRadius"
+        }
+      }
+    }
+  },
+  {
+    "Type": "FortAthenaAIBotAlertLevelConfig",
+    "Name": "FortAthenaAIBotAlertLevelConfig_0",
+    "Outer": "Default__AI_skill_umami_perception_C",
+    "Template": "FortAthenaAIBotAlertLevelConfig_0",
+    "Properties": {
+      "ScalableSenseConfig": {
+        "ObjectName": "FortAthenaAIBotAlertLevelConfig_0:AISenseScalableConfig_Sight_0:AISenseScalableConfig_Sight",
+        "ObjectPath": "/Umami/Skillsets/AI_skill_umami_perception.2"
+      }
+    }
+  },
+  {
+    "Type": "FortAthenaAIBotAlertLevelConfig",
+    "Name": "FortAthenaAIBotAlertLevelConfig_1",
+    "Outer": "Default__AI_skill_umami_perception_C",
+    "Template": "FortAthenaAIBotAlertLevelConfig_1",
+    "Properties": {
+      "ScalableSenseConfig": {
+        "ObjectName": "FortAthenaAIBotAlertLevelConfig_1:AISenseScalableConfig_Sight_0:AISenseScalableConfig_Sight",
+        "ObjectPath": "/Umami/Skillsets/AI_skill_umami_perception.3"
+      }
+    }
+  },
+  {
+    "Type": "FortAthenaAIBotAlertLevelConfig",
+    "Name": "FortAthenaAIBotAlertLevelConfig_2",
+    "Outer": "Default__AI_skill_umami_perception_C",
+    "Template": "FortAthenaAIBotAlertLevelConfig_2",
+    "Properties": {
+      "ScalableSenseConfig": {
+        "ObjectName": "FortAthenaAIBotAlertLevelConfig_2:AISenseScalableConfig_Sight_0:AISenseScalableConfig_Sight",
+        "ObjectPath": "/Umami/Skillsets/AI_skill_umami_perception.4"
+      }
+    }
+  }
+]

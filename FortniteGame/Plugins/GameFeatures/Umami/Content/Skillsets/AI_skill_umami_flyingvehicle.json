@@ -1,0 +1,335 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "AI_skill_umami_flyingvehicle_C",
+    "SuperStruct": {
+      "ObjectName": "FortAthenaUmamiFlyingVehicleSkillSet:Class",
+      "ObjectPath": 0
+    },
+    "Children": [],
+    "ChildProperties": [],
+    "FuncMap": {},
+    "ClassFlags": 268304,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Engine",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__AI_skill_umami_flyingvehicle_C:AI_skill_umami_flyingvehicle_C",
+      "ObjectPath": "/Umami/Skillsets/AI_skill_umami_flyingvehicle.1"
+    }
+  },
+  {
+    "Type": "AI_skill_umami_flyingvehicle_C",
+    "Name": "Default__AI_skill_umami_flyingvehicle_C",
+    "Properties": {
+      "MaxForwardSpeed": {
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "Umami_NPC_Skillsets_Data:CurveTable",
+            "ObjectPath": "/Umami/DataTables/Umami_NPC_Skillsets_Data.0"
+          },
+          "RowName": "Umami.Base.Skill.FlyingVehicle.MaxForwardSpeed"
+        }
+      },
+      "MaxElevationSpeed": {
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "Umami_NPC_Skillsets_Data:CurveTable",
+            "ObjectPath": "/Umami/DataTables/Umami_NPC_Skillsets_Data.0"
+          },
+          "RowName": "Umami.Base.Skill.FlyingVehicle.MaxElevationSpeed"
+        }
+      },
+      "ForwardSpeedCurve": {
+        "ObjectName": "Umami_FlyingVehicleHandling_Forward:CurveFloat",
+        "ObjectPath": "/Umami/DataTables/Umami_FlyingVehicleHandling_Forward.0"
+      },
+      "ElevationSpeedCurve": {
+        "ObjectName": "Umami_FlyingVehicleHandling_Elevation:CurveFloat",
+        "ObjectPath": "/Umami/DataTables/Umami_FlyingVehicleHandling_Elevation.0"
+      },
+      "AlphasDeadZones": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "Umami_NPC_Skillsets_Data:CurveTable",
+            "ObjectPath": "/Umami/DataTables/Umami_NPC_Skillsets_Data.0"
+          },
+          "RowName": "Umami.Base.Skill.FlyingVehicle.AlphasDeadZones"
+        }
+      },
+      "LookAheadMaxDistance": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "Umami_NPC_Skillsets_Data:CurveTable",
+            "ObjectPath": "/Umami/DataTables/Umami_NPC_Skillsets_Data.0"
+          },
+          "RowName": "Umami.Base.Skill.FlyingVehicle.LookAheadMaxDistance"
+        }
+      },
+      "Min2DGoalDistanceForHeighfieldClamp": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "Umami_NPC_Skillsets_Data:CurveTable",
+            "ObjectPath": "/Umami/DataTables/Umami_NPC_Skillsets_Data.0"
+          },
+          "RowName": "Umami.Base.Skill.FlyingVehicle.Min2DGoalDistanceForHeighfieldClamp"
+        }
+      },
+      "Min2DGoalDistanceForBuildingActorsClamp": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "Umami_NPC_Skillsets_Data:CurveTable",
+            "ObjectPath": "/Umami/DataTables/Umami_NPC_Skillsets_Data.0"
+          },
+          "RowName": "Umami.Base.Skill.FlyingVehicle.Min2DGoalDistanceForBuildingActorsClamp"
+        }
+      },
+      "ZOffsetForBuildingActorsClamp": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "Umami_NPC_Skillsets_Data:CurveTable",
+            "ObjectPath": "/Umami/DataTables/Umami_NPC_Skillsets_Data.0"
+          },
+          "RowName": "Umami.Base.Skill.FlyingVehicle.ZOffsetForBuildingActorsClamp"
+        }
+      },
+      "MaximumStuckTime": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "Umami_NPC_Skillsets_Data:CurveTable",
+            "ObjectPath": "/Umami/DataTables/Umami_NPC_Skillsets_Data.0"
+          },
+          "RowName": "Umami.Base.Skill.FlyingVehicle.MaximumStuckTime"
+        }
+      },
+      "MaximumStuckTimePerBuildingType": [
+        {
+          "RequiredTag": {
+            "TagName": "Building.Type.Player"
+          },
+          "MaximumStuckTime": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "Umami_NPC_Skillsets_Data:CurveTable",
+                "ObjectPath": "/Umami/DataTables/Umami_NPC_Skillsets_Data.0"
+              },
+              "RowName": "Umami.Base.Skill.FlyingVehicle.MaximumStuckTimeOnPlayerBuiltWalls"
+            },
+            "RegistryType": {
+              "Name": null
+            }
+          }
+        },
+        {
+          "RequiredTag": {
+            "TagName": null
+          },
+          "MaximumStuckTime": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "Umami_NPC_Skillsets_Data:CurveTable",
+                "ObjectPath": "/Umami/DataTables/Umami_NPC_Skillsets_Data.0"
+              },
+              "RowName": "Umami.Base.Skill.FlyingVehicle.MaximumStuckTimeOnBuildingActors"
+            },
+            "RegistryType": {
+              "Name": null
+            }
+          }
+        }
+      ],
+      "MinimumProgressPercentageForStuck": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "Umami_NPC_Skillsets_Data:CurveTable",
+            "ObjectPath": "/Umami/DataTables/Umami_NPC_Skillsets_Data.0"
+          },
+          "RowName": "Umami.Base.Skill.FlyingVehicle.MinimumProgressPercentageForStuck"
+        }
+      },
+      "VerticalMovementFirst_MinZDelta": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "Umami_NPC_Skillsets_Data:CurveTable",
+            "ObjectPath": "/Umami/DataTables/Umami_NPC_Skillsets_Data.0"
+          },
+          "RowName": "Umami.Base.Skill.FlyingVehicle.VerticalMovementFirst_MinZDelta"
+        }
+      },
+      "VerticalMovementFirst_MaxXYDelta": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "Umami_NPC_Skillsets_Data:CurveTable",
+            "ObjectPath": "/Umami/DataTables/Umami_NPC_Skillsets_Data.0"
+          },
+          "RowName": "Umami.Base.Skill.FlyingVehicle.VerticalMovementFirst_MaxXYDelta"
+        }
+      },
+      "EvasiveManeuver_DistanceToFinish": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "Umami_NPC_Skillsets_Data:CurveTable",
+            "ObjectPath": "/Umami/DataTables/Umami_NPC_Skillsets_Data.0"
+          },
+          "RowName": "Umami.Base.Skill.FlyingVehicle.EvasiveManeuver_DistanceToFinish"
+        }
+      },
+      "EvasiveManeuver_MinDotDifferenceOnTargetToKeepPreviousManeuver": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "Umami_NPC_Skillsets_Data:CurveTable",
+            "ObjectPath": "/Umami/DataTables/Umami_NPC_Skillsets_Data.0"
+          },
+          "RowName": "Umami.Base.Skill.FlyingVehicle.EvasiveManeuver_MinDotDifferenceOnTargetToKeepPreviousManeuver"
+        }
+      },
+      "EvasiveManeuver_MinDotDifferenceBetweenStartAndCurrentLocationToKeepPreviousManeuver": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "Umami_NPC_Skillsets_Data:CurveTable",
+            "ObjectPath": "/Umami/DataTables/Umami_NPC_Skillsets_Data.0"
+          },
+          "RowName": "Umami.Base.Skill.FlyingVehicle.EvasiveManeuver_MinDotDifferenceBetweenStartAndCurrentLocationToKeepPreviousManeuver"
+        }
+      },
+      "EvasiveManeuver_MinDistanceFromGoalToApply": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "Umami_NPC_Skillsets_Data:CurveTable",
+            "ObjectPath": "/Umami/DataTables/Umami_NPC_Skillsets_Data.0"
+          },
+          "RowName": "Umami.Base.Skill.FlyingVehicle.EvasiveManeuver_MinDistanceFromGoalToApply"
+        }
+      },
+      "EvasiveManeuver_ForwardDistance": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "Umami_NPC_Skillsets_Data:CurveTable",
+            "ObjectPath": "/Umami/DataTables/Umami_NPC_Skillsets_Data.0"
+          },
+          "RowName": "Umami.Base.Skill.FlyingVehicle.EvasiveManeuver_ForwardDistance"
+        }
+      },
+      "EvasiveManeuver_RightDistance": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "Umami_NPC_Skillsets_Data:CurveTable",
+            "ObjectPath": "/Umami/DataTables/Umami_NPC_Skillsets_Data.0"
+          },
+          "RowName": "Umami.Base.Skill.FlyingVehicle.EvasiveManeuver_RightDistance"
+        }
+      },
+      "EvasiveManeuver_UpDistance": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "Umami_NPC_Skillsets_Data:CurveTable",
+            "ObjectPath": "/Umami/DataTables/Umami_NPC_Skillsets_Data.0"
+          },
+          "RowName": "Umami.Base.Skill.FlyingVehicle.EvasiveManeuver_UpDistance"
+        }
+      },
+      "Avoidance_Strength": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "Umami_NPC_Skillsets_Data:CurveTable",
+            "ObjectPath": "/Umami/DataTables/Umami_NPC_Skillsets_Data.0"
+          },
+          "RowName": "Umami.Base.Skill.FlyingVehicle.Avoidance_Strength"
+        }
+      },
+      "Avoidance_Min2DGoalDistance": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "Umami_NPC_Skillsets_Data:CurveTable",
+            "ObjectPath": "/Umami/DataTables/Umami_NPC_Skillsets_Data.0"
+          },
+          "RowName": "Umami.Base.Skill.FlyingVehicle.Avoidance_Min2DGoalDistance"
+        }
+      },
+      "Avoidance_MinDistanceToOther": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "Umami_NPC_Skillsets_Data:CurveTable",
+            "ObjectPath": "/Umami/DataTables/Umami_NPC_Skillsets_Data.0"
+          },
+          "RowName": "Umami.Base.Skill.FlyingVehicle.Avoidance_MinDistanceToOther"
+        }
+      },
+      "Avoidance_SelfLookAheadTime": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "Umami_NPC_Skillsets_Data:CurveTable",
+            "ObjectPath": "/Umami/DataTables/Umami_NPC_Skillsets_Data.0"
+          },
+          "RowName": "Umami.Base.Skill.FlyingVehicle.Avoidance_SelfLookAheadTime"
+        }
+      },
+      "Avoidance_OthersLookAheadTime": {
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "Umami_NPC_Skillsets_Data:CurveTable",
+            "ObjectPath": "/Umami/DataTables/Umami_NPC_Skillsets_Data.0"
+          },
+          "RowName": "Umami.Base.Skill.FlyingVehicle.Avoidance_OthersLookAheadTime"
+        }
+      },
+      "Avoidance_SelfRadius": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "Umami_NPC_Skillsets_Data:CurveTable",
+            "ObjectPath": "/Umami/DataTables/Umami_NPC_Skillsets_Data.0"
+          },
+          "RowName": "Umami.Base.Skill.FlyingVehicle.Avoidance_SelfRadius"
+        }
+      },
+      "Avoidance_OthersRadius": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "Umami_NPC_Skillsets_Data:CurveTable",
+            "ObjectPath": "/Umami/DataTables/Umami_NPC_Skillsets_Data.0"
+          },
+          "RowName": "Umami.Base.Skill.FlyingVehicle.Avoidance_OthersRadius"
+        }
+      },
+      "Avoidance_HysteresisRadius": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "Umami_NPC_Skillsets_Data:CurveTable",
+            "ObjectPath": "/Umami/DataTables/Umami_NPC_Skillsets_Data.0"
+          },
+          "RowName": "Umami.Base.Skill.FlyingVehicle.Avoidance_HysteresisRadius"
+        }
+      }
+    }
+  }
+]

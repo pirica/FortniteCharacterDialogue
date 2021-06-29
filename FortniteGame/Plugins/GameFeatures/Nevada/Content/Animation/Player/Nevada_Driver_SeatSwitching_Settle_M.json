@@ -1,0 +1,152 @@
+[
+  {
+    "Type": "AnimMontage",
+    "Name": "Nevada_Driver_SeatSwitching_Settle_M",
+    "Properties": {
+      "BlendIn": {
+        "BlendTime": 0.0,
+        "BlendOption": "EAlphaBlendOption::HermiteCubic"
+      },
+      "BlendOut": {
+        "BlendTime": 0.1,
+        "BlendOption": "EAlphaBlendOption::HermiteCubic"
+      },
+      "CompositeSections": [
+        {
+          "SectionName": "Default",
+          "NextSectionName": null,
+          "MetaData": [],
+          "LinkedMontage": {
+            "ObjectName": "Nevada_Driver_SeatSwitching_Settle_M:AnimMontage",
+            "ObjectPath": "/Nevada/Animation/Player/Nevada_Driver_SeatSwitching_Settle_M.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 0.5,
+          "LinkValue": 0.0,
+          "LinkedSequence": {
+            "ObjectName": "Nevada_Driver_SeatSettle_CMM:AnimSequence",
+            "ObjectPath": "/Nevada/Animation/Player/Nevada_Driver_SeatSettle_CMM.0"
+          }
+        }
+      ],
+      "SlotAnimTracks": [
+        {
+          "SlotName": "FullBody",
+          "AnimTrack": {
+            "AnimSegments": [
+              {
+                "AnimReference": {
+                  "ObjectName": "Nevada_Driver_SeatSettle_CMM:AnimSequence",
+                  "ObjectPath": "/Nevada/Animation/Player/Nevada_Driver_SeatSettle_CMM.0"
+                },
+                "StartPos": 0.0,
+                "AnimStartTime": 0.0,
+                "AnimEndTime": 0.5,
+                "AnimPlayRate": 1.0,
+                "LoopingCount": 1
+              }
+            ]
+          }
+        }
+      ],
+      "Notifies": [
+        {
+          "TriggerTimeOffset": -0.0001,
+          "EndTriggerTimeOffset": -0.0001,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "HolsterWeapon_C",
+          "Notify": null,
+          "NotifyStateClass": {
+            "ObjectName": "Nevada_Driver_SeatSwitching_Settle_M:AnimNotifyState_HolsterWeapon_C_0:AnimNotifyState_HolsterWeapon_C",
+            "ObjectPath": "/Nevada/Animation/Player/Nevada_Driver_SeatSwitching_Settle_M.1"
+          },
+          "Duration": 0.5,
+          "EndLink": {
+            "LinkedMontage": {
+              "ObjectName": "Nevada_Driver_SeatSwitching_Settle_M:AnimMontage",
+              "ObjectPath": "/Nevada/Animation/Player/Nevada_Driver_SeatSwitching_Settle_M.0"
+            },
+            "SlotIndex": 0,
+            "SegmentIndex": 0,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.5,
+            "LinkValue": 0.5,
+            "LinkedSequence": {
+              "ObjectName": "Nevada_Driver_SeatSettle_CMM:AnimSequence",
+              "ObjectPath": "/Nevada/Animation/Player/Nevada_Driver_SeatSettle_CMM.0"
+            }
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 0,
+          "LinkedMontage": {
+            "ObjectName": "Nevada_Driver_SeatSwitching_Settle_M:AnimMontage",
+            "ObjectPath": "/Nevada/Animation/Player/Nevada_Driver_SeatSwitching_Settle_M.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 0.5,
+          "LinkValue": 0.0,
+          "LinkedSequence": {
+            "ObjectName": "Nevada_Driver_SeatSettle_CMM:AnimSequence",
+            "ObjectPath": "/Nevada/Animation/Player/Nevada_Driver_SeatSettle_CMM.0"
+          }
+        }
+      ],
+      "SequenceLength": 0.5,
+      "RawCurveData": {
+        "FloatCurves": [
+          {
+            "FloatCurve": {
+              "Keys": [
+                {
+                  "InterpMode": 0,
+                  "TangentMode": 0,
+                  "TangentWeightMode": 0,
+                  "KeyTime": 0.0,
+                  "KeyValue": 5.831554E-39,
+                  "ArriveTangent": 0.0,
+                  "ArriveTangentWeight": 0.0,
+                  "LeaveTangent": 0.0,
+                  "LeaveTangentWeight": -1.7014118E+38
+                }
+              ],
+              "DefaultValue": 3.0033879E-36,
+              "PreInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant",
+              "PostInfinityExtrap": "ERichCurveExtrapolation::60"
+            },
+            "Name": {
+              "DisplayName": "/Game/Animation/AnimNotifies/AnimNotifyState/AnimNotifyState_HolsterWeapon_335544319"
+            },
+            "CurveTypeFlags": 0
+          },
+          {}
+        ]
+      },
+      "Skeleton": {
+        "ObjectName": "Nevada_Driver_SeatSwitching_Settle_M:/Game/Animation/AnimNotifies/AnimNotifyState/AnimNotifyState_HolsterWeapon:Nevada_Driver_SeatSwitching_Settle_M",
+        "ObjectPath": "/Nevada/Animation/Player/Nevada_Driver_SeatSwitching_Settle_M.17367044"
+      }
+    }
+  },
+  {
+    "Type": "AnimNotifyState_HolsterWeapon_C",
+    "Name": "AnimNotifyState_HolsterWeapon_C_0",
+    "Outer": "Nevada_Driver_SeatSwitching_Settle_M",
+    "Template": "Default__AnimNotifyState_HolsterWeapon_C"
+  }
+]

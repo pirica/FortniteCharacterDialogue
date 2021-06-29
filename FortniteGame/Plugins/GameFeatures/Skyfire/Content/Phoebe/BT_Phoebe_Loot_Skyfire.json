@@ -1,0 +1,222 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Phoebe_Loot_Skyfire",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BT_Phoebe_Loot_Skyfire:BTComposite_Selector_1:BTComposite_Selector",
+        "ObjectPath": "/Skyfire/Phoebe/BT_Phoebe_Loot_Skyfire.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BB_Phoebe:BlackboardData",
+        "ObjectPath": "/Game/Athena/AI/Phoebe/BehaviorTrees/BB_Phoebe.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "BT_Phoebe_Loot_Skyfire",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BT_Phoebe_Loot_Skyfire:BTComposite_Selector_23:BTComposite_Selector",
+            "ObjectPath": "/Skyfire/Phoebe/BT_Phoebe_Loot_Skyfire.2"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BT_Phoebe_Loot_Skyfire:BTDecorator_Blackboard_0:BTDecorator_Blackboard",
+              "ObjectPath": "/Skyfire/Phoebe/BT_Phoebe_Loot_Skyfire.3"
+            },
+            {
+              "ObjectName": "BT_Phoebe_Loot_Skyfire:BTDecorator_Loop_0:BTDecorator_Loop",
+              "ObjectPath": "/Skyfire/Phoebe/BT_Phoebe_Loot_Skyfire.5"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BT_Phoebe_Loot_Skyfire:BTTask_Wait_0:BTTask_Wait",
+            "ObjectPath": "/Skyfire/Phoebe/BT_Phoebe_Loot_Skyfire.6"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BT_Phoebe_Loot_Skyfire:BehaviorTree",
+        "ObjectPath": "/Skyfire/Phoebe/BT_Phoebe_Loot_Skyfire.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_23",
+    "Outer": "BT_Phoebe_Loot_Skyfire",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BT_Phoebe_Loot_Skyfire:FortAthenaBTTask_Interact_0:FortAthenaBTTask_Interact",
+            "ObjectPath": "/Skyfire/Phoebe/BT_Phoebe_Loot_Skyfire.8"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BT_Phoebe_Loot_Skyfire:BTDecorator_Blackboard_26:BTDecorator_Blackboard",
+              "ObjectPath": "/Skyfire/Phoebe/BT_Phoebe_Loot_Skyfire.4"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BT_Phoebe_Loot_Skyfire:FortAthenaBTTask_BotMoveTo_9:FortAthenaBTTask_BotMoveTo",
+            "ObjectPath": "/Skyfire/Phoebe/BT_Phoebe_Loot_Skyfire.7"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "NodeName": "Loot Selector",
+      "TreeAsset": {
+        "ObjectName": "BT_Phoebe_Loot_Skyfire:BehaviorTree",
+        "ObjectPath": "/Skyfire/Phoebe/BT_Phoebe_Loot_Skyfire.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BT_Phoebe_Loot_Skyfire:BTComposite_Selector_1:BTComposite_Selector",
+        "ObjectPath": "/Skyfire/Phoebe/BT_Phoebe_Loot_Skyfire.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_0",
+    "Outer": "BT_Phoebe_Loot_Skyfire",
+    "Properties": {
+      "CachedDescription": "AIEvaluator_Loot_Destination is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "AIEvaluator_Loot_Destination"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "NodeName": "Has Valid Loot Dest",
+      "TreeAsset": {
+        "ObjectName": "BT_Phoebe_Loot_Skyfire:BehaviorTree",
+        "ObjectPath": "/Skyfire/Phoebe/BT_Phoebe_Loot_Skyfire.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BT_Phoebe_Loot_Skyfire:BTComposite_Selector_1:BTComposite_Selector",
+        "ObjectPath": "/Skyfire/Phoebe/BT_Phoebe_Loot_Skyfire.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_26",
+    "Outer": "BT_Phoebe_Loot_Skyfire",
+    "Properties": {
+      "IntValue": 3,
+      "CachedDescription": "AIEvaluator_Loot_InteractionExecutionStatus Is Greater Than Or Equal To Execution Pending",
+      "OperationType": 5,
+      "BlackboardKey": {
+        "SelectedKeyName": "AIEvaluator_Loot_InteractionExecutionStatus"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "NodeName": "Can Interact",
+      "TreeAsset": {
+        "ObjectName": "BT_Phoebe_Loot_Skyfire:BehaviorTree",
+        "ObjectPath": "/Skyfire/Phoebe/BT_Phoebe_Loot_Skyfire.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BT_Phoebe_Loot_Skyfire:BTComposite_Selector_23:BTComposite_Selector",
+        "ObjectPath": "/Skyfire/Phoebe/BT_Phoebe_Loot_Skyfire.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Loop",
+    "Name": "BTDecorator_Loop_0",
+    "Outer": "BT_Phoebe_Loot_Skyfire",
+    "Properties": {
+      "bInfiniteLoop": true,
+      "NodeName": "Loop when blocked",
+      "TreeAsset": {
+        "ObjectName": "BT_Phoebe_Loot_Skyfire:BehaviorTree",
+        "ObjectPath": "/Skyfire/Phoebe/BT_Phoebe_Loot_Skyfire.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BT_Phoebe_Loot_Skyfire:BTComposite_Selector_1:BTComposite_Selector",
+        "ObjectPath": "/Skyfire/Phoebe/BT_Phoebe_Loot_Skyfire.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "BT_Phoebe_Loot_Skyfire",
+    "Properties": {
+      "WaitTime": 0.7,
+      "TreeAsset": {
+        "ObjectName": "BT_Phoebe_Loot_Skyfire:BehaviorTree",
+        "ObjectPath": "/Skyfire/Phoebe/BT_Phoebe_Loot_Skyfire.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BT_Phoebe_Loot_Skyfire:BTComposite_Selector_1:BTComposite_Selector",
+        "ObjectPath": "/Skyfire/Phoebe/BT_Phoebe_Loot_Skyfire.1"
+      }
+    }
+  },
+  {
+    "Type": "FortAthenaBTTask_BotMoveTo",
+    "Name": "FortAthenaBTTask_BotMoveTo_9",
+    "Outer": "BT_Phoebe_Loot_Skyfire",
+    "Properties": {
+      "MovementResultKeyName": "AIEvaluator_Loot_MovementState",
+      "AcceptableRadius": 50.0,
+      "FilterClass": {
+        "ObjectName": "NavFilter_Phoebe_NoSmashable_C:BlueprintGeneratedClass",
+        "ObjectPath": "/Game/Athena/AI/Phoebe/NavFilter/NavFilter_Phoebe_NoSmashable.0"
+      },
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "AIEvaluator_Loot_Destination"
+      },
+      "NodeName": "Loot Move To",
+      "TreeAsset": {
+        "ObjectName": "BT_Phoebe_Loot_Skyfire:BehaviorTree",
+        "ObjectPath": "/Skyfire/Phoebe/BT_Phoebe_Loot_Skyfire.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BT_Phoebe_Loot_Skyfire:BTComposite_Selector_23:BTComposite_Selector",
+        "ObjectPath": "/Skyfire/Phoebe/BT_Phoebe_Loot_Skyfire.2"
+      }
+    }
+  },
+  {
+    "Type": "FortAthenaBTTask_Interact",
+    "Name": "FortAthenaBTTask_Interact_0",
+    "Outer": "BT_Phoebe_Loot_Skyfire",
+    "Properties": {
+      "InteractExecutionStatusKeySelector": {
+        "SelectedKeyName": "AIEvaluator_Loot_InteractionExecutionStatus"
+      },
+      "InteractContextInfoKeySelector": {
+        "SelectedKeyName": "AIEvaluator_Loot_InteractionContextInfo"
+      },
+      "NodeName": "Loot Interaction",
+      "TreeAsset": {
+        "ObjectName": "BT_Phoebe_Loot_Skyfire:BehaviorTree",
+        "ObjectPath": "/Skyfire/Phoebe/BT_Phoebe_Loot_Skyfire.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BT_Phoebe_Loot_Skyfire:BTComposite_Selector_23:BTComposite_Selector",
+        "ObjectPath": "/Skyfire/Phoebe/BT_Phoebe_Loot_Skyfire.2"
+      }
+    }
+  }
+]

@@ -1,0 +1,997 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_GA_TractorBeam_FallDamageImmunity",
+    "Outer": "GA_TractorBeam_FallDamageImmunity_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_DamagedActor",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_CustomEvent_Damage",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_InstigatedBy",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Controller:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_DamageCauser",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_HitLocation",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_FHitComponent",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "PrimitiveComponent:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_BoneName",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_Momentum",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 20,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "SignatureFunction": {
+          "ObjectName": "PawnLandedSignature__DelegateSignature:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 20,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "SignatureFunction": {
+          "ObjectName": "WaitGameplayTagDelegate__DelegateSignature:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_2",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 20,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "SignatureFunction": {
+          "ObjectName": "PawnDamagedSignature__DelegateSignature:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_IsClosed_Variable",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_bWasCancelled",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BP_ApplyGameplayEffectToOwner_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "ActiveGameplayEffectHandle:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_3",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 20,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "SignatureFunction": {
+          "ObjectName": "WaitGameplayTagDelegate__DelegateSignature:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetAvatarActorFromActorInfo_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_Hit",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 144,
+        "PropertyFlags": 549755813890,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "HitResult:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsFort_Pawn",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortPawn:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_WaitGameplayTagAdd_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "AbilityTask_WaitGameplayTagAdded:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetAvatarActorFromActorInfo_ReturnValue_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "K2Node_DynamicCast_AsGameplay_Tag_Asset_Interface",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "InterfaceClass": {
+          "ObjectName": "GameplayTagAssetInterface:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAnyMatchingGameplayTags_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Has_Been_Initd_Variable",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_WaitGameplayTagRemove_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "AbilityTask_WaitGameplayTagRemoved:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 8421377,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "OnDied",
+    "Outer": "GA_TractorBeam_FallDamageImmunity_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "DamagedActor",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Damage",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "InstigatedBy",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Controller:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DamageCauser",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "HitLocation",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FHitComponent",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524436,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "PrimitiveComponent:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "BoneName",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Momentum",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 201326592,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "PawnLanded",
+    "Outer": "GA_TractorBeam_FallDamageImmunity_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "Hit",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 144,
+        "PropertyFlags": 549890032022,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "HitResult:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 205520896,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "SetUpBinds",
+    "Outer": "GA_TractorBeam_FallDamageImmunity_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 201326592,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "SetUpWaits",
+    "Outer": "GA_TractorBeam_FallDamageImmunity_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 201326592,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "CallEnd",
+    "Outer": "GA_TractorBeam_FallDamageImmunity_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 201326592,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "K2_OnEndAbility",
+    "Outer": "GA_TractorBeam_FallDamageImmunity_C",
+    "SuperStruct": {
+      "ObjectName": "K2_OnEndAbility:Class",
+      "ObjectPath": 0
+    },
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bWasCancelled",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 134744064,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "K2_ActivateAbility",
+    "Outer": "GA_TractorBeam_FallDamageImmunity_C",
+    "SuperStruct": {
+      "ObjectName": "K2_ActivateAbility:Class",
+      "ObjectPath": 0
+    },
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 134744064,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "Removed_25985D45401CA3856EBB53A3EC6B959B",
+    "Outer": "GA_TractorBeam_FallDamageImmunity_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 201326592,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "Added_FE2D67D1499D24D88266D8AF64004279",
+    "Outer": "GA_TractorBeam_FallDamageImmunity_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 201326592,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GA_TractorBeam_FallDamageImmunity_C",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "GA_TractorBeam_FallDamageImmunity_C:ExecuteUbergraph_GA_TractorBeam_FallDamageImmunity:Function",
+        "ObjectPath": "/Nevada/Weapons/TractorBeam/GA_TractorBeam_FallDamageImmunity.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "FortGameplayAbility:Class",
+      "ObjectPath": 0
+    },
+    "Children": [
+      {
+        "ObjectName": "GA_TractorBeam_FallDamageImmunity_C:Added_FE2D67D1499D24D88266D8AF64004279:Function",
+        "ObjectPath": "/Nevada/Weapons/TractorBeam/GA_TractorBeam_FallDamageImmunity.9"
+      },
+      {
+        "ObjectName": "GA_TractorBeam_FallDamageImmunity_C:Removed_25985D45401CA3856EBB53A3EC6B959B:Function",
+        "ObjectPath": "/Nevada/Weapons/TractorBeam/GA_TractorBeam_FallDamageImmunity.8"
+      },
+      {
+        "ObjectName": "GA_TractorBeam_FallDamageImmunity_C:K2_ActivateAbility:Function",
+        "ObjectPath": "/Nevada/Weapons/TractorBeam/GA_TractorBeam_FallDamageImmunity.7"
+      },
+      {
+        "ObjectName": "GA_TractorBeam_FallDamageImmunity_C:K2_OnEndAbility:Function",
+        "ObjectPath": "/Nevada/Weapons/TractorBeam/GA_TractorBeam_FallDamageImmunity.6"
+      },
+      {
+        "ObjectName": "GA_TractorBeam_FallDamageImmunity_C:CallEnd:Function",
+        "ObjectPath": "/Nevada/Weapons/TractorBeam/GA_TractorBeam_FallDamageImmunity.5"
+      },
+      {
+        "ObjectName": "GA_TractorBeam_FallDamageImmunity_C:SetUpWaits:Function",
+        "ObjectPath": "/Nevada/Weapons/TractorBeam/GA_TractorBeam_FallDamageImmunity.4"
+      },
+      {
+        "ObjectName": "GA_TractorBeam_FallDamageImmunity_C:SetUpBinds:Function",
+        "ObjectPath": "/Nevada/Weapons/TractorBeam/GA_TractorBeam_FallDamageImmunity.3"
+      },
+      {
+        "ObjectName": "GA_TractorBeam_FallDamageImmunity_C:PawnLanded:Function",
+        "ObjectPath": "/Nevada/Weapons/TractorBeam/GA_TractorBeam_FallDamageImmunity.2"
+      },
+      {
+        "ObjectName": "GA_TractorBeam_FallDamageImmunity_C:OnDied:Function",
+        "ObjectPath": "/Nevada/Weapons/TractorBeam/GA_TractorBeam_FallDamageImmunity.1"
+      },
+      {
+        "ObjectName": "GA_TractorBeam_FallDamageImmunity_C:ExecuteUbergraph_GA_TractorBeam_FallDamageImmunity:Function",
+        "ObjectPath": "/Nevada/Weapons/TractorBeam/GA_TractorBeam_FallDamageImmunity.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 2105344,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "PointerToUberGraphFrame:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ClassProperty",
+        "Name": "GE_FallDamageImmunity",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Class:Class",
+          "ObjectPath": 0
+        },
+        "MetaClass": {
+          "ObjectName": "GameplayEffect:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "GEH_FallDamageImmunity",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "ActiveGameplayEffectHandle:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Delay_PostLand",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Tag_SurfaceSwimming",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayTag:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "TC_IgnoreApplication",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 32,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayTagContainer:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Tag_InVehicle",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayTag:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Delay_WaterSwimBind",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_GA_TractorBeam_FallDamageImmunity": {
+        "ObjectName": "GA_TractorBeam_FallDamageImmunity_C:ExecuteUbergraph_GA_TractorBeam_FallDamageImmunity:Function",
+        "ObjectPath": "/Nevada/Weapons/TractorBeam/GA_TractorBeam_FallDamageImmunity.0"
+      },
+      "OnDied": {
+        "ObjectName": "GA_TractorBeam_FallDamageImmunity_C:OnDied:Function",
+        "ObjectPath": "/Nevada/Weapons/TractorBeam/GA_TractorBeam_FallDamageImmunity.1"
+      },
+      "PawnLanded": {
+        "ObjectName": "GA_TractorBeam_FallDamageImmunity_C:PawnLanded:Function",
+        "ObjectPath": "/Nevada/Weapons/TractorBeam/GA_TractorBeam_FallDamageImmunity.2"
+      },
+      "SetUpBinds": {
+        "ObjectName": "GA_TractorBeam_FallDamageImmunity_C:SetUpBinds:Function",
+        "ObjectPath": "/Nevada/Weapons/TractorBeam/GA_TractorBeam_FallDamageImmunity.3"
+      },
+      "SetUpWaits": {
+        "ObjectName": "GA_TractorBeam_FallDamageImmunity_C:SetUpWaits:Function",
+        "ObjectPath": "/Nevada/Weapons/TractorBeam/GA_TractorBeam_FallDamageImmunity.4"
+      },
+      "CallEnd": {
+        "ObjectName": "GA_TractorBeam_FallDamageImmunity_C:CallEnd:Function",
+        "ObjectPath": "/Nevada/Weapons/TractorBeam/GA_TractorBeam_FallDamageImmunity.5"
+      },
+      "K2_OnEndAbility": {
+        "ObjectName": "GA_TractorBeam_FallDamageImmunity_C:K2_OnEndAbility:Function",
+        "ObjectPath": "/Nevada/Weapons/TractorBeam/GA_TractorBeam_FallDamageImmunity.6"
+      },
+      "K2_ActivateAbility": {
+        "ObjectName": "GA_TractorBeam_FallDamageImmunity_C:K2_ActivateAbility:Function",
+        "ObjectPath": "/Nevada/Weapons/TractorBeam/GA_TractorBeam_FallDamageImmunity.7"
+      },
+      "Removed_25985D45401CA3856EBB53A3EC6B959B": {
+        "ObjectName": "GA_TractorBeam_FallDamageImmunity_C:Removed_25985D45401CA3856EBB53A3EC6B959B:Function",
+        "ObjectPath": "/Nevada/Weapons/TractorBeam/GA_TractorBeam_FallDamageImmunity.8"
+      },
+      "Added_FE2D67D1499D24D88266D8AF64004279": {
+        "ObjectName": "GA_TractorBeam_FallDamageImmunity_C:Added_FE2D67D1499D24D88266D8AF64004279:Function",
+        "ObjectPath": "/Nevada/Weapons/TractorBeam/GA_TractorBeam_FallDamageImmunity.9"
+      }
+    },
+    "ClassFlags": 264208,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Engine",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__GA_TractorBeam_FallDamageImmunity_C:GA_TractorBeam_FallDamageImmunity_C",
+      "ObjectPath": "/Nevada/Weapons/TractorBeam/GA_TractorBeam_FallDamageImmunity.11"
+    }
+  },
+  {
+    "Type": "GA_TractorBeam_FallDamageImmunity_C",
+    "Name": "Default__GA_TractorBeam_FallDamageImmunity_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "GE_FallDamageImmunity": {
+        "ObjectName": "GE_Athena_FallDamageImmunity_C:BlueprintGeneratedClass",
+        "ObjectPath": "/Game/Athena/Items/Parents/FallImmunity/GE_Athena_FallDamageImmunity.0"
+      },
+      "GEH_FallDamageImmunity": {
+        "Handle": -1,
+        "bPassedFiltersAndWasExecuted": false
+      },
+      "Delay_PostLand": 0.066,
+      "Tag_SurfaceSwimming": {
+        "TagName": "MovementMode.SurfaceSwimming"
+      },
+      "TC_IgnoreApplication": [
+        "Building"
+      ],
+      "Tag_InVehicle": {
+        "TagName": "Gameplay.Action.Player.AthenaInVehicle"
+      },
+      "Delay_WaterSwimBind": 0.2,
+      "ActivationType": "EFortGameplayAbilityActivation::Passive",
+      "NetExecutionPolicy": "EGameplayAbilityNetExecutionPolicy::ServerOnly",
+      "NetSecurityPolicy": "EGameplayAbilityNetSecurityPolicy::ServerOnly"
+    }
+  }
+]

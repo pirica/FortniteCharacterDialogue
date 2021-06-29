@@ -1,0 +1,47 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "Veh_Nevada_Battery_Empty_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "Veh_Nevada_Battery_Empty_Cue:SoundNodeModulator_0:SoundNodeModulator",
+        "ObjectPath": "/Nevada/Audio/Cues/Veh_Nevada_Battery_Empty_Cue.1"
+      },
+      "VolumeMultiplier": 0.5,
+      "SoundClassObject": {
+        "ObjectName": "Fort_Vehicles_Exterior:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Vehicles_Exterior.0"
+      },
+      "Duration": 4.8702292,
+      "MaxDistance": 16000.0,
+      "AttenuationSettings": {
+        "ObjectName": "Veh_Nevada_Movement_Close_Att:SoundAttenuation",
+        "ObjectPath": "/Nevada/Audio/Settings/Veh_Nevada_Movement_Close_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "Veh_Nevada_Battery_Empty_Cue",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "Veh_Nevada_Battery_Empty_Cue:SoundNodeWavePlayer_1:SoundNodeWavePlayer",
+          "ObjectPath": "/Nevada/Audio/Cues/Veh_Nevada_Battery_Empty_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "Veh_Nevada_Battery_Empty_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Nevada/Audio/Cues/Veh_Nevada_Battery_Drained_01.Veh_Nevada_Battery_Drained_01",
+        "SubPathString": ""
+      }
+    }
+  }
+]

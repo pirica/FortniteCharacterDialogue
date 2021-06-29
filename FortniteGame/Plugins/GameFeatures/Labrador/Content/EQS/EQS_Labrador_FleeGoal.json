@@ -1,0 +1,161 @@
+[
+  {
+    "Type": "EnvQuery",
+    "Name": "EQS_Labrador_FleeGoal",
+    "Properties": {
+      "QueryName": "EQS_NPC_Wander_FleeGoal_Terrestrial",
+      "Options": [
+        {
+          "ObjectName": "EQS_Labrador_FleeGoal:EnvQueryOption_1:EnvQueryOption",
+          "ObjectPath": "/Labrador/EQS/EQS_Labrador_FleeGoal.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_OnCircle",
+    "Name": "EnvQueryGenerator_OnCircle_0",
+    "Outer": "EQS_Labrador_FleeGoal",
+    "Properties": {
+      "NumberOfPoints": {
+        "DefaultValue": 12
+      },
+      "PointOnCircleSpacingMethod": "EPointOnCircleSpacingMethod::ByNumberOfPoints",
+      "TraceData": {
+        "VersionNum": 1,
+        "NavigationFilter": {
+          "ObjectName": "NavFilter_NPC_AnyTraversable_C:BlueprintGeneratedClass",
+          "ObjectPath": "/Game/Athena/AI/NavFilters/NavFilter_NPC_AnyTraversable.0"
+        },
+        "ExtentX": 0.0,
+        "SerializedChannel": "ECollisionChannel::ECC_Visibility",
+        "TraceMode": "EEnvQueryTrace::NavigationOverLedges"
+      },
+      "ProjectionData": {
+        "VersionNum": 1,
+        "NavigationFilter": {
+          "ObjectName": "NavFilter_NPC_AnyTraversable_C:BlueprintGeneratedClass",
+          "ObjectPath": "/Game/Athena/AI/NavFilters/NavFilter_NPC_AnyTraversable.0"
+        },
+        "SerializedChannel": "ECollisionChannel::ECC_Visibility",
+        "TraceMode": "EEnvQueryTrace::Navigation"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_1",
+    "Outer": "EQS_Labrador_FleeGoal",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EQS_Labrador_FleeGoal:EnvQueryGenerator_OnCircle_0:EnvQueryGenerator_OnCircle",
+        "ObjectPath": "/Labrador/EQS/EQS_Labrador_FleeGoal.1"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EQS_Labrador_FleeGoal:EnvQueryTest_PathfindingBatch_0:EnvQueryTest_PathfindingBatch",
+          "ObjectPath": "/Labrador/EQS/EQS_Labrador_FleeGoal.5"
+        },
+        {
+          "ObjectName": "EQS_Labrador_FleeGoal:EnvQueryTest_Distance_0:EnvQueryTest_Distance",
+          "ObjectPath": "/Labrador/EQS/EQS_Labrador_FleeGoal.3"
+        },
+        {
+          "ObjectName": "EQS_Labrador_FleeGoal:EnvQueryTest_Dot_0:EnvQueryTest_Dot",
+          "ObjectPath": "/Labrador/EQS/EQS_Labrador_FleeGoal.4"
+        },
+        {
+          "ObjectName": "EQS_Labrador_FleeGoal:FortQueryTest_Random_1:FortQueryTest_Random",
+          "ObjectPath": "/Labrador/EQS/EQS_Labrador_FleeGoal.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_0",
+    "Outer": "EQS_Labrador_FleeGoal",
+    "Properties": {
+      "TestMode": "EEnvTestDistance::Distance2D",
+      "TestOrder": 1,
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "TestComment": "Remove point I'm too close of",
+      "FilterType": "EEnvTestFilterType::Minimum",
+      "FloatValueMin": {
+        "DefaultValue": 500.0
+      },
+      "ScoringEquation": "EEnvTestScoreEquation::InverseLinear",
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Dot",
+    "Name": "EnvQueryTest_Dot_0",
+    "Outer": "EQS_Labrador_FleeGoal",
+    "Properties": {
+      "LineA": {
+        "LineFrom": {
+          "ObjectName": "EnvQueryContext_Querier:Class",
+          "ObjectPath": 0
+        },
+        "LineTo": {
+          "ObjectName": "EnvQueryContext_Item:Class",
+          "ObjectPath": 0
+        },
+        "DirMode": "EEnvDirection::TwoPoints"
+      },
+      "LineB": {
+        "LineTo": {
+          "ObjectName": "FortQueryContext_Goal:Class",
+          "ObjectPath": 0
+        }
+      },
+      "TestMode": "EEnvTestDot::Dot2D",
+      "TestOrder": 2,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "TestComment": "Prefer in direction of Goal",
+      "ScoringEquation": "EEnvTestScoreEquation::InverseLinear",
+      "ClampMinType": "EEnvQueryTestClamping::SpecifiedValue",
+      "ClampMaxType": "EEnvQueryTestClamping::SpecifiedValue",
+      "ScoreClampMin": {
+        "DefaultValue": -1.0,
+        "DataField": "FloatValue"
+      },
+      "ScoreClampMax": {
+        "DefaultValue": 1.0,
+        "DataField": "FloatValue"
+      },
+      "ScoringFactor": {
+        "DataField": "FloatValue"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_PathfindingBatch",
+    "Name": "EnvQueryTest_PathfindingBatch_0",
+    "Outer": "EQS_Labrador_FleeGoal",
+    "Properties": {
+      "FilterClass": {
+        "ObjectName": "NavFilter_NPC_AnyTraversable_C:BlueprintGeneratedClass",
+        "ObjectPath": "/Game/Athena/AI/NavFilters/NavFilter_NPC_AnyTraversable.0"
+      },
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "TestComment": "Remove point  you cannot path to",
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "FortQueryTest_Random",
+    "Name": "FortQueryTest_Random_1",
+    "Outer": "EQS_Labrador_FleeGoal",
+    "Properties": {
+      "TestOrder": 3,
+      "FloatValueMax": {
+        "DefaultValue": 1.0
+      },
+      "VerNum": 1
+    }
+  }
+]

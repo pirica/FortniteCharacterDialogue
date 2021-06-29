@@ -1,0 +1,500 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "SkyfireMutator_C",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SkyfireMutator_C:SimpleConstructionScript_0:SimpleConstructionScript",
+        "ObjectPath": "/Skyfire/Mutators/SkyfireMutator.4"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "FortAthenaMutator_Skyfire:Class",
+      "ObjectPath": 0
+    },
+    "Children": [],
+    "ChildProperties": [],
+    "FuncMap": {},
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Engine",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__SkyfireMutator_C:SkyfireMutator_C",
+      "ObjectPath": "/Skyfire/Mutators/SkyfireMutator.1"
+    }
+  },
+  {
+    "Type": "SkyfireMutator_C",
+    "Name": "Default__SkyfireMutator_C",
+    "Properties": {
+      "AbductionTeleportStartEventTag": {
+        "TagName": "Event.Athena.Item.AwfulDuck.Abduct.Teleport"
+      },
+      "AbductionTeleportCompleteEventTag": {
+        "TagName": "Event.Athena.Item.AwfulDuck.Abduct.Complete"
+      },
+      "BeingAbductedTag": {
+        "TagName": "Athena.Gameplay.Status.BeingAbducted"
+      },
+      "SkyfireWeaponHolsterId": "SkyfireWeaponHolsterID",
+      "TODOverrideActorClass": {
+        "ObjectName": "TODM_Volume_Override_Skyfire_Interior_C:BlueprintGeneratedClass",
+        "ObjectPath": "/Game/TimeOfDay/TODM/BR/TODM_Volume_Override_Skyfire_Interior.0"
+      },
+      "TimeOrbClass": {
+        "AssetPathName": "/Skyfire/Gameplay/Orbs/TimeOrb.TimeOrb_C",
+        "SubPathString": ""
+      },
+      "SecondsGrantedOnTimePickup": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+            "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+          },
+          "RowName": "Skyfire.TimeOrbPickupTime"
+        }
+      },
+      "InitialTimeBeforeLootRoomTeleport": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+            "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+          },
+          "RowName": "Skyfire.StartTime"
+        }
+      },
+      "MaxTimeBeforeLootRoomTeleport": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+            "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+          },
+          "RowName": "Skyfire.MaxTime"
+        }
+      },
+      "KnockedOutTeleportToLootRoomTimeReduction": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+            "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+          },
+          "RowName": "Skyfire.KnockedOutTeleportToLootRoomTimeReduction"
+        }
+      },
+      "KnockedOutPrisonPenaltyWaitTime": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+            "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+          },
+          "RowName": "Skyfire.KnockedOutPrisonPenaltyWaitTime"
+        }
+      },
+      "InitialLootRarity": "EFortRarity::Common",
+      "LootRoomTagByRarityMap": {
+        "EFortRarity::Uncommon": {
+          "TagName": "Rarity.Uncommon"
+        },
+        "EFortRarity::Rare": {
+          "TagName": "Rarity.Rare"
+        },
+        "EFortRarity::Epic": {
+          "TagName": "Rarity.VeryRare"
+        },
+        "EFortRarity::Legendary": {
+          "TagName": "Rarity.SuperRare"
+        },
+        "EFortRarity::Common": {
+          "TagName": "Rarity.Common"
+        }
+      },
+      "bStartExitLootRoomTimerAfterChestOpened": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+            "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+          },
+          "RowName": "Skyfire.LootRoom.StartExitTimerOnChestOpened"
+        }
+      },
+      "bStartExitLootRoomTimerAfterItemPickup": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+            "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+          },
+          "RowName": "Skyfire.LootRoom.StartExitTimerOnItemPickedUp"
+        }
+      },
+      "LootRoomPreCountdownTimeByRarity": {
+        "EFortRarity::Common": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+              "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+            },
+            "RowName": "Skyfire.LootRoom.PreCountdownTime.Common"
+          },
+          "RegistryType": {
+            "Name": null
+          }
+        },
+        "EFortRarity::Uncommon": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+              "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+            },
+            "RowName": "Skyfire.LootRoom.PreCountdownTime.Uncommon"
+          },
+          "RegistryType": {
+            "Name": null
+          }
+        },
+        "EFortRarity::Rare": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+              "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+            },
+            "RowName": "Skyfire.LootRoom.PreCountdownTime.Rare"
+          },
+          "RegistryType": {
+            "Name": null
+          }
+        },
+        "EFortRarity::Epic": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+              "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+            },
+            "RowName": "Skyfire.LootRoom.PreCountdownTime.Epic"
+          },
+          "RegistryType": {
+            "Name": null
+          }
+        },
+        "EFortRarity::Legendary": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+              "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+            },
+            "RowName": "Skyfire.LootRoom.PreCountdownTime.Legendary"
+          },
+          "RegistryType": {
+            "Name": null
+          }
+        }
+      },
+      "LootRoomTimeByRarity": {
+        "EFortRarity::Common": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+              "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+            },
+            "RowName": "Skyfire.LootRoom.Time.Common"
+          },
+          "RegistryType": {
+            "Name": null
+          }
+        },
+        "EFortRarity::Uncommon": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+              "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+            },
+            "RowName": "Skyfire.LootRoom.Time.Uncommon"
+          },
+          "RegistryType": {
+            "Name": null
+          }
+        },
+        "EFortRarity::Rare": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+              "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+            },
+            "RowName": "Skyfire.LootRoom.Time.Rare"
+          },
+          "RegistryType": {
+            "Name": null
+          }
+        },
+        "EFortRarity::Epic": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+              "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+            },
+            "RowName": "Skyfire.LootRoom.Time.Epic"
+          },
+          "RegistryType": {
+            "Name": null
+          }
+        },
+        "EFortRarity::Legendary": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+              "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+            },
+            "RowName": "Skyfire.LootRoom.Time.Legendary"
+          },
+          "RegistryType": {
+            "Name": null
+          }
+        }
+      },
+      "PlayspaceTeleportSquadPointTag": {
+        "TagName": "Skyfire.SquadStart"
+      },
+      "PrisonTeleportSquadPointTag": {
+        "TagName": "EnvItem.Mother.SkyfireStart"
+      },
+      "PrisonTime": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+            "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+          },
+          "RowName": "Skyfire.TimeInPrisonCell"
+        }
+      },
+      "MinPrisonTime": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+            "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+          },
+          "RowName": "Skyfire.MinTimeInPrisonCell"
+        }
+      },
+      "TimeToWaitBeforeStartingSkyfireWithJustBots": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+            "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+          },
+          "RowName": "Skyfire.StartTimeWithJustBots"
+        }
+      },
+      "PrisonAndPlayspaceItemsAndAS": {
+        "Items": [
+          {
+            "Count": 1,
+            "Item": {
+              "ObjectName": "WID_Skyfire_KnockbackWeapon_Launcher:FortWeaponRangedItemDefinition",
+              "ObjectPath": "/Skyfire/Gameplay/KnockbackWeapon/Launcher/WID_Skyfire_KnockbackWeapon_Launcher.0"
+            }
+          }
+        ],
+        "AbilitySet": {
+          "AssetPathName": "/Skyfire/Gameplay/AS_PrisonAndPlayspace.AS_PrisonAndPlayspace",
+          "SubPathString": ""
+        }
+      },
+      "PrisonThroughLootRoomItemsAndAS": {
+        "Items": [
+          {
+            "Count": 1,
+            "Item": {
+              "ObjectName": "AGID_Skyfire_JumpBackpack:AthenaGadgetItemDefinition",
+              "ObjectPath": "/Skyfire/Gameplay/AGID_Skyfire_JumpBackpack.0"
+            }
+          }
+        ],
+        "AbilitySet": {
+          "AssetPathName": "/Skyfire/Gameplay/AS_PrisonThroughLootRoom.AS_PrisonThroughLootRoom",
+          "SubPathString": ""
+        }
+      },
+      "InPrisonAndPenaltyPrisonGE": {
+        "ObjectName": "GE_Skyfire_InPrison_C:BlueprintGeneratedClass",
+        "ObjectPath": "/Skyfire/Gameplay/GE_Skyfire_InPrison.0"
+      },
+      "PlayspaceItemsAndAS": {
+        "AbilitySet": {
+          "AssetPathName": "/Skyfire/Gameplay/AS_InPlayspace.AS_InPlayspace",
+          "SubPathString": ""
+        }
+      },
+      "LootRoomItemsAndAS": {
+        "AbilitySet": {
+          "AssetPathName": "/Skyfire/Gameplay/AS_InLootRoom.AS_InLootRoom",
+          "SubPathString": ""
+        }
+      },
+      "ExitSkydiveSafeZoneRadiusPercent": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+            "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+          },
+          "RowName": "Skyfire.ExitSkyfdiveSafeZoneRadiusPercent"
+        }
+      },
+      "ExitSkydiveSquadRadius": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+            "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+          },
+          "RowName": "Skyfire.ExitSkydiveSquadRadius"
+        }
+      },
+      "ExitSkydiveHeight": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+            "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+          },
+          "RowName": "Skyfire.ExitSkydiveHeight"
+        }
+      },
+      "BlockStormCenterActorClass": {
+        "ObjectName": "SkyfireCenterPoint_C:BlueprintGeneratedClass",
+        "ObjectPath": "/Skyfire/LevelOverlays/SkyfireCenterPoint.0"
+      },
+      "BlockStormRadius": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+            "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+          },
+          "RowName": "Skyfire.BlockStormRadius"
+        }
+      },
+      "TeleportAS": {
+        "ObjectName": "AS_TeleportHandler:FortAbilitySet",
+        "ObjectPath": "/Skyfire/Gameplay/Teleport/AS_TeleportHandler.0"
+      },
+      "PrisonToPlayspaceTeleportData": {
+        "PreTeleportTime": {
+          "Value": 6.1
+        },
+        "PreTeleportGameplayEventTag": {
+          "TagName": "Event.Athena.Skyfire.InternalTeleport.Start"
+        },
+        "PostTeleportGameplayEventTag": {
+          "TagName": "Event.Athena.Skyfire.InternalTeleport.End"
+        }
+      },
+      "EnterLootRoomTeleportData": {
+        "PreTeleportTime": {
+          "Value": 6.1
+        },
+        "PreTeleportGameplayEventTag": {
+          "TagName": "Event.Athena.Skyfire.InternalTeleport.Start"
+        },
+        "PostTeleportGameplayEventTag": {
+          "TagName": "Event.Athena.Skyfire.InternalTeleport.End"
+        }
+      },
+      "ExitSkydiveTeleportData": {
+        "PreTeleportTime": {
+          "Value": 6.1
+        },
+        "PreTeleportGameplayEventTag": {
+          "TagName": "Event.Athena.Skyfire.InternalTeleport.Start"
+        },
+        "PostTeleportGameplayEventTag": {
+          "TagName": "Event.Athena.Skyfire.InternalTeleport.End"
+        }
+      },
+      "KnockedOutTeleportData": {
+        "PreTeleportGameplayEventTag": {
+          "TagName": "Event.Athena.Skyfire.KnockedOutTeleport.Start"
+        },
+        "PostTeleportGameplayEventTag": {
+          "TagName": "Event.Athena.Skyfire.KnockedOutTeleport.End"
+        }
+      },
+      "SquadMemberStatusWidgetClass": {
+        "AssetPathName": "/Skyfire/UI/Skyfire_SquadMemberStatus.Skyfire_SquadMemberStatus_C",
+        "SubPathString": ""
+      },
+      "SquadMemberStatusWidgetExtensionSlot": "EUIExtensionSlot::RightOfTeammateStatus",
+      "SkyfireBotPlayerPawnComponentClass": {
+        "ObjectName": "SkyfireBotPlayerPawnComponent_C:BlueprintGeneratedClass",
+        "ObjectPath": "/Skyfire/Phoebe/SkyfireBotPlayerPawnComponent.0"
+      },
+      "SkyfireAudioManagerClass": {
+        "ObjectName": "Skyfire_AudioManager_BP_C:BlueprintGeneratedClass",
+        "ObjectPath": "/Skyfire/Sound/Skyfire_AudioManager_BP.20"
+      },
+      "ClearCachedIndicatorsInterval": 3.0,
+      "SkyfireChestTag": {
+        "TagName": "Building.Type.Container.TreasureChest.Skyfire"
+      },
+      "RootComponent": null
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "SkyfireMutator_C"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "SceneComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SkyfireMutator_C:DefaultSceneRoot_GEN_VARIABLE:SceneComponent",
+        "ObjectPath": "/Skyfire/Mutators/SkyfireMutator.2"
+      },
+      "VariableGuid": "D0C24FF5-44CB4B1B-F7C8E498-9B3891D2",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "SkyfireMutator_C",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SimpleConstructionScript_0:SCS_Node_0:SCS_Node",
+        "ObjectPath": "/Skyfire/Mutators/SkyfireMutator.3"
+      }
+    }
+  }
+]

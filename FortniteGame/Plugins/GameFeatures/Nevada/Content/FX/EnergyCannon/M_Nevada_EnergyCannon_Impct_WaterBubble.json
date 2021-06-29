@@ -1,0 +1,87 @@
+[
+  {
+    "Type": "MaterialInstanceConstant",
+    "Name": "M_Nevada_EnergyCannon_Impct_WaterBubble",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "M_NFX_Bubbles_Base:MaterialInstanceConstant",
+        "ObjectPath": "/Game/Effects/Niagara/Emitters/Water/Bubbles/M_NFX_Bubbles_Base.0"
+      },
+      "bHasStaticPermutationResource": true,
+      "ScalarParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "ZOffset",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": -50.0,
+          "ExpressionGUID": "FBAD38F0-4FA7A1EC-8733DC9B-293AB945"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "RefractionDepthBias",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 0.0,
+          "ExpressionGUID": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "VectorParameterValues": [
+        {
+          "ParameterInfo": {
+            "Name": "Water Displacement Multiplier",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "R": 0.2,
+            "G": 0.2,
+            "B": 1.0,
+            "A": 0.0,
+            "Hex": "3333FF"
+          },
+          "ExpressionGUID": "9DD01368-4276DC4A-1CE51DB0-576566A7"
+        }
+      ],
+      "BasePropertyOverrides": {
+        "BlendMode": "EBlendMode::BLEND_Masked",
+        "ShadingModel": "EMaterialShadingModel::MSM_Subsurface",
+        "OpacityMaskClipValue": 0.3333
+      },
+      "StaticParameters": {
+        "StaticSwitchParameters": [
+          {
+            "Value": true,
+            "ParameterInfo": {
+              "Name": "UseWaterDisplacement",
+              "Association": "EMaterialParameterAssociation::GlobalParameter",
+              "Index": -1
+            },
+            "bOverride": true,
+            "ExpressionGUID": "5E868065-4EA96F4D-AE3DF18B-B38E36FE"
+          }
+        ]
+      },
+      "CachedReferencedTextures": [
+        {
+          "ObjectName": "T_Sphere_N:Texture2D",
+          "ObjectPath": "/Game/Effects/Fort_Effects/Textures/Mask/T_Sphere_N.0"
+        },
+        {
+          "ObjectName": "ReflectionMap2:Texture2D",
+          "ObjectPath": "/Game/Packages/Fortress_SharedMaterials/Textures/ReflectionMap2.0"
+        },
+        {
+          "ObjectName": "T_Sphere_Mask:Texture2D",
+          "ObjectPath": "/Game/Effects/Fort_Effects/Textures/Gameplay/T_Sphere_Mask.0"
+        },
+        {
+          "ObjectName": "T_WaterEmissiveMask:Texture2D",
+          "ObjectPath": "/Game/Effects/Niagara/Emitters/Water/T_WaterEmissiveMask.0"
+        }
+      ]
+    }
+  }
+]

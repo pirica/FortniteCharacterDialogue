@@ -2,31 +2,110 @@
   {
     "Type": "Function",
     "Name": "ExecuteUbergraph_BP_PlayerPawn_SloneClone",
-    "Properties": {}
+    "Outer": "BP_PlayerPawn_SloneClone_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAuthority_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnSystemAttached_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "NiagaraComponent:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 32769,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "Function",
     "Name": "UnhideClone",
-    "Properties": {}
+    "Outer": "BP_PlayerPawn_SloneClone_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 201326592,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "Function",
     "Name": "ShowClone",
-    "Properties": {}
+    "Outer": "BP_PlayerPawn_SloneClone_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 201326592,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "Function",
     "Name": "ReceiveBeginPlay",
-    "Properties": {}
+    "Outer": "BP_PlayerPawn_SloneClone_C",
+    "Super": "ReceiveBeginPlay",
+    "SuperStruct": {
+      "ObjectName": "BP_PlayerPawn_NonParticipant_Boss_C:ReceiveBeginPlay:Function",
+      "ObjectPath": "/Game/Athena/AI/NPCs/Base/BP_PlayerPawn_NonParticipant_Boss.10"
+    },
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 134744064,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "Function",
     "Name": "OnRep_ShowPawn",
-    "Properties": {}
+    "Outer": "BP_PlayerPawn_SloneClone_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 201326592,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "BlueprintGeneratedClass",
     "Name": "BP_PlayerPawn_SloneClone_C",
+    "Super": "BP_PlayerPawn_Slone_C",
     "Properties": {
       "NumReplicatedProperties": 1,
       "bHasCookedComponentInstancingData": true,
@@ -42,11 +121,122 @@
         "ObjectName": "BP_PlayerPawn_SloneClone_C:ExecuteUbergraph_BP_PlayerPawn_SloneClone:Function",
         "ObjectPath": "/Slone/NPCs/Slone/SloneClone/Pawns/BP_PlayerPawn_SloneClone.0"
       }
+    },
+    "SuperStruct": {
+      "ObjectName": "BP_PlayerPawn_Slone_C:BlueprintGeneratedClass",
+      "ObjectPath": "/Slone/NPCs/Slone/Slone/Pawns/BP_PlayerPawn_Slone.0"
+    },
+    "Children": [
+      {
+        "ObjectName": "BP_PlayerPawn_SloneClone_C:OnRep_ShowPawn:Function",
+        "ObjectPath": "/Slone/NPCs/Slone/SloneClone/Pawns/BP_PlayerPawn_SloneClone.4"
+      },
+      {
+        "ObjectName": "BP_PlayerPawn_SloneClone_C:ReceiveBeginPlay:Function",
+        "ObjectPath": "/Slone/NPCs/Slone/SloneClone/Pawns/BP_PlayerPawn_SloneClone.3"
+      },
+      {
+        "ObjectName": "BP_PlayerPawn_SloneClone_C:ShowClone:Function",
+        "ObjectPath": "/Slone/NPCs/Slone/SloneClone/Pawns/BP_PlayerPawn_SloneClone.2"
+      },
+      {
+        "ObjectName": "BP_PlayerPawn_SloneClone_C:UnhideClone:Function",
+        "ObjectPath": "/Slone/NPCs/Slone/SloneClone/Pawns/BP_PlayerPawn_SloneClone.1"
+      },
+      {
+        "ObjectName": "BP_PlayerPawn_SloneClone_C:ExecuteUbergraph_BP_PlayerPawn_SloneClone:Function",
+        "ObjectPath": "/Slone/NPCs/Slone/SloneClone/Pawns/BP_PlayerPawn_SloneClone.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 2105344,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "PointerToUberGraphFrame:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VFXSystemOnSpawn",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "NiagaraSystem:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "ShowPawn",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 4295032869,
+        "RepIndex": 171,
+        "RepNotifyFunc": "OnRep_ShowPawn",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_PlayerPawn_SloneClone": {
+        "ObjectName": "BP_PlayerPawn_SloneClone_C:ExecuteUbergraph_BP_PlayerPawn_SloneClone:Function",
+        "ObjectPath": "/Slone/NPCs/Slone/SloneClone/Pawns/BP_PlayerPawn_SloneClone.0"
+      },
+      "UnhideClone": {
+        "ObjectName": "BP_PlayerPawn_SloneClone_C:UnhideClone:Function",
+        "ObjectPath": "/Slone/NPCs/Slone/SloneClone/Pawns/BP_PlayerPawn_SloneClone.1"
+      },
+      "ShowClone": {
+        "ObjectName": "BP_PlayerPawn_SloneClone_C:ShowClone:Function",
+        "ObjectPath": "/Slone/NPCs/Slone/SloneClone/Pawns/BP_PlayerPawn_SloneClone.2"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "BP_PlayerPawn_SloneClone_C:ReceiveBeginPlay:Function",
+        "ObjectPath": "/Slone/NPCs/Slone/SloneClone/Pawns/BP_PlayerPawn_SloneClone.3"
+      },
+      "OnRep_ShowPawn": {
+        "ObjectName": "BP_PlayerPawn_SloneClone_C:OnRep_ShowPawn:Function",
+        "ObjectPath": "/Slone/NPCs/Slone/SloneClone/Pawns/BP_PlayerPawn_SloneClone.4"
+      }
+    },
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Game",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__BP_PlayerPawn_SloneClone_C:BP_PlayerPawn_SloneClone_C",
+      "ObjectPath": "/Slone/NPCs/Slone/SloneClone/Pawns/BP_PlayerPawn_SloneClone.6"
     }
   },
   {
     "Type": "BP_PlayerPawn_SloneClone_C",
     "Name": "Default__BP_PlayerPawn_SloneClone_C",
+    "Template": "Default__BP_PlayerPawn_Slone_C",
     "Properties": {
       "UberGraphFrame": {},
       "VFXSystemOnSpawn": {
@@ -168,6 +358,8 @@
   {
     "Type": "AudioComponent",
     "Name": "FeedbackAudioComp0",
+    "Outer": "Default__BP_PlayerPawn_SloneClone_C",
+    "Template": "FeedbackAudioComp0",
     "Properties": {
       "AttachParent": {
         "ObjectName": "Default__BP_PlayerPawn_SloneClone_C:CollisionCylinder:CapsuleComponent",
@@ -178,6 +370,8 @@
   {
     "Type": "AudioComponent",
     "Name": "InAirAudioComp",
+    "Outer": "Default__BP_PlayerPawn_SloneClone_C",
+    "Template": "InAirAudioComp",
     "Properties": {
       "AttachParent": {
         "ObjectName": "Default__BP_PlayerPawn_SloneClone_C:CharacterMesh0:FortPooledSkelMeshComponent",
@@ -188,36 +382,44 @@
   {
     "Type": "CapsuleComponent",
     "Name": "CollisionCylinder",
-    "Properties": {}
+    "Outer": "Default__BP_PlayerPawn_SloneClone_C",
+    "Template": "CollisionCylinder"
   },
   {
     "Type": "FortActorComponent_Affiliation",
     "Name": "AffiliationComponent",
-    "Properties": {}
+    "Outer": "Default__BP_PlayerPawn_SloneClone_C",
+    "Template": "AffiliationComponent"
   },
   {
     "Type": "FortGenericDataStoreManagerComponent",
     "Name": "GeneralDataStore",
-    "Properties": {}
+    "Outer": "Default__BP_PlayerPawn_SloneClone_C",
+    "Template": "GeneralDataStore"
   },
   {
     "Type": "FortMovementComp_CharacterAthena",
     "Name": "CharMoveComp",
-    "Properties": {}
+    "Outer": "Default__BP_PlayerPawn_SloneClone_C",
+    "Template": "CharMoveComp"
   },
   {
     "Type": "FortPawnComponent_Convert",
     "Name": "ConvertComp",
-    "Properties": {}
+    "Outer": "Default__BP_PlayerPawn_SloneClone_C",
+    "Template": "ConvertComp"
   },
   {
     "Type": "FortPawnComponent_Tether",
     "Name": "TetherComp",
-    "Properties": {}
+    "Outer": "Default__BP_PlayerPawn_SloneClone_C",
+    "Template": "TetherComp"
   },
   {
     "Type": "FortPooledSkelMeshComponent",
     "Name": "CharacterMesh0",
+    "Outer": "Default__BP_PlayerPawn_SloneClone_C",
+    "Template": "CharacterMesh0",
     "Properties": {
       "AttachParent": {
         "ObjectName": "Default__BP_PlayerPawn_SloneClone_C:CollisionCylinder:CapsuleComponent",
@@ -227,11 +429,14 @@
   },
   {
     "Type": "InheritableComponentHandler",
-    "Properties": {}
+    "Name": "InheritableComponentHandler",
+    "Outer": "BP_PlayerPawn_SloneClone_C"
   },
   {
     "Type": "ParticleSystemComponent",
     "Name": "HitDamageFX",
+    "Outer": "Default__BP_PlayerPawn_SloneClone_C",
+    "Template": "HitDamageFX",
     "Properties": {
       "AutoAttachParent": {
         "ObjectName": "Default__BP_PlayerPawn_SloneClone_C:CollisionCylinder:CapsuleComponent",
@@ -246,6 +451,8 @@
   {
     "Type": "ParticleSystemComponent",
     "Name": "PlayerInWaterFX",
+    "Outer": "Default__BP_PlayerPawn_SloneClone_C",
+    "Template": "PlayerInWaterFX",
     "Properties": {
       "AttachParent": {
         "ObjectName": "Default__BP_PlayerPawn_SloneClone_C:CollisionCylinder:CapsuleComponent",
@@ -256,6 +463,8 @@
   {
     "Type": "ParticleSystemComponent",
     "Name": "PlayerInWaterSurfaceSwimmingFX",
+    "Outer": "Default__BP_PlayerPawn_SloneClone_C",
+    "Template": "PlayerInWaterSurfaceSwimmingFX",
     "Properties": {
       "AttachParent": {
         "ObjectName": "Default__BP_PlayerPawn_SloneClone_C:CollisionCylinder:CapsuleComponent",
@@ -266,6 +475,8 @@
   {
     "Type": "ParticleSystemComponent",
     "Name": "PlayerRunLandFX",
+    "Outer": "Default__BP_PlayerPawn_SloneClone_C",
+    "Template": "PlayerRunLandFX",
     "Properties": {
       "AutoAttachParent": {
         "ObjectName": "Default__BP_PlayerPawn_SloneClone_C:CharacterMesh0:FortPooledSkelMeshComponent",
@@ -280,6 +491,8 @@
   {
     "Type": "ParticleSystemComponent",
     "Name": "PlayerSlideLandFX",
+    "Outer": "Default__BP_PlayerPawn_SloneClone_C",
+    "Template": "PlayerSlideLandFX",
     "Properties": {
       "AutoAttachParent": {
         "ObjectName": "Default__BP_PlayerPawn_SloneClone_C:CharacterMesh0:FortPooledSkelMeshComponent",
@@ -294,6 +507,8 @@
   {
     "Type": "ParticleSystemComponent",
     "Name": "PlayerWalkLandFX",
+    "Outer": "Default__BP_PlayerPawn_SloneClone_C",
+    "Template": "PlayerWalkLandFX",
     "Properties": {
       "AutoAttachParent": {
         "ObjectName": "Default__BP_PlayerPawn_SloneClone_C:CharacterMesh0:FortPooledSkelMeshComponent",
@@ -308,11 +523,12 @@
   {
     "Type": "SceneComponent",
     "Name": "DefaultSceneRoot_GEN_VARIABLE",
-    "Properties": {}
+    "Outer": "BP_PlayerPawn_SloneClone_C"
   },
   {
     "Type": "SCS_Node",
     "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
     "Properties": {
       "ComponentClass": {
         "ObjectName": "SceneComponent:Class",
@@ -329,6 +545,7 @@
   {
     "Type": "SimpleConstructionScript",
     "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_PlayerPawn_SloneClone_C",
     "Properties": {
       "DefaultSceneRootNode": {
         "ObjectName": "SimpleConstructionScript_0:SCS_Node_0:SCS_Node",

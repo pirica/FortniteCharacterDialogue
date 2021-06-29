@@ -1,0 +1,57 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "FortAthenaNpcEvaluator_Kidnap_Custom_C",
+    "SuperStruct": {
+      "ObjectName": "FortAthenaNpcEvaluator_Kidnap:Class",
+      "ObjectPath": 0
+    },
+    "Children": [],
+    "ChildProperties": [],
+    "FuncMap": {},
+    "ClassFlags": 8652816,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Engine",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__FortAthenaNpcEvaluator_Kidnap_Custom_C:FortAthenaNpcEvaluator_Kidnap_Custom_C",
+      "ObjectPath": "/Umami/Evaluators/FortAthenaNpcEvaluator_Kidnap_Custom.1"
+    }
+  },
+  {
+    "Type": "FortAthenaNpcEvaluator_Kidnap_Custom_C",
+    "Name": "Default__FortAthenaNpcEvaluator_Kidnap_Custom_C",
+    "Properties": {
+      "PlayerBeingTargetedByUmamiDefensivelyTag": {
+        "TagName": "Athena.Gameplay.Status.PlayerBeingTargetedByUmamiDefensivelyTag"
+      },
+      "RequiredTagForHighPriorityObjectTracking": {
+        "TagName": "Athena.AI.ObjectTracking.HighPriority"
+      },
+      "CustomTargetWeightConfigurations": [
+        {
+          "bCheckOnVehicle": true,
+          "TargetTag": {
+            "TagName": "Athena.Vehicle.CageSaddle"
+          },
+          "WeightDelta": 20000.0
+        }
+      ],
+      "KidnappedByAIGE": {
+        "ObjectName": "GE_Umami_KidnappedByAIEarlier_C:BlueprintGeneratedClass",
+        "ObjectPath": "/Umami/GameplayEffects/GE_Umami_KidnappedByAIEarlier.0"
+      },
+      "GameplayTagAppliedByKidnappedByAIGE": {
+        "TagName": "Athena.Gameplay.Status.KidnappedByUmamiEarlier"
+      },
+      "BlacklistTargetsWithThisGameplayTag": {
+        "TagName": "Athena.AI.Umami.IgnoreAndDetachForKidnap"
+      }
+    }
+  }
+]

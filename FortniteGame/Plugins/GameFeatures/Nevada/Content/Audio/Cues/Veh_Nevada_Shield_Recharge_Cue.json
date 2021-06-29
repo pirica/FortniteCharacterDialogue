@@ -1,0 +1,45 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "Veh_Nevada_Shield_Recharge_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "Veh_Nevada_Shield_Recharge_Cue:SoundNodeWavePlayer_1:SoundNodeWavePlayer",
+        "ObjectPath": "/Nevada/Audio/Cues/Veh_Nevada_Shield_Recharge_Cue.1"
+      },
+      "VolumeMultiplier": 0.5,
+      "SoundClassObject": {
+        "ObjectName": "Fort_Vehicles_Exterior:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Vehicles_Exterior.0"
+      },
+      "ConcurrencySet": [
+        {
+          "ObjectName": "Veh_Ostrich_StopOldestLimitToOwnerFFS_Conc:SoundConcurrency",
+          "ObjectPath": "/Game/Athena/Sounds/Vehicles/Ostrich/Veh_Ostrich_StopOldestLimitToOwnerFFS_Conc.0"
+        }
+      ],
+      "ConcurrencyOverrides": {
+        "MaxCount": 1,
+        "bLimitToOwner": true,
+        "ResolutionRule": "EMaxConcurrentResolutionRule::StopOldest"
+      },
+      "Duration": 1.3546041,
+      "MaxDistance": 5400.0,
+      "AttenuationSettings": {
+        "ObjectName": "Veh_Nevada_Onboard_Medium_Att:SoundAttenuation",
+        "ObjectPath": "/Nevada/Audio/Settings/Veh_Nevada_Onboard_Medium_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "Veh_Nevada_Shield_Recharge_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Nevada/Audio/Cues/Veh_Nevada_Shield_Recharge_01.Veh_Nevada_Shield_Recharge_01",
+        "SubPathString": ""
+      }
+    }
+  }
+]

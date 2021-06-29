@@ -1,0 +1,135 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_GA_Skyfire_BlockShooting",
+    "Outer": "GA_Skyfire_BlockShooting_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      }
+    ],
+    "FunctionFlags": 32769,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "K2_ActivateAbility",
+    "Outer": "GA_Skyfire_BlockShooting_C",
+    "SuperStruct": {
+      "ObjectName": "K2_ActivateAbility:Class",
+      "ObjectPath": 0
+    },
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 134744064,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GA_Skyfire_BlockShooting_C",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "GA_Skyfire_BlockShooting_C:ExecuteUbergraph_GA_Skyfire_BlockShooting:Function",
+        "ObjectPath": "/Skyfire/Gameplay/Teleport/GA_Skyfire_BlockShooting.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "FortGameplayAbility:Class",
+      "ObjectPath": 0
+    },
+    "Children": [
+      {
+        "ObjectName": "GA_Skyfire_BlockShooting_C:K2_ActivateAbility:Function",
+        "ObjectPath": "/Skyfire/Gameplay/Teleport/GA_Skyfire_BlockShooting.1"
+      },
+      {
+        "ObjectName": "GA_Skyfire_BlockShooting_C:ExecuteUbergraph_GA_Skyfire_BlockShooting:Function",
+        "ObjectPath": "/Skyfire/Gameplay/Teleport/GA_Skyfire_BlockShooting.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 2105344,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "PointerToUberGraphFrame:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Montage to Play",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "AnimMontage:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_GA_Skyfire_BlockShooting": {
+        "ObjectName": "GA_Skyfire_BlockShooting_C:ExecuteUbergraph_GA_Skyfire_BlockShooting:Function",
+        "ObjectPath": "/Skyfire/Gameplay/Teleport/GA_Skyfire_BlockShooting.0"
+      },
+      "K2_ActivateAbility": {
+        "ObjectName": "GA_Skyfire_BlockShooting_C:K2_ActivateAbility:Function",
+        "ObjectPath": "/Skyfire/Gameplay/Teleport/GA_Skyfire_BlockShooting.1"
+      }
+    },
+    "ClassFlags": 264208,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Engine",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__GA_Skyfire_BlockShooting_C:GA_Skyfire_BlockShooting_C",
+      "ObjectPath": "/Skyfire/Gameplay/Teleport/GA_Skyfire_BlockShooting.3"
+    }
+  },
+  {
+    "Type": "GA_Skyfire_BlockShooting_C",
+    "Name": "Default__GA_Skyfire_BlockShooting_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "Montage to Play": {
+        "ObjectName": "CellBlock_Arrival_Montage:AnimMontage",
+        "ObjectPath": "/Skyfire/Cosmetics/Animation/CellBlock_Arrival_Montage.0"
+      },
+      "ActivationType": "EFortGameplayAbilityActivation::Passive",
+      "BlockAbilitiesWithTag": [
+        "Gameplay.Action.Player.AimDownsights",
+        "Gameplay.Effect.Trap.Create",
+        "Ability.Athena.Crafting.PlayerCrafting"
+      ]
+    }
+  }
+]

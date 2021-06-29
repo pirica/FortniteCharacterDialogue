@@ -1,0 +1,188 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GA_Apply_TractorBeam_C",
+    "SuperStruct": {
+      "ObjectName": "FortGameplayAbility_TractorBeam:Class",
+      "ObjectPath": 0
+    },
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Owner Actor",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 1125899906910213,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FuncMap": {},
+    "ClassFlags": 264208,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Engine",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__GA_Apply_TractorBeam_C:GA_Apply_TractorBeam_C",
+      "ObjectPath": "/Nevada/Weapons/TractorBeam/GA_Apply_TractorBeam.1"
+    }
+  },
+  {
+    "Type": "GA_Apply_TractorBeam_C",
+    "Name": "Default__GA_Apply_TractorBeam_C",
+    "Properties": {
+      "EffectContainers": {
+        "TargetSelection": {
+          "List": [
+            {
+              "Shape": "EFortTargetSelectionShape::Sphere",
+              "CustomShapeComponentName": "",
+              "TestType": "EFortTargetSelectionTestType::Swept",
+              "PrimarySource": "EFortAbilityTargetingSource::Camera",
+              "SecondarySource": "EFortAbilityTargetingSource::Max_None",
+              "Range": {
+                "Value": 10000.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": null
+                },
+                "RegistryType": {
+                  "Name": null
+                }
+              },
+              "HalfExtents": {
+                "X": 300.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "bAlignShapeEdgeToSourceLocation": false,
+              "ConeYawAngle": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": null
+                },
+                "RegistryType": {
+                  "Name": null
+                }
+              },
+              "ConePitchAngle": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": null
+                },
+                "RegistryType": {
+                  "Name": null
+                }
+              },
+              "ConeMinRadius": {
+                "Value": 1.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": null
+                },
+                "RegistryType": {
+                  "Name": null
+                }
+              },
+              "TargetFilter": {
+                "ActorTypeFilter": "EFortTargetSelectionFilter::Damageable",
+                "ActorClassFilter": null,
+                "bExcludeInstigator": true,
+                "bUseTrapsOwningPawnAsInstigator": false,
+                "bExcludeRequester": true,
+                "bExcludeAllAttachedToInstigator": false,
+                "bExcludeAthenaVehicleOfInstigator": true,
+                "bExcludeAllAttachedToRequester": false,
+                "bExcludePawnFriends": true,
+                "bExcludeFriendlyAI": false,
+                "bExcludeAllAI": false,
+                "bExcludePawnNeutrals": false,
+                "bExcludePawnEnemies": false,
+                "bExcludeNonPawnFriends": false,
+                "bExcludeNonPawnEnemies": false,
+                "bConsiderFriendlyFireWhenExcludingFriends": false,
+                "bExcludeDBNOPawns": false,
+                "bExcludeWaterVolumes": false,
+                "bExcludeWaterBodies": true,
+                "bExcludeAthenaVehicleOccupiedBySource": true,
+                "bExcludeAthenaVehicleUnoccupied": false,
+                "bExcludeAthenaVehicleOccupied": false,
+                "bExcludeAthenaVehicleFromObstructionChecks": false,
+                "bExcludeWithoutNavigationCorridor": false,
+                "bExcludeNonPlayerBuiltPieces": false,
+                "bExcludePlayerBuiltPieces": false,
+                "bExcludeNonBGABuildings": false,
+                "bExcludeNonBlockingHits": false,
+                "bExcludeProjectiles": false,
+                "bTraceComplexCollision": false,
+                "bExcludeLandscape": true,
+                "bConsiderPhysicsPawnsAsNonPlayerPawns": true,
+                "ExclusionGameplayTags": []
+              },
+              "bExcludeObstructedByWorld": true,
+              "bShouldAttachedActorsObstructTarget": true,
+              "bCreateHitResultWhenNoTargetsFound": false,
+              "bUseProjectileRotationForDamageZones": false,
+              "TargetSelectionUsage": "EFortAbilityTargetSelectionUsage::BothTargetingAndCanHit",
+              "MaxTargets": -1
+            }
+          ]
+        },
+        "TargetGameplayEffectClasses": [
+          {
+            "ObjectName": "GE_Apply_TractorBeam_C:BlueprintGeneratedClass",
+            "ObjectPath": "/Nevada/Weapons/TractorBeam/GE_Apply_TractorBeam.0"
+          }
+        ]
+      },
+      "AbilityCosts": [
+        {
+          "CostSource": "EFortAbilityCostSource::AmmoMagazine",
+          "CostValue": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": null
+            },
+            "RegistryType": {
+              "Name": null
+            }
+          },
+          "ItemDefinition": null,
+          "bOnlyApplyCostOnHit": false
+        },
+        {
+          "CostSource": "EFortAbilityCostSource::Durability",
+          "CostValue": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": null
+            },
+            "RegistryType": {
+              "Name": null
+            }
+          },
+          "ItemDefinition": null,
+          "bOnlyApplyCostOnHit": false
+        }
+      ],
+      "ReplicationPolicy": "EGameplayAbilityReplicationPolicy::ReplicateYes",
+      "InstancingPolicy": "EGameplayAbilityInstancingPolicy::InstancedPerActor"
+    }
+  }
+]

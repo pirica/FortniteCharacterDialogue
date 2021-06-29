@@ -1,0 +1,198 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "Knockback_Launcher_ReloadStart_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "Knockback_Launcher_ReloadStart_Cue:SoundNodeMixer_0:SoundNodeMixer",
+        "ObjectPath": "/Skyfire/Gameplay/KnockbackWeapon/Audio/Knockback_Launcher_ReloadStart_Cue.2"
+      },
+      "VolumeMultiplier": 0.3,
+      "SoundClassObject": {
+        "ObjectName": "Fort_Weapon_Foley:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Weapon_Foley.0"
+      },
+      "bOverrideConcurrency": true,
+      "bHasDelayNode": true,
+      "ConcurrencyOverrides": {
+        "MaxCount": 1,
+        "ResolutionRule": "EMaxConcurrentResolutionRule::StopQuietest"
+      },
+      "Duration": 0.8059375,
+      "MaxDistance": 2100.0,
+      "AttenuationSettings": {
+        "ObjectName": "Fort_Weapon_Reload_Sml_Att:SoundAttenuation",
+        "ObjectPath": "/Game/Sounds/Attenuation/Fort_Weapon_Reload_Sml_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_2",
+    "Outer": "Knockback_Launcher_ReloadStart_Cue",
+    "Properties": {
+      "DelayMin": 0.2,
+      "DelayMax": 0.2,
+      "ChildNodes": [
+        {
+          "ObjectName": "Knockback_Launcher_ReloadStart_Cue:SoundNodeModulator_0:SoundNodeModulator",
+          "ObjectPath": "/Skyfire/Gameplay/KnockbackWeapon/Audio/Knockback_Launcher_ReloadStart_Cue.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_0",
+    "Outer": "Knockback_Launcher_ReloadStart_Cue",
+    "Properties": {
+      "InputVolume": [
+        1.0,
+        1.2
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "Knockback_Launcher_ReloadStart_Cue:SoundNodeRandom_2:SoundNodeRandom",
+          "ObjectPath": "/Skyfire/Gameplay/KnockbackWeapon/Audio/Knockback_Launcher_ReloadStart_Cue.4"
+        },
+        {
+          "ObjectName": "Knockback_Launcher_ReloadStart_Cue:SoundNodeDelay_2:SoundNodeDelay",
+          "ObjectPath": "/Skyfire/Gameplay/KnockbackWeapon/Audio/Knockback_Launcher_ReloadStart_Cue.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "Knockback_Launcher_ReloadStart_Cue",
+    "Properties": {
+      "PitchMin": 0.8,
+      "PitchMax": 0.8,
+      "ChildNodes": [
+        {
+          "ObjectName": "Knockback_Launcher_ReloadStart_Cue:SoundNodeRandom_3:SoundNodeRandom",
+          "ObjectPath": "/Skyfire/Gameplay/KnockbackWeapon/Audio/Knockback_Launcher_ReloadStart_Cue.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_2",
+    "Outer": "Knockback_Launcher_ReloadStart_Cue",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "Knockback_Launcher_ReloadStart_Cue:SoundNodeWavePlayer_3:SoundNodeWavePlayer",
+          "ObjectPath": "/Skyfire/Gameplay/KnockbackWeapon/Audio/Knockback_Launcher_ReloadStart_Cue.9"
+        },
+        {
+          "ObjectName": "Knockback_Launcher_ReloadStart_Cue:SoundNodeWavePlayer_8:SoundNodeWavePlayer",
+          "ObjectPath": "/Skyfire/Gameplay/KnockbackWeapon/Audio/Knockback_Launcher_ReloadStart_Cue.10"
+        },
+        {
+          "ObjectName": "Knockback_Launcher_ReloadStart_Cue:SoundNodeWavePlayer_9:SoundNodeWavePlayer",
+          "ObjectPath": "/Skyfire/Gameplay/KnockbackWeapon/Audio/Knockback_Launcher_ReloadStart_Cue.11"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_3",
+    "Outer": "Knockback_Launcher_ReloadStart_Cue",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "Knockback_Launcher_ReloadStart_Cue:SoundNodeWavePlayer_10:SoundNodeWavePlayer",
+          "ObjectPath": "/Skyfire/Gameplay/KnockbackWeapon/Audio/Knockback_Launcher_ReloadStart_Cue.6"
+        },
+        {
+          "ObjectName": "Knockback_Launcher_ReloadStart_Cue:SoundNodeWavePlayer_11:SoundNodeWavePlayer",
+          "ObjectPath": "/Skyfire/Gameplay/KnockbackWeapon/Audio/Knockback_Launcher_ReloadStart_Cue.7"
+        },
+        {
+          "ObjectName": "Knockback_Launcher_ReloadStart_Cue:SoundNodeWavePlayer_12:SoundNodeWavePlayer",
+          "ObjectPath": "/Skyfire/Gameplay/KnockbackWeapon/Audio/Knockback_Launcher_ReloadStart_Cue.8"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_10",
+    "Outer": "Knockback_Launcher_ReloadStart_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_Weapons/Retro_SciFi/Retro_SciFi_Shotgun/Retro_SciFi_Shotgun_ReloadInsert_01.Retro_SciFi_Shotgun_ReloadInsert_01",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_11",
+    "Outer": "Knockback_Launcher_ReloadStart_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_Weapons/Retro_SciFi/Retro_SciFi_Shotgun/Retro_SciFi_Shotgun_ReloadInsert_02.Retro_SciFi_Shotgun_ReloadInsert_02",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_12",
+    "Outer": "Knockback_Launcher_ReloadStart_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_Weapons/Retro_SciFi/Retro_SciFi_Shotgun/Retro_SciFi_Shotgun_ReloadInsert_03.Retro_SciFi_Shotgun_ReloadInsert_03",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "Knockback_Launcher_ReloadStart_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_Weapons/Retro_SciFi/Retro_SciFi_Shotgun/Retro_SciFi_Shotgun_ReloadStart_01.Retro_SciFi_Shotgun_ReloadStart_01",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_8",
+    "Outer": "Knockback_Launcher_ReloadStart_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_Weapons/Retro_SciFi/Retro_SciFi_Shotgun/Retro_SciFi_Shotgun_ReloadStart_02.Retro_SciFi_Shotgun_ReloadStart_02",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_9",
+    "Outer": "Knockback_Launcher_ReloadStart_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_Weapons/Retro_SciFi/Retro_SciFi_Shotgun/Retro_SciFi_Shotgun_ReloadStart_03.Retro_SciFi_Shotgun_ReloadStart_03",
+        "SubPathString": ""
+      }
+    }
+  }
+]

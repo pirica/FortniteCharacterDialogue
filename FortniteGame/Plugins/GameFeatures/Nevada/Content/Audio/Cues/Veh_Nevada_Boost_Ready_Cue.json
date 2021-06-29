@@ -1,0 +1,95 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "Veh_Nevada_Boost_Ready_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "Veh_Nevada_Boost_Ready_Cue:SoundNodeModulator_0:SoundNodeModulator",
+        "ObjectPath": "/Nevada/Audio/Cues/Veh_Nevada_Boost_Ready_Cue.1"
+      },
+      "VolumeMultiplier": 0.5,
+      "SoundClassObject": {
+        "ObjectName": "Fort_Vehicles_Exterior:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Vehicles_Exterior.0"
+      },
+      "Duration": 3.2901459,
+      "MaxDistance": 2900.0,
+      "AttenuationSettings": {
+        "ObjectName": "Veh_Nevada_Onboard_Close_Att:SoundAttenuation",
+        "ObjectPath": "/Nevada/Audio/Settings/Veh_Nevada_Onboard_Close_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "Veh_Nevada_Boost_Ready_Cue",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "Veh_Nevada_Boost_Ready_Cue:SoundNodeRandom_1:SoundNodeRandom",
+          "ObjectPath": "/Nevada/Audio/Cues/Veh_Nevada_Boost_Ready_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_1",
+    "Outer": "Veh_Nevada_Boost_Ready_Cue",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "Veh_Nevada_Boost_Ready_Cue:SoundNodeWavePlayer_4:SoundNodeWavePlayer",
+          "ObjectPath": "/Nevada/Audio/Cues/Veh_Nevada_Boost_Ready_Cue.3"
+        },
+        {
+          "ObjectName": "Veh_Nevada_Boost_Ready_Cue:SoundNodeWavePlayer_5:SoundNodeWavePlayer",
+          "ObjectPath": "/Nevada/Audio/Cues/Veh_Nevada_Boost_Ready_Cue.4"
+        },
+        {
+          "ObjectName": "Veh_Nevada_Boost_Ready_Cue:SoundNodeWavePlayer_6:SoundNodeWavePlayer",
+          "ObjectPath": "/Nevada/Audio/Cues/Veh_Nevada_Boost_Ready_Cue.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_4",
+    "Outer": "Veh_Nevada_Boost_Ready_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Nevada/Audio/Cues/Veh_Nevada_Boost_Ready_01.Veh_Nevada_Boost_Ready_01",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_5",
+    "Outer": "Veh_Nevada_Boost_Ready_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Nevada/Audio/Cues/Veh_Nevada_Boost_Ready_02.Veh_Nevada_Boost_Ready_02",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_6",
+    "Outer": "Veh_Nevada_Boost_Ready_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Nevada/Audio/Cues/Veh_Nevada_Boost_Ready_03.Veh_Nevada_Boost_Ready_03",
+        "SubPathString": ""
+      }
+    }
+  }
+]

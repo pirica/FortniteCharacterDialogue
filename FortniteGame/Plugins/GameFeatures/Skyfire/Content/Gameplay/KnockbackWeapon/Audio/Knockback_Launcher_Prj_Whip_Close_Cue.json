@@ -1,0 +1,133 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "Knockback_Launcher_Prj_Whip_Close_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "Knockback_Launcher_Prj_Whip_Close_Cue:SoundNodeModulator_0:SoundNodeModulator",
+        "ObjectPath": "/Skyfire/Gameplay/KnockbackWeapon/Audio/Knockback_Launcher_Prj_Whip_Close_Cue.1"
+      },
+      "VolumeMultiplier": 1.25,
+      "AttenuationOverrides": {
+        "bAttenuate": false,
+        "bSpatialize": false,
+        "bUseComplexCollisionForOcclusion": true,
+        "bEnableReverbSend": false,
+        "StereoSpread": 0.0,
+        "OcclusionVolumeAttenuation": 0.0,
+        "AttenuationShapeExtents": {
+          "X": 512.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 1000.0
+      },
+      "SoundClassObject": {
+        "ObjectName": "Fort_ProjectileEffects:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_ProjectileEffects.0"
+      },
+      "bOverrideConcurrency": true,
+      "VirtualizationMode": "EVirtualizationMode::Disabled",
+      "ConcurrencyOverrides": {
+        "MaxCount": 2,
+        "ResolutionRule": "EMaxConcurrentResolutionRule::StopOldest"
+      },
+      "Duration": 1.6905,
+      "MaxDistance": 23000.0,
+      "Priority": 50.0,
+      "AttenuationSettings": {
+        "ObjectName": "Knockback_Launcher_Prj_Whip_Att:SoundAttenuation",
+        "ObjectPath": "/Skyfire/Gameplay/KnockbackWeapon/Audio/Knockback_Launcher_Prj_Whip_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "Knockback_Launcher_Prj_Whip_Close_Cue",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "Knockback_Launcher_Prj_Whip_Close_Cue:SoundNodeRandom_1:SoundNodeRandom",
+          "ObjectPath": "/Skyfire/Gameplay/KnockbackWeapon/Audio/Knockback_Launcher_Prj_Whip_Close_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_1",
+    "Outer": "Knockback_Launcher_Prj_Whip_Close_Cue",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bShouldExcludeFromBranchCulling": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "Knockback_Launcher_Prj_Whip_Close_Cue:SoundNodeWavePlayer_3:SoundNodeWavePlayer",
+          "ObjectPath": "/Skyfire/Gameplay/KnockbackWeapon/Audio/Knockback_Launcher_Prj_Whip_Close_Cue.3"
+        },
+        {
+          "ObjectName": "Knockback_Launcher_Prj_Whip_Close_Cue:SoundNodeWavePlayer_4:SoundNodeWavePlayer",
+          "ObjectPath": "/Skyfire/Gameplay/KnockbackWeapon/Audio/Knockback_Launcher_Prj_Whip_Close_Cue.4"
+        },
+        {
+          "ObjectName": "Knockback_Launcher_Prj_Whip_Close_Cue:SoundNodeWavePlayer_5:SoundNodeWavePlayer",
+          "ObjectPath": "/Skyfire/Gameplay/KnockbackWeapon/Audio/Knockback_Launcher_Prj_Whip_Close_Cue.5"
+        },
+        {
+          "ObjectName": "Knockback_Launcher_Prj_Whip_Close_Cue:SoundNodeWavePlayer_6:SoundNodeWavePlayer",
+          "ObjectPath": "/Skyfire/Gameplay/KnockbackWeapon/Audio/Knockback_Launcher_Prj_Whip_Close_Cue.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "Knockback_Launcher_Prj_Whip_Close_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Skyfire/Gameplay/KnockbackWeapon/Audio/Knockback_Launcher_Prj_Whip_Close_01.Knockback_Launcher_Prj_Whip_Close_01",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_4",
+    "Outer": "Knockback_Launcher_Prj_Whip_Close_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Skyfire/Gameplay/KnockbackWeapon/Audio/Knockback_Launcher_Prj_Whip_Close_02.Knockback_Launcher_Prj_Whip_Close_02",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_5",
+    "Outer": "Knockback_Launcher_Prj_Whip_Close_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Skyfire/Gameplay/KnockbackWeapon/Audio/Knockback_Launcher_Prj_Whip_Close_03.Knockback_Launcher_Prj_Whip_Close_03",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_6",
+    "Outer": "Knockback_Launcher_Prj_Whip_Close_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Skyfire/Gameplay/KnockbackWeapon/Audio/Knockback_Launcher_Prj_Whip_Close_04.Knockback_Launcher_Prj_Whip_Close_04",
+        "SubPathString": ""
+      }
+    }
+  }
+]

@@ -1,0 +1,4083 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_AIPawn_Labrador",
+    "Outer": "BP_AIPawn_Labrador_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 20,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "SignatureFunction": {
+          "ObjectName": "AsyncWaitGameplayTagDelegate__DelegateSignature:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_WaitGameplayTagAddToActor_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "AbilityAsync_WaitGameplayTagAdded:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_Damage_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_DamageTags_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 32,
+        "PropertyFlags": 2,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayTagContainer:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_Momentum_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_HitInfo_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 144,
+        "PropertyFlags": 549755813890,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "HitResult:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_InstigatedBy_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Controller:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_DamageCauser_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_EffectContext_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 24,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayEffectContextHandle:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_Damage",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_DamageTags",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 32,
+        "PropertyFlags": 2,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayTagContainer:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_Momentum",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_HitInfo",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 144,
+        "PropertyFlags": 549755813890,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "HitResult:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_InstigatedBy",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortPawn:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_DamageCauser",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_EffectContext",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 24,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayEffectContextHandle:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_LaunchVelocity",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_bXYOverride",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_bZOverride",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_Hit_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 144,
+        "PropertyFlags": 549755813890,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "HitResult:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BreakHitResult_bBlockingHit",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BreakHitResult_bInitialOverlap",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakHitResult_Time",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakHitResult_Distance",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_Location",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_ImpactPoint",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_Normal",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_ImpactNormal",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakHitResult_PhysMat",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "PhysicalMaterial:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakHitResult_HitActor",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakHitResult_HitComponent",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "PrimitiveComponent:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_BreakHitResult_HitBoneName",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakHitResult_HitItem",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakHitResult_ElementIndex",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakHitResult_FaceIndex",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_TraceStart",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_TraceEnd",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_MyComp",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "PrimitiveComponent:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_Other",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_OtherComp",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "PrimitiveComponent:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_bSelfMoved",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_HitLocation",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_HitNormal",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_NormalImpulse",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_Hit",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 144,
+        "PropertyFlags": 549755813890,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "HitResult:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeHitResult_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 144,
+        "PropertyFlags": 549755813888,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "HitResult:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsFort_Athena_Vehicle",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortAthenaVehicle:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_WaterBody",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortWaterBodyActor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_bIsFirstBody",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "K2Node_GameplayCueEvent_EventType",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Enum": {
+          "ObjectName": "EGameplayCueEvent:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_GameplayCueEvent_Parameters",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 200,
+        "PropertyFlags": 549755813890,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayCueParameters:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreateAnimInputEvent_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortAnimInputEvent:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Add_VectorVector_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_K2_SpawnPickupInWorldWithLootTier_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 134217728,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "CallFunc_K2_SpawnPickupInWorldWithLootTier_ReturnValue",
+          "Flags": 1,
+          "ArrayDim": 1,
+          "ElementSize": 8,
+          "PropertyFlags": 0,
+          "RepIndex": 0,
+          "RepNotifyFunc": "None",
+          "BlueprintReplicationCondition": "COND_None",
+          "PropertyClass": {
+            "ObjectName": "FortPickup:Class",
+            "ObjectPath": 0
+          }
+        }
+      }
+    ],
+    "FunctionFlags": 8421377,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "Toppled",
+    "Outer": "BP_AIPawn_Labrador_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 201326592,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "GameplayCue.Labrador.Leak",
+    "Outer": "BP_AIPawn_Labrador_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "ByteProperty",
+        "Name": "EventType",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Enum": {
+          "ObjectName": "EGameplayCueEvent:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Parameters",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 200,
+        "PropertyFlags": 549890032022,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayCueParameters:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 205520896,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "OnEnteredWaterBody",
+    "Outer": "BP_AIPawn_Labrador_C",
+    "Super": "OnEnteredWaterBody",
+    "SuperStruct": {
+      "ObjectName": "NPC_Pawn_Parent_C:OnEnteredWaterBody:Function",
+      "ObjectPath": "/Game/Athena/AI/Pawns/NPC/Parents/NPC_Pawn_Parent.8"
+    },
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "WaterBody",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortWaterBodyActor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsFirstBody",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 134350848,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "IsToppleEvent",
+    "Outer": "BP_AIPawn_Labrador_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 201326592,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "IsLaunchedEvent",
+    "Outer": "BP_AIPawn_Labrador_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 201326592,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveHit",
+    "Outer": "BP_AIPawn_Labrador_C",
+    "SuperStruct": {
+      "ObjectName": "ReceiveHit:Class",
+      "ObjectPath": 0
+    },
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "MyComp",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524436,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "PrimitiveComponent:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Other",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "OtherComp",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524436,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "PrimitiveComponent:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bSelfMoved",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "HitLocation",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "HitNormal",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "NormalImpulse",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Hit",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 144,
+        "PropertyFlags": 549890032022,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "HitResult:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 138545152,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "OnLanded",
+    "Outer": "BP_AIPawn_Labrador_C",
+    "SuperStruct": {
+      "ObjectName": "OnLanded:Class",
+      "ObjectPath": 0
+    },
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "Hit",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 144,
+        "PropertyFlags": 549890032022,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "HitResult:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 138545152,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "OnLaunched",
+    "Outer": "BP_AIPawn_Labrador_C",
+    "SuperStruct": {
+      "ObjectName": "OnLaunched:Class",
+      "ObjectPath": 0
+    },
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "LaunchVelocity",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bXYOverride",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bZOverride",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 134350848,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "OnDeathPlayEffects",
+    "Outer": "BP_AIPawn_Labrador_C",
+    "Super": "OnDeathPlayEffects",
+    "SuperStruct": {
+      "ObjectName": "NPC_Pawn_Parent_C:OnDeathPlayEffects:Function",
+      "ObjectPath": "/Game/Athena/AI/Pawns/NPC/Parents/NPC_Pawn_Parent.44"
+    },
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "Damage",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "DamageTags",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 32,
+        "PropertyFlags": 134218134,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayTagContainer:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Momentum",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "HitInfo",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 144,
+        "PropertyFlags": 549890032022,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "HitResult:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "InstigatedBy",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortPawn:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DamageCauser",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "EffectContext",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 24,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayEffectContextHandle:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 138545160,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "OnDeathServer",
+    "Outer": "BP_AIPawn_Labrador_C",
+    "Super": "OnDeathServer",
+    "SuperStruct": {
+      "ObjectName": "NPC_Pawn_Wildlife_Parent_C:OnDeathServer:Function",
+      "ObjectPath": "/Game/Athena/AI/Pawns/NPC/Parents/NPC_Pawn_Wildlife_Parent.3"
+    },
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "Damage",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "DamageTags",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 32,
+        "PropertyFlags": 134218134,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayTagContainer:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Momentum",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "HitInfo",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 144,
+        "PropertyFlags": 549890032022,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "HitResult:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "InstigatedBy",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Controller:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DamageCauser",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "EffectContext",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 24,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayEffectContextHandle:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 138545156,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "BP_AIPawn_Labrador_C",
+    "Super": "ReceiveBeginPlay",
+    "SuperStruct": {
+      "ObjectName": "NPC_Pawn_Wildlife_Parent_C:ReceiveBeginPlay:Function",
+      "ObjectPath": "/Game/Athena/AI/Pawns/NPC/Parents/NPC_Pawn_Wildlife_Parent.9"
+    },
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 134744064,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "Added_C254EF01448E4358BF91C6AE631B7AE9",
+    "Outer": "BP_AIPawn_Labrador_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 201326592,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "SetMustJump",
+    "Outer": "BP_AIPawn_Labrador_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "MustJump",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "BBKeyMustJump",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 5,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetBlackboard_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "BlackboardComponent:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 201457664,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "Set Is Toppled",
+    "Outer": "BP_AIPawn_Labrador_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "IsToppled",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "BBKeyMustBeToppled",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 5,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetBlackboard_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "BlackboardComponent:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 201457664,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "SetIsLaunched",
+    "Outer": "BP_AIPawn_Labrador_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "IsLaunched",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "BBKeyIsLaunched",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 5,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetBlackboard_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "BlackboardComponent:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 201457664,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "OnRep_IsLauched",
+    "Outer": "BP_AIPawn_Labrador_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 201326592,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "OnRep_IsToppled",
+    "Outer": "BP_AIPawn_Labrador_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreateAnimInputEvent_Bool_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortAnimInputEvent_Bool:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 201326592,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "IsValidAutoFireTarget",
+    "Outer": "BP_AIPawn_Labrador_C",
+    "Super": "IsValidAutoFireTarget",
+    "SuperStruct": {
+      "ObjectName": "NPC_Pawn_Wildlife_Parent_C:IsValidAutoFireTarget:Function",
+      "ObjectPath": "/Game/Athena/AI/Pawns/NPC/Parents/NPC_Pawn_Wildlife_Parent.16"
+    },
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Attacker",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 150,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 1408,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 1547831296,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_AIPawn_Labrador_C",
+    "Super": "NPC_Pawn_Wildlife_Parent_C",
+    "Properties": {
+      "NumReplicatedProperties": 2,
+      "bHasCookedComponentInstancingData": true,
+      "SimpleConstructionScript": {
+        "ObjectName": "BP_AIPawn_Labrador_C:SimpleConstructionScript_0:SimpleConstructionScript",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.35"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "BP_AIPawn_Labrador_C:InheritableComponentHandler:InheritableComponentHandler",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.29"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "BP_AIPawn_Labrador_C:ExecuteUbergraph_BP_AIPawn_Labrador:Function",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "NPC_Pawn_Wildlife_Parent_C:BlueprintGeneratedClass",
+      "ObjectPath": "/Game/Athena/AI/Pawns/NPC/Parents/NPC_Pawn_Wildlife_Parent.19"
+    },
+    "Children": [
+      {
+        "ObjectName": "BP_AIPawn_Labrador_C:IsValidAutoFireTarget:Function",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.18"
+      },
+      {
+        "ObjectName": "BP_AIPawn_Labrador_C:OnRep_IsToppled:Function",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.17"
+      },
+      {
+        "ObjectName": "BP_AIPawn_Labrador_C:OnRep_IsLauched:Function",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.16"
+      },
+      {
+        "ObjectName": "BP_AIPawn_Labrador_C:SetIsLaunched:Function",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.15"
+      },
+      {
+        "ObjectName": "BP_AIPawn_Labrador_C:Set Is Toppled:Function",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.14"
+      },
+      {
+        "ObjectName": "BP_AIPawn_Labrador_C:SetMustJump:Function",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.13"
+      },
+      {
+        "ObjectName": "BP_AIPawn_Labrador_C:Added_C254EF01448E4358BF91C6AE631B7AE9:Function",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.12"
+      },
+      {
+        "ObjectName": "BP_AIPawn_Labrador_C:ReceiveBeginPlay:Function",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.11"
+      },
+      {
+        "ObjectName": "BP_AIPawn_Labrador_C:OnDeathServer:Function",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.10"
+      },
+      {
+        "ObjectName": "BP_AIPawn_Labrador_C:OnDeathPlayEffects:Function",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.9"
+      },
+      {
+        "ObjectName": "BP_AIPawn_Labrador_C:OnLaunched:Function",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.8"
+      },
+      {
+        "ObjectName": "BP_AIPawn_Labrador_C:OnLanded:Function",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.7"
+      },
+      {
+        "ObjectName": "BP_AIPawn_Labrador_C:ReceiveHit:Function",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.6"
+      },
+      {
+        "ObjectName": "BP_AIPawn_Labrador_C:IsLaunchedEvent:Function",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.5"
+      },
+      {
+        "ObjectName": "BP_AIPawn_Labrador_C:IsToppleEvent:Function",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.4"
+      },
+      {
+        "ObjectName": "BP_AIPawn_Labrador_C:OnEnteredWaterBody:Function",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.3"
+      },
+      {
+        "ObjectName": "BP_AIPawn_Labrador_C:GameplayCue.Labrador.Leak:Function",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.2"
+      },
+      {
+        "ObjectName": "BP_AIPawn_Labrador_C:Toppled:Function",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.1"
+      },
+      {
+        "ObjectName": "BP_AIPawn_Labrador_C:ExecuteUbergraph_BP_AIPawn_Labrador:Function",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 2105344,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "PointerToUberGraphFrame:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Capsule",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "CapsuleComponent:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "LootTableName",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "MustBeToppleOnLanding",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "IsLauched",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 4295032869,
+        "RepIndex": 112,
+        "RepNotifyFunc": "OnRep_IsLauched",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "LunchedCurrentAngle",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "IsToppled",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 4295032869,
+        "RepIndex": 113,
+        "RepNotifyFunc": "OnRep_IsToppled",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "LootSpawnOffset",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_AIPawn_Labrador": {
+        "ObjectName": "BP_AIPawn_Labrador_C:ExecuteUbergraph_BP_AIPawn_Labrador:Function",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.0"
+      },
+      "Toppled": {
+        "ObjectName": "BP_AIPawn_Labrador_C:Toppled:Function",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.1"
+      },
+      "GameplayCue.Labrador.Leak": {
+        "ObjectName": "BP_AIPawn_Labrador_C:GameplayCue.Labrador.Leak:Function",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.2"
+      },
+      "OnEnteredWaterBody": {
+        "ObjectName": "BP_AIPawn_Labrador_C:OnEnteredWaterBody:Function",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.3"
+      },
+      "IsToppleEvent": {
+        "ObjectName": "BP_AIPawn_Labrador_C:IsToppleEvent:Function",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.4"
+      },
+      "IsLaunchedEvent": {
+        "ObjectName": "BP_AIPawn_Labrador_C:IsLaunchedEvent:Function",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.5"
+      },
+      "ReceiveHit": {
+        "ObjectName": "BP_AIPawn_Labrador_C:ReceiveHit:Function",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.6"
+      },
+      "OnLanded": {
+        "ObjectName": "BP_AIPawn_Labrador_C:OnLanded:Function",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.7"
+      },
+      "OnLaunched": {
+        "ObjectName": "BP_AIPawn_Labrador_C:OnLaunched:Function",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.8"
+      },
+      "OnDeathPlayEffects": {
+        "ObjectName": "BP_AIPawn_Labrador_C:OnDeathPlayEffects:Function",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.9"
+      },
+      "OnDeathServer": {
+        "ObjectName": "BP_AIPawn_Labrador_C:OnDeathServer:Function",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.10"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "BP_AIPawn_Labrador_C:ReceiveBeginPlay:Function",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.11"
+      },
+      "Added_C254EF01448E4358BF91C6AE631B7AE9": {
+        "ObjectName": "BP_AIPawn_Labrador_C:Added_C254EF01448E4358BF91C6AE631B7AE9:Function",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.12"
+      },
+      "SetMustJump": {
+        "ObjectName": "BP_AIPawn_Labrador_C:SetMustJump:Function",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.13"
+      },
+      "Set Is Toppled": {
+        "ObjectName": "BP_AIPawn_Labrador_C:Set Is Toppled:Function",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.14"
+      },
+      "SetIsLaunched": {
+        "ObjectName": "BP_AIPawn_Labrador_C:SetIsLaunched:Function",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.15"
+      },
+      "OnRep_IsLauched": {
+        "ObjectName": "BP_AIPawn_Labrador_C:OnRep_IsLauched:Function",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.16"
+      },
+      "OnRep_IsToppled": {
+        "ObjectName": "BP_AIPawn_Labrador_C:OnRep_IsToppled:Function",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.17"
+      },
+      "IsValidAutoFireTarget": {
+        "ObjectName": "BP_AIPawn_Labrador_C:IsValidAutoFireTarget:Function",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.18"
+      }
+    },
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Game",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__BP_AIPawn_Labrador_C:BP_AIPawn_Labrador_C",
+      "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.20"
+    }
+  },
+  {
+    "Type": "BP_AIPawn_Labrador_C",
+    "Name": "Default__BP_AIPawn_Labrador_C",
+    "Template": "Default__NPC_Pawn_Wildlife_Parent_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "LootTableName": "Loot_AI_Llama_Eliminated",
+      "LootSpawnOffset": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 20.0
+      },
+      "NPC TargetSlotsHF": [],
+      "SoundLibs": [
+        {
+          "ObjectName": "SoundLib_Labrador_Vocal_C:BlueprintGeneratedClass",
+          "ObjectPath": "/Labrador/Sound/SoundLib_Labrador_Vocal.0"
+        }
+      ],
+      "NPC PawnCanInteractInternal": false,
+      "NPC PrimtiveDataFloatSetRandomlyInRange": {
+        "Value": 0.0
+      },
+      "NPC PrimtiveDataFloatIndexHF": {
+        "Curve": {
+          "RowName": "Default.NPCPawnParent.PrimitveDataFloat.Index"
+        }
+      },
+      "NPC PrimtiveDataFloatMinRangeHF": {
+        "Curve": {
+          "RowName": "Default.NPCPawnParent.PrimitveDataFloat.RangeMin"
+        }
+      },
+      "NPC PrimtiveDataFloatMaxRangeHF": {
+        "Curve": {
+          "RowName": "Default.NPCPawnParent.PrimitveDataFloat.RangeMax"
+        }
+      },
+      "GameplayCue_LeaderSet": {
+        "TagName": null
+      },
+      "SoundLibs_Foley": [
+        {
+          "ObjectName": "SoundLib_Labrador_Foley_C:BlueprintGeneratedClass",
+          "ObjectPath": "/Labrador/Sound/SoundLib_Labrador_Foley.0"
+        }
+      ],
+      "NPC Apply GE for Swimming": true,
+      "NPC GE_ClassToApplyForSwimming": {
+        "ObjectName": "GE_NPC_Labrador_Swim_C:BlueprintGeneratedClass",
+        "ObjectPath": "/Labrador/Abilities/GE_NPC_Labrador_Swim.0"
+      },
+      "NPC Apply Water Enter/Exit Burst GC": true,
+      "GameplayCueLureInterest": {
+        "TagName": null
+      },
+      "Exit Water": {
+        "TagName": "GameplayCue.Athena.Irwin.Water.Exit.Labrador"
+      },
+      "Enter Water": {
+        "TagName": "GameplayCue.Athena.Irwin.Water.Enter.Labrador"
+      },
+      "NPC PlayEffectWhenLuredHF": {
+        "Curve": {
+          "RowName": "Default.NPCPawnParent.Lured.ShouldPlayEffect"
+        }
+      },
+      "NPC PawnCanInteractHF": {
+        "Value": 0.0,
+        "Curve": {
+          "CurveTable": null
+        }
+      },
+      "NPC AllowInteractOnlyWhenUnawareHF": {
+        "Value": 0.0,
+        "Curve": {
+          "CurveTable": null
+        }
+      },
+      "NPC AllowInteractWhenHasLeaderHF": {
+        "Value": 0.0,
+        "Curve": {
+          "CurveTable": null
+        }
+      },
+      "NPC AllowDrownInShallowWaterHF": {
+        "Curve": {
+          "RowName": "Default.NPCPawnParent.Swimming.AllowDrownInShallowWater"
+        }
+      },
+      "isGCForLeaderSetLooping": false,
+      "bHasInventory": false,
+      "bShouldTossInventoryOnDeath": false,
+      "DefaultNavFilter": {
+        "ObjectName": "NavFilter_Phoebe_NoSmashable_C:BlueprintGeneratedClass",
+        "ObjectPath": "/Game/Athena/AI/Phoebe/NavFilter/NavFilter_Phoebe_NoSmashable.0"
+      },
+      "InteractionDuration": 3.0,
+      "InteractionText": {
+        "CultureInvariantString": null
+      },
+      "bCanUseDoors": true,
+      "bReplicateGrantedTagsWithFastAbilityReplication": true,
+      "bReplicateGameplayCuesWithFastAbilityReplication": true,
+      "DefaultGameplayAbilitySets": [
+        {
+          "ObjectName": "GAS_Labrador:FortAbilitySet",
+          "ObjectPath": "/Labrador/Abilities/GAS_Labrador.0"
+        }
+      ],
+      "AIPawnAbilitySystemComponent": {
+        "ObjectName": "Default__BP_AIPawn_Labrador_C:AbilitySystemComponent:FortAbilitySystemComponent",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.25"
+      },
+      "MarkerDisplay": {
+        "DisplayName": {
+          "Namespace": "",
+          "Key": "406BD69B4C5E9E425F131B904EA483D0",
+          "SourceString": "Supply Llama"
+        },
+        "Icon": {
+          "AssetPathName": "/Game/UI/Foundation/Textures/Icons/Athena/T-T-Icon-BR-SM-Athena-SupplyLlama-01.T-T-Icon-BR-SM-Athena-SupplyLlama-01",
+          "SubPathString": ""
+        },
+        "PrimaryColor": {
+          "R": 0.8,
+          "G": 0.215686,
+          "B": 0.015686,
+          "A": 1.0,
+          "Hex": "CC3704"
+        },
+        "ScreenClamping": "EFortMarkedActorScreenClamping::Default"
+      },
+      "CustomizationsToLoad": {
+        "ObjectName": "Labrador_Customization:FortAIPawnCustomizationDefinition",
+        "ObjectPath": "/Labrador/AIPawnCustomizations/Labrador_Customization.0"
+      },
+      "FootstepIconOverride": {
+        "ObjectName": "AV_Labrador_32x32:Texture2D",
+        "ObjectPath": "/Labrador/HUD/AV_Labrador_32x32.0"
+      },
+      "SoundIndicatorMaxDistance": 3200.0,
+      "PawnStatHandle": {
+        "DataTable": {
+          "ObjectName": "LabradorAIPawnStats:DataTable",
+          "ObjectPath": "/Labrador/DataTables/LabradorAIPawnStats.0"
+        },
+        "RowName": "Labrador"
+      },
+      "bShouldSupportSurfaceSwimming": true,
+      "DeathCueTag": {
+        "GameplayCueTag": {
+          "TagName": "GameplayCue.Athena.Rez.Out.NPC.Labrador"
+        }
+      },
+      "DamageZones": {
+        "Bones": [
+          "Head",
+          "Neck_05",
+          "Neck_03",
+          "Ear_end_l",
+          "Ear_end_r"
+        ]
+      },
+      "VocalChords": [
+        {
+          "FeedbackAudioComponent": {
+            "ObjectName": "Default__BP_AIPawn_Labrador_C:FeedbackAudioComp0:AudioComponent",
+            "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.21"
+          },
+          "ReplicatedSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": true,
+            "bCanBeInterrupted": true,
+            "bCanQue": true
+          },
+          "PendingSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": true,
+            "bCanBeInterrupted": true,
+            "bCanQue": true
+          },
+          "QueuedSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": true,
+            "bCanBeInterrupted": true,
+            "bCanQue": true
+          },
+          "CurrentSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": true,
+            "bCanBeInterrupted": true,
+            "bCanQue": true
+          }
+        }
+      ],
+      "AbilitySystemComponent": {
+        "ObjectName": "Default__BP_AIPawn_Labrador_C:AbilitySystemComponent:FortAbilitySystemComponent",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.25"
+      },
+      "GameplayTags": [
+        "NPC.GoalSelection.Labrador",
+        "Athena.AI.NoiseMaker",
+        "Pawn.Athena.NPC.Labrador"
+      ],
+      "Mesh": {
+        "ObjectName": "Default__BP_AIPawn_Labrador_C:CharacterMesh0:FortPooledSkelMeshComponent",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.27"
+      },
+      "CharacterMovement": {
+        "ObjectName": "Default__BP_AIPawn_Labrador_C:CharMoveComp:FortMovementComp_AIChar",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.26"
+      },
+      "CapsuleComponent": {
+        "ObjectName": "Default__BP_AIPawn_Labrador_C:CollisionCylinder:CapsuleComponent",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.24"
+      },
+      "AIControllerClass": {
+        "ObjectName": "BP_Controller_Labrador_C:BlueprintGeneratedClass",
+        "ObjectPath": "/Labrador/Controller/BP_Controller_Labrador.0"
+      },
+      "RootComponent": {
+        "ObjectName": "Default__BP_AIPawn_Labrador_C:CollisionCylinder:CapsuleComponent",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.24"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "FeedbackAudioComp0",
+    "Outer": "Default__BP_AIPawn_Labrador_C",
+    "Template": "FeedbackAudioComp0",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "Default__BP_AIPawn_Labrador_C:CollisionCylinder:CapsuleComponent",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.24"
+      }
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "Capsule_GEN_VARIABLE",
+    "Outer": "BP_AIPawn_Labrador_C",
+    "Properties": {
+      "CapsuleHalfHeight": 35.0,
+      "CapsuleRadius": 15.0,
+      "AreaClass": {
+        "ObjectName": "FortMetaNavArea_Obstacles:Class",
+        "ObjectPath": 0
+      },
+      "CanCharacterStepUpOn": "ECanBeCharacterBase::ECB_No",
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_GameTraceChannel4",
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "FortAIPawnCapsuleOverlapPawns",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Camera",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "FCC_Object_PawnAI",
+              "Response": "ECollisionResponse::ECR_Overlap"
+            },
+            {
+              "Channel": "FCC_Object_Projectile",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Query_PawnCapsule",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_ProjectileMesh",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Trace_WeaponWorldMulti",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 18.0,
+        "Z": 85.0
+      },
+      "bCanEverAffectNavigation": false
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "WeaponCapsuleCollision_GEN_VARIABLE",
+    "Outer": "BP_AIPawn_Labrador_C",
+    "Template": "WeaponCapsuleCollision_GEN_VARIABLE",
+    "Properties": {
+      "CapsuleHalfHeight": 65.0,
+      "CapsuleRadius": 25.0,
+      "AreaClass": null,
+      "BodyInstance": {
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "FCC_Trace_WeaponWorldMulti",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "FCC_Object_Water",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "FCC_Trace_Interaction",
+              "Response": "ECollisionResponse::ECR_Overlap"
+            },
+            {
+              "Channel": "FCC_Trace_WeaponCapsule",
+              "Response": "ECollisionResponse::ECR_Block"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": -0.0001745224,
+        "Y": 6.3842373,
+        "Z": 61.874317
+      },
+      "RelativeRotation": {
+        "Pitch": -19.999584,
+        "Yaw": -270.0,
+        "Roll": 360.0
+      },
+      "RelativeScale3D": {
+        "X": 0.85,
+        "Y": 0.85,
+        "Z": 0.85
+      }
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "CollisionCylinder",
+    "Outer": "Default__BP_AIPawn_Labrador_C",
+    "Template": "CollisionCylinder",
+    "Properties": {
+      "CapsuleHalfHeight": 55.0,
+      "CapsuleRadius": 40.0,
+      "BodyInstance": {
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Camera",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "FCC_Object_PawnAI",
+              "Response": "ECollisionResponse::ECR_Overlap"
+            },
+            {
+              "Channel": "FCC_Object_Projectile",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Query_PawnCapsule",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Trace_WeaponWorldMulti",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "FCC_Object_ProjectileMesh",
+              "Response": "ECollisionResponse::ECR_Block"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "Type": "FortAbilitySystemComponent",
+    "Name": "AbilitySystemComponent",
+    "Outer": "Default__BP_AIPawn_Labrador_C",
+    "Template": "AbilitySystemComponent",
+    "Properties": {
+      "ReplicatedPredictionKeyMap": {
+        "PredictionKeys": [
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 1,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 2,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 3,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 4,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 5,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 6,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 7,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 8,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 9,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 10,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 11,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 12,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 13,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 14,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 15,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 16,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 17,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 18,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 19,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 20,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 21,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 22,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 23,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 24,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 25,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 26,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 27,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 28,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 29,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 30,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 31,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          },
+          {
+            "PredictionKey": {
+              "PredictiveConnection": null,
+              "Current": 0,
+              "Base": 0,
+              "bIsStale": false,
+              "bIsServerInitiated": false
+            },
+            "ReplicationID": 32,
+            "ReplicationKey": 0,
+            "MostRecentArrayReplicationKey": -1
+          }
+        ],
+        "ArrayReplicationKey": 32
+      }
+    }
+  },
+  {
+    "Type": "FortMovementComp_AIChar",
+    "Name": "CharMoveComp",
+    "Outer": "Default__BP_AIPawn_Labrador_C",
+    "Template": "CharMoveComp",
+    "Properties": {
+      "MaxStepHeight": 45.0,
+      "WalkableFloorAngle": 45.0,
+      "WalkableFloorZ": 0.70710677,
+      "NavAgentProps": {
+        "bCanCrouch": true
+      }
+    }
+  },
+  {
+    "Type": "FortPooledSkelMeshComponent",
+    "Name": "CharacterMesh0",
+    "Outer": "Default__BP_AIPawn_Labrador_C",
+    "Template": "CharacterMesh0",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "Default__BP_AIPawn_Labrador_C:CollisionCylinder:CapsuleComponent",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.24"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -52.0
+      },
+      "RelativeScale3D": {
+        "X": 1.5,
+        "Y": 1.5,
+        "Z": 1.5
+      }
+    }
+  },
+  {
+    "Type": "FortWidgetComponent",
+    "Name": "NPCStatusWidget_GEN_VARIABLE",
+    "Outer": "BP_AIPawn_Labrador_C",
+    "Template": "NPCStatusWidget_GEN_VARIABLE",
+    "Properties": {
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 125.0
+      }
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "BP_AIPawn_Labrador_C",
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "CapsuleComponent:Class",
+            "ObjectPath": 0
+          },
+          "ComponentTemplate": {
+            "ObjectName": "BP_AIPawn_Labrador_C:WeaponCapsuleCollision_GEN_VARIABLE:CapsuleComponent",
+            "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.23"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "EnemyPawn_Parent_Deimos_C:BlueprintGeneratedClass",
+              "ObjectPath": "/Game/Characters/Enemies/Blueprints/EnemyPawn_Parent_Deimos.37"
+            },
+            "SCSVariableName": "WeaponCapsuleCollision",
+            "AssociatedGuid": "94C334DA-49C2D833-C78220A0-72661AE9"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [
+              {
+                "PropertyName": "CapsuleHalfHeight",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "CapsuleComponent:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "CapsuleRadius",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "CapsuleComponent:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "bGenerateOverlapEvents",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "CapsuleComponent:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "CanCharacterStepUpOn",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "CapsuleComponent:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "BodyInstance",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "CapsuleComponent:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "ObjectType",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "BodyInstance:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "CollisionProfileName",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "BodyInstance:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "CollisionResponses",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "BodyInstance:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "ResponseArray",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "CollisionResponse:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "ResponseArray",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "CollisionResponse:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "Response",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ResponseChannel:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "ResponseArray",
+                "ArrayIndex": 1,
+                "PropertyScope": {
+                  "ObjectName": "CollisionResponse:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "Response",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ResponseChannel:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "ResponseArray",
+                "ArrayIndex": 2,
+                "PropertyScope": {
+                  "ObjectName": "CollisionResponse:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "Response",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ResponseChannel:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "ResponseArray",
+                "ArrayIndex": 3,
+                "PropertyScope": {
+                  "ObjectName": "CollisionResponse:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "Response",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ResponseChannel:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "ResponseArray",
+                "ArrayIndex": 4,
+                "PropertyScope": {
+                  "ObjectName": "CollisionResponse:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "Response",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ResponseChannel:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "ResponseArray",
+                "ArrayIndex": 5,
+                "PropertyScope": {
+                  "ObjectName": "CollisionResponse:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "Response",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ResponseChannel:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "ResponseArray",
+                "ArrayIndex": 6,
+                "PropertyScope": {
+                  "ObjectName": "CollisionResponse:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "Response",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ResponseChannel:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "ResponseArray",
+                "ArrayIndex": 7,
+                "PropertyScope": {
+                  "ObjectName": "CollisionResponse:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "Response",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ResponseChannel:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "ResponseArray",
+                "ArrayIndex": 8,
+                "PropertyScope": {
+                  "ObjectName": "CollisionResponse:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "Channel",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ResponseChannel:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "Response",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ResponseChannel:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "ResponseArray",
+                "ArrayIndex": 9,
+                "PropertyScope": {
+                  "ObjectName": "CollisionResponse:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "Channel",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ResponseChannel:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "Response",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ResponseChannel:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "ResponseArray",
+                "ArrayIndex": 10,
+                "PropertyScope": {
+                  "ObjectName": "CollisionResponse:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "Channel",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ResponseChannel:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "ResponseArray",
+                "ArrayIndex": 11,
+                "PropertyScope": {
+                  "ObjectName": "CollisionResponse:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "Channel",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ResponseChannel:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "Response",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ResponseChannel:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "RelativeLocation",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "CapsuleComponent:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "X",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Vector:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "Y",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Vector:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "Z",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Vector:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "RelativeRotation",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "CapsuleComponent:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "Pitch",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Rotator:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "Yaw",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Rotator:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "Roll",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Rotator:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "RelativeScale3D",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "CapsuleComponent:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "X",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Vector:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "Y",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Vector:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "Z",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Vector:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "bCanEverAffectNavigation",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "CapsuleComponent:Class",
+                  "ObjectPath": 0
+                }
+              }
+            ],
+            "bHasValidCookedData": true
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "NiagaraComponent:Class",
+            "ObjectPath": 0
+          },
+          "ComponentTemplate": {
+            "ObjectName": "BP_AIPawn_Labrador_C:Wildlife_FootDust_GEN_VARIABLE:NiagaraComponent",
+            "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.30"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "NPC_Pawn_Wildlife_Parent_C:BlueprintGeneratedClass",
+              "ObjectPath": "/Game/Athena/AI/Pawns/NPC/Parents/NPC_Pawn_Wildlife_Parent.19"
+            },
+            "SCSVariableName": "Wildlife_FootDust",
+            "AssociatedGuid": "D21724DD-49932E43-D55DC49F-86315989"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [
+              {
+                "PropertyName": "Asset",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "NiagaraComponent:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "OverrideParameters",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "NiagaraComponent:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "UserParameterRedirects",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "NiagaraUserRedirectionParameterStore:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "SortedParameterOffsets",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "NiagaraUserRedirectionParameterStore:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": null,
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "NiagaraUserRedirectionParameterStore:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "ParameterData",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "NiagaraUserRedirectionParameterStore:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": null,
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "NiagaraUserRedirectionParameterStore:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "DataInterfaces",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "NiagaraUserRedirectionParameterStore:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": null,
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "NiagaraUserRedirectionParameterStore:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "bAutoActivate",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "NiagaraComponent:Class",
+                  "ObjectPath": 0
+                }
+              }
+            ],
+            "bHasValidCookedData": true
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "FortWidgetComponent:Class",
+            "ObjectPath": 0
+          },
+          "ComponentTemplate": {
+            "ObjectName": "BP_AIPawn_Labrador_C:NPCStatusWidget_GEN_VARIABLE:FortWidgetComponent",
+            "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.28"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "NPC_Pawn_Parent_C:BlueprintGeneratedClass",
+              "ObjectPath": "/Game/Athena/AI/Pawns/NPC/Parents/NPC_Pawn_Parent.92"
+            },
+            "SCSVariableName": "NPCStatusWidget",
+            "AssociatedGuid": "05E58C2F-4C9783D2-E28DBEA5-05A53904"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [
+              {
+                "PropertyName": "Space",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "FortWidgetComponent:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "WidgetClass",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "FortWidgetComponent:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "DrawSize",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "FortWidgetComponent:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "X",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "IntPoint:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "Y",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "IntPoint:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "bGenerateOverlapEvents",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "FortWidgetComponent:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "CanCharacterStepUpOn",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "FortWidgetComponent:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "BodyInstance",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "FortWidgetComponent:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "ObjectType",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "BodyInstance:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "CollisionEnabled",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "BodyInstance:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "CollisionProfileName",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "BodyInstance:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "CollisionResponses",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "BodyInstance:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "ResponseArray",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "CollisionResponse:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "ResponseArray",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "CollisionResponse:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "Channel",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ResponseChannel:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "Response",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ResponseChannel:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "ResponseArray",
+                "ArrayIndex": 1,
+                "PropertyScope": {
+                  "ObjectName": "CollisionResponse:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "Channel",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ResponseChannel:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "Response",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ResponseChannel:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "RelativeLocation",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "FortWidgetComponent:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "Z",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Vector:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "RelativeRotation",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "FortWidgetComponent:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "Yaw",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Rotator:Class",
+                  "ObjectPath": 0
+                }
+              }
+            ],
+            "bHasValidCookedData": true
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "Wildlife_FootDust_GEN_VARIABLE",
+    "Outer": "BP_AIPawn_Labrador_C",
+    "Template": "Wildlife_FootDust_GEN_VARIABLE"
+  },
+  {
+    "Type": "NiagaraDataInterfaceSkeletalMesh",
+    "Name": "NiagaraDataInterfaceSkeletalMesh_0",
+    "Outer": "Wildlife_FootDust_GEN_VARIABLE",
+    "Properties": {
+      "MeshUserParameter": {
+        "Parameter": {}
+      },
+      "FilteredSockets": []
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_AIPawn_Labrador_C"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "SceneComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_AIPawn_Labrador_C:DefaultSceneRoot_GEN_VARIABLE:SceneComponent",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.32"
+      },
+      "VariableGuid": "D9527EB0-4D3CA5CA-909A07BB-00D50A25",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "CapsuleComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_AIPawn_Labrador_C:Capsule_GEN_VARIABLE:CapsuleComponent",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.22"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "CapsuleHalfHeight",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "CapsuleComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "CapsuleRadius",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "CapsuleComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "AreaClass",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "CapsuleComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "CanCharacterStepUpOn",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "CapsuleComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "BodyInstance",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "CapsuleComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "ObjectType",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "BodyInstance:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "CollisionEnabled",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "BodyInstance:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "CollisionProfileName",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "BodyInstance:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "CollisionResponses",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "BodyInstance:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "ResponseArray",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "CollisionResponse:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "ResponseArray",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "CollisionResponse:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "Channel",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ResponseChannel:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "Response",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ResponseChannel:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "ResponseArray",
+            "ArrayIndex": 1,
+            "PropertyScope": {
+              "ObjectName": "CollisionResponse:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "Channel",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ResponseChannel:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "Response",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ResponseChannel:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "ResponseArray",
+            "ArrayIndex": 2,
+            "PropertyScope": {
+              "ObjectName": "CollisionResponse:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "Channel",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ResponseChannel:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "ResponseArray",
+            "ArrayIndex": 3,
+            "PropertyScope": {
+              "ObjectName": "CollisionResponse:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "Channel",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ResponseChannel:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "Response",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ResponseChannel:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "ResponseArray",
+            "ArrayIndex": 4,
+            "PropertyScope": {
+              "ObjectName": "CollisionResponse:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "Channel",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ResponseChannel:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "Response",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ResponseChannel:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "ResponseArray",
+            "ArrayIndex": 5,
+            "PropertyScope": {
+              "ObjectName": "CollisionResponse:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "Channel",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ResponseChannel:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "Response",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ResponseChannel:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "ResponseArray",
+            "ArrayIndex": 6,
+            "PropertyScope": {
+              "ObjectName": "CollisionResponse:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "Channel",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ResponseChannel:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "Response",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ResponseChannel:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "RelativeLocation",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "CapsuleComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "Y",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Vector:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "Z",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Vector:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "bCanEverAffectNavigation",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "CapsuleComponent:Class",
+              "ObjectPath": 0
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "ParentComponentOrVariableName": "CharacterMesh0",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "851FDAA2-42AC9519-8E5880A2-12648270",
+      "InternalVariableName": "Capsule"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_AIPawn_Labrador_C",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_1:SCS_Node",
+          "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.34"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_1:SCS_Node",
+          "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.34"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SimpleConstructionScript_0:SCS_Node_0:SCS_Node",
+        "ObjectPath": "/Labrador/Pawn/BP_AIPawn_Labrador.33"
+      }
+    }
+  }
+]

@@ -1,0 +1,856 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_GCN_Skyfire_LowGravity",
+    "Outer": "GCN_Skyfire_LowGravity_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 20,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "SignatureFunction": {
+          "ObjectName": "SkyfireOnPawnEarnedLootRarityChanged__DelegateSignature:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_MyTarget",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "K2Node_Event_EventType",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Enum": {
+          "ObjectName": "EGameplayCueEvent:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_Parameters",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 200,
+        "PropertyFlags": 549755813890,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayCueParameters:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetComponentByClass_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "SkyfirePlayerPawnComponent:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_CustomEvent_NewRarity",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 2,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Enum": {
+          "ObjectName": "EFortRarity:Class",
+          "ObjectPath": 0
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": 1,
+          "ArrayDim": 1,
+          "ElementSize": 1,
+          "PropertyFlags": 0,
+          "RepIndex": 0,
+          "RepNotifyFunc": "None",
+          "BlueprintReplicationCondition": "COND_None",
+          "Enum": null
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BPGetRarityColorPalette_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 80,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "FortColorPalette:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 8421377,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "ChangeFXColors",
+    "Outer": "GCN_Skyfire_LowGravity_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "EnumProperty",
+        "Name": "NewRarity",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 150,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Enum": {
+          "ObjectName": "EFortRarity:Class",
+          "ObjectPath": 0
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": 1,
+          "ArrayDim": 1,
+          "ElementSize": 1,
+          "PropertyFlags": 0,
+          "RepIndex": 0,
+          "RepNotifyFunc": "None",
+          "BlueprintReplicationCondition": "COND_None",
+          "Enum": null
+        }
+      }
+    ],
+    "FunctionFlags": 201326592,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "K2_HandleGameplayCue",
+    "Outer": "GCN_Skyfire_LowGravity_C",
+    "SuperStruct": {
+      "ObjectName": "K2_HandleGameplayCue:Class",
+      "ObjectPath": 0
+    },
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "MyTarget",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "EventType",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Enum": {
+          "ObjectName": "EGameplayCueEvent:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Parameters",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 200,
+        "PropertyFlags": 549890032022,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayCueParameters:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 138545152,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "GCN_Skyfire_LowGravity_C",
+    "SuperStruct": {
+      "ObjectName": "ReceiveBeginPlay:Class",
+      "ObjectPath": 0
+    },
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 134744064,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "WhileActive",
+    "Outer": "GCN_Skyfire_LowGravity_C",
+    "SuperStruct": {
+      "ObjectName": "WhileActive:Class",
+      "ObjectPath": 0
+    },
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "MyTarget",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Parameters",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 200,
+        "PropertyFlags": 549890032022,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayCueParameters:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 1408,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsFort_Player_Pawn_Athena",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortPlayerPawnAthena:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnSystemAttached_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "NiagaraComponent:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 205654016,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "OnRemove",
+    "Outer": "GCN_Skyfire_LowGravity_C",
+    "SuperStruct": {
+      "ObjectName": "OnRemove:Class",
+      "ObjectPath": 0
+    },
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "MyTarget",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Parameters",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 200,
+        "PropertyFlags": 549890032022,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayCueParameters:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 1408,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 205654016,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GCN_Skyfire_LowGravity_C",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "GCN_Skyfire_LowGravity_C:SimpleConstructionScript_0:SimpleConstructionScript",
+        "ObjectPath": "/Skyfire/GameplayCues/GCN_Skyfire_LowGravity.11"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "GCN_Skyfire_LowGravity_C:ExecuteUbergraph_GCN_Skyfire_LowGravity:Function",
+        "ObjectPath": "/Skyfire/GameplayCues/GCN_Skyfire_LowGravity.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "FortGameplayCueNotify_Loop:Class",
+      "ObjectPath": 0
+    },
+    "Children": [
+      {
+        "ObjectName": "GCN_Skyfire_LowGravity_C:OnRemove:Function",
+        "ObjectPath": "/Skyfire/GameplayCues/GCN_Skyfire_LowGravity.5"
+      },
+      {
+        "ObjectName": "GCN_Skyfire_LowGravity_C:WhileActive:Function",
+        "ObjectPath": "/Skyfire/GameplayCues/GCN_Skyfire_LowGravity.4"
+      },
+      {
+        "ObjectName": "GCN_Skyfire_LowGravity_C:ReceiveBeginPlay:Function",
+        "ObjectPath": "/Skyfire/GameplayCues/GCN_Skyfire_LowGravity.3"
+      },
+      {
+        "ObjectName": "GCN_Skyfire_LowGravity_C:K2_HandleGameplayCue:Function",
+        "ObjectPath": "/Skyfire/GameplayCues/GCN_Skyfire_LowGravity.2"
+      },
+      {
+        "ObjectName": "GCN_Skyfire_LowGravity_C:ChangeFXColors:Function",
+        "ObjectPath": "/Skyfire/GameplayCues/GCN_Skyfire_LowGravity.1"
+      },
+      {
+        "ObjectName": "GCN_Skyfire_LowGravity_C:ExecuteUbergraph_GCN_Skyfire_LowGravity:Function",
+        "ObjectPath": "/Skyfire/GameplayCues/GCN_Skyfire_LowGravity.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 2105344,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "PointerToUberGraphFrame:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "MaxDrawDistance",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "MapProperty",
+        "Name": "TMapRarity",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 80,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "KeyProp": {
+          "Type": "EnumProperty",
+          "Name": "TMapRarity",
+          "Flags": 1,
+          "ArrayDim": 1,
+          "ElementSize": 1,
+          "PropertyFlags": 0,
+          "RepIndex": 0,
+          "RepNotifyFunc": "None",
+          "BlueprintReplicationCondition": "COND_None",
+          "Enum": {
+            "ObjectName": "EFortRarity:Class",
+            "ObjectPath": 0
+          },
+          "UnderlyingProp": {
+            "Type": "ByteProperty",
+            "Name": "UnderlyingType",
+            "Flags": 1,
+            "ArrayDim": 1,
+            "ElementSize": 1,
+            "PropertyFlags": 0,
+            "RepIndex": 0,
+            "RepNotifyFunc": "None",
+            "BlueprintReplicationCondition": "COND_None",
+            "Enum": null
+          }
+        },
+        "ValueProp": {
+          "Type": "StructProperty",
+          "Name": "TMapRarity_Value",
+          "Flags": 1,
+          "ArrayDim": 1,
+          "ElementSize": 16,
+          "PropertyFlags": 0,
+          "RepIndex": 0,
+          "RepNotifyFunc": "None",
+          "BlueprintReplicationCondition": "COND_None",
+          "Struct": {
+            "ObjectName": "LinearColor:Class",
+            "ObjectPath": 0
+          }
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "NiagaraParameterName",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "LowGravFX",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "NiagaraSystem:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "AttachedLowGravTrailFX",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 589829,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "NiagaraComponent:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Source Material",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "MaterialInterface:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "MaterialColorBName",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "MaterialColorAName",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "NiagaraMaterial",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_GCN_Skyfire_LowGravity": {
+        "ObjectName": "GCN_Skyfire_LowGravity_C:ExecuteUbergraph_GCN_Skyfire_LowGravity:Function",
+        "ObjectPath": "/Skyfire/GameplayCues/GCN_Skyfire_LowGravity.0"
+      },
+      "ChangeFXColors": {
+        "ObjectName": "GCN_Skyfire_LowGravity_C:ChangeFXColors:Function",
+        "ObjectPath": "/Skyfire/GameplayCues/GCN_Skyfire_LowGravity.1"
+      },
+      "K2_HandleGameplayCue": {
+        "ObjectName": "GCN_Skyfire_LowGravity_C:K2_HandleGameplayCue:Function",
+        "ObjectPath": "/Skyfire/GameplayCues/GCN_Skyfire_LowGravity.2"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "GCN_Skyfire_LowGravity_C:ReceiveBeginPlay:Function",
+        "ObjectPath": "/Skyfire/GameplayCues/GCN_Skyfire_LowGravity.3"
+      },
+      "WhileActive": {
+        "ObjectName": "GCN_Skyfire_LowGravity_C:WhileActive:Function",
+        "ObjectPath": "/Skyfire/GameplayCues/GCN_Skyfire_LowGravity.4"
+      },
+      "OnRemove": {
+        "ObjectName": "GCN_Skyfire_LowGravity_C:OnRemove:Function",
+        "ObjectPath": "/Skyfire/GameplayCues/GCN_Skyfire_LowGravity.5"
+      }
+    },
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Engine",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__GCN_Skyfire_LowGravity_C:GCN_Skyfire_LowGravity_C",
+      "ObjectPath": "/Skyfire/GameplayCues/GCN_Skyfire_LowGravity.7"
+    }
+  },
+  {
+    "Type": "GCN_Skyfire_LowGravity_C",
+    "Name": "Default__GCN_Skyfire_LowGravity_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "MaxDrawDistance": 10500.0,
+      "TMapRarity": {
+        "EFortRarity::Common": {
+          "R": 0.385417,
+          "G": 0.385417,
+          "B": 0.385417,
+          "A": 1.0,
+          "Hex": "626262"
+        },
+        "EFortRarity::Uncommon": {
+          "R": 0.026821,
+          "G": 0.739583,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "07BD00"
+        },
+        "EFortRarity::Rare": {
+          "R": 0.002537,
+          "G": 0.034084,
+          "B": 0.864583,
+          "A": 1.0,
+          "Hex": "0109DC"
+        },
+        "EFortRarity::Epic": {
+          "R": 0.379497,
+          "G": 0.0,
+          "B": 1.0,
+          "A": 1.0,
+          "Hex": "6100FF"
+        },
+        "EFortRarity::Legendary": {
+          "R": 1.0,
+          "G": 0.16443,
+          "B": 0.0,
+          "A": 1.0,
+          "Hex": "FF2A00"
+        }
+      },
+      "NiagaraParameterName": "Color",
+      "LowGravFX": {
+        "ObjectName": "NS_Skyfire_LowGravity_Trails:NiagaraSystem",
+        "ObjectPath": "/Skyfire/Cosmetics/Effects/LowGravity_Trails/NS_Skyfire_LowGravity_Trails.28"
+      },
+      "Source Material": {
+        "ObjectName": "MI_Skyfire_LowGrav_Trail:MaterialInstanceConstant",
+        "ObjectPath": "/Skyfire/Cosmetics/Effects/LowGravity_Trails/MI_Skyfire_LowGrav_Trail.0"
+      },
+      "MaterialColorBName": "Color B",
+      "MaterialColorAName": "Color A",
+      "NiagaraMaterial": "Mat",
+      "GameplayCueTag": {
+        "TagName": "GameplayCue.Skyfire.Phase.Arena.LowGrav.Trail"
+      },
+      "GameplayCueName": "GameplayCue.Skyfire.Phase.Arena.LowGrav.Trail",
+      "bAllowMultipleOnActiveEvents": false,
+      "NumPreallocatedInstances": 0,
+      "PrimaryActorTick": {
+        "bStartWithTickEnabled": true
+      },
+      "bCanBeDamaged": false,
+      "RootComponent": {
+        "ObjectName": "Default__GCN_Skyfire_LowGravity_C:RootComponent:SceneComponent",
+        "ObjectPath": "/Skyfire/GameplayCues/GCN_Skyfire_LowGravity.8"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "RootComponent",
+    "Outer": "Default__GCN_Skyfire_LowGravity_C"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "GCN_Skyfire_LowGravity_C"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "SceneComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": {
+        "ObjectName": "GCN_Skyfire_LowGravity_C:DefaultSceneRoot_GEN_VARIABLE:SceneComponent",
+        "ObjectPath": "/Skyfire/GameplayCues/GCN_Skyfire_LowGravity.9"
+      },
+      "VariableGuid": "B565F408-4C29FEC6-B32A8E86-169171F4",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "GCN_Skyfire_LowGravity_C",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SimpleConstructionScript_0:SCS_Node_0:SCS_Node",
+        "ObjectPath": "/Skyfire/GameplayCues/GCN_Skyfire_LowGravity.10"
+      }
+    }
+  }
+]
