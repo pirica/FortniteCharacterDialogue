@@ -1,0 +1,130 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GCNL_Athena_LlamaRoaster_Boss_Charge_C",
+    "Super": "GCNL_Athena_LlamaRoaster_Chargeup_C",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "GCNL_Athena_LlamaRoaster_Boss_Charge_C:SimpleConstructionScript_0:SimpleConstructionScript",
+        "ObjectPath": "/MotherGameplay/GameplayCues/GCNL_Athena_LlamaRoaster_Boss_Charge.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "GCNL_Athena_LlamaRoaster_Chargeup_C:BlueprintGeneratedClass",
+      "ObjectPath": "/MotherGameplay/GameplayCues/GCNL_Athena_LlamaRoaster_Chargeup.6"
+    },
+    "Children": [],
+    "ChildProperties": [],
+    "FuncMap": {},
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Engine",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__GCNL_Athena_LlamaRoaster_Boss_Charge_C:GCNL_Athena_LlamaRoaster_Boss_Charge_C",
+      "ObjectPath": "/MotherGameplay/GameplayCues/GCNL_Athena_LlamaRoaster_Boss_Charge.1"
+    }
+  },
+  {
+    "Type": "GCNL_Athena_LlamaRoaster_Boss_Charge_C",
+    "Name": "Default__GCNL_Athena_LlamaRoaster_Boss_Charge_C",
+    "Template": "Default__GCNL_Athena_LlamaRoaster_Chargeup_C",
+    "Properties": {
+      "ApplicationBurst": {
+        "BurstParticles": [
+          {
+            "Condition": {
+              "SourceCondition": "EFortGameplayCueSourceCondition::AnySource",
+              "AllowedSurfaces": [],
+              "DisallowedSurfaces": [],
+              "ChanceToPlay": 1.0,
+              "Significance": "EParticleSignificanceLevel::High",
+              "RequiredDetailMode": 0,
+              "bRequireVisible": false
+            },
+            "Attachment": {
+              "SocketName": "Muzzle",
+              "AttachType": "EFortGameplayCueAttachType::AttachToTarget",
+              "bAttachToWeapon": true,
+              "bAttachToHitResult": false,
+              "bUseUnsmoothedNetworkPosition": false,
+              "bIgnoreScale": true,
+              "bIgnoreRotation": false,
+              "OverrideScale": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              },
+              "OverrideRotation": {
+                "Pitch": 0.0,
+                "Yaw": 0.0,
+                "Roll": 0.0
+              }
+            },
+            "FXType": "EFXType::GenericAnimNotify",
+            "NiagaraSystem": {
+              "ObjectName": "NS_LlamaRoaster_ChargeUp_Boss_02:NiagaraSystem",
+              "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/FX/NS_LlamaRoaster_ChargeUp_Boss_02.35"
+            },
+            "ParticleSystem": null,
+            "bCastShadow": false,
+            "bOverrideCondition": false,
+            "bOverrideAttachment": true
+          }
+        ]
+      },
+      "GameplayCueTag": {
+        "TagName": "GameplayCue.Athena.LlamaRoaster.ChargeUp.Boss"
+      },
+      "GameplayCueName": "GameplayCue.Athena.LlamaRoaster.ChargeUp.Boss",
+      "RootComponent": {
+        "ObjectName": "Default__GCNL_Athena_LlamaRoaster_Boss_Charge_C:RootComponent:SceneComponent",
+        "ObjectPath": "/MotherGameplay/GameplayCues/GCNL_Athena_LlamaRoaster_Boss_Charge.2"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "RootComponent",
+    "Outer": "Default__GCNL_Athena_LlamaRoaster_Boss_Charge_C",
+    "Template": "RootComponent"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "GCNL_Athena_LlamaRoaster_Boss_Charge_C"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "SceneComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": {
+        "ObjectName": "GCNL_Athena_LlamaRoaster_Boss_Charge_C:DefaultSceneRoot_GEN_VARIABLE:SceneComponent",
+        "ObjectPath": "/MotherGameplay/GameplayCues/GCNL_Athena_LlamaRoaster_Boss_Charge.3"
+      },
+      "VariableGuid": "1E56FDBE-4B4C9BC7-07DC1CA2-1A8802D2",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "GCNL_Athena_LlamaRoaster_Boss_Charge_C",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SimpleConstructionScript_0:SCS_Node_0:SCS_Node",
+        "ObjectPath": "/MotherGameplay/GameplayCues/GCNL_Athena_LlamaRoaster_Boss_Charge.4"
+      }
+    }
+  }
+]

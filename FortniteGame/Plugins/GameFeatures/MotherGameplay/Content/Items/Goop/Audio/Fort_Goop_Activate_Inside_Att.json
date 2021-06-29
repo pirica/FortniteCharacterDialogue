@@ -1,0 +1,105 @@
+[
+  {
+    "Type": "SoundAttenuation",
+    "Name": "Fort_Goop_Activate_Inside_Att",
+    "Properties": {
+      "Attenuation": {
+        "bSpatialize": false,
+        "bAttenuateWithLPF": true,
+        "bEnableSubmixSends": true,
+        "OcclusionTraceChannel": "ECollisionChannel::ECC_Camera",
+        "StereoSpread": 750.0,
+        "LPFRadiusMin": 500.0,
+        "LPFRadiusMax": 1000.0,
+        "LPFFrequencyAtMax": 600.0,
+        "FocusAzimuth": 25.0,
+        "NonFocusAzimuth": 35.0,
+        "NonFocusVolumeAttenuation": 0.3,
+        "OcclusionLowPassFilterFrequency": 6000.0,
+        "ReverbWetLevelMin": 0.5,
+        "ReverbWetLevelMax": 1.5,
+        "ReverbDistanceMin": 0.0,
+        "ReverbDistanceMax": 1000.0,
+        "ManualReverbSendLevel": 0.25,
+        "CustomReverbSendCurve": {
+          "ExternalCurve": {
+            "ObjectName": "Fort_Weapon_Projectile_ReverbSendCurve:CurveFloat",
+            "ObjectPath": "/Game/Sounds/Attenuation/Fort_Weapon_Projectile_ReverbSendCurve.0"
+          }
+        },
+        "SubmixSendSettings": [
+          {
+            "Submix": {
+              "ObjectName": "Fortnite_DistantReverbSubmix:SoundSubmix",
+              "ObjectPath": "/Game/Sounds/SubMixes/Fortnite_DistantReverbSubmix.0"
+            },
+            "SubmixSendMethod": "ESubmixSendMethod::CustomCurve",
+            "SubmixSendLevelMin": 0.0,
+            "SubmixSendLevelMax": 1.0,
+            "SubmixSendDistanceMin": 0.0,
+            "SubmixSendDistanceMax": 7500.0,
+            "ManualSubmixSendLevel": 0.2,
+            "CustomSubmixSendCurve": {
+              "EditorCurveData": {
+                "Keys": [],
+                "DefaultValue": 3.4028235E+38,
+                "PreInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant",
+                "PostInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant"
+              },
+              "ExternalCurve": {
+                "ObjectName": "Fortnite_DistantReverb_Curve:CurveFloat",
+                "ObjectPath": "/Game/Sounds/SubMixes/Reverb/Fortnite_DistantReverb_Curve.0"
+              }
+            }
+          }
+        ],
+        "DistanceAlgorithm": "EAttenuationDistanceModel::Custom",
+        "AttenuationShapeExtents": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 3000.0,
+        "CustomAttenuationCurve": {
+          "EditorCurveData": {
+            "Keys": [
+              {
+                "InterpMode": 0,
+                "TangentMode": 0,
+                "TangentWeightMode": 0,
+                "KeyTime": 0.0,
+                "KeyValue": -2.1560983E+17,
+                "ArriveTangent": 5.669113E-39,
+                "ArriveTangentWeight": 0.0,
+                "LeaveTangent": 0.0,
+                "LeaveTangentWeight": 9.403955E-38
+              },
+              {
+                "InterpMode": 1,
+                "TangentMode": 0,
+                "TangentWeightMode": 0,
+                "KeyTime": 2.269E-41,
+                "KeyValue": 8.3961314E-20,
+                "ArriveTangent": 2.219E-41,
+                "ArriveTangentWeight": 1.1350241E-19,
+                "LeaveTangent": 2.219E-41,
+                "LeaveTangentWeight": 2.387723E-38
+              },
+              {
+                "InterpMode": 0,
+                "TangentMode": 0,
+                "TangentWeightMode": 0,
+                "KeyTime": 8.8E-44,
+                "KeyValue": 8.2591214E-08,
+                "ArriveTangent": 2.7E-43,
+                "ArriveTangentWeight": 5.3138333E-30,
+                "LeaveTangent": 2.76E-43,
+                "LeaveTangentWeight": 0.0
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,99 @@
+[
+  {
+    "Type": "SoundAttenuation",
+    "Name": "Fort_Weapon_Launcher_Gravy_Disc_Prj_Stop_Att",
+    "Properties": {
+      "Attenuation": {
+        "bAttenuateWithLPF": true,
+        "bEnableSubmixSends": true,
+        "SpatializationAlgorithm": "ESoundSpatializationAlgorithm::SPATIALIZATION_HRTF",
+        "OcclusionTraceChannel": "ECollisionChannel::ECC_Camera",
+        "StereoSpread": 300.0,
+        "LPFRadiusMin": 500.0,
+        "LPFRadiusMax": 3000.0,
+        "LPFFrequencyAtMax": 600.0,
+        "HPFFrequencyAtMax": 350.0,
+        "FocusAzimuth": 25.0,
+        "NonFocusAzimuth": 35.0,
+        "NonFocusVolumeAttenuation": 0.3,
+        "OcclusionLowPassFilterFrequency": 6000.0,
+        "ReverbWetLevelMin": 0.2,
+        "ReverbWetLevelMax": 3.0,
+        "ReverbDistanceMin": 50.0,
+        "ReverbDistanceMax": 1000.0,
+        "SubmixSendSettings": [
+          {
+            "Submix": {
+              "ObjectName": "Fortnite_DistantReverbSubmix:SoundSubmix",
+              "ObjectPath": "/Game/Sounds/SubMixes/Fortnite_DistantReverbSubmix.0"
+            },
+            "SubmixSendMethod": "ESubmixSendMethod::CustomCurve",
+            "SubmixSendLevelMin": 0.0,
+            "SubmixSendLevelMax": 1.0,
+            "SubmixSendDistanceMin": 0.0,
+            "SubmixSendDistanceMax": 7500.0,
+            "ManualSubmixSendLevel": 0.2,
+            "CustomSubmixSendCurve": {
+              "EditorCurveData": {
+                "Keys": [],
+                "DefaultValue": 3.4028235E+38,
+                "PreInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant",
+                "PostInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant"
+              },
+              "ExternalCurve": {
+                "ObjectName": "Fortnite_DistantReverb_Curve:CurveFloat",
+                "ObjectPath": "/Game/Sounds/SubMixes/Reverb/Fortnite_DistantReverb_Curve.0"
+              }
+            }
+          }
+        ],
+        "DistanceAlgorithm": "EAttenuationDistanceModel::Custom",
+        "AttenuationShapeExtents": {
+          "X": 200.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 12000.0,
+        "CustomAttenuationCurve": {
+          "EditorCurveData": {
+            "Keys": [
+              {
+                "InterpMode": 2,
+                "TangentMode": 1,
+                "TangentWeightMode": 0,
+                "KeyTime": 0.0,
+                "KeyValue": -2.4858121E+35,
+                "ArriveTangent": 1.7675446E-38,
+                "ArriveTangentWeight": -2.4758801E+27,
+                "LeaveTangent": 1.7675446E-38,
+                "LeaveTangentWeight": 9.403955E-38
+              },
+              {
+                "InterpMode": 1,
+                "TangentMode": 0,
+                "TangentWeightMode": 212,
+                "KeyTime": -5.734847E+27,
+                "KeyValue": 1.6575159E-24,
+                "ArriveTangent": 6.859E-41,
+                "ArriveTangentWeight": 1.5121896E-24,
+                "LeaveTangent": 6.859E-41,
+                "LeaveTangentWeight": 0.0
+              },
+              {
+                "InterpMode": 0,
+                "TangentMode": 0,
+                "TangentWeightMode": 0,
+                "KeyTime": 8.8E-44,
+                "KeyValue": 0.0,
+                "ArriveTangent": 0.0,
+                "ArriveTangentWeight": 0.0,
+                "LeaveTangent": 0.0,
+                "LeaveTangentWeight": 0.0
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+]

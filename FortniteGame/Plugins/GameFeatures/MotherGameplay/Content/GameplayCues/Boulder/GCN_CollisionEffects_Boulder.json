@@ -1,0 +1,101 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GCN_CollisionEffects_Boulder_C",
+    "Super": "GCN_CollisionEffects_Parent_C",
+    "SuperStruct": {
+      "ObjectName": "GCN_CollisionEffects_Parent_C:BlueprintGeneratedClass",
+      "ObjectPath": "/Game/Athena/GameplayCueNotifies/CollisionEffects/GCN_CollisionEffects_Parent.3"
+    },
+    "Children": [],
+    "ChildProperties": [],
+    "FuncMap": {},
+    "ClassFlags": 264208,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Engine",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__GCN_CollisionEffects_Boulder_C:GCN_CollisionEffects_Boulder_C",
+      "ObjectPath": "/MotherGameplay/GameplayCues/Boulder/GCN_CollisionEffects_Boulder.1"
+    }
+  },
+  {
+    "Type": "GCN_CollisionEffects_Boulder_C",
+    "Name": "Default__GCN_CollisionEffects_Boulder_C",
+    "Template": "Default__GCN_CollisionEffects_Parent_C",
+    "Properties": {
+      "SoundAssetDefault": {
+        "ObjectName": "Boulder_Impact_Phys_Cue:SoundCue",
+        "ObjectPath": "/MotherGameplay/Sounds/Boulder/Boulder_Impact_Phys_Cue.0"
+      },
+      "AudioParams": [
+        {
+          "ParamName": "Strength",
+          "FloatParam": 0.56781864,
+          "BoolParam": false,
+          "IntParam": 0,
+          "SoundWaveParam": null
+        },
+        {
+          "ParamName": "ImpactType",
+          "FloatParam": 0.0,
+          "BoolParam": false,
+          "IntParam": 0,
+          "SoundWaveParam": null
+        }
+      ],
+      "BurstEffectData": {
+        "BurstParticles": [
+          {
+            "Condition": {
+              "SourceCondition": "EFortGameplayCueSourceCondition::AnySource",
+              "AllowedSurfaces": [],
+              "DisallowedSurfaces": [],
+              "ChanceToPlay": 1.0,
+              "Significance": "EParticleSignificanceLevel::High",
+              "RequiredDetailMode": 0,
+              "bRequireVisible": false
+            },
+            "Attachment": {
+              "SocketName": null,
+              "AttachType": "EFortGameplayCueAttachType::DoNotAttach",
+              "bAttachToWeapon": false,
+              "bAttachToHitResult": true,
+              "bUseUnsmoothedNetworkPosition": false,
+              "bIgnoreScale": true,
+              "bIgnoreRotation": false,
+              "OverrideScale": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              },
+              "OverrideRotation": {
+                "Pitch": 0.0,
+                "Yaw": 0.0,
+                "Roll": 0.0
+              }
+            },
+            "FXType": "EFXType::GenericAnimNotify",
+            "NiagaraSystem": {
+              "ObjectName": "NS_Boulder_PhysicsAsset_Impact:NiagaraSystem",
+              "ObjectPath": "/MotherGameplay/Items/Boulder/Assets/VFX/NS_Boulder_PhysicsAsset_Impact.80"
+            },
+            "ParticleSystem": null,
+            "bCastShadow": false,
+            "bOverrideCondition": false,
+            "bOverrideAttachment": true
+          }
+        ]
+      },
+      "GameplayCueTag": {
+        "TagName": "GameplayCue.Mother.Boulder.Impact"
+      },
+      "GameplayCueName": "GameplayCue.Mother.Boulder.Impact"
+    }
+  }
+]

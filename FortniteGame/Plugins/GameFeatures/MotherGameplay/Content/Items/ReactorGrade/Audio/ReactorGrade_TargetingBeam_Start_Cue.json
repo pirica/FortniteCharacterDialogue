@@ -1,0 +1,87 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "ReactorGrade_TargetingBeam_Start_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "ReactorGrade_TargetingBeam_Start_Cue:SoundNodeSoundClass_5:SoundNodeSoundClass",
+        "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_TargetingBeam_Start_Cue.2"
+      },
+      "VolumeMultiplier": 0.4,
+      "SoundClassObject": null,
+      "bDebug": true,
+      "bOverrideConcurrency": true,
+      "ConcurrencyOverrides": {
+        "MaxCount": 2,
+        "bLimitToOwner": true,
+        "ResolutionRule": "EMaxConcurrentResolutionRule::StopOldest"
+      },
+      "Duration": 7.8133335,
+      "MaxDistance": 2048.0,
+      "AttenuationSettings": {
+        "ObjectName": "ReactorGrade_Whoosh_By_Att:SoundAttenuation",
+        "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Whoosh_By_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "ReactorGrade_TargetingBeam_Start_Cue",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "ReactorGrade_TargetingBeam_Start_Cue:SoundNodeWavePlayer_0:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_TargetingBeam_Start_Cue.3"
+        },
+        {
+          "ObjectName": "ReactorGrade_TargetingBeam_Start_Cue:SoundNodeWavePlayer_2:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_TargetingBeam_Start_Cue.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeSoundClass",
+    "Name": "SoundNodeSoundClass_5",
+    "Outer": "ReactorGrade_TargetingBeam_Start_Cue",
+    "Properties": {
+      "SoundClassOverride": {
+        "ObjectName": "Fort_Weapon_Projectile_PSM:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Weapon_Projectile_PSM.0"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "ReactorGrade_TargetingBeam_Start_Cue:SoundNodeRandom_0:SoundNodeRandom",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_TargetingBeam_Start_Cue.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "ReactorGrade_TargetingBeam_Start_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_TargetingBeam_01.ReactorGrade_TargetingBeam_01",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "ReactorGrade_TargetingBeam_Start_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_TargetingBeam_02.ReactorGrade_TargetingBeam_02",
+        "SubPathString": ""
+      }
+    }
+  }
+]

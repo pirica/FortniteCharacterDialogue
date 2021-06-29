@@ -1,0 +1,341 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GA_Athena_AvacadoEaterThrown_SecondaryAimed_C",
+    "Super": "GA_Athena_Consumable_Throw_Secondary_Parent_C",
+    "SuperStruct": {
+      "ObjectName": "GA_Athena_Consumable_Throw_Secondary_Parent_C:BlueprintGeneratedClass",
+      "ObjectPath": "/Game/Athena/Items/Consumables/Parents/GA_Athena_Consumable_Throw_Secondary_Parent.42"
+    },
+    "Children": [],
+    "ChildProperties": [],
+    "FuncMap": {},
+    "ClassFlags": 264208,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Engine",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__GA_Athena_AvacadoEaterThrown_SecondaryAimed_C:GA_Athena_AvacadoEaterThrown_SecondaryAimed_C",
+      "ObjectPath": "/MotherGameplay/Items/AvacadoEater/GA_Athena_AvacadoEaterThrown_SecondaryAimed.1"
+    }
+  },
+  {
+    "Type": "GA_Athena_AvacadoEaterThrown_SecondaryAimed_C",
+    "Name": "Default__GA_Athena_AvacadoEaterThrown_SecondaryAimed_C",
+    "Template": "Default__GA_Athena_Consumable_Throw_Secondary_Parent_C",
+    "Properties": {
+      "Proj_ThrownProjectile": {
+        "ObjectName": "B_Prj_Athena_AvacadoEater_C:BlueprintGeneratedClass",
+        "ObjectPath": "/MotherGameplay/Items/AvacadoEater/B_Prj_Athena_AvacadoEater.4"
+      },
+      "ProjectileSpeed": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "AthenaGameData:CurveTable",
+            "ObjectPath": "/Game/Athena/Balance/DataTables/AthenaGameData.0"
+          },
+          "RowName": "Default.Projectile.Speed.Grenade"
+        }
+      },
+      "ProjectileGravityScale": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "AthenaGameData:CurveTable",
+            "ObjectPath": "/Game/Athena/Balance/DataTables/AthenaGameData.0"
+          },
+          "RowName": "Default.GravityScale.Grenade"
+        }
+      },
+      "ThrowMontage": {
+        "ObjectName": "Throw_Consumable_Cook_Outro:AnimMontage",
+        "ObjectPath": "/Game/Animation/Game/MainPlayer/Combat/Gadgets/Medium/Male/ThrowConsumable/Throw_Consumable_Cook_Outro.0"
+      },
+      "HasAdditionalExplosion": true,
+      "EffectContainers": {
+        "ApplicationTag": {
+          "TagName": "Abilities.generic.GenericProjectile.Explode"
+        },
+        "TargetSelection": {
+          "List": [
+            {
+              "Shape": "EFortTargetSelectionShape::Sphere",
+              "CustomShapeComponentName": "",
+              "TestType": "EFortTargetSelectionTestType::Overlap",
+              "PrimarySource": "EFortAbilityTargetingSource::PawnForward",
+              "SecondarySource": "EFortAbilityTargetingSource::Max_None",
+              "Range": {
+                "Value": 500.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": null
+                },
+                "RegistryType": {
+                  "Name": null
+                }
+              },
+              "HalfExtents": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "bAlignShapeEdgeToSourceLocation": false,
+              "ConeYawAngle": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": null
+                },
+                "RegistryType": {
+                  "Name": null
+                }
+              },
+              "ConePitchAngle": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": null
+                },
+                "RegistryType": {
+                  "Name": null
+                }
+              },
+              "ConeMinRadius": {
+                "Value": 1.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": null
+                },
+                "RegistryType": {
+                  "Name": null
+                }
+              },
+              "TargetFilter": {
+                "ActorTypeFilter": "EFortTargetSelectionFilter::Pawns",
+                "ActorClassFilter": null,
+                "bExcludeInstigator": false,
+                "bUseTrapsOwningPawnAsInstigator": false,
+                "bExcludeRequester": true,
+                "bExcludeAllAttachedToInstigator": false,
+                "bExcludeAthenaVehicleOfInstigator": false,
+                "bExcludeAllAttachedToRequester": false,
+                "bExcludePawnFriends": false,
+                "bExcludeFriendlyAI": false,
+                "bExcludeAllAI": false,
+                "bExcludePawnNeutrals": false,
+                "bExcludePawnEnemies": false,
+                "bExcludeNonPawnFriends": false,
+                "bExcludeNonPawnEnemies": false,
+                "bConsiderFriendlyFireWhenExcludingFriends": false,
+                "bExcludeDBNOPawns": false,
+                "bExcludeWaterVolumes": false,
+                "bExcludeWaterBodies": true,
+                "bExcludeAthenaVehicleOccupiedBySource": true,
+                "bExcludeAthenaVehicleUnoccupied": false,
+                "bExcludeAthenaVehicleOccupied": false,
+                "bExcludeAthenaVehicleFromObstructionChecks": true,
+                "bExcludeWithoutNavigationCorridor": false,
+                "bExcludeNonPlayerBuiltPieces": false,
+                "bExcludePlayerBuiltPieces": false,
+                "bExcludeNonBGABuildings": false,
+                "bExcludeNonBlockingHits": false,
+                "bExcludeProjectiles": false,
+                "bTraceComplexCollision": false,
+                "bExcludeLandscape": true,
+                "bConsiderPhysicsPawnsAsNonPlayerPawns": true,
+                "ExclusionGameplayTags": [
+                  "Athena.Item.Snowman",
+                  "Athena.Item.Bush"
+                ]
+              },
+              "bExcludeObstructedByWorld": true,
+              "bShouldAttachedActorsObstructTarget": false,
+              "bCreateHitResultWhenNoTargetsFound": false,
+              "bUseProjectileRotationForDamageZones": false,
+              "TargetSelectionUsage": "EFortAbilityTargetSelectionUsage::BothTargetingAndCanHit",
+              "MaxTargets": 8
+            }
+          ]
+        },
+        "TargetGameplayEffectClasses": [
+          {
+            "ObjectName": "GE_Damage_Explosive_LineOfSight_C:BlueprintGeneratedClass",
+            "ObjectPath": "/Game/Abilities/Weapons/Ranged/GE_Damage_Explosive_LineOfSight.0"
+          },
+          {
+            "ObjectName": "GE_Impulse_C:BlueprintGeneratedClass",
+            "ObjectPath": "/Game/Abilities/Weapons/Ranged/GE_Impulse.0"
+          }
+        ]
+      },
+      "EffectContainers": {
+        "ApplicationTag": {
+          "TagName": "Abilities.Generic.GenericProjectile.Explode.Additional"
+        },
+        "TargetSelection": {
+          "List": [
+            {
+              "Shape": "EFortTargetSelectionShape::Sphere",
+              "CustomShapeComponentName": "",
+              "TestType": "EFortTargetSelectionTestType::Overlap",
+              "PrimarySource": "EFortAbilityTargetingSource::PawnForward",
+              "SecondarySource": "EFortAbilityTargetingSource::Max_None",
+              "Range": {
+                "Value": 500.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": null
+                },
+                "RegistryType": {
+                  "Name": null
+                }
+              },
+              "HalfExtents": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "bAlignShapeEdgeToSourceLocation": false,
+              "ConeYawAngle": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": null
+                },
+                "RegistryType": {
+                  "Name": null
+                }
+              },
+              "ConePitchAngle": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": null
+                },
+                "RegistryType": {
+                  "Name": null
+                }
+              },
+              "ConeMinRadius": {
+                "Value": 1.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": null
+                },
+                "RegistryType": {
+                  "Name": null
+                }
+              },
+              "TargetFilter": {
+                "ActorTypeFilter": "EFortTargetSelectionFilter::Damageable",
+                "ActorClassFilter": null,
+                "bExcludeInstigator": false,
+                "bUseTrapsOwningPawnAsInstigator": false,
+                "bExcludeRequester": true,
+                "bExcludeAllAttachedToInstigator": false,
+                "bExcludeAthenaVehicleOfInstigator": false,
+                "bExcludeAllAttachedToRequester": false,
+                "bExcludePawnFriends": false,
+                "bExcludeFriendlyAI": false,
+                "bExcludeAllAI": false,
+                "bExcludePawnNeutrals": false,
+                "bExcludePawnEnemies": false,
+                "bExcludeNonPawnFriends": false,
+                "bExcludeNonPawnEnemies": false,
+                "bConsiderFriendlyFireWhenExcludingFriends": false,
+                "bExcludeDBNOPawns": false,
+                "bExcludeWaterVolumes": false,
+                "bExcludeWaterBodies": true,
+                "bExcludeAthenaVehicleOccupiedBySource": true,
+                "bExcludeAthenaVehicleUnoccupied": false,
+                "bExcludeAthenaVehicleOccupied": false,
+                "bExcludeAthenaVehicleFromObstructionChecks": false,
+                "bExcludeWithoutNavigationCorridor": false,
+                "bExcludeNonPlayerBuiltPieces": false,
+                "bExcludePlayerBuiltPieces": false,
+                "bExcludeNonBGABuildings": false,
+                "bExcludeNonBlockingHits": false,
+                "bExcludeProjectiles": false,
+                "bTraceComplexCollision": false,
+                "bExcludeLandscape": true,
+                "bConsiderPhysicsPawnsAsNonPlayerPawns": true,
+                "ExclusionGameplayTags": [
+                  "Athena.Item.Snowman",
+                  "Athena.Item.Bush"
+                ]
+              },
+              "bExcludeObstructedByWorld": false,
+              "bShouldAttachedActorsObstructTarget": false,
+              "bCreateHitResultWhenNoTargetsFound": false,
+              "bUseProjectileRotationForDamageZones": false,
+              "TargetSelectionUsage": "EFortAbilityTargetSelectionUsage::BothTargetingAndCanHit",
+              "MaxTargets": 8
+            }
+          ]
+        },
+        "TargetGameplayEffectClasses": [
+          {
+            "ObjectName": "GE_Damage_Explosive_NoLineOfSight_C:BlueprintGeneratedClass",
+            "ObjectPath": "/Game/Abilities/Weapons/Ranged/GE_Damage_Explosive_NoLineOfSight.0"
+          },
+          {
+            "ObjectName": "GE_Impulse_C:BlueprintGeneratedClass",
+            "ObjectPath": "/Game/Abilities/Weapons/Ranged/GE_Impulse.0"
+          }
+        ]
+      },
+      "DamageStatHandle": {
+        "DataTable": {
+          "ObjectName": "UtilityItemDamage:DataTable",
+          "ObjectPath": "/Game/Balance/DataTables/UtilityItemDamage.0"
+        },
+        "RowName": "Athena_Grenade"
+      },
+      "AbilityCosts": [
+        {
+          "CostSource": "EFortAbilityCostSource::AmmoPrimary",
+          "CostValue": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": null
+            },
+            "RegistryType": {
+              "Name": null
+            }
+          },
+          "ItemDefinition": {
+            "ObjectName": "WeaponData_M80:FortWeaponRangedItemDefinition",
+            "ObjectPath": "/Game/Abilities/Player/Generic/UtilityItems/WeaponData_M80.0"
+          },
+          "bOnlyApplyCostOnHit": false
+        }
+      ],
+      "ActivationNoiseRange": 0.0,
+      "MontageInfo": {
+        "MontageToPlay": {
+          "ObjectName": "GrenadeFrag_Cook_Outro:AnimMontage",
+          "ObjectPath": "/Game/Animation/Game/MainPlayer/Combat/Gadgets/Medium/Male/GrenadeFrag/GrenadeFrag_Cook_Outro.0"
+        }
+      },
+      "Tooltip": {
+        "ObjectName": "TT_Commando_FragGrenade_C:BlueprintGeneratedClass",
+        "ObjectPath": "/Game/Abilities/Player/Commando/Actives/FragGrenade/TT_Commando_FragGrenade.3"
+      },
+      "AbilityTags": [
+        "Gameplay.DamageSource.Ability",
+        "Abilities.generic.M80",
+        "Gameplay.Action.Player.Medium",
+        "Athena.Quests.Ability.Thrown.ExplosiveGrenade",
+        "Rarity.Common"
+      ],
+      "ReplicationPolicy": "EGameplayAbilityReplicationPolicy::ReplicateYes"
+    }
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "ReactorGrade_TargetingBeam_PostFire_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "ReactorGrade_TargetingBeam_PostFire_Cue:SoundNodeModulator_0:SoundNodeModulator",
+        "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_TargetingBeam_PostFire_Cue.1"
+      },
+      "VolumeMultiplier": 0.55,
+      "SoundClassObject": null,
+      "bDebug": true,
+      "bOverrideConcurrency": true,
+      "ConcurrencyOverrides": {
+        "MaxCount": 2,
+        "bLimitToOwner": true,
+        "ResolutionRule": "EMaxConcurrentResolutionRule::StopOldest"
+      },
+      "Duration": 7.1640625,
+      "MaxDistance": 2048.0,
+      "AttenuationSettings": {
+        "ObjectName": "ReactorGrade_Whoosh_By_Att:SoundAttenuation",
+        "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Whoosh_By_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "ReactorGrade_TargetingBeam_PostFire_Cue",
+    "Properties": {
+      "PitchMin": 1.0,
+      "PitchMax": 1.15,
+      "ChildNodes": [
+        {
+          "ObjectName": "ReactorGrade_TargetingBeam_PostFire_Cue:SoundNodeSoundClass_5:SoundNodeSoundClass",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_TargetingBeam_PostFire_Cue.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "ReactorGrade_TargetingBeam_PostFire_Cue",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "ReactorGrade_TargetingBeam_PostFire_Cue:SoundNodeWavePlayer_0:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_TargetingBeam_PostFire_Cue.4"
+        },
+        {
+          "ObjectName": "ReactorGrade_TargetingBeam_PostFire_Cue:SoundNodeWavePlayer_1:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_TargetingBeam_PostFire_Cue.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeSoundClass",
+    "Name": "SoundNodeSoundClass_5",
+    "Outer": "ReactorGrade_TargetingBeam_PostFire_Cue",
+    "Properties": {
+      "SoundClassOverride": {
+        "ObjectName": "Fort_Weapon_Projectile_PSM:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Weapon_Projectile_PSM.0"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "ReactorGrade_TargetingBeam_PostFire_Cue:SoundNodeRandom_0:SoundNodeRandom",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_TargetingBeam_PostFire_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "ReactorGrade_TargetingBeam_PostFire_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Projectile_FlyBy_01.ReactorGrade_Projectile_FlyBy_01",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "ReactorGrade_TargetingBeam_PostFire_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Projectile_FlyBy_02.ReactorGrade_Projectile_FlyBy_02",
+        "SubPathString": ""
+      }
+    }
+  }
+]

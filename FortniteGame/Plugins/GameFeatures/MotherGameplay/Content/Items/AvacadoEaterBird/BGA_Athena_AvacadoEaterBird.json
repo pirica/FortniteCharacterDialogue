@@ -1,0 +1,968 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BGA_Athena_AvacadoEaterBird_C",
+    "Super": "BGA_Athena_AvacadoEaterBird_Parent_C",
+    "Properties": {
+      "bHasCookedComponentInstancingData": true,
+      "SimpleConstructionScript": {
+        "ObjectName": "BGA_Athena_AvacadoEaterBird_C:SimpleConstructionScript_0__57659476:SimpleConstructionScript",
+        "ObjectPath": "/MotherGameplay/Items/AvacadoEaterBird/BGA_Athena_AvacadoEaterBird.9"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "BGA_Athena_AvacadoEaterBird_C:InheritableComponentHandler:InheritableComponentHandler",
+        "ObjectPath": "/MotherGameplay/Items/AvacadoEaterBird/BGA_Athena_AvacadoEaterBird.4"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BGA_Athena_AvacadoEaterBird_Parent_C:BlueprintGeneratedClass",
+      "ObjectPath": "/Game/Athena/Items/Consumables/AvacadoEater/BGA_Athena_AvacadoEaterBird_Parent.62"
+    },
+    "Children": [],
+    "ChildProperties": [],
+    "FuncMap": {},
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Game",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__BGA_Athena_AvacadoEaterBird_C:BGA_Athena_AvacadoEaterBird_C",
+      "ObjectPath": "/MotherGameplay/Items/AvacadoEaterBird/BGA_Athena_AvacadoEaterBird.1"
+    }
+  },
+  {
+    "Type": "BGA_Athena_AvacadoEaterBird_C",
+    "Name": "Default__BGA_Athena_AvacadoEaterBird_C",
+    "Template": "Default__BGA_Athena_AvacadoEaterBird_Parent_C",
+    "Properties": {
+      "GC_Spawned": {
+        "TagName": "GameplayCue.Athena.EnvItem.AvacadoEaterBird.Spawned"
+      },
+      "GC_Damaged": {
+        "TagName": "GameplayCue.Athena.EnvItem.AvacadoEaterBird.Damaged"
+      },
+      "GC_Destroyed": {
+        "TagName": "GameplayCue.Athena.EnvItem.AvacadoEaterBird.Destroyed"
+      },
+      "GE_ApplyToSelfOnAttach": {
+        "ObjectName": "GE_Athena_AvacadoEaterBird_EffectOnParasiteOnAttach_C:BlueprintGeneratedClass",
+        "ObjectPath": "/MotherGameplay/Items/AvacadoEaterBird/GE_Athena_AvacadoEaterBird_EffectOnParasiteOnAttach.0"
+      },
+      "GE Apply to Buildings": {
+        "ObjectName": "GE_Athena_AvacadoEaterBird_AttackWall_C:BlueprintGeneratedClass",
+        "ObjectPath": "/MotherGameplay/Items/AvacadoEaterBird/GE_Athena_AvacadoEaterBird_AttackWall.0"
+      },
+      "GE_ApplyToWildlifeOnAttach": {
+        "ObjectName": "GE_Athena_AvacadoEaterBird_CorruptWildlife_C:BlueprintGeneratedClass",
+        "ObjectPath": "/MotherGameplay/Items/AvacadoEaterBird/GE_Athena_AvacadoEaterBird_CorruptWildlife.0"
+      },
+      "GE_ApplyToPlayersOnAttach": {
+        "ObjectName": "GE_Athena_AvacadoEaterBird_Symbiosis_C:BlueprintGeneratedClass",
+        "ObjectPath": "/MotherGameplay/Items/AvacadoEaterBird/GE_Athena_AvacadoEaterBird_Symbiosis.0"
+      },
+      "GE_ApplyImmunityTag": {
+        "ObjectName": "GE_Athena_AvacadoEaterBird_PostAttackImmunity_C:BlueprintGeneratedClass",
+        "ObjectPath": "/MotherGameplay/Items/AvacadoEaterBird/GE_Athena_AvacadoEaterBird_PostAttackImmunity.0"
+      },
+      "CollisionRadius": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          },
+          "RowName": "Default.Mother.AvacadoEaterBird.CollisionCapsule.Radius"
+        }
+      },
+      "CollisionHeight": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          },
+          "RowName": "Default.Mother.AvacadoEaterBird.CollisionCapsule.Height"
+        }
+      },
+      "UseLifetimeTimer?": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          },
+          "RowName": "Default.Mother.AvacadoEaterBird.Lifetime.UsesLifetimer"
+        }
+      },
+      "LifetimeDurationWhenUnattached": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          },
+          "RowName": "Default.Mother.AvacadoEaterBird.Lifetime.Duration"
+        }
+      },
+      "LifetimeExpiredDestroyDelay": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          },
+          "RowName": "Default.Mother.AvacadoEaterBird.Lifetime.PostExpirationDelaytoDestroy"
+        }
+      },
+      "HealthBarMaxDisplayRange": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          },
+          "RowName": "Default.Mother.AvacadoEaterBird.HealthBar.MaxDisplayRange"
+        }
+      },
+      "HealthBarHideTimeAfterDeath": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          },
+          "RowName": "Default.Mother.AvacadoEaterBird.HealthBar.OnDeathHideDelay"
+        }
+      },
+      "PostHatchDelay": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          },
+          "RowName": "Default.Mother.AvacadoEaterBird.PostHatchDelay"
+        }
+      },
+      "TargetDetectionRate": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          },
+          "RowName": "Default.Mother.AvacadoEaterBird.Behavior.Patrol.TargetDetectionUpdateRate"
+        }
+      },
+      "ChaseInitialSpeed": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          },
+          "RowName": "Default.Mother.AvacadoEaterBird.Behavior.Chase.MinChaseSpeed"
+        }
+      },
+      "ChaseMaxSpeed": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          },
+          "RowName": "Default.Mother.AvacadoEaterBird.Behavior.Chase.MaxChaseSpeed"
+        }
+      },
+      "ChaseTurnSpeedMin": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          },
+          "RowName": "Default.Mother.AvacadoEaterBird.Behavior.Chase.TurnSpeed.Min"
+        }
+      },
+      "ChaseTurnSpeedMax": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          },
+          "RowName": "Default.Mother.AvacadoEaterBird.Behavior.Chase.TurnSpeed.Max"
+        }
+      },
+      "ChaseTurnSpeedRampTime": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          },
+          "RowName": "Default.Mother.AvacadoEaterBird.Behavior.Chase.TurnSpeed.RampTime"
+        }
+      },
+      "ChaseRevalidateTargetUpdateRate": {
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          },
+          "RowName": "Default.Mother.AvacadoEaterBird.Behavior.Chase.UpdateRate"
+        }
+      },
+      "AttachToHeadDuration": {
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          },
+          "RowName": "Default.Mother.AvacadoEaterBird.Attack.AttachtoHead.Duration"
+        }
+      },
+      "AttachtoHeadOnAttack?": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          },
+          "RowName": "Default.Mother.AvacadoEaterBird.Attack.AttachtoHead.Enabled"
+        }
+      },
+      "HealOnHit?": {
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          },
+          "RowName": "Default.Mother.AvacadoEaterBird.Attack.HealOnAttack.Enabled"
+        }
+      },
+      "PostAttackDelay": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          },
+          "RowName": "Default.Mother.AvacadoEaterBird.Attack.PostAttackDelay"
+        }
+      },
+      "AttackWallDuration": {
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          },
+          "RowName": "Default.Mother.AvacadoEaterBird.AttackBuilding.Duration"
+        }
+      },
+      "GC_DetachFromHost": {
+        "TagName": "GameplayCue.Athena.EnvItem.AvacadoEaterBird.Pop"
+      },
+      "PatrolDirectionUpdateRate": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          },
+          "RowName": "Default.Mother.AvacadoEaterBird.Behavior.Patrol.DirectionUpdateRate"
+        }
+      },
+      "GC_Bounce": {
+        "TagName": "GameplayCue.Athena.EnvItem.AvacadoEaterBird.Bounce"
+      },
+      "Tags_IgnoredByAvacadoEater": [
+        "Granted.Athena.EnvItem.AvacadoEaterBird.ImmunityFromBirds",
+        "Athena.Gameplay.Status.Hitchhiker",
+        "EnvItem.AvacadoEater",
+        "Item.AvacadoEater",
+        "Curie.State.ElementalStatus.Burning",
+        "Event.Damage.Killed",
+        "Granted.Athena.Item.PaddleGinger.IsProp",
+        "Gameplay.Status.DBNO",
+        "Event.Damage.Died",
+        "Granted.Athena.EnvItem.HidingProp.GettingInProp",
+        "Granted.Athena.EnvItem.HidingProp.HidingInProp",
+        "MovementMode.SurfaceSwimming",
+        "Athena.Gameplay.Status.BeingAbducted",
+        "Granted.Athena.CageSaddle.InVehicle",
+        "Curie.State.ElementInteraction.Fire",
+        "Granted.Athena.Skyfire"
+      ],
+      "GC_LifetimeExpired": {
+        "TagName": "GameplayCue.Athena.EnvItem.AvacadoEaterBird.LifetimeExpired"
+      },
+      "GC_PatrolState": {
+        "TagName": "GameplayCue.Athena.EnvItem.AvacadoEaterBird.Patrol"
+      },
+      "GC_ChaseState": {
+        "TagName": "GameplayCue.Athena.EnvItem.AvacadoEaterBird.Chase"
+      },
+      "GC_AttachedState": {
+        "TagName": "GameplayCue.Athena.EnvItem.AvacadoEaterBird.AttachedToHost"
+      },
+      "GadgetItemHeadSwap": {
+        "ObjectName": "AGID_AvacadoEaterHead_Medium:AthenaGadgetItemDefinition",
+        "ObjectPath": "/MotherGameplay/Items/AvacadoEaterBird/AGID_AvacadoEaterHead_Medium.0"
+      },
+      "AudioVisual Indicator Icon": {
+        "ObjectName": "AV_32_AvocadoEaterBird:Texture2D",
+        "ObjectPath": "/MotherGameplay/UI/Icons/AV_32_AvocadoEaterBird.0"
+      },
+      "FaunaGadgetLookup": {
+        "Pawn.Athena.NPC.Wildlife.Prey.Nug": {
+          "ObjectName": "AGID_Hitchhiker_Nug_AvacadoEaterBird:AthenaGadgetItemDefinition",
+          "ObjectPath": "/MotherGameplay/Items/AvacadoEaterBird/AGID_Hitchhiker_Nug_AvacadoEaterBird.0"
+        },
+        "Pawn.Athena.NPC.Wildlife.Prey.Burt": {
+          "ObjectName": "AGID_Hitchhiker_Burt_AvacadoEaterBird:AthenaGadgetItemDefinition",
+          "ObjectPath": "/MotherGameplay/Items/AvacadoEaterBird/AGID_Hitchhiker_Burt_AvacadoEaterBird.0"
+        },
+        "Pawn.Athena.NPC.Wildlife.Predator.Grandma": {
+          "ObjectName": "AGID_Hitchhiker_Grandma_AvacadoEaterBird:AthenaGadgetItemDefinition",
+          "ObjectPath": "/MotherGameplay/Items/AvacadoEaterBird/AGID_Hitchhiker_Grandma_AvacadoEaterBird.0"
+        }
+      },
+      "PlayerGadgetItem": {
+        "ObjectName": "AGID_AvacadoEaterHead_Medium:AthenaGadgetItemDefinition",
+        "ObjectPath": "/MotherGameplay/Items/AvacadoEaterBird/AGID_AvacadoEaterHead_Medium.0"
+      },
+      "Tutorial Attached": {
+        "TagName": "Athena.ContextualTutorial.AvacadoEaterAttached"
+      },
+      "Tutorial Detached": {
+        "TagName": "Athena.ContextualTutorial.AvacadoEaterDetached"
+      },
+      "FortProjectileMoveComp_Chase": {
+        "ObjectName": "Default__BGA_Athena_AvacadoEaterBird_C:FortProjectileMoveComp_Chase:FortProjectileMoveComp_Chase",
+        "ObjectPath": "/MotherGameplay/Items/AvacadoEaterBird/BGA_Athena_AvacadoEaterBird.3"
+      },
+      "CapsuleComponent": {
+        "ObjectName": "Default__BGA_Athena_AvacadoEaterBird_C:CapsuleComponent:CapsuleComponent",
+        "ObjectPath": "/MotherGameplay/Items/AvacadoEaterBird/BGA_Athena_AvacadoEaterBird.2"
+      },
+      "AttachedMessageTag": {
+        "TagName": "EventMessage.Athena.AvacadoEater.ParasiteAttached"
+      },
+      "DetachedMessageTag": {
+        "TagName": "EventMessage.Athena.AvacadoEater.ParasiteDetached"
+      },
+      "SetMarkerPositionMessageTag": {
+        "TagName": "EventMessage.Athena.AvacadoEater.SetMarkerPosition"
+      },
+      "TargetDamagedMessageTag": {
+        "TagName": "EventMessage.Athena.AvacadoEater.TargetDamaged"
+      },
+      "ValidTargetQuery": {
+        "TagDictionary": [
+          {
+            "TagName": "Pawn.Athena.Player"
+          },
+          {
+            "TagName": "Pawn.Athena.NPC"
+          },
+          {
+            "TagName": "Granted.Athena.EnvItem.AvacadoEaterBird.ImmunityFromBirds"
+          },
+          {
+            "TagName": "Athena.Gameplay.Status.Hitchhiker"
+          },
+          {
+            "TagName": "EnvItem.AvacadoEater"
+          },
+          {
+            "TagName": "Item.AvacadoEater"
+          },
+          {
+            "TagName": "Curie.State.ElementalStatus.Burning"
+          },
+          {
+            "TagName": "Event.Damage.Killed"
+          },
+          {
+            "TagName": "Gameplay.Status.DBNO"
+          },
+          {
+            "TagName": "Event.Damage.Died"
+          },
+          {
+            "TagName": "Granted.Athena.EnvItem.HidingProp.GettingInProp"
+          },
+          {
+            "TagName": "Granted.Athena.EnvItem.HidingProp.HidingInProp"
+          },
+          {
+            "TagName": "MovementMode.SurfaceSwimming"
+          },
+          {
+            "TagName": "Athena.Gameplay.Status.BeingAbducted"
+          },
+          {
+            "TagName": "Granted.Athena.CageSaddle.InVehicle"
+          },
+          {
+            "TagName": "Granted.Athena.Item.PaddleGinger.IsProp"
+          }
+        ],
+        "QueryTokenStream": [
+          0,
+          1,
+          5,
+          2,
+          1,
+          2,
+          0,
+          1,
+          3,
+          14,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "UserDescription": "Is a potential target valid?",
+        "AutoDescription": " ALL(  ANY( Pawn.Athena.Player, Pawn.Athena.NPC ),  NONE( Granted.Athena.EnvItem.AvacadoEaterBird.ImmunityFromBirds, Athena.Gameplay.Status.Hitchhiker, EnvItem.AvacadoEater, Item.AvacadoEater, Curie.State.ElementalStatus.Burning, Event.Damage.Killed, Gameplay.Status.DBNO, Event.Damage.Died, Granted.Athena.EnvItem.HidingProp.GettingInProp, Granted.Athena.EnvItem.HidingProp.HidingInProp, MovementMode.SurfaceSwimming, Athena.Gameplay.Status.BeingAbducted, Granted.Athena.CageSaddle.InVehicle, Granted.Athena.Item.PaddleGinger.IsProp ) )"
+      },
+      "TargetingRangeMax": {
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          },
+          "RowName": "Default.Mother.AvacadoEaterBird.Behavior.Targeting.Range.Max"
+        }
+      },
+      "TargetObjectTypes": [
+        "ObjectTypeQuery3"
+      ],
+      "TargetingPrioritizePlayersOverNpcs": {
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          },
+          "RowName": "Default.Mother.AvacadoEaterBird.Behavior.Targeting.PiroritizePlayersOverNPCs"
+        }
+      },
+      "ChaseDistanceFromTargetToAttach": {
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          },
+          "RowName": "Default.Mother.AvacadoEaterBird.Attack.AttachtoHead.DistanceFromTargetToAttack"
+        }
+      },
+      "PatrolTargetHeightAboveGround": {
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          },
+          "RowName": "Default.Mother.AvacadoEaterBird.Behavior.Patrol.TargetHeightAboveGround"
+        }
+      },
+      "PatrolNewDirectionMin": {
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          },
+          "RowName": "Default.Mother.AvacadoEaterBird.Behavior.Patrol.NewDirectionMin"
+        }
+      },
+      "PatrolNewDirectionMax": {
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          },
+          "RowName": "Default.Mother.AvacadoEaterBird.Behavior.Patrol.NewDirectionMax"
+        }
+      },
+      "PatrolDriftRange": {
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          },
+          "RowName": "Default.Mother.AvacadoEaterBird.Behavior.Patrol.DriftRange"
+        }
+      },
+      "PatrolMoveSpeedMin": {
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          },
+          "RowName": "Default.Mother.AvacadoEaterBird.Behavior.Patrol.SpeedMIN"
+        }
+      },
+      "PatrolMoveSpeedMax": {
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          },
+          "RowName": "Default.Mother.AvacadoEaterBird.Behavior.Patrol.SpeedMAX"
+        }
+      },
+      "PatrolGroundFindDistance": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          },
+          "RowName": "Default.Mother.AvacadoEaterBird.Behavior.Patrol.MaxCastDownRange"
+        }
+      },
+      "PatrolAvoidObjectTypes": [
+        "ObjectTypeQuery1",
+        "ObjectTypeQuery12",
+        "ObjectTypeQuery6",
+        "ObjectTypeQuery5"
+      ],
+      "PatrolTurnSeconds": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          },
+          "RowName": "Default.Mother.AvacadoEaterBird.Behavior.Patrol.NewDirectionTurnSpeed"
+        }
+      },
+      "MarkerDisplay": {
+        "DisplayName": {
+          "Namespace": "",
+          "Key": "C2EE328C44CACB24D92F2C9E729F3136",
+          "SourceString": "Alien Parasite"
+        },
+        "Icon": {
+          "AssetPathName": "/MotherGameplay/Icons/T-T-Icon-BR-AvacadoBirdEater.T-T-Icon-BR-AvacadoBirdEater",
+          "SubPathString": ""
+        }
+      },
+      "AttributeInitKeys": {
+        "AttributeInitCategory": "AvacadoEaterBird"
+      },
+      "AttributeInitKeys": {
+        "AttributeInitCategory": "AvacadoEaterBird"
+      },
+      "StaticGameplayTags": [
+        "Item.AvacadoEater",
+        "Building.Type.GameplayItem",
+        "Abilities.Generic.Athena.ZipLine.ZiplineSmashImmune"
+      ],
+      "RootComponent": {
+        "ObjectName": "Default__BGA_Athena_AvacadoEaterBird_C:CapsuleComponent:CapsuleComponent",
+        "ObjectPath": "/MotherGameplay/Items/AvacadoEaterBird/BGA_Athena_AvacadoEaterBird.2"
+      }
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "CapsuleComponent",
+    "Outer": "Default__BGA_Athena_AvacadoEaterBird_C",
+    "Template": "CapsuleComponent",
+    "Properties": {
+      "CapsuleRadius": 20.0
+    }
+  },
+  {
+    "Type": "FortProjectileMoveComp_Chase",
+    "Name": "FortProjectileMoveComp_Chase",
+    "Outer": "Default__BGA_Athena_AvacadoEaterBird_C",
+    "Template": "FortProjectileMoveComp_Chase"
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "BGA_Athena_AvacadoEaterBird_C",
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "SkeletalMeshComponent:Class",
+            "ObjectPath": 0
+          },
+          "ComponentTemplate": {
+            "ObjectName": "BGA_Athena_AvacadoEaterBird_C:SkeletalMesh_GEN_VARIABLE:SkeletalMeshComponent",
+            "ObjectPath": "/MotherGameplay/Items/AvacadoEaterBird/BGA_Athena_AvacadoEaterBird.10"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BGA_Athena_AvacadoEaterBird_Parent_C:BlueprintGeneratedClass",
+              "ObjectPath": "/Game/Athena/Items/Consumables/AvacadoEater/BGA_Athena_AvacadoEaterBird_Parent.62"
+            },
+            "SCSVariableName": "SkeletalMesh",
+            "AssociatedGuid": "FCD695AE-43596AD4-3234EDB4-C28453FD"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [
+              {
+                "PropertyName": "AnimClass",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "SkeletalMeshComponent:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "SkeletalMesh",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "SkeletalMeshComponent:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "bEnableUpdateRateOptimizations",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "SkeletalMeshComponent:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "OverrideMaterials",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "SkeletalMeshComponent:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": null,
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "SkeletalMeshComponent:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "CanCharacterStepUpOn",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "SkeletalMeshComponent:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "BodyInstance",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "SkeletalMeshComponent:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "ObjectType",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "BodyInstance:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "CollisionProfileName",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "BodyInstance:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "CollisionResponses",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "BodyInstance:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "ResponseArray",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "CollisionResponse:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": null,
+                "ArrayIndex": 2,
+                "PropertyScope": {
+                  "ObjectName": "CollisionResponse:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "RelativeLocation",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "SkeletalMeshComponent:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "Z",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Vector:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "RelativeRotation",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "SkeletalMeshComponent:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "Yaw",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Rotator:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "bUseAttachParentBound",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "SkeletalMeshComponent:Class",
+                  "ObjectPath": 0
+                }
+              }
+            ],
+            "bHasValidCookedData": true
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "NiagaraComponent:Class",
+            "ObjectPath": 0
+          },
+          "ComponentTemplate": {
+            "ObjectName": "BGA_Athena_AvacadoEaterBird_C:FX_Niagara_GEN_VARIABLE:NiagaraComponent",
+            "ObjectPath": "/MotherGameplay/Items/AvacadoEaterBird/BGA_Athena_AvacadoEaterBird.5"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BGA_Athena_AvacadoEaterBird_Parent_C:BlueprintGeneratedClass",
+              "ObjectPath": "/Game/Athena/Items/Consumables/AvacadoEater/BGA_Athena_AvacadoEaterBird_Parent.62"
+            },
+            "SCSVariableName": "FX_Niagara",
+            "AssociatedGuid": "0158C405-405D9980-7427C3A0-90305685"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [
+              {
+                "PropertyName": "Asset",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "NiagaraComponent:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "OverrideParameters",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "NiagaraComponent:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "UserParameterRedirects",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "NiagaraUserRedirectionParameterStore:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "SortedParameterOffsets",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "NiagaraUserRedirectionParameterStore:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": null,
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "NiagaraUserRedirectionParameterStore:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "DataInterfaces",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "NiagaraUserRedirectionParameterStore:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": null,
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "NiagaraUserRedirectionParameterStore:Class",
+                  "ObjectPath": 0
+                }
+              }
+            ],
+            "bHasValidCookedData": true
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "FX_Niagara_GEN_VARIABLE",
+    "Outer": "BGA_Athena_AvacadoEaterBird_C",
+    "Template": "FX_Niagara_GEN_VARIABLE"
+  },
+  {
+    "Type": "NiagaraDataInterfaceSkeletalMesh",
+    "Name": "NiagaraDataInterfaceSkeletalMesh_0",
+    "Outer": "FX_Niagara_GEN_VARIABLE"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "SceneComponent_2756",
+    "Outer": "BGA_Athena_AvacadoEaterBird_C"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2760",
+    "Outer": "SimpleConstructionScript_0__57659476",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "SceneComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BGA_Athena_AvacadoEaterBird_C:SceneComponent_2756:SceneComponent",
+        "ObjectPath": "/MotherGameplay/Items/AvacadoEaterBird/BGA_Athena_AvacadoEaterBird.7"
+      },
+      "VariableGuid": "4D3A059E-00000000-00000000-00000000",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0__57659476",
+    "Outer": "BGA_Athena_AvacadoEaterBird_C",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SimpleConstructionScript_0__57659476:SCS_Node_2760:SCS_Node",
+        "ObjectPath": "/MotherGameplay/Items/AvacadoEaterBird/BGA_Athena_AvacadoEaterBird.8"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "SkeletalMesh_GEN_VARIABLE",
+    "Outer": "BGA_Athena_AvacadoEaterBird_C",
+    "Template": "SkeletalMesh_GEN_VARIABLE",
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AvocadoEater_Flying_AnimBP_C:AnimBlueprintGeneratedClass",
+        "ObjectPath": "/MotherGameplay/Items/AvacadoEaterBird/Animation/AvocadoEater_Flying/AvocadoEater_Flying_AnimBP.6"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "Avocado_Eater_Bird_Flying_Mammal:SkeletalMesh",
+        "ObjectPath": "/MotherGameplay/Items/AvacadoEaterBird/Meshes/Avocado_Eater_Bird_Flying/Avocado_Eater_Bird_Flying_Mammal.0"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MI_Gadget_Avocado_Eater_Bird_Flying:MaterialInstanceConstant",
+          "ObjectPath": "/MotherGameplay/Items/AvacadoEaterBird/Materials/MI_Gadget_Avocado_Eater_Bird_Flying.0"
+        }
+      ],
+      "BodyInstance": {
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "FCC_Trace_WeaponWorldMulti",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "FCC_Object_Water",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -17.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
+      }
+    }
+  }
+]

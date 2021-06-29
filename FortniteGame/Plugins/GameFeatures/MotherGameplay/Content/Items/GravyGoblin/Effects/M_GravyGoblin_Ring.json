@@ -1,0 +1,323 @@
+[
+  {
+    "Type": "Material",
+    "Name": "M_GravyGoblin_Ring",
+    "Properties": {
+      "EmissiveColor": {
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 1,
+        "MaskR": 1,
+        "MaskG": 1,
+        "MaskB": 1,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionParticleColor_0",
+        "UseConstant": false,
+        "Constant": {
+          "R": 0,
+          "G": 0,
+          "B": 0,
+          "A": 0,
+          "Hex": "000000"
+        }
+      },
+      "BlendMode": "EBlendMode::BLEND_Translucent",
+      "ShadingModel": "EMaterialShadingModel::MSM_Unlit",
+      "ShadingModels": {
+        "ShadingModelField": 1
+      },
+      "WorldPositionOffset": {
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionAdd_2",
+        "UseConstant": false,
+        "Constant": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        }
+      },
+      "bEnableResponsiveAA": true,
+      "TwoSided": true,
+      "bUsedWithNiagaraMeshParticles": true,
+      "bCanMaskedBeAssumedOpaque": true,
+      "StateId": "7C00037B-4B5F579B-D98E8E81-110C1215",
+      "CachedExpressionData": {
+        "Parameters": {
+          "RuntimeEntries": {
+            "NameHashes": [
+              589064200133783099,
+              2134080156908593408,
+              7184576271190590314
+            ],
+            "ParameterInfos": [
+              {
+                "Name": "FresnelExponent",
+                "Association": "EMaterialParameterAssociation::GlobalParameter",
+                "Index": -1
+              },
+              {
+                "Name": "DepthFadeDistance",
+                "Association": "EMaterialParameterAssociation::GlobalParameter",
+                "Index": -1
+              },
+              {
+                "Name": "UseFresnel",
+                "Association": "EMaterialParameterAssociation::GlobalParameter",
+                "Index": -1
+              }
+            ],
+            "ExpressionGuids": [
+              "5FD29C7D-43DDEE14-4A375E8D-26689630",
+              "BAA45FD4-4250DD52-897D3EBE-1A121E7B",
+              "7BD9A044-4BE77107-E751C88F-758A4076"
+            ],
+            "Overrides": [
+              false,
+              false,
+              false
+            ]
+          },
+          "RuntimeEntries": {
+            "NameHashes": [
+              817859122926228308,
+              1555446374545831183,
+              2500846114501519468
+            ],
+            "ParameterInfos": [
+              {
+                "Name": "CurlPan",
+                "Association": "EMaterialParameterAssociation::GlobalParameter",
+                "Index": -1
+              },
+              {
+                "Name": "CurlTileScale",
+                "Association": "EMaterialParameterAssociation::GlobalParameter",
+                "Index": -1
+              },
+              {
+                "Name": "CurlIntensity",
+                "Association": "EMaterialParameterAssociation::GlobalParameter",
+                "Index": -1
+              }
+            ],
+            "ExpressionGuids": [
+              "238456E4-4BE5F2AF-892EF89D-E3B93C5C",
+              "97F331C6-4E4E0137-44E4078D-6A8D2A69",
+              "54E628FB-4F5F3309-7A1D3FBC-CC3E83BA"
+            ],
+            "Overrides": [
+              false,
+              false,
+              false
+            ]
+          },
+          "ScalarValues": [
+            1.0,
+            500.0,
+            0.0
+          ],
+          "VectorValues": [
+            {
+              "R": 3.0,
+              "G": 0.0,
+              "B": 0.0,
+              "A": 0.0,
+              "Hex": "FD0000"
+            },
+            {
+              "R": 200.0,
+              "G": 200.0,
+              "B": 200.0,
+              "A": 0.0,
+              "Hex": "383838"
+            },
+            {
+              "R": 1.0,
+              "G": 1.0,
+              "B": 1.0,
+              "A": 0.0,
+              "Hex": "FFFFFF"
+            }
+          ]
+        },
+        "ReferencedTextures": [
+          {
+            "ObjectName": "T_Ramp_Virt:Texture2D",
+            "ObjectPath": "/Game/Effects/Fort_Effects/Textures/Ramps/T_Ramp_Virt.0"
+          },
+          {
+            "ObjectName": "T_Water_Top_Ramp:Texture2D",
+            "ObjectPath": "/Game/Effects/Fort_Effects/Textures/Ramps/T_Water_Top_Ramp.0"
+          }
+        ],
+        "FunctionInfos": [
+          {
+            "StateId": "972EFAAA-4C1C2B16-4BC287A2-B11C51DA",
+            "Function": {
+              "ObjectName": "SafeNormalize:MaterialFunction",
+              "ObjectPath": "/Engine/Functions/Engine_MaterialFunctions02/SafeNormalize.0"
+            }
+          },
+          {
+            "StateId": "972EFAAA-4C1C2B16-4BC287A2-B11C51DA",
+            "Function": {
+              "ObjectName": "SafeNormalize:MaterialFunction",
+              "ObjectPath": "/Engine/Functions/Engine_MaterialFunctions02/SafeNormalize.0"
+            }
+          },
+          {
+            "StateId": "B404464D-42313D79-E67091AA-AD61BE51",
+            "Function": {
+              "ObjectName": "CreateThirdOrthogonalVector:MaterialFunction",
+              "ObjectPath": "/Engine/Functions/Engine_MaterialFunctions02/Math/CreateThirdOrthogonalVector.0"
+            }
+          },
+          {
+            "StateId": "5B938C50-440B6892-955AD79F-CD1A8337",
+            "Function": {
+              "ObjectName": "BreakOutFloat3Components:MaterialFunction",
+              "ObjectPath": "/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat3Components.0"
+            }
+          },
+          {
+            "StateId": "C330DE33-4A86FAB2-7255B1AC-3A6AC1B4",
+            "Function": {
+              "ObjectName": "Transform3x3Matrix:MaterialFunction",
+              "ObjectPath": "/Engine/Functions/Engine_MaterialFunctions02/Math/Transform3x3Matrix.0"
+            }
+          },
+          {
+            "StateId": "2C0AFCEF-4B67951F-85943A89-8827DBDF",
+            "Function": {
+              "ObjectName": "TangentBasis:MaterialFunction",
+              "ObjectPath": "/Engine/Functions/Engine_MaterialFunctions02/TangentBasis.0"
+            }
+          },
+          {
+            "StateId": "F5C2D477-4BA63455-E32B4B96-0D7674B6",
+            "Function": {
+              "ObjectName": "BlendAngleCorrectedNormals:MaterialFunction",
+              "ObjectPath": "/Engine/Functions/Engine_MaterialFunctions02/Utility/BlendAngleCorrectedNormals.0"
+            }
+          },
+          {
+            "StateId": "6BB97146-49B75878-03A98399-9B3C01AF",
+            "Function": {
+              "ObjectName": "VectorLength:MaterialFunction",
+              "ObjectPath": "/Engine/Functions/Engine_MaterialFunctions02/Utility/VectorLength.0"
+            }
+          },
+          {
+            "StateId": "6BB97146-49B75878-03A98399-9B3C01AF",
+            "Function": {
+              "ObjectName": "VectorLength:MaterialFunction",
+              "ObjectPath": "/Engine/Functions/Engine_MaterialFunctions02/Utility/VectorLength.0"
+            }
+          },
+          {
+            "StateId": "5B938C50-440B6892-955AD79F-CD1A8337",
+            "Function": {
+              "ObjectName": "BreakOutFloat3Components:MaterialFunction",
+              "ObjectPath": "/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat3Components.0"
+            }
+          },
+          {
+            "StateId": "C330DE33-4A86FAB2-7255B1AC-3A6AC1B4",
+            "Function": {
+              "ObjectName": "Transform3x3Matrix:MaterialFunction",
+              "ObjectPath": "/Engine/Functions/Engine_MaterialFunctions02/Math/Transform3x3Matrix.0"
+            }
+          },
+          {
+            "StateId": "972EFAAA-4C1C2B16-4BC287A2-B11C51DA",
+            "Function": {
+              "ObjectName": "SafeNormalize:MaterialFunction",
+              "ObjectPath": "/Engine/Functions/Engine_MaterialFunctions02/SafeNormalize.0"
+            }
+          },
+          {
+            "StateId": "972EFAAA-4C1C2B16-4BC287A2-B11C51DA",
+            "Function": {
+              "ObjectName": "SafeNormalize:MaterialFunction",
+              "ObjectPath": "/Engine/Functions/Engine_MaterialFunctions02/SafeNormalize.0"
+            }
+          },
+          {
+            "StateId": "B404464D-42313D79-E67091AA-AD61BE51",
+            "Function": {
+              "ObjectName": "CreateThirdOrthogonalVector:MaterialFunction",
+              "ObjectPath": "/Engine/Functions/Engine_MaterialFunctions02/Math/CreateThirdOrthogonalVector.0"
+            }
+          },
+          {
+            "StateId": "949B5345-47E4ADAB-4A089BB4-15A81F3F",
+            "Function": {
+              "ObjectName": "SplineThicken:MaterialFunction",
+              "ObjectPath": "/Engine/Functions/Engine_MaterialFunctions01/WorldPositionOffset/SplineThicken.0"
+            }
+          },
+          {
+            "StateId": "B7C71B91-4E2BB667-772D6CBE-2AB55665",
+            "Function": {
+              "ObjectName": "LinearGradient:MaterialFunction",
+              "ObjectPath": "/Engine/Functions/Engine_MaterialFunctions01/Gradient/LinearGradient.0"
+            }
+          },
+          {
+            "StateId": "1F3C7ECC-4653CAFB-2A6AEE82-B1F2F3A5",
+            "Function": {
+              "ObjectName": "CheapContrast:MaterialFunction",
+              "ObjectPath": "/Engine/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast.0"
+            }
+          },
+          {
+            "StateId": "E572D701-496E6D38-CC53A5BD-C450B0ED",
+            "Function": {
+              "ObjectName": "CustomRotator:MaterialFunction",
+              "ObjectPath": "/Engine/Functions/Engine_MaterialFunctions02/Texturing/CustomRotator.0"
+            }
+          },
+          {
+            "StateId": "2C1DDB6E-406BC9FC-1D4141A1-7C82122A",
+            "Function": {
+              "ObjectName": "BreakOutFloat2Components:MaterialFunction",
+              "ObjectPath": "/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.0"
+            }
+          },
+          {
+            "StateId": "B2F4A5A7-4EDE33D8-E70A4A83-A28D1503",
+            "Function": {
+              "ObjectName": "ScaleUVsByCenter:MaterialFunction",
+              "ObjectPath": "/Engine/Functions/Engine_MaterialFunctions01/Texturing/ScaleUVsByCenter.0"
+            }
+          },
+          {
+            "StateId": "72C547B3-457AA083-E55C2994-C3F1418D",
+            "Function": {
+              "ObjectName": "Fresnel_Function:MaterialFunction",
+              "ObjectPath": "/Engine/Functions/Engine_MaterialFunctions02/Fresnel_Function.0"
+            }
+          }
+        ],
+        "DynamicParameterNames": [
+          "SplineWidth",
+          "Curlntensity",
+          "FresnelExp",
+          "Param4"
+        ],
+        "QualityLevelsUsed": [
+          false,
+          false,
+          false,
+          false
+        ]
+      }
+    }
+  }
+]

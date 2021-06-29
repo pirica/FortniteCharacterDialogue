@@ -1,0 +1,82 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "Goop_Body_FX_Loop_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "Goop_Body_FX_Loop_Cue:SoundNodeModulatorContinuous_1:SoundNodeModulatorContinuous",
+        "ObjectPath": "/MotherGameplay/Items/Goop/Audio/Goop_Body_FX_Loop_Cue.2"
+      },
+      "VolumeMultiplier": 1.6800001,
+      "SoundClassObject": {
+        "ObjectName": "Fort_AudioGameplayVolumes:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_AudioGameplayVolumes.0"
+      },
+      "Duration": 10000.0,
+      "MaxDistance": 3675.0,
+      "AttenuationSettings": {
+        "ObjectName": "Fort_Goop_Traversal_Att:SoundAttenuation",
+        "ObjectPath": "/MotherGameplay/Items/Goop/Audio/Fort_Goop_Traversal_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulatorContinuous",
+    "Name": "SoundNodeModulatorContinuous_0",
+    "Outer": "Goop_Body_FX_Loop_Cue",
+    "Properties": {
+      "PitchModulationParams": {
+        "ParameterName": "Speed",
+        "Default": 0.0,
+        "MinOutput": 0.75
+      },
+      "VolumeModulationParams": {
+        "ParameterName": "Speed",
+        "Default": 0.0,
+        "MinOutput": 0.1
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "Goop_Body_FX_Loop_Cue:SoundNodeWavePlayer_0:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/Goop/Audio/Goop_Body_FX_Loop_Cue.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulatorContinuous",
+    "Name": "SoundNodeModulatorContinuous_1",
+    "Outer": "Goop_Body_FX_Loop_Cue",
+    "Properties": {
+      "PitchModulationParams": {
+        "ParameterName": "IsFalling",
+        "Default": 0.0,
+        "MinOutput": 1.0
+      },
+      "VolumeModulationParams": {
+        "ParameterName": "IsFalling",
+        "Default": 0.0,
+        "MinOutput": 1.0,
+        "MaxOutput": 1.5
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "Goop_Body_FX_Loop_Cue:SoundNodeModulatorContinuous_0:SoundNodeModulatorContinuous",
+          "ObjectPath": "/MotherGameplay/Items/Goop/Audio/Goop_Body_FX_Loop_Cue.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "Goop_Body_FX_Loop_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Items/Goop/Audio/Goop_Body_FX_Loop.Goop_Body_FX_Loop",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    }
+  }
+]

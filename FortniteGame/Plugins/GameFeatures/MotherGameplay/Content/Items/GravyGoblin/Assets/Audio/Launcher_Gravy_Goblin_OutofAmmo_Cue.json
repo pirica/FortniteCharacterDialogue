@@ -1,0 +1,119 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "Launcher_Gravy_Goblin_OutofAmmo_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "Launcher_Gravy_Goblin_OutofAmmo_Cue:SoundNodeModulator_1:SoundNodeModulator",
+        "ObjectPath": "/MotherGameplay/Items/GravyGoblin/Assets/Audio/Launcher_Gravy_Goblin_OutofAmmo_Cue.1"
+      },
+      "VolumeMultiplier": 0.55,
+      "AttenuationOverrides": {
+        "FalloffDistance": 1600.0
+      },
+      "SoundClassObject": {
+        "ObjectName": "Fort_Weapon_Projectile_PSM:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Weapon_Projectile_PSM.0"
+      },
+      "bOverrideConcurrency": true,
+      "ConcurrencyOverrides": {
+        "MaxCount": 2,
+        "ResolutionRule": "EMaxConcurrentResolutionRule::StopOldest"
+      },
+      "Duration": 0.81659377,
+      "MaxDistance": 2097152.0
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_1",
+    "Outer": "Launcher_Gravy_Goblin_OutofAmmo_Cue",
+    "Properties": {
+      "PitchMin": 1.0,
+      "PitchMax": 1.0,
+      "VolumeMin": 0.6,
+      "VolumeMax": 0.7,
+      "ChildNodes": [
+        {
+          "ObjectName": "Launcher_Gravy_Goblin_OutofAmmo_Cue:SoundNodeRandom_0:SoundNodeRandom",
+          "ObjectPath": "/MotherGameplay/Items/GravyGoblin/Assets/Audio/Launcher_Gravy_Goblin_OutofAmmo_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "Launcher_Gravy_Goblin_OutofAmmo_Cue",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "Launcher_Gravy_Goblin_OutofAmmo_Cue:SoundNodeWavePlayer_1:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/GravyGoblin/Assets/Audio/Launcher_Gravy_Goblin_OutofAmmo_Cue.3"
+        },
+        {
+          "ObjectName": "Launcher_Gravy_Goblin_OutofAmmo_Cue:SoundNodeWavePlayer_2:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/GravyGoblin/Assets/Audio/Launcher_Gravy_Goblin_OutofAmmo_Cue.4"
+        },
+        {
+          "ObjectName": "Launcher_Gravy_Goblin_OutofAmmo_Cue:SoundNodeWavePlayer_3:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/GravyGoblin/Assets/Audio/Launcher_Gravy_Goblin_OutofAmmo_Cue.5"
+        },
+        {
+          "ObjectName": "Launcher_Gravy_Goblin_OutofAmmo_Cue:SoundNodeWavePlayer_4:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/GravyGoblin/Assets/Audio/Launcher_Gravy_Goblin_OutofAmmo_Cue.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "Launcher_Gravy_Goblin_OutofAmmo_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_Weapons/OutofAmmo/Launcher_OutofAmmo_01.Launcher_OutofAmmo_01",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "Launcher_Gravy_Goblin_OutofAmmo_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_Weapons/OutofAmmo/Launcher_OutofAmmo_02.Launcher_OutofAmmo_02",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "Launcher_Gravy_Goblin_OutofAmmo_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_Weapons/OutofAmmo/Launcher_OutofAmmo_03.Launcher_OutofAmmo_03",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_4",
+    "Outer": "Launcher_Gravy_Goblin_OutofAmmo_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_Weapons/OutofAmmo/Launcher_OutofAmmo_04.Launcher_OutofAmmo_04",
+        "SubPathString": ""
+      }
+    }
+  }
+]

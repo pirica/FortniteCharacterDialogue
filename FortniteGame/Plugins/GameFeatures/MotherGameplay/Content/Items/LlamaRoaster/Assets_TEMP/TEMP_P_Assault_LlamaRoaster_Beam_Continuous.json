@@ -1,0 +1,650 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_1"
+  },
+  {
+    "Type": "DistributionFloatConstantCurve",
+    "Name": "DistributionFloatConstantCurve_1",
+    "Outer": "ParticleModuleColorScaleOverLife_1",
+    "Properties": {
+      "ConstantCurve": {
+        "Points": [
+          {
+            "InVal": 0.74,
+            "OutVal": 1.0,
+            "ArriveTangent": 0.0,
+            "LeaveTangent": 0.0,
+            "InterpMode": "EInterpCurveMode::CIM_Linear"
+          },
+          {
+            "InVal": 1.0,
+            "OutVal": -1.0,
+            "ArriveTangent": 0.0,
+            "LeaveTangent": 0.0,
+            "InterpMode": "EInterpCurveMode::CIM_Linear"
+          }
+        ]
+      },
+      "bCanBeBaked": false
+    }
+  },
+  {
+    "Type": "DistributionVectorConstant",
+    "Name": "DistributionSourceTangent",
+    "Outer": "ParticleModuleBeamSource_0",
+    "Properties": {
+      "Constant": {
+        "X": 1.0,
+        "Y": 0.0,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "DistributionVectorConstant",
+    "Name": "DistributionTargetTangent",
+    "Outer": "ParticleModuleBeamTarget_0",
+    "Properties": {
+      "Constant": {
+        "X": 1.0,
+        "Y": 0.0,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_0",
+    "Outer": "ParticleSpriteEmitter_1",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "TEMP_P_Assault_LlamaRoaster_Beam_Continuous:ParticleModuleRequired_1:ParticleModuleRequired",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/Assets_TEMP/TEMP_P_Assault_LlamaRoaster_Beam_Continuous.10"
+      },
+      "Modules": [
+        {
+          "ObjectName": "TEMP_P_Assault_LlamaRoaster_Beam_Continuous:ParticleModuleLifetime_1:ParticleModuleLifetime",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/Assets_TEMP/TEMP_P_Assault_LlamaRoaster_Beam_Continuous.9"
+        },
+        {
+          "ObjectName": "TEMP_P_Assault_LlamaRoaster_Beam_Continuous:ParticleModuleSize_1:ParticleModuleSize",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/Assets_TEMP/TEMP_P_Assault_LlamaRoaster_Beam_Continuous.11"
+        },
+        {
+          "ObjectName": "TEMP_P_Assault_LlamaRoaster_Beam_Continuous:ParticleModuleColor_1:ParticleModuleColor",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/Assets_TEMP/TEMP_P_Assault_LlamaRoaster_Beam_Continuous.7"
+        },
+        {
+          "ObjectName": "TEMP_P_Assault_LlamaRoaster_Beam_Continuous:ParticleModuleColorScaleOverLife_1:ParticleModuleColorScaleOverLife",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/Assets_TEMP/TEMP_P_Assault_LlamaRoaster_Beam_Continuous.8"
+        },
+        {
+          "ObjectName": "TEMP_P_Assault_LlamaRoaster_Beam_Continuous:ParticleModuleBeamTarget_0:ParticleModuleBeamTarget",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/Assets_TEMP/TEMP_P_Assault_LlamaRoaster_Beam_Continuous.6"
+        },
+        {
+          "ObjectName": "TEMP_P_Assault_LlamaRoaster_Beam_Continuous:ParticleModuleBeamSource_0:ParticleModuleBeamSource",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/Assets_TEMP/TEMP_P_Assault_LlamaRoaster_Beam_Continuous.5"
+        }
+      ],
+      "TypeDataModule": {
+        "ObjectName": "TEMP_P_Assault_LlamaRoaster_Beam_Continuous:ParticleModuleTypeDataBeam2_1:ParticleModuleTypeDataBeam2",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/Assets_TEMP/TEMP_P_Assault_LlamaRoaster_Beam_Continuous.13"
+      },
+      "SpawnModule": {
+        "ObjectName": "TEMP_P_Assault_LlamaRoaster_Beam_Continuous:ParticleModuleSpawn_1:ParticleModuleSpawn",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/Assets_TEMP/TEMP_P_Assault_LlamaRoaster_Beam_Continuous.12"
+      },
+      "PeakActiveParticles": 5
+    }
+  },
+  {
+    "Type": "ParticleModuleBeamSource",
+    "Name": "ParticleModuleBeamSource_0",
+    "Outer": "TEMP_P_Assault_LlamaRoaster_Beam_Continuous",
+    "Properties": {
+      "SourceName": "Source",
+      "Source": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "SourceTangent": {
+        "Distribution": {
+          "ObjectName": "ParticleModuleBeamSource_0:DistributionSourceTangent:DistributionVectorConstant",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/Assets_TEMP/TEMP_P_Assault_LlamaRoaster_Beam_Continuous.2"
+        }
+      },
+      "SourceStrength": {
+        "MinValue": 25.0,
+        "MaxValue": 25.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            25.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleBeamTarget",
+    "Name": "ParticleModuleBeamTarget_0",
+    "Outer": "TEMP_P_Assault_LlamaRoaster_Beam_Continuous",
+    "Properties": {
+      "TargetMethod": "EBeam2SourceTargetMethod::PEB2STM_UserSet",
+      "TargetName": "Target",
+      "Target": {
+        "MaxValue": 300.0,
+        "MinValueVec": {
+          "X": 300.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "MaxValueVec": {
+          "X": 300.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            300.0,
+            0.0,
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "TargetTangent": {
+        "Distribution": {
+          "ObjectName": "ParticleModuleBeamTarget_0:DistributionTargetTangent:DistributionVectorConstant",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/Assets_TEMP/TEMP_P_Assault_LlamaRoaster_Beam_Continuous.3"
+        }
+      },
+      "TargetStrength": {
+        "MinValue": 25.0,
+        "MaxValue": 25.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            25.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColor",
+    "Name": "ParticleModuleColor_1",
+    "Outer": "TEMP_P_Assault_LlamaRoaster_Beam_Continuous",
+    "Properties": {
+      "StartColor": {
+        "MinValue": 0.2,
+        "MaxValue": 1.5,
+        "MinValueVec": {
+          "X": 0.2,
+          "Y": 0.2,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 1.5,
+          "Y": 1.5,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.2,
+            0.2,
+            1.0,
+            1.5,
+            1.5,
+            1.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "StartAlpha": {
+        "MinValue": 30.0,
+        "MaxValue": 30.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            30.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColorScaleOverLife",
+    "Name": "ParticleModuleColorScaleOverLife_1",
+    "Outer": "TEMP_P_Assault_LlamaRoaster_Beam_Continuous",
+    "Properties": {
+      "ColorScaleOverLife": {
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 0.0
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 0.7
+        },
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 1.966413,
+          "TimeBias": 0.29940805,
+          "Values": [
+            1.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            0.7
+          ],
+          "Op": 1,
+          "EntryCount": 2,
+          "EntryStride": 3
+        }
+      },
+      "AlphaScaleOverLife": {
+        "MinValue": -1.0,
+        "MaxValue": 1.0,
+        "Distribution": {
+          "ObjectName": "ParticleModuleColorScaleOverLife_1:DistributionFloatConstantCurve_1:DistributionFloatConstantCurve",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/Assets_TEMP/TEMP_P_Assault_LlamaRoaster_Beam_Continuous.1"
+        },
+        "Table": {
+          "Values": [
+            1.0,
+            -1.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_1",
+    "Outer": "TEMP_P_Assault_LlamaRoaster_Beam_Continuous",
+    "Properties": {
+      "LifeTime": {
+        "MinValue": 0.2,
+        "MaxValue": 0.2,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.2
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_1",
+    "Outer": "TEMP_P_Assault_LlamaRoaster_Beam_Continuous",
+    "Properties": {
+      "Material": {
+        "ObjectName": "M_Raygun_LaserBeam_01_Inst:MaterialInstanceConstant",
+        "ObjectPath": "/Game/Weapons/FORT_Rifles/Effects/Materials/M_Raygun_LaserBeam_01_Inst.0"
+      },
+      "bUseLegacyEmitterTime": false,
+      "EmitterDuration": 0.0,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "ParticleModuleRequired_1:RequiredDistributionSpawnRate:DistributionFloatConstant",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/Assets_TEMP/TEMP_P_Assault_LlamaRoaster_Beam_Continuous.0"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_1",
+    "Outer": "TEMP_P_Assault_LlamaRoaster_Beam_Continuous",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 5.0,
+        "MaxValue": 15.0,
+        "MinValueVec": {
+          "X": 15.0,
+          "Y": 5.0,
+          "Z": 5.0
+        },
+        "MaxValueVec": {
+          "X": 15.0,
+          "Y": 5.0,
+          "Z": 5.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            15.0,
+            5.0,
+            5.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_1",
+    "Outer": "TEMP_P_Assault_LlamaRoaster_Beam_Continuous",
+    "Properties": {
+      "Rate": {
+        "MinValue": 10.0,
+        "MaxValue": 10.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            10.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "RateScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "BurstScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "bApplyGlobalSpawnRateScale": false,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleTypeDataBeam2",
+    "Name": "ParticleModuleTypeDataBeam2_1",
+    "Outer": "TEMP_P_Assault_LlamaRoaster_Beam_Continuous",
+    "Properties": {
+      "TextureTileDistance": 600.0,
+      "Sheets": 3,
+      "MaxBeamCount": 3,
+      "Speed": 0.0,
+      "Distance": {
+        "MinValue": 500.0,
+        "MaxValue": 500.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            500.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "TaperMethod": "EBeamTaperMethod::PEBTM_Partial",
+      "TaperFactor": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "TaperScale": {
+        "MinValue": 0.25,
+        "MaxValue": 12.0,
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 127.0,
+          "Values": [
+            0.25,
+            0.62007874,
+            0.9901575,
+            1.3602362,
+            1.730315,
+            2.1003938,
+            2.4704723,
+            2.8405511,
+            3.21063,
+            3.5807085,
+            3.9507873,
+            4.320866,
+            4.6909447,
+            5.061023,
+            5.4311023,
+            5.8011813,
+            6.17126,
+            6.5413384,
+            6.911417,
+            7.281496,
+            7.6515746,
+            8.021653,
+            8.391732,
+            8.761811,
+            9.131889,
+            9.501968,
+            9.872046,
+            10.242126,
+            10.612205,
+            10.982284,
+            11.352363,
+            11.722441,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            12.0,
+            11.722441,
+            11.352363,
+            10.982284,
+            10.6122055,
+            10.242126,
+            9.872048,
+            9.50197,
+            9.131891,
+            8.761812,
+            8.391731,
+            8.021652,
+            7.651574,
+            7.2814956,
+            6.911417,
+            6.5413384,
+            6.17126,
+            5.8011813,
+            5.4311028,
+            5.061024,
+            4.6909456,
+            4.320867,
+            3.9507885,
+            3.5807095,
+            3.2106314,
+            2.8405495,
+            2.4704714,
+            2.1003933,
+            1.7303143,
+            1.3602352,
+            0.9901571,
+            0.62007904,
+            0.25
+          ],
+          "Op": 1,
+          "EntryCount": 128,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_1",
+    "Outer": "TEMP_P_Assault_LlamaRoaster_Beam_Continuous",
+    "Properties": {
+      "EmitterName": "Beam",
+      "bUseLegacySpawningBehavior": true,
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleSpriteEmitter_1:ParticleLODLevel_0:ParticleLODLevel",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/Assets_TEMP/TEMP_P_Assault_LlamaRoaster_Beam_Continuous.4"
+        }
+      ],
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "TEMP_P_Assault_LlamaRoaster_Beam_Continuous",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "TEMP_P_Assault_LlamaRoaster_Beam_Continuous:ParticleSpriteEmitter_1:ParticleSpriteEmitter",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/Assets_TEMP/TEMP_P_Assault_LlamaRoaster_Beam_Continuous.14"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "FixedRelativeBoundingBox": {
+        "Min": {
+          "X": -150.0,
+          "Y": -10.0,
+          "Z": -10.0
+        },
+        "Max": {
+          "X": 10000.0,
+          "Y": 10.0,
+          "Z": 10.0
+        },
+        "IsValid": 1
+      },
+      "bShouldResetPeakCounts": true
+    }
+  }
+]

@@ -1,0 +1,616 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_GCNL_RollingEffects_Boulder",
+    "Outer": "GCNL_RollingEffects_Boulder_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_DeltaSeconds",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_MyTarget",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_Parameters",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 200,
+        "PropertyFlags": 549755813890,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayCueParameters:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_Event_ParticleComponents",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 549890031618,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "K2Node_Event_ParticleComponents",
+          "Flags": 1,
+          "ArrayDim": 1,
+          "ElementSize": 8,
+          "PropertyFlags": 524288,
+          "RepIndex": 0,
+          "RepNotifyFunc": "None",
+          "BlueprintReplicationCondition": "COND_None",
+          "PropertyClass": {
+            "ObjectName": "NiagaraComponent:Class",
+            "ObjectPath": 0
+          }
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_Event_AudioComponents",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 549890031618,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "K2Node_Event_AudioComponents",
+          "Flags": 1,
+          "ArrayDim": 1,
+          "ElementSize": 8,
+          "PropertyFlags": 524288,
+          "RepIndex": 0,
+          "RepNotifyFunc": "None",
+          "BlueprintReplicationCondition": "COND_None",
+          "PropertyClass": {
+            "ObjectName": "AudioComponent:Class",
+            "ObjectPath": 0
+          }
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "NiagaraComponent:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBGA_Athena_Boulder_Prop",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "BGA_Athena_Boulder_Prop_C:BlueprintGeneratedClass",
+          "ObjectPath": "/MotherGameplay/Items/Boulder/BGA_Athena_Boulder_Prop.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetBounds_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 28,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "BoxSphereBounds:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Multiply_FloatFloat_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetMovingStateData_OutInstigator",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetMovingStateData_OutHitResult",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 144,
+        "PropertyFlags": 549755813888,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "HitResult:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetMovingStateData_OutLinearSpeed",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "CallFunc_GetMovingStateData_OutMovementState",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Enum": {
+          "ObjectName": "EFortPhysicsObjectMovementState:Class",
+          "ObjectPath": 0
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": 1,
+          "ArrayDim": 1,
+          "ElementSize": 1,
+          "PropertyFlags": 0,
+          "RepIndex": 0,
+          "RepNotifyFunc": "None",
+          "BlueprintReplicationCondition": "COND_None",
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 8421377,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "OnLoopingStartNiagara",
+    "Outer": "GCNL_RollingEffects_Boulder_C",
+    "SuperStruct": {
+      "ObjectName": "OnLoopingStartNiagara:Class",
+      "ObjectPath": 0
+    },
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "MyTarget",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Parameters",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 200,
+        "PropertyFlags": 549890032022,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayCueParameters:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "ParticleComponents",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 549890032022,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "ParticleComponents",
+          "Flags": 1,
+          "ArrayDim": 1,
+          "ElementSize": 8,
+          "PropertyFlags": 524288,
+          "RepIndex": 0,
+          "RepNotifyFunc": "None",
+          "BlueprintReplicationCondition": "COND_None",
+          "PropertyClass": {
+            "ObjectName": "NiagaraComponent:Class",
+            "ObjectPath": 0
+          }
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "AudioComponents",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 549890032022,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "AudioComponents",
+          "Flags": 1,
+          "ArrayDim": 1,
+          "ElementSize": 8,
+          "PropertyFlags": 524288,
+          "RepIndex": 0,
+          "RepNotifyFunc": "None",
+          "BlueprintReplicationCondition": "COND_None",
+          "PropertyClass": {
+            "ObjectName": "AudioComponent:Class",
+            "ObjectPath": 0
+          }
+        }
+      }
+    ],
+    "FunctionFlags": 138545152,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveTick",
+    "Outer": "GCNL_RollingEffects_Boulder_C",
+    "SuperStruct": {
+      "ObjectName": "ReceiveTick:Class",
+      "ObjectPath": 0
+    },
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "DeltaSeconds",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      }
+    ],
+    "FunctionFlags": 134350848,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GCNL_RollingEffects_Boulder_C",
+    "Super": "GCNL_RollingEffects_Parent_C",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "GCNL_RollingEffects_Boulder_C:SimpleConstructionScript_0:SimpleConstructionScript",
+        "ObjectPath": "/MotherGameplay/GameplayCues/Boulder/GCNL_RollingEffects_Boulder.10"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "GCNL_RollingEffects_Boulder_C:InheritableComponentHandler:InheritableComponentHandler",
+        "ObjectPath": "/MotherGameplay/GameplayCues/Boulder/GCNL_RollingEffects_Boulder.6"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "GCNL_RollingEffects_Boulder_C:ExecuteUbergraph_GCNL_RollingEffects_Boulder:Function",
+        "ObjectPath": "/MotherGameplay/GameplayCues/Boulder/GCNL_RollingEffects_Boulder.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "GCNL_RollingEffects_Parent_C:BlueprintGeneratedClass",
+      "ObjectPath": "/Game/Athena/GameplayCueNotifies/CollisionEffects/GCNL_RollingEffects_Parent.5"
+    },
+    "Children": [
+      {
+        "ObjectName": "GCNL_RollingEffects_Boulder_C:ReceiveTick:Function",
+        "ObjectPath": "/MotherGameplay/GameplayCues/Boulder/GCNL_RollingEffects_Boulder.2"
+      },
+      {
+        "ObjectName": "GCNL_RollingEffects_Boulder_C:OnLoopingStartNiagara:Function",
+        "ObjectPath": "/MotherGameplay/GameplayCues/Boulder/GCNL_RollingEffects_Boulder.1"
+      },
+      {
+        "ObjectName": "GCNL_RollingEffects_Boulder_C:ExecuteUbergraph_GCNL_RollingEffects_Boulder:Function",
+        "ObjectPath": "/MotherGameplay/GameplayCues/Boulder/GCNL_RollingEffects_Boulder.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 2105344,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "PointerToUberGraphFrame:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FX_Reference",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 589829,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "NiagaraComponent:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_GCNL_RollingEffects_Boulder": {
+        "ObjectName": "GCNL_RollingEffects_Boulder_C:ExecuteUbergraph_GCNL_RollingEffects_Boulder:Function",
+        "ObjectPath": "/MotherGameplay/GameplayCues/Boulder/GCNL_RollingEffects_Boulder.0"
+      },
+      "OnLoopingStartNiagara": {
+        "ObjectName": "GCNL_RollingEffects_Boulder_C:OnLoopingStartNiagara:Function",
+        "ObjectPath": "/MotherGameplay/GameplayCues/Boulder/GCNL_RollingEffects_Boulder.1"
+      },
+      "ReceiveTick": {
+        "ObjectName": "GCNL_RollingEffects_Boulder_C:ReceiveTick:Function",
+        "ObjectPath": "/MotherGameplay/GameplayCues/Boulder/GCNL_RollingEffects_Boulder.2"
+      }
+    },
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Engine",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__GCNL_RollingEffects_Boulder_C:GCNL_RollingEffects_Boulder_C",
+      "ObjectPath": "/MotherGameplay/GameplayCues/Boulder/GCNL_RollingEffects_Boulder.4"
+    }
+  },
+  {
+    "Type": "GCNL_RollingEffects_Boulder_C",
+    "Name": "Default__GCNL_RollingEffects_Boulder_C",
+    "Template": "Default__GCNL_RollingEffects_Parent_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "LayeredAudioComp": {
+        "ObjectName": "Default__GCNL_RollingEffects_Boulder_C:LayeredAudioComp:FortLayeredAudioComponent",
+        "ObjectPath": "/MotherGameplay/GameplayCues/Boulder/GCNL_RollingEffects_Boulder.5"
+      },
+      "LoopingParticles": [
+        {
+          "Condition": {
+            "SourceCondition": "EFortGameplayCueSourceCondition::AnySource",
+            "AllowedSurfaces": [],
+            "DisallowedSurfaces": [],
+            "ChanceToPlay": 1.0,
+            "Significance": "EParticleSignificanceLevel::High",
+            "RequiredDetailMode": 0,
+            "bRequireVisible": false
+          },
+          "Attachment": {
+            "SocketName": null,
+            "AttachType": "EFortGameplayCueAttachType::AttachToTarget",
+            "bAttachToWeapon": false,
+            "bAttachToHitResult": false,
+            "bUseUnsmoothedNetworkPosition": false,
+            "bIgnoreScale": true,
+            "bIgnoreRotation": true,
+            "OverrideScale": {
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 1.0
+            },
+            "OverrideRotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            }
+          },
+          "FXType": "EFXType::GenericAnimNotify",
+          "NiagaraSystem": {
+            "ObjectName": "NS_Boulder_PhysicsAsset:NiagaraSystem",
+            "ObjectPath": "/MotherGameplay/Items/Boulder/Assets/VFX/NS_Boulder_PhysicsAsset.82"
+          },
+          "ParticleSystem": null,
+          "bCastShadow": false,
+          "bOverrideCondition": false,
+          "bOverrideAttachment": false
+        }
+      ],
+      "GameplayCueTag": {
+        "TagName": "GameplayCue.Mother.Boulder.Rolling"
+      },
+      "GameplayCueName": "GameplayCue.Mother.Boulder.Rolling",
+      "RootComponent": {
+        "ObjectName": "Default__GCNL_RollingEffects_Boulder_C:RootComponent:SceneComponent",
+        "ObjectPath": "/MotherGameplay/GameplayCues/Boulder/GCNL_RollingEffects_Boulder.7"
+      }
+    }
+  },
+  {
+    "Type": "FortLayeredAudioComponent",
+    "Name": "LayeredAudioComp",
+    "Outer": "Default__GCNL_RollingEffects_Boulder_C",
+    "Template": "LayeredAudioComp",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "Boulder_Roll_Phys_Loop_Cue:SoundCue",
+        "ObjectPath": "/MotherGameplay/Sounds/Boulder/Boulder_Roll_Phys_Loop_Cue.0"
+      },
+      "AttachParent": {
+        "ObjectName": "Default__GCNL_RollingEffects_Boulder_C:RootComponent:SceneComponent",
+        "ObjectPath": "/MotherGameplay/GameplayCues/Boulder/GCNL_RollingEffects_Boulder.7"
+      }
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "GCNL_RollingEffects_Boulder_C"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "RootComponent",
+    "Outer": "Default__GCNL_RollingEffects_Boulder_C",
+    "Template": "RootComponent"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "GCNL_RollingEffects_Boulder_C"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "SceneComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": {
+        "ObjectName": "GCNL_RollingEffects_Boulder_C:DefaultSceneRoot_GEN_VARIABLE:SceneComponent",
+        "ObjectPath": "/MotherGameplay/GameplayCues/Boulder/GCNL_RollingEffects_Boulder.8"
+      },
+      "VariableGuid": "4E3D90F1-4831D937-3A8B3082-19E36AC8",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "GCNL_RollingEffects_Boulder_C",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SimpleConstructionScript_0:SCS_Node_0:SCS_Node",
+        "ObjectPath": "/MotherGameplay/GameplayCues/Boulder/GCNL_RollingEffects_Boulder.9"
+      }
+    }
+  }
+]

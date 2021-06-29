@@ -1,0 +1,184 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "ReactorGrade_Projectile_FleshImpact_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "ReactorGrade_Projectile_FleshImpact_Cue:SoundNodeModulator_0:SoundNodeModulator",
+        "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Projectile_FleshImpact_Cue.1"
+      },
+      "VolumeMultiplier": 1.5,
+      "AttenuationOverrides": {
+        "AttenuationShapeExtents": {
+          "X": 1000.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 5000.0
+      },
+      "SoundClassObject": {
+        "ObjectName": "Fort_WeaponProjectile:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_WeaponProjectile.0"
+      },
+      "ConcurrencySet": [
+        {
+          "ObjectName": "RifleBulletImpact_Conc:SoundConcurrency",
+          "ObjectPath": "/Game/Sounds/Concurrency_Rules/RifleBulletImpact_Conc.0"
+        }
+      ],
+      "ConcurrencyOverrides": {
+        "MaxCount": 4,
+        "VolumeScale": 0.8
+      },
+      "Duration": 4.87375,
+      "MaxDistance": 5500.0,
+      "AttenuationSettings": {
+        "ObjectName": "Fort_Bullet_Impact_Att:SoundAttenuation",
+        "ObjectPath": "/Game/Sounds/Attenuation/Fort_Bullet_Impact_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "ReactorGrade_Projectile_FleshImpact_Cue",
+    "Properties": {
+      "PitchMin": 1.1,
+      "PitchMax": 1.4,
+      "ChildNodes": [
+        {
+          "ObjectName": "ReactorGrade_Projectile_FleshImpact_Cue:SoundNodeQualityLevel_0:SoundNodeQualityLevel",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Projectile_FleshImpact_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeQualityLevel",
+    "Name": "SoundNodeQualityLevel_0",
+    "Outer": "ReactorGrade_Projectile_FleshImpact_Cue",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "ReactorGrade_Projectile_FleshImpact_Cue:SoundNodeRandom_0:SoundNodeRandom",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Projectile_FleshImpact_Cue.3"
+        },
+        {
+          "ObjectName": "ReactorGrade_Projectile_FleshImpact_Cue:SoundNodeRandom_0:SoundNodeRandom",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Projectile_FleshImpact_Cue.3"
+        },
+        {
+          "ObjectName": "ReactorGrade_Projectile_FleshImpact_Cue:SoundNodeRandom_1:SoundNodeRandom",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Projectile_FleshImpact_Cue.4"
+        },
+        {
+          "ObjectName": "ReactorGrade_Projectile_FleshImpact_Cue:SoundNodeRandom_1:SoundNodeRandom",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Projectile_FleshImpact_Cue.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "ReactorGrade_Projectile_FleshImpact_Cue",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "ReactorGrade_Projectile_FleshImpact_Cue:SoundNodeWavePlayer_0:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Projectile_FleshImpact_Cue.5"
+        },
+        {
+          "ObjectName": "ReactorGrade_Projectile_FleshImpact_Cue:SoundNodeWavePlayer_1:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Projectile_FleshImpact_Cue.6"
+        },
+        {
+          "ObjectName": "ReactorGrade_Projectile_FleshImpact_Cue:SoundNodeWavePlayer_3:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Projectile_FleshImpact_Cue.7"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_1",
+    "Outer": "ReactorGrade_Projectile_FleshImpact_Cue",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0
+      ],
+      "bShouldExcludeFromBranchCulling": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "ReactorGrade_Projectile_FleshImpact_Cue:SoundNodeWavePlayer_5:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Projectile_FleshImpact_Cue.9"
+        },
+        {
+          "ObjectName": "ReactorGrade_Projectile_FleshImpact_Cue:SoundNodeWavePlayer_4:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Projectile_FleshImpact_Cue.8"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "ReactorGrade_Projectile_FleshImpact_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Projectile_Impact_01.ReactorGrade_Projectile_Impact_01",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "ReactorGrade_Projectile_FleshImpact_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Projectile_Impact_02.ReactorGrade_Projectile_Impact_02",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "ReactorGrade_Projectile_FleshImpact_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Projectile_Impact_04.ReactorGrade_Projectile_Impact_04",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_4",
+    "Outer": "ReactorGrade_Projectile_FleshImpact_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Projectile_Impact_04.ReactorGrade_Projectile_Impact_04",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_5",
+    "Outer": "ReactorGrade_Projectile_FleshImpact_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Projectile_Impact_02.ReactorGrade_Projectile_Impact_02",
+        "SubPathString": ""
+      }
+    }
+  }
+]

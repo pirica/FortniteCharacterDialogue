@@ -1,0 +1,219 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GE_Athena_AvacadoEaterBird_EffectOnParasiteOnAttach_C",
+    "Super": "GET_Heal_C",
+    "SuperStruct": {
+      "ObjectName": "GET_Heal_C:BlueprintGeneratedClass",
+      "ObjectPath": "/Game/GameplayEffectTemplates/GET_Heal.0"
+    },
+    "Children": [],
+    "ChildProperties": [],
+    "FuncMap": {},
+    "ClassFlags": 8652816,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Engine",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__GE_Athena_AvacadoEaterBird_EffectOnParasiteOnAttach_C:GE_Athena_AvacadoEaterBird_EffectOnParasiteOnAttach_C",
+      "ObjectPath": "/MotherGameplay/Items/AvacadoEaterBird/GE_Athena_AvacadoEaterBird_EffectOnParasiteOnAttach.1"
+    }
+  },
+  {
+    "Type": "GE_Athena_AvacadoEaterBird_EffectOnParasiteOnAttach_C",
+    "Name": "Default__GE_Athena_AvacadoEaterBird_EffectOnParasiteOnAttach_C",
+    "Template": "Default__GET_Heal_C",
+    "Properties": {
+      "DurationPolicy": "EGameplayEffectDurationType::Infinite",
+      "Period": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          },
+          "RowName": "Default.Mother.AvacadoEaterBird.Attack.HealOnAttack.HealTickRate"
+        }
+      },
+      "Executions": [
+        {
+          "CalculationClass": {
+            "ObjectName": "FortHealing:Class",
+            "ObjectPath": 0
+          },
+          "PassedInTags": [],
+          "CalculationModifiers": [
+            {
+              "CapturedAttribute": {
+                "AttributeToCapture": {
+                  "AttributeName": "HealingSource",
+                  "Attribute": {
+                    "Path": [
+                      "HealingSource"
+                    ],
+                    "ResolvedOwner": {
+                      "ObjectName": "FortHealthSet:Class",
+                      "ObjectPath": 0
+                    }
+                  },
+                  "AttributeOwner": {
+                    "ObjectName": "FortHealthSet:Class",
+                    "ObjectPath": 0
+                  }
+                },
+                "AttributeSource": "EGameplayEffectAttributeCaptureSource::Source",
+                "bSnapshot": true
+              },
+              "TransientAggregatorIdentifier": {
+                "TagName": null
+              },
+              "AggregatorType": "EGameplayEffectScopedModifierAggregatorType::CapturedAttributeBacked",
+              "ModifierOp": "EGameplayModOp::Additive",
+              "ModifierMagnitude": {
+                "MagnitudeCalculationType": "EGameplayEffectMagnitudeCalculation::ScalableFloat",
+                "ScalableFloatMagnitude": {
+                  "Value": 1.0,
+                  "Curve": {
+                    "CurveTable": {
+                      "ObjectName": "MotherGameData:CurveTable",
+                      "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+                    },
+                    "RowName": "Default.Mother.AvacadoEaterBird.Attack.HealOnAttack.HealAmount"
+                  },
+                  "RegistryType": {
+                    "Name": null
+                  }
+                },
+                "AttributeBasedMagnitude": {
+                  "Coefficient": {
+                    "Value": 1.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": null
+                    },
+                    "RegistryType": {
+                      "Name": null
+                    }
+                  },
+                  "PreMultiplyAdditiveValue": {
+                    "Value": 0.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": null
+                    },
+                    "RegistryType": {
+                      "Name": null
+                    }
+                  },
+                  "PostMultiplyAdditiveValue": {
+                    "Value": 0.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": null
+                    },
+                    "RegistryType": {
+                      "Name": null
+                    }
+                  },
+                  "BackingAttribute": {
+                    "AttributeToCapture": {
+                      "AttributeName": "",
+                      "Attribute": {
+                        "Path": [],
+                        "ResolvedOwner": null
+                      },
+                      "AttributeOwner": null
+                    },
+                    "AttributeSource": "EGameplayEffectAttributeCaptureSource::Source",
+                    "bSnapshot": false
+                  },
+                  "AttributeCurve": {
+                    "CurveTable": null,
+                    "RowName": null
+                  },
+                  "AttributeCalculationType": "EAttributeBasedFloatCalculationType::AttributeMagnitude",
+                  "FinalChannel": "EGameplayModEvaluationChannel::Channel0",
+                  "SourceTagFilter": [],
+                  "TargetTagFilter": []
+                },
+                "CustomMagnitude": {
+                  "CalculationClassMagnitude": null,
+                  "Coefficient": {
+                    "Value": 1.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": null
+                    },
+                    "RegistryType": {
+                      "Name": null
+                    }
+                  },
+                  "PreMultiplyAdditiveValue": {
+                    "Value": 0.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": null
+                    },
+                    "RegistryType": {
+                      "Name": null
+                    }
+                  },
+                  "PostMultiplyAdditiveValue": {
+                    "Value": 0.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": null
+                    },
+                    "RegistryType": {
+                      "Name": null
+                    }
+                  },
+                  "FinalLookupCurve": {
+                    "CurveTable": null,
+                    "RowName": null
+                  }
+                },
+                "SetByCallerMagnitude": {
+                  "DataName": null,
+                  "DataTag": {
+                    "TagName": null
+                  }
+                }
+              },
+              "EvaluationChannelSettings": {
+                "Channel": "EGameplayModEvaluationChannel::Channel0"
+              },
+              "SourceTags": {
+                "RequireTags": [],
+                "IgnoreTags": []
+              },
+              "TargetTags": {
+                "RequireTags": [],
+                "IgnoreTags": []
+              }
+            }
+          ],
+          "ConditionalGameplayEffects": []
+        }
+      ],
+      "InheritableGameplayEffectTags": {
+        "Added": []
+      },
+      "InheritableOwnedTagsContainer": {
+        "CombinedTags": [
+          "Granted.Athena.EnvItem.AvacadoEaterBird.AttachedToHost"
+        ],
+        "Added": [
+          "Granted.Athena.EnvItem.AvacadoEaterBird.AttachedToHost"
+        ]
+      },
+      "StackingType": "EGameplayEffectStackingType::AggregateByTarget",
+      "StackLimitCount": 1
+    }
+  }
+]

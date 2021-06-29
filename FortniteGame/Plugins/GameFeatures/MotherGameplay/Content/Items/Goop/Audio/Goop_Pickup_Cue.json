@@ -1,0 +1,52 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "Goop_Pickup_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "Goop_Pickup_Cue:SoundNodeModulator_0:SoundNodeModulator",
+        "ObjectPath": "/MotherGameplay/Items/Goop/Audio/Goop_Pickup_Cue.1"
+      },
+      "VolumeMultiplier": 1.25,
+      "SoundClassObject": {
+        "ObjectName": "Fort_Player_Loot_High_PSM:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Player_Loot_High_PSM.0"
+      },
+      "bOverrideConcurrency": true,
+      "ConcurrencyOverrides": {
+        "MaxCount": 1,
+        "ResolutionRule": "EMaxConcurrentResolutionRule::PreventNew"
+      },
+      "Duration": 1.3,
+      "MaxDistance": 1512.0,
+      "AttenuationSettings": {
+        "ObjectName": "Fort_Weapon_Pickup_Att:SoundAttenuation",
+        "ObjectPath": "/Game/Sounds/Attenuation/Fort_Weapon_Pickup_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "Goop_Pickup_Cue",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "Goop_Pickup_Cue:SoundNodeWavePlayer_4:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/Goop/Audio/Goop_Pickup_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_4",
+    "Outer": "Goop_Pickup_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Items/Goop/Audio/Goop_Pickup_01.Goop_Pickup_01",
+        "SubPathString": ""
+      }
+    }
+  }
+]

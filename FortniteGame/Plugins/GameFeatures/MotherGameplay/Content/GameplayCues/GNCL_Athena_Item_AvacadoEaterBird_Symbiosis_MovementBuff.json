@@ -1,0 +1,172 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GNCL_Athena_Item_AvacadoEaterBird_Symbiosis_MovementBuff_C",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "GNCL_Athena_Item_AvacadoEaterBird_Symbiosis_MovementBuff_C:SimpleConstructionScript_0:SimpleConstructionScript",
+        "ObjectPath": "/MotherGameplay/GameplayCues/GNCL_Athena_Item_AvacadoEaterBird_Symbiosis_MovementBuff.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "FortGameplayCueNotify_Loop:Class",
+      "ObjectPath": 0
+    },
+    "Children": [],
+    "ChildProperties": [],
+    "FuncMap": {},
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Engine",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__GNCL_Athena_Item_AvacadoEaterBird_Symbiosis_MovementBuff_C:GNCL_Athena_Item_AvacadoEaterBird_Symbiosis_MovementBuff_C",
+      "ObjectPath": "/MotherGameplay/GameplayCues/GNCL_Athena_Item_AvacadoEaterBird_Symbiosis_MovementBuff.1"
+    }
+  },
+  {
+    "Type": "GNCL_Athena_Item_AvacadoEaterBird_Symbiosis_MovementBuff_C",
+    "Name": "Default__GNCL_Athena_Item_AvacadoEaterBird_Symbiosis_MovementBuff_C",
+    "Properties": {
+      "LoopingParticles": [
+        {
+          "Condition": {
+            "SourceCondition": "EFortGameplayCueSourceCondition::AnySource",
+            "AllowedSurfaces": [],
+            "DisallowedSurfaces": [],
+            "ChanceToPlay": 1.0,
+            "Significance": "EParticleSignificanceLevel::High",
+            "RequiredDetailMode": 0,
+            "bRequireVisible": false
+          },
+          "Attachment": {
+            "SocketName": null,
+            "AttachType": "EFortGameplayCueAttachType::DoNotAttach",
+            "bAttachToWeapon": false,
+            "bAttachToHitResult": false,
+            "bUseUnsmoothedNetworkPosition": false,
+            "bIgnoreScale": true,
+            "bIgnoreRotation": false,
+            "OverrideScale": {
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 1.0
+            },
+            "OverrideRotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            }
+          },
+          "FXType": "EFXType::GenericAnimNotify",
+          "NiagaraSystem": {
+            "ObjectName": "NS_AvacadoEater_Bird_MovementBuff:NiagaraSystem",
+            "ObjectPath": "/MotherGameplay/Items/AvacadoEater/Assets/FX/NS_AvacadoEater_Bird_MovementBuff.91"
+          },
+          "ParticleSystem": null,
+          "bCastShadow": false,
+          "bOverrideCondition": false,
+          "bOverrideAttachment": false
+        }
+      ],
+      "LoopingSounds": [
+        {
+          "LoopingSoundFadeOutDuration": 0.5,
+          "LoopingSoundVolumeLevel": 0.0,
+          "Condition": {
+            "SourceCondition": "EFortGameplayCueSourceCondition::AnySource",
+            "AllowedSurfaces": [],
+            "DisallowedSurfaces": [],
+            "ChanceToPlay": 1.0,
+            "Significance": "EParticleSignificanceLevel::High",
+            "RequiredDetailMode": 0,
+            "bRequireVisible": false
+          },
+          "Attachment": {
+            "SocketName": null,
+            "AttachType": "EFortGameplayCueAttachType::AttachToTarget",
+            "bAttachToWeapon": false,
+            "bAttachToHitResult": false,
+            "bUseUnsmoothedNetworkPosition": false,
+            "bIgnoreScale": true,
+            "bIgnoreRotation": false,
+            "OverrideScale": {
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 1.0
+            },
+            "OverrideRotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            }
+          },
+          "SoundCue": {
+            "ObjectName": "AvacadoEaterBird_Player_Buff_Cue:SoundCue",
+            "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Bird/AvacadoEaterBird_Player_Buff_Cue.0"
+          },
+          "DelayBeforePlayInSeconds": 0.0,
+          "bOverrideCondition": false,
+          "bOverrideAttachment": true
+        }
+      ],
+      "DefaultCondition": {
+        "Significance": "EParticleSignificanceLevel::Critical"
+      },
+      "DefaultAttachment": {
+        "AttachType": "EFortGameplayCueAttachType::AttachToTarget"
+      },
+      "GameplayCueTag": {
+        "TagName": "GameplayCue.Athena.EnvItem.AvacadoEaterBird.SymbiosisBuff"
+      },
+      "GameplayCueName": "GameplayCue.Athena.EnvItem.AvacadoEaterBird.SymbiosisBuff",
+      "RootComponent": {
+        "ObjectName": "Default__GNCL_Athena_Item_AvacadoEaterBird_Symbiosis_MovementBuff_C:RootComponent:SceneComponent",
+        "ObjectPath": "/MotherGameplay/GameplayCues/GNCL_Athena_Item_AvacadoEaterBird_Symbiosis_MovementBuff.2"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "RootComponent",
+    "Outer": "Default__GNCL_Athena_Item_AvacadoEaterBird_Symbiosis_MovementBuff_C"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "GNCL_Athena_Item_AvacadoEaterBird_Symbiosis_MovementBuff_C"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "SceneComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": {
+        "ObjectName": "GNCL_Athena_Item_AvacadoEaterBird_Symbiosis_MovementBuff_C:DefaultSceneRoot_GEN_VARIABLE:SceneComponent",
+        "ObjectPath": "/MotherGameplay/GameplayCues/GNCL_Athena_Item_AvacadoEaterBird_Symbiosis_MovementBuff.3"
+      },
+      "VariableGuid": "3F9ED700-43CBE1FF-F7A45F9F-1BCFC7D4",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "GNCL_Athena_Item_AvacadoEaterBird_Symbiosis_MovementBuff_C",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SimpleConstructionScript_0:SCS_Node_0:SCS_Node",
+        "ObjectPath": "/MotherGameplay/GameplayCues/GNCL_Athena_Item_AvacadoEaterBird_Symbiosis_MovementBuff.4"
+      }
+    }
+  }
+]

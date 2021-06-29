@@ -1,0 +1,85 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GCN_Athena_ReactorGrade_Trail_C",
+    "SuperStruct": {
+      "ObjectName": "FortGameplayCueNotify_Burst:Class",
+      "ObjectPath": 0
+    },
+    "Children": [],
+    "ChildProperties": [],
+    "FuncMap": {},
+    "ClassFlags": 264208,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Engine",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__GCN_Athena_ReactorGrade_Trail_C:GCN_Athena_ReactorGrade_Trail_C",
+      "ObjectPath": "/MotherGameplay/GameplayCues/GCN_Athena_ReactorGrade_Trail.1"
+    }
+  },
+  {
+    "Type": "GCN_Athena_ReactorGrade_Trail_C",
+    "Name": "Default__GCN_Athena_ReactorGrade_Trail_C",
+    "Properties": {
+      "DefaultCondition": {
+        "Significance": "EParticleSignificanceLevel::Critical"
+      },
+      "DefaultAttachment": {
+        "bAttachToHitResult": true
+      },
+      "BurstEffectData": {
+        "BurstParticles": [
+          {
+            "Condition": {
+              "SourceCondition": "EFortGameplayCueSourceCondition::AnySource",
+              "AllowedSurfaces": [],
+              "DisallowedSurfaces": [],
+              "ChanceToPlay": 1.0,
+              "Significance": "EParticleSignificanceLevel::High",
+              "RequiredDetailMode": 0,
+              "bRequireVisible": false
+            },
+            "Attachment": {
+              "SocketName": null,
+              "AttachType": "EFortGameplayCueAttachType::DoNotAttach",
+              "bAttachToWeapon": false,
+              "bAttachToHitResult": true,
+              "bUseUnsmoothedNetworkPosition": false,
+              "bIgnoreScale": true,
+              "bIgnoreRotation": false,
+              "OverrideScale": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              },
+              "OverrideRotation": {
+                "Pitch": 0.0,
+                "Yaw": 0.0,
+                "Roll": 0.0
+              }
+            },
+            "FXType": "EFXType::WeaponImpactEffect",
+            "NiagaraSystem": null,
+            "ParticleSystem": {
+              "ObjectName": "P_ReactorGrade_Beam:ParticleSystem",
+              "ObjectPath": "/MotherGameplay/Items/ReactorGrade/VFX/P_ReactorGrade_Beam.16"
+            },
+            "bCastShadow": false,
+            "bOverrideCondition": false,
+            "bOverrideAttachment": true
+          }
+        ]
+      },
+      "GameplayCueTag": {
+        "TagName": "GameplayCue.Mother.ReactorGrade.Trail"
+      },
+      "GameplayCueName": "GameplayCue.Mother.ReactorGrade.Trail"
+    }
+  }
+]

@@ -1,0 +1,129 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "ReactorGrade_TargetingBeam_Charge_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "ReactorGrade_TargetingBeam_Charge_Cue:SoundNodeSoundClass_5:SoundNodeSoundClass",
+        "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_TargetingBeam_Charge_Cue.3"
+      },
+      "VolumeMultiplier": 0.4,
+      "SoundClassObject": null,
+      "bDebug": true,
+      "bOverrideConcurrency": true,
+      "ConcurrencyOverrides": {
+        "MaxCount": 2,
+        "bLimitToOwner": true,
+        "ResolutionRule": "EMaxConcurrentResolutionRule::StopOldest"
+      },
+      "Duration": 4.3897915,
+      "MaxDistance": 5750.0
+    }
+  },
+  {
+    "Type": "SoundNodeAttenuation",
+    "Name": "SoundNodeAttenuation_0",
+    "Outer": "ReactorGrade_TargetingBeam_Charge_Cue",
+    "Properties": {
+      "AttenuationSettings": {
+        "ObjectName": "Fort_Weapon_Projectile_Close_Athena_Att:SoundAttenuation",
+        "ObjectPath": "/Game/Sounds/Attenuation/Fort_Weapon_Projectile_Close_Athena_Att.0"
+      },
+      "AttenuationOverrides": {
+        "bAttenuateWithLPF": true,
+        "LPFRadiusMin": 500.0,
+        "LPFRadiusMax": 2000.0,
+        "LPFFrequencyAtMax": 800.0,
+        "AttenuationShapeExtents": {
+          "X": 750.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 5000.0
+      },
+      "bOverrideAttenuation": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "ReactorGrade_TargetingBeam_Charge_Cue:SoundNodeRandom_0:SoundNodeRandom",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_TargetingBeam_Charge_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "ReactorGrade_TargetingBeam_Charge_Cue",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "ReactorGrade_TargetingBeam_Charge_Cue:SoundNodeWavePlayer_0:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_TargetingBeam_Charge_Cue.4"
+        },
+        {
+          "ObjectName": "ReactorGrade_TargetingBeam_Charge_Cue:SoundNodeWavePlayer_1:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_TargetingBeam_Charge_Cue.5"
+        },
+        {
+          "ObjectName": "ReactorGrade_TargetingBeam_Charge_Cue:SoundNodeWavePlayer_2:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_TargetingBeam_Charge_Cue.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeSoundClass",
+    "Name": "SoundNodeSoundClass_5",
+    "Outer": "ReactorGrade_TargetingBeam_Charge_Cue",
+    "Properties": {
+      "SoundClassOverride": {
+        "ObjectName": "Fort_Weapon_Projectile_PSM:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Weapon_Projectile_PSM.0"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "ReactorGrade_TargetingBeam_Charge_Cue:SoundNodeAttenuation_0:SoundNodeAttenuation",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_TargetingBeam_Charge_Cue.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "ReactorGrade_TargetingBeam_Charge_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_ChargeUp_Close_01.ReactorGrade_ChargeUp_Close_01",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "ReactorGrade_TargetingBeam_Charge_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_ChargeUp_Close_02.ReactorGrade_ChargeUp_Close_02",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "ReactorGrade_TargetingBeam_Charge_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_ChargeUp_Close_03.ReactorGrade_ChargeUp_Close_03",
+        "SubPathString": ""
+      }
+    }
+  }
+]

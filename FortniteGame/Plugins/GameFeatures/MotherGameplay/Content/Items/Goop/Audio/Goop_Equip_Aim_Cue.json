@@ -1,0 +1,91 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "Goop_Equip_Aim_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "Goop_Equip_Aim_Cue:SoundNodeModulator_1:SoundNodeModulator",
+        "ObjectPath": "/MotherGameplay/Items/Goop/Audio/Goop_Equip_Aim_Cue.1"
+      },
+      "VolumeMultiplier": 6.7200003,
+      "SoundClassObject": {
+        "ObjectName": "Fort_AudioGameplayVolumes:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_AudioGameplayVolumes.0"
+      },
+      "bOverrideConcurrency": true,
+      "ConcurrencyOverrides": {
+        "MaxCount": 1,
+        "bLimitToOwner": true,
+        "ResolutionRule": "EMaxConcurrentResolutionRule::PreventNew",
+        "RetriggerTime": 1.0
+      },
+      "Duration": 0.7368125,
+      "MaxDistance": 2100.0,
+      "AttenuationSettings": {
+        "ObjectName": "Fort_Weapon_Reload_Sml_Att:SoundAttenuation",
+        "ObjectPath": "/Game/Sounds/Attenuation/Fort_Weapon_Reload_Sml_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_1",
+    "Outer": "Goop_Equip_Aim_Cue",
+    "Properties": {
+      "PitchMin": 1.0,
+      "PitchMax": 1.2,
+      "VolumeMin": 0.3,
+      "VolumeMax": 1.0,
+      "ChildNodes": [
+        {
+          "ObjectName": "Goop_Equip_Aim_Cue:SoundNodeRandom_0:SoundNodeRandom",
+          "ObjectPath": "/MotherGameplay/Items/Goop/Audio/Goop_Equip_Aim_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "Goop_Equip_Aim_Cue",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0
+      ],
+      "bShouldExcludeFromBranchCulling": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "Goop_Equip_Aim_Cue:SoundNodeWavePlayer_2:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/Goop/Audio/Goop_Equip_Aim_Cue.3"
+        },
+        {
+          "ObjectName": "Goop_Equip_Aim_Cue:SoundNodeWavePlayer_3:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/Goop/Audio/Goop_Equip_Aim_Cue.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "Goop_Equip_Aim_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Items/Goop/Audio/Goop_Equip_Aim_Start_01.Goop_Equip_Aim_Start_01",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "Goop_Equip_Aim_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Items/Goop/Audio/Goop_Equip_Aim_Start_02.Goop_Equip_Aim_Start_02",
+        "SubPathString": ""
+      }
+    }
+  }
+]

@@ -1,0 +1,496 @@
+[
+  {
+    "Type": "Function",
+    "Name": "K2_CommitExecute",
+    "Outer": "GA_Ranged_PastaRipper_Damage_C",
+    "SuperStruct": {
+      "ObjectName": "K2_CommitExecute:Class",
+      "ObjectPath": 0
+    },
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetEventData_GameplayEventData",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 184,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayEventData:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 209848320,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "GetEventData",
+    "Outer": "GA_Ranged_PastaRipper_Damage_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "EventTag",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayTag:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "GameplayEventData",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 184,
+        "PropertyFlags": 384,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayEventData:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "GT_TargetTags",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 32,
+        "PropertyFlags": 5,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayTagContainer:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "GT_InstigatorTags",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 32,
+        "PropertyFlags": 5,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayTagContainer:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOwningActorFromActorInfo_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsFort_Player_State",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortPlayerState:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetCurrentPawn_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortPlayerPawn:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetCurrentSourceWeapon_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortWeapon:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_GameplayEventData",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 184,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayEventData:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetWeaponDataGameplayTags_GameplayTags",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 32,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayTagContainer:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_WeaponDataIsValid_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanAND_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 214040576,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GA_Ranged_PastaRipper_Damage_C",
+    "SuperStruct": {
+      "ObjectName": "FortGameplayAbility_RangedWeapon:Class",
+      "ObjectPath": 0
+    },
+    "Children": [
+      {
+        "ObjectName": "GA_Ranged_PastaRipper_Damage_C:GetEventData:Function",
+        "ObjectPath": "/MotherGameplay/Items/Exotics/PastaRipper/GA_Ranged_PastaRipper_Damage.1"
+      },
+      {
+        "ObjectName": "GA_Ranged_PastaRipper_Damage_C:K2_CommitExecute:Function",
+        "ObjectPath": "/MotherGameplay/Items/Exotics/PastaRipper/GA_Ranged_PastaRipper_Damage.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "GT_EventWeaponFire",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayTag:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "ManualFireEvent",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FuncMap": {
+      "K2_CommitExecute": {
+        "ObjectName": "GA_Ranged_PastaRipper_Damage_C:K2_CommitExecute:Function",
+        "ObjectPath": "/MotherGameplay/Items/Exotics/PastaRipper/GA_Ranged_PastaRipper_Damage.0"
+      },
+      "GetEventData": {
+        "ObjectName": "GA_Ranged_PastaRipper_Damage_C:GetEventData:Function",
+        "ObjectPath": "/MotherGameplay/Items/Exotics/PastaRipper/GA_Ranged_PastaRipper_Damage.1"
+      }
+    },
+    "ClassFlags": 264208,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Engine",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__GA_Ranged_PastaRipper_Damage_C:GA_Ranged_PastaRipper_Damage_C",
+      "ObjectPath": "/MotherGameplay/Items/Exotics/PastaRipper/GA_Ranged_PastaRipper_Damage.3"
+    }
+  },
+  {
+    "Type": "GA_Ranged_PastaRipper_Damage_C",
+    "Name": "Default__GA_Ranged_PastaRipper_Damage_C",
+    "Properties": {
+      "GT_EventWeaponFire": {
+        "TagName": "Event.Weapons.Fire"
+      },
+      "WeaponFireCue": [
+        "GameplayCue.Weapons.Activation"
+      ],
+      "EffectContainers": {
+        "TargetSelection": {
+          "List": [
+            {
+              "Shape": "EFortTargetSelectionShape::Cone",
+              "CustomShapeComponentName": "",
+              "TestType": "EFortTargetSelectionTestType::Overlap",
+              "PrimarySource": "EFortAbilityTargetingSource::PawnForward",
+              "SecondarySource": "EFortAbilityTargetingSource::Max_None",
+              "Range": {
+                "Value": 5000.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": null
+                },
+                "RegistryType": {
+                  "Name": null
+                }
+              },
+              "HalfExtents": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "bAlignShapeEdgeToSourceLocation": false,
+              "ConeYawAngle": {
+                "Value": 1.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": null
+                },
+                "RegistryType": {
+                  "Name": null
+                }
+              },
+              "ConePitchAngle": {
+                "Value": 1.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": null
+                },
+                "RegistryType": {
+                  "Name": null
+                }
+              },
+              "ConeMinRadius": {
+                "Value": 1.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": null
+                },
+                "RegistryType": {
+                  "Name": null
+                }
+              },
+              "TargetFilter": {
+                "ActorTypeFilter": "EFortTargetSelectionFilter::Damageable",
+                "ActorClassFilter": null,
+                "bExcludeInstigator": true,
+                "bUseTrapsOwningPawnAsInstigator": false,
+                "bExcludeRequester": true,
+                "bExcludeAllAttachedToInstigator": false,
+                "bExcludeAthenaVehicleOfInstigator": false,
+                "bExcludeAllAttachedToRequester": false,
+                "bExcludePawnFriends": true,
+                "bExcludeFriendlyAI": false,
+                "bExcludeAllAI": false,
+                "bExcludePawnNeutrals": false,
+                "bExcludePawnEnemies": false,
+                "bExcludeNonPawnFriends": false,
+                "bExcludeNonPawnEnemies": false,
+                "bConsiderFriendlyFireWhenExcludingFriends": false,
+                "bExcludeDBNOPawns": false,
+                "bExcludeWaterVolumes": false,
+                "bExcludeWaterBodies": true,
+                "bExcludeAthenaVehicleOccupiedBySource": true,
+                "bExcludeAthenaVehicleUnoccupied": false,
+                "bExcludeAthenaVehicleOccupied": false,
+                "bExcludeAthenaVehicleFromObstructionChecks": false,
+                "bExcludeWithoutNavigationCorridor": false,
+                "bExcludeNonPlayerBuiltPieces": false,
+                "bExcludePlayerBuiltPieces": false,
+                "bExcludeNonBGABuildings": false,
+                "bExcludeNonBlockingHits": false,
+                "bExcludeProjectiles": false,
+                "bTraceComplexCollision": false,
+                "bExcludeLandscape": true,
+                "bConsiderPhysicsPawnsAsNonPlayerPawns": true,
+                "ExclusionGameplayTags": []
+              },
+              "bExcludeObstructedByWorld": true,
+              "bShouldAttachedActorsObstructTarget": true,
+              "bCreateHitResultWhenNoTargetsFound": false,
+              "bUseProjectileRotationForDamageZones": false,
+              "TargetSelectionUsage": "EFortAbilityTargetSelectionUsage::BothTargetingAndCanHit",
+              "MaxTargets": -1
+            }
+          ],
+          "bUseMaxYawAngleToTarget": true,
+          "MaxYawAngleToTarget": 15.0
+        },
+        "TargetGameplayEffectClasses": [
+          {
+            "ObjectName": "GE_Ranged_PastaRipper_Damage_C:BlueprintGeneratedClass",
+            "ObjectPath": "/MotherGameplay/Items/Exotics/PastaRipper/GE_Ranged_PastaRipper_Damage.0"
+          },
+          {
+            "ObjectName": "GE_Impulse_C:BlueprintGeneratedClass",
+            "ObjectPath": "/Game/Abilities/Weapons/Ranged/GE_Impulse.0"
+          }
+        ],
+        "ImpactCues": [
+          "GameplayCue.Impact.Physical"
+        ]
+      },
+      "AbilityTags": [
+        "Gameplay.Action.Player.Light"
+      ],
+      "ReplicationPolicy": "EGameplayAbilityReplicationPolicy::ReplicateNo",
+      "AbilityTriggers": [
+        {
+          "TriggerTag": {
+            "TagName": null
+          },
+          "TriggerSource": "EGameplayAbilityTriggerSource::OwnedTagAdded"
+        }
+      ],
+      "ActivationOwnedTags": [
+        "Gameplay.Action.Attacking.Ranged"
+      ]
+    }
+  }
+]

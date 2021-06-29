@@ -1,0 +1,72 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "Goop_Prj_InHand_Loop_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "Goop_Prj_InHand_Loop_Cue:SoundNodeMixer_0:SoundNodeMixer",
+        "ObjectPath": "/MotherGameplay/Items/Goop/Audio/Goop_Prj_InHand_Loop_Cue.2"
+      },
+      "VolumeMultiplier": 1.12,
+      "SoundClassObject": {
+        "ObjectName": "Fort_AudioGameplayVolumes:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_AudioGameplayVolumes.0"
+      },
+      "Duration": 10000.0,
+      "MaxDistance": 2100.0,
+      "AttenuationSettings": {
+        "ObjectName": "Fort_Weapon_Reload_Sml_Att:SoundAttenuation",
+        "ObjectPath": "/Game/Sounds/Attenuation/Fort_Weapon_Reload_Sml_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeEnveloper",
+    "Name": "SoundNodeEnveloper_0",
+    "Outer": "Goop_Prj_InHand_Loop_Cue"
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_0",
+    "Outer": "Goop_Prj_InHand_Loop_Cue",
+    "Properties": {
+      "InputVolume": [
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "Goop_Prj_InHand_Loop_Cue:SoundNodeEnveloper_0:SoundNodeEnveloper",
+          "ObjectPath": "/MotherGameplay/Items/Goop/Audio/Goop_Prj_InHand_Loop_Cue.1"
+        },
+        {
+          "ObjectName": "Goop_Prj_InHand_Loop_Cue:SoundNodeWavePlayer_0:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/Goop/Audio/Goop_Prj_InHand_Loop_Cue.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "Goop_Prj_InHand_Loop_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Items/Goop/Audio/Goop_Equip_01.Goop_Equip_01",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_8",
+    "Outer": "Goop_Prj_InHand_Loop_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Items/Goop/Audio/Goop_Equip_FX_Loop.Goop_Equip_FX_Loop",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    }
+  }
+]

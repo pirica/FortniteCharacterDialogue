@@ -1,0 +1,158 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GA_Ranged_Scooter_C",
+    "Super": "GA_Ranged_GenericProjectileImpact_C",
+    "SuperStruct": {
+      "ObjectName": "GA_Ranged_GenericProjectileImpact_C:BlueprintGeneratedClass",
+      "ObjectPath": "/Game/Abilities/Weapons/Ranged/Projectile/GA_Ranged_GenericProjectileImpact.0"
+    },
+    "Children": [],
+    "ChildProperties": [],
+    "FuncMap": {},
+    "ClassFlags": 264208,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Engine",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__GA_Ranged_Scooter_C:GA_Ranged_Scooter_C",
+      "ObjectPath": "/MotherGameplay/Items/Scooter/GA_Ranged_Scooter.1"
+    }
+  },
+  {
+    "Type": "GA_Ranged_Scooter_C",
+    "Name": "Default__GA_Ranged_Scooter_C",
+    "Template": "Default__GA_Ranged_GenericProjectileImpact_C",
+    "Properties": {
+      "EffectContainers": {
+        "TargetSelection": {
+          "List": [
+            {
+              "Shape": "EFortTargetSelectionShape::Cone",
+              "CustomShapeComponentName": "",
+              "TestType": "EFortTargetSelectionTestType::Overlap",
+              "PrimarySource": "EFortAbilityTargetingSource::PawnForward",
+              "SecondarySource": "EFortAbilityTargetingSource::Max_None",
+              "Range": {
+                "Value": 7000.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": null
+                },
+                "RegistryType": {
+                  "Name": null
+                }
+              },
+              "HalfExtents": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "bAlignShapeEdgeToSourceLocation": false,
+              "ConeYawAngle": {
+                "Value": 1.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": null
+                },
+                "RegistryType": {
+                  "Name": null
+                }
+              },
+              "ConePitchAngle": {
+                "Value": 1.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": null
+                },
+                "RegistryType": {
+                  "Name": null
+                }
+              },
+              "ConeMinRadius": {
+                "Value": 1.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": null
+                },
+                "RegistryType": {
+                  "Name": null
+                }
+              },
+              "TargetFilter": {
+                "ActorTypeFilter": "EFortTargetSelectionFilter::Damageable",
+                "ActorClassFilter": null,
+                "bExcludeInstigator": true,
+                "bUseTrapsOwningPawnAsInstigator": false,
+                "bExcludeRequester": true,
+                "bExcludeAllAttachedToInstigator": false,
+                "bExcludeAthenaVehicleOfInstigator": false,
+                "bExcludeAllAttachedToRequester": false,
+                "bExcludePawnFriends": true,
+                "bExcludeFriendlyAI": false,
+                "bExcludeAllAI": false,
+                "bExcludePawnNeutrals": false,
+                "bExcludePawnEnemies": false,
+                "bExcludeNonPawnFriends": false,
+                "bExcludeNonPawnEnemies": false,
+                "bConsiderFriendlyFireWhenExcludingFriends": false,
+                "bExcludeDBNOPawns": false,
+                "bExcludeWaterVolumes": false,
+                "bExcludeWaterBodies": true,
+                "bExcludeAthenaVehicleOccupiedBySource": true,
+                "bExcludeAthenaVehicleUnoccupied": false,
+                "bExcludeAthenaVehicleOccupied": false,
+                "bExcludeAthenaVehicleFromObstructionChecks": false,
+                "bExcludeWithoutNavigationCorridor": false,
+                "bExcludeNonPlayerBuiltPieces": false,
+                "bExcludePlayerBuiltPieces": false,
+                "bExcludeNonBGABuildings": false,
+                "bExcludeNonBlockingHits": false,
+                "bExcludeProjectiles": false,
+                "bTraceComplexCollision": false,
+                "bExcludeLandscape": true,
+                "bConsiderPhysicsPawnsAsNonPlayerPawns": true,
+                "ExclusionGameplayTags": []
+              },
+              "bExcludeObstructedByWorld": true,
+              "bShouldAttachedActorsObstructTarget": true,
+              "bCreateHitResultWhenNoTargetsFound": false,
+              "bUseProjectileRotationForDamageZones": false,
+              "TargetSelectionUsage": "EFortAbilityTargetSelectionUsage::BothTargetingAndCanHit",
+              "MaxTargets": -1
+            }
+          ]
+        },
+        "TargetGameplayEffectClasses": [
+          {
+            "ObjectName": "GE_Athena_Scooter_Damage_Hit_C:BlueprintGeneratedClass",
+            "ObjectPath": "/MotherGameplay/Items/Scooter/GE_Athena_Scooter_Damage_Hit.0"
+          },
+          {
+            "ObjectName": "GE_Athena_Scooter_Knockback_C:BlueprintGeneratedClass",
+            "ObjectPath": "/MotherGameplay/Items/Scooter/GE_Athena_Scooter_Knockback.0"
+          }
+        ],
+        "ImpactCues": [
+          "GameplayCue.Impact.Physical"
+        ]
+      },
+      "EffectContainers": {
+        "ApplicationTag": {
+          "TagName": null
+        },
+        "TargetSelection": {
+          "List": []
+        }
+      },
+      "WeaponTestApplicationTag": {
+        "TagName": null
+      }
+    }
+  }
+]

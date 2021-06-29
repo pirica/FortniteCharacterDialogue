@@ -1,0 +1,100 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "Goop_Enter_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "Goop_Enter_Cue:SoundNodeModulator_0:SoundNodeModulator",
+        "ObjectPath": "/MotherGameplay/Items/Goop/Audio/Goop_Enter_Cue.1"
+      },
+      "VolumeMultiplier": 1.6200001,
+      "SoundClassObject": {
+        "ObjectName": "Fort_AudioGameplayVolumes:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_AudioGameplayVolumes.0"
+      },
+      "bOverrideConcurrency": true,
+      "ConcurrencyOverrides": {
+        "MaxCount": 3,
+        "ResolutionRule": "EMaxConcurrentResolutionRule::StopQuietest"
+      },
+      "Duration": 3.3032708,
+      "MaxDistance": 6300.0,
+      "AttenuationSettings": {
+        "ObjectName": "Fort_Goop_Traversal_Enter_Exit_Att:SoundAttenuation",
+        "ObjectPath": "/MotherGameplay/Items/Goop/Audio/Fort_Goop_Traversal_Enter_Exit_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "Goop_Enter_Cue",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "Goop_Enter_Cue:SoundNodeRandom_0:SoundNodeRandom",
+          "ObjectPath": "/MotherGameplay/Items/Goop/Audio/Goop_Enter_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "Goop_Enter_Cue",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "Goop_Enter_Cue:SoundNodeWavePlayer_0:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/Goop/Audio/Goop_Enter_Cue.3"
+        },
+        {
+          "ObjectName": "Goop_Enter_Cue:SoundNodeWavePlayer_1:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/Goop/Audio/Goop_Enter_Cue.4"
+        },
+        {
+          "ObjectName": "Goop_Enter_Cue:SoundNodeWavePlayer_2:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/Goop/Audio/Goop_Enter_Cue.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "Goop_Enter_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Items/Goop/Audio/Goop_Enter_Whoosh_01.Goop_Enter_Whoosh_01",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "Goop_Enter_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Items/Goop/Audio/Goop_Enter_Whoosh_02.Goop_Enter_Whoosh_02",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "Goop_Enter_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Items/Goop/Audio/Goop_Enter_Whoosh_03.Goop_Enter_Whoosh_03",
+        "SubPathString": ""
+      }
+    }
+  }
+]

@@ -1,0 +1,55 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "Goop_Drop_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "Goop_Drop_Cue:SoundNodeModulator_0:SoundNodeModulator",
+        "ObjectPath": "/MotherGameplay/Items/Goop/Audio/Goop_Drop_Cue.1"
+      },
+      "SoundClassObject": {
+        "ObjectName": "Fort_Searching_Foley:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Searching_Foley.0"
+      },
+      "ConcurrencySet": [
+        {
+          "ObjectName": "Weapon_Drop_StopOldest:SoundConcurrency",
+          "ObjectPath": "/Game/Sounds/Concurrency_Rules/Weapon_Drop_StopOldest.0"
+        }
+      ],
+      "ConcurrencyOverrides": {
+        "ResolutionRule": "EMaxConcurrentResolutionRule::PreventNew"
+      },
+      "Duration": 1.8594375,
+      "MaxDistance": 3200.0,
+      "AttenuationSettings": {
+        "ObjectName": "Fort_Weapon_Drop_Att:SoundAttenuation",
+        "ObjectPath": "/Game/Sounds/Attenuation/Fort_Weapon_Drop_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "Goop_Drop_Cue",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "Goop_Drop_Cue:SoundNodeWavePlayer_1:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/Goop/Audio/Goop_Drop_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "Goop_Drop_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Items/Goop/Audio/Goop_Drop_01.Goop_Drop_01",
+        "SubPathString": ""
+      }
+    }
+  }
+]

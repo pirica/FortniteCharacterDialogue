@@ -1,0 +1,96 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GA_Goop_WithTrajectory_C",
+    "Super": "GA_Athena_TowerGrenadeWithTrajectory_C",
+    "SuperStruct": {
+      "ObjectName": "GA_Athena_TowerGrenadeWithTrajectory_C:BlueprintGeneratedClass",
+      "ObjectPath": "/Game/Athena/Items/Consumables/TowerGrenade/GA_Athena_TowerGrenadeWithTrajectory.8"
+    },
+    "Children": [],
+    "ChildProperties": [],
+    "FuncMap": {},
+    "ClassFlags": 264208,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Engine",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__GA_Goop_WithTrajectory_C:GA_Goop_WithTrajectory_C",
+      "ObjectPath": "/MotherGameplay/Items/Goop/GA_Goop_WithTrajectory.1"
+    }
+  },
+  {
+    "Type": "GA_Goop_WithTrajectory_C",
+    "Name": "Default__GA_Goop_WithTrajectory_C",
+    "Template": "Default__GA_Athena_TowerGrenadeWithTrajectory_C",
+    "Properties": {
+      "Prj_Grenade": {
+        "ObjectName": "Prj_Goop_C:BlueprintGeneratedClass",
+        "ObjectPath": "/MotherGameplay/Items/Goop/Prj_Goop.6"
+      },
+      "AdditionalThrowAngle": 2.0,
+      "GrenadeTargetingOriginOffset": {
+        "X": 12.0,
+        "Y": 20.0,
+        "Z": 70.0
+      },
+      "DummyMaxSpeed": 0.0,
+      "TrajectoryIndicatorClass": {
+        "ObjectName": "BP_Goop_ProjectileTrajectory_SnapToGrid_C:BlueprintGeneratedClass",
+        "ObjectPath": "/MotherGameplay/Items/Goop/BP_Goop_ProjectileTrajectory_SnapToGrid.5"
+      },
+      "ThrowWindupMontage": {
+        "MontageToPlay": {
+          "ObjectName": "GrenadeEmpty_Cook_IntroAnLoop:AnimMontage",
+          "ObjectPath": "/Game/Animation/Game/MainPlayer/Combat/Gadgets/Medium/Male/GrenadeFrag/GrenadeEmpty_Cook_IntroAnLoop.0"
+        }
+      },
+      "QuestCreditTargetTag": [
+        "Athena.Quests.Ability.Thrown",
+        "Item.Consumable.Goop"
+      ],
+      "EffectContainers": {
+        "ApplicationTag": {
+          "TagName": null
+        },
+        "TargetSelection": {
+          "List": [],
+          "bStopAtFirstSuccess": true
+        },
+        "TargetGameplayEffectClasses": []
+      },
+      "EffectContainers": {
+        "TargetSelection": {
+          "List": [],
+          "bStopAtFirstSuccess": true
+        }
+      },
+      "ProjectileClass": null,
+      "DamageStatHandle": {
+        "DataTable": {
+          "ObjectName": "UtilityItemDamage:DataTable",
+          "ObjectPath": "/Game/Balance/DataTables/UtilityItemDamage.0"
+        },
+        "RowName": "Athena_Grenade"
+      },
+      "MontageInfo": {
+        "MontageToPlay": {
+          "ObjectName": "GoopGrenade_Cook_Outro:AnimMontage",
+          "ObjectPath": "/MotherGameplay/Items/Goop/Assets/Animation/GoopGrenade_Cook_Outro.0"
+        }
+      },
+      "AbilityTags": [
+        "Gameplay.DamageSource.Ability",
+        "Abilities.generic.M80",
+        "Gameplay.Action.Player.Medium",
+        "Athena.Quests.Ability.Thrown.ExplosiveGrenade",
+        "Rarity.Common"
+      ]
+    }
+  }
+]

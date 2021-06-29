@@ -1,0 +1,730 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BGA_Athena_AvacadoEater_Deployed_C",
+    "Super": "BGA_Athena_AvacadoEater_Deployed_Parent_C",
+    "Properties": {
+      "bHasCookedComponentInstancingData": true,
+      "SimpleConstructionScript": {
+        "ObjectName": "BGA_Athena_AvacadoEater_Deployed_C:SimpleConstructionScript_0:SimpleConstructionScript",
+        "ObjectPath": "/MotherGameplay/Items/AvacadoEater/BGA_Athena_AvacadoEater_Deployed.6"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "BGA_Athena_AvacadoEater_Deployed_C:InheritableComponentHandler:InheritableComponentHandler",
+        "ObjectPath": "/MotherGameplay/Items/AvacadoEater/BGA_Athena_AvacadoEater_Deployed.3"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BGA_Athena_AvacadoEater_Deployed_Parent_C:BlueprintGeneratedClass",
+      "ObjectPath": "/Game/Athena/Items/Consumables/AvacadoEater/BGA_Athena_AvacadoEater_Deployed_Parent.48"
+    },
+    "Children": [],
+    "ChildProperties": [],
+    "FuncMap": {},
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Game",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__BGA_Athena_AvacadoEater_Deployed_C:BGA_Athena_AvacadoEater_Deployed_C",
+      "ObjectPath": "/MotherGameplay/Items/AvacadoEater/BGA_Athena_AvacadoEater_Deployed.1"
+    }
+  },
+  {
+    "Type": "BGA_Athena_AvacadoEater_Deployed_C",
+    "Name": "Default__BGA_Athena_AvacadoEater_Deployed_C",
+    "Template": "Default__BGA_Athena_AvacadoEater_Deployed_Parent_C",
+    "Properties": {
+      "GC_SpawnDeploy": {
+        "TagName": "GameplayCue.Athena.EnvItem.AvacadoEater.Spawned.Deploy"
+      },
+      "GC_Destroy": {
+        "TagName": "GameplayCue.Athena.EnvItem.AvacadoEater.Destroyed"
+      },
+      "GC_Warning_loop": {
+        "TagName": "GameplayCue.Athena.EnvItem.AvacadoEater.Warning"
+      },
+      "GC_HatchStarted": {
+        "TagName": "GameplayCue.Athena.EnvItem.AvacadoEater.HatchStart"
+      },
+      "GC_HatchSpawned": {
+        "TagName": "GameplayCue.Athena.EnvItem.AvacadoEater.HatchEnd"
+      },
+      "GC_Armed": {
+        "TagName": "GameplayCue.Athena.EnvItem.AvacadoEater.Armed"
+      },
+      "GC_Damage": {
+        "TagName": "GameplayCue.Athena.EnvItem.AvacadoEater.Damaged"
+      },
+      "GC_Pickup": {
+        "TagName": "GameplayCue.Athena.EnvItem.AvacadoEater.Pickup"
+      },
+      "BGAToSpawnOnHatch": {
+        "ObjectName": "BGA_Athena_AvacadoEaterBird_C:BlueprintGeneratedClass",
+        "ObjectPath": "/MotherGameplay/Items/AvacadoEaterBird/BGA_Athena_AvacadoEaterBird.0"
+      },
+      "HatchSpawnDelay": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          },
+          "RowName": "Default.Mother.AvacadoEater.Hatch.SpawnDelay"
+        }
+      },
+      "ArmingDelay": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          }
+        }
+      },
+      "WarningRadius": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          }
+        }
+      },
+      "TriggerRadius": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          }
+        }
+      },
+      "WarningUpdateRate": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          }
+        }
+      },
+      "UseSpeedThreshold?": {
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          }
+        }
+      },
+      "HatchSpeedThreshold": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          }
+        }
+      },
+      "HatchTargetInstigator?": {
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          },
+          "RowName": "Default.Mother.AvacadoEater.Hatch.AutoTargetInstigator.Enabled"
+        }
+      },
+      "ChainReactionEnabled?": {
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          },
+          "RowName": "Default.Mother.AvacadoEater.Hatch.ChainReaction.Enabled"
+        }
+      },
+      "ChainReactionRange": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          },
+          "RowName": "Default.Mother.AvacadoEater.Hatch.ChainReaction.Range"
+        }
+      },
+      "ChainHatchTargetsInstigator?": {
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          },
+          "RowName": "Default.Mother.AvacadoEater.Hatch.ChainReaction.TargetChainInstigator"
+        }
+      },
+      "DeathCancelsHatch?": {
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          },
+          "RowName": "Default.Mother.AvacadoEater.Hatch.DeathCancelsHatch"
+        }
+      },
+      "SafeZoneCheckRate": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          },
+          "RowName": "Default.Mother.AvacadoEater.SafeZoneCheck.UpdateRate"
+        }
+      },
+      "LifetimeOutsideSafeZone": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          },
+          "RowName": "Default.Mother.AvacadoEater.SafeZoneCheck.LifetimeWhenOutside"
+        }
+      },
+      "CanBePickedUp?": {
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          },
+          "RowName": "Default.Mother.AvacadoEater.CanBePickedUp"
+        }
+      },
+      "SpawnPoints": [
+        "Spawnpoint_1",
+        "Spawnpoint_2",
+        "Spawnpoint_3"
+      ],
+      "Tags_IgnoredByAvacadoEater": [
+        "Athena.Gameplay.Status.Hitchhiker",
+        "EnvItem.AvacadoEater",
+        "Item.AvacadoEater",
+        "Granted.Athena.EnvItem.AvacadoEaterBird.ImmunityFromBirds",
+        "Gameplay.Status.DBNO"
+      ],
+      "Debug": true,
+      "AudioVisual Indicator Icon": {
+        "ObjectName": "AV_32_AvocadoEater:Texture2D",
+        "ObjectPath": "/MotherGameplay/UI/Icons/AV_32_AvocadoEater.0"
+      },
+      "Post Hatch Destroy Delay": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          },
+          "RowName": "Default.Mother.AvacadoEater.Hatch.PostHatchDestroyDelay"
+        }
+      },
+      "MarkerDisplay": {
+        "DisplayName": {
+          "Namespace": "",
+          "Key": "23C2B0064B93628FE68A6CA46969BE58",
+          "SourceString": "Alien Egg"
+        },
+        "Icon": {
+          "AssetPathName": "/MotherGameplay/Icons/T-T-Icon-BR-AvacadoEater.T-T-Icon-BR-AvacadoEater",
+          "SubPathString": ""
+        }
+      },
+      "AttributeInitKeys": {
+        "AttributeInitCategory": "AvacadoEaterDeployed"
+      },
+      "AttributeInitKeys": {
+        "AttributeInitCategory": "AvacadoEaterDeployed"
+      },
+      "StaticGameplayTags": [
+        "EnvItem.AvacadoEater",
+        "Building.Type.GameplayItem"
+      ],
+      "InteractionSpeed": {
+        "CurveTable": {
+          "ObjectName": "MotherGameData:CurveTable",
+          "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+        },
+        "RowName": "Default.Mother.AvacadoEater.PickupInteractionTime"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "AmbientSound_GEN_VARIABLE",
+    "Outer": "BGA_Athena_AvacadoEater_Deployed_C",
+    "Template": "AmbientSound_GEN_VARIABLE",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "AvacadoEater_AmbientLoop_Deployed_Cue:SoundCue",
+        "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_AmbientLoop_Deployed_Cue.0"
+      }
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "BGA_Athena_AvacadoEater_Deployed_C",
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "AudioComponent:Class",
+            "ObjectPath": 0
+          },
+          "ComponentTemplate": {
+            "ObjectName": "BGA_Athena_AvacadoEater_Deployed_C:AmbientSound_GEN_VARIABLE:AudioComponent",
+            "ObjectPath": "/MotherGameplay/Items/AvacadoEater/BGA_Athena_AvacadoEater_Deployed.2"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BGA_Athena_AvacadoEater_Deployed_Parent_C:BlueprintGeneratedClass",
+              "ObjectPath": "/Game/Athena/Items/Consumables/AvacadoEater/BGA_Athena_AvacadoEater_Deployed_Parent.48"
+            },
+            "SCSVariableName": "AmbientSound",
+            "AssociatedGuid": "81A55534-409AEA65-9BE65C8E-2B3283DF"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [
+              {
+                "PropertyName": "Sound",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "AudioComponent:Class",
+                  "ObjectPath": 0
+                }
+              }
+            ],
+            "bHasValidCookedData": true
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "StaticMeshComponent:Class",
+            "ObjectPath": 0
+          },
+          "ComponentTemplate": {
+            "ObjectName": "BGA_Athena_AvacadoEater_Deployed_C:StaticMesh_GEN_VARIABLE:StaticMeshComponent",
+            "ObjectPath": "/MotherGameplay/Items/AvacadoEater/BGA_Athena_AvacadoEater_Deployed.8"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BGA_Athena_AvacadoEater_Deployed_Parent_C:BlueprintGeneratedClass",
+              "ObjectPath": "/Game/Athena/Items/Consumables/AvacadoEater/BGA_Athena_AvacadoEater_Deployed_Parent.48"
+            },
+            "SCSVariableName": "StaticMesh",
+            "AssociatedGuid": "D64044B2-4A859785-9DC5889A-22C153D5"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [
+              {
+                "PropertyName": "StaticMesh",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "StaticMeshComponent:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "OverrideMaterials",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "StaticMeshComponent:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": null,
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "StaticMeshComponent:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "bGenerateOverlapEvents",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "StaticMeshComponent:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "BodyInstance",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "StaticMeshComponent:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "ObjectType",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "BodyInstance:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "CollisionEnabled",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "BodyInstance:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "bNotifyRigidBodyCollision",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "BodyInstance:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "CollisionProfileName",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "BodyInstance:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "CollisionResponses",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "BodyInstance:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "ResponseArray",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "CollisionResponse:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "ResponseArray",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "CollisionResponse:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "Channel",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ResponseChannel:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "ResponseArray",
+                "ArrayIndex": 1,
+                "PropertyScope": {
+                  "ObjectName": "CollisionResponse:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "Channel",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ResponseChannel:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "Response",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ResponseChannel:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "ResponseArray",
+                "ArrayIndex": 2,
+                "PropertyScope": {
+                  "ObjectName": "CollisionResponse:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "Channel",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ResponseChannel:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "ResponseArray",
+                "ArrayIndex": 3,
+                "PropertyScope": {
+                  "ObjectName": "CollisionResponse:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "Channel",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ResponseChannel:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "ResponseArray",
+                "ArrayIndex": 4,
+                "PropertyScope": {
+                  "ObjectName": "CollisionResponse:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "Channel",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ResponseChannel:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "ResponseArray",
+                "ArrayIndex": 5,
+                "PropertyScope": {
+                  "ObjectName": "CollisionResponse:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "Channel",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ResponseChannel:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "ResponseArray",
+                "ArrayIndex": 6,
+                "PropertyScope": {
+                  "ObjectName": "CollisionResponse:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "Channel",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ResponseChannel:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "ResponseArray",
+                "ArrayIndex": 7,
+                "PropertyScope": {
+                  "ObjectName": "CollisionResponse:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "Channel",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "ResponseChannel:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": null,
+                "ArrayIndex": 8,
+                "PropertyScope": {
+                  "ObjectName": "CollisionResponse:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "bCanEverAffectNavigation",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "StaticMeshComponent:Class",
+                  "ObjectPath": 0
+                }
+              }
+            ],
+            "bHasValidCookedData": true
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "StaticMeshComponent:Class",
+            "ObjectPath": 0
+          },
+          "ComponentTemplate": {
+            "ObjectName": "BGA_Athena_AvacadoEater_Deployed_C:Parasite_GEN_VARIABLE:StaticMeshComponent",
+            "ObjectPath": "/MotherGameplay/Items/AvacadoEater/BGA_Athena_AvacadoEater_Deployed.7"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BGA_Athena_AvacadoEater_Deployed_Parent_C:BlueprintGeneratedClass",
+              "ObjectPath": "/Game/Athena/Items/Consumables/AvacadoEater/BGA_Athena_AvacadoEater_Deployed_Parent.48"
+            },
+            "SCSVariableName": "Parasite",
+            "AssociatedGuid": "AE6456BB-46AB7CB6-02894895-0DA23E97"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [
+              {
+                "PropertyName": "StaticMesh",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "StaticMeshComponent:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "RelativeLocation",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "StaticMeshComponent:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "X",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Vector:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "Z",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Vector:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "RelativeRotation",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "StaticMeshComponent:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "Yaw",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Rotator:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "bAbsoluteRotation",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "StaticMeshComponent:Class",
+                  "ObjectPath": 0
+                }
+              }
+            ],
+            "bHasValidCookedData": true
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BGA_Athena_AvacadoEater_Deployed_C"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "SceneComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BGA_Athena_AvacadoEater_Deployed_C:DefaultSceneRoot_GEN_VARIABLE:SceneComponent",
+        "ObjectPath": "/MotherGameplay/Items/AvacadoEater/BGA_Athena_AvacadoEater_Deployed.4"
+      },
+      "VariableGuid": "6889DFED-446762D3-4CC0C28E-F06B5946",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BGA_Athena_AvacadoEater_Deployed_C",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SimpleConstructionScript_0:SCS_Node_0:SCS_Node",
+        "ObjectPath": "/MotherGameplay/Items/AvacadoEater/BGA_Athena_AvacadoEater_Deployed.5"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Parasite_GEN_VARIABLE",
+    "Outer": "BGA_Athena_AvacadoEater_Deployed_C",
+    "Template": "Parasite_GEN_VARIABLE",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "AvocadoParasite:StaticMesh",
+        "ObjectPath": "/MotherGameplay/Items/AvacadoEater/Assets/Meshes/AvocadoParasite.1"
+      },
+      "RelativeLocation": {
+        "X": -0.8847809,
+        "Y": 0.0,
+        "Z": 37.499985
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -3.0517578E-05,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMesh_GEN_VARIABLE",
+    "Outer": "BGA_Athena_AvacadoEater_Deployed_C",
+    "Template": "StaticMesh_GEN_VARIABLE",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "Avocado_Eater_Transparent:StaticMesh",
+        "ObjectPath": "/MotherGameplay/Items/AvacadoEater/Assets/Meshes/Avocado_Eater_Transparent.1"
+      },
+      "OverrideMaterials": [
+        null
+      ]
+    }
+  }
+]

@@ -1,0 +1,54 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "ReactorGrade_Pickup_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "ReactorGrade_Pickup_Cue:SoundNodeModulator_1:SoundNodeModulator",
+        "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Pickup_Cue.1"
+      },
+      "VolumeMultiplier": 1.25,
+      "SoundClassObject": {
+        "ObjectName": "Fort_Player_Loot_High_PSM:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Player_Loot_High_PSM.0"
+      },
+      "bOverrideConcurrency": true,
+      "ConcurrencyOverrides": {
+        "MaxCount": 1,
+        "ResolutionRule": "EMaxConcurrentResolutionRule::PreventNew"
+      },
+      "Duration": 0.8401875,
+      "MaxDistance": 1512.0,
+      "AttenuationSettings": {
+        "ObjectName": "Fort_Weapon_Pickup_Att:SoundAttenuation",
+        "ObjectPath": "/Game/Sounds/Attenuation/Fort_Weapon_Pickup_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_1",
+    "Outer": "ReactorGrade_Pickup_Cue",
+    "Properties": {
+      "VolumeMin": 1.8,
+      "VolumeMax": 2.0,
+      "ChildNodes": [
+        {
+          "ObjectName": "ReactorGrade_Pickup_Cue:SoundNodeWavePlayer_2:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Pickup_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "ReactorGrade_Pickup_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_Weapons/SniperRifles/MilitarySniper/MilitarySniper_Pickup_01.MilitarySniper_Pickup_01",
+        "SubPathString": ""
+      }
+    }
+  }
+]

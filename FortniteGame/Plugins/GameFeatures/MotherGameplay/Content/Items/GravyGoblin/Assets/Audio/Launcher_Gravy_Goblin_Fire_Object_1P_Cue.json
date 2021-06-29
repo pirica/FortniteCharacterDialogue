@@ -1,0 +1,96 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "Launcher_Gravy_Goblin_Fire_Object_1P_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "Launcher_Gravy_Goblin_Fire_Object_1P_Cue:SoundNodeModulator_1:SoundNodeModulator",
+        "ObjectPath": "/MotherGameplay/Items/GravyGoblin/Assets/Audio/Launcher_Gravy_Goblin_Fire_Object_1P_Cue.1"
+      },
+      "VolumeMultiplier": 0.95,
+      "SoundClassObject": {
+        "ObjectName": "Fort_Weapon_Projectile_FirstPerson_PSM:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Weapon_Projectile_FirstPerson_PSM.0"
+      },
+      "Duration": 4.760958,
+      "MaxDistance": 2097152.0,
+      "AttenuationSettings": {
+        "ObjectName": "Fort_Weapon_Projectile_FirstPerson_Athena_Att:SoundAttenuation",
+        "ObjectPath": "/Game/Sounds/Attenuation/Fort_Weapon_Projectile_FirstPerson_Athena_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_1",
+    "Outer": "Launcher_Gravy_Goblin_Fire_Object_1P_Cue",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "Launcher_Gravy_Goblin_Fire_Object_1P_Cue:SoundNodeRandom_1:SoundNodeRandom",
+          "ObjectPath": "/MotherGameplay/Items/GravyGoblin/Assets/Audio/Launcher_Gravy_Goblin_Fire_Object_1P_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_1",
+    "Outer": "Launcher_Gravy_Goblin_Fire_Object_1P_Cue",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bShouldExcludeFromBranchCulling": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "Launcher_Gravy_Goblin_Fire_Object_1P_Cue:SoundNodeWavePlayer_4:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/GravyGoblin/Assets/Audio/Launcher_Gravy_Goblin_Fire_Object_1P_Cue.3"
+        },
+        {
+          "ObjectName": "Launcher_Gravy_Goblin_Fire_Object_1P_Cue:SoundNodeWavePlayer_5:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/GravyGoblin/Assets/Audio/Launcher_Gravy_Goblin_Fire_Object_1P_Cue.4"
+        },
+        {
+          "ObjectName": "Launcher_Gravy_Goblin_Fire_Object_1P_Cue:SoundNodeWavePlayer_6:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/GravyGoblin/Assets/Audio/Launcher_Gravy_Goblin_Fire_Object_1P_Cue.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_4",
+    "Outer": "Launcher_Gravy_Goblin_Fire_Object_1P_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Items/GravyGoblin/Assets/Audio/Launcher_Gravy_Goblin_Fire_Object_Close_01.Launcher_Gravy_Goblin_Fire_Object_Close_01",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_5",
+    "Outer": "Launcher_Gravy_Goblin_Fire_Object_1P_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Items/GravyGoblin/Assets/Audio/Launcher_Gravy_Goblin_Fire_Object_Close_02.Launcher_Gravy_Goblin_Fire_Object_Close_02",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_6",
+    "Outer": "Launcher_Gravy_Goblin_Fire_Object_1P_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Items/GravyGoblin/Assets/Audio/Launcher_Gravy_Goblin_Fire_Object_Close_03.Launcher_Gravy_Goblin_Fire_Object_Close_03",
+        "SubPathString": ""
+      }
+    }
+  }
+]

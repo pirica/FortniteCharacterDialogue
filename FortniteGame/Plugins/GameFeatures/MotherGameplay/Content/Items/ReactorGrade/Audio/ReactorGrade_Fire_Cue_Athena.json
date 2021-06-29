@@ -1,0 +1,586 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "ReactorGrade_Fire_Cue_Athena",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "ReactorGrade_Fire_Cue_Athena:SoundNodeDelay_0:SoundNodeDelay",
+        "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Cue_Athena.4"
+      },
+      "VolumeMultiplier": 1.25,
+      "AttenuationOverrides": {
+        "DistanceAlgorithm": "EAttenuationDistanceModel::NaturalSound",
+        "AttenuationShapeExtents": {
+          "X": 1000.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 4000.0
+      },
+      "SoundClassObject": null,
+      "bHasDelayNode": true,
+      "ConcurrencySet": [
+        {
+          "ObjectName": "Weapon_Gunfire_Local_Conc:SoundConcurrency",
+          "ObjectPath": "/Game/Sounds/Concurrency_Rules/Weapon_Gunfire_Local_Conc.0"
+        },
+        {
+          "ObjectName": "Weapon_Gunfire_Global_Conc:SoundConcurrency",
+          "ObjectPath": "/Game/Sounds/Concurrency_Rules/Weapon_Gunfire_Global_Conc.0"
+        }
+      ],
+      "ConcurrencyOverrides": {
+        "ResolutionRule": "EMaxConcurrentResolutionRule::PreventNew"
+      },
+      "Duration": 7.716646,
+      "MaxDistance": 28000.0
+    }
+  },
+  {
+    "Type": "SoundNodeAttenuation",
+    "Name": "SoundNodeAttenuation_80",
+    "Outer": "ReactorGrade_Fire_Cue_Athena",
+    "Properties": {
+      "AttenuationSettings": {
+        "ObjectName": "Fort_ReactorGrade_Sml_Att:SoundAttenuation",
+        "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/Fort_ReactorGrade_Sml_Att.0"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "ReactorGrade_Fire_Cue_Athena:SoundNodeModulator_0:SoundNodeModulator",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Cue_Athena.11"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeAttenuation",
+    "Name": "SoundNodeAttenuation_81",
+    "Outer": "ReactorGrade_Fire_Cue_Athena",
+    "Properties": {
+      "AttenuationSettings": {
+        "ObjectName": "Fort_ReactorGrade_Projectile_Medium_Att:SoundAttenuation",
+        "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/Fort_ReactorGrade_Projectile_Medium_Att.0"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "ReactorGrade_Fire_Cue_Athena:SoundNodeModulator_13:SoundNodeModulator",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Cue_Athena.13"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeAttenuation",
+    "Name": "SoundNodeAttenuation_82",
+    "Outer": "ReactorGrade_Fire_Cue_Athena",
+    "Properties": {
+      "AttenuationSettings": {
+        "ObjectName": "Fort_ReactorGrade_Projectile_Distant_Att:SoundAttenuation",
+        "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/Fort_ReactorGrade_Projectile_Distant_Att.0"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "ReactorGrade_Fire_Cue_Athena:SoundNodeModulator_1:SoundNodeModulator",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Cue_Athena.12"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_0",
+    "Outer": "ReactorGrade_Fire_Cue_Athena",
+    "Properties": {
+      "DelayMin": 0.05,
+      "DelayMax": 0.05,
+      "ChildNodes": [
+        {
+          "ObjectName": "ReactorGrade_Fire_Cue_Athena:SoundNodeMixer_15:SoundNodeMixer",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Cue_Athena.8"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeDistanceCrossFade",
+    "Name": "SoundNodeDistanceCrossFade_25",
+    "Outer": "ReactorGrade_Fire_Cue_Athena",
+    "Properties": {
+      "CrossFadeInput": [
+        {
+          "FadeInDistanceStart": 3000.0,
+          "FadeInDistanceEnd": 4000.0,
+          "FadeOutDistanceStart": 5000.0,
+          "FadeOutDistanceEnd": 7000.0,
+          "Volume": 1.0
+        },
+        {
+          "FadeInDistanceStart": 5000.0,
+          "FadeInDistanceEnd": 8000.0,
+          "FadeOutDistanceStart": 20000.0,
+          "FadeOutDistanceEnd": 25000.0,
+          "Volume": 1.0
+        }
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "ReactorGrade_Fire_Cue_Athena:SoundNodeAttenuation_81:SoundNodeAttenuation",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Cue_Athena.2"
+        },
+        {
+          "ObjectName": "ReactorGrade_Fire_Cue_Athena:SoundNodeAttenuation_82:SoundNodeAttenuation",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Cue_Athena.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_0",
+    "Outer": "ReactorGrade_Fire_Cue_Athena",
+    "Properties": {
+      "InputVolume": [
+        4.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "ReactorGrade_Fire_Cue_Athena:SoundNodeRandom_0:SoundNodeRandom",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Cue_Athena.17"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_1",
+    "Outer": "ReactorGrade_Fire_Cue_Athena",
+    "Properties": {
+      "InputVolume": [
+        2.25
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "ReactorGrade_Fire_Cue_Athena:SoundNodeRandom_1:SoundNodeRandom",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Cue_Athena.18"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_15",
+    "Outer": "ReactorGrade_Fire_Cue_Athena",
+    "Properties": {
+      "InputVolume": [
+        1.3,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "ReactorGrade_Fire_Cue_Athena:SoundNodeSoundClass_55:SoundNodeSoundClass",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Cue_Athena.20"
+        },
+        {
+          "ObjectName": "ReactorGrade_Fire_Cue_Athena:SoundNodeSoundClass_56:SoundNodeSoundClass",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Cue_Athena.21"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_3",
+    "Outer": "ReactorGrade_Fire_Cue_Athena",
+    "Properties": {
+      "InputVolume": [
+        4.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "ReactorGrade_Fire_Cue_Athena:SoundNodeWavePlayer_11:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Cue_Athena.25"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_4",
+    "Outer": "ReactorGrade_Fire_Cue_Athena",
+    "Properties": {
+      "InputVolume": [
+        4.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "ReactorGrade_Fire_Cue_Athena:SoundNodeWavePlayer_3:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Cue_Athena.27"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "ReactorGrade_Fire_Cue_Athena",
+    "Properties": {
+      "PitchMin": 1.0,
+      "VolumeMin": 1.0,
+      "VolumeMax": 1.0,
+      "ChildNodes": [
+        {
+          "ObjectName": "ReactorGrade_Fire_Cue_Athena:SoundNodeQualityLevel_0:SoundNodeQualityLevel",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Cue_Athena.14"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_1",
+    "Outer": "ReactorGrade_Fire_Cue_Athena",
+    "Properties": {
+      "VolumeMin": 0.7,
+      "VolumeMax": 0.7,
+      "ChildNodes": [
+        {
+          "ObjectName": "ReactorGrade_Fire_Cue_Athena:SoundNodeQualityLevel_3:SoundNodeQualityLevel",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Cue_Athena.15"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_13",
+    "Outer": "ReactorGrade_Fire_Cue_Athena",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "ReactorGrade_Fire_Cue_Athena:SoundNodeQualityLevel_4:SoundNodeQualityLevel",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Cue_Athena.16"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeQualityLevel",
+    "Name": "SoundNodeQualityLevel_0",
+    "Outer": "ReactorGrade_Fire_Cue_Athena",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "ReactorGrade_Fire_Cue_Athena:SoundNodeRandom_2:SoundNodeRandom",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Cue_Athena.19"
+        },
+        {
+          "ObjectName": "ReactorGrade_Fire_Cue_Athena:SoundNodeRandom_2:SoundNodeRandom",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Cue_Athena.19"
+        },
+        {
+          "ObjectName": "ReactorGrade_Fire_Cue_Athena:SoundNodeWavePlayer_10:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Cue_Athena.24"
+        },
+        {
+          "ObjectName": "ReactorGrade_Fire_Cue_Athena:SoundNodeWavePlayer_10:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Cue_Athena.24"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeQualityLevel",
+    "Name": "SoundNodeQualityLevel_3",
+    "Outer": "ReactorGrade_Fire_Cue_Athena",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "ReactorGrade_Fire_Cue_Athena:SoundNodeMixer_1:SoundNodeMixer",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Cue_Athena.7"
+        },
+        {
+          "ObjectName": "ReactorGrade_Fire_Cue_Athena:SoundNodeMixer_1:SoundNodeMixer",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Cue_Athena.7"
+        },
+        {
+          "ObjectName": "ReactorGrade_Fire_Cue_Athena:SoundNodeMixer_3:SoundNodeMixer",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Cue_Athena.9"
+        },
+        {
+          "ObjectName": "ReactorGrade_Fire_Cue_Athena:SoundNodeMixer_3:SoundNodeMixer",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Cue_Athena.9"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeQualityLevel",
+    "Name": "SoundNodeQualityLevel_4",
+    "Outer": "ReactorGrade_Fire_Cue_Athena",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "ReactorGrade_Fire_Cue_Athena:SoundNodeMixer_0:SoundNodeMixer",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Cue_Athena.6"
+        },
+        {
+          "ObjectName": "ReactorGrade_Fire_Cue_Athena:SoundNodeMixer_0:SoundNodeMixer",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Cue_Athena.6"
+        },
+        {
+          "ObjectName": "ReactorGrade_Fire_Cue_Athena:SoundNodeMixer_4:SoundNodeMixer",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Cue_Athena.10"
+        },
+        {
+          "ObjectName": "ReactorGrade_Fire_Cue_Athena:SoundNodeMixer_4:SoundNodeMixer",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Cue_Athena.10"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "ReactorGrade_Fire_Cue_Athena",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "ReactorGrade_Fire_Cue_Athena:SoundNodeWavePlayer_0:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Cue_Athena.22"
+        },
+        {
+          "ObjectName": "ReactorGrade_Fire_Cue_Athena:SoundNodeWavePlayer_1:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Cue_Athena.23"
+        },
+        {
+          "ObjectName": "ReactorGrade_Fire_Cue_Athena:SoundNodeWavePlayer_2:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Cue_Athena.26"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_1",
+    "Outer": "ReactorGrade_Fire_Cue_Athena",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "ReactorGrade_Fire_Cue_Athena:SoundNodeWavePlayer_5:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Cue_Athena.29"
+        },
+        {
+          "ObjectName": "ReactorGrade_Fire_Cue_Athena:SoundNodeWavePlayer_6:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Cue_Athena.30"
+        },
+        {
+          "ObjectName": "ReactorGrade_Fire_Cue_Athena:SoundNodeWavePlayer_7:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Cue_Athena.31"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_2",
+    "Outer": "ReactorGrade_Fire_Cue_Athena",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "ReactorGrade_Fire_Cue_Athena:SoundNodeWavePlayer_4:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Cue_Athena.28"
+        },
+        {
+          "ObjectName": "ReactorGrade_Fire_Cue_Athena:SoundNodeWavePlayer_8:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Cue_Athena.32"
+        },
+        {
+          "ObjectName": "ReactorGrade_Fire_Cue_Athena:SoundNodeWavePlayer_9:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Cue_Athena.33"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeSoundClass",
+    "Name": "SoundNodeSoundClass_55",
+    "Outer": "ReactorGrade_Fire_Cue_Athena",
+    "Properties": {
+      "SoundClassOverride": {
+        "ObjectName": "Fort_Weapon_Projectile_PSM:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Weapon_Projectile_PSM.0"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "ReactorGrade_Fire_Cue_Athena:SoundNodeAttenuation_80:SoundNodeAttenuation",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Cue_Athena.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeSoundClass",
+    "Name": "SoundNodeSoundClass_56",
+    "Outer": "ReactorGrade_Fire_Cue_Athena",
+    "Properties": {
+      "SoundClassOverride": {
+        "ObjectName": "Fort_Weapon_Projectile_Distant:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Weapon_Projectile_Distant.0"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "ReactorGrade_Fire_Cue_Athena:SoundNodeDistanceCrossFade_25:SoundNodeDistanceCrossFade",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Cue_Athena.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "ReactorGrade_Fire_Cue_Athena",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Medium_01.ReactorGrade_Fire_Medium_01",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "ReactorGrade_Fire_Cue_Athena",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Medium_02.ReactorGrade_Fire_Medium_02",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_10",
+    "Outer": "ReactorGrade_Fire_Cue_Athena",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Close_02.ReactorGrade_Fire_Close_02",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_11",
+    "Outer": "ReactorGrade_Fire_Cue_Athena",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Distant_01.ReactorGrade_Fire_Distant_01",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "ReactorGrade_Fire_Cue_Athena",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Medium_03.ReactorGrade_Fire_Medium_03",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "ReactorGrade_Fire_Cue_Athena",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Medium_02.ReactorGrade_Fire_Medium_02",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_4",
+    "Outer": "ReactorGrade_Fire_Cue_Athena",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Close_01.ReactorGrade_Fire_Close_01",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_5",
+    "Outer": "ReactorGrade_Fire_Cue_Athena",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Distant_01.ReactorGrade_Fire_Distant_01",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_6",
+    "Outer": "ReactorGrade_Fire_Cue_Athena",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Distant_02.ReactorGrade_Fire_Distant_02",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_7",
+    "Outer": "ReactorGrade_Fire_Cue_Athena",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Distant_03.ReactorGrade_Fire_Distant_03",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_8",
+    "Outer": "ReactorGrade_Fire_Cue_Athena",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Close_02.ReactorGrade_Fire_Close_02",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_9",
+    "Outer": "ReactorGrade_Fire_Cue_Athena",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Fire_Close_03.ReactorGrade_Fire_Close_03",
+        "SubPathString": ""
+      }
+    }
+  }
+]

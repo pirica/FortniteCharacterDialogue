@@ -1,0 +1,4839 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BGA_Athena_Scooter",
+    "Outer": "BGA_Athena_Scooter_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_CanUseComponentIndicators_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetPlayerController_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "PlayerController:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsDedicatedServer_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetFortPlayerControllerFromActor_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortPlayerController:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsAthena_Player_Controller",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Athena_PlayerController_C:BlueprintGeneratedClass",
+          "ObjectPath": "/Game/Athena/Athena_PlayerController.25"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetTimer_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "TimerHandle:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_Hit",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 144,
+        "PropertyFlags": 549755813890,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "HitResult:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_Damage_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_DamageTags_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 32,
+        "PropertyFlags": 2,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayTagContainer:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_Momentum_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_HitInfo_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 144,
+        "PropertyFlags": 549755813890,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "HitResult:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_InstigatedBy_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Controller:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_DamageCauser_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_EffectContext_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 24,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayEffectContextHandle:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_Damage",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_DamageTags",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 32,
+        "PropertyFlags": 2,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayTagContainer:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_Momentum",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_HitInfo",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 144,
+        "PropertyFlags": 549755813890,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "HitResult:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_InstigatedBy",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortPawn:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_DamageCauser",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_EffectContext",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 24,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayEffectContextHandle:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetLifeSpan_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Multiply_FloatFloat_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetPlayerController_ReturnValue_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "PlayerController:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_OnSameTeam_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_SelectColor_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "LinearColor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnSoundAttached_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "AudioComponent:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Conv_LinearColorToVector_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_GetAttachedActors_OutActors",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 134217728,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "CallFunc_GetAttachedActors_OutActors",
+          "Flags": 1,
+          "ArrayDim": 1,
+          "ElementSize": 8,
+          "PropertyFlags": 0,
+          "RepIndex": 0,
+          "RepNotifyFunc": "None",
+          "BlueprintReplicationCondition": "COND_None",
+          "PropertyClass": {
+            "ObjectName": "Actor:Class",
+            "ObjectPath": 0
+          }
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_LastIndex_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 20,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "SignatureFunction": {
+          "ObjectName": "TimerDynamicDelegate__DelegateSignature:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "TimerHandle:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_OnSameTeam_ReturnValue_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "CallFunc_GetMarkerDisplayTeam_Team",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Enum": null
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_SelectColor_ReturnValue_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "LinearColor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsB_Athena_Lotus_Scooter_Weap",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "B_Athena_Lotus_Scooter_Weap_C:BlueprintGeneratedClass",
+          "ObjectPath": "/Game/Athena/Items/Gameplay/Lotus/Scooter/B_Athena_Lotus_Scooter_Weap.7"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 20,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "SignatureFunction": {
+          "ObjectName": "OnIndicatedActorAdded__DelegateSignature:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_2",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 20,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "SignatureFunction": {
+          "ObjectName": "OnIndicatedActorRemoved__DelegateSignature:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 8421377,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "Start Pulse Markers",
+    "Outer": "BGA_Athena_Scooter_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 201326592,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "Ready",
+    "Outer": "BGA_Athena_Scooter_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 201326592,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "NearDeathFx",
+    "Outer": "BGA_Athena_Scooter_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 201343168,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "OnDeathPlayEffects",
+    "Outer": "BGA_Athena_Scooter_C",
+    "SuperStruct": {
+      "ObjectName": "OnDeathPlayEffects:Class",
+      "ObjectPath": 0
+    },
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "Damage",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "DamageTags",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 32,
+        "PropertyFlags": 134218134,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayTagContainer:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Momentum",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "HitInfo",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 144,
+        "PropertyFlags": 549890032022,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "HitResult:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "InstigatedBy",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortPawn:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DamageCauser",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "EffectContext",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 24,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayEffectContextHandle:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 138545160,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "OnDeathServer",
+    "Outer": "BGA_Athena_Scooter_C",
+    "SuperStruct": {
+      "ObjectName": "OnDeathServer:Class",
+      "ObjectPath": 0
+    },
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "Damage",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "DamageTags",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 32,
+        "PropertyFlags": 134218134,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayTagContainer:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Momentum",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "HitInfo",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 144,
+        "PropertyFlags": 549890032022,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "HitResult:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "InstigatedBy",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Controller:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DamageCauser",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "EffectContext",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 24,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayEffectContextHandle:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 138545156,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "OnStop_1",
+    "Outer": "BGA_Athena_Scooter_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "Hit",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 144,
+        "PropertyFlags": 549890032022,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "HitResult:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 205520896,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "Event_Building_Actor_Destroyed",
+    "Outer": "BGA_Athena_Scooter_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 201457664,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "BGA_Athena_Scooter_C",
+    "SuperStruct": {
+      "ObjectName": "ReceiveBeginPlay:Class",
+      "ObjectPath": 0
+    },
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 134744064,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "UserConstructionScript",
+    "Outer": "BGA_Athena_Scooter_C",
+    "SuperStruct": {
+      "ObjectName": "UserConstructionScript:Class",
+      "ObjectPath": 0
+    },
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsDedicatedServer_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 201459712,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "CreateModifiedIndicatedActorFilter",
+    "Outer": "BGA_Athena_Scooter_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "NewParam",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 472,
+        "PropertyFlags": 549755814036,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "IndicatedActorDataWithFilter:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "NewParam1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 472,
+        "PropertyFlags": 549755814272,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "IndicatedActorDataWithFilter:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Temp_object_Variable",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "SoundBase:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_StrStr_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Temp_struct_Variable",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 56,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "IndicatedActorParticleSystemData:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "CallFunc_GetMarkerDisplayTeam_Team",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Enum": null
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetValueAtLevel_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetValueAtLevel_ReturnValue_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetValueAtLevel_ReturnValue_2",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsB_Athena_Lotus_Scooter_Weap",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "B_Athena_Lotus_Scooter_Weap_C:BlueprintGeneratedClass",
+          "ObjectPath": "/Game/Athena/Items/Gameplay/Lotus/Scooter/B_Athena_Lotus_Scooter_Weap.7"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 20,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "SignatureFunction": {
+          "ObjectName": "OnIndicatedActorRemoved__DelegateSignature:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_StenciledActorData",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 128,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "StenciledActorData:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 20,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "SignatureFunction": {
+          "ObjectName": "OnIndicatedActorAdded__DelegateSignature:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "SoundBase:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeIndicatedActorParticleSystemData_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 56,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "IndicatedActorParticleSystemData:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Select_Default_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 56,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "IndicatedActorParticleSystemData:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_IndicatedActorData",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 192,
+        "PropertyFlags": 549755813888,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "IndicatedActorData:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_IndicatedActorDataWithFilter",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 472,
+        "PropertyFlags": 549755813888,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "IndicatedActorDataWithFilter:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 482476032,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "PulseMarkers",
+    "Outer": "BGA_Athena_Scooter_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "ArrayProperty",
+        "Name": "ActorFilters",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 549755813893,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "ActorFilters",
+          "Flags": 1,
+          "ArrayDim": 1,
+          "ElementSize": 472,
+          "PropertyFlags": 549755813888,
+          "RepIndex": 0,
+          "RepNotifyFunc": "None",
+          "BlueprintReplicationCondition": "COND_None",
+          "Struct": {
+            "ObjectName": "IndicatedActorDataWithFilter:Class",
+            "ObjectPath": 0
+          }
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 472,
+        "PropertyFlags": 549755813888,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "IndicatedActorDataWithFilter:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_CreateModifiedIndicatedActorFilter_NewParam1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 472,
+        "PropertyFlags": 549755813888,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "IndicatedActorDataWithFilter:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Add_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      }
+    ],
+    "FunctionFlags": 209846272,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "On Actor Added",
+    "Outer": "BGA_Athena_Scooter_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "IndicatedActor",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_AddUnique_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      }
+    ],
+    "FunctionFlags": 201457664,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "On Actor Removed",
+    "Outer": "BGA_Athena_Scooter_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "IndicatedActor",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Array_RemoveItem_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 201457664,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "GetMarkerDisplayTeam",
+    "Outer": "BGA_Athena_Scooter_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "ByteProperty",
+        "Name": "Team",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 384,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Enum": null
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetInstigator_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Pawn:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "CallFunc_GetActorTeam_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Enum": null
+      }
+    ],
+    "FunctionFlags": 474087424,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BGA_Athena_Scooter_C",
+    "Properties": {
+      "NumReplicatedProperties": 1,
+      "bHasCookedComponentInstancingData": true,
+      "SimpleConstructionScript": {
+        "ObjectName": "BGA_Athena_Scooter_C:SimpleConstructionScript_309:SimpleConstructionScript",
+        "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.32"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "BGA_Athena_Scooter_C:InheritableComponentHandler:InheritableComponentHandler",
+        "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.18"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "BGA_Athena_Scooter_C:ExecuteUbergraph_BGA_Athena_Scooter:Function",
+        "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BuildingGameplayActor:Class",
+      "ObjectPath": 0
+    },
+    "Children": [
+      {
+        "ObjectName": "BGA_Athena_Scooter_C:GetMarkerDisplayTeam:Function",
+        "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.14"
+      },
+      {
+        "ObjectName": "BGA_Athena_Scooter_C:On Actor Removed:Function",
+        "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.13"
+      },
+      {
+        "ObjectName": "BGA_Athena_Scooter_C:On Actor Added:Function",
+        "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.12"
+      },
+      {
+        "ObjectName": "BGA_Athena_Scooter_C:PulseMarkers:Function",
+        "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.11"
+      },
+      {
+        "ObjectName": "BGA_Athena_Scooter_C:CreateModifiedIndicatedActorFilter:Function",
+        "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.10"
+      },
+      {
+        "ObjectName": "BGA_Athena_Scooter_C:UserConstructionScript:Function",
+        "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.9"
+      },
+      {
+        "ObjectName": "BGA_Athena_Scooter_C:ReceiveBeginPlay:Function",
+        "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.8"
+      },
+      {
+        "ObjectName": "BGA_Athena_Scooter_C:Event_Building_Actor_Destroyed:Function",
+        "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.7"
+      },
+      {
+        "ObjectName": "BGA_Athena_Scooter_C:OnStop_1:Function",
+        "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.6"
+      },
+      {
+        "ObjectName": "BGA_Athena_Scooter_C:OnDeathServer:Function",
+        "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.5"
+      },
+      {
+        "ObjectName": "BGA_Athena_Scooter_C:OnDeathPlayEffects:Function",
+        "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.4"
+      },
+      {
+        "ObjectName": "BGA_Athena_Scooter_C:NearDeathFx:Function",
+        "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.3"
+      },
+      {
+        "ObjectName": "BGA_Athena_Scooter_C:Ready:Function",
+        "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.2"
+      },
+      {
+        "ObjectName": "BGA_Athena_Scooter_C:Start Pulse Markers:Function",
+        "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.1"
+      },
+      {
+        "ObjectName": "BGA_Athena_Scooter_C:ExecuteUbergraph_BGA_Athena_Scooter:Function",
+        "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 2105344,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "PointerToUberGraphFrame:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PulseIndicator",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "PulseIndicatorComponent:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "NS_Scooter_ProjPhysics",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "NiagaraComponent:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "NearDeathBlink",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "ParticleSystemComponent:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SlowBlink",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "ParticleSystemComponent:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "StaticMesh",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "StaticMeshComponent:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BP_SurfaceTypeSoundComponent",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "BP_SurfaceTypeSoundComponent_C:BlueprintGeneratedClass",
+          "ObjectPath": "/Game/Sounds/Fort_Audio_Blueprints/SurfaceTypeSound/BP_SurfaceTypeSoundComponent.5"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Beacon Streak Color (Friendly)",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "LinearColor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Beacon Streak Color (Enemy)",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "LinearColor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "IsDead?",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Beacon Core Color (Friendly)",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "LinearColor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Beacon Core Color (Enemy)",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "LinearColor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "IsSelfStickDelayOver?",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "SelfStickDelay",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "HitLocation",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bHasStopped",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "EnemyMeshMaterial",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "MaterialInstance:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FriendlyMeshMaterial",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "MaterialInstance:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "TC_ActorTagsThatShouldExplodeOnOverlap",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 32,
+        "PropertyFlags": 5,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayTagContainer:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bSimulationRunning",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 65573,
+        "RepIndex": 31,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "StickToAllies",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "SetProperty",
+        "Name": "Ignore",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 80,
+        "PropertyFlags": 67589,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "ElementProp": {
+          "Type": "ObjectProperty",
+          "Name": "Ignore",
+          "Flags": 1,
+          "ArrayDim": 1,
+          "ElementSize": 8,
+          "PropertyFlags": 0,
+          "RepIndex": 0,
+          "RepNotifyFunc": "None",
+          "BlueprintReplicationCondition": "COND_None",
+          "PropertyClass": {
+            "ObjectName": "Actor:Class",
+            "ObjectPath": 0
+          }
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PulsingFX",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 589829,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "ParticleSystemComponent:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "HasMark",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "IndicatorGroup",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "AthenaPlayerControler",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 67589,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Athena_PlayerController_C:BlueprintGeneratedClass",
+          "ObjectPath": "/Game/Athena/Athena_PlayerController.25"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "MarkActorInt",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "IndicatedPS",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "ParticleSystem:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "ParticleSystemParamName",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "PSOffset",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "PSVectorParamName",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "PSDBNOOffset",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "IndicatedActorFilters",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 549755879429,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "IndicatedActorFilters",
+          "Flags": 1,
+          "ArrayDim": 1,
+          "ElementSize": 472,
+          "PropertyFlags": 549755813888,
+          "RepIndex": 0,
+          "RepNotifyFunc": "None",
+          "BlueprintReplicationCondition": "COND_None",
+          "Struct": {
+            "ObjectName": "IndicatedActorDataWithFilter:Class",
+            "ObjectPath": 0
+          }
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "PulseTimer",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "TimerHandle:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Mark Duration",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PingSound",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "SoundBase:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "PulseTime",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Step Time",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Gameplay Cue Tag",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayTag:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "PostProcessPulseTime",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Gameplay Cue Death",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayTag:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Pulsing NS_FX",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 589829,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "NiagaraComponent:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "MarkedPlayers",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 67589,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "MarkedPlayers",
+          "Flags": 1,
+          "ArrayDim": 1,
+          "ElementSize": 8,
+          "PropertyFlags": 0,
+          "RepIndex": 0,
+          "RepNotifyFunc": "None",
+          "BlueprintReplicationCondition": "COND_None",
+          "PropertyClass": {
+            "ObjectName": "Actor:Class",
+            "ObjectPath": 0
+          }
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "OwnerWeapon",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 67589,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortWeapon:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "EnterWaterCue",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayTag:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Health",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 56,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "ScalableFloat:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "IndividualMarkDuration",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 56,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "ScalableFloat:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "NearDeathAudio",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "SoundBase:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "MarkRadius",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 56,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "ScalableFloat:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BGA_Athena_Scooter": {
+        "ObjectName": "BGA_Athena_Scooter_C:ExecuteUbergraph_BGA_Athena_Scooter:Function",
+        "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.0"
+      },
+      "Start Pulse Markers": {
+        "ObjectName": "BGA_Athena_Scooter_C:Start Pulse Markers:Function",
+        "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.1"
+      },
+      "Ready": {
+        "ObjectName": "BGA_Athena_Scooter_C:Ready:Function",
+        "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.2"
+      },
+      "NearDeathFx": {
+        "ObjectName": "BGA_Athena_Scooter_C:NearDeathFx:Function",
+        "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.3"
+      },
+      "OnDeathPlayEffects": {
+        "ObjectName": "BGA_Athena_Scooter_C:OnDeathPlayEffects:Function",
+        "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.4"
+      },
+      "OnDeathServer": {
+        "ObjectName": "BGA_Athena_Scooter_C:OnDeathServer:Function",
+        "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.5"
+      },
+      "OnStop_1": {
+        "ObjectName": "BGA_Athena_Scooter_C:OnStop_1:Function",
+        "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.6"
+      },
+      "Event_Building_Actor_Destroyed": {
+        "ObjectName": "BGA_Athena_Scooter_C:Event_Building_Actor_Destroyed:Function",
+        "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.7"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "BGA_Athena_Scooter_C:ReceiveBeginPlay:Function",
+        "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.8"
+      },
+      "UserConstructionScript": {
+        "ObjectName": "BGA_Athena_Scooter_C:UserConstructionScript:Function",
+        "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.9"
+      },
+      "CreateModifiedIndicatedActorFilter": {
+        "ObjectName": "BGA_Athena_Scooter_C:CreateModifiedIndicatedActorFilter:Function",
+        "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.10"
+      },
+      "PulseMarkers": {
+        "ObjectName": "BGA_Athena_Scooter_C:PulseMarkers:Function",
+        "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.11"
+      },
+      "On Actor Added": {
+        "ObjectName": "BGA_Athena_Scooter_C:On Actor Added:Function",
+        "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.12"
+      },
+      "On Actor Removed": {
+        "ObjectName": "BGA_Athena_Scooter_C:On Actor Removed:Function",
+        "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.13"
+      },
+      "GetMarkerDisplayTeam": {
+        "ObjectName": "BGA_Athena_Scooter_C:GetMarkerDisplayTeam:Function",
+        "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.14"
+      }
+    },
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Game",
+    "ClassGeneratedBy": null,
+    "Interfaces": [
+      {
+        "Class": {
+          "ObjectName": "BPI_Building_Actor_Destroyed_C:BlueprintGeneratedClass",
+          "ObjectPath": "/Game/Abilities/Player/Generic/BPI_Building_Actor_Destroyed.1"
+        },
+        "PointerOffset": 0,
+        "bImplementedByK2": true
+      }
+    ],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__BGA_Athena_Scooter_C:BGA_Athena_Scooter_C",
+      "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.16"
+    }
+  },
+  {
+    "Type": "BGA_Athena_Scooter_C",
+    "Name": "Default__BGA_Athena_Scooter_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "Beacon Streak Color (Friendly)": {
+        "R": 0.015876,
+        "G": 0.179897,
+        "B": 1.0,
+        "A": 1.0,
+        "Hex": "042EFF"
+      },
+      "Beacon Streak Color (Enemy)": {
+        "R": 1.0,
+        "G": 0.04868,
+        "B": 0.015876,
+        "A": 1.0,
+        "Hex": "FF0C04"
+      },
+      "Beacon Core Color (Friendly)": {
+        "R": 3.014071,
+        "G": 5.011724,
+        "B": 15.0,
+        "A": 1.0,
+        "Hex": "01FEF1"
+      },
+      "Beacon Core Color (Enemy)": {
+        "R": 15.0,
+        "G": 3.014071,
+        "B": 3.014071,
+        "A": 1.0,
+        "Hex": "F10101"
+      },
+      "SelfStickDelay": 0.75,
+      "HitLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "EnemyMeshMaterial": {
+        "ObjectName": "MI_Sticky_Grenade_Enemy:MaterialInstanceConstant",
+        "ObjectPath": "/Game/Weapons/Grenades/Sticky_Grenade/Materials/MI_Sticky_Grenade_Enemy.0"
+      },
+      "FriendlyMeshMaterial": {
+        "ObjectName": "MI_Sticky_Grenade:MaterialInstanceConstant",
+        "ObjectPath": "/Game/Weapons/Grenades/Sticky_Grenade/Materials/MI_Sticky_Grenade.0"
+      },
+      "TC_ActorTagsThatShouldExplodeOnOverlap": [
+        "NPC.Attachment.Behavior.TreatAsPawn"
+      ],
+      "StickToAllies": true,
+      "IndicatorGroup": "ReconGun",
+      "IndicatedPS": {
+        "ObjectName": "P_Lotus_Scooter_Flare:ParticleSystem",
+        "ObjectPath": "/Game/Athena/Items/Gameplay/Lotus/Scooter/FX/P_Lotus_Scooter_Flare.67"
+      },
+      "ParticleSystemParamName": "BoneSocketActor",
+      "PSOffset": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 100.0
+      },
+      "PSVectorParamName": "WorldOffset",
+      "PSDBNOOffset": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 40.0
+      },
+      "IndicatedActorFilters": [
+        {
+          "IndicatedActorTags": [],
+          "IndicatedActorTagQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [],
+            "QueryTokenStream": [],
+            "UserDescription": "",
+            "AutoDescription": ""
+          },
+          "ObjectTypes": [
+            "ObjectTypeQuery3"
+          ],
+          "ActorClassFilter": {
+            "ObjectName": "FortPlayerPawn:Class",
+            "ObjectPath": 0
+          },
+          "WithAffiliation": [
+            "EFortTeamAffiliation::Hostile"
+          ],
+          "IndicatedData": {
+            "GroupIdentifier": "players",
+            "Duration": -1.0,
+            "StepTime": 0.0,
+            "IndicatorOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "IndicatorDBNOOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 30.0
+            },
+            "ShareActorWith": "EShareActorWith::None",
+            "ShareActorWithMask": 21,
+            "DisplayTeamOverride": 255,
+            "bClampToScreen": true,
+            "ScaleAndOpacityData": {
+              "SmallSizeDistance": 7500.0,
+              "LargestSizeDistance": 10.0,
+              "SmallScale": 0.5,
+              "LargestScale": 0.8,
+              "FarAwayScale": 0.35,
+              "FarAwayOpacity": 1.0,
+              "MaxScaleAndFadePercent": 0.1
+            },
+            "ParticleSystemData": {
+              "ParticleSystem": null,
+              "ParticleSystemActorParamName": null,
+              "ParticleSystemOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemDBNOOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemVectorParamName": null
+            },
+            "Sound": null,
+            "StateImageOverride": "EIndicatorStateImage::FriendlyNPC",
+            "OnActorAdded": {
+              "Num": 0,
+              "Name": "None"
+            },
+            "OnActorRemoved": {
+              "Num": 0,
+              "Name": "None"
+            }
+          },
+          "StenciledData": {
+            "GroupIdentifier": "players",
+            "Duration": -1.0,
+            "StepTime": 0.0,
+            "ShareActorWith": "EShareActorWith::None",
+            "ShareActorWithMask": 21,
+            "DisplayTeamOverride": 255,
+            "ParticleSystemData": {
+              "ParticleSystem": null,
+              "ParticleSystemActorParamName": null,
+              "ParticleSystemOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemDBNOOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemVectorParamName": null
+            },
+            "Sound": null,
+            "FriendlyStencilName": null,
+            "EnemyStencilName": "RedOverlayID",
+            "FriendlyStencilIndex": 0,
+            "EnemyStencilIndex": 0
+          },
+          "OverlapRadius": 1500.0
+        },
+        {
+          "IndicatedActorTags": [],
+          "IndicatedActorTagQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [],
+            "QueryTokenStream": [],
+            "UserDescription": "",
+            "AutoDescription": ""
+          },
+          "ObjectTypes": [
+            "ObjectTypeQuery1",
+            "ObjectTypeQuery2",
+            "ObjectTypeQuery4"
+          ],
+          "ActorClassFilter": {
+            "ObjectName": "BuildingContainer:Class",
+            "ObjectPath": 0
+          },
+          "WithAffiliation": [],
+          "IndicatedData": {
+            "GroupIdentifier": "chests",
+            "Duration": -1.0,
+            "StepTime": 0.0,
+            "IndicatorOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "IndicatorDBNOOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 30.0
+            },
+            "ShareActorWith": "EShareActorWith::None",
+            "ShareActorWithMask": 1,
+            "DisplayTeamOverride": 255,
+            "bClampToScreen": true,
+            "ScaleAndOpacityData": {
+              "SmallSizeDistance": 7500.0,
+              "LargestSizeDistance": 10.0,
+              "SmallScale": 0.5,
+              "LargestScale": 0.8,
+              "FarAwayScale": 0.35,
+              "FarAwayOpacity": 1.0,
+              "MaxScaleAndFadePercent": 0.1
+            },
+            "ParticleSystemData": {
+              "ParticleSystem": null,
+              "ParticleSystemActorParamName": null,
+              "ParticleSystemOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemDBNOOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemVectorParamName": null
+            },
+            "Sound": null,
+            "StateImageOverride": "EIndicatorStateImage::LAST_ENEMY_STATE",
+            "OnActorAdded": {
+              "Num": 0,
+              "Name": "None"
+            },
+            "OnActorRemoved": {
+              "Num": 0,
+              "Name": "None"
+            }
+          },
+          "StenciledData": {
+            "GroupIdentifier": "chests",
+            "Duration": -1.0,
+            "StepTime": 0.0,
+            "ShareActorWith": "EShareActorWith::None",
+            "ShareActorWithMask": 1,
+            "DisplayTeamOverride": 255,
+            "ParticleSystemData": {
+              "ParticleSystem": null,
+              "ParticleSystemActorParamName": null,
+              "ParticleSystemOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemDBNOOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemVectorParamName": null
+            },
+            "Sound": null,
+            "FriendlyStencilName": "YellowOverlayID",
+            "EnemyStencilName": "YellowOverlayID",
+            "FriendlyStencilIndex": 0,
+            "EnemyStencilIndex": 0
+          },
+          "OverlapRadius": 1500.0
+        },
+        {
+          "IndicatedActorTags": [],
+          "IndicatedActorTagQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [],
+            "QueryTokenStream": [],
+            "UserDescription": "",
+            "AutoDescription": ""
+          },
+          "ObjectTypes": [],
+          "ActorClassFilter": {
+            "ObjectName": "FortAIPawn:Class",
+            "ObjectPath": 0
+          },
+          "WithAffiliation": [],
+          "IndicatedData": {
+            "GroupIdentifier": "AI",
+            "Duration": -1.0,
+            "StepTime": 0.0,
+            "IndicatorOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "IndicatorDBNOOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 30.0
+            },
+            "ShareActorWith": "EShareActorWith::None",
+            "ShareActorWithMask": 1,
+            "DisplayTeamOverride": 255,
+            "bClampToScreen": true,
+            "ScaleAndOpacityData": {
+              "SmallSizeDistance": 7500.0,
+              "LargestSizeDistance": 10.0,
+              "SmallScale": 0.5,
+              "LargestScale": 0.8,
+              "FarAwayScale": 0.35,
+              "FarAwayOpacity": 1.0,
+              "MaxScaleAndFadePercent": 0.1
+            },
+            "ParticleSystemData": {
+              "ParticleSystem": null,
+              "ParticleSystemActorParamName": null,
+              "ParticleSystemOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemDBNOOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemVectorParamName": null
+            },
+            "Sound": null,
+            "StateImageOverride": "EIndicatorStateImage::FriendlyNPC",
+            "OnActorAdded": {
+              "Num": 0,
+              "Name": "None"
+            },
+            "OnActorRemoved": {
+              "Num": 0,
+              "Name": "None"
+            }
+          },
+          "StenciledData": {
+            "GroupIdentifier": "AI",
+            "Duration": -1.0,
+            "StepTime": 0.0,
+            "ShareActorWith": "EShareActorWith::None",
+            "ShareActorWithMask": 1,
+            "DisplayTeamOverride": 255,
+            "ParticleSystemData": {
+              "ParticleSystem": null,
+              "ParticleSystemActorParamName": null,
+              "ParticleSystemOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemDBNOOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemVectorParamName": null
+            },
+            "Sound": null,
+            "FriendlyStencilName": "YellowOverlayID",
+            "EnemyStencilName": "RedOverlayID",
+            "FriendlyStencilIndex": 0,
+            "EnemyStencilIndex": 0
+          },
+          "OverlapRadius": 1500.0
+        },
+        {
+          "IndicatedActorTags": [
+            "EnvItem.AvacadoEater"
+          ],
+          "IndicatedActorTagQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [],
+            "QueryTokenStream": [],
+            "UserDescription": "",
+            "AutoDescription": ""
+          },
+          "ObjectTypes": [
+            "ObjectTypeQuery3",
+            "ObjectTypeQuery1"
+          ],
+          "ActorClassFilter": {
+            "ObjectName": "BuildingGameplayActor:Class",
+            "ObjectPath": 0
+          },
+          "WithAffiliation": [],
+          "IndicatedData": {
+            "GroupIdentifier": "AI",
+            "Duration": -1.0,
+            "StepTime": 0.0,
+            "IndicatorOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "IndicatorDBNOOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 30.0
+            },
+            "ShareActorWith": "EShareActorWith::None",
+            "ShareActorWithMask": 5,
+            "DisplayTeamOverride": 255,
+            "bClampToScreen": true,
+            "ScaleAndOpacityData": {
+              "SmallSizeDistance": 7500.0,
+              "LargestSizeDistance": 10.0,
+              "SmallScale": 0.5,
+              "LargestScale": 0.8,
+              "FarAwayScale": 0.35,
+              "FarAwayOpacity": 1.0,
+              "MaxScaleAndFadePercent": 0.1
+            },
+            "ParticleSystemData": {
+              "ParticleSystem": null,
+              "ParticleSystemActorParamName": null,
+              "ParticleSystemOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemDBNOOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemVectorParamName": null
+            },
+            "Sound": null,
+            "StateImageOverride": "EIndicatorStateImage::FIRST_MATE_STATE",
+            "OnActorAdded": {
+              "Num": 0,
+              "Name": "None"
+            },
+            "OnActorRemoved": {
+              "Num": 0,
+              "Name": "None"
+            }
+          },
+          "StenciledData": {
+            "GroupIdentifier": "AI",
+            "Duration": -1.0,
+            "StepTime": 0.0,
+            "ShareActorWith": "EShareActorWith::None",
+            "ShareActorWithMask": 5,
+            "DisplayTeamOverride": 255,
+            "ParticleSystemData": {
+              "ParticleSystem": null,
+              "ParticleSystemActorParamName": null,
+              "ParticleSystemOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemDBNOOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemVectorParamName": null
+            },
+            "Sound": null,
+            "FriendlyStencilName": "RedOverlayID",
+            "EnemyStencilName": "RedOverlayID",
+            "FriendlyStencilIndex": 0,
+            "EnemyStencilIndex": 0
+          },
+          "OverlapRadius": 1500.0
+        },
+        {
+          "IndicatedActorTags": [],
+          "IndicatedActorTagQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [],
+            "QueryTokenStream": [],
+            "UserDescription": "",
+            "AutoDescription": ""
+          },
+          "ObjectTypes": [
+            "ObjectTypeQuery3"
+          ],
+          "ActorClassFilter": {
+            "ObjectName": "BuildingGameplayActorChaser:Class",
+            "ObjectPath": 0
+          },
+          "WithAffiliation": [],
+          "IndicatedData": {
+            "GroupIdentifier": "AI",
+            "Duration": -1.0,
+            "StepTime": 0.0,
+            "IndicatorOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "IndicatorDBNOOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 30.0
+            },
+            "ShareActorWith": "EShareActorWith::None",
+            "ShareActorWithMask": 5,
+            "DisplayTeamOverride": 255,
+            "bClampToScreen": true,
+            "ScaleAndOpacityData": {
+              "SmallSizeDistance": 7500.0,
+              "LargestSizeDistance": 10.0,
+              "SmallScale": 0.5,
+              "LargestScale": 0.8,
+              "FarAwayScale": 0.35,
+              "FarAwayOpacity": 1.0,
+              "MaxScaleAndFadePercent": 0.1
+            },
+            "ParticleSystemData": {
+              "ParticleSystem": null,
+              "ParticleSystemActorParamName": null,
+              "ParticleSystemOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemDBNOOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemVectorParamName": null
+            },
+            "Sound": null,
+            "StateImageOverride": "EIndicatorStateImage::FIRST_MATE_STATE",
+            "OnActorAdded": {
+              "Num": 0,
+              "Name": "None"
+            },
+            "OnActorRemoved": {
+              "Num": 0,
+              "Name": "None"
+            }
+          },
+          "StenciledData": {
+            "GroupIdentifier": "AI",
+            "Duration": -1.0,
+            "StepTime": 0.0,
+            "ShareActorWith": "EShareActorWith::None",
+            "ShareActorWithMask": 5,
+            "DisplayTeamOverride": 255,
+            "ParticleSystemData": {
+              "ParticleSystem": null,
+              "ParticleSystemActorParamName": null,
+              "ParticleSystemOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemDBNOOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemVectorParamName": null
+            },
+            "Sound": null,
+            "FriendlyStencilName": "RedOverlayID",
+            "EnemyStencilName": "RedOverlayID",
+            "FriendlyStencilIndex": 0,
+            "EnemyStencilIndex": 0
+          },
+          "OverlapRadius": 1500.0
+        }
+      ],
+      "PulseTimer": {
+        "Handle": 0
+      },
+      "Mark Duration": 0.35,
+      "PingSound": {
+        "ObjectName": "ScooterRecon_PingDetect_Cue:SoundCue",
+        "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_PingDetect_Cue.0"
+      },
+      "PulseTime": 0.2,
+      "Step Time": 0.1,
+      "Gameplay Cue Tag": {
+        "TagName": "GameplayCue.Athena.Scooter.PostProcess.ProjectilePulse"
+      },
+      "PostProcessPulseTime": 2.0,
+      "Gameplay Cue Death": {
+        "TagName": "GameplayCue.Mother.Scooter.Projectile.Death"
+      },
+      "EnterWaterCue": {
+        "TagName": "GameplayCue.BattleLab.GenericObject.EnterWater"
+      },
+      "Health": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          },
+          "RowName": "Default.Mother.Scooter.Health"
+        },
+        "RegistryType": {
+          "Name": null
+        }
+      },
+      "IndividualMarkDuration": {
+        "Value": 0.35,
+        "Curve": {
+          "CurveTable": null,
+          "RowName": "Default.Mother.Scooter.IndividualMarkDuration"
+        },
+        "RegistryType": {
+          "Name": null
+        }
+      },
+      "NearDeathAudio": {
+        "ObjectName": "ScooterRecon_Projectile_NearDeath_Cue:SoundCue",
+        "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_NearDeath_Cue.0"
+      },
+      "MarkRadius": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          },
+          "RowName": "Default.Mother.Scooter.MarkRadius"
+        },
+        "RegistryType": {
+          "Name": null
+        }
+      },
+      "bIgnoreInstigatorCollision": true,
+      "AttributeInitKeys": {
+        "AttributeInitCategory": "PropMetal",
+        "AttributeInitSubCategory": "1"
+      },
+      "AttributeInitKeys": {
+        "AttributeInitCategory": "PropMetal",
+        "AttributeInitSubCategory": "1"
+      },
+      "WeaponResponseType": "EFortBaseWeaponDamage::Environmental",
+      "bSurpressHealthBar": true,
+      "bCreatePhysicsObjectComponent": true,
+      "bAlwaysUseNetCullDistanceSquaredForRelevancy": true,
+      "SnapGridSize": 0.0,
+      "VertSnapGridSize": 0.0,
+      "PhysicsObjectPresetTag": {
+        "TagName": "PhysicsObject.Preset.Roller.Ball.Small"
+      },
+      "PhysicsObjectPhysicalDataTag": {
+        "TagName": "PhysicsObject.PhysData.Rubber"
+      },
+      "bReplicateMovement": true,
+      "InitialLifeSpan": 16.0,
+      "NetUpdateFrequency": 100.0
+    }
+  },
+  {
+    "Type": "BP_SurfaceTypeSoundComponent_C",
+    "Name": "BP_SurfaceTypeSoundComponent_GEN_VARIABLE",
+    "Outer": "BGA_Athena_Scooter_C",
+    "Template": "Default__BP_SurfaceTypeSoundComponent_C",
+    "Properties": {
+      "SoundMap": {
+        "24": null,
+        "68": {
+          "ObjectName": "ExecuteUbergraph_BGA_Athena_Scooter:/Game/Abilities/Player/Generic/BPI_Building_Actor_Destroyed:ExecuteUbergraph_BGA_Athena_Scooter",
+          "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.532"
+        },
+        "0": {
+          "ObjectName": "Expl_Debris_Wood_Cue:SoundCue",
+          "ObjectPath": "/Game/Athena/Sounds/Weapons/Explosions/Expl_Debris_Wood_Cue.0"
+        },
+        "22": null
+      }
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "BGA_Athena_Scooter_C"
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "NS_Scooter_ProjPhysics_GEN_VARIABLE",
+    "Outer": "BGA_Athena_Scooter_C"
+  },
+  {
+    "Type": "NiagaraDataInterfaceSkeletalMesh",
+    "Name": "NiagaraDataInterfaceSkeletalMesh_0",
+    "Outer": "NS_Scooter_ProjPhysics_GEN_VARIABLE",
+    "Properties": {
+      "MeshUserParameter": {
+        "Parameter": {}
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "NearDeathBlink_GEN_VARIABLE",
+    "Outer": "BGA_Athena_Scooter_C",
+    "Properties": {
+      "Template": {
+        "ObjectName": "P_Scooter_FastBlink:ParticleSystem",
+        "ObjectPath": "/MotherGameplay/Items/Scooter/Fx/P_Scooter_FastBlink.78"
+      },
+      "RelativeLocation": {
+        "X": 9.155273E-05,
+        "Y": 3.5252268,
+        "Z": -4.6571704E-06
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 0.0,
+        "Roll": 90.00008
+      },
+      "RelativeScale3D": {
+        "X": 0.42,
+        "Y": 0.42,
+        "Z": 0.42
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      },
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "SlowBlink_GEN_VARIABLE",
+    "Outer": "BGA_Athena_Scooter_C",
+    "Properties": {
+      "Template": {
+        "ObjectName": "P_Scooter_SlowBlink:ParticleSystem",
+        "ObjectPath": "/MotherGameplay/Items/Scooter/Fx/P_Scooter_SlowBlink.73"
+      },
+      "bRenderCustomDepth": true,
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 3.5,
+        "Z": 0.0
+      },
+      "RelativeRotation": {
+        "Pitch": 90.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 0.42,
+        "Y": 0.42,
+        "Z": 0.42
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      }
+    }
+  },
+  {
+    "Type": "PulseIndicatorComponent",
+    "Name": "PulseIndicator_GEN_VARIABLE",
+    "Outer": "BGA_Athena_Scooter_C",
+    "Properties": {
+      "IndicatedActorFilters": [
+        {
+          "IndicatedActorTags": [],
+          "IndicatedActorTagQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [],
+            "QueryTokenStream": [],
+            "UserDescription": "",
+            "AutoDescription": ""
+          },
+          "ObjectTypes": [
+            "ObjectTypeQuery3"
+          ],
+          "ActorClassFilter": {
+            "ObjectName": "FortPlayerPawn:Class",
+            "ObjectPath": 0
+          },
+          "WithAffiliation": [
+            "EFortTeamAffiliation::Hostile"
+          ],
+          "IndicatedData": {
+            "GroupIdentifier": "players",
+            "Duration": -1.0,
+            "StepTime": 0.0,
+            "IndicatorOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 90.0
+            },
+            "IndicatorDBNOOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 30.0
+            },
+            "ShareActorWith": "EShareActorWith::None",
+            "ShareActorWithMask": 21,
+            "DisplayTeamOverride": 255,
+            "bClampToScreen": true,
+            "ScaleAndOpacityData": {
+              "SmallSizeDistance": 7500.0,
+              "LargestSizeDistance": 10.0,
+              "SmallScale": 0.5,
+              "LargestScale": 0.8,
+              "FarAwayScale": 0.35,
+              "FarAwayOpacity": 1.0,
+              "MaxScaleAndFadePercent": 0.1
+            },
+            "ParticleSystemData": {
+              "ParticleSystem": null,
+              "ParticleSystemActorParamName": null,
+              "ParticleSystemOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemDBNOOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemVectorParamName": null
+            },
+            "Sound": null,
+            "StateImageOverride": "EIndicatorStateImage::FriendlyNPC",
+            "OnActorAdded": {
+              "Num": 0,
+              "Name": "None"
+            },
+            "OnActorRemoved": {
+              "Num": 0,
+              "Name": "None"
+            }
+          },
+          "StenciledData": {
+            "GroupIdentifier": "players",
+            "Duration": -1.0,
+            "StepTime": 0.0,
+            "ShareActorWith": "EShareActorWith::None",
+            "ShareActorWithMask": 21,
+            "DisplayTeamOverride": 255,
+            "ParticleSystemData": {
+              "ParticleSystem": null,
+              "ParticleSystemActorParamName": null,
+              "ParticleSystemOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemDBNOOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemVectorParamName": null
+            },
+            "Sound": null,
+            "FriendlyStencilName": null,
+            "EnemyStencilName": "RedOverlayID",
+            "FriendlyStencilIndex": 0,
+            "EnemyStencilIndex": 0
+          },
+          "OverlapRadius": 1500.0
+        },
+        {
+          "IndicatedActorTags": [],
+          "IndicatedActorTagQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [],
+            "QueryTokenStream": [],
+            "UserDescription": "",
+            "AutoDescription": ""
+          },
+          "ObjectTypes": [
+            "ObjectTypeQuery1",
+            "ObjectTypeQuery2",
+            "ObjectTypeQuery4"
+          ],
+          "ActorClassFilter": {
+            "ObjectName": "BuildingContainer:Class",
+            "ObjectPath": 0
+          },
+          "WithAffiliation": [],
+          "IndicatedData": {
+            "GroupIdentifier": "chests",
+            "Duration": -1.0,
+            "StepTime": 0.0,
+            "IndicatorOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 90.0
+            },
+            "IndicatorDBNOOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 30.0
+            },
+            "ShareActorWith": "EShareActorWith::None",
+            "ShareActorWithMask": 1,
+            "DisplayTeamOverride": 255,
+            "bClampToScreen": true,
+            "ScaleAndOpacityData": {
+              "SmallSizeDistance": 7500.0,
+              "LargestSizeDistance": 10.0,
+              "SmallScale": 0.5,
+              "LargestScale": 0.8,
+              "FarAwayScale": 0.35,
+              "FarAwayOpacity": 1.0,
+              "MaxScaleAndFadePercent": 0.1
+            },
+            "ParticleSystemData": {
+              "ParticleSystem": null,
+              "ParticleSystemActorParamName": null,
+              "ParticleSystemOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemDBNOOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemVectorParamName": null
+            },
+            "Sound": null,
+            "StateImageOverride": "EIndicatorStateImage::LAST_ENEMY_STATE",
+            "OnActorAdded": {
+              "Num": 0,
+              "Name": "None"
+            },
+            "OnActorRemoved": {
+              "Num": 0,
+              "Name": "None"
+            }
+          },
+          "StenciledData": {
+            "GroupIdentifier": "chests",
+            "Duration": -1.0,
+            "StepTime": 0.0,
+            "ShareActorWith": "EShareActorWith::None",
+            "ShareActorWithMask": 1,
+            "DisplayTeamOverride": 255,
+            "ParticleSystemData": {
+              "ParticleSystem": null,
+              "ParticleSystemActorParamName": null,
+              "ParticleSystemOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemDBNOOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemVectorParamName": null
+            },
+            "Sound": null,
+            "FriendlyStencilName": "YellowOverlayID",
+            "EnemyStencilName": "YellowOverlayID",
+            "FriendlyStencilIndex": 0,
+            "EnemyStencilIndex": 0
+          },
+          "OverlapRadius": 1500.0
+        },
+        {
+          "IndicatedActorTags": [],
+          "IndicatedActorTagQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [],
+            "QueryTokenStream": [],
+            "UserDescription": "",
+            "AutoDescription": ""
+          },
+          "ObjectTypes": [],
+          "ActorClassFilter": {
+            "ObjectName": "FortAIPawn:Class",
+            "ObjectPath": 0
+          },
+          "WithAffiliation": [],
+          "IndicatedData": {
+            "GroupIdentifier": "AI",
+            "Duration": -1.0,
+            "StepTime": 0.0,
+            "IndicatorOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 90.0
+            },
+            "IndicatorDBNOOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 30.0
+            },
+            "ShareActorWith": "EShareActorWith::None",
+            "ShareActorWithMask": 1,
+            "DisplayTeamOverride": 255,
+            "bClampToScreen": true,
+            "ScaleAndOpacityData": {
+              "SmallSizeDistance": 7500.0,
+              "LargestSizeDistance": 10.0,
+              "SmallScale": 0.5,
+              "LargestScale": 0.8,
+              "FarAwayScale": 0.35,
+              "FarAwayOpacity": 1.0,
+              "MaxScaleAndFadePercent": 0.1
+            },
+            "ParticleSystemData": {
+              "ParticleSystem": null,
+              "ParticleSystemActorParamName": null,
+              "ParticleSystemOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemDBNOOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemVectorParamName": null
+            },
+            "Sound": null,
+            "StateImageOverride": "EIndicatorStateImage::FriendlyNPC",
+            "OnActorAdded": {
+              "Num": 0,
+              "Name": "None"
+            },
+            "OnActorRemoved": {
+              "Num": 0,
+              "Name": "None"
+            }
+          },
+          "StenciledData": {
+            "GroupIdentifier": "AI",
+            "Duration": -1.0,
+            "StepTime": 0.0,
+            "ShareActorWith": "EShareActorWith::None",
+            "ShareActorWithMask": 1,
+            "DisplayTeamOverride": 255,
+            "ParticleSystemData": {
+              "ParticleSystem": null,
+              "ParticleSystemActorParamName": null,
+              "ParticleSystemOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemDBNOOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemVectorParamName": null
+            },
+            "Sound": null,
+            "FriendlyStencilName": "YellowOverlayID",
+            "EnemyStencilName": "RedOverlayID",
+            "FriendlyStencilIndex": 0,
+            "EnemyStencilIndex": 0
+          },
+          "OverlapRadius": 1500.0
+        },
+        {
+          "IndicatedActorTags": [
+            "EnvItem.AvacadoEater"
+          ],
+          "IndicatedActorTagQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [],
+            "QueryTokenStream": [],
+            "UserDescription": "",
+            "AutoDescription": ""
+          },
+          "ObjectTypes": [
+            "ObjectTypeQuery3",
+            "ObjectTypeQuery1"
+          ],
+          "ActorClassFilter": {
+            "ObjectName": "BuildingGameplayActor:Class",
+            "ObjectPath": 0
+          },
+          "WithAffiliation": [],
+          "IndicatedData": {
+            "GroupIdentifier": "AI",
+            "Duration": -1.0,
+            "StepTime": 0.0,
+            "IndicatorOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 90.0
+            },
+            "IndicatorDBNOOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 30.0
+            },
+            "ShareActorWith": "EShareActorWith::None",
+            "ShareActorWithMask": 5,
+            "DisplayTeamOverride": 255,
+            "bClampToScreen": true,
+            "ScaleAndOpacityData": {
+              "SmallSizeDistance": 7500.0,
+              "LargestSizeDistance": 10.0,
+              "SmallScale": 0.5,
+              "LargestScale": 0.8,
+              "FarAwayScale": 0.35,
+              "FarAwayOpacity": 1.0,
+              "MaxScaleAndFadePercent": 0.1
+            },
+            "ParticleSystemData": {
+              "ParticleSystem": null,
+              "ParticleSystemActorParamName": null,
+              "ParticleSystemOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemDBNOOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemVectorParamName": null
+            },
+            "Sound": null,
+            "StateImageOverride": "EIndicatorStateImage::FIRST_MATE_STATE",
+            "OnActorAdded": {
+              "Num": 0,
+              "Name": "None"
+            },
+            "OnActorRemoved": {
+              "Num": 0,
+              "Name": "None"
+            }
+          },
+          "StenciledData": {
+            "GroupIdentifier": "AI",
+            "Duration": -1.0,
+            "StepTime": 0.0,
+            "ShareActorWith": "EShareActorWith::None",
+            "ShareActorWithMask": 5,
+            "DisplayTeamOverride": 255,
+            "ParticleSystemData": {
+              "ParticleSystem": null,
+              "ParticleSystemActorParamName": null,
+              "ParticleSystemOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemDBNOOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemVectorParamName": null
+            },
+            "Sound": null,
+            "FriendlyStencilName": "RedOverlayID",
+            "EnemyStencilName": "RedOverlayID",
+            "FriendlyStencilIndex": 0,
+            "EnemyStencilIndex": 0
+          },
+          "OverlapRadius": 1500.0
+        },
+        {
+          "IndicatedActorTags": [],
+          "IndicatedActorTagQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [],
+            "QueryTokenStream": [],
+            "UserDescription": "",
+            "AutoDescription": ""
+          },
+          "ObjectTypes": [
+            "ObjectTypeQuery3"
+          ],
+          "ActorClassFilter": {
+            "ObjectName": "BuildingGameplayActorChaser:Class",
+            "ObjectPath": 0
+          },
+          "WithAffiliation": [],
+          "IndicatedData": {
+            "GroupIdentifier": "AI",
+            "Duration": -1.0,
+            "StepTime": 0.0,
+            "IndicatorOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 90.0
+            },
+            "IndicatorDBNOOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 30.0
+            },
+            "ShareActorWith": "EShareActorWith::None",
+            "ShareActorWithMask": 5,
+            "DisplayTeamOverride": 255,
+            "bClampToScreen": true,
+            "ScaleAndOpacityData": {
+              "SmallSizeDistance": 7500.0,
+              "LargestSizeDistance": 10.0,
+              "SmallScale": 0.5,
+              "LargestScale": 0.8,
+              "FarAwayScale": 0.35,
+              "FarAwayOpacity": 1.0,
+              "MaxScaleAndFadePercent": 0.1
+            },
+            "ParticleSystemData": {
+              "ParticleSystem": null,
+              "ParticleSystemActorParamName": null,
+              "ParticleSystemOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemDBNOOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemVectorParamName": null
+            },
+            "Sound": null,
+            "StateImageOverride": "EIndicatorStateImage::FIRST_MATE_STATE",
+            "OnActorAdded": {
+              "Num": 0,
+              "Name": "None"
+            },
+            "OnActorRemoved": {
+              "Num": 0,
+              "Name": "None"
+            }
+          },
+          "StenciledData": {
+            "GroupIdentifier": "AI",
+            "Duration": -1.0,
+            "StepTime": 0.0,
+            "ShareActorWith": "EShareActorWith::None",
+            "ShareActorWithMask": 5,
+            "DisplayTeamOverride": 255,
+            "ParticleSystemData": {
+              "ParticleSystem": null,
+              "ParticleSystemActorParamName": null,
+              "ParticleSystemOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemDBNOOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemVectorParamName": null
+            },
+            "Sound": null,
+            "FriendlyStencilName": "RedOverlayID",
+            "EnemyStencilName": "RedOverlayID",
+            "FriendlyStencilIndex": 0,
+            "EnemyStencilIndex": 0
+          },
+          "OverlapRadius": 1500.0
+        }
+      ],
+      "IndicatorGroupIdentifierOverride": "LotusIndicator",
+      "StencilGroupIdentifierOverride": "LotusStencil",
+      "PlayerPingSound": {
+        "ObjectName": "ScooterRecon_PingDetect_Cue:SoundCue",
+        "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_PingDetect_Cue.0"
+      },
+      "PlayerParticleSystemData": {
+        "ParticleSystem": {
+          "ObjectName": "P_Lotus_Scooter_Flare:ParticleSystem",
+          "ObjectPath": "/Game/Athena/Items/Gameplay/Lotus/Scooter/FX/P_Lotus_Scooter_Flare.67"
+        },
+        "ParticleSystemActorParamName": "ReconGun",
+        "ParticleSystemOffset": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 100.0
+        },
+        "ParticleSystemDBNOOffset": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 40.0
+        },
+        "ParticleSystemVectorParamName": "WorldOffset"
+      },
+      "PulseTime": {
+        "Value": 0.2
+      },
+      "MarkRadius": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          },
+          "RowName": "Default.Mother.Scooter.MarkRadius"
+        }
+      },
+      "MarkDuration": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "MotherGameData:CurveTable",
+            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
+          },
+          "RowName": "Default.Mother.Scooter.IndividualMarkDuration"
+        }
+      },
+      "StepTime": {
+        "Value": 0.1
+      },
+      "PlayerGroupIdentifier": "players"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "SceneComponent_84",
+    "Outer": "BGA_Athena_Scooter_C"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_309",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BP_SurfaceTypeSoundComponent_C:BlueprintGeneratedClass",
+        "ObjectPath": "/Game/Sounds/Fort_Audio_Blueprints/SurfaceTypeSound/BP_SurfaceTypeSoundComponent.5"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BGA_Athena_Scooter_C:BP_SurfaceTypeSoundComponent_GEN_VARIABLE:BP_SurfaceTypeSoundComponent_C",
+        "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.17"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "SoundMap",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "BP_SurfaceTypeSoundComponent_C:BlueprintGeneratedClass",
+              "ObjectPath": "/Game/Sounds/Fort_Audio_Blueprints/SurfaceTypeSound/BP_SurfaceTypeSoundComponent.5"
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "VariableGuid": "695309C0-45F0F4CD-AECF32A5-606803D3",
+      "InternalVariableName": "BP_SurfaceTypeSoundComponent"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_309",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "ParticleSystemComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BGA_Athena_Scooter_C:NearDeathBlink_GEN_VARIABLE:ParticleSystemComponent",
+        "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.21"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "Template",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ParticleSystemComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "RelativeLocation",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ParticleSystemComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "X",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Vector:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "Y",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Vector:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "Z",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Vector:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "RelativeRotation",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ParticleSystemComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "Roll",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Rotator:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "RelativeScale3D",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ParticleSystemComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "X",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Vector:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "Y",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Vector:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "Z",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Vector:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "PrimaryComponentTick",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ParticleSystemComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "bStartWithTickEnabled",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ActorComponentTickFunction:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "bAutoActivate",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ParticleSystemComponent:Class",
+              "ObjectPath": 0
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "VariableGuid": "54EF6271-4A489BB9-D221D8AC-85F37C91",
+      "InternalVariableName": "NearDeathBlink"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_309",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "NiagaraComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BGA_Athena_Scooter_C:NS_Scooter_ProjPhysics_GEN_VARIABLE:NiagaraComponent",
+        "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.19"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "Asset",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "NiagaraComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "OverrideParameters",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "NiagaraComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "UserParameterRedirects",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "NiagaraUserRedirectionParameterStore:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "SortedParameterOffsets",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "NiagaraUserRedirectionParameterStore:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": null,
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "NiagaraUserRedirectionParameterStore:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "DataInterfaces",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "NiagaraUserRedirectionParameterStore:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": null,
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "NiagaraUserRedirectionParameterStore:Class",
+              "ObjectPath": 0
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "VariableGuid": "549C61EC-49ADF93F-5B63D0AC-7703F7D0",
+      "InternalVariableName": "NS_Scooter_ProjPhysics"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_309",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "StaticMeshComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BGA_Athena_Scooter_C:StaticMesh_GEN_VARIABLE:StaticMeshComponent",
+        "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.33"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "StaticMesh",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "StaticMeshComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "OverrideMaterials",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "StaticMeshComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": null,
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "StaticMeshComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "bGenerateOverlapEvents",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "StaticMeshComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "bReceivesDecals",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "StaticMeshComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "bRenderCustomDepth",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "StaticMeshComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "BodyInstance",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "StaticMeshComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "ObjectType",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "BodyInstance:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "CollisionEnabled",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "BodyInstance:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "CollisionProfileName",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "BodyInstance:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "CollisionResponses",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "BodyInstance:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "ResponseArray",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "CollisionResponse:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "ResponseArray",
+            "ArrayIndex": 7,
+            "PropertyScope": {
+              "ObjectName": "CollisionResponse:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "Channel",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ResponseChannel:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": null,
+            "ArrayIndex": 8,
+            "PropertyScope": {
+              "ObjectName": "CollisionResponse:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "MassInKgOverride",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "BodyInstance:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "bAutoWeld",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "BodyInstance:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "RelativeLocation",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "StaticMeshComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "Z",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Vector:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "RelativeScale3D",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "StaticMeshComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "X",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Vector:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "Y",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Vector:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "Z",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Vector:Class",
+              "ObjectPath": 0
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SimpleConstructionScript_309:SCS_Node_6:SCS_Node",
+          "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.30"
+        },
+        {
+          "ObjectName": "SimpleConstructionScript_309:SCS_Node_1:SCS_Node",
+          "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.26"
+        },
+        {
+          "ObjectName": "SimpleConstructionScript_309:SCS_Node_2:SCS_Node",
+          "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.27"
+        }
+      ],
+      "VariableGuid": "871981AD-4DE8C99C-9B891888-D22F9C46",
+      "InternalVariableName": "StaticMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_309",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "PulseIndicatorComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BGA_Athena_Scooter_C:PulseIndicator_GEN_VARIABLE:PulseIndicatorComponent",
+        "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.23"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "IndicatedActorFilters",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "PulseIndicatorComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": null,
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "PulseIndicatorComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "IndicatorGroupIdentifierOverride",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "PulseIndicatorComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "StencilGroupIdentifierOverride",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "PulseIndicatorComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "PlayerPingSound",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "PulseIndicatorComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "PlayerParticleSystemData",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "PulseIndicatorComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "ParticleSystem",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "IndicatedActorParticleSystemData:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "ParticleSystemActorParamName",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "IndicatedActorParticleSystemData:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "ParticleSystemOffset",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "IndicatedActorParticleSystemData:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "Z",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Vector:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "ParticleSystemDBNOOffset",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "IndicatedActorParticleSystemData:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "Z",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Vector:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "ParticleSystemVectorParamName",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "IndicatedActorParticleSystemData:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "PulseTime",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "PulseIndicatorComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "Value",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ScalableFloat:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "MarkRadius",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "PulseIndicatorComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "Value",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ScalableFloat:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "Curve",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ScalableFloat:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "CurveTable",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "CurveTableRowHandle:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "RowName",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "CurveTableRowHandle:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "MarkDuration",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "PulseIndicatorComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "Value",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ScalableFloat:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "Curve",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ScalableFloat:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "CurveTable",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "CurveTableRowHandle:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "RowName",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "CurveTableRowHandle:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "StepTime",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "PulseIndicatorComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "Value",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ScalableFloat:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "PlayerGroupIdentifier",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "PulseIndicatorComponent:Class",
+              "ObjectPath": 0
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "VariableGuid": "FEB863D7-4C7FD3F0-EA6EA9BB-D826BB54",
+      "InternalVariableName": "PulseIndicator"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Outer": "SimpleConstructionScript_309",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "ParticleSystemComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BGA_Athena_Scooter_C:SlowBlink_GEN_VARIABLE:ParticleSystemComponent",
+        "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.22"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "Template",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ParticleSystemComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "bRenderCustomDepth",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ParticleSystemComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "RelativeLocation",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ParticleSystemComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "Y",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Vector:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "RelativeRotation",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ParticleSystemComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "Pitch",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Rotator:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "Yaw",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Rotator:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "RelativeScale3D",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ParticleSystemComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "X",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Vector:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "Y",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Vector:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "Z",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Vector:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "PrimaryComponentTick",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ParticleSystemComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "bStartWithTickEnabled",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ActorComponentTickFunction:Class",
+              "ObjectPath": 0
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "VariableGuid": "8EB6669A-00000000-00000000-00000000",
+      "InternalVariableName": "SlowBlink"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_94",
+    "Outer": "SimpleConstructionScript_309",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "SceneComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BGA_Athena_Scooter_C:SceneComponent_84:SceneComponent",
+        "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.24"
+      },
+      "VariableGuid": "4D3A059E-00000000-00000000-00000000",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_309",
+    "Outer": "BGA_Athena_Scooter_C",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SimpleConstructionScript_309:SCS_Node_0:SCS_Node",
+          "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.25"
+        },
+        {
+          "ObjectName": "SimpleConstructionScript_309:SCS_Node_3:SCS_Node",
+          "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.28"
+        },
+        {
+          "ObjectName": "SimpleConstructionScript_309:SCS_Node_4:SCS_Node",
+          "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.29"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SimpleConstructionScript_309:SCS_Node_0:SCS_Node",
+          "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.25"
+        },
+        {
+          "ObjectName": "SimpleConstructionScript_309:SCS_Node_3:SCS_Node",
+          "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.28"
+        },
+        {
+          "ObjectName": "SimpleConstructionScript_309:SCS_Node_6:SCS_Node",
+          "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.30"
+        },
+        {
+          "ObjectName": "SimpleConstructionScript_309:SCS_Node_1:SCS_Node",
+          "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.26"
+        },
+        {
+          "ObjectName": "SimpleConstructionScript_309:SCS_Node_2:SCS_Node",
+          "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.27"
+        },
+        {
+          "ObjectName": "SimpleConstructionScript_309:SCS_Node_4:SCS_Node",
+          "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.29"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SimpleConstructionScript_309:SCS_Node_94:SCS_Node",
+        "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.31"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMesh_GEN_VARIABLE",
+    "Outer": "BGA_Athena_Scooter_C",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "Scooter_Projectile:StaticMesh",
+        "ObjectPath": "/Game/Gadgets/Assets/Scooter/Meshes/Scooter_Projectile.1"
+      },
+      "OverrideMaterials": [
+        null
+      ],
+      "bGenerateOverlapEvents": false,
+      "bReceivesDecals": false,
+      "bRenderCustomDepth": true,
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "BlockAllPhysics",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "FCC_Trace_WeaponCapsule",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_PawnAI",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Trace_WeaponMulti",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Trace_Weapon",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_Projectile",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_ProjectileIgnoreAI",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_ProjectileMesh",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_SpectatorDroneCamera",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+              "Response": "ECollisionResponse::ECR_Block"
+            }
+          ]
+        },
+        "MassInKgOverride": 0.0,
+        "bAutoWeld": false
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 3.9077537E-07
+      },
+      "RelativeScale3D": {
+        "X": 2.5,
+        "Y": 2.5,
+        "Z": 2.5
+      }
+    }
+  }
+]

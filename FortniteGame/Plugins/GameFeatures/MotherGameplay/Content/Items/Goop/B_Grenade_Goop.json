@@ -1,0 +1,474 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_B_Grenade_Goop",
+    "Outer": "B_Grenade_Goop_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_bVisible",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_bSetForLocalControllerOnly",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 32769,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "OnWeaponVisibilityChanged",
+    "Outer": "B_Grenade_Goop_C",
+    "SuperStruct": {
+      "ObjectName": "OnWeaponVisibilityChanged:Class",
+      "ObjectPath": 0
+    },
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bVisible",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bSetForLocalControllerOnly",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 134744064,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "B_Grenade_Goop_C",
+    "Super": "B_ConsumableSmall_Athena_C",
+    "Properties": {
+      "bHasCookedComponentInstancingData": true,
+      "SimpleConstructionScript": {
+        "ObjectName": "B_Grenade_Goop_C:SimpleConstructionScript_0:SimpleConstructionScript",
+        "ObjectPath": "/MotherGameplay/Items/Goop/B_Grenade_Goop.11"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "B_Grenade_Goop_C:ExecuteUbergraph_B_Grenade_Goop:Function",
+        "ObjectPath": "/MotherGameplay/Items/Goop/B_Grenade_Goop.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "B_ConsumableSmall_Athena_C:BlueprintGeneratedClass",
+      "ObjectPath": "/Game/Abilities/Player/Generic/UtilityItems/B_ConsumableSmall_Athena.0"
+    },
+    "Children": [
+      {
+        "ObjectName": "B_Grenade_Goop_C:OnWeaponVisibilityChanged:Function",
+        "ObjectPath": "/MotherGameplay/Items/Goop/B_Grenade_Goop.1"
+      },
+      {
+        "ObjectName": "B_Grenade_Goop_C:ExecuteUbergraph_B_Grenade_Goop:Function",
+        "ObjectPath": "/MotherGameplay/Items/Goop/B_Grenade_Goop.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 2105344,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "PointerToUberGraphFrame:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Goop_InHand_Loop",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "AudioComponent:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "NS_Biome_Projectile_Idle",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "NiagaraComponent:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_B_Grenade_Goop": {
+        "ObjectName": "B_Grenade_Goop_C:ExecuteUbergraph_B_Grenade_Goop:Function",
+        "ObjectPath": "/MotherGameplay/Items/Goop/B_Grenade_Goop.0"
+      },
+      "OnWeaponVisibilityChanged": {
+        "ObjectName": "B_Grenade_Goop_C:OnWeaponVisibilityChanged:Function",
+        "ObjectPath": "/MotherGameplay/Items/Goop/B_Grenade_Goop.1"
+      }
+    },
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Engine",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__B_Grenade_Goop_C:B_Grenade_Goop_C",
+      "ObjectPath": "/MotherGameplay/Items/Goop/B_Grenade_Goop.3"
+    }
+  },
+  {
+    "Type": "B_Grenade_Goop_C",
+    "Name": "Default__B_Grenade_Goop_C",
+    "Template": "Default__B_ConsumableSmall_Athena_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "ReloadSounds": {
+        "ObjectName": "Goop_Equip_Cue:SoundCue",
+        "ObjectPath": "/MotherGameplay/Items/Goop/Audio/Goop_Equip_Cue.0"
+      },
+      "DataStoreManager": {
+        "ObjectName": "Default__B_Grenade_Goop_C:GeneralDataStore:FortGenericDataStoreManagerComponent",
+        "ObjectPath": "/MotherGameplay/Items/Goop/B_Grenade_Goop.5"
+      },
+      "WeaponMesh": {
+        "ObjectName": "Default__B_Grenade_Goop_C:WeaponMesh0:SkeletalMeshComponentBudgeted",
+        "ObjectPath": "/MotherGameplay/Items/Goop/B_Grenade_Goop.12"
+      },
+      "PoseOffsetAnimSequence": {
+        "ObjectName": "Goop_Offset_Pose_CMM:AnimSequence",
+        "ObjectPath": "/MotherGameplay/Items/Goop/Assets/Animation/Goop_Offset_Pose_CMM.0"
+      },
+      "RootComponent": {
+        "ObjectName": "Default__B_Grenade_Goop_C:WeaponMesh0:SkeletalMeshComponentBudgeted",
+        "ObjectPath": "/MotherGameplay/Items/Goop/B_Grenade_Goop.12"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "Goop_InHand_Loop_GEN_VARIABLE",
+    "Outer": "B_Grenade_Goop_C",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "Goop_Prj_InHand_Loop_Cue:SoundCue",
+        "ObjectPath": "/MotherGameplay/Items/Goop/Audio/Goop_Prj_InHand_Loop_Cue.0"
+      },
+      "bAutoManageAttachment": true,
+      "AutoAttachLocationRule": "EAttachmentRule::SnapToTarget",
+      "AutoAttachRotationRule": "EAttachmentRule::SnapToTarget",
+      "AutoAttachScaleRule": "EAttachmentRule::SnapToTarget",
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "FortGenericDataStoreManagerComponent",
+    "Name": "GeneralDataStore",
+    "Outer": "Default__B_Grenade_Goop_C",
+    "Template": "GeneralDataStore"
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "NS_Biome_Projectile_Idle_GEN_VARIABLE",
+    "Outer": "B_Grenade_Goop_C"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "B_Grenade_Goop_C"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "SceneComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": {
+        "ObjectName": "B_Grenade_Goop_C:DefaultSceneRoot_GEN_VARIABLE:SceneComponent",
+        "ObjectPath": "/MotherGameplay/Items/Goop/B_Grenade_Goop.7"
+      },
+      "VariableGuid": "57069C44-4BA80938-940D7F9F-DAF11184",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "NiagaraComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": {
+        "ObjectName": "B_Grenade_Goop_C:NS_Biome_Projectile_Idle_GEN_VARIABLE:NiagaraComponent",
+        "ObjectPath": "/MotherGameplay/Items/Goop/B_Grenade_Goop.6"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "Asset",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "NiagaraComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "OverrideParameters",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "NiagaraComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "UserParameterRedirects",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "NiagaraUserRedirectionParameterStore:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "SortedParameterOffsets",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "NiagaraUserRedirectionParameterStore:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": null,
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "NiagaraUserRedirectionParameterStore:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "ParameterData",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "NiagaraUserRedirectionParameterStore:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": null,
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "NiagaraUserRedirectionParameterStore:Class",
+              "ObjectPath": 0
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "ParentComponentOrVariableName": "WeaponMesh0",
+      "bIsParentComponentNative": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_2:SCS_Node",
+          "ObjectPath": "/MotherGameplay/Items/Goop/B_Grenade_Goop.10"
+        }
+      ],
+      "VariableGuid": "58DC6561-4FB95725-1C68ED91-6E339541",
+      "InternalVariableName": "NS_Biome_Projectile_Idle"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "AudioComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": {
+        "ObjectName": "B_Grenade_Goop_C:Goop_InHand_Loop_GEN_VARIABLE:AudioComponent",
+        "ObjectPath": "/MotherGameplay/Items/Goop/B_Grenade_Goop.4"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "Sound",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "AudioComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "bAutoManageAttachment",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "AudioComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "AutoAttachLocationRule",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "AudioComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "AutoAttachRotationRule",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "AudioComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "AutoAttachScaleRule",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "AudioComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "bAutoActivate",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "AudioComponent:Class",
+              "ObjectPath": 0
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "VariableGuid": "5AE98232-419242DF-55CBF78B-71D0F061",
+      "InternalVariableName": "Goop_InHand_Loop"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "B_Grenade_Goop_C",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_1:SCS_Node",
+          "ObjectPath": "/MotherGameplay/Items/Goop/B_Grenade_Goop.9"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_1:SCS_Node",
+          "ObjectPath": "/MotherGameplay/Items/Goop/B_Grenade_Goop.9"
+        },
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_2:SCS_Node",
+          "ObjectPath": "/MotherGameplay/Items/Goop/B_Grenade_Goop.10"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SimpleConstructionScript_0:SCS_Node_0:SCS_Node",
+        "ObjectPath": "/MotherGameplay/Items/Goop/B_Grenade_Goop.8"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponentBudgeted",
+    "Name": "WeaponMesh0",
+    "Outer": "Default__B_Grenade_Goop_C",
+    "Template": "WeaponMesh0"
+  }
+]

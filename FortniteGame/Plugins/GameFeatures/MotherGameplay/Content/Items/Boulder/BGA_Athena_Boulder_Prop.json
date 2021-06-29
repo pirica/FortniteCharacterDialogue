@@ -1,0 +1,147 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BGA_Athena_Boulder_Prop_C",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "BGA_Athena_Boulder_Prop_C:SimpleConstructionScript_741:SimpleConstructionScript",
+        "ObjectPath": "/MotherGameplay/Items/Boulder/BGA_Athena_Boulder_Prop.4"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BuildingProp:Class",
+      "ObjectPath": 0
+    },
+    "Children": [],
+    "ChildProperties": [],
+    "FuncMap": {},
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Game",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__BGA_Athena_Boulder_Prop_C:BGA_Athena_Boulder_Prop_C",
+      "ObjectPath": "/MotherGameplay/Items/Boulder/BGA_Athena_Boulder_Prop.1"
+    }
+  },
+  {
+    "Type": "BGA_Athena_Boulder_Prop_C",
+    "Name": "Default__BGA_Athena_Boulder_Prop_C",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "Boulder:StaticMesh",
+        "ObjectPath": "/MotherGameplay/Items/Boulder/Assets/Meshes/Boulder.1"
+      },
+      "ResourceType": "EFortResourceType::Stone",
+      "DestructionLootTierGroup": "Destruction_MechanicalMedium",
+      "StaticMeshComponent": {
+        "ObjectName": "Default__BGA_Athena_Boulder_Prop_C:StaticMeshComponent0:StaticMeshComponent",
+        "ObjectPath": "/MotherGameplay/Items/Boulder/BGA_Athena_Boulder_Prop.5"
+      },
+      "BuildingResourceAmountOverride": {
+        "CurveTable": {
+          "ObjectName": "AthenaResourceRates:CurveTable",
+          "ObjectPath": "/Game/Athena/Balance/DataTables/AthenaResourceRates.0"
+        },
+        "RowName": "ResourceStoneHigh"
+      },
+      "DeathParticles": {
+        "AssetPathName": "/Game/Effects/Fort_Effects/World/Destruction/Base_Effects/P_General_Deco_Destruction_Small.P_General_Deco_Destruction_Small",
+        "SubPathString": ""
+      },
+      "DeathParticleSocketName": "FX_Death",
+      "BuildingAttachmentType": "EBuildingAttachmentType::ATTACH_Floor",
+      "CurrentBuildingLevel": 1,
+      "AttributeInitKeys": {
+        "AttributeInitCategory": "ResourceStone",
+        "AttributeInitSubCategory": "4"
+      },
+      "AttributeInitKeys": {
+        "AttributeInitCategory": "ResourceStone",
+        "AttributeInitSubCategory": "4"
+      },
+      "NavigationObstacleOverride": "ENavigationObstacleOverride::ForceEnabled",
+      "bCanExportNavigationCollisions": true,
+      "bDestroyOnPlayerBuildingPlacement": true,
+      "StaticGameplayTags": [
+        "Building.Type.Prop"
+      ],
+      "CentroidOffset": {
+        "X": 0.0,
+        "Y": 20.0,
+        "Z": 8.0
+      },
+      "PhysicsObjectPresetTag": {
+        "TagName": "PhysicsObject.Preset.Roller.Ball.Boulder"
+      },
+      "PhysicsObjectPhysicalDataTag": {
+        "TagName": "PhysicsObject.PhysData.Mother.Boulder"
+      },
+      "PhysicsObjectBuoyancyDataTag": {
+        "TagName": "PhysicsObject.BuoyancyData.Sinker"
+      },
+      "PhysicsObjectImpactDamageDataTag": {
+        "TagName": "PhysicsObject.ImpactDamageData.Large"
+      },
+      "bEnableAutoLODGeneration": false,
+      "RootComponent": {
+        "ObjectName": "Default__BGA_Athena_Boulder_Prop_C:StaticMeshComponent0:StaticMeshComponent",
+        "ObjectPath": "/MotherGameplay/Items/Boulder/BGA_Athena_Boulder_Prop.5"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "SceneComponent_629",
+    "Outer": "BGA_Athena_Boulder_Prop_C"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_639",
+    "Outer": "SimpleConstructionScript_741",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "SceneComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BGA_Athena_Boulder_Prop_C:SceneComponent_629:SceneComponent",
+        "ObjectPath": "/MotherGameplay/Items/Boulder/BGA_Athena_Boulder_Prop.2"
+      },
+      "VariableGuid": "56BC9799-C494E6E6-321D4295-7D5EB316",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_741",
+    "Outer": "BGA_Athena_Boulder_Prop_C",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SimpleConstructionScript_741:SCS_Node_639:SCS_Node",
+        "ObjectPath": "/MotherGameplay/Items/Boulder/BGA_Athena_Boulder_Prop.3"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMeshComponent0",
+    "Outer": "Default__BGA_Athena_Boulder_Prop_C",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "Boulder:StaticMesh",
+        "ObjectPath": "/MotherGameplay/Items/Boulder/Assets/Meshes/Boulder.1"
+      },
+      "CanCharacterStepUpOn": "ECanBeCharacterBase::ECB_Yes",
+      "BodyInstance": {
+        "bAutoWeld": false
+      },
+      "bCanEverAffectNavigation": true
+    }
+  }
+]

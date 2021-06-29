@@ -1,0 +1,62 @@
+[
+  {
+    "Type": "PhysicsAsset",
+    "Name": "Cage_Saddle_Physics",
+    "Properties": {
+      "BoundsBodies": [
+        0
+      ],
+      "SkeletalBodySetups": [
+        {
+          "ObjectName": "Cage_Saddle_Physics:SkeletalBodySetup_0:SkeletalBodySetup",
+          "ObjectPath": "/MotherGameplay/Items/CageSaddle/Meshes/Cage_Saddle_Physics.1"
+        }
+      ],
+      "SolverIterations": {
+        "SolverIterations": 1,
+        "JointIterations": 1,
+        "CollisionIterations": 1
+      },
+      "ThumbnailInfo": null
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_0",
+    "Outer": "Cage_Saddle_Physics",
+    "Properties": {
+      "AggGeom": {
+        "SphereElems": [
+          {
+            "Center": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": -1.6428242
+            },
+            "Radius": 72.0,
+            "RestOffset": 0.0,
+            "Name": null,
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "PhysMaterial": {
+        "ObjectName": "Cage_Saddle_PhysicsMaterial:PhysicalMaterial",
+        "ObjectPath": "/MotherGameplay/Items/CageSaddle/Meshes/Cage_Saddle_PhysicsMaterial.0"
+      },
+      "DefaultInstance": {
+        "bUseCCD": true,
+        "bNotifyRigidBodyCollision": true,
+        "PhysMaterialOverride": {
+          "ObjectName": "Cage_Saddle_PhysicsMaterial:PhysicalMaterial",
+          "ObjectPath": "/MotherGameplay/Items/CageSaddle/Meshes/Cage_Saddle_PhysicsMaterial.0"
+        },
+        "bEnableGravity": false,
+        "bGenerateWakeEvents": true
+      },
+      "BoneName": "body",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    }
+  }
+]

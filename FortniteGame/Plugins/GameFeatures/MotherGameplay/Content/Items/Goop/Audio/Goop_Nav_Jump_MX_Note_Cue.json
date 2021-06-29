@@ -1,0 +1,141 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "Goop_Nav_Jump_MX_Note_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "Goop_Nav_Jump_MX_Note_Cue:SoundNodeMixer_0:SoundNodeMixer",
+        "ObjectPath": "/MotherGameplay/Items/Goop/Audio/Goop_Nav_Jump_MX_Note_Cue.1"
+      },
+      "VolumeMultiplier": 10.08,
+      "SoundClassObject": {
+        "ObjectName": "Fort_AudioGameplayVolumes:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_AudioGameplayVolumes.0"
+      },
+      "bOverrideConcurrency": true,
+      "VirtualizationMode": "EVirtualizationMode::Disabled",
+      "ConcurrencyOverrides": {
+        "MaxCount": 1,
+        "bLimitToOwner": true,
+        "ResolutionRule": "EMaxConcurrentResolutionRule::PreventNew"
+      },
+      "Duration": 6.2826667,
+      "MaxDistance": 3675.0,
+      "AttenuationSettings": {
+        "ObjectName": "Fort_Goop_Traversal_Att:SoundAttenuation",
+        "ObjectPath": "/MotherGameplay/Items/Goop/Audio/Fort_Goop_Traversal_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_0",
+    "Outer": "Goop_Nav_Jump_MX_Note_Cue",
+    "Properties": {
+      "InputVolume": [
+        1.65,
+        0.65
+      ],
+      "ChildNodes": [
+        null,
+        {
+          "ObjectName": "Goop_Nav_Jump_MX_Note_Cue:SoundNodeModulator_2:SoundNodeModulator",
+          "ObjectPath": "/MotherGameplay/Items/Goop/Audio/Goop_Nav_Jump_MX_Note_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_2",
+    "Outer": "Goop_Nav_Jump_MX_Note_Cue",
+    "Properties": {
+      "PitchMin": 1.0,
+      "PitchMax": 1.0,
+      "VolumeMin": 0.6,
+      "VolumeMax": 1.0,
+      "ChildNodes": [
+        {
+          "ObjectName": "Goop_Nav_Jump_MX_Note_Cue:SoundNodeRandom_2:SoundNodeRandom",
+          "ObjectPath": "/MotherGameplay/Items/Goop/Audio/Goop_Nav_Jump_MX_Note_Cue.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_2",
+    "Outer": "Goop_Nav_Jump_MX_Note_Cue",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bShouldExcludeFromBranchCulling": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "Goop_Nav_Jump_MX_Note_Cue:SoundNodeWavePlayer_12:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/Goop/Audio/Goop_Nav_Jump_MX_Note_Cue.4"
+        },
+        {
+          "ObjectName": "Goop_Nav_Jump_MX_Note_Cue:SoundNodeWavePlayer_13:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/Goop/Audio/Goop_Nav_Jump_MX_Note_Cue.5"
+        },
+        {
+          "ObjectName": "Goop_Nav_Jump_MX_Note_Cue:SoundNodeWavePlayer_14:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/Goop/Audio/Goop_Nav_Jump_MX_Note_Cue.6"
+        },
+        {
+          "ObjectName": "Goop_Nav_Jump_MX_Note_Cue:SoundNodeWavePlayer_15:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/Goop/Audio/Goop_Nav_Jump_MX_Note_Cue.7"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_12",
+    "Outer": "Goop_Nav_Jump_MX_Note_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Items/Goop/Audio/Goop_Jump_Whoosh_Music_01.Goop_Jump_Whoosh_Music_01",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_13",
+    "Outer": "Goop_Nav_Jump_MX_Note_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Items/Goop/Audio/Goop_Jump_Whoosh_Music_02.Goop_Jump_Whoosh_Music_02",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_14",
+    "Outer": "Goop_Nav_Jump_MX_Note_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Items/Goop/Audio/Goop_Jump_Whoosh_Music_03.Goop_Jump_Whoosh_Music_03",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_15",
+    "Outer": "Goop_Nav_Jump_MX_Note_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Items/Goop/Audio/Goop_Jump_Whoosh_Music_04.Goop_Jump_Whoosh_Music_04",
+        "SubPathString": ""
+      }
+    }
+  }
+]

@@ -1,0 +1,155 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GCNL_Athena_Scooter_PostProcess_C",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "GCNL_Athena_Scooter_PostProcess_C:SimpleConstructionScript_0:SimpleConstructionScript",
+        "ObjectPath": "/MotherGameplay/GameplayCues/GCNL_Athena_Scooter_PostProcess.7"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "FortGameplayCueNotify_Loop:Class",
+      "ObjectPath": 0
+    },
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "PostProcess",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "PostProcessComponent:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FuncMap": {},
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Engine",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__GCNL_Athena_Scooter_PostProcess_C:GCNL_Athena_Scooter_PostProcess_C",
+      "ObjectPath": "/MotherGameplay/GameplayCues/GCNL_Athena_Scooter_PostProcess.1"
+    }
+  },
+  {
+    "Type": "GCNL_Athena_Scooter_PostProcess_C",
+    "Name": "Default__GCNL_Athena_Scooter_PostProcess_C",
+    "Properties": {
+      "DefaultCondition": {
+        "Significance": "EParticleSignificanceLevel::Critical"
+      },
+      "GameplayCueTag": {
+        "TagName": "GameplayCue.Athena.Scooter.PostProcess.Player"
+      },
+      "GameplayCueName": "GameplayCue.Athena.Scooter.PostProcess.Player",
+      "RootComponent": {
+        "ObjectName": "Default__GCNL_Athena_Scooter_PostProcess_C:RootComponent:SceneComponent",
+        "ObjectPath": "/MotherGameplay/GameplayCues/GCNL_Athena_Scooter_PostProcess.3"
+      }
+    }
+  },
+  {
+    "Type": "PostProcessComponent",
+    "Name": "PostProcess_GEN_VARIABLE",
+    "Outer": "GCNL_Athena_Scooter_PostProcess_C",
+    "Properties": {
+      "Settings": {
+        "WeightedBlendables": {
+          "Array": [
+            {
+              "Weight": 1.0,
+              "Object": {
+                "ObjectName": "M_Scooter_PP_Stencil:Material",
+                "ObjectPath": "/MotherGameplay/Items/Scooter/Fx/M_Scooter_PP_Stencil.0"
+              }
+            }
+          ]
+        }
+      },
+      "Priority": 1.0
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "RootComponent",
+    "Outer": "Default__GCNL_Athena_Scooter_PostProcess_C"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "GCNL_Athena_Scooter_PostProcess_C"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "SceneComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": {
+        "ObjectName": "GCNL_Athena_Scooter_PostProcess_C:DefaultSceneRoot_GEN_VARIABLE:SceneComponent",
+        "ObjectPath": "/MotherGameplay/GameplayCues/GCNL_Athena_Scooter_PostProcess.4"
+      },
+      "VariableGuid": "3F9ED700-43CBE1FF-F7A45F9F-1BCFC7D4",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "PostProcessComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": {
+        "ObjectName": "GCNL_Athena_Scooter_PostProcess_C:PostProcess_GEN_VARIABLE:PostProcessComponent",
+        "ObjectPath": "/MotherGameplay/GameplayCues/GCNL_Athena_Scooter_PostProcess.2"
+      },
+      "ParentComponentOrVariableName": "RootComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "0D3BF05B-4D45B80F-334B4D99-ABB6358A",
+      "InternalVariableName": "PostProcess"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "GCNL_Athena_Scooter_PostProcess_C",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_1:SCS_Node",
+          "ObjectPath": "/MotherGameplay/GameplayCues/GCNL_Athena_Scooter_PostProcess.6"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_1:SCS_Node",
+          "ObjectPath": "/MotherGameplay/GameplayCues/GCNL_Athena_Scooter_PostProcess.6"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SimpleConstructionScript_0:SCS_Node_0:SCS_Node",
+        "ObjectPath": "/MotherGameplay/GameplayCues/GCNL_Athena_Scooter_PostProcess.5"
+      }
+    }
+  }
+]

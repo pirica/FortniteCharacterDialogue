@@ -1,0 +1,3513 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_RE_LlamaRoaster",
+    "Outer": "RE_LlamaRoaster_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 20,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "SignatureFunction": {
+          "ObjectName": "OnOverheatValueChanged__DelegateSignature:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 20,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "SignatureFunction": {
+          "ObjectName": "WidgetAnimationDynamicEvent__DelegateSignature:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_2",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 20,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "SignatureFunction": {
+          "ObjectName": "WidgetAnimationDynamicEvent__DelegateSignature:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_bIsADS",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetEquippedWeapon_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortWeapon:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsFort_Weapon_Ranged",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortWeaponRanged:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_CustomEvent_CurrentValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_CustomEvent_MaxValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_CustomEvent_State",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Enum": {
+          "ObjectName": "EFortWeaponOverheatState:Class",
+          "ObjectPath": 0
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": 1,
+          "ArrayDim": 1,
+          "ElementSize": 1,
+          "PropertyFlags": 0,
+          "RepIndex": 0,
+          "RepNotifyFunc": "None",
+          "BlueprintReplicationCondition": "COND_None",
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_CustomEvent_bIsInCooldown",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_PlayAnimationForward_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "UMGSequencePlayer:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_PlayAnimationReverse_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "UMGSequencePlayer:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 32769,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "CustomEvent_2",
+    "Outer": "RE_LlamaRoaster_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 201326592,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "CustomEvent_1",
+    "Outer": "RE_LlamaRoaster_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 201326592,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "CustomEvent_0",
+    "Outer": "RE_LlamaRoaster_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "CurrentValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "MaxValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "State",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Enum": {
+          "ObjectName": "EFortWeaponOverheatState:Class",
+          "ObjectPath": 0
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": 1,
+          "ArrayDim": 1,
+          "ElementSize": 1,
+          "PropertyFlags": 0,
+          "RepIndex": 0,
+          "RepNotifyFunc": "None",
+          "BlueprintReplicationCondition": "COND_None",
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsInCooldown",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 201326592,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "OnTargetingChanged",
+    "Outer": "RE_LlamaRoaster_C",
+    "SuperStruct": {
+      "ObjectName": "OnTargetingChanged:Class",
+      "ObjectPath": 0
+    },
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsADS",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 134744064,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "Construct",
+    "Outer": "RE_LlamaRoaster_C",
+    "SuperStruct": {
+      "ObjectName": "Construct:Class",
+      "ObjectPath": 0
+    },
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 134350856,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "UpdateOverheatBar",
+    "Outer": "RE_LlamaRoaster_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "Current",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Max",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Divide_FloatFloat_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetDynamicMaterial_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "MaterialInstanceDynamic:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Multiply_FloatFloat_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetDynamicMaterial_ReturnValue_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "MaterialInstanceDynamic:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetDynamicMaterial_ReturnValue_2",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "MaterialInstanceDynamic:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 201457664,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "ResetOverHeatBar",
+    "Outer": "RE_LlamaRoaster_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetDynamicMaterial_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "MaterialInstanceDynamic:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetDynamicMaterial_ReturnValue_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "MaterialInstanceDynamic:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetDynamicMaterial_ReturnValue_2",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "MaterialInstanceDynamic:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 201457664,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "ScaleRing",
+    "Outer": "RE_LlamaRoaster_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "Current",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Max",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Divide_FloatFloat_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Lerp_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector2D_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector2D:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 201457664,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "SetADSAnimStartState",
+    "Outer": "RE_LlamaRoaster_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_PlayAnimation_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "UMGSequencePlayer:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 201457664,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "SetADSAnimFinishedState",
+    "Outer": "RE_LlamaRoaster_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_PlayAnimation_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "UMGSequencePlayer:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 201457664,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "SetADSAnimationState",
+    "Outer": "RE_LlamaRoaster_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 201457664,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "RE_LlamaRoaster_C",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "RE_LlamaRoaster_C:WidgetTree:WidgetTree",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.133"
+      },
+      "Animations": [
+        {
+          "ObjectName": "RE_LlamaRoaster_C:ADS_INST:WidgetAnimation",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.130"
+        },
+        {
+          "ObjectName": "RE_LlamaRoaster_C:Intro_INST:WidgetAnimation",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.132"
+        },
+        {
+          "ObjectName": "RE_LlamaRoaster_C:ADS_EndState_INST:WidgetAnimation",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.129"
+        },
+        {
+          "ObjectName": "RE_LlamaRoaster_C:ADS_StartState_INST:WidgetAnimation",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.131"
+        }
+      ],
+      "UberGraphFunction": {
+        "ObjectName": "RE_LlamaRoaster_C:ExecuteUbergraph_RE_LlamaRoaster:Function",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "FortLlamaRoasterReticleExtensionWidget:Class",
+      "ObjectPath": 0
+    },
+    "Children": [
+      {
+        "ObjectName": "RE_LlamaRoaster_C:SetADSAnimationState:Function",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.11"
+      },
+      {
+        "ObjectName": "RE_LlamaRoaster_C:SetADSAnimFinishedState:Function",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.10"
+      },
+      {
+        "ObjectName": "RE_LlamaRoaster_C:SetADSAnimStartState:Function",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.9"
+      },
+      {
+        "ObjectName": "RE_LlamaRoaster_C:ScaleRing:Function",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.8"
+      },
+      {
+        "ObjectName": "RE_LlamaRoaster_C:ResetOverHeatBar:Function",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.7"
+      },
+      {
+        "ObjectName": "RE_LlamaRoaster_C:UpdateOverheatBar:Function",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.6"
+      },
+      {
+        "ObjectName": "RE_LlamaRoaster_C:Construct:Function",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.5"
+      },
+      {
+        "ObjectName": "RE_LlamaRoaster_C:OnTargetingChanged:Function",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.4"
+      },
+      {
+        "ObjectName": "RE_LlamaRoaster_C:CustomEvent_0:Function",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.3"
+      },
+      {
+        "ObjectName": "RE_LlamaRoaster_C:CustomEvent_1:Function",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.2"
+      },
+      {
+        "ObjectName": "RE_LlamaRoaster_C:CustomEvent_2:Function",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.1"
+      },
+      {
+        "ObjectName": "RE_LlamaRoaster_C:ExecuteUbergraph_RE_LlamaRoaster:Function",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 2105344,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "PointerToUberGraphFrame:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ADS_StartState",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 2147491860,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "WidgetAnimation:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ADS_EndState",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 2147491860,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "WidgetAnimation:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Intro",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 2147491860,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "WidgetAnimation:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ADS",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 2147491860,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "WidgetAnimation:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BottomFade",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 562952101429260,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Image:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Clamp",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 562952101429260,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Image:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Dot",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 562952101429260,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Image:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DotShadow",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 562952101429260,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Image:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Progress",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 562952101429260,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Image:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ProgressBacking",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 562952101429260,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Image:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ProgressNoise",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 562952101429260,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Image:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Ring",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 562952101429260,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Image:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "TopFade",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 562952101429260,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Image:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Current Value",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Max Value",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Is ADS",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "ResetValue",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "ADSAnimFinshedPlaying",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "State",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Enum": {
+          "ObjectName": "EFortWeaponOverheatState:Class",
+          "ObjectPath": 0
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": 1,
+          "ArrayDim": 1,
+          "ElementSize": 1,
+          "PropertyFlags": 0,
+          "RepIndex": 0,
+          "RepNotifyFunc": "None",
+          "BlueprintReplicationCondition": "COND_None",
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "ADSStartState",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_RE_LlamaRoaster": {
+        "ObjectName": "RE_LlamaRoaster_C:ExecuteUbergraph_RE_LlamaRoaster:Function",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.0"
+      },
+      "CustomEvent_2": {
+        "ObjectName": "RE_LlamaRoaster_C:CustomEvent_2:Function",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.1"
+      },
+      "CustomEvent_1": {
+        "ObjectName": "RE_LlamaRoaster_C:CustomEvent_1:Function",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.2"
+      },
+      "CustomEvent_0": {
+        "ObjectName": "RE_LlamaRoaster_C:CustomEvent_0:Function",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.3"
+      },
+      "OnTargetingChanged": {
+        "ObjectName": "RE_LlamaRoaster_C:OnTargetingChanged:Function",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.4"
+      },
+      "Construct": {
+        "ObjectName": "RE_LlamaRoaster_C:Construct:Function",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.5"
+      },
+      "UpdateOverheatBar": {
+        "ObjectName": "RE_LlamaRoaster_C:UpdateOverheatBar:Function",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.6"
+      },
+      "ResetOverHeatBar": {
+        "ObjectName": "RE_LlamaRoaster_C:ResetOverHeatBar:Function",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.7"
+      },
+      "ScaleRing": {
+        "ObjectName": "RE_LlamaRoaster_C:ScaleRing:Function",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.8"
+      },
+      "SetADSAnimStartState": {
+        "ObjectName": "RE_LlamaRoaster_C:SetADSAnimStartState:Function",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.9"
+      },
+      "SetADSAnimFinishedState": {
+        "ObjectName": "RE_LlamaRoaster_C:SetADSAnimFinishedState:Function",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.10"
+      },
+      "SetADSAnimationState": {
+        "ObjectName": "RE_LlamaRoaster_C:SetADSAnimationState:Function",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.11"
+      }
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Engine",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__RE_LlamaRoaster_C:RE_LlamaRoaster_C",
+      "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.13"
+    }
+  },
+  {
+    "Type": "RE_LlamaRoaster_C",
+    "Name": "Default__RE_LlamaRoaster_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "BottomFade",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Brush": {
+        "ResourceObject": {
+          "ObjectName": "M_UI_LlamaRoaster_Overheat_Bracket_Fade_2:MaterialInstanceConstant",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/UI_Assets/M_UI_LlamaRoaster_Overheat_Bracket_Fade_2.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlayContent:OverlaySlot_14:OverlaySlot",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.122"
+      },
+      "RenderTransform": {
+        "Angle": 93.0
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible",
+      "RenderOpacity": 0.0
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Clamp",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 128.0,
+          "Y": 128.0
+        },
+        "ResourceObject": {
+          "ObjectName": "M_UI_LlamaRoaster_Overheat_Bracket:MaterialInstanceConstant",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/UI_Assets/M_UI_LlamaRoaster_Overheat_Bracket.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlayContent:OverlaySlot_8:OverlaySlot",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.126"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Dot",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 8.0,
+          "Y": 8.0
+        },
+        "ResourceObject": {
+          "ObjectName": "M_UI_LlamaRoaster_Circle:MaterialInstanceConstant",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/UI_Assets/M_UI_LlamaRoaster_Circle.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlayAll:OverlaySlot_1:OverlaySlot",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.118"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "DotShadow",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 10.0,
+          "Y": 10.0
+        },
+        "ResourceObject": {
+          "ObjectName": "M_UI_LlamaRoaster_Circle_Shadow:MaterialInstanceConstant",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/UI_Assets/M_UI_LlamaRoaster_Circle_Shadow.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlayAll:OverlaySlot_2:OverlaySlot",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.119"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Progress",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 128.0,
+          "Y": 128.0
+        },
+        "ResourceObject": {
+          "ObjectName": "M_UI_LlamaRoaster_Overheat_Filll:MaterialInstanceConstant",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/UI_Assets/M_UI_LlamaRoaster_Overheat_Filll.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlayContent:OverlaySlot_2:OverlaySlot",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.124"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "ProgressBacking",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Brush": {
+        "ResourceObject": {
+          "ObjectName": "M_UI_LlamaRoaster_Overheat_Clamp_Backing:MaterialInstanceConstant",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/UI_Assets/M_UI_LlamaRoaster_Overheat_Clamp_Backing.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlayContent:OverlaySlot_5:OverlaySlot",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.125"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "ProgressNoise",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Brush": {
+        "ResourceObject": {
+          "ObjectName": "M_UI_LlamaRoaster_Overheat_Filll_Inst:MaterialInstanceConstant",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/UI_Assets/M_UI_LlamaRoaster_Overheat_Filll_Inst.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlayContent:OverlaySlot_12:OverlaySlot",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.120"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "Ring",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 48.0,
+          "Y": 48.0
+        },
+        "ResourceObject": {
+          "ObjectName": "M_UI_LlamaRoaster_Reticle:MaterialInstanceConstant",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/UI_Assets/M_UI_LlamaRoaster_Reticle.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlayContent:OverlaySlot_15:OverlaySlot",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.123"
+      },
+      "Visibility": "ESlateVisibility::Collapsed"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "TopFade",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Brush": {
+        "ResourceObject": {
+          "ObjectName": "M_UI_LlamaRoaster_Overheat_Bracket_Fade_1:MaterialInstanceConstant",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/UI_Assets/M_UI_LlamaRoaster_Overheat_Bracket_Fade_1.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlayContent:OverlaySlot_13:OverlaySlot",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.121"
+      },
+      "RenderTransform": {
+        "Angle": -93.0
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible",
+      "RenderOpacity": 0.0
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "ADS_EndState",
+    "Outer": "ADS_EndState_INST",
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "359E9BA8-4F6BFB3A-E601D4A7-59D59B48",
+          "Name": "OverlayContent",
+          "PossessedObjectClass": {
+            "ObjectName": "SizeBox:Class",
+            "ObjectPath": 0
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "797D8F28-4EF960B5-218DC3A0-7E35EA16",
+          "Name": "TopFade",
+          "PossessedObjectClass": {
+            "ObjectName": "Image:Class",
+            "ObjectPath": 0
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "F5E1667C-463A7391-4F5746BE-6F54A4D7",
+          "Name": "BottomFade",
+          "PossessedObjectClass": {
+            "ObjectName": "Image:Class",
+            "ObjectPath": 0
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "359E9BA8-4F6BFB3A-E601D4A7-59D59B48",
+          "BindingName": "SizeBox_0",
+          "Tracks": [
+            {
+              "ObjectName": "ADS_EndState:MovieScene2DTransformTrack_0:MovieScene2DTransformTrack",
+              "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.31"
+            },
+            {
+              "ObjectName": "ADS_EndState:MovieSceneFloatTrack_0:MovieSceneFloatTrack",
+              "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.91"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "797D8F28-4EF960B5-218DC3A0-7E35EA16",
+          "BindingName": "TopFade",
+          "Tracks": [
+            {
+              "ObjectName": "ADS_EndState:MovieSceneFloatTrack_2:MovieSceneFloatTrack",
+              "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.93"
+            },
+            {
+              "ObjectName": "ADS_EndState:MovieSceneWidgetMaterialTrack_1:MovieSceneWidgetMaterialTrack",
+              "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.109"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "F5E1667C-463A7391-4F5746BE-6F54A4D7",
+          "BindingName": "BottomFade",
+          "Tracks": [
+            {
+              "ObjectName": "ADS_EndState:MovieSceneFloatTrack_1:MovieSceneFloatTrack",
+              "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.92"
+            },
+            {
+              "ObjectName": "ADS_EndState:MovieSceneWidgetMaterialTrack_0:MovieSceneWidgetMaterialTrack",
+              "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.108"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "FrameRangeValue": {
+          "LowerBound": {
+            "BoundType": 1,
+            "BoundValue": {
+              "FrameNumberValue": 393216000
+            }
+          },
+          "UpperBound": {
+            "BoundType": 0,
+            "BoundValue": {
+              "FrameNumberValue": 20
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": -637124990,
+        "Denominator": 1144881801
+      },
+      "Signature": "23075BB7-F45DBD08-00000000-00000101"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "ADS",
+    "Outer": "ADS_INST",
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "359E9BA8-4F6BFB3A-E601D4A7-59D59B48",
+          "Name": "OverlayContent",
+          "PossessedObjectClass": {
+            "ObjectName": "SizeBox:Class",
+            "ObjectPath": 0
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "797D8F28-4EF960B5-218DC3A0-7E35EA16",
+          "Name": "TopFade",
+          "PossessedObjectClass": {
+            "ObjectName": "Image:Class",
+            "ObjectPath": 0
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "F5E1667C-463A7391-4F5746BE-6F54A4D7",
+          "Name": "BottomFade",
+          "PossessedObjectClass": {
+            "ObjectName": "Image:Class",
+            "ObjectPath": 0
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "359E9BA8-4F6BFB3A-E601D4A7-59D59B48",
+          "BindingName": "SizeBox_0",
+          "Tracks": [
+            {
+              "ObjectName": "ADS:MovieScene2DTransformTrack_0:MovieScene2DTransformTrack",
+              "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.32"
+            },
+            {
+              "ObjectName": "ADS:MovieSceneFloatTrack_0:MovieSceneFloatTrack",
+              "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.94"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "797D8F28-4EF960B5-218DC3A0-7E35EA16",
+          "BindingName": "TopFade",
+          "Tracks": [
+            {
+              "ObjectName": "ADS:MovieSceneFloatTrack_2:MovieSceneFloatTrack",
+              "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.96"
+            },
+            {
+              "ObjectName": "ADS:MovieSceneWidgetMaterialTrack_1:MovieSceneWidgetMaterialTrack",
+              "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.111"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "F5E1667C-463A7391-4F5746BE-6F54A4D7",
+          "BindingName": "BottomFade",
+          "Tracks": [
+            {
+              "ObjectName": "ADS:MovieSceneFloatTrack_1:MovieSceneFloatTrack",
+              "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.95"
+            },
+            {
+              "ObjectName": "ADS:MovieSceneWidgetMaterialTrack_0:MovieSceneWidgetMaterialTrack",
+              "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.110"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "FrameRangeValue": {
+          "LowerBound": {
+            "BoundType": 1,
+            "BoundValue": {
+              "FrameNumberValue": 524353536
+            }
+          },
+          "UpperBound": {
+            "BoundType": 0,
+            "BoundValue": {
+              "FrameNumberValue": 60
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 1553881340,
+        "Denominator": 1095329047
+      },
+      "Signature": "A31C288E-00522A7C-00000000-00000101"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "ADS_StartState",
+    "Outer": "ADS_StartState_INST",
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "359E9BA8-4F6BFB3A-E601D4A7-59D59B48",
+          "Name": "OverlayContent",
+          "PossessedObjectClass": {
+            "ObjectName": "SizeBox:Class",
+            "ObjectPath": 0
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "797D8F28-4EF960B5-218DC3A0-7E35EA16",
+          "Name": "TopFade",
+          "PossessedObjectClass": {
+            "ObjectName": "Image:Class",
+            "ObjectPath": 0
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "F5E1667C-463A7391-4F5746BE-6F54A4D7",
+          "Name": "BottomFade",
+          "PossessedObjectClass": {
+            "ObjectName": "Image:Class",
+            "ObjectPath": 0
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "359E9BA8-4F6BFB3A-E601D4A7-59D59B48",
+          "BindingName": "SizeBox_0",
+          "Tracks": [
+            {
+              "ObjectName": "ADS_StartState:MovieScene2DTransformTrack_0:MovieScene2DTransformTrack",
+              "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.33"
+            },
+            {
+              "ObjectName": "ADS_StartState:MovieSceneFloatTrack_0:MovieSceneFloatTrack",
+              "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.97"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "797D8F28-4EF960B5-218DC3A0-7E35EA16",
+          "BindingName": "TopFade",
+          "Tracks": [
+            {
+              "ObjectName": "ADS_StartState:MovieSceneFloatTrack_2:MovieSceneFloatTrack",
+              "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.99"
+            },
+            {
+              "ObjectName": "ADS_StartState:MovieSceneWidgetMaterialTrack_1:MovieSceneWidgetMaterialTrack",
+              "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.113"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "F5E1667C-463A7391-4F5746BE-6F54A4D7",
+          "BindingName": "BottomFade",
+          "Tracks": [
+            {
+              "ObjectName": "ADS_StartState:MovieSceneFloatTrack_1:MovieSceneFloatTrack",
+              "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.98"
+            },
+            {
+              "ObjectName": "ADS_StartState:MovieSceneWidgetMaterialTrack_0:MovieSceneWidgetMaterialTrack",
+              "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.112"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "FrameRangeValue": {
+          "LowerBound": {
+            "BoundType": 1,
+            "BoundValue": {
+              "FrameNumberValue": 393281536
+            }
+          },
+          "UpperBound": {
+            "BoundType": 0,
+            "BoundValue": {
+              "FrameNumberValue": 20
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": -221569107,
+        "Denominator": 1227137802
+      },
+      "Signature": "821FDFBB-483E3183-00000000-00000101"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "Intro",
+    "Outer": "Intro_INST",
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "38674DF3-43872579-3C84B7BD-E0B4461D",
+          "Name": "OverlayAll",
+          "PossessedObjectClass": {
+            "ObjectName": "Overlay:Class",
+            "ObjectPath": 0
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "Tags": [],
+          "Guid": "3D31650D-4B2CCC35-6109EBBF-8EB1034A",
+          "Name": "Clamp",
+          "PossessedObjectClass": {
+            "ObjectName": "Image:Class",
+            "ObjectPath": 0
+          },
+          "ParentGuid": "00000000-00000000-00000000-00000000"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "38674DF3-43872579-3C84B7BD-E0B4461D",
+          "BindingName": "Overlay_0",
+          "Tracks": [
+            {
+              "ObjectName": "Intro:MovieScene2DTransformTrack_0:MovieScene2DTransformTrack",
+              "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.34"
+            },
+            {
+              "ObjectName": "Intro:MovieSceneFloatTrack_0:MovieSceneFloatTrack",
+              "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.100"
+            }
+          ]
+        },
+        {
+          "ObjectGuid": "3D31650D-4B2CCC35-6109EBBF-8EB1034A",
+          "BindingName": "Clamp",
+          "Tracks": [
+            {
+              "ObjectName": "Intro:MovieSceneWidgetMaterialTrack_1:MovieSceneWidgetMaterialTrack",
+              "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.114"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "FrameRangeValue": {
+          "LowerBound": {
+            "BoundType": 1,
+            "BoundValue": {
+              "FrameNumberValue": 589955327
+            }
+          },
+          "UpperBound": {
+            "BoundType": 0,
+            "BoundValue": {
+              "FrameNumberValue": 60
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": -1205540001,
+        "Denominator": 1178336563
+      },
+      "Signature": "A450F084-32F3A4B9-00000000-00000101"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Outer": "MovieScene2DTransformTrack_0"
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Outer": "MovieScene2DTransformTrack_0"
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Outer": "MovieScene2DTransformTrack_0"
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Outer": "MovieScene2DTransformTrack_0"
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_0",
+    "Outer": "ADS_EndState",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformTrack_0:MovieScene2DTransformSection_0:MovieScene2DTransformSection",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.27"
+        }
+      ],
+      "EvaluationFieldGuid": "A6EF73D9-461763BB-C5F8C999-F8241241",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformTrack_0:MovieScene2DTransformSection_0:MovieScene2DTransformSection",
+              "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.27"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "FrameNumberValue": 6000
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "A6EF73D9-461763BB-C5F8C999-F8241241"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_0",
+    "Outer": "ADS",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformTrack_0:MovieScene2DTransformSection_0:MovieScene2DTransformSection",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.28"
+        }
+      ],
+      "EvaluationFieldGuid": "2B1E976C-4805A5B9-7F33E2B2-C292BAF9",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformTrack_0:MovieScene2DTransformSection_0:MovieScene2DTransformSection",
+              "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.28"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "2B1E976C-4805A5B9-7F33E2B2-C292BAF9"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_0",
+    "Outer": "ADS_StartState",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformTrack_0:MovieScene2DTransformSection_0:MovieScene2DTransformSection",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.29"
+        }
+      ],
+      "EvaluationFieldGuid": "1AF383A3-48E28984-E1B1CBB4-DC8EAC22",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformTrack_0:MovieScene2DTransformSection_0:MovieScene2DTransformSection",
+              "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.29"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "FrameNumberValue": 6001
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "1AF383A3-48E28984-E1B1CBB4-DC8EAC22"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_0",
+    "Outer": "Intro",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformTrack_0:MovieScene2DTransformSection_0:MovieScene2DTransformSection",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.30"
+        }
+      ],
+      "EvaluationFieldGuid": "7E993313-424B9660-8B7D2693-1BE9E6EA",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformTrack_0:MovieScene2DTransformSection_0:MovieScene2DTransformSection",
+              "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.30"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "7E993313-424B9660-8B7D2693-1BE9E6EA"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieScene2DTransformSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieScene2DTransformSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieSceneFloatSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieSceneFloatSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieSceneFloatSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieSceneFloatSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieSceneFloatSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieSceneFloatSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieSceneParameterSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieSceneParameterSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieSceneParameterSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieSceneParameterSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieScene2DTransformSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieScene2DTransformSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieSceneFloatSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieSceneFloatSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieSceneFloatSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieSceneFloatSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieSceneFloatSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieSceneFloatSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieSceneParameterSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieSceneParameterSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieSceneParameterSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieSceneParameterSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieScene2DTransformSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieScene2DTransformSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieSceneFloatSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieSceneFloatSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieSceneFloatSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieSceneFloatSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieSceneFloatSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieSceneFloatSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieSceneParameterSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieSceneParameterSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieSceneParameterSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieSceneParameterSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieScene2DTransformSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieScene2DTransformSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieSceneFloatSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieSceneFloatSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieSceneParameterSection_0"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieSceneParameterSection_0"
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Outer": "ADS_EndState_INST"
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Outer": "ADS_INST"
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Outer": "ADS_StartState_INST"
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Outer": "Intro_INST"
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Outer": "MovieSceneFloatTrack_0"
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Outer": "MovieSceneFloatTrack_1"
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Outer": "MovieSceneFloatTrack_2"
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Outer": "MovieSceneFloatTrack_0"
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Outer": "MovieSceneFloatTrack_1"
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Outer": "MovieSceneFloatTrack_2"
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Outer": "MovieSceneFloatTrack_0"
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Outer": "MovieSceneFloatTrack_1"
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Outer": "MovieSceneFloatTrack_2"
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Outer": "MovieSceneFloatTrack_0"
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_0",
+    "Outer": "ADS_EndState",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatTrack_0:MovieSceneFloatSection_0:MovieSceneFloatSection",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.81"
+        }
+      ],
+      "EvaluationFieldGuid": "0546FD42-45DDBB19-67C27CBB-B627B672",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatTrack_0:MovieSceneFloatSection_0:MovieSceneFloatSection",
+              "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.81"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "0546FD42-45DDBB19-67C27CBB-B627B672"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_1",
+    "Outer": "ADS_EndState",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatTrack_1:MovieSceneFloatSection_0:MovieSceneFloatSection",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.82"
+        }
+      ],
+      "EvaluationFieldGuid": "A8B30C44-4F6D803B-C1893D80-329A7FC0",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatTrack_1:MovieSceneFloatSection_0:MovieSceneFloatSection",
+              "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.82"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "FrameNumberValue": 6000
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "A8B30C44-4F6D803B-C1893D80-329A7FC0"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_2",
+    "Outer": "ADS_EndState",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatTrack_2:MovieSceneFloatSection_0:MovieSceneFloatSection",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.83"
+        }
+      ],
+      "EvaluationFieldGuid": "024E3F56-496138C0-710E6CA7-9479E80F",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatTrack_2:MovieSceneFloatSection_0:MovieSceneFloatSection",
+              "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.83"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "024E3F56-496138C0-710E6CA7-9479E80F"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_0",
+    "Outer": "ADS",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatTrack_0:MovieSceneFloatSection_0:MovieSceneFloatSection",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.84"
+        }
+      ],
+      "EvaluationFieldGuid": "4428056F-4A8D62A8-0C946DA5-7DADF028",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatTrack_0:MovieSceneFloatSection_0:MovieSceneFloatSection",
+              "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.84"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "4428056F-4A8D62A8-0C946DA5-7DADF028"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_1",
+    "Outer": "ADS",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatTrack_1:MovieSceneFloatSection_0:MovieSceneFloatSection",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.85"
+        }
+      ],
+      "EvaluationFieldGuid": "974D0496-40CF1317-4700CB97-84D0C29E",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatTrack_1:MovieSceneFloatSection_0:MovieSceneFloatSection",
+              "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.85"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "974D0496-40CF1317-4700CB97-84D0C29E"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_2",
+    "Outer": "ADS",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatTrack_2:MovieSceneFloatSection_0:MovieSceneFloatSection",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.86"
+        }
+      ],
+      "EvaluationFieldGuid": "F2EF9040-4E7A356C-CBC160B6-4CA911CF",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatTrack_2:MovieSceneFloatSection_0:MovieSceneFloatSection",
+              "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.86"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "F2EF9040-4E7A356C-CBC160B6-4CA911CF"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_0",
+    "Outer": "ADS_StartState",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatTrack_0:MovieSceneFloatSection_0:MovieSceneFloatSection",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.87"
+        }
+      ],
+      "EvaluationFieldGuid": "B7B0ACC2-45F87E36-A488C99A-7EF5B9C7",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatTrack_0:MovieSceneFloatSection_0:MovieSceneFloatSection",
+              "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.87"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "B7B0ACC2-45F87E36-A488C99A-7EF5B9C7"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_1",
+    "Outer": "ADS_StartState",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatTrack_1:MovieSceneFloatSection_0:MovieSceneFloatSection",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.88"
+        }
+      ],
+      "EvaluationFieldGuid": "53AA4E58-415FE720-35E561BE-8A14E7C7",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatTrack_1:MovieSceneFloatSection_0:MovieSceneFloatSection",
+              "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.88"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "53AA4E58-415FE720-35E561BE-8A14E7C7"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_2",
+    "Outer": "ADS_StartState",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatTrack_2:MovieSceneFloatSection_0:MovieSceneFloatSection",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.89"
+        }
+      ],
+      "EvaluationFieldGuid": "469B039A-4940A0AB-B3D3479C-57C0AFEC",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatTrack_2:MovieSceneFloatSection_0:MovieSceneFloatSection",
+              "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.89"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "469B039A-4940A0AB-B3D3479C-57C0AFEC"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_0",
+    "Outer": "Intro",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatTrack_0:MovieSceneFloatSection_0:MovieSceneFloatSection",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.90"
+        }
+      ],
+      "EvaluationFieldGuid": "4021116C-44F4A00E-B56868BA-D6CC82A3",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatTrack_0:MovieSceneFloatSection_0:MovieSceneFloatSection",
+              "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.90"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "4021116C-44F4A00E-B56868BA-D6CC82A3"
+    }
+  },
+  {
+    "Type": "MovieSceneParameterSection",
+    "Name": "MovieSceneParameterSection_0",
+    "Outer": "MovieSceneWidgetMaterialTrack_0"
+  },
+  {
+    "Type": "MovieSceneParameterSection",
+    "Name": "MovieSceneParameterSection_0",
+    "Outer": "MovieSceneWidgetMaterialTrack_1"
+  },
+  {
+    "Type": "MovieSceneParameterSection",
+    "Name": "MovieSceneParameterSection_0",
+    "Outer": "MovieSceneWidgetMaterialTrack_0"
+  },
+  {
+    "Type": "MovieSceneParameterSection",
+    "Name": "MovieSceneParameterSection_0",
+    "Outer": "MovieSceneWidgetMaterialTrack_1"
+  },
+  {
+    "Type": "MovieSceneParameterSection",
+    "Name": "MovieSceneParameterSection_0",
+    "Outer": "MovieSceneWidgetMaterialTrack_0"
+  },
+  {
+    "Type": "MovieSceneParameterSection",
+    "Name": "MovieSceneParameterSection_0",
+    "Outer": "MovieSceneWidgetMaterialTrack_1"
+  },
+  {
+    "Type": "MovieSceneParameterSection",
+    "Name": "MovieSceneParameterSection_0",
+    "Outer": "MovieSceneWidgetMaterialTrack_1"
+  },
+  {
+    "Type": "MovieSceneWidgetMaterialTrack",
+    "Name": "MovieSceneWidgetMaterialTrack_0",
+    "Outer": "ADS_EndState",
+    "Properties": {
+      "BrushPropertyNamePath": [
+        "Brush"
+      ],
+      "TrackName": "Brush",
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneWidgetMaterialTrack_0:MovieSceneParameterSection_0:MovieSceneParameterSection",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.101"
+        }
+      ],
+      "EvaluationFieldGuid": "9656DDC8-411D64F1-3FB6C38D-2E8DA924",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneWidgetMaterialTrack_0:MovieSceneParameterSection_0:MovieSceneParameterSection",
+              "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.101"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": {
+                  "FrameNumberValue": 6000
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "9656DDC8-411D64F1-3FB6C38D-2E8DA924"
+    }
+  },
+  {
+    "Type": "MovieSceneWidgetMaterialTrack",
+    "Name": "MovieSceneWidgetMaterialTrack_1",
+    "Outer": "ADS_EndState",
+    "Properties": {
+      "BrushPropertyNamePath": [
+        "Brush"
+      ],
+      "TrackName": "Brush",
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneWidgetMaterialTrack_1:MovieSceneParameterSection_0:MovieSceneParameterSection",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.102"
+        }
+      ],
+      "EvaluationFieldGuid": "0C36284C-4FAA544E-3A891681-F4F889E2",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneWidgetMaterialTrack_1:MovieSceneParameterSection_0:MovieSceneParameterSection",
+              "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.102"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "0C36284C-4FAA544E-3A891681-F4F889E2"
+    }
+  },
+  {
+    "Type": "MovieSceneWidgetMaterialTrack",
+    "Name": "MovieSceneWidgetMaterialTrack_0",
+    "Outer": "ADS",
+    "Properties": {
+      "BrushPropertyNamePath": [
+        "Brush"
+      ],
+      "TrackName": "Brush",
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneWidgetMaterialTrack_0:MovieSceneParameterSection_0:MovieSceneParameterSection",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.103"
+        }
+      ],
+      "EvaluationFieldGuid": "FE3B3424-4BE83C7D-AC96EB9C-4491BCB2",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneWidgetMaterialTrack_0:MovieSceneParameterSection_0:MovieSceneParameterSection",
+              "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.103"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "FE3B3424-4BE83C7D-AC96EB9C-4491BCB2"
+    }
+  },
+  {
+    "Type": "MovieSceneWidgetMaterialTrack",
+    "Name": "MovieSceneWidgetMaterialTrack_1",
+    "Outer": "ADS",
+    "Properties": {
+      "BrushPropertyNamePath": [
+        "Brush"
+      ],
+      "TrackName": "Brush",
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneWidgetMaterialTrack_1:MovieSceneParameterSection_0:MovieSceneParameterSection",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.104"
+        }
+      ],
+      "EvaluationFieldGuid": "653C680D-49A708E4-4CEC23AE-6CF55641",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneWidgetMaterialTrack_1:MovieSceneParameterSection_0:MovieSceneParameterSection",
+              "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.104"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "653C680D-49A708E4-4CEC23AE-6CF55641"
+    }
+  },
+  {
+    "Type": "MovieSceneWidgetMaterialTrack",
+    "Name": "MovieSceneWidgetMaterialTrack_0",
+    "Outer": "ADS_StartState",
+    "Properties": {
+      "BrushPropertyNamePath": [
+        "Brush"
+      ],
+      "TrackName": "Brush",
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneWidgetMaterialTrack_0:MovieSceneParameterSection_0:MovieSceneParameterSection",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.105"
+        }
+      ],
+      "EvaluationFieldGuid": "C25A2646-4DFDA066-8139919C-187514E8",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneWidgetMaterialTrack_0:MovieSceneParameterSection_0:MovieSceneParameterSection",
+              "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.105"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "C25A2646-4DFDA066-8139919C-187514E8"
+    }
+  },
+  {
+    "Type": "MovieSceneWidgetMaterialTrack",
+    "Name": "MovieSceneWidgetMaterialTrack_1",
+    "Outer": "ADS_StartState",
+    "Properties": {
+      "BrushPropertyNamePath": [
+        "Brush"
+      ],
+      "TrackName": "Brush",
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneWidgetMaterialTrack_1:MovieSceneParameterSection_0:MovieSceneParameterSection",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.106"
+        }
+      ],
+      "EvaluationFieldGuid": "F224894F-43E37A02-A7FAB6B8-857708CA",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneWidgetMaterialTrack_1:MovieSceneParameterSection_0:MovieSceneParameterSection",
+              "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.106"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "F224894F-43E37A02-A7FAB6B8-857708CA"
+    }
+  },
+  {
+    "Type": "MovieSceneWidgetMaterialTrack",
+    "Name": "MovieSceneWidgetMaterialTrack_1",
+    "Outer": "Intro",
+    "Properties": {
+      "BrushPropertyNamePath": [
+        "Brush"
+      ],
+      "TrackName": "Brush",
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneWidgetMaterialTrack_1:MovieSceneParameterSection_0:MovieSceneParameterSection",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.107"
+        }
+      ],
+      "EvaluationFieldGuid": "580CF306-4091B772-75189ABC-F29CF65F",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneWidgetMaterialTrack_1:MovieSceneParameterSection_0:MovieSceneParameterSection",
+              "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.107"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "FrameNumberValue": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "FrameNumberValue": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "580CF306-4091B772-75189ABC-F29CF65F"
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "OverlayAll",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlayAll:OverlaySlot_0:OverlaySlot",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.117"
+        },
+        {
+          "ObjectName": "OverlayAll:OverlaySlot_2:OverlaySlot",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.119"
+        },
+        {
+          "ObjectName": "OverlayAll:OverlaySlot_1:OverlaySlot",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.118"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBox_0:SizeBoxSlot_0:SizeBoxSlot",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.128"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "OverlayContent",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlayContent:OverlaySlot_5:OverlaySlot",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.125"
+        },
+        {
+          "ObjectName": "OverlayContent:OverlaySlot_12:OverlaySlot",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.120"
+        },
+        {
+          "ObjectName": "OverlayContent:OverlaySlot_2:OverlaySlot",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.124"
+        },
+        {
+          "ObjectName": "OverlayContent:OverlaySlot_8:OverlaySlot",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.126"
+        },
+        {
+          "ObjectName": "OverlayContent:OverlaySlot_13:OverlaySlot",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.121"
+        },
+        {
+          "ObjectName": "OverlayContent:OverlaySlot_14:OverlaySlot",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.122"
+        },
+        {
+          "ObjectName": "OverlayContent:OverlaySlot_15:OverlaySlot",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.123"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlayAll:OverlaySlot_0:OverlaySlot",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.117"
+      },
+      "RenderTransform": {
+        "Scale": {
+          "X": 0.666,
+          "Y": 0.666
+        }
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Outer": "OverlayAll",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Fill",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
+      "Parent": {
+        "ObjectName": "WidgetTree:OverlayAll:Overlay",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.115"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:OverlayContent:Overlay",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.116"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Outer": "OverlayAll",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:OverlayAll:Overlay",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.115"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Dot:Image",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.16"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_2",
+    "Outer": "OverlayAll",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:OverlayAll:Overlay",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.115"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:DotShadow:Image",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.17"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_12",
+    "Outer": "OverlayContent",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Fill",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
+      "Parent": {
+        "ObjectName": "WidgetTree:OverlayContent:Overlay",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.116"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:ProgressNoise:Image",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.20"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_13",
+    "Outer": "OverlayContent",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Fill",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
+      "Parent": {
+        "ObjectName": "WidgetTree:OverlayContent:Overlay",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.116"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:TopFade:Image",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.22"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_14",
+    "Outer": "OverlayContent",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Fill",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
+      "Parent": {
+        "ObjectName": "WidgetTree:OverlayContent:Overlay",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.116"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:BottomFade:Image",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.14"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_15",
+    "Outer": "OverlayContent",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "WidgetTree:OverlayContent:Overlay",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.116"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Ring:Image",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.21"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_2",
+    "Outer": "OverlayContent",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Fill",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
+      "Parent": {
+        "ObjectName": "WidgetTree:OverlayContent:Overlay",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.116"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Progress:Image",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.18"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_5",
+    "Outer": "OverlayContent",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Fill",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
+      "Parent": {
+        "ObjectName": "WidgetTree:OverlayContent:Overlay",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.116"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:ProgressBacking:Image",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.19"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_8",
+    "Outer": "OverlayContent",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Fill",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
+      "Parent": {
+        "ObjectName": "WidgetTree:OverlayContent:Overlay",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.116"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:Clamp:Image",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.15"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_0",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "WidthOverride": 320.0,
+      "HeightOverride": 320.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBox_0:SizeBoxSlot_0:SizeBoxSlot",
+          "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.128"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Outer": "SizeBox_0",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "WidgetTree:SizeBox_0:SizeBox",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.127"
+      },
+      "Content": {
+        "ObjectName": "WidgetTree:OverlayAll:Overlay",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.115"
+      }
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "ADS_EndState_INST",
+    "Outer": "RE_LlamaRoaster_C",
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "ADS_EndState_INST:ADS_EndState:MovieScene",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.23"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "TopFade",
+          "SlotWidgetName": null,
+          "AnimationGuid": "797D8F28-4EF960B5-218DC3A0-7E35EA16",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "BottomFade",
+          "SlotWidgetName": null,
+          "AnimationGuid": "F5E1667C-463A7391-4F5746BE-6F54A4D7",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "OverlayContent",
+          "SlotWidgetName": null,
+          "AnimationGuid": "359E9BA8-4F6BFB3A-E601D4A7-59D59B48",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "ADS_EndState",
+      "CompiledData": {
+        "ObjectName": "ADS_EndState_INST:CompiledData:MovieSceneCompiledData",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.77"
+      },
+      "Signature": "D3D5607C-4F430563-5C5B7689-6FE13A68"
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "ADS_INST",
+    "Outer": "RE_LlamaRoaster_C",
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "ADS_INST:ADS:MovieScene",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.24"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "TopFade",
+          "SlotWidgetName": null,
+          "AnimationGuid": "797D8F28-4EF960B5-218DC3A0-7E35EA16",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "BottomFade",
+          "SlotWidgetName": null,
+          "AnimationGuid": "F5E1667C-463A7391-4F5746BE-6F54A4D7",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "OverlayContent",
+          "SlotWidgetName": null,
+          "AnimationGuid": "359E9BA8-4F6BFB3A-E601D4A7-59D59B48",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "ADS",
+      "CompiledData": {
+        "ObjectName": "ADS_INST:CompiledData:MovieSceneCompiledData",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.78"
+      },
+      "Signature": "F8776C7E-45F31238-864160B7-048B3094"
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "ADS_StartState_INST",
+    "Outer": "RE_LlamaRoaster_C",
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "ADS_StartState_INST:ADS_StartState:MovieScene",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.25"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "TopFade",
+          "SlotWidgetName": null,
+          "AnimationGuid": "797D8F28-4EF960B5-218DC3A0-7E35EA16",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "BottomFade",
+          "SlotWidgetName": null,
+          "AnimationGuid": "F5E1667C-463A7391-4F5746BE-6F54A4D7",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "OverlayContent",
+          "SlotWidgetName": null,
+          "AnimationGuid": "359E9BA8-4F6BFB3A-E601D4A7-59D59B48",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "ADS_StartState",
+      "CompiledData": {
+        "ObjectName": "ADS_StartState_INST:CompiledData:MovieSceneCompiledData",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.79"
+      },
+      "Signature": "D8241F62-4780538F-41D2D489-87583F4B"
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "Intro_INST",
+    "Outer": "RE_LlamaRoaster_C",
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "Intro_INST:Intro:MovieScene",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.26"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "Clamp",
+          "SlotWidgetName": null,
+          "AnimationGuid": "3D31650D-4B2CCC35-6109EBBF-8EB1034A",
+          "bIsRootWidget": false
+        },
+        {
+          "WidgetName": "SizeBox_0",
+          "SlotWidgetName": null,
+          "AnimationGuid": "38674DF3-43872579-3C84B7BD-E0B4461D",
+          "bIsRootWidget": false
+        }
+      ],
+      "DisplayLabel": "Intro",
+      "CompiledData": {
+        "ObjectName": "Intro_INST:CompiledData:MovieSceneCompiledData",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.80"
+      },
+      "Signature": "CD39A6E2-475127FF-D6B6B99C-E5288EB4"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Outer": "RE_LlamaRoaster_C",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "WidgetTree:SizeBox_0:SizeBox",
+        "ObjectPath": "/MotherGameplay/Items/LlamaRoaster/RE_LlamaRoaster.127"
+      }
+    }
+  }
+]

@@ -1,0 +1,147 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "ReactorGrade_ReloadStart_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "ReactorGrade_ReloadStart_Cue:SoundNodeMixer_0:SoundNodeMixer",
+        "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_ReloadStart_Cue.2"
+      },
+      "VolumeMultiplier": 1.35,
+      "SoundClassObject": {
+        "ObjectName": "Fort_Weapon_Foley:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Weapon_Foley.0"
+      },
+      "bDebug": true,
+      "bOverrideConcurrency": true,
+      "bHasDelayNode": true,
+      "Duration": 2.7341497,
+      "MaxDistance": 2100.0,
+      "AttenuationSettings": {
+        "ObjectName": "Fort_Weapon_Reload_Sml_Att:SoundAttenuation",
+        "ObjectPath": "/Game/Sounds/Attenuation/Fort_Weapon_Reload_Sml_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_0",
+    "Outer": "ReactorGrade_ReloadStart_Cue",
+    "Properties": {
+      "DelayMin": 0.8,
+      "DelayMax": 0.9,
+      "ChildNodes": [
+        {
+          "ObjectName": "ReactorGrade_ReloadStart_Cue:SoundNodeRandom_4:SoundNodeRandom",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_ReloadStart_Cue.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_0",
+    "Outer": "ReactorGrade_ReloadStart_Cue",
+    "Properties": {
+      "InputVolume": [
+        1.0,
+        0.4
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "ReactorGrade_ReloadStart_Cue:SoundNodeWavePlayer_1:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_ReloadStart_Cue.5"
+        },
+        {
+          "ObjectName": "ReactorGrade_ReloadStart_Cue:SoundNodeModulator_2:SoundNodeModulator",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_ReloadStart_Cue.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_2",
+    "Outer": "ReactorGrade_ReloadStart_Cue",
+    "Properties": {
+      "PitchMin": 0.6,
+      "PitchMax": 0.7,
+      "ChildNodes": [
+        {
+          "ObjectName": "ReactorGrade_ReloadStart_Cue:SoundNodeDelay_0:SoundNodeDelay",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_ReloadStart_Cue.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_4",
+    "Outer": "ReactorGrade_ReloadStart_Cue",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "ReactorGrade_ReloadStart_Cue:SoundNodeWavePlayer_16:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_ReloadStart_Cue.6"
+        },
+        {
+          "ObjectName": "ReactorGrade_ReloadStart_Cue:SoundNodeWavePlayer_17:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_ReloadStart_Cue.7"
+        },
+        {
+          "ObjectName": "ReactorGrade_ReloadStart_Cue:SoundNodeWavePlayer_18:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_ReloadStart_Cue.8"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "ReactorGrade_ReloadStart_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Items/ReactorGrade/Audio/ReactorGrade_Reload_Start_01.ReactorGrade_Reload_Start_01",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_16",
+    "Outer": "ReactorGrade_ReloadStart_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_Weapons/SniperRifles/MilitarySniper/MilitarySniper_Casing_01.MilitarySniper_Casing_01",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_17",
+    "Outer": "ReactorGrade_ReloadStart_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_Weapons/SniperRifles/MilitarySniper/MilitarySniper_Casing_02.MilitarySniper_Casing_02",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_18",
+    "Outer": "ReactorGrade_ReloadStart_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_Weapons/SniperRifles/MilitarySniper/MilitarySniper_Casing_03.MilitarySniper_Casing_03",
+        "SubPathString": ""
+      }
+    }
+  }
+]

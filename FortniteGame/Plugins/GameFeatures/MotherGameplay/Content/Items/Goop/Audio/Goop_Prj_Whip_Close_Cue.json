@@ -1,0 +1,160 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "Goop_Prj_Whip_Close_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "Goop_Prj_Whip_Close_Cue:SoundNodeModulator_1:SoundNodeModulator",
+        "ObjectPath": "/MotherGameplay/Items/Goop/Audio/Goop_Prj_Whip_Close_Cue.1"
+      },
+      "VolumeMultiplier": 1.0,
+      "AttenuationOverrides": {
+        "bAttenuate": false,
+        "bEnableOcclusion": true,
+        "bEnableReverbSend": false,
+        "SpatializationAlgorithm": "ESoundSpatializationAlgorithm::SPATIALIZATION_HRTF",
+        "OcclusionTraceChannel": "ECollisionChannel::ECC_GameTraceChannel11",
+        "OcclusionLowPassFilterFrequency": 2000.0,
+        "OcclusionVolumeAttenuation": 0.0,
+        "AttenuationShapeExtents": {
+          "X": 50000.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 0.0
+      },
+      "SoundClassObject": {
+        "ObjectName": "Fort_WeaponProjectile:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_WeaponProjectile.0"
+      },
+      "bDebug": true,
+      "bOverrideConcurrency": true,
+      "Duration": 1.1166667,
+      "MaxDistance": 2097152.0,
+      "AttenuationSettings": {
+        "ObjectName": "Weapon_Compound_Bow_Whoosh_By_Att:SoundAttenuation",
+        "ObjectPath": "/Game/Sounds/Fort_Weapons/Explosive_Bow/Weapon_Compound_Bow_Whoosh_By_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_1",
+    "Outer": "Goop_Prj_Whip_Close_Cue",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "Goop_Prj_Whip_Close_Cue:SoundNodeRandom_1:SoundNodeRandom",
+          "ObjectPath": "/MotherGameplay/Items/Goop/Audio/Goop_Prj_Whip_Close_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_1",
+    "Outer": "Goop_Prj_Whip_Close_Cue",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "Goop_Prj_Whip_Close_Cue:SoundNodeWavePlayer_0:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/Goop/Audio/Goop_Prj_Whip_Close_Cue.3"
+        },
+        {
+          "ObjectName": "Goop_Prj_Whip_Close_Cue:SoundNodeWavePlayer_5:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/Goop/Audio/Goop_Prj_Whip_Close_Cue.4"
+        },
+        {
+          "ObjectName": "Goop_Prj_Whip_Close_Cue:SoundNodeWavePlayer_6:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/Goop/Audio/Goop_Prj_Whip_Close_Cue.5"
+        },
+        {
+          "ObjectName": "Goop_Prj_Whip_Close_Cue:SoundNodeWavePlayer_7:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/Goop/Audio/Goop_Prj_Whip_Close_Cue.6"
+        },
+        {
+          "ObjectName": "Goop_Prj_Whip_Close_Cue:SoundNodeWavePlayer_8:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/Goop/Audio/Goop_Prj_Whip_Close_Cue.7"
+        },
+        {
+          "ObjectName": "Goop_Prj_Whip_Close_Cue:SoundNodeWavePlayer_9:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/Goop/Audio/Goop_Prj_Whip_Close_Cue.8"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "Goop_Prj_Whip_Close_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Items/Goop/Audio/Goop_Prj_InAir_Whip_Close_01.Goop_Prj_InAir_Whip_Close_01",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_5",
+    "Outer": "Goop_Prj_Whip_Close_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Items/Goop/Audio/Goop_Prj_InAir_Whip_Close_02.Goop_Prj_InAir_Whip_Close_02",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_6",
+    "Outer": "Goop_Prj_Whip_Close_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Items/Goop/Audio/Goop_Prj_InAir_Whip_Close_03.Goop_Prj_InAir_Whip_Close_03",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_7",
+    "Outer": "Goop_Prj_Whip_Close_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Items/Goop/Audio/Goop_Prj_InAir_Whip_Close_04.Goop_Prj_InAir_Whip_Close_04",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_8",
+    "Outer": "Goop_Prj_Whip_Close_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Items/Goop/Audio/Goop_Prj_InAir_Whip_Close_05.Goop_Prj_InAir_Whip_Close_05",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_9",
+    "Outer": "Goop_Prj_Whip_Close_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Items/Goop/Audio/Goop_Prj_InAir_Whip_Close_06.Goop_Prj_InAir_Whip_Close_06",
+        "SubPathString": ""
+      }
+    }
+  }
+]

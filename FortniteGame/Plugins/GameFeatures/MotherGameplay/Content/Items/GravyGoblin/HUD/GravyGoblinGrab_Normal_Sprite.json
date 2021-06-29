@@ -1,0 +1,135 @@
+[
+  {
+    "Type": "BodySetup",
+    "Name": "BodySetup_0",
+    "Outer": "GravyGoblinGrab_Normal_Sprite",
+    "Properties": {
+      "AggGeom": {
+        "BoxElems": [
+          {
+            "Center": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": -2.0
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            },
+            "X": 90.0,
+            "Y": 10.0,
+            "Z": 72.0,
+            "RestOffset": 0.0,
+            "Name": null,
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "DefaultInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldDynamic",
+        "CollisionEnabled": "ECollisionEnabled::QueryOnly",
+        "CollisionProfileName": "BlockAllDynamic",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "FCC_Trace_WeaponCapsule",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_PawnAI",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Trace_WeaponMulti",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Trace_Weapon",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_Projectile",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_ProjectileIgnoreAI",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_ProjectileMesh",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+              "Response": "ECollisionResponse::ECR_Block"
+            }
+          ]
+        }
+      },
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    }
+  },
+  {
+    "Type": "PaperSprite",
+    "Name": "GravyGoblinGrab_Normal_Sprite",
+    "Properties": {
+      "BakedSourceDimension": {
+        "X": 92.0,
+        "Y": 78.0
+      },
+      "BakedSourceTexture": {
+        "ObjectName": "GravyGoblinGrab_Normal:Texture2D",
+        "ObjectPath": "/MotherGameplay/Items/GravyGoblin/HUD/GravyGoblinGrab_Normal.0"
+      },
+      "DefaultMaterial": {
+        "ObjectName": "TranslucentUnlitSpriteMaterial:MaterialInstanceConstant",
+        "ObjectPath": "/Paper2D/TranslucentUnlitSpriteMaterial.0"
+      },
+      "PixelsPerUnrealUnit": 1.0,
+      "BodySetup": {
+        "ObjectName": "GravyGoblinGrab_Normal_Sprite:BodySetup_0:BodySetup",
+        "ObjectPath": "/MotherGameplay/Items/GravyGoblin/HUD/GravyGoblinGrab_Normal_Sprite.0"
+      },
+      "BakedRenderData": [
+        {
+          "X": 45.0,
+          "Y": 34.0,
+          "Z": 0.98913044,
+          "W": 0.06410257
+        },
+        {
+          "X": -45.0,
+          "Y": 34.0,
+          "Z": 0.010869565,
+          "W": 0.06410257
+        },
+        {
+          "X": -45.0,
+          "Y": -38.0,
+          "Z": 0.010869565,
+          "W": 0.9871795
+        },
+        {
+          "X": 45.0,
+          "Y": -38.0,
+          "Z": 0.98913044,
+          "W": 0.9871795
+        },
+        {
+          "X": 45.0,
+          "Y": 34.0,
+          "Z": 0.98913044,
+          "W": 0.06410257
+        },
+        {
+          "X": -45.0,
+          "Y": -38.0,
+          "Z": 0.010869565,
+          "W": 0.9871795
+        }
+      ]
+    }
+  }
+]
