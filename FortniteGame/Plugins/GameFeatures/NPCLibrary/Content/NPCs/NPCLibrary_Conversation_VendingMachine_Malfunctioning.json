@@ -2,6 +2,8 @@
   {
     "Type": "Back_C",
     "Name": "Back_C_1",
+    "Outer": "NPCLibrary_Conversation_VendingMachine_Malfunctioning",
+    "Template": "Default__Back_C",
     "Properties": {
       "SubNodes": [
         {
@@ -15,6 +17,7 @@
   {
     "Type": "ConversationChoiceNode",
     "Name": "ConversationChoiceNode_0",
+    "Outer": "NPCLibrary_Conversation_VendingMachine_Malfunctioning",
     "Properties": {
       "DefaultChoiceDisplayText": {
         "Namespace": "",
@@ -26,6 +29,7 @@
   {
     "Type": "ConversationChoiceNode",
     "Name": "ConversationChoiceNode_5",
+    "Outer": "NPCLibrary_Conversation_VendingMachine_Malfunctioning",
     "Properties": {
       "DefaultChoiceDisplayText": {
         "Namespace": "",
@@ -125,6 +129,7 @@
   {
     "Type": "ConversationEntryPointNode",
     "Name": "ConversationEntryPointNode_7",
+    "Outer": "NPCLibrary_Conversation_VendingMachine_Malfunctioning",
     "Properties": {
       "EntryTag": {
         "TagName": "Conversation.Entry.VendingMachine.Malfunctioning"
@@ -138,6 +143,7 @@
   {
     "Type": "FortControllerEffect_ModifyGameplayTags",
     "Name": "FortControllerEffect_ModifyGameplayTags_0",
+    "Outer": "FortConversationTaskNode_ApplyDataDrivenEffect_2",
     "Properties": {
       "TagModificationRequest": {
         "TagsToModify": [
@@ -150,11 +156,13 @@
   {
     "Type": "FortControllerEffect_NPCGiveGift",
     "Name": "FortControllerEffect_NPCGiveGift_0",
-    "Properties": {}
+    "Outer": "RollTheDice_C_1",
+    "Template": "FortControllerEffect_NPCGiveGift_0"
   },
   {
     "Type": "FortControllerRequirement_CheckPitchYawRoll",
     "Name": "FortControllerRequirement_CheckPitchYawRoll_0",
+    "Outer": "Speech_C_1",
     "Properties": {
       "PitchErrorCheck": {
         "bEnabled": true,
@@ -170,6 +178,7 @@
   {
     "Type": "FortControllerRequirement_CheckPitchYawRoll",
     "Name": "FortControllerRequirement_CheckPitchYawRoll_1",
+    "Outer": "Speech_C_1",
     "Properties": {
       "PitchErrorCheck": {
         "bEnabled": true,
@@ -185,6 +194,7 @@
   {
     "Type": "FortControllerRequirement_HasOwnedTag",
     "Name": "FortControllerRequirement_HasOwnedTag_0",
+    "Outer": "Speech_C_2",
     "Properties": {
       "OwnedTag": {
         "TagName": "Conversation.Context.ServiceJustPurchased"
@@ -194,6 +204,7 @@
   {
     "Type": "FortControllerRequirement_HasOwnedTag",
     "Name": "FortControllerRequirement_HasOwnedTag_1",
+    "Outer": "Speech_C_2",
     "Properties": {
       "OwnedTag": {
         "TagName": "Conversation.Context.ServiceJustPurchased"
@@ -203,6 +214,7 @@
   {
     "Type": "FortControllerRequirement_HasOwnedTag",
     "Name": "FortControllerRequirement_HasOwnedTag_2",
+    "Outer": "Speech_C_2",
     "Properties": {
       "OwnedTag": {
         "TagName": "Conversation.Context.ServiceJustPurchased"
@@ -212,6 +224,7 @@
   {
     "Type": "FortControllerRequirement_HasOwnedTag",
     "Name": "FortControllerRequirement_HasOwnedTag_3",
+    "Outer": "Speech_C_2",
     "Properties": {
       "OwnedTag": {
         "TagName": "Conversation.Context.ServiceJustPurchased"
@@ -221,6 +234,7 @@
   {
     "Type": "FortControllerRequirement_HasOwnedTag",
     "Name": "FortControllerRequirement_HasOwnedTag_4",
+    "Outer": "Speech_C_2",
     "Properties": {
       "OwnedTag": {
         "TagName": "Athena.Quests.TandemGift.Nug"
@@ -230,6 +244,7 @@
   {
     "Type": "FortConversationChoiceWithPreviewNode",
     "Name": "FortConversationChoiceWithPreviewNode_0",
+    "Outer": "NPCLibrary_Conversation_VendingMachine_Malfunctioning",
     "Properties": {
       "DefaultChoiceDisplayText": {
         "Namespace": "",
@@ -241,6 +256,7 @@
   {
     "Type": "FortConversationRequirement_HasService",
     "Name": "FortConversationRequirement_HasService_1",
+    "Outer": "NPCLibrary_Conversation_VendingMachine_Malfunctioning",
     "Properties": {
       "ServiceTag": {
         "TagName": "Tandem.Service.RollTheDice"
@@ -250,6 +266,7 @@
   {
     "Type": "FortConversationTaskNode_ApplyDataDrivenEffect",
     "Name": "FortConversationTaskNode_ApplyDataDrivenEffect_2",
+    "Outer": "NPCLibrary_Conversation_VendingMachine_Malfunctioning",
     "Properties": {
       "ParticipantID": {
         "TagName": "Conversation.Participant.Player"
@@ -269,6 +286,8 @@
   {
     "Type": "Repeat_C",
     "Name": "Repeat_C_0",
+    "Outer": "NPCLibrary_Conversation_VendingMachine_Malfunctioning",
+    "Template": "Default__Repeat_C",
     "Properties": {
       "Compiled_NodeGUID": "A5C5AAFD-4DEB26EE-1FB55583-C33B3210"
     }
@@ -276,6 +295,8 @@
   {
     "Type": "RollTheDice_C",
     "Name": "RollTheDice_C_1",
+    "Outer": "NPCLibrary_Conversation_VendingMachine_Malfunctioning",
+    "Template": "Default__RollTheDice_C",
     "Properties": {
       "EffectRecipientConfigs": [
         {
@@ -311,11 +332,14 @@
   {
     "Type": "SideEffect_PlayServiceUsedEffects_C",
     "Name": "SideEffect_PlayServiceUsedEffects_C_1",
-    "Properties": {}
+    "Outer": "NPCLibrary_Conversation_VendingMachine_Malfunctioning",
+    "Template": "Default__SideEffect_PlayServiceUsedEffects_C"
   },
   {
     "Type": "Speech_C",
     "Name": "Speech_C_1",
+    "Outer": "NPCLibrary_Conversation_VendingMachine_Malfunctioning",
+    "Template": "Default__Speech_C",
     "Properties": {
       "SpeakerTag": {
         "TagName": "Conversation.Participant.NPC"
@@ -502,6 +526,8 @@
   {
     "Type": "Speech_C",
     "Name": "Speech_C_2",
+    "Outer": "NPCLibrary_Conversation_VendingMachine_Malfunctioning",
+    "Template": "Default__Speech_C",
     "Properties": {
       "SpeakerTag": {
         "TagName": "Conversation.Participant.NPC"

@@ -2,17 +2,53 @@
   {
     "Type": "Function",
     "Name": "ExecuteUbergraph_B_LifeDrain_CameraLens_End",
-    "Properties": {}
+    "Outer": "B_LifeDrain_CameraLens_End_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      }
+    ],
+    "FunctionFlags": 32769,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "Function",
     "Name": "ReceiveDestroyed",
-    "Properties": {}
+    "Outer": "B_LifeDrain_CameraLens_End_C",
+    "SuperStruct": {
+      "ObjectName": "ReceiveDestroyed:Class",
+      "ObjectPath": 0
+    },
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 134350848,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "Function",
     "Name": "ReceiveBeginPlay",
-    "Properties": {}
+    "Outer": "B_LifeDrain_CameraLens_End_C",
+    "SuperStruct": {
+      "ObjectName": "ReceiveBeginPlay:Class",
+      "ObjectPath": 0
+    },
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 134744064,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "BlueprintGeneratedClass",
@@ -26,6 +62,68 @@
         "ObjectName": "B_LifeDrain_CameraLens_End_C:ExecuteUbergraph_B_LifeDrain_CameraLens_End:Function",
         "ObjectPath": "/NPCLibrary/Abilities/LifeDrain/VFX/Target/B_LifeDrain_CameraLens_End.0"
       }
+    },
+    "SuperStruct": {
+      "ObjectName": "EmitterCameraLensEffectBase:Class",
+      "ObjectPath": 0
+    },
+    "Children": [
+      {
+        "ObjectName": "B_LifeDrain_CameraLens_End_C:ReceiveBeginPlay:Function",
+        "ObjectPath": "/NPCLibrary/Abilities/LifeDrain/VFX/Target/B_LifeDrain_CameraLens_End.2"
+      },
+      {
+        "ObjectName": "B_LifeDrain_CameraLens_End_C:ReceiveDestroyed:Function",
+        "ObjectPath": "/NPCLibrary/Abilities/LifeDrain/VFX/Target/B_LifeDrain_CameraLens_End.1"
+      },
+      {
+        "ObjectName": "B_LifeDrain_CameraLens_End_C:ExecuteUbergraph_B_LifeDrain_CameraLens_End:Function",
+        "ObjectPath": "/NPCLibrary/Abilities/LifeDrain/VFX/Target/B_LifeDrain_CameraLens_End.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 2105344,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "PointerToUberGraphFrame:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_B_LifeDrain_CameraLens_End": {
+        "ObjectName": "B_LifeDrain_CameraLens_End_C:ExecuteUbergraph_B_LifeDrain_CameraLens_End:Function",
+        "ObjectPath": "/NPCLibrary/Abilities/LifeDrain/VFX/Target/B_LifeDrain_CameraLens_End.0"
+      },
+      "ReceiveDestroyed": {
+        "ObjectName": "B_LifeDrain_CameraLens_End_C:ReceiveDestroyed:Function",
+        "ObjectPath": "/NPCLibrary/Abilities/LifeDrain/VFX/Target/B_LifeDrain_CameraLens_End.1"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "B_LifeDrain_CameraLens_End_C:ReceiveBeginPlay:Function",
+        "ObjectPath": "/NPCLibrary/Abilities/LifeDrain/VFX/Target/B_LifeDrain_CameraLens_End.2"
+      }
+    },
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Engine",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__B_LifeDrain_CameraLens_End_C:B_LifeDrain_CameraLens_End_C",
+      "ObjectPath": "/NPCLibrary/Abilities/LifeDrain/VFX/Target/B_LifeDrain_CameraLens_End.4"
     }
   },
   {
@@ -62,6 +160,7 @@
   {
     "Type": "ParticleSystemComponent",
     "Name": "ParticleSystemComponent0",
+    "Outer": "Default__B_LifeDrain_CameraLens_End_C",
     "Properties": {
       "PrimaryComponentTick": {
         "bStartWithTickEnabled": false
@@ -71,11 +170,12 @@
   {
     "Type": "SceneComponent",
     "Name": "DefaultSceneRoot_GEN_VARIABLE",
-    "Properties": {}
+    "Outer": "B_LifeDrain_CameraLens_End_C"
   },
   {
     "Type": "SCS_Node",
     "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
     "Properties": {
       "ComponentClass": {
         "ObjectName": "SceneComponent:Class",
@@ -92,6 +192,7 @@
   {
     "Type": "SimpleConstructionScript",
     "Name": "SimpleConstructionScript_0",
+    "Outer": "B_LifeDrain_CameraLens_End_C",
     "Properties": {
       "DefaultSceneRootNode": {
         "ObjectName": "SimpleConstructionScript_0:SCS_Node_0:SCS_Node",

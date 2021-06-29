@@ -2,11 +2,32 @@
   {
     "Type": "BlueprintGeneratedClass",
     "Name": "AI_Skill_NPC_Perception_Inner_C",
-    "Properties": {}
+    "Super": "AI_Skill_NPC_Perception_Guard_C",
+    "SuperStruct": {
+      "ObjectName": "AI_Skill_NPC_Perception_Guard_C:BlueprintGeneratedClass",
+      "ObjectPath": "/Game/Athena/AI/NPCs/Base/Skillsets/Perception/AI_Skill_NPC_Perception_Guard.0"
+    },
+    "Children": [],
+    "ChildProperties": [],
+    "FuncMap": {},
+    "ClassFlags": 8656912,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Engine",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__AI_Skill_NPC_Perception_Inner_C:AI_Skill_NPC_Perception_Inner_C",
+      "ObjectPath": "/NPCLibrary/NPCs/Inner/Inner/Skillsets/AI_Skill_NPC_Perception_Inner.1"
+    }
   },
   {
     "Type": "AI_Skill_NPC_Perception_Inner_C",
     "Name": "Default__AI_Skill_NPC_Perception_Inner_C",
+    "Template": "Default__AI_Skill_NPC_Perception_Guard_C",
     "Properties": {
       "ThreatLKPPerceptionSettings": {
         "ForgetTime": {
@@ -38,21 +59,26 @@
   {
     "Type": "AISenseScalableConfig_Sight",
     "Name": "AISenseScalableConfig_Sight_0",
-    "Properties": {}
+    "Outer": "FortAthenaAIBotAlertLevelConfig_0",
+    "Template": "AISenseScalableConfig_Sight_0"
   },
   {
     "Type": "AISenseScalableConfig_Sight",
     "Name": "AISenseScalableConfig_Sight_0",
-    "Properties": {}
+    "Outer": "FortAthenaAIBotAlertLevelConfig_1",
+    "Template": "AISenseScalableConfig_Sight_0"
   },
   {
     "Type": "AISenseScalableConfig_Sight",
     "Name": "AISenseScalableConfig_Sight_0",
-    "Properties": {}
+    "Outer": "FortAthenaAIBotAlertLevelConfig_2",
+    "Template": "AISenseScalableConfig_Sight_0"
   },
   {
     "Type": "FortAthenaAIBotAlertLevelConfig",
     "Name": "FortAthenaAIBotAlertLevelConfig_0",
+    "Outer": "Default__AI_Skill_NPC_Perception_Inner_C",
+    "Template": "FortAthenaAIBotAlertLevelConfig_0",
     "Properties": {
       "ScalableSenseConfig": {
         "ObjectName": "FortAthenaAIBotAlertLevelConfig_0:AISenseScalableConfig_Sight_0:AISenseScalableConfig_Sight",
@@ -63,6 +89,8 @@
   {
     "Type": "FortAthenaAIBotAlertLevelConfig",
     "Name": "FortAthenaAIBotAlertLevelConfig_1",
+    "Outer": "Default__AI_Skill_NPC_Perception_Inner_C",
+    "Template": "FortAthenaAIBotAlertLevelConfig_1",
     "Properties": {
       "ScalableSenseConfig": {
         "ObjectName": "FortAthenaAIBotAlertLevelConfig_1:AISenseScalableConfig_Sight_0:AISenseScalableConfig_Sight",
@@ -73,6 +101,8 @@
   {
     "Type": "FortAthenaAIBotAlertLevelConfig",
     "Name": "FortAthenaAIBotAlertLevelConfig_2",
+    "Outer": "Default__AI_Skill_NPC_Perception_Inner_C",
+    "Template": "FortAthenaAIBotAlertLevelConfig_2",
     "Properties": {
       "ScalableSenseConfig": {
         "ObjectName": "FortAthenaAIBotAlertLevelConfig_2:AISenseScalableConfig_Sight_0:AISenseScalableConfig_Sight",

@@ -2,6 +2,7 @@
   {
     "Type": "BlueprintGeneratedClass",
     "Name": "BP_PlayerPawn_Inner_C",
+    "Super": "BP_PlayerPawn_NonParticipant_Boss_C",
     "Properties": {
       "bHasCookedComponentInstancingData": true,
       "SimpleConstructionScript": {
@@ -12,11 +13,32 @@
         "ObjectName": "BP_PlayerPawn_Inner_C:InheritableComponentHandler:InheritableComponentHandler",
         "ObjectPath": "/NPCLibrary/NPCs/Inner/Inner/Pawns/BP_PlayerPawn_Inner.11"
       }
+    },
+    "SuperStruct": {
+      "ObjectName": "BP_PlayerPawn_NonParticipant_Boss_C:BlueprintGeneratedClass",
+      "ObjectPath": "/Game/Athena/AI/NPCs/Base/BP_PlayerPawn_NonParticipant_Boss.15"
+    },
+    "Children": [],
+    "ChildProperties": [],
+    "FuncMap": {},
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Game",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__BP_PlayerPawn_Inner_C:BP_PlayerPawn_Inner_C",
+      "ObjectPath": "/NPCLibrary/NPCs/Inner/Inner/Pawns/BP_PlayerPawn_Inner.1"
     }
   },
   {
     "Type": "BP_PlayerPawn_Inner_C",
     "Name": "Default__BP_PlayerPawn_Inner_C",
+    "Template": "Default__BP_PlayerPawn_NonParticipant_Boss_C",
     "Properties": {
       "ShowHealth": true,
       "PatrolAnimSetPairs": [
@@ -157,6 +179,8 @@
   {
     "Type": "AudioComponent",
     "Name": "FeedbackAudioComp0",
+    "Outer": "Default__BP_PlayerPawn_Inner_C",
+    "Template": "FeedbackAudioComp0",
     "Properties": {
       "AttachParent": {
         "ObjectName": "Default__BP_PlayerPawn_Inner_C:CollisionCylinder:CapsuleComponent",
@@ -167,6 +191,8 @@
   {
     "Type": "AudioComponent",
     "Name": "InAirAudioComp",
+    "Outer": "Default__BP_PlayerPawn_Inner_C",
+    "Template": "InAirAudioComp",
     "Properties": {
       "AttachParent": {
         "ObjectName": "Default__BP_PlayerPawn_Inner_C:CharacterMesh0:FortPooledSkelMeshComponent",
@@ -177,36 +203,44 @@
   {
     "Type": "CapsuleComponent",
     "Name": "CollisionCylinder",
-    "Properties": {}
+    "Outer": "Default__BP_PlayerPawn_Inner_C",
+    "Template": "CollisionCylinder"
   },
   {
     "Type": "FortActorComponent_Affiliation",
     "Name": "AffiliationComponent",
-    "Properties": {}
+    "Outer": "Default__BP_PlayerPawn_Inner_C",
+    "Template": "AffiliationComponent"
   },
   {
     "Type": "FortGenericDataStoreManagerComponent",
     "Name": "GeneralDataStore",
-    "Properties": {}
+    "Outer": "Default__BP_PlayerPawn_Inner_C",
+    "Template": "GeneralDataStore"
   },
   {
     "Type": "FortMovementComp_CharacterAthena",
     "Name": "CharMoveComp",
-    "Properties": {}
+    "Outer": "Default__BP_PlayerPawn_Inner_C",
+    "Template": "CharMoveComp"
   },
   {
     "Type": "FortPawnComponent_Convert",
     "Name": "ConvertComp",
-    "Properties": {}
+    "Outer": "Default__BP_PlayerPawn_Inner_C",
+    "Template": "ConvertComp"
   },
   {
     "Type": "FortPawnComponent_Tether",
     "Name": "TetherComp",
-    "Properties": {}
+    "Outer": "Default__BP_PlayerPawn_Inner_C",
+    "Template": "TetherComp"
   },
   {
     "Type": "FortPooledSkelMeshComponent",
     "Name": "CharacterMesh0",
+    "Outer": "Default__BP_PlayerPawn_Inner_C",
+    "Template": "CharacterMesh0",
     "Properties": {
       "AttachParent": {
         "ObjectName": "Default__BP_PlayerPawn_Inner_C:CollisionCylinder:CapsuleComponent",
@@ -216,11 +250,14 @@
   },
   {
     "Type": "InheritableComponentHandler",
-    "Properties": {}
+    "Name": "InheritableComponentHandler",
+    "Outer": "BP_PlayerPawn_Inner_C"
   },
   {
     "Type": "ParticleSystemComponent",
     "Name": "HitDamageFX",
+    "Outer": "Default__BP_PlayerPawn_Inner_C",
+    "Template": "HitDamageFX",
     "Properties": {
       "AutoAttachParent": {
         "ObjectName": "Default__BP_PlayerPawn_Inner_C:CollisionCylinder:CapsuleComponent",
@@ -235,6 +272,8 @@
   {
     "Type": "ParticleSystemComponent",
     "Name": "PlayerInWaterFX",
+    "Outer": "Default__BP_PlayerPawn_Inner_C",
+    "Template": "PlayerInWaterFX",
     "Properties": {
       "AttachParent": {
         "ObjectName": "Default__BP_PlayerPawn_Inner_C:CollisionCylinder:CapsuleComponent",
@@ -245,6 +284,8 @@
   {
     "Type": "ParticleSystemComponent",
     "Name": "PlayerInWaterSurfaceSwimmingFX",
+    "Outer": "Default__BP_PlayerPawn_Inner_C",
+    "Template": "PlayerInWaterSurfaceSwimmingFX",
     "Properties": {
       "AttachParent": {
         "ObjectName": "Default__BP_PlayerPawn_Inner_C:CollisionCylinder:CapsuleComponent",
@@ -255,6 +296,8 @@
   {
     "Type": "ParticleSystemComponent",
     "Name": "PlayerRunLandFX",
+    "Outer": "Default__BP_PlayerPawn_Inner_C",
+    "Template": "PlayerRunLandFX",
     "Properties": {
       "AutoAttachParent": {
         "ObjectName": "Default__BP_PlayerPawn_Inner_C:CharacterMesh0:FortPooledSkelMeshComponent",
@@ -269,6 +312,8 @@
   {
     "Type": "ParticleSystemComponent",
     "Name": "PlayerSlideLandFX",
+    "Outer": "Default__BP_PlayerPawn_Inner_C",
+    "Template": "PlayerSlideLandFX",
     "Properties": {
       "AutoAttachParent": {
         "ObjectName": "Default__BP_PlayerPawn_Inner_C:CharacterMesh0:FortPooledSkelMeshComponent",
@@ -283,6 +328,8 @@
   {
     "Type": "ParticleSystemComponent",
     "Name": "PlayerWalkLandFX",
+    "Outer": "Default__BP_PlayerPawn_Inner_C",
+    "Template": "PlayerWalkLandFX",
     "Properties": {
       "AutoAttachParent": {
         "ObjectName": "Default__BP_PlayerPawn_Inner_C:CharacterMesh0:FortPooledSkelMeshComponent",
@@ -297,11 +344,12 @@
   {
     "Type": "SceneComponent",
     "Name": "DefaultSceneRoot_GEN_VARIABLE",
-    "Properties": {}
+    "Outer": "BP_PlayerPawn_Inner_C"
   },
   {
     "Type": "SCS_Node",
     "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
     "Properties": {
       "ComponentClass": {
         "ObjectName": "SceneComponent:Class",
@@ -318,6 +366,7 @@
   {
     "Type": "SimpleConstructionScript",
     "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_PlayerPawn_Inner_C",
     "Properties": {
       "DefaultSceneRootNode": {
         "ObjectName": "SimpleConstructionScript_0:SCS_Node_0:SCS_Node",

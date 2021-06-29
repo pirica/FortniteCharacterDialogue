@@ -97,6 +97,7 @@
   {
     "Type": "ConversationEntryPointNode",
     "Name": "ConversationEntryPointNode_7",
+    "Outer": "NPCLibrary_Conversation_Believer",
     "Properties": {
       "EntryTag": {
         "TagName": "Conversation.Entry.Believer"
@@ -110,6 +111,7 @@
   {
     "Type": "ConversationLinkNode",
     "Name": "ConversationLinkNode_0",
+    "Outer": "NPCLibrary_Conversation_Believer",
     "Properties": {
       "RemoteEntryTag": {
         "TagName": "Conversation.Entry.BasicServices"
@@ -120,6 +122,7 @@
   {
     "Type": "ConversationLinkNode",
     "Name": "ConversationLinkNode_1",
+    "Outer": "NPCLibrary_Conversation_Believer",
     "Properties": {
       "RemoteEntryTag": {
         "TagName": "Conversation.Entry.NPCLibrary.Quests"
@@ -130,6 +133,7 @@
   {
     "Type": "ConversationLinkNode",
     "Name": "ConversationLinkNode_2",
+    "Outer": "NPCLibrary_Conversation_Believer",
     "Properties": {
       "RemoteEntryTag": {
         "TagName": "Conversation.Entry.Season17.Week1"
@@ -140,6 +144,7 @@
   {
     "Type": "ConversationLinkNode",
     "Name": "ConversationLinkNode_3",
+    "Outer": "NPCLibrary_Conversation_Believer",
     "Properties": {
       "RemoteEntryTag": {
         "TagName": "Conversation.Entry.Season17.Week5"
@@ -150,6 +155,7 @@
   {
     "Type": "ConversationLinkNode",
     "Name": "ConversationLinkNode_4",
+    "Outer": "NPCLibrary_Conversation_Believer",
     "Properties": {
       "RemoteEntryTag": {
         "TagName": "Conversation.Entry.Season17.Week3"
@@ -160,6 +166,7 @@
   {
     "Type": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch",
     "Name": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0",
+    "Outer": "Speech_C_4",
     "Properties": {
       "days": 7
     }
@@ -167,6 +174,7 @@
   {
     "Type": "FortControllerRequirement_HasBars",
     "Name": "FortControllerRequirement_HasBars_0",
+    "Outer": "Speech_C_4",
     "Properties": {
       "ThresholdTestConfig": {
         "Requirement": "EThresholdRequirement::GreaterThanOrEqual",
@@ -179,6 +187,7 @@
   {
     "Type": "FortControllerRequirement_HasCID",
     "Name": "FortControllerRequirement_HasCID_0",
+    "Outer": "Speech_C_4",
     "Properties": {
       "AllowedCIDs": [
         {
@@ -191,11 +200,13 @@
   {
     "Type": "FortControllerRequirement_IsFirstEverConversationWithNPC",
     "Name": "FortControllerRequirement_IsFirstEverConversationWithNPC_0",
-    "Properties": {}
+    "Outer": "Speech_C_4"
   },
   {
     "Type": "Speech_C",
     "Name": "Speech_C_4",
+    "Outer": "NPCLibrary_Conversation_Believer",
+    "Template": "Default__Speech_C",
     "Properties": {
       "SpeakerTag": {
         "TagName": "Conversation.Participant.NPC"

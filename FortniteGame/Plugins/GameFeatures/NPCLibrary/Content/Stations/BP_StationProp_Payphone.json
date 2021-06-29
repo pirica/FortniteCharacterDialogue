@@ -2,76 +2,790 @@
   {
     "Type": "Function",
     "Name": "ExecuteUbergraph_BP_StationProp_Payphone",
-    "Properties": {}
+    "Outer": "BP_StationProp_Payphone_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 20,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "SignatureFunction": {
+          "ObjectName": "DialogMarkerInteractionStateChanged__DelegateSignature:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_CustomEvent_CurrentInteractionState",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 2,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Enum": {
+          "ObjectName": "EDialogMarkerInteractionState:Class",
+          "ObjectPath": 0
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": 1,
+          "ArrayDim": 1,
+          "ElementSize": 1,
+          "PropertyFlags": 0,
+          "RepIndex": 0,
+          "RepNotifyFunc": "None",
+          "BlueprintReplicationCondition": "COND_None",
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_SwitchEnum_CmpSuccess",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_RLerp_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Rotator:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_ComposeRotators_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Rotator:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetRelativeRotation_SweepHitResult",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 144,
+        "PropertyFlags": 549755813888,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "HitResult:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanOR_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_Damage",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_DamageTags",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 32,
+        "PropertyFlags": 2,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayTagContainer:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_Momentum",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_HitInfo",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 144,
+        "PropertyFlags": 549755813890,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "HitResult:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_InstigatedBy",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortPawn:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_DamageCauser",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_EffectContext",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 24,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayEffectContextHandle:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAuthority_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAuthority_ReturnValue_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_CustomEvent_VONumber",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_SwitchInteger_CmpSuccess",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 8421377,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "Function",
     "Name": "PlayQuestVOs",
-    "Properties": {}
+    "Outer": "BP_StationProp_Payphone_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "VONumber",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      }
+    ],
+    "FunctionFlags": 201343168,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "Function",
     "Name": "OnDeathPlayEffects",
-    "Properties": {}
+    "Outer": "BP_StationProp_Payphone_C",
+    "Super": "OnDeathPlayEffects",
+    "SuperStruct": {
+      "ObjectName": "BP_StationProp_Parent_C:OnDeathPlayEffects:Function",
+      "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_Parent.1"
+    },
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "Damage",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "DamageTags",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 32,
+        "PropertyFlags": 134218134,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayTagContainer:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Momentum",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "HitInfo",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 144,
+        "PropertyFlags": 549890032022,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "HitResult:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "InstigatedBy",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortPawn:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DamageCauser",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "EffectContext",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 24,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayEffectContextHandle:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 138545160,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "Function",
     "Name": "ReceiveBeginPlay",
-    "Properties": {}
+    "Outer": "BP_StationProp_Payphone_C",
+    "Super": "ReceiveBeginPlay",
+    "SuperStruct": {
+      "ObjectName": "BP_StationProp_Parent_C:ReceiveBeginPlay:Function",
+      "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_Parent.2"
+    },
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 134744064,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "Function",
     "Name": "TriggerNextRing",
-    "Properties": {}
+    "Outer": "BP_StationProp_Payphone_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 201326592,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "Function",
     "Name": "StopRingWobbleTimeline",
-    "Properties": {}
+    "Outer": "BP_StationProp_Payphone_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 201326592,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "Function",
     "Name": "LocalUserInteractionStateChanged",
-    "Properties": {}
+    "Outer": "BP_StationProp_Payphone_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "EnumProperty",
+        "Name": "CurrentInteractionState",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 150,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Enum": {
+          "ObjectName": "EDialogMarkerInteractionState:Class",
+          "ObjectPath": 0
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": 1,
+          "ArrayDim": 1,
+          "ElementSize": 1,
+          "PropertyFlags": 0,
+          "RepIndex": 0,
+          "RepNotifyFunc": "None",
+          "BlueprintReplicationCondition": "COND_None",
+          "Enum": null
+        }
+      }
+    ],
+    "FunctionFlags": 201326592,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "Function",
     "Name": "RingWobbleTimeline__UpdateFunc",
-    "Properties": {}
+    "Outer": "BP_StationProp_Payphone_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 134217728,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "Function",
     "Name": "RingWobbleTimeline__FinishedFunc",
-    "Properties": {}
+    "Outer": "BP_StationProp_Payphone_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 134217728,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "Function",
     "Name": "PlayServiceUsedEffects",
-    "Properties": {}
+    "Outer": "BP_StationProp_Payphone_C",
+    "Super": "PlayServiceUsedEffects",
+    "SuperStruct": {
+      "ObjectName": "BP_StationProp_Parent_C:PlayServiceUsedEffects:Function",
+      "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_Parent.6"
+    },
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 201457664,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "Function",
     "Name": "StartRinging",
-    "Properties": {}
+    "Outer": "BP_StationProp_Payphone_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 20,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "SignatureFunction": {
+          "ObjectName": "TimerDynamicDelegate__DelegateSignature:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Add_FloatFloat_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "TimerHandle:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 209846272,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "Function",
     "Name": "StopRinging",
-    "Properties": {}
+    "Outer": "BP_StationProp_Payphone_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_K2_IsValidTimerHandle_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 201457664,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "Function",
     "Name": "BlueprintOnLocalInteract",
-    "Properties": {}
+    "Outer": "BP_StationProp_Payphone_C",
+    "SuperStruct": {
+      "ObjectName": "BlueprintOnLocalInteract:Class",
+      "ObjectPath": 0
+    },
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "InteractingPawn",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortPlayerPawn:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 1408,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetComponentLocation_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 205654024,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "Function",
     "Name": "Conversation Message",
-    "Properties": {}
+    "Outer": "BP_StationProp_Payphone_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "Message Number",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Conv_IntToString_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Concat_StrStr_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      }
+    ],
+    "FunctionFlags": 201457664,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "BlueprintGeneratedClass",
     "Name": "BP_StationProp_Payphone_C",
+    "Super": "BP_StationProp_Parent_C",
     "Properties": {
       "Timelines": [
         {
@@ -91,11 +805,378 @@
         "ObjectName": "BP_StationProp_Payphone_C:ExecuteUbergraph_BP_StationProp_Payphone:Function",
         "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.0"
       }
+    },
+    "SuperStruct": {
+      "ObjectName": "BP_StationProp_Parent_C:BlueprintGeneratedClass",
+      "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_Parent.7"
+    },
+    "Children": [
+      {
+        "ObjectName": "BP_StationProp_Payphone_C:Conversation Message:Function",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.13"
+      },
+      {
+        "ObjectName": "BP_StationProp_Payphone_C:BlueprintOnLocalInteract:Function",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.12"
+      },
+      {
+        "ObjectName": "BP_StationProp_Payphone_C:StopRinging:Function",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.11"
+      },
+      {
+        "ObjectName": "BP_StationProp_Payphone_C:StartRinging:Function",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.10"
+      },
+      {
+        "ObjectName": "BP_StationProp_Payphone_C:PlayServiceUsedEffects:Function",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.9"
+      },
+      {
+        "ObjectName": "BP_StationProp_Payphone_C:RingWobbleTimeline__FinishedFunc:Function",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.8"
+      },
+      {
+        "ObjectName": "BP_StationProp_Payphone_C:RingWobbleTimeline__UpdateFunc:Function",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.7"
+      },
+      {
+        "ObjectName": "BP_StationProp_Payphone_C:LocalUserInteractionStateChanged:Function",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.6"
+      },
+      {
+        "ObjectName": "BP_StationProp_Payphone_C:StopRingWobbleTimeline:Function",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.5"
+      },
+      {
+        "ObjectName": "BP_StationProp_Payphone_C:TriggerNextRing:Function",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.4"
+      },
+      {
+        "ObjectName": "BP_StationProp_Payphone_C:ReceiveBeginPlay:Function",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.3"
+      },
+      {
+        "ObjectName": "BP_StationProp_Payphone_C:OnDeathPlayEffects:Function",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.2"
+      },
+      {
+        "ObjectName": "BP_StationProp_Payphone_C:PlayQuestVOs:Function",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.1"
+      },
+      {
+        "ObjectName": "BP_StationProp_Payphone_C:ExecuteUbergraph_BP_StationProp_Payphone:Function",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 2105344,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "PointerToUberGraphFrame:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "QuestVO_03",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "SoundConcatenatorComponent_C:BlueprintGeneratedClass",
+          "ObjectPath": "/Game/Sounds/Fort_Audio_Blueprints/SoundConcatenatorComponent/SoundConcatenatorComponent.5"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "QuestVO_02",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "SoundConcatenatorComponent_C:BlueprintGeneratedClass",
+          "ObjectPath": "/Game/Sounds/Fort_Audio_Blueprints/SoundConcatenatorComponent/SoundConcatenatorComponent.5"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "QuestVO_01",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "SoundConcatenatorComponent_C:BlueprintGeneratedClass",
+          "ObjectPath": "/Game/Sounds/Fort_Audio_Blueprints/SoundConcatenatorComponent/SoundConcatenatorComponent.5"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Payphone_QuestVO",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "AudioComponent:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "RingWobbleTimeline_WobbleOverTime_94F48F8C41B389666A3A95B9FC6105CF",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "RingWobbleTimeline__Direction_94F48F8C41B389666A3A95B9FC6105CF",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Enum": {
+          "ObjectName": "ETimelineDirection:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "RingWobbleTimeline",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524292,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "TimelineComponent:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bDisableAmbientDuringConversation",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "InteractSound",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "SoundBase:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Initial Relative Rotation",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Rotator:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "MaxWobbleRotator",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Rotator:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "LastDialogMarkerInteractionState",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Enum": {
+          "ObjectName": "EDialogMarkerInteractionState:Class",
+          "ObjectPath": 0
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": 1,
+          "ArrayDim": 1,
+          "ElementSize": 1,
+          "PropertyFlags": 0,
+          "RepIndex": 0,
+          "RepNotifyFunc": "None",
+          "BlueprintReplicationCondition": "COND_None",
+          "Enum": null
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "AdditionalDelayBetweenRings",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "RingTimerHandle",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "TimerHandle:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_StationProp_Payphone": {
+        "ObjectName": "BP_StationProp_Payphone_C:ExecuteUbergraph_BP_StationProp_Payphone:Function",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.0"
+      },
+      "PlayQuestVOs": {
+        "ObjectName": "BP_StationProp_Payphone_C:PlayQuestVOs:Function",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.1"
+      },
+      "OnDeathPlayEffects": {
+        "ObjectName": "BP_StationProp_Payphone_C:OnDeathPlayEffects:Function",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.2"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "BP_StationProp_Payphone_C:ReceiveBeginPlay:Function",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.3"
+      },
+      "TriggerNextRing": {
+        "ObjectName": "BP_StationProp_Payphone_C:TriggerNextRing:Function",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.4"
+      },
+      "StopRingWobbleTimeline": {
+        "ObjectName": "BP_StationProp_Payphone_C:StopRingWobbleTimeline:Function",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.5"
+      },
+      "LocalUserInteractionStateChanged": {
+        "ObjectName": "BP_StationProp_Payphone_C:LocalUserInteractionStateChanged:Function",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.6"
+      },
+      "RingWobbleTimeline__UpdateFunc": {
+        "ObjectName": "BP_StationProp_Payphone_C:RingWobbleTimeline__UpdateFunc:Function",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.7"
+      },
+      "RingWobbleTimeline__FinishedFunc": {
+        "ObjectName": "BP_StationProp_Payphone_C:RingWobbleTimeline__FinishedFunc:Function",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.8"
+      },
+      "PlayServiceUsedEffects": {
+        "ObjectName": "BP_StationProp_Payphone_C:PlayServiceUsedEffects:Function",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.9"
+      },
+      "StartRinging": {
+        "ObjectName": "BP_StationProp_Payphone_C:StartRinging:Function",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.10"
+      },
+      "StopRinging": {
+        "ObjectName": "BP_StationProp_Payphone_C:StopRinging:Function",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.11"
+      },
+      "BlueprintOnLocalInteract": {
+        "ObjectName": "BP_StationProp_Payphone_C:BlueprintOnLocalInteract:Function",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.12"
+      },
+      "Conversation Message": {
+        "ObjectName": "BP_StationProp_Payphone_C:Conversation Message:Function",
+        "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.13"
+      }
+    },
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Game",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__BP_StationProp_Payphone_C:BP_StationProp_Payphone_C",
+      "ObjectPath": "/NPCLibrary/Stations/BP_StationProp_Payphone.15"
     }
   },
   {
     "Type": "BP_StationProp_Payphone_C",
     "Name": "Default__BP_StationProp_Payphone_C",
+    "Template": "Default__BP_StationProp_Parent_C",
     "Properties": {
       "UberGraphFrame": {},
       "bDisableAmbientDuringConversation": true,
@@ -113,7 +1194,7 @@
         "Yaw": 0.0,
         "Roll": 0.0
       },
-      "LastDialogMarkerInteractionState": "EDialogMarkerInteractionState::None",
+      "LastDialogMarkerInteractionState": "3",
       "RingTimerHandle": {
         "Handle": 0
       },
@@ -146,6 +1227,7 @@
   {
     "Type": "AudioComponent",
     "Name": "Payphone_QuestVO_GEN_VARIABLE",
+    "Outer": "BP_StationProp_Payphone_C",
     "Properties": {
       "RelativeLocation": {
         "X": -6.977612,
@@ -158,6 +1240,8 @@
   {
     "Type": "AudioComponent",
     "Name": "Station_Ambient_GEN_VARIABLE",
+    "Outer": "BP_StationProp_Payphone_C",
+    "Template": "Station_Ambient_GEN_VARIABLE",
     "Properties": {
       "Sound": {
         "ObjectName": "Station_Payphone_Ambient_Ring_Cue:SoundCue",
@@ -168,6 +1252,7 @@
   {
     "Type": "CurveFloat",
     "Name": "CurveFloat_2",
+    "Outer": "BP_StationProp_Payphone_C",
     "Properties": {
       "FloatCurve": {
         "Keys": [
@@ -507,6 +1592,8 @@
   },
   {
     "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "BP_StationProp_Payphone_C",
     "Properties": {
       "Records": [
         {
@@ -559,6 +1646,8 @@
   {
     "Type": "NonPlayerConversationComponent_C",
     "Name": "NonPlayerConversationComponent_GEN_VARIABLE",
+    "Outer": "BP_StationProp_Payphone_C",
+    "Template": "NonPlayerConversationComponent_GEN_VARIABLE",
     "Properties": {
       "ConversationEntryTag": {
         "TagName": "Conversation.Entry.Payphone"
@@ -583,11 +1672,12 @@
   {
     "Type": "SceneComponent",
     "Name": "DefaultSceneRoot_GEN_VARIABLE",
-    "Properties": {}
+    "Outer": "BP_StationProp_Payphone_C"
   },
   {
     "Type": "SCS_Node",
     "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
     "Properties": {
       "ComponentClass": {
         "ObjectName": "SceneComponent:Class",
@@ -604,6 +1694,7 @@
   {
     "Type": "SCS_Node",
     "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
     "Properties": {
       "ComponentClass": {
         "ObjectName": "AudioComponent:Class",
@@ -622,6 +1713,7 @@
   {
     "Type": "SCS_Node",
     "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
     "Properties": {
       "ComponentClass": {
         "ObjectName": "SoundConcatenatorComponent_C:BlueprintGeneratedClass",
@@ -638,6 +1730,7 @@
   {
     "Type": "SCS_Node",
     "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
     "Properties": {
       "ComponentClass": {
         "ObjectName": "SoundConcatenatorComponent_C:BlueprintGeneratedClass",
@@ -654,6 +1747,7 @@
   {
     "Type": "SCS_Node",
     "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
     "Properties": {
       "ComponentClass": {
         "ObjectName": "SoundConcatenatorComponent_C:BlueprintGeneratedClass",
@@ -670,6 +1764,7 @@
   {
     "Type": "SimpleConstructionScript",
     "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_StationProp_Payphone_C",
     "Properties": {
       "RootNodes": [
         {
@@ -716,21 +1811,122 @@
   {
     "Type": "SoundConcatenatorComponent_C",
     "Name": "QuestVO_01_GEN_VARIABLE",
-    "Properties": {}
+    "Outer": "BP_StationProp_Payphone_C",
+    "Template": "Default__SoundConcatenatorComponent_C",
+    "Properties": {
+      "SoundSequence": [
+        {
+          "Sound_2_D8314BE3444A737F8A2ED3B3EDEAC6B5": {
+            "ObjectName": "SLONE_2021_Quest_01_010_Dialogue_Cue:SoundCue",
+            "ObjectPath": "/NPCLibrary/Audio/Slone/Payphone/Cues/SLONE_2021_Quest_01_010_Dialogue_Cue.0"
+          },
+          "Delay_5_9B967CFA4E4664110F1201A1B0291D30": 0.0
+        },
+        {
+          "Sound_2_D8314BE3444A737F8A2ED3B3EDEAC6B5": {
+            "ObjectName": "SLONE_2021_Quest_01_030_Dialogue_Cue:SoundCue",
+            "ObjectPath": "/NPCLibrary/Audio/Slone/Payphone/Cues/SLONE_2021_Quest_01_030_Dialogue_Cue.0"
+          },
+          "Delay_5_9B967CFA4E4664110F1201A1B0291D30": 0.0
+        },
+        {
+          "Sound_2_D8314BE3444A737F8A2ED3B3EDEAC6B5": {
+            "ObjectName": "SLONE_2021_Quest_01_040_Dialogue_Cue:SoundCue",
+            "ObjectPath": "/NPCLibrary/Audio/Slone/Payphone/Cues/SLONE_2021_Quest_01_040_Dialogue_Cue.0"
+          },
+          "Delay_5_9B967CFA4E4664110F1201A1B0291D30": 0.0
+        },
+        {
+          "Sound_2_D8314BE3444A737F8A2ED3B3EDEAC6B5": {
+            "ObjectName": "SLONE_2021_Quest_01_050_Dialogue_Cue:SoundCue",
+            "ObjectPath": "/NPCLibrary/Audio/Slone/Payphone/Cues/SLONE_2021_Quest_01_050_Dialogue_Cue.0"
+          },
+          "Delay_5_9B967CFA4E4664110F1201A1B0291D30": 0.0
+        }
+      ]
+    }
   },
   {
     "Type": "SoundConcatenatorComponent_C",
     "Name": "QuestVO_02_GEN_VARIABLE",
-    "Properties": {}
+    "Outer": "BP_StationProp_Payphone_C",
+    "Template": "Default__SoundConcatenatorComponent_C",
+    "Properties": {
+      "SoundSequence": [
+        {
+          "Sound_2_D8314BE3444A737F8A2ED3B3EDEAC6B5": {
+            "ObjectName": "SLONE_2021_Quest_02_010_Dialogue_Cue:SoundCue",
+            "ObjectPath": "/NPCLibrary/Audio/Slone/Payphone/Cues/SLONE_2021_Quest_02_010_Dialogue_Cue.0"
+          },
+          "Delay_5_9B967CFA4E4664110F1201A1B0291D30": 0.0
+        },
+        {
+          "Sound_2_D8314BE3444A737F8A2ED3B3EDEAC6B5": {
+            "ObjectName": "SLONE_2021_Quest_02_020_Dialogue_Cue:SoundCue",
+            "ObjectPath": "/NPCLibrary/Audio/Slone/Payphone/Cues/SLONE_2021_Quest_02_020_Dialogue_Cue.0"
+          },
+          "Delay_5_9B967CFA4E4664110F1201A1B0291D30": 0.0
+        },
+        {
+          "Sound_2_D8314BE3444A737F8A2ED3B3EDEAC6B5": {
+            "ObjectName": "SLONE_2021_Quest_02_030_Dialogue_Cue:SoundCue",
+            "ObjectPath": "/NPCLibrary/Audio/Slone/Payphone/Cues/SLONE_2021_Quest_02_030_Dialogue_Cue.0"
+          },
+          "Delay_5_9B967CFA4E4664110F1201A1B0291D30": 0.0
+        },
+        {
+          "Sound_2_D8314BE3444A737F8A2ED3B3EDEAC6B5": {
+            "ObjectName": "SLONE_2021_Quest_02_040_Dialogue_Cue:SoundCue",
+            "ObjectPath": "/NPCLibrary/Audio/Slone/Payphone/Cues/SLONE_2021_Quest_02_040_Dialogue_Cue.0"
+          },
+          "Delay_5_9B967CFA4E4664110F1201A1B0291D30": 0.0
+        }
+      ]
+    }
   },
   {
     "Type": "SoundConcatenatorComponent_C",
     "Name": "QuestVO_03_GEN_VARIABLE",
-    "Properties": {}
+    "Outer": "BP_StationProp_Payphone_C",
+    "Template": "Default__SoundConcatenatorComponent_C",
+    "Properties": {
+      "SoundSequence": [
+        {
+          "Sound_2_D8314BE3444A737F8A2ED3B3EDEAC6B5": {
+            "ObjectName": "SLONE_2021_Quest_03_010_Dialogue_Cue:SoundCue",
+            "ObjectPath": "/NPCLibrary/Audio/Slone/Payphone/Cues/SLONE_2021_Quest_03_010_Dialogue_Cue.0"
+          },
+          "Delay_5_9B967CFA4E4664110F1201A1B0291D30": 0.0
+        },
+        {
+          "Sound_2_D8314BE3444A737F8A2ED3B3EDEAC6B5": {
+            "ObjectName": "SLONE_2021_Quest_03_020_Dialogue_Cue:SoundCue",
+            "ObjectPath": "/NPCLibrary/Audio/Slone/Payphone/Cues/SLONE_2021_Quest_03_020_Dialogue_Cue.0"
+          },
+          "Delay_5_9B967CFA4E4664110F1201A1B0291D30": 0.0
+        },
+        {
+          "Sound_2_D8314BE3444A737F8A2ED3B3EDEAC6B5": {
+            "ObjectName": "SLONE_2021_Quest_03_030_Dialogue_Cue:SoundCue",
+            "ObjectPath": "/NPCLibrary/Audio/Slone/Payphone/Cues/SLONE_2021_Quest_03_030_Dialogue_Cue.0"
+          },
+          "Delay_5_9B967CFA4E4664110F1201A1B0291D30": 0.0
+        },
+        {
+          "Sound_2_D8314BE3444A737F8A2ED3B3EDEAC6B5": {
+            "ObjectName": "SLONE_2021_Quest_03_040_Dialogue_Cue:SoundCue",
+            "ObjectPath": "/NPCLibrary/Audio/Slone/Payphone/Cues/SLONE_2021_Quest_03_040_Dialogue_Cue.0"
+          },
+          "Delay_5_9B967CFA4E4664110F1201A1B0291D30": 0.0
+        }
+      ]
+    }
   },
   {
     "Type": "StaticMeshComponent",
     "Name": "StaticMeshComponent0",
+    "Outer": "Default__BP_StationProp_Payphone_C",
+    "Template": "StaticMeshComponent0",
     "Properties": {
       "StaticMesh": {
         "ObjectName": "gas_station_phone_booth_01:StaticMesh",
@@ -748,6 +1944,7 @@
   {
     "Type": "TimelineTemplate",
     "Name": "RingWobbleTimeline_Template",
+    "Outer": "BP_StationProp_Payphone_C",
     "Properties": {
       "TimelineLength": 4.83,
       "FloatTracks": [

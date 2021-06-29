@@ -2,21 +2,152 @@
   {
     "Type": "Function",
     "Name": "ExecuteUbergraph_BP_PlayerPawn_Willow",
-    "Properties": {}
+    "Outer": "BP_PlayerPawn_Willow_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 20,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "SignatureFunction": {
+          "ObjectName": "TimerDynamicDelegate__DelegateSignature:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "TimerHandle:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "CallFunc_GetCurrentDayPhase_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Enum": {
+          "ObjectName": "EFortDayPhase:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanOR_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 8421377,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "Function",
     "Name": "ValidateTimeOfDay",
-    "Properties": {}
+    "Outer": "BP_PlayerPawn_Willow_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 201326592,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "Function",
     "Name": "ReceiveBeginPlay",
-    "Properties": {}
+    "Outer": "BP_PlayerPawn_Willow_C",
+    "Super": "ReceiveBeginPlay",
+    "SuperStruct": {
+      "ObjectName": "BP_PlayerPawn_NonParticipant_C:ReceiveBeginPlay:Function",
+      "ObjectPath": "/Game/Athena/AI/NPCs/Base/BP_PlayerPawn_NonParticipant.20"
+    },
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 134744064,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "BlueprintGeneratedClass",
     "Name": "BP_PlayerPawn_Willow_C",
+    "Super": "BP_PlayerPawn_Tandem_C",
     "Properties": {
       "bHasCookedComponentInstancingData": true,
       "SimpleConstructionScript": {
@@ -31,11 +162,74 @@
         "ObjectName": "BP_PlayerPawn_Willow_C:ExecuteUbergraph_BP_PlayerPawn_Willow:Function",
         "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.0"
       }
+    },
+    "SuperStruct": {
+      "ObjectName": "BP_PlayerPawn_Tandem_C:BlueprintGeneratedClass",
+      "ObjectPath": "/Game/Athena/AI/NPCs/Tandem/Base/Pawns/BP_PlayerPawn_Tandem.0"
+    },
+    "Children": [
+      {
+        "ObjectName": "BP_PlayerPawn_Willow_C:ReceiveBeginPlay:Function",
+        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.2"
+      },
+      {
+        "ObjectName": "BP_PlayerPawn_Willow_C:ValidateTimeOfDay:Function",
+        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.1"
+      },
+      {
+        "ObjectName": "BP_PlayerPawn_Willow_C:ExecuteUbergraph_BP_PlayerPawn_Willow:Function",
+        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 2105344,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "PointerToUberGraphFrame:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_PlayerPawn_Willow": {
+        "ObjectName": "BP_PlayerPawn_Willow_C:ExecuteUbergraph_BP_PlayerPawn_Willow:Function",
+        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.0"
+      },
+      "ValidateTimeOfDay": {
+        "ObjectName": "BP_PlayerPawn_Willow_C:ValidateTimeOfDay:Function",
+        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.1"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "BP_PlayerPawn_Willow_C:ReceiveBeginPlay:Function",
+        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.2"
+      }
+    },
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Game",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__BP_PlayerPawn_Willow_C:BP_PlayerPawn_Willow_C",
+      "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.4"
     }
   },
   {
     "Type": "BP_PlayerPawn_Willow_C",
     "Name": "Default__BP_PlayerPawn_Willow_C",
+    "Template": "Default__BP_PlayerPawn_Tandem_C",
     "Properties": {
       "UberGraphFrame": {},
       "InAirAudioComp": {
@@ -151,6 +345,8 @@
   {
     "Type": "AudioComponent",
     "Name": "FeedbackAudioComp0",
+    "Outer": "Default__BP_PlayerPawn_Willow_C",
+    "Template": "FeedbackAudioComp0",
     "Properties": {
       "AttachParent": {
         "ObjectName": "Default__BP_PlayerPawn_Willow_C:CollisionCylinder:CapsuleComponent",
@@ -161,6 +357,8 @@
   {
     "Type": "AudioComponent",
     "Name": "InAirAudioComp",
+    "Outer": "Default__BP_PlayerPawn_Willow_C",
+    "Template": "InAirAudioComp",
     "Properties": {
       "AttachParent": {
         "ObjectName": "Default__BP_PlayerPawn_Willow_C:CharacterMesh0:FortPooledSkelMeshComponent",
@@ -171,36 +369,44 @@
   {
     "Type": "CapsuleComponent",
     "Name": "CollisionCylinder",
-    "Properties": {}
+    "Outer": "Default__BP_PlayerPawn_Willow_C",
+    "Template": "CollisionCylinder"
   },
   {
     "Type": "FortActorComponent_Affiliation",
     "Name": "AffiliationComponent",
-    "Properties": {}
+    "Outer": "Default__BP_PlayerPawn_Willow_C",
+    "Template": "AffiliationComponent"
   },
   {
     "Type": "FortGenericDataStoreManagerComponent",
     "Name": "GeneralDataStore",
-    "Properties": {}
+    "Outer": "Default__BP_PlayerPawn_Willow_C",
+    "Template": "GeneralDataStore"
   },
   {
     "Type": "FortMovementComp_CharacterAthena",
     "Name": "CharMoveComp",
-    "Properties": {}
+    "Outer": "Default__BP_PlayerPawn_Willow_C",
+    "Template": "CharMoveComp"
   },
   {
     "Type": "FortPawnComponent_Convert",
     "Name": "ConvertComp",
-    "Properties": {}
+    "Outer": "Default__BP_PlayerPawn_Willow_C",
+    "Template": "ConvertComp"
   },
   {
     "Type": "FortPawnComponent_Tether",
     "Name": "TetherComp",
-    "Properties": {}
+    "Outer": "Default__BP_PlayerPawn_Willow_C",
+    "Template": "TetherComp"
   },
   {
     "Type": "FortPooledSkelMeshComponent",
     "Name": "CharacterMesh0",
+    "Outer": "Default__BP_PlayerPawn_Willow_C",
+    "Template": "CharacterMesh0",
     "Properties": {
       "AttachParent": {
         "ObjectName": "Default__BP_PlayerPawn_Willow_C:CollisionCylinder:CapsuleComponent",
@@ -210,11 +416,14 @@
   },
   {
     "Type": "InheritableComponentHandler",
-    "Properties": {}
+    "Name": "InheritableComponentHandler",
+    "Outer": "BP_PlayerPawn_Willow_C"
   },
   {
     "Type": "ParticleSystemComponent",
     "Name": "HitDamageFX",
+    "Outer": "Default__BP_PlayerPawn_Willow_C",
+    "Template": "HitDamageFX",
     "Properties": {
       "AutoAttachParent": {
         "ObjectName": "Default__BP_PlayerPawn_Willow_C:CollisionCylinder:CapsuleComponent",
@@ -229,6 +438,8 @@
   {
     "Type": "ParticleSystemComponent",
     "Name": "PlayerInWaterFX",
+    "Outer": "Default__BP_PlayerPawn_Willow_C",
+    "Template": "PlayerInWaterFX",
     "Properties": {
       "AttachParent": {
         "ObjectName": "Default__BP_PlayerPawn_Willow_C:CollisionCylinder:CapsuleComponent",
@@ -239,6 +450,8 @@
   {
     "Type": "ParticleSystemComponent",
     "Name": "PlayerInWaterSurfaceSwimmingFX",
+    "Outer": "Default__BP_PlayerPawn_Willow_C",
+    "Template": "PlayerInWaterSurfaceSwimmingFX",
     "Properties": {
       "AttachParent": {
         "ObjectName": "Default__BP_PlayerPawn_Willow_C:CollisionCylinder:CapsuleComponent",
@@ -249,6 +462,8 @@
   {
     "Type": "ParticleSystemComponent",
     "Name": "PlayerRunLandFX",
+    "Outer": "Default__BP_PlayerPawn_Willow_C",
+    "Template": "PlayerRunLandFX",
     "Properties": {
       "AutoAttachParent": {
         "ObjectName": "Default__BP_PlayerPawn_Willow_C:CharacterMesh0:FortPooledSkelMeshComponent",
@@ -263,6 +478,8 @@
   {
     "Type": "ParticleSystemComponent",
     "Name": "PlayerSlideLandFX",
+    "Outer": "Default__BP_PlayerPawn_Willow_C",
+    "Template": "PlayerSlideLandFX",
     "Properties": {
       "AutoAttachParent": {
         "ObjectName": "Default__BP_PlayerPawn_Willow_C:CharacterMesh0:FortPooledSkelMeshComponent",
@@ -277,6 +494,8 @@
   {
     "Type": "ParticleSystemComponent",
     "Name": "PlayerWalkLandFX",
+    "Outer": "Default__BP_PlayerPawn_Willow_C",
+    "Template": "PlayerWalkLandFX",
     "Properties": {
       "AutoAttachParent": {
         "ObjectName": "Default__BP_PlayerPawn_Willow_C:CharacterMesh0:FortPooledSkelMeshComponent",
@@ -291,11 +510,12 @@
   {
     "Type": "SceneComponent",
     "Name": "DefaultSceneRoot_GEN_VARIABLE",
-    "Properties": {}
+    "Outer": "BP_PlayerPawn_Willow_C"
   },
   {
     "Type": "SCS_Node",
     "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
     "Properties": {
       "ComponentClass": {
         "ObjectName": "SceneComponent:Class",
@@ -312,6 +532,7 @@
   {
     "Type": "SimpleConstructionScript",
     "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_PlayerPawn_Willow_C",
     "Properties": {
       "DefaultSceneRootNode": {
         "ObjectName": "SimpleConstructionScript_0:SCS_Node_0:SCS_Node",

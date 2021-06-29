@@ -2,6 +2,7 @@
   {
     "Type": "BlueprintGeneratedClass",
     "Name": "B_Athena_Spawner_UpgradeStation_C",
+    "Super": "B_ActorSpawner_Parent_C",
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "B_Athena_Spawner_UpgradeStation_C:SimpleConstructionScript_0:SimpleConstructionScript",
@@ -11,11 +12,32 @@
         "ObjectName": "B_Athena_Spawner_UpgradeStation_C:InheritableComponentHandler:InheritableComponentHandler",
         "ObjectPath": "/NPCLibrary/Stations/B_Athena_Spawner_UpgradeStation.2"
       }
+    },
+    "SuperStruct": {
+      "ObjectName": "B_ActorSpawner_Parent_C:BlueprintGeneratedClass",
+      "ObjectPath": "/Game/Athena/Items/EnvironmentalItems/B_ActorSpawner_Parent.11"
+    },
+    "Children": [],
+    "ChildProperties": [],
+    "FuncMap": {},
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Engine",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__B_Athena_Spawner_UpgradeStation_C:B_Athena_Spawner_UpgradeStation_C",
+      "ObjectPath": "/NPCLibrary/Stations/B_Athena_Spawner_UpgradeStation.1"
     }
   },
   {
     "Type": "B_Athena_Spawner_UpgradeStation_C",
     "Name": "Default__B_Athena_Spawner_UpgradeStation_C",
+    "Template": "Default__B_ActorSpawner_Parent_C",
     "Properties": {
       "ClassToSpawn": {
         "ObjectName": "BP_StationProp_UpgradeBench_C:BlueprintGeneratedClass",
@@ -60,6 +82,8 @@
   },
   {
     "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "B_Athena_Spawner_UpgradeStation_C",
     "Properties": {
       "Records": [
         {
@@ -90,16 +114,18 @@
   {
     "Type": "SceneComponent",
     "Name": "DefaultSceneRoot_GEN_VARIABLE",
-    "Properties": {}
+    "Outer": "B_Athena_Spawner_UpgradeStation_C"
   },
   {
     "Type": "SceneComponent",
     "Name": "SceneRootComp",
-    "Properties": {}
+    "Outer": "Default__B_Athena_Spawner_UpgradeStation_C",
+    "Template": "SceneRootComp"
   },
   {
     "Type": "SCS_Node",
     "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
     "Properties": {
       "ComponentClass": {
         "ObjectName": "SceneComponent:Class",
@@ -116,6 +142,7 @@
   {
     "Type": "SimpleConstructionScript",
     "Name": "SimpleConstructionScript_0",
+    "Outer": "B_Athena_Spawner_UpgradeStation_C",
     "Properties": {
       "DefaultSceneRootNode": {
         "ObjectName": "SimpleConstructionScript_0:SCS_Node_0:SCS_Node",
@@ -126,6 +153,8 @@
   {
     "Type": "StaticMeshComponent",
     "Name": "PreVisMesh_GEN_VARIABLE",
+    "Outer": "B_Athena_Spawner_UpgradeStation_C",
+    "Template": "PreVisMesh_GEN_VARIABLE",
     "Properties": {
       "StaticMesh": {
         "ObjectName": "SM_UpgradeBench:StaticMesh",
