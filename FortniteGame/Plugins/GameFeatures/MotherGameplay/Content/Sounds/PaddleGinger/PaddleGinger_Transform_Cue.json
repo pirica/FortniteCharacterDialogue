@@ -1,0 +1,56 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "PaddleGinger_Transform_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "PaddleGinger_Transform_Cue:SoundNodeWavePlayer_0:SoundNodeWavePlayer",
+        "ObjectPath": "/MotherGameplay/Sounds/PaddleGinger/PaddleGinger_Transform_Cue.1"
+      },
+      "VolumeMultiplier": 0.7,
+      "AttenuationOverrides": {
+        "DistanceAlgorithm": "EAttenuationDistanceModel::NaturalSound",
+        "AttenuationShapeExtents": {
+          "X": 1000.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 4000.0
+      },
+      "SoundClassObject": {
+        "ObjectName": "Fort_Weapon_Projectile_FirstPerson_PSM:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Weapon_Projectile_FirstPerson_PSM.0"
+      },
+      "ConcurrencySet": [
+        {
+          "ObjectName": "Weapon_Gunfire_Local_Conc:SoundConcurrency",
+          "ObjectPath": "/Game/Sounds/Concurrency_Rules/Weapon_Gunfire_Local_Conc.0"
+        },
+        {
+          "ObjectName": "Weapon_Gunfire_Global_Conc:SoundConcurrency",
+          "ObjectPath": "/Game/Sounds/Concurrency_Rules/Weapon_Gunfire_Global_Conc.0"
+        }
+      ],
+      "ConcurrencyOverrides": {
+        "ResolutionRule": "EMaxConcurrentResolutionRule::PreventNew"
+      },
+      "Duration": 1.449,
+      "MaxDistance": 2000.0,
+      "AttenuationSettings": {
+        "ObjectName": "Fort_Weapon_Pistol_Sml_Att:SoundAttenuation",
+        "ObjectPath": "/Game/Sounds/Attenuation/Fort_Weapon_Pistol_Sml_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "PaddleGinger_Transform_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/PaddleGinger/PaddleGinger_Transform_01.PaddleGinger_Transform_01",
+        "SubPathString": ""
+      }
+    }
+  }
+]

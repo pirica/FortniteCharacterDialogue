@@ -1,0 +1,135 @@
+[
+  {
+    "Type": "BodySetup",
+    "Name": "BodySetup_0",
+    "Outer": "Icon_PropCyclePreview_Sprite",
+    "Properties": {
+      "AggGeom": {
+        "BoxElems": [
+          {
+            "Center": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            },
+            "X": 86.0,
+            "Y": 10.0,
+            "Z": 68.0,
+            "RestOffset": 0.0,
+            "Name": null,
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "DefaultInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldDynamic",
+        "CollisionEnabled": "ECollisionEnabled::QueryOnly",
+        "CollisionProfileName": "BlockAllDynamic",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "FCC_Trace_WeaponCapsule",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_PawnAI",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Trace_WeaponMulti",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Trace_Weapon",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_Projectile",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_ProjectileIgnoreAI",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_ProjectileMesh",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+              "Response": "ECollisionResponse::ECR_Block"
+            }
+          ]
+        }
+      },
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    }
+  },
+  {
+    "Type": "PaperSprite",
+    "Name": "Icon_PropCyclePreview_Sprite",
+    "Properties": {
+      "BakedSourceDimension": {
+        "X": 88.0,
+        "Y": 72.0
+      },
+      "BakedSourceTexture": {
+        "ObjectName": "Icon_PropCyclePreview:Texture2D",
+        "ObjectPath": "/MotherGameplay/HUD/Icon_PropCyclePreview.0"
+      },
+      "DefaultMaterial": {
+        "ObjectName": "TranslucentUnlitSpriteMaterial:MaterialInstanceConstant",
+        "ObjectPath": "/Paper2D/TranslucentUnlitSpriteMaterial.0"
+      },
+      "PixelsPerUnrealUnit": 1.0,
+      "BodySetup": {
+        "ObjectName": "Icon_PropCyclePreview_Sprite:BodySetup_0:BodySetup",
+        "ObjectPath": "/MotherGameplay/HUD/Icon_PropCyclePreview_Sprite.0"
+      },
+      "BakedRenderData": [
+        {
+          "X": 43.0,
+          "Y": 34.0,
+          "Z": 0.9886364,
+          "W": 0.027777778
+        },
+        {
+          "X": -43.0,
+          "Y": 34.0,
+          "Z": 0.011363637,
+          "W": 0.027777778
+        },
+        {
+          "X": -43.0,
+          "Y": -34.0,
+          "Z": 0.011363637,
+          "W": 0.9722222
+        },
+        {
+          "X": 43.0,
+          "Y": -34.0,
+          "Z": 0.9886364,
+          "W": 0.9722222
+        },
+        {
+          "X": 43.0,
+          "Y": 34.0,
+          "Z": 0.9886364,
+          "W": 0.027777778
+        },
+        {
+          "X": -43.0,
+          "Y": -34.0,
+          "Z": 0.011363637,
+          "W": 0.9722222
+        }
+      ]
+    }
+  }
+]

@@ -2,6 +2,7 @@
   {
     "Type": "NiagaraDataInterfaceColorCurve",
     "Name": "NiagaraDataInterfaceColorCurve_0",
+    "Outer": "SpawnScript",
     "Properties": {
       "ShaderLUT": [
         1.0,
@@ -475,6 +476,7 @@
   {
     "Type": "NiagaraDataInterfaceColorCurve",
     "Name": "NiagaraDataInterfaceColorCurve_0",
+    "Outer": "UpdateScript",
     "Properties": {
       "ShaderLUT": [
         1.0,
@@ -948,6 +950,7 @@
   {
     "Type": "NiagaraDataInterfaceColorCurve",
     "Name": "NiagaraDataInterfaceColorCurve_60",
+    "Outer": "UpdateScript",
     "Properties": {
       "ShaderLUT": [
         1.0,
@@ -1421,6 +1424,7 @@
   {
     "Type": "NiagaraDataInterfaceCurve",
     "Name": "NiagaraDataInterfaceCurve_0",
+    "Outer": "SpawnScript",
     "Properties": {
       "ShaderLUT": [
         0.0,
@@ -1529,6 +1533,7 @@
   {
     "Type": "NiagaraDataInterfaceCurve",
     "Name": "NiagaraDataInterfaceCurve_0",
+    "Outer": "UpdateScript",
     "Properties": {
       "ShaderLUT": [
         0.0,
@@ -1637,6 +1642,7 @@
   {
     "Type": "NiagaraDataInterfaceCurve",
     "Name": "NiagaraDataInterfaceCurve_99",
+    "Outer": "UpdateScript",
     "Properties": {
       "ShaderLUT": [
         0.0,
@@ -1745,6 +1751,7 @@
   {
     "Type": "NiagaraDataInterfaceCurve",
     "Name": "NiagaraDataInterfaceCurve_0",
+    "Outer": "SpawnScript",
     "Properties": {
       "ShaderLUT": [
         0.0,
@@ -1858,6 +1865,7 @@
   {
     "Type": "NiagaraDataInterfaceCurve",
     "Name": "NiagaraDataInterfaceCurve_0",
+    "Outer": "UpdateScript",
     "Properties": {
       "ShaderLUT": [
         0.0,
@@ -1971,6 +1979,7 @@
   {
     "Type": "NiagaraDataInterfaceCurve",
     "Name": "NiagaraDataInterfaceCurve_74",
+    "Outer": "UpdateScript",
     "Properties": {
       "ShaderLUT": [
         0.0,
@@ -2084,6 +2093,7 @@
   {
     "Type": "NiagaraEmitter",
     "Name": "Glow_and_Light_0",
+    "Outer": "NS_AlienArtifact_Ambient",
     "Properties": {
       "bLocalSpace": true,
       "UpdateScriptProps": {
@@ -2133,6 +2143,7 @@
   {
     "Type": "NiagaraEmitter",
     "Name": "LightPillar_2",
+    "Outer": "NS_AlienArtifact_Ambient",
     "Properties": {
       "bLocalSpace": true,
       "UpdateScriptProps": {
@@ -2178,51 +2189,85 @@
   {
     "Type": "NiagaraLightRendererProperties",
     "Name": "NiagaraLightRendererProperties_0",
-    "Properties": {}
+    "Outer": "Glow_and_Light_0"
   },
   {
     "Type": "NiagaraMeshRendererProperties",
     "Name": "NiagaraMeshRendererProperties_0",
-    "Properties": {}
+    "Outer": "LightPillar_2"
   },
   {
     "Type": "NiagaraScript",
     "Name": "SpawnScript",
-    "Properties": {}
+    "Outer": "Glow_and_Light_0"
   },
   {
     "Type": "NiagaraScript",
     "Name": "UpdateScript",
-    "Properties": {}
+    "Outer": "Glow_and_Light_0"
   },
   {
     "Type": "NiagaraScript",
     "Name": "SpawnScript",
-    "Properties": {}
+    "Outer": "LightPillar_2"
   },
   {
     "Type": "NiagaraScript",
     "Name": "UpdateScript",
-    "Properties": {}
+    "Outer": "LightPillar_2"
   },
   {
     "Type": "NiagaraScript",
     "Name": "SystemSpawnScript",
-    "Properties": {}
+    "Outer": "NS_AlienArtifact_Ambient"
   },
   {
     "Type": "NiagaraScript",
     "Name": "SystemUpdateScript",
-    "Properties": {}
+    "Outer": "NS_AlienArtifact_Ambient"
   },
   {
     "Type": "NiagaraSpriteRendererProperties",
     "Name": "NiagaraSpriteRendererProperties_0",
-    "Properties": {}
+    "Outer": "Glow_and_Light_0",
+    "Properties": {
+      "Material": {
+        "ObjectName": "M_Particle_Flare_HotCenter_Flicker:Material",
+        "ObjectPath": "/Game/Effects/Niagara/MasterMaterials/Flares/M_Particle_Flare_HotCenter_Flicker.0"
+      },
+      "PositionBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "ColorBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "VelocityBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "SpriteRotationBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "SpriteSizeBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "CameraOffsetBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "MaterialRandomBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "CustomSortingBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "NormalizedAgeBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "SortOrderHint": 1,
+      "MotionVectorSetting": "ENiagaraRendererMotionVectorSetting::Disable"
+    }
   },
   {
     "Type": "NiagaraSystem",
-    "Name": "NS_AlienArtifact_Ambient",
-    "Properties": {}
+    "Name": "NS_AlienArtifact_Ambient"
   }
 ]

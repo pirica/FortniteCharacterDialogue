@@ -1,0 +1,130 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "AvacadoEaterBird_Attached_DrainVOX_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "AvacadoEaterBird_Attached_DrainVOX_Cue:SoundNodeMixer_0:SoundNodeMixer",
+        "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Bird/AvacadoEaterBird_Attached_DrainVOX_Cue.1"
+      },
+      "VolumeMultiplier": 0.5,
+      "AttenuationOverrides": {
+        "LPFRadiusMin": 200.0,
+        "LPFRadiusMax": 1000.0,
+        "LPFFrequencyAtMax": 5000.0,
+        "DistanceAlgorithm": "EAttenuationDistanceModel::Logarithmic",
+        "AttenuationShapeExtents": {
+          "X": 200.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 1000.0
+      },
+      "SoundClassObject": {
+        "ObjectName": "Fort_WeaponMelee_PSM:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_WeaponMelee_PSM.0"
+      },
+      "bOverrideConcurrency": true,
+      "ConcurrencyOverrides": {
+        "MaxCount": 1,
+        "ResolutionRule": "EMaxConcurrentResolutionRule::PreventNew"
+      },
+      "Duration": 1.1280209,
+      "MaxDistance": 3524.0,
+      "AttenuationSettings": {
+        "ObjectName": "AvacadoEaterBird_Att:SoundAttenuation",
+        "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Attenuations/AvacadoEaterBird_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_0",
+    "Outer": "AvacadoEaterBird_Attached_DrainVOX_Cue",
+    "Properties": {
+      "InputVolume": [
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "AvacadoEaterBird_Attached_DrainVOX_Cue:SoundNodeModulator_0:SoundNodeModulator",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Bird/AvacadoEaterBird_Attached_DrainVOX_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "AvacadoEaterBird_Attached_DrainVOX_Cue",
+    "Properties": {
+      "PitchMin": 0.98,
+      "VolumeMin": 1.0,
+      "ChildNodes": [
+        {
+          "ObjectName": "AvacadoEaterBird_Attached_DrainVOX_Cue:SoundNodeRandom_1:SoundNodeRandom",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Bird/AvacadoEaterBird_Attached_DrainVOX_Cue.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_1",
+    "Outer": "AvacadoEaterBird_Attached_DrainVOX_Cue",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "AvacadoEaterBird_Attached_DrainVOX_Cue:SoundNodeWavePlayer_3:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Bird/AvacadoEaterBird_Attached_DrainVOX_Cue.4"
+        },
+        {
+          "ObjectName": "AvacadoEaterBird_Attached_DrainVOX_Cue:SoundNodeWavePlayer_4:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Bird/AvacadoEaterBird_Attached_DrainVOX_Cue.5"
+        },
+        {
+          "ObjectName": "AvacadoEaterBird_Attached_DrainVOX_Cue:SoundNodeWavePlayer_5:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Bird/AvacadoEaterBird_Attached_DrainVOX_Cue.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "AvacadoEaterBird_Attached_DrainVOX_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/AvacadoEater/Bird/AvacadoEater_Vocal_ChaseStart_03.AvacadoEater_Vocal_ChaseStart_03",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_4",
+    "Outer": "AvacadoEaterBird_Attached_DrainVOX_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/AvacadoEater/Bird/AvacadoEater_Vocal_ChaseStart_04.AvacadoEater_Vocal_ChaseStart_04",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_5",
+    "Outer": "AvacadoEaterBird_Attached_DrainVOX_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/AvacadoEater/Bird/AvacadoEater_Vocal_ChaseStart_06.AvacadoEater_Vocal_ChaseStart_06",
+        "SubPathString": ""
+      }
+    }
+  }
+]

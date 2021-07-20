@@ -1,0 +1,642 @@
+[
+  {
+    "Type": "PhysicsAsset",
+    "Name": "Cage_Saddle_Head_Physics",
+    "Properties": {
+      "BoundsBodies": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "SkeletalBodySetups": [
+        {
+          "ObjectName": "Cage_Saddle_Head_Physics:SkeletalBodySetup_0:SkeletalBodySetup",
+          "ObjectPath": "/MotherGameplay/Items/CageSaddle/Meshes/Cage_Saddle_Head_Physics.8"
+        },
+        {
+          "ObjectName": "Cage_Saddle_Head_Physics:SkeletalBodySetup_17:SkeletalBodySetup",
+          "ObjectPath": "/MotherGameplay/Items/CageSaddle/Meshes/Cage_Saddle_Head_Physics.9"
+        },
+        {
+          "ObjectName": "Cage_Saddle_Head_Physics:SkeletalBodySetup_18:SkeletalBodySetup",
+          "ObjectPath": "/MotherGameplay/Items/CageSaddle/Meshes/Cage_Saddle_Head_Physics.10"
+        },
+        {
+          "ObjectName": "Cage_Saddle_Head_Physics:SkeletalBodySetup_23:SkeletalBodySetup",
+          "ObjectPath": "/MotherGameplay/Items/CageSaddle/Meshes/Cage_Saddle_Head_Physics.11"
+        },
+        {
+          "ObjectName": "Cage_Saddle_Head_Physics:SkeletalBodySetup_25:SkeletalBodySetup",
+          "ObjectPath": "/MotherGameplay/Items/CageSaddle/Meshes/Cage_Saddle_Head_Physics.12"
+        },
+        {
+          "ObjectName": "Cage_Saddle_Head_Physics:SkeletalBodySetup_26:SkeletalBodySetup",
+          "ObjectPath": "/MotherGameplay/Items/CageSaddle/Meshes/Cage_Saddle_Head_Physics.13"
+        },
+        {
+          "ObjectName": "Cage_Saddle_Head_Physics:SkeletalBodySetup_27:SkeletalBodySetup",
+          "ObjectPath": "/MotherGameplay/Items/CageSaddle/Meshes/Cage_Saddle_Head_Physics.14"
+        },
+        {
+          "ObjectName": "Cage_Saddle_Head_Physics:SkeletalBodySetup_29:SkeletalBodySetup",
+          "ObjectPath": "/MotherGameplay/Items/CageSaddle/Meshes/Cage_Saddle_Head_Physics.15"
+        }
+      ],
+      "ConstraintSetup": [
+        {
+          "ObjectName": "Cage_Saddle_Head_Physics:PhysicsConstraintTemplate_16:PhysicsConstraintTemplate",
+          "ObjectPath": "/MotherGameplay/Items/CageSaddle/Meshes/Cage_Saddle_Head_Physics.1"
+        },
+        {
+          "ObjectName": "Cage_Saddle_Head_Physics:PhysicsConstraintTemplate_17:PhysicsConstraintTemplate",
+          "ObjectPath": "/MotherGameplay/Items/CageSaddle/Meshes/Cage_Saddle_Head_Physics.2"
+        },
+        {
+          "ObjectName": "Cage_Saddle_Head_Physics:PhysicsConstraintTemplate_22:PhysicsConstraintTemplate",
+          "ObjectPath": "/MotherGameplay/Items/CageSaddle/Meshes/Cage_Saddle_Head_Physics.3"
+        },
+        {
+          "ObjectName": "Cage_Saddle_Head_Physics:PhysicsConstraintTemplate_24:PhysicsConstraintTemplate",
+          "ObjectPath": "/MotherGameplay/Items/CageSaddle/Meshes/Cage_Saddle_Head_Physics.4"
+        },
+        {
+          "ObjectName": "Cage_Saddle_Head_Physics:PhysicsConstraintTemplate_25:PhysicsConstraintTemplate",
+          "ObjectPath": "/MotherGameplay/Items/CageSaddle/Meshes/Cage_Saddle_Head_Physics.5"
+        },
+        {
+          "ObjectName": "Cage_Saddle_Head_Physics:PhysicsConstraintTemplate_26:PhysicsConstraintTemplate",
+          "ObjectPath": "/MotherGameplay/Items/CageSaddle/Meshes/Cage_Saddle_Head_Physics.6"
+        },
+        {
+          "ObjectName": "Cage_Saddle_Head_Physics:PhysicsConstraintTemplate_28:PhysicsConstraintTemplate",
+          "ObjectPath": "/MotherGameplay/Items/CageSaddle/Meshes/Cage_Saddle_Head_Physics.7"
+        }
+      ],
+      "SolverIterations": {
+        "SolverIterations": 1,
+        "JointIterations": 1,
+        "CollisionIterations": 1
+      },
+      "ThumbnailInfo": null
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_16",
+    "Outer": "Cage_Saddle_Head_Physics",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "neck",
+        "ConstraintBone1": "neck",
+        "ConstraintBone2": "body",
+        "Pos2": {
+          "X": -45.87252,
+          "Y": -7.940934E-23,
+          "Z": 0.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_17",
+    "Outer": "Cage_Saddle_Head_Physics",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "head",
+        "ConstraintBone1": "head",
+        "ConstraintBone2": "neck",
+        "Pos2": {
+          "X": -5.937458,
+          "Y": 1.454258E-15,
+          "Z": 0.0
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1LimitDegrees": 20.0,
+            "Swing2LimitDegrees": 30.0,
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistLimitDegrees": 20.0,
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_22",
+    "Outer": "Cage_Saddle_Head_Physics",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "ear_l",
+        "ConstraintBone1": "ear_l",
+        "ConstraintBone2": "head",
+        "Pos2": {
+          "X": -10.280529,
+          "Y": 10.16074,
+          "Z": 14.73389
+        },
+        "PriAxis2": {
+          "X": 0.2144776,
+          "Y": 0.97600114,
+          "Z": -0.037697047
+        },
+        "SecAxis2": {
+          "X": 0.42041525,
+          "Y": -0.12708616,
+          "Z": -0.8983875
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing2LimitDegrees": 25.0,
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistLimitDegrees": 25.0,
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_24",
+    "Outer": "Cage_Saddle_Head_Physics",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "ear_r",
+        "ConstraintBone1": "ear_r",
+        "ConstraintBone2": "head",
+        "Pos2": {
+          "X": -10.280521,
+          "Y": -10.1607,
+          "Z": 14.73393
+        },
+        "PriAxis2": {
+          "X": -0.21447766,
+          "Y": 0.97600114,
+          "Z": 0.037697047
+        },
+        "SecAxis2": {
+          "X": -0.42041525,
+          "Y": -0.12708616,
+          "Z": 0.8983875
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing2LimitDegrees": 25.0,
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistLimitDegrees": 25.0,
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_25",
+    "Outer": "Cage_Saddle_Head_Physics",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "horn_l",
+        "ConstraintBone1": "horn_l",
+        "ConstraintBone2": "head",
+        "Pos2": {
+          "X": -13.882328,
+          "Y": 8.446618,
+          "Z": 16.49213
+        },
+        "PriAxis2": {
+          "X": -0.0020059347,
+          "Y": 0.30482715,
+          "Z": 0.9524056
+        },
+        "SecAxis2": {
+          "X": 0.0035012513,
+          "Y": 0.9524038,
+          "Z": -0.3048192
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1LimitDegrees": 25.0,
+            "Swing2LimitDegrees": 25.0,
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistLimitDegrees": 25.0,
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_26",
+    "Outer": "Cage_Saddle_Head_Physics",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "mouth",
+        "ConstraintBone1": "mouth",
+        "ConstraintBone2": "head",
+        "Pos2": {
+          "X": -26.347233,
+          "Y": 0.0001602173,
+          "Z": -14.73072
+        },
+        "PriAxis2": {
+          "X": -0.5140189,
+          "Y": -6.294916E-17,
+          "Z": -0.85777885
+        },
+        "SecAxis2": {
+          "X": -1.7417067E-17,
+          "Y": 1.0,
+          "Z": -6.294916E-17
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1LimitDegrees": 25.0,
+            "Swing2LimitDegrees": 25.0,
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Locked"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_28",
+    "Outer": "Cage_Saddle_Head_Physics",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "horn_r",
+        "ConstraintBone1": "horn_r",
+        "ConstraintBone2": "head",
+        "Pos2": {
+          "X": -13.88232,
+          "Y": -8.44662,
+          "Z": 16.49213
+        },
+        "PriAxis2": {
+          "X": 0.0020059347,
+          "Y": 0.30482715,
+          "Z": -0.9524056
+        },
+        "SecAxis2": {
+          "X": -0.0035012513,
+          "Y": 0.9524038,
+          "Z": 0.3048192
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1LimitDegrees": 25.0,
+            "Swing2LimitDegrees": 25.0,
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistLimitDegrees": 25.0,
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_0",
+    "Outer": "Cage_Saddle_Head_Physics",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            },
+            "Radius": 1.0,
+            "Length": 1.0,
+            "RestOffset": 0.0,
+            "Name": null,
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "body",
+      "PhysicsType": "EPhysicsType::PhysType_Kinematic",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_17",
+    "Outer": "Cage_Saddle_Head_Physics",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            },
+            "Radius": 1.0,
+            "Length": 1.0,
+            "RestOffset": 0.0,
+            "Name": null,
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "neck",
+      "PhysicsType": "EPhysicsType::PhysType_Kinematic",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_18",
+    "Outer": "Cage_Saddle_Head_Physics",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": -15.022612,
+              "Y": -6.1035156E-05,
+              "Z": 1.847744E-06
+            },
+            "Rotation": {
+              "Pitch": 90.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            },
+            "Radius": 16.5,
+            "Length": 4.0,
+            "RestOffset": 0.0,
+            "Name": null,
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "DefaultInstance": {
+        "MassInKgOverride": 25.0,
+        "AngularDamping": 25.0,
+        "InertiaTensorScale": {
+          "X": 1.1,
+          "Y": 1.1,
+          "Z": 1.1
+        },
+        "bOverrideMass": true
+      },
+      "BoneName": "head",
+      "PhysicsType": "EPhysicsType::PhysType_Simulated",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_23",
+    "Outer": "Cage_Saddle_Head_Physics",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 7.0,
+              "Y": 9.255589E-06,
+              "Z": -5.811453E-07
+            },
+            "Rotation": {
+              "Pitch": 90.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            },
+            "Radius": 3.25,
+            "Length": 4.25,
+            "RestOffset": 0.0,
+            "Name": null,
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "DefaultInstance": {
+        "MassInKgOverride": 10.0,
+        "AngularDamping": 25.0,
+        "InertiaTensorScale": {
+          "X": 1.1,
+          "Y": 1.1,
+          "Z": 1.1
+        },
+        "bOverrideMass": true
+      },
+      "BoneName": "ear_l",
+      "PhysicsType": "EPhysicsType::PhysType_Simulated",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_25",
+    "Outer": "Cage_Saddle_Head_Physics",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": -7.0,
+              "Y": 6.0303748E-05,
+              "Z": 6.7055225E-08
+            },
+            "Rotation": {
+              "Pitch": 90.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            },
+            "Radius": 3.25,
+            "Length": 4.25,
+            "RestOffset": 0.0,
+            "Name": null,
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "DefaultInstance": {
+        "MassInKgOverride": 10.0,
+        "AngularDamping": 25.0,
+        "InertiaTensorScale": {
+          "X": 1.1,
+          "Y": 1.1,
+          "Z": 1.1
+        },
+        "bOverrideMass": true
+      },
+      "BoneName": "ear_r",
+      "PhysicsType": "EPhysicsType::PhysType_Simulated",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_26",
+    "Outer": "Cage_Saddle_Head_Physics",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 0.9625246,
+              "Y": -2.705791E-07,
+              "Z": 0.00017026067
+            },
+            "Rotation": {
+              "Pitch": 90.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            },
+            "Radius": 3.0,
+            "Length": 3.75,
+            "RestOffset": 0.0,
+            "Name": null,
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "DefaultInstance": {
+        "MassInKgOverride": 10.0,
+        "AngularDamping": 25.0,
+        "InertiaTensorScale": {
+          "X": 1.1,
+          "Y": 1.1,
+          "Z": 1.1
+        },
+        "bOverrideMass": true
+      },
+      "BoneName": "horn_l",
+      "PhysicsType": "EPhysicsType::PhysType_Simulated",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_27",
+    "Outer": "Cage_Saddle_Head_Physics",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 2.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "Rotation": {
+              "Pitch": 90.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            },
+            "Radius": 6.0,
+            "Length": 3.5,
+            "RestOffset": 0.0,
+            "Name": null,
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "DefaultInstance": {
+        "MassInKgOverride": 10.0,
+        "AngularDamping": 25.0,
+        "InertiaTensorScale": {
+          "X": 1.1,
+          "Y": 1.1,
+          "Z": 1.1
+        },
+        "bOverrideMass": true
+      },
+      "BoneName": "mouth",
+      "PhysicsType": "EPhysicsType::PhysType_Simulated",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_29",
+    "Outer": "Cage_Saddle_Head_Physics",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": -0.9625242,
+              "Y": 1.0380237E-06,
+              "Z": 0.00017003343
+            },
+            "Rotation": {
+              "Pitch": 90.0,
+              "Yaw": 0.0,
+              "Roll": -179.99994
+            },
+            "Radius": 3.0,
+            "Length": 3.75,
+            "RestOffset": 0.0,
+            "Name": null,
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "DefaultInstance": {
+        "MassInKgOverride": 10.0,
+        "AngularDamping": 25.0,
+        "InertiaTensorScale": {
+          "X": 1.1,
+          "Y": 1.1,
+          "Z": 1.1
+        },
+        "bOverrideMass": true
+      },
+      "BoneName": "horn_r",
+      "PhysicsType": "EPhysicsType::PhysType_Simulated",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    }
+  }
+]

@@ -1,0 +1,174 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "ScooterRecon_Projectile_ScanningOrb_Open_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "ScooterRecon_Projectile_ScanningOrb_Open_Cue:SoundNodeBranch_0:SoundNodeBranch",
+        "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_ScanningOrb_Open_Cue.1"
+      },
+      "VolumeMultiplier": 0.15,
+      "AttenuationOverrides": {
+        "bAttenuateWithLPF": true,
+        "SpatializationAlgorithm": "ESoundSpatializationAlgorithm::SPATIALIZATION_HRTF",
+        "StereoSpread": 256.0,
+        "LPFRadiusMin": 800.0,
+        "LPFRadiusMax": 3000.0,
+        "LPFFrequencyAtMax": 200.0,
+        "FalloffDistance": 3500.0
+      },
+      "bOverrideAttenuation": true,
+      "SoundClassObject": {
+        "ObjectName": "Fort_Weapons:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Weapons.0"
+      },
+      "ConcurrencySet": [
+        {
+          "ObjectName": "ScooterRecon_Projectile_Local_Conc:SoundConcurrency",
+          "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_Local_Conc.0"
+        },
+        {
+          "ObjectName": "ScooterRecon_Projectile_Global_Conc:SoundConcurrency",
+          "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_Global_Conc.0"
+        }
+      ],
+      "ConcurrencyOverrides": {
+        "MaxCount": 2,
+        "bLimitToOwner": true
+      },
+      "Duration": 2.9755833,
+      "MaxDistance": 3900.0
+    }
+  },
+  {
+    "Type": "SoundNodeBranch",
+    "Name": "SoundNodeBranch_0",
+    "Outer": "ScooterRecon_Projectile_ScanningOrb_Open_Cue",
+    "Properties": {
+      "BoolParameterName": "IsFriendly",
+      "ChildNodes": [
+        {
+          "ObjectName": "ScooterRecon_Projectile_ScanningOrb_Open_Cue:SoundNodeModulator_0:SoundNodeModulator",
+          "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_ScanningOrb_Open_Cue.2"
+        },
+        {
+          "ObjectName": "ScooterRecon_Projectile_ScanningOrb_Open_Cue:SoundNodeModulator_1:SoundNodeModulator",
+          "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_ScanningOrb_Open_Cue.3"
+        },
+        {
+          "ObjectName": "ScooterRecon_Projectile_ScanningOrb_Open_Cue:SoundNodeModulator_1:SoundNodeModulator",
+          "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_ScanningOrb_Open_Cue.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "ScooterRecon_Projectile_ScanningOrb_Open_Cue",
+    "Properties": {
+      "PitchMin": 1.0,
+      "PitchMax": 1.0,
+      "VolumeMin": 0.8,
+      "VolumeMax": 1.0,
+      "ChildNodes": [
+        {
+          "ObjectName": "ScooterRecon_Projectile_ScanningOrb_Open_Cue:SoundNodeRandom_1:SoundNodeRandom",
+          "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_ScanningOrb_Open_Cue.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_1",
+    "Outer": "ScooterRecon_Projectile_ScanningOrb_Open_Cue",
+    "Properties": {
+      "PitchMin": 1.2,
+      "PitchMax": 1.2,
+      "VolumeMin": 2.0,
+      "VolumeMax": 2.0,
+      "ChildNodes": [
+        {
+          "ObjectName": "ScooterRecon_Projectile_ScanningOrb_Open_Cue:SoundNodeRandom_1:SoundNodeRandom",
+          "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_ScanningOrb_Open_Cue.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_1",
+    "Outer": "ScooterRecon_Projectile_ScanningOrb_Open_Cue",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "ScooterRecon_Projectile_ScanningOrb_Open_Cue:SoundNodeWavePlayer_4:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_ScanningOrb_Open_Cue.5"
+        },
+        {
+          "ObjectName": "ScooterRecon_Projectile_ScanningOrb_Open_Cue:SoundNodeWavePlayer_5:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_ScanningOrb_Open_Cue.6"
+        },
+        {
+          "ObjectName": "ScooterRecon_Projectile_ScanningOrb_Open_Cue:SoundNodeWavePlayer_6:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_ScanningOrb_Open_Cue.7"
+        },
+        {
+          "ObjectName": "ScooterRecon_Projectile_ScanningOrb_Open_Cue:SoundNodeWavePlayer_7:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_ScanningOrb_Open_Cue.8"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_4",
+    "Outer": "ScooterRecon_Projectile_ScanningOrb_Open_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Pulse_C01.ScooterRecon_Pulse_C01",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_5",
+    "Outer": "ScooterRecon_Projectile_ScanningOrb_Open_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Pulse_C02.ScooterRecon_Pulse_C02",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_6",
+    "Outer": "ScooterRecon_Projectile_ScanningOrb_Open_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Pulse_C03.ScooterRecon_Pulse_C03",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_7",
+    "Outer": "ScooterRecon_Projectile_ScanningOrb_Open_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Pulse_C04.ScooterRecon_Pulse_C04",
+        "SubPathString": ""
+      }
+    }
+  }
+]

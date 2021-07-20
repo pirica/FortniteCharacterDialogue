@@ -1,0 +1,127 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "quest_s17_transient_AlienTrooper_q03",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaTransientQuest",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/AlienTrooper/AlienTrooper/NPCCharacterData_AlienTrooper.NPCCharacterData_AlienTrooper",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "ExpirationDuration": -1,
+      "RewardsTable": {
+        "ObjectName": "ChallengeReward_S17_Transient_UC:DataTable",
+        "ObjectPath": "/BattlepassS17/Items/QuestRewards/ChallengeReward_S17_Transient_UC.0"
+      },
+      "Objectives": [
+        {
+          "BackendName": "quest_s17_transient_AlienTrooper_q03_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Item.Weapon.Ranged.Assault.PastaRipper"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "Target.Tags HasTag Homebase.Class || Target.Tags HasTag Athena.Faction.Generic.Hostile || Target.Tags HasTag Pawn.Athena.NPC.Duel.IsBeingChallenged || Target.Tags HasTag Pawn.Athena.NPC.Wildlife.Predator || Target.Tags HasTag Pawn.Athena.NPC.Mang || Target.Tags HasTag Pawn.Athena.NPC.IO || Target.Tags HasTag AISpawnerData.Type.MotherWall || Target.Tags HasTag Pawn.Athena.NPC.Labrador",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Damage",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "F0E1D129420FD37F57F463ACF09C72E1",
+            "SourceString": "Pulse Rifle Damage"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "103678FC4C033DDA988F49BB3DA4B309",
+            "SourceString": "So you think you can handle a pulse rifle? Go ahead."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 100,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "quest_s17_transient_AlienTrooper_q03",
+        "Key": "quest_s17_transient_AlienTrooper_q03_CompletionText",
+        "SourceString": "Hmm. You did better than I thought you would."
+      },
+      "GrantToProfileType": "athena",
+      "DisplayName": {
+        "Namespace": "quest_s17_transient_AlienTrooper_q03",
+        "Key": "quest_s17_transient_AlienTrooper_q03_DisplayName",
+        "SourceString": "Pulse Rifle Damage"
+      },
+      "ShortDescription": {
+        "Namespace": "quest_s17_transient_AlienTrooper_q03",
+        "Key": "quest_s17_transient_AlienTrooper_q03_ShortDescription",
+        "SourceString": "So you think you can handle a pulse rifle? Go ahead."
+      },
+      "Description": {
+        "Namespace": "quest_s17_transient_AlienTrooper_q03",
+        "Key": "quest_s17_transient_AlienTrooper_q03_Description",
+        "SourceString": "Pulse Rifle Damage"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.Bars"
+      ]
+    }
+  }
+]

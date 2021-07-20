@@ -1,0 +1,56 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "ScooterRecon_Drop_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "ScooterRecon_Drop_Cue:SoundNodeModulator_0:SoundNodeModulator",
+        "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Drop_Cue.1"
+      },
+      "VolumeMultiplier": 0.5,
+      "SoundClassObject": {
+        "ObjectName": "Fort_Searching_Foley:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Searching_Foley.0"
+      },
+      "ConcurrencySet": [
+        {
+          "ObjectName": "Weapon_Drop_StopOldest:SoundConcurrency",
+          "ObjectPath": "/Game/Sounds/Concurrency_Rules/Weapon_Drop_StopOldest.0"
+        }
+      ],
+      "ConcurrencyOverrides": {
+        "ResolutionRule": "EMaxConcurrentResolutionRule::PreventNew"
+      },
+      "Duration": 1.1810417,
+      "MaxDistance": 3200.0,
+      "AttenuationSettings": {
+        "ObjectName": "Fort_Weapon_Drop_Att:SoundAttenuation",
+        "ObjectPath": "/Game/Sounds/Attenuation/Fort_Weapon_Drop_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "ScooterRecon_Drop_Cue",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "ScooterRecon_Drop_Cue:SoundNodeWavePlayer_0:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Drop_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "ScooterRecon_Drop_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Drop_01.ScooterRecon_Drop_01",
+        "SubPathString": ""
+      }
+    }
+  }
+]

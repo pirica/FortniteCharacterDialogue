@@ -1,0 +1,121 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "AlienLaser_FireStop_Close1P_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "AlienLaser_FireStop_Close1P_Cue:SoundNodeSoundClass_1:SoundNodeSoundClass",
+        "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_FireStop_Close1P_Cue.3"
+      },
+      "VolumeMultiplier": 0.2,
+      "PitchMultiplier": 1.2,
+      "SoundClassObject": null,
+      "bDebug": true,
+      "ConcurrencySet": [
+        {
+          "ObjectName": "Weapon_Gunfire_Local_Conc:SoundConcurrency",
+          "ObjectPath": "/Game/Sounds/Concurrency_Rules/Weapon_Gunfire_Local_Conc.0"
+        },
+        {
+          "ObjectName": "Weapon_Gunfire_Global_Conc:SoundConcurrency",
+          "ObjectPath": "/Game/Sounds/Concurrency_Rules/Weapon_Gunfire_Global_Conc.0"
+        }
+      ],
+      "Duration": 1.689875,
+      "MaxDistance": 3000.0
+    }
+  },
+  {
+    "Type": "SoundNodeAttenuation",
+    "Name": "SoundNodeAttenuation_1",
+    "Outer": "AlienLaser_FireStop_Close1P_Cue",
+    "Properties": {
+      "AttenuationSettings": {
+        "ObjectName": "Fort_Weapon_Projectile_FirstPerson_Athena_Att:SoundAttenuation",
+        "ObjectPath": "/Game/Sounds/Attenuation/Fort_Weapon_Projectile_FirstPerson_Athena_Att.0"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "AlienLaser_FireStop_Close1P_Cue:SoundNodeRandom_1:SoundNodeRandom",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_FireStop_Close1P_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_1",
+    "Outer": "AlienLaser_FireStop_Close1P_Cue",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "AlienLaser_FireStop_Close1P_Cue:SoundNodeWavePlayer_2:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_FireStop_Close1P_Cue.4"
+        },
+        {
+          "ObjectName": "AlienLaser_FireStop_Close1P_Cue:SoundNodeWavePlayer_3:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_FireStop_Close1P_Cue.5"
+        },
+        {
+          "ObjectName": "AlienLaser_FireStop_Close1P_Cue:SoundNodeWavePlayer_4:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_FireStop_Close1P_Cue.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeSoundClass",
+    "Name": "SoundNodeSoundClass_1",
+    "Outer": "AlienLaser_FireStop_Close1P_Cue",
+    "Properties": {
+      "SoundClassOverride": {
+        "ObjectName": "Fort_Weapon_Projectile_FirstPerson_PSM:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Weapon_Projectile_FirstPerson_PSM.0"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "AlienLaser_FireStop_Close1P_Cue:SoundNodeAttenuation_1:SoundNodeAttenuation",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_FireStop_Close1P_Cue.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "AlienLaser_FireStop_Close1P_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_FireStop_Close_01.AlienLaser_FireStop_Close_01",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "AlienLaser_FireStop_Close1P_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_FireStop_Close_02.AlienLaser_FireStop_Close_02",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_4",
+    "Outer": "AlienLaser_FireStop_Close1P_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_FireStop_Close_03.AlienLaser_FireStop_Close_03",
+        "SubPathString": ""
+      }
+    }
+  }
+]

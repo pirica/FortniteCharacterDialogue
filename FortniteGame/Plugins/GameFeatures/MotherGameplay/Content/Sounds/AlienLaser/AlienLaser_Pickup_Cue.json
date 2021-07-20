@@ -1,0 +1,39 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "AlienLaser_Pickup_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "AlienLaser_Pickup_Cue:SoundNodeWavePlayer_1:SoundNodeWavePlayer",
+        "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_Pickup_Cue.1"
+      },
+      "VolumeMultiplier": 0.5,
+      "SoundClassObject": {
+        "ObjectName": "Fort_Player_Loot_High_PSM:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Player_Loot_High_PSM.0"
+      },
+      "bOverrideConcurrency": true,
+      "ConcurrencyOverrides": {
+        "MaxCount": 1,
+        "ResolutionRule": "EMaxConcurrentResolutionRule::PreventNew"
+      },
+      "Duration": 1.1569375,
+      "MaxDistance": 1512.0,
+      "AttenuationSettings": {
+        "ObjectName": "Fort_Weapon_Pickup_Att:SoundAttenuation",
+        "ObjectPath": "/Game/Sounds/Attenuation/Fort_Weapon_Pickup_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "AlienLaser_Pickup_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_Pickup_01.AlienLaser_Pickup_01",
+        "SubPathString": ""
+      }
+    }
+  }
+]

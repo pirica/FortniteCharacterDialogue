@@ -1,0 +1,106 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "PaddleGinger_GlitchTell_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "PaddleGinger_GlitchTell_Cue:SoundNodeModulator_0:SoundNodeModulator",
+        "ObjectPath": "/MotherGameplay/Sounds/PaddleGinger/PaddleGinger_GlitchTell_Cue.1"
+      },
+      "VolumeMultiplier": 0.2,
+      "AttenuationOverrides": {
+        "bAttenuateWithLPF": true,
+        "StereoSpread": 800.0,
+        "LPFRadiusMin": 1000.0,
+        "LPFRadiusMax": 1500.0,
+        "LPFFrequencyAtMax": 500.0,
+        "AttenuationShapeExtents": {
+          "X": 200.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 3000.0
+      },
+      "SoundClassObject": {
+        "ObjectName": "Fort_Weapon_Projectile_FirstPerson_PSM:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Weapon_Projectile_FirstPerson_PSM.0"
+      },
+      "ConcurrencySet": [
+        {
+          "ObjectName": "Weapon_Gunfire_Local_Conc:SoundConcurrency",
+          "ObjectPath": "/Game/Sounds/Concurrency_Rules/Weapon_Gunfire_Local_Conc.0"
+        },
+        {
+          "ObjectName": "Weapon_Gunfire_Global_Conc:SoundConcurrency",
+          "ObjectPath": "/Game/Sounds/Concurrency_Rules/Weapon_Gunfire_Global_Conc.0"
+        }
+      ],
+      "ConcurrencyOverrides": {
+        "ResolutionRule": "EMaxConcurrentResolutionRule::PreventNew"
+      },
+      "Duration": 1.2296667,
+      "MaxDistance": 2000.0,
+      "AttenuationSettings": {
+        "ObjectName": "Fort_Weapon_Pistol_Sml_Att:SoundAttenuation",
+        "ObjectPath": "/Game/Sounds/Attenuation/Fort_Weapon_Pistol_Sml_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "PaddleGinger_GlitchTell_Cue",
+    "Properties": {
+      "PitchMax": 1.15,
+      "ChildNodes": [
+        {
+          "ObjectName": "PaddleGinger_GlitchTell_Cue:SoundNodeRandom_0:SoundNodeRandom",
+          "ObjectPath": "/MotherGameplay/Sounds/PaddleGinger/PaddleGinger_GlitchTell_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "PaddleGinger_GlitchTell_Cue",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "PaddleGinger_GlitchTell_Cue:SoundNodeWavePlayer_1:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/PaddleGinger/PaddleGinger_GlitchTell_Cue.3"
+        },
+        {
+          "ObjectName": "PaddleGinger_GlitchTell_Cue:SoundNodeWavePlayer_2:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/PaddleGinger/PaddleGinger_GlitchTell_Cue.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "PaddleGinger_GlitchTell_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/PaddleGinger/PaddleGinger_GlitchTell_01.PaddleGinger_GlitchTell_01",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "PaddleGinger_GlitchTell_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/PaddleGinger/PaddleGinger_GlitchTell_02.PaddleGinger_GlitchTell_02",
+        "SubPathString": ""
+      }
+    }
+  }
+]

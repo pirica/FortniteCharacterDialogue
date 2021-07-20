@@ -4,13 +4,16 @@
     "Name": "Fort_Weapon_Launcher_Gravy_Object_Prj_Hold_Whsh_Att",
     "Properties": {
       "Attenuation": {
+        "bAttenuateWithLPF": true,
         "bEnableSubmixSends": true,
         "SpatializationAlgorithm": "ESoundSpatializationAlgorithm::SPATIALIZATION_HRTF",
         "OcclusionTraceChannel": "ECollisionChannel::ECC_Camera",
         "StereoSpread": 350.0,
-        "LPFRadiusMin": 200.0,
-        "LPFRadiusMax": 1000.0,
-        "LPFFrequencyAtMax": 8000.0,
+        "LPFRadiusMin": 250.0,
+        "LPFRadiusMax": 1500.0,
+        "LPFFrequencyAtMax": 1200.0,
+        "HPFFrequencyAtMin": 30.0,
+        "HPFFrequencyAtMax": 350.0,
         "FocusAzimuth": 25.0,
         "NonFocusAzimuth": 35.0,
         "NonFocusVolumeAttenuation": 0.3,
@@ -47,11 +50,11 @@
         ],
         "DistanceAlgorithm": "EAttenuationDistanceModel::Custom",
         "AttenuationShapeExtents": {
-          "X": 500.0,
+          "X": 950.0,
           "Y": 0.0,
           "Z": 0.0
         },
-        "FalloffDistance": 12000.0,
+        "FalloffDistance": 8500.0,
         "CustomAttenuationCurve": {
           "EditorCurveData": {
             "Keys": [

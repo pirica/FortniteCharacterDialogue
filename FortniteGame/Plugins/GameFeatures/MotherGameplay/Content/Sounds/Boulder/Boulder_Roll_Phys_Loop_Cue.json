@@ -1,0 +1,58 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "Boulder_Roll_Phys_Loop_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "Boulder_Roll_Phys_Loop_Cue:SoundNodeModulatorContinuous_0:SoundNodeModulatorContinuous",
+        "ObjectPath": "/MotherGameplay/Sounds/Boulder/Boulder_Roll_Phys_Loop_Cue.1"
+      },
+      "VolumeMultiplier": 1.0,
+      "SoundClassObject": {
+        "ObjectName": "Fort_ImpactSounds_Close:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_ImpactSounds_Close.0"
+      },
+      "Duration": 10000.0,
+      "MaxDistance": 10500.0,
+      "AttenuationSettings": {
+        "ObjectName": "Boulder_Physics_Impact_Att:SoundAttenuation",
+        "ObjectPath": "/MotherGameplay/Sounds/Boulder/Boulder_Physics_Impact_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulatorContinuous",
+    "Name": "SoundNodeModulatorContinuous_0",
+    "Outer": "Boulder_Roll_Phys_Loop_Cue",
+    "Properties": {
+      "PitchModulationParams": {
+        "ParameterName": "Speed",
+        "Default": 0.0,
+        "MinOutput": 0.8,
+        "MaxOutput": 1.2
+      },
+      "VolumeModulationParams": {
+        "ParameterName": "Speed",
+        "Default": 0.0
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "Boulder_Roll_Phys_Loop_Cue:SoundNodeWavePlayer_1:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/Boulder/Boulder_Roll_Phys_Loop_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "Boulder_Roll_Phys_Loop_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/Boulder/Boulder_Loop_Slow_Loop.Boulder_Loop_Slow_Loop",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    }
+  }
+]

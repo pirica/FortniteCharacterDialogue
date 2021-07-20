@@ -1,0 +1,752 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_S17_Hatchery_C",
+    "Super": "BP_S17_GenericQuestActor_Parent_C",
+    "Properties": {
+      "bHasCookedComponentInstancingData": true,
+      "SimpleConstructionScript": {
+        "ObjectName": "BP_S17_Hatchery_C:SimpleConstructionScript_0:SimpleConstructionScript",
+        "ObjectPath": "/BattlepassS17/QuestActors/Legendaries/BP_S17_Hatchery.15"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "BP_S17_Hatchery_C:InheritableComponentHandler:InheritableComponentHandler",
+        "ObjectPath": "/BattlepassS17/QuestActors/Legendaries/BP_S17_Hatchery.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BP_S17_GenericQuestActor_Parent_C:BlueprintGeneratedClass",
+      "ObjectPath": "/BattlepassS17/QuestActors/BP_S17_GenericQuestActor_Parent.0"
+    },
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_Egg",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "StaticMeshComponent:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ConsolidatedQuest",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "ConsolidatedQuestComponent:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FuncMap": {},
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Game",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__BP_S17_Hatchery_C:BP_S17_Hatchery_C",
+      "ObjectPath": "/BattlepassS17/QuestActors/Legendaries/BP_S17_Hatchery.1"
+    }
+  },
+  {
+    "Type": "BP_S17_Hatchery_C",
+    "Name": "Default__BP_S17_Hatchery_C",
+    "Template": "Default__BP_S17_GenericQuestActor_Parent_C",
+    "Properties": {
+      "TestingCooldown": 10.0,
+      "Interaction Verb": {
+        "Namespace": "",
+        "Key": "EC42D03F4394DC554E35918CDC9048D9",
+        "SourceString": "Build Hatchery"
+      },
+      "InteractionType": "E_Athena_GenericQuestDamageTypes::NewEnumerator14",
+      "DepositAmount": 50,
+      "SM_PreInteraction": {
+        "ObjectName": "SM_Farm_HayTrough_01:StaticMesh",
+        "ObjectPath": "/Game/Environments/Apollo/Sets/Farm/Props/Meshes/SM_Farm_HayTrough_01.1"
+      },
+      "bHideAfterInteract": false,
+      "SM_PostInteraction": {
+        "ObjectName": "SM_Farm_HayTrough_01:StaticMesh",
+        "ObjectPath": "/Game/Environments/Apollo/Sets/Farm/Props/Meshes/SM_Farm_HayTrough_01.1"
+      },
+      "SuccessSound": {
+        "ObjectName": "HatcheryConstructed_Cue:SoundCue",
+        "ObjectPath": "/BattlepassS17/Sounds/S17Quests/BushRanger/HatcheryConstructed_Cue.0"
+      },
+      "PostInteractionAmbientSound": {
+        "ObjectName": "AMB_Hatchery_Loop_Cue:SoundCue",
+        "ObjectPath": "/BattlepassS17/Sounds/S17Quests/BushRanger/AMB_Hatchery_Loop_Cue.0"
+      },
+      "PreInteraction_MIS_Override": {
+        "ObjectName": "MI_QuestPropGhostly_02_Inst:MaterialInstanceConstant",
+        "ObjectPath": "/Game/Athena/Items/QuestParents/PropQuestActor/MI_QuestPropGhostly_02_Inst.0"
+      },
+      "Ambient Particle Transform": {
+        "Translation": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 64.0
+        },
+        "Scale3D": {
+          "X": 1.5,
+          "Y": 1.5,
+          "Z": 1.0
+        }
+      },
+      "AudioAndVFXHideRadius": 4500.0,
+      "DiscoverRadius": 5000.0,
+      "Interaction Collision Scale": {
+        "X": 2.25,
+        "Y": 1.2,
+        "Z": 1.0
+      },
+      "ConsolidatedQuestComponent": {
+        "ObjectName": "Default__BP_S17_Hatchery_C:ConsolidatedQuestComponent:ConsolidatedQuestComponent",
+        "ObjectPath": "/BattlepassS17/QuestActors/Legendaries/BP_S17_Hatchery.4"
+      },
+      "bSuppressSimpleInteractionWidgetForTouch": false,
+      "StaticGameplayTags": [
+        "Athena.Quests.Place.Hatchery"
+      ],
+      "RootComponent": {
+        "ObjectName": "Default__BP_S17_Hatchery_C:SceneRoot:SceneComponent",
+        "ObjectPath": "/BattlepassS17/QuestActors/Legendaries/BP_S17_Hatchery.11"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "PostInteractionAmbientAudio_GEN_VARIABLE",
+    "Outer": "BP_S17_Hatchery_C",
+    "Template": "PostInteractionAmbientAudio_GEN_VARIABLE",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "AMB_Hatchery_Loop_Cue:SoundCue",
+        "ObjectPath": "/BattlepassS17/Sounds/S17Quests/BushRanger/AMB_Hatchery_Loop_Cue.0"
+      },
+      "VolumeMultiplier": 1.0
+    }
+  },
+  {
+    "Type": "ConsolidatedQuestComponent",
+    "Name": "ConsolidatedQuest_GEN_VARIABLE",
+    "Outer": "BP_S17_Hatchery_C",
+    "Properties": {
+      "QuestItemDefinition": {
+        "ObjectName": "quest_s17_w07_legendary_q2:FortQuestItemDefinition",
+        "ObjectPath": "/BattlepassS17/Items/QuestItems/Legendary/quest_s17_w07_legendary_q2.0"
+      },
+      "ObjectiveBackendName": "quest_s17_w07_legendary_q2_obj0",
+      "ComponentResponse": "EQuestVisibilityResponse::Show"
+    }
+  },
+  {
+    "Type": "ConsolidatedQuestComponent",
+    "Name": "ConsolidatedQuestComponent",
+    "Outer": "Default__BP_S17_Hatchery_C",
+    "Template": "ConsolidatedQuestComponent",
+    "Properties": {
+      "QuestItemDefinition": {
+        "ObjectName": "quest_s17_w07_legendary_q1:FortQuestItemDefinition",
+        "ObjectPath": "/BattlepassS17/Items/QuestItems/Legendary/quest_s17_w07_legendary_q1.0"
+      },
+      "AttachParent": {
+        "ObjectName": "Default__BP_S17_Hatchery_C:SceneRoot:SceneComponent",
+        "ObjectPath": "/BattlepassS17/QuestActors/Legendaries/BP_S17_Hatchery.11"
+      }
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "BP_S17_Hatchery_C",
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "NiagaraComponent:Class",
+            "ObjectPath": 0
+          },
+          "ComponentTemplate": {
+            "ObjectName": "BP_S17_Hatchery_C:N_Cosmetic_GEN_VARIABLE:NiagaraComponent",
+            "ObjectPath": "/BattlepassS17/QuestActors/Legendaries/BP_S17_Hatchery.7"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BP_Athena_PropQuestActor_Parent_C:BlueprintGeneratedClass",
+              "ObjectPath": "/Game/Athena/Items/QuestParents/PropQuestActor/BP_Athena_PropQuestActor_Parent.49"
+            },
+            "SCSVariableName": "N_Cosmetic",
+            "AssociatedGuid": "2996F2BB-450E20BC-2BCB609B-B8ADEABE"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [
+              {
+                "PropertyName": "bAutoActivate",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "NiagaraComponent:Class",
+                  "ObjectPath": 0
+                }
+              }
+            ],
+            "bHasValidCookedData": true
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "NiagaraComponent:Class",
+            "ObjectPath": 0
+          },
+          "ComponentTemplate": {
+            "ObjectName": "BP_S17_Hatchery_C:N_PostInteractionAmbient_GEN_VARIABLE:NiagaraComponent",
+            "ObjectPath": "/BattlepassS17/QuestActors/Legendaries/BP_S17_Hatchery.8"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BP_Athena_PropQuestActor_Parent_C:BlueprintGeneratedClass",
+              "ObjectPath": "/Game/Athena/Items/QuestParents/PropQuestActor/BP_Athena_PropQuestActor_Parent.49"
+            },
+            "SCSVariableName": "N_PostInteractionAmbient",
+            "AssociatedGuid": "52A5AE39-4D03DCF2-AB2AA5AF-67883F44"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [
+              {
+                "PropertyName": "bAutoActivate",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "NiagaraComponent:Class",
+                  "ObjectPath": 0
+                }
+              }
+            ],
+            "bHasValidCookedData": true
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "NiagaraComponent:Class",
+            "ObjectPath": 0
+          },
+          "ComponentTemplate": {
+            "ObjectName": "BP_S17_Hatchery_C:N_Ambient_GEN_VARIABLE:NiagaraComponent",
+            "ObjectPath": "/BattlepassS17/QuestActors/Legendaries/BP_S17_Hatchery.6"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BP_Athena_PropQuestActor_Parent_C:BlueprintGeneratedClass",
+              "ObjectPath": "/Game/Athena/Items/QuestParents/PropQuestActor/BP_Athena_PropQuestActor_Parent.49"
+            },
+            "SCSVariableName": "N_Ambient",
+            "AssociatedGuid": "1CEE948F-4AA402BE-B7AFE78D-1302BBBD"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [
+              {
+                "PropertyName": "RelativeLocation",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "NiagaraComponent:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "Z",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Vector:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "bAutoActivate",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "NiagaraComponent:Class",
+                  "ObjectPath": 0
+                }
+              }
+            ],
+            "bHasValidCookedData": true
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "NiagaraComponent:Class",
+            "ObjectPath": 0
+          },
+          "ComponentTemplate": {
+            "ObjectName": "BP_S17_Hatchery_C:N_UnHide_GEN_VARIABLE:NiagaraComponent",
+            "ObjectPath": "/BattlepassS17/QuestActors/Legendaries/BP_S17_Hatchery.9"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BP_Athena_PropQuestActor_Parent_C:BlueprintGeneratedClass",
+              "ObjectPath": "/Game/Athena/Items/QuestParents/PropQuestActor/BP_Athena_PropQuestActor_Parent.49"
+            },
+            "SCSVariableName": "N_UnHide",
+            "AssociatedGuid": "5B5047CD-4AA21956-04AFF494-DD15835A"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [
+              {
+                "PropertyName": "bAutoActivate",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "NiagaraComponent:Class",
+                  "ObjectPath": 0
+                }
+              }
+            ],
+            "bHasValidCookedData": true
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "AudioComponent:Class",
+            "ObjectPath": 0
+          },
+          "ComponentTemplate": {
+            "ObjectName": "BP_S17_Hatchery_C:PostInteractionAmbientAudio_GEN_VARIABLE:AudioComponent",
+            "ObjectPath": "/BattlepassS17/QuestActors/Legendaries/BP_S17_Hatchery.2"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BP_Athena_PropQuestActor_Parent_C:BlueprintGeneratedClass",
+              "ObjectPath": "/Game/Athena/Items/QuestParents/PropQuestActor/BP_Athena_PropQuestActor_Parent.49"
+            },
+            "SCSVariableName": "PostInteractionAmbientAudio",
+            "AssociatedGuid": "20B404E2-4D1F0425-E8BE77AB-44B6A6CE"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [
+              {
+                "PropertyName": "Sound",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "AudioComponent:Class",
+                  "ObjectPath": 0
+                }
+              },
+              {
+                "PropertyName": "bAutoActivate",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "AudioComponent:Class",
+                  "ObjectPath": 0
+                }
+              }
+            ],
+            "bHasValidCookedData": true
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "N_Ambient_GEN_VARIABLE",
+    "Outer": "BP_S17_Hatchery_C",
+    "Template": "N_Ambient_GEN_VARIABLE",
+    "Properties": {
+      "OverrideParameters": {}
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "N_Cosmetic_GEN_VARIABLE",
+    "Outer": "BP_S17_Hatchery_C",
+    "Template": "N_Cosmetic_GEN_VARIABLE",
+    "Properties": {
+      "OverrideParameters": {}
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "N_PostInteractionAmbient_GEN_VARIABLE",
+    "Outer": "BP_S17_Hatchery_C",
+    "Template": "N_PostInteractionAmbient_GEN_VARIABLE",
+    "Properties": {
+      "OverrideParameters": {}
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "N_UnHide_GEN_VARIABLE",
+    "Outer": "BP_S17_Hatchery_C",
+    "Template": "N_UnHide_GEN_VARIABLE",
+    "Properties": {
+      "OverrideParameters": {}
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_S17_Hatchery_C"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "SceneRoot",
+    "Outer": "Default__BP_S17_Hatchery_C",
+    "Template": "SceneRoot"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "SceneComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_S17_Hatchery_C:DefaultSceneRoot_GEN_VARIABLE:SceneComponent",
+        "ObjectPath": "/BattlepassS17/QuestActors/Legendaries/BP_S17_Hatchery.10"
+      },
+      "VariableGuid": "2CBD25C2-4A70792F-04182AA8-BC07E2EF",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "ConsolidatedQuestComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_S17_Hatchery_C:ConsolidatedQuest_GEN_VARIABLE:ConsolidatedQuestComponent",
+        "ObjectPath": "/BattlepassS17/QuestActors/Legendaries/BP_S17_Hatchery.3"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "QuestItemDefinition",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ConsolidatedQuestComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "ObjectiveBackendName",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ConsolidatedQuestComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "ComponentResponse",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ConsolidatedQuestComponent:Class",
+              "ObjectPath": 0
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "ParentComponentOrVariableName": "SceneRoot",
+      "bIsParentComponentNative": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_2:SCS_Node",
+          "ObjectPath": "/BattlepassS17/QuestActors/Legendaries/BP_S17_Hatchery.14"
+        }
+      ],
+      "VariableGuid": "7C95CBA7-448BCDE9-9B7E9D83-60EA3DA2",
+      "InternalVariableName": "ConsolidatedQuest"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "StaticMeshComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_S17_Hatchery_C:SM_Egg_GEN_VARIABLE:StaticMeshComponent",
+        "ObjectPath": "/BattlepassS17/QuestActors/Legendaries/BP_S17_Hatchery.16"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "StaticMesh",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "StaticMeshComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "BodyInstance",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "StaticMeshComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "ObjectType",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "BodyInstance:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "CollisionEnabled",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "BodyInstance:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "CollisionProfileName",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "BodyInstance:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "CollisionResponses",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "BodyInstance:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "ResponseArray",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "CollisionResponse:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "ResponseArray",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "CollisionResponse:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "Channel",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ResponseChannel:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "Response",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ResponseChannel:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "ResponseArray",
+            "ArrayIndex": 1,
+            "PropertyScope": {
+              "ObjectName": "CollisionResponse:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "Channel",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ResponseChannel:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "Response",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "ResponseChannel:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "RelativeLocation",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "StaticMeshComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "X",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Vector:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "Z",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Vector:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "RelativeRotation",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "StaticMeshComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "Pitch",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Rotator:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "RelativeScale3D",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "StaticMeshComponent:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "X",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Vector:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "Y",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Vector:Class",
+              "ObjectPath": 0
+            }
+          },
+          {
+            "PropertyName": "Z",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Vector:Class",
+              "ObjectPath": 0
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "VariableGuid": "18E5FC90-496BD944-FABA3189-71E72D4A",
+      "InternalVariableName": "SM_Egg"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_S17_Hatchery_C",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_1:SCS_Node",
+          "ObjectPath": "/BattlepassS17/QuestActors/Legendaries/BP_S17_Hatchery.13"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_1:SCS_Node",
+          "ObjectPath": "/BattlepassS17/QuestActors/Legendaries/BP_S17_Hatchery.13"
+        },
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_2:SCS_Node",
+          "ObjectPath": "/BattlepassS17/QuestActors/Legendaries/BP_S17_Hatchery.14"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SimpleConstructionScript_0:SCS_Node_0:SCS_Node",
+        "ObjectPath": "/BattlepassS17/QuestActors/Legendaries/BP_S17_Hatchery.12"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_Egg_GEN_VARIABLE",
+    "Outer": "BP_S17_Hatchery_C",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "SM_Egg:StaticMesh",
+        "ObjectPath": "/Game/Environments/Props/Egg/Mesh/SM_Egg.1"
+      },
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": -10.142838,
+        "Y": 0.0,
+        "Z": 77.75139
+      },
+      "RelativeRotation": {
+        "Pitch": -64.99999,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 0.35,
+        "Y": 0.35,
+        "Z": 0.35
+      }
+    }
+  }
+]

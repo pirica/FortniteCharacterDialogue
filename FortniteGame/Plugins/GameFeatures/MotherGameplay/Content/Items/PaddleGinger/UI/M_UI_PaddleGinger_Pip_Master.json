@@ -24,13 +24,17 @@
       "MaterialDomain": "EMaterialDomain::MD_UI",
       "BlendMode": "EBlendMode::BLEND_Translucent",
       "bCanMaskedBeAssumedOpaque": true,
-      "StateId": "3C2EB051-4CA44E4A-62D488B5-DBE309AC",
+      "StateId": "D6F74632-4F2774F3-79F390A5-D2620CC1",
       "CachedExpressionData": {
         "Parameters": {
           "RuntimeEntries": {
             "NameHashes": [
               4136785403678364387,
-              11458803969644234841
+              8114530763500014156,
+              9552419048265906630,
+              9689692424363748978,
+              11458803969644234841,
+              16888416692918693980
             ],
             "ParameterInfos": [
               {
@@ -39,16 +43,44 @@
                 "Index": -1
               },
               {
+                "Name": "ScaleStop",
+                "Association": "EMaterialParameterAssociation::GlobalParameter",
+                "Index": -1
+              },
+              {
+                "Name": "NotSelectedAlpha",
+                "Association": "EMaterialParameterAssociation::GlobalParameter",
+                "Index": -1
+              },
+              {
+                "Name": "ScaleStart",
+                "Association": "EMaterialParameterAssociation::GlobalParameter",
+                "Index": -1
+              },
+              {
                 "Name": "IsSelected",
+                "Association": "EMaterialParameterAssociation::GlobalParameter",
+                "Index": -1
+              },
+              {
+                "Name": "PipEdgeHardness",
                 "Association": "EMaterialParameterAssociation::GlobalParameter",
                 "Index": -1
               }
             ],
             "ExpressionGuids": [
               "FD12B4EC-419A6E7F-631C6584-0F808A10",
-              "BA830097-4B69E6B4-EFA71785-88435F30"
+              "5D611F4E-4E720EBF-AABF1682-E4EA55FA",
+              "32ECFC30-4F449CDC-FC21EE9A-52E8FF98",
+              "A89A914E-41FAE364-FD283E91-5A807207",
+              "BA830097-4B69E6B4-EFA71785-88435F30",
+              "1CEA7DCE-421CFD55-764419B6-6C95A720"
             ],
             "Overrides": [
+              false,
+              false,
+              false,
+              false,
               false,
               false
             ]
@@ -81,7 +113,11 @@
           },
           "ScalarValues": [
             1.0,
-            1.0
+            0.5,
+            0.5,
+            0.4,
+            1.0,
+            24.0
           ],
           "VectorValues": [
             {
@@ -100,6 +136,29 @@
             }
           ]
         },
+        "FunctionInfos": [
+          {
+            "StateId": "42FB52C9-4B6E464D-2D6CB2B5-E6A65899",
+            "Function": {
+              "ObjectName": "ExponentialDensity:MaterialFunction",
+              "ObjectPath": "/Engine/Functions/Engine_MaterialFunctions01/Density/ExponentialDensity.0"
+            }
+          },
+          {
+            "StateId": "42FB52C9-4B6E464D-2D6CB2B5-E6A65899",
+            "Function": {
+              "ObjectName": "ExponentialDensity:MaterialFunction",
+              "ObjectPath": "/Engine/Functions/Engine_MaterialFunctions01/Density/ExponentialDensity.0"
+            }
+          },
+          {
+            "StateId": "235C8133-44D704CA-0297108A-59B9F710",
+            "Function": {
+              "ObjectName": "RadialGradientExponential:MaterialFunction",
+              "ObjectPath": "/Engine/Functions/Engine_MaterialFunctions01/Gradient/RadialGradientExponential.0"
+            }
+          }
+        ],
         "QualityLevelsUsed": [
           false,
           false,

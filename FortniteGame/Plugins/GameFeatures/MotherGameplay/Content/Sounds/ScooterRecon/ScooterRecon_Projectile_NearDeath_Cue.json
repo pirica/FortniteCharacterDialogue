@@ -1,0 +1,70 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "ScooterRecon_Projectile_NearDeath_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "ScooterRecon_Projectile_NearDeath_Cue:SoundNodeModulator_0:SoundNodeModulator",
+        "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_NearDeath_Cue.1"
+      },
+      "VolumeMultiplier": 0.17,
+      "PitchMultiplier": 1.1,
+      "AttenuationOverrides": {
+        "bAttenuateWithLPF": true,
+        "StereoSpread": 1.0,
+        "LPFRadiusMin": 1000.0,
+        "LPFRadiusMax": 3000.0,
+        "LPFFrequencyAtMax": 600.0,
+        "AttenuationShapeExtents": {
+          "X": 600.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 2400.0
+      },
+      "bOverrideAttenuation": true,
+      "SoundClassObject": {
+        "ObjectName": "Fort_Weapon_Projectile_PSM:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Weapon_Projectile_PSM.0"
+      },
+      "bOverrideConcurrency": true,
+      "ConcurrencyOverrides": {
+        "MaxCount": 3
+      },
+      "Duration": 4.5,
+      "MaxDistance": 3000.0,
+      "AttenuationSettings": {
+        "ObjectName": "Fort_GadgetWorking_Att:SoundAttenuation",
+        "ObjectPath": "/Game/Sounds/Attenuation/Fort_GadgetWorking_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "ScooterRecon_Projectile_NearDeath_Cue",
+    "Properties": {
+      "PitchMin": 1.0,
+      "PitchMax": 1.0,
+      "VolumeMin": 1.5,
+      "VolumeMax": 1.5,
+      "ChildNodes": [
+        {
+          "ObjectName": "ScooterRecon_Projectile_NearDeath_Cue:SoundNodeWavePlayer_3:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_NearDeath_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "ScooterRecon_Projectile_NearDeath_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_NearDeath_mix.ScooterRecon_Projectile_NearDeath_mix",
+        "SubPathString": ""
+      }
+    }
+  }
+]

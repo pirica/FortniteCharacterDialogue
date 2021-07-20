@@ -1,0 +1,132 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "ScooterRecon_Projectile_Bounce_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "ScooterRecon_Projectile_Bounce_Cue:SoundNodeModulator_5:SoundNodeModulator",
+        "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_Bounce_Cue.1"
+      },
+      "VolumeMultiplier": 1.0,
+      "AttenuationOverrides": {
+        "bAttenuateWithLPF": true,
+        "LPFRadiusMin": 800.0,
+        "LPFRadiusMax": 3000.0,
+        "LPFFrequencyAtMax": 600.0,
+        "AttenuationShapeExtents": {
+          "X": 600.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 3000.0
+      },
+      "bOverrideAttenuation": true,
+      "SoundClassObject": {
+        "ObjectName": "Fort_ProjectileEffects:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_ProjectileEffects.0"
+      },
+      "bOverrideConcurrency": true,
+      "ConcurrencyOverrides": {
+        "MaxCount": 2,
+        "bLimitToOwner": true,
+        "ResolutionRule": "EMaxConcurrentResolutionRule::StopOldest"
+      },
+      "Duration": 0.76321876,
+      "MaxDistance": 3600.0,
+      "AttenuationSettings": {
+        "ObjectName": "Fort_Grenade_Bounce_Att:SoundAttenuation",
+        "ObjectPath": "/Game/Sounds/Attenuation/Fort_Grenade_Bounce_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_5",
+    "Outer": "ScooterRecon_Projectile_Bounce_Cue",
+    "Properties": {
+      "PitchMin": 0.9,
+      "PitchMax": 1.1,
+      "ChildNodes": [
+        {
+          "ObjectName": "ScooterRecon_Projectile_Bounce_Cue:SoundNodeRandom_1:SoundNodeRandom",
+          "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_Bounce_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_1",
+    "Outer": "ScooterRecon_Projectile_Bounce_Cue",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "ScooterRecon_Projectile_Bounce_Cue:SoundNodeWavePlayer_6:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_Bounce_Cue.4"
+        },
+        {
+          "ObjectName": "ScooterRecon_Projectile_Bounce_Cue:SoundNodeWavePlayer_8:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_Bounce_Cue.5"
+        },
+        {
+          "ObjectName": "ScooterRecon_Projectile_Bounce_Cue:SoundNodeWavePlayer_9:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_Bounce_Cue.6"
+        },
+        {
+          "ObjectName": "ScooterRecon_Projectile_Bounce_Cue:SoundNodeWavePlayer_11:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_Bounce_Cue.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_11",
+    "Outer": "ScooterRecon_Projectile_Bounce_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_Bounce_06.ScooterRecon_Projectile_Bounce_06",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_6",
+    "Outer": "ScooterRecon_Projectile_Bounce_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_Bounce_01.ScooterRecon_Projectile_Bounce_01",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_8",
+    "Outer": "ScooterRecon_Projectile_Bounce_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_Bounce_03.ScooterRecon_Projectile_Bounce_03",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_9",
+    "Outer": "ScooterRecon_Projectile_Bounce_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_Bounce_04.ScooterRecon_Projectile_Bounce_04",
+        "SubPathString": ""
+      }
+    }
+  }
+]

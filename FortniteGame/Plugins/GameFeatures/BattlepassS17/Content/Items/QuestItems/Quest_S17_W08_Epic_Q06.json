@@ -1,0 +1,156 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "Quest_S17_W08_Epic_Q06",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "QuestSubtype": "EFortQuestSubtype::WeeklyChallenge",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/Antique/Antique/NPCCharacterData_Antique.NPCCharacterData_Antique",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "Rewards": [
+        {
+          "ItemPrimaryAssetId": {
+            "PrimaryAssetType": {
+              "Name": "Quest"
+            },
+            "PrimaryAssetName": "Quest_S17_W08_Epic_Q07"
+          },
+          "Quantity": 1
+        }
+      ],
+      "RewardsTable": {
+        "ObjectName": "ChallengeReward_S17_WeeklyXP:DataTable",
+        "ObjectPath": "/BattlepassS17/Items/QuestRewards/ChallengeReward_S17_WeeklyXP.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athenabattlepass_weeklychallenge_token",
+          "Quantity": 1
+        },
+        {
+          "TemplateId": "Token:athenabattlepass_s17_w08",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S17_W08_Epic_Q06_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.Quests.Ignite"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "Target.Tags HasTag Homebase.Class || Target.Tags HasTag Building.Type.Player",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::ComplexCustom",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "1DB0960F4273A67A09B197B93636AC72",
+            "SourceString": "Ignite enemy players or enemy player structures"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "68841B5945FE8A8EA4615EAB4FF9402A",
+            "SourceString": "How 'bout a little chaos and destruction for the LOLs?"
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 15,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 20,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "Quest_S17_W08_Epic_Q06",
+        "Key": "Quest_S17_W08_Epic_Q06_CompletionText",
+        "SourceString": "It'd be boring around here without arson."
+      },
+      "QuestAbilitySet": {
+        "AssetPathName": "/BattlepassS17/Items/QuestAbilities/Quest_Ignite/GAS_Quest_S17_Ignite.GAS_Quest_S17_Ignite",
+        "SubPathString": ""
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Epic",
+      "DisplayName": {
+        "Namespace": "Quest_S17_W08_Epic_Q06",
+        "Key": "Quest_S17_W08_Epic_Q06_DisplayName",
+        "SourceString": "Ignite enemy players or enemy player structures"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S17_W08_Epic_Q06",
+        "Key": "Quest_S17_W08_Epic_Q06_ShortDescription",
+        "SourceString": "How 'bout a little chaos and destruction for the LOLs?"
+      },
+      "Description": {
+        "Namespace": "Quest_S17_W08_Epic_Q06",
+        "Key": "Quest_S17_W08_Epic_Q06_Description",
+        "SourceString": "Ignite enemy players or enemy player structures"
+      },
+      "GameplayTags": [
+        "Quest.Metadata.PartyAssist",
+        "ChallengeCategory.XP",
+        "Quest.Metadata.GroupChallenge",
+        "Quest.Metadata.HideForContextualQuestDisplay"
+      ]
+    }
+  }
+]

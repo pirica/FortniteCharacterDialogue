@@ -7,13 +7,21 @@
         "ObjectName": "Goop_Nav_Jump_Cue:SoundNodeMixer_0:SoundNodeMixer",
         "ObjectPath": "/MotherGameplay/Items/Goop/Audio/Goop_Nav_Jump_Cue.1"
       },
-      "VolumeMultiplier": 4.48,
+      "VolumeMultiplier": 2.25,
       "SoundClassObject": {
         "ObjectName": "Fort_AudioGameplayVolumes:SoundClass",
         "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_AudioGameplayVolumes.0"
       },
+      "bOverrideConcurrency": true,
+      "VirtualizationMode": "EVirtualizationMode::Disabled",
+      "ConcurrencyOverrides": {
+        "MaxCount": 4,
+        "bLimitToOwner": true,
+        "ResolutionRule": "EMaxConcurrentResolutionRule::StopQuietest",
+        "VoiceStealReleaseTime": 0.1
+      },
       "Duration": 3.0052292,
-      "MaxDistance": 3675.0,
+      "MaxDistance": 3600.0,
       "AttenuationSettings": {
         "ObjectName": "Fort_Goop_Traversal_Att:SoundAttenuation",
         "ObjectPath": "/MotherGameplay/Items/Goop/Audio/Fort_Goop_Traversal_Att.0"
@@ -43,6 +51,7 @@
     "Name": "SoundNodeModulator_1",
     "Outer": "Goop_Nav_Jump_Cue",
     "Properties": {
+      "PitchMax": 1.5,
       "ChildNodes": [
         {
           "ObjectName": "Goop_Nav_Jump_Cue:SoundNodeRandom_1:SoundNodeRandom",

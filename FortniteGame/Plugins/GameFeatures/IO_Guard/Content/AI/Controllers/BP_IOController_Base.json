@@ -2,21 +2,133 @@
   {
     "Type": "Function",
     "Name": "ExecuteUbergraph_BP_IOController_Base",
-    "Properties": {}
+    "Outer": "BP_IOController_Base_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetAbilitySystemComponent_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "AbilitySystemComponent:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_RemoveActiveGameplayEffect_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "ActiveGameplayEffectHandle:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 8421377,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "Function",
     "Name": "BndEvt__FortAthenaNpcPatrolling_K2Node_ComponentBoundEvent_1_PatrollingComponentOnStopPatrolling__DelegateSignature",
-    "Properties": {}
+    "Outer": "BP_IOController_Base_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 134217728,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "Function",
     "Name": "BndEvt__FortAthenaNpcPatrolling_K2Node_ComponentBoundEvent_0_PatrollingComponentOnStartPatrolling__DelegateSignature",
-    "Properties": {}
+    "Outer": "BP_IOController_Base_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 134217728,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "BlueprintGeneratedClass",
     "Name": "BP_IOController_Base_C",
+    "Super": "BP_PhoebeController_NonParticipant_C",
     "Properties": {
       "DynamicBindingObjects": [
         {
@@ -36,11 +148,153 @@
         "ObjectName": "BP_IOController_Base_C:ExecuteUbergraph_BP_IOController_Base:Function",
         "ObjectPath": "/IO_Guard/AI/Controllers/BP_IOController_Base.0"
       }
+    },
+    "SuperStruct": {
+      "ObjectName": "BP_PhoebeController_NonParticipant_C:BlueprintGeneratedClass",
+      "ObjectPath": "/Game/Athena/AI/NPCs/Base/BP_PhoebeController_NonParticipant.0"
+    },
+    "Children": [
+      {
+        "ObjectName": "BP_IOController_Base_C:BndEvt__FortAthenaNpcPatrolling_K2Node_ComponentBoundEvent_0_PatrollingComponentOnStartPatrolling__DelegateSignature:Function",
+        "ObjectPath": "/IO_Guard/AI/Controllers/BP_IOController_Base.2"
+      },
+      {
+        "ObjectName": "BP_IOController_Base_C:BndEvt__FortAthenaNpcPatrolling_K2Node_ComponentBoundEvent_1_PatrollingComponentOnStopPatrolling__DelegateSignature:Function",
+        "ObjectPath": "/IO_Guard/AI/Controllers/BP_IOController_Base.1"
+      },
+      {
+        "ObjectName": "BP_IOController_Base_C:ExecuteUbergraph_BP_IOController_Base:Function",
+        "ObjectPath": "/IO_Guard/AI/Controllers/BP_IOController_Base.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 2105344,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "PointerToUberGraphFrame:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FortAthenaNpcPatrolling",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortAthenaNpcPatrollingComponent:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ClassProperty",
+        "Name": "GE_Patrolling",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Class:Class",
+          "ObjectPath": 0
+        },
+        "MetaClass": {
+          "ObjectName": "GameplayEffect:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "GE_PatrollingSpeedHandle",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "ActiveGameplayEffectHandle:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "SavedRotationRate",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Rotator:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "PatrollingRotationRate",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Rotator:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_IOController_Base": {
+        "ObjectName": "BP_IOController_Base_C:ExecuteUbergraph_BP_IOController_Base:Function",
+        "ObjectPath": "/IO_Guard/AI/Controllers/BP_IOController_Base.0"
+      },
+      "BndEvt__FortAthenaNpcPatrolling_K2Node_ComponentBoundEvent_1_PatrollingComponentOnStopPatrolling__DelegateSignature": {
+        "ObjectName": "BP_IOController_Base_C:BndEvt__FortAthenaNpcPatrolling_K2Node_ComponentBoundEvent_1_PatrollingComponentOnStopPatrolling__DelegateSignature:Function",
+        "ObjectPath": "/IO_Guard/AI/Controllers/BP_IOController_Base.1"
+      },
+      "BndEvt__FortAthenaNpcPatrolling_K2Node_ComponentBoundEvent_0_PatrollingComponentOnStartPatrolling__DelegateSignature": {
+        "ObjectName": "BP_IOController_Base_C:BndEvt__FortAthenaNpcPatrolling_K2Node_ComponentBoundEvent_0_PatrollingComponentOnStartPatrolling__DelegateSignature:Function",
+        "ObjectPath": "/IO_Guard/AI/Controllers/BP_IOController_Base.2"
+      }
+    },
+    "ClassFlags": 8653332,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Game",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__BP_IOController_Base_C:BP_IOController_Base_C",
+      "ObjectPath": "/IO_Guard/AI/Controllers/BP_IOController_Base.4"
     }
   },
   {
     "Type": "BP_IOController_Base_C",
     "Name": "Default__BP_IOController_Base_C",
+    "Template": "Default__BP_PhoebeController_NonParticipant_C",
     "Properties": {
       "UberGraphFrame": {},
       "GE_Patrolling": {
@@ -102,6 +356,8 @@
   {
     "Type": "AthenaMarkerComponent",
     "Name": "MarkerComponent",
+    "Outer": "Default__BP_IOController_Base_C",
+    "Template": "MarkerComponent",
     "Properties": {
       "MarkerStream": {
         "OwningComponent": {
@@ -114,6 +370,7 @@
   {
     "Type": "ComponentDelegateBinding",
     "Name": "ComponentDelegateBinding_0",
+    "Outer": "BP_IOController_Base_C",
     "Properties": {
       "ComponentDelegateBindings": [
         {
@@ -132,70 +389,82 @@
   {
     "Type": "FortAthenaAIBotInventoryItems",
     "Name": "FortAthenaAIBotInventoryItems_0",
-    "Properties": {}
+    "Outer": "Default__BP_IOController_Base_C",
+    "Template": "FortAthenaAIBotInventoryItems_0"
   },
   {
     "Type": "FortAthenaAIBotPathFollowingComponent",
     "Name": "PathFollowingComponent",
-    "Properties": {}
+    "Outer": "Default__BP_IOController_Base_C",
+    "Template": "PathFollowingComponent"
   },
   {
     "Type": "FortAthenaAIEvaluatorComponent",
     "Name": "AIEvaluatorComponent",
-    "Properties": {}
+    "Outer": "Default__BP_IOController_Base_C",
+    "Template": "AIEvaluatorComponent"
   },
   {
     "Type": "FortAthenaAIRuntimeParametersComponent",
     "Name": "AIRuntimeParametersComponent",
-    "Properties": {}
+    "Outer": "Default__BP_IOController_Base_C",
+    "Template": "AIRuntimeParametersComponent"
   },
   {
     "Type": "FortAthenaNpcPatrollingComponent",
     "Name": "FortAthenaNpcPatrolling_GEN_VARIABLE",
-    "Properties": {}
+    "Outer": "BP_IOController_Base_C"
   },
   {
     "Type": "FortControllerAIBotComponent_Telemetry",
     "Name": "TelemetryComp",
-    "Properties": {}
+    "Outer": "Default__BP_IOController_Base_C",
+    "Template": "TelemetryComp"
   },
   {
     "Type": "FortControllerComponent_Aircraft",
     "Name": "AircraftComponent",
-    "Properties": {}
+    "Outer": "Default__BP_IOController_Base_C",
+    "Template": "AircraftComponent"
   },
   {
     "Type": "FortControllerComponent_InventoryService",
     "Name": "InventoryServiceComponent",
-    "Properties": {}
+    "Outer": "Default__BP_IOController_Base_C",
+    "Template": "InventoryServiceComponent"
   },
   {
     "Type": "FortControllerComponent_SpawnedVehicle",
     "Name": "SpawnedVehicleComp",
-    "Properties": {}
+    "Outer": "Default__BP_IOController_Base_C",
+    "Template": "SpawnedVehicleComp"
   },
   {
     "Type": "InheritableComponentHandler",
-    "Properties": {}
+    "Name": "InheritableComponentHandler",
+    "Outer": "BP_IOController_Base_C"
   },
   {
     "Type": "PawnActionsComponent",
     "Name": "ActionsComp",
-    "Properties": {}
+    "Outer": "Default__BP_IOController_Base_C",
+    "Template": "ActionsComp"
   },
   {
     "Type": "SceneComponent",
     "Name": "DefaultSceneRoot_GEN_VARIABLE",
-    "Properties": {}
+    "Outer": "BP_IOController_Base_C"
   },
   {
     "Type": "SceneComponent",
     "Name": "TransformComponent0",
-    "Properties": {}
+    "Outer": "Default__BP_IOController_Base_C",
+    "Template": "TransformComponent0"
   },
   {
     "Type": "SCS_Node",
     "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
     "Properties": {
       "ComponentClass": {
         "ObjectName": "SceneComponent:Class",
@@ -212,6 +481,7 @@
   {
     "Type": "SCS_Node",
     "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
     "Properties": {
       "ComponentClass": {
         "ObjectName": "FortAthenaNpcPatrollingComponent:Class",
@@ -228,6 +498,7 @@
   {
     "Type": "SimpleConstructionScript",
     "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_IOController_Base_C",
     "Properties": {
       "RootNodes": [
         {

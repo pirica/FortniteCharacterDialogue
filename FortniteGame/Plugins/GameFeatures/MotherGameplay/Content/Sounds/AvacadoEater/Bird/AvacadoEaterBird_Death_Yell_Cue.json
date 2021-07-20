@@ -1,0 +1,159 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "AvacadoEaterBird_Death_Yell_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "AvacadoEaterBird_Death_Yell_Cue:SoundNodeMixer_0:SoundNodeMixer",
+        "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Bird/AvacadoEaterBird_Death_Yell_Cue.2"
+      },
+      "VolumeMultiplier": 2.0,
+      "SoundClassObject": {
+        "ObjectName": "Fort_ImpactSounds:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_ImpactSounds.0"
+      },
+      "bHasDelayNode": true,
+      "Duration": 2.813625,
+      "MaxDistance": 3524.0,
+      "AttenuationSettings": {
+        "ObjectName": "AvacadoEaterBird_Att:SoundAttenuation",
+        "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Attenuations/AvacadoEaterBird_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_2",
+    "Outer": "AvacadoEaterBird_Death_Yell_Cue",
+    "Properties": {
+      "DelayMin": 1.2,
+      "DelayMax": 1.2,
+      "ChildNodes": [
+        {
+          "ObjectName": "AvacadoEaterBird_Death_Yell_Cue:SoundNodeRandom_4:SoundNodeRandom",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Bird/AvacadoEaterBird_Death_Yell_Cue.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_0",
+    "Outer": "AvacadoEaterBird_Death_Yell_Cue",
+    "Properties": {
+      "InputVolume": [
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "AvacadoEaterBird_Death_Yell_Cue:SoundNodeDelay_2:SoundNodeDelay",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Bird/AvacadoEaterBird_Death_Yell_Cue.1"
+        },
+        {
+          "ObjectName": "AvacadoEaterBird_Death_Yell_Cue:SoundNodeModulator_2:SoundNodeModulator",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Bird/AvacadoEaterBird_Death_Yell_Cue.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_2",
+    "Outer": "AvacadoEaterBird_Death_Yell_Cue",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "AvacadoEaterBird_Death_Yell_Cue:SoundNodeWavePlayer_21:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Bird/AvacadoEaterBird_Death_Yell_Cue.9"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_4",
+    "Outer": "AvacadoEaterBird_Death_Yell_Cue",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "AvacadoEaterBird_Death_Yell_Cue:SoundNodeWavePlayer_17:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Bird/AvacadoEaterBird_Death_Yell_Cue.5"
+        },
+        {
+          "ObjectName": "AvacadoEaterBird_Death_Yell_Cue:SoundNodeWavePlayer_18:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Bird/AvacadoEaterBird_Death_Yell_Cue.6"
+        },
+        {
+          "ObjectName": "AvacadoEaterBird_Death_Yell_Cue:SoundNodeWavePlayer_19:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Bird/AvacadoEaterBird_Death_Yell_Cue.7"
+        },
+        {
+          "ObjectName": "AvacadoEaterBird_Death_Yell_Cue:SoundNodeWavePlayer_20:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Bird/AvacadoEaterBird_Death_Yell_Cue.8"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_17",
+    "Outer": "AvacadoEaterBird_Death_Yell_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/AvacadoEater/Bird/Avocado_Parasite_Glort_Death_01.Avocado_Parasite_Glort_Death_01",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_18",
+    "Outer": "AvacadoEaterBird_Death_Yell_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/AvacadoEater/Bird/Avocado_Parasite_Glort_Death_02.Avocado_Parasite_Glort_Death_02",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_19",
+    "Outer": "AvacadoEaterBird_Death_Yell_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/AvacadoEater/Bird/Avocado_Parasite_Glort_Death_03.Avocado_Parasite_Glort_Death_03",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_20",
+    "Outer": "AvacadoEaterBird_Death_Yell_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/AvacadoEater/Bird/Avocado_Parasite_Glort_Death_04.Avocado_Parasite_Glort_Death_04",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_21",
+    "Outer": "AvacadoEaterBird_Death_Yell_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/AvacadoEater/Bird/Avocado_Parasite_Death_Long_01.Avocado_Parasite_Death_Long_01",
+        "SubPathString": ""
+      }
+    }
+  }
+]

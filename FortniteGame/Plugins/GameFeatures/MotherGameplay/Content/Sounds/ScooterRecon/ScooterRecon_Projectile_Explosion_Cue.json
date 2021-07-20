@@ -1,0 +1,276 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "ScooterRecon_Projectile_Explosion_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "ScooterRecon_Projectile_Explosion_Cue:SoundNodeMixer_2:SoundNodeMixer",
+        "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_Explosion_Cue.5"
+      },
+      "VolumeMultiplier": 1.1,
+      "SoundClassObject": {
+        "ObjectName": "Fort_Weapon_Projectile_PSM:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Weapon_Projectile_PSM.0"
+      },
+      "bOverrideConcurrency": true,
+      "ConcurrencyOverrides": {
+        "MaxCount": 1,
+        "bLimitToOwner": true,
+        "ResolutionRule": "EMaxConcurrentResolutionRule::StopOldest"
+      },
+      "Duration": 2.55925,
+      "MaxDistance": 8846.343
+    }
+  },
+  {
+    "Type": "SoundNodeAttenuation",
+    "Name": "SoundNodeAttenuation_2",
+    "Outer": "ScooterRecon_Projectile_Explosion_Cue",
+    "Properties": {
+      "AttenuationSettings": {
+        "ObjectName": "Fort_Weapon_Projectile_Medium_Athena_Att:SoundAttenuation",
+        "ObjectPath": "/Game/Sounds/Attenuation/Fort_Weapon_Projectile_Medium_Athena_Att.0"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "ScooterRecon_Projectile_Explosion_Cue:SoundNodeModulator_1:SoundNodeModulator",
+          "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_Explosion_Cue.7"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeAttenuation",
+    "Name": "SoundNodeAttenuation_3",
+    "Outer": "ScooterRecon_Projectile_Explosion_Cue",
+    "Properties": {
+      "AttenuationSettings": {
+        "ObjectName": "Fort_Weapon_Projectile_Close_Athena_Att:SoundAttenuation",
+        "ObjectPath": "/Game/Sounds/Attenuation/Fort_Weapon_Projectile_Close_Athena_Att.0"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "ScooterRecon_Projectile_Explosion_Cue:SoundNodeModulator_0:SoundNodeModulator",
+          "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_Explosion_Cue.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_0",
+    "Outer": "ScooterRecon_Projectile_Explosion_Cue",
+    "Properties": {
+      "InputVolume": [
+        1.2,
+        0.2
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "ScooterRecon_Projectile_Explosion_Cue:SoundNodeRandom_4:SoundNodeRandom",
+          "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_Explosion_Cue.8"
+        },
+        {
+          "ObjectName": "ScooterRecon_Projectile_Explosion_Cue:SoundNodeWavePlayer_1:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_Explosion_Cue.10"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_1",
+    "Outer": "ScooterRecon_Projectile_Explosion_Cue",
+    "Properties": {
+      "InputVolume": [
+        1.2,
+        0.7
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "ScooterRecon_Projectile_Explosion_Cue:SoundNodeRandom_5:SoundNodeRandom",
+          "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_Explosion_Cue.9"
+        },
+        null
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_2",
+    "Outer": "ScooterRecon_Projectile_Explosion_Cue",
+    "Properties": {
+      "InputVolume": [
+        1.0,
+        0.7
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "ScooterRecon_Projectile_Explosion_Cue:SoundNodeAttenuation_3:SoundNodeAttenuation",
+          "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_Explosion_Cue.2"
+        },
+        {
+          "ObjectName": "ScooterRecon_Projectile_Explosion_Cue:SoundNodeAttenuation_2:SoundNodeAttenuation",
+          "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_Explosion_Cue.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "ScooterRecon_Projectile_Explosion_Cue",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "ScooterRecon_Projectile_Explosion_Cue:SoundNodeMixer_0:SoundNodeMixer",
+          "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_Explosion_Cue.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_1",
+    "Outer": "ScooterRecon_Projectile_Explosion_Cue",
+    "Properties": {
+      "VolumeMin": 0.8,
+      "VolumeMax": 0.9,
+      "ChildNodes": [
+        {
+          "ObjectName": "ScooterRecon_Projectile_Explosion_Cue:SoundNodeMixer_1:SoundNodeMixer",
+          "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_Explosion_Cue.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_4",
+    "Outer": "ScooterRecon_Projectile_Explosion_Cue",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "ScooterRecon_Projectile_Explosion_Cue:SoundNodeWavePlayer_6:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_Explosion_Cue.16"
+        },
+        {
+          "ObjectName": "ScooterRecon_Projectile_Explosion_Cue:SoundNodeWavePlayer_11:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_Explosion_Cue.11"
+        },
+        {
+          "ObjectName": "ScooterRecon_Projectile_Explosion_Cue:SoundNodeWavePlayer_12:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_Explosion_Cue.12"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_5",
+    "Outer": "ScooterRecon_Projectile_Explosion_Cue",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "ScooterRecon_Projectile_Explosion_Cue:SoundNodeWavePlayer_13:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_Explosion_Cue.13"
+        },
+        {
+          "ObjectName": "ScooterRecon_Projectile_Explosion_Cue:SoundNodeWavePlayer_14:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_Explosion_Cue.14"
+        },
+        {
+          "ObjectName": "ScooterRecon_Projectile_Explosion_Cue:SoundNodeWavePlayer_15:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_Explosion_Cue.15"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "ScooterRecon_Projectile_Explosion_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_ScanningOrb_Close_02.ScooterRecon_Projectile_ScanningOrb_Close_02",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_11",
+    "Outer": "ScooterRecon_Projectile_Explosion_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_Explosion_02.ScooterRecon_Projectile_Explosion_02",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_12",
+    "Outer": "ScooterRecon_Projectile_Explosion_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_Explosion_03.ScooterRecon_Projectile_Explosion_03",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_13",
+    "Outer": "ScooterRecon_Projectile_Explosion_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_ExplosionDistant_01.ScooterRecon_Projectile_ExplosionDistant_01",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_14",
+    "Outer": "ScooterRecon_Projectile_Explosion_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_ExplosionDistant_02.ScooterRecon_Projectile_ExplosionDistant_02",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_15",
+    "Outer": "ScooterRecon_Projectile_Explosion_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_ExplosionDistant_03.ScooterRecon_Projectile_ExplosionDistant_03",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_6",
+    "Outer": "ScooterRecon_Projectile_Explosion_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_Explosion_01.ScooterRecon_Projectile_Explosion_01",
+        "SubPathString": ""
+      }
+    }
+  }
+]

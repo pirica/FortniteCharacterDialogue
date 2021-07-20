@@ -1,0 +1,235 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "AlienLaser_FireStop_Close_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "AlienLaser_FireStop_Close_Cue:SoundNodeMixer_17:SoundNodeMixer",
+        "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_FireStop_Close_Cue.3"
+      },
+      "VolumeMultiplier": 0.2,
+      "PitchMultiplier": 1.2,
+      "SoundClassObject": null,
+      "bDebug": true,
+      "ConcurrencySet": [
+        {
+          "ObjectName": "Weapon_Gunfire_Local_Conc:SoundConcurrency",
+          "ObjectPath": "/Game/Sounds/Concurrency_Rules/Weapon_Gunfire_Local_Conc.0"
+        },
+        {
+          "ObjectName": "Weapon_Gunfire_Global_Conc:SoundConcurrency",
+          "ObjectPath": "/Game/Sounds/Concurrency_Rules/Weapon_Gunfire_Global_Conc.0"
+        }
+      ],
+      "Duration": 1.689875,
+      "MaxDistance": 8846.343
+    }
+  },
+  {
+    "Type": "SoundNodeAttenuation",
+    "Name": "SoundNodeAttenuation_0",
+    "Outer": "AlienLaser_FireStop_Close_Cue",
+    "Properties": {
+      "AttenuationSettings": {
+        "ObjectName": "Fort_Weapon_Projectile_Medium_Athena_Att:SoundAttenuation",
+        "ObjectPath": "/Game/Sounds/Attenuation/Fort_Weapon_Projectile_Medium_Athena_Att.0"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "AlienLaser_FireStop_Close_Cue:SoundNodeRandom_10:SoundNodeRandom",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_FireStop_Close_Cue.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeAttenuation",
+    "Name": "SoundNodeAttenuation_1",
+    "Outer": "AlienLaser_FireStop_Close_Cue",
+    "Properties": {
+      "AttenuationSettings": {
+        "ObjectName": "Fort_Weapon_Projectile_Close_Athena_Att:SoundAttenuation",
+        "ObjectPath": "/Game/Sounds/Attenuation/Fort_Weapon_Projectile_Close_Athena_Att.0"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "AlienLaser_FireStop_Close_Cue:SoundNodeRandom_9:SoundNodeRandom",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_FireStop_Close_Cue.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_17",
+    "Outer": "AlienLaser_FireStop_Close_Cue",
+    "Properties": {
+      "InputVolume": [
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "AlienLaser_FireStop_Close_Cue:SoundNodeSoundClass_1:SoundNodeSoundClass",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_FireStop_Close_Cue.7"
+        },
+        {
+          "ObjectName": "AlienLaser_FireStop_Close_Cue:SoundNodeSoundClass_0:SoundNodeSoundClass",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_FireStop_Close_Cue.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_10",
+    "Outer": "AlienLaser_FireStop_Close_Cue",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "AlienLaser_FireStop_Close_Cue:SoundNodeWavePlayer_6:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_FireStop_Close_Cue.11"
+        },
+        {
+          "ObjectName": "AlienLaser_FireStop_Close_Cue:SoundNodeWavePlayer_7:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_FireStop_Close_Cue.12"
+        },
+        {
+          "ObjectName": "AlienLaser_FireStop_Close_Cue:SoundNodeWavePlayer_8:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_FireStop_Close_Cue.13"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_9",
+    "Outer": "AlienLaser_FireStop_Close_Cue",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "AlienLaser_FireStop_Close_Cue:SoundNodeWavePlayer_2:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_FireStop_Close_Cue.8"
+        },
+        {
+          "ObjectName": "AlienLaser_FireStop_Close_Cue:SoundNodeWavePlayer_4:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_FireStop_Close_Cue.9"
+        },
+        {
+          "ObjectName": "AlienLaser_FireStop_Close_Cue:SoundNodeWavePlayer_5:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_FireStop_Close_Cue.10"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeSoundClass",
+    "Name": "SoundNodeSoundClass_0",
+    "Outer": "AlienLaser_FireStop_Close_Cue",
+    "Properties": {
+      "SoundClassOverride": {
+        "ObjectName": "Fort_Weapon_Projectile_PSM:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Weapon_Projectile_PSM.0"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "AlienLaser_FireStop_Close_Cue:SoundNodeAttenuation_0:SoundNodeAttenuation",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_FireStop_Close_Cue.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeSoundClass",
+    "Name": "SoundNodeSoundClass_1",
+    "Outer": "AlienLaser_FireStop_Close_Cue",
+    "Properties": {
+      "SoundClassOverride": {
+        "ObjectName": "Fort_Weapon_Projectile_PSM:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Weapon_Projectile_PSM.0"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "AlienLaser_FireStop_Close_Cue:SoundNodeAttenuation_1:SoundNodeAttenuation",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_FireStop_Close_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "AlienLaser_FireStop_Close_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_FireStop_Close_01.AlienLaser_FireStop_Close_01",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_4",
+    "Outer": "AlienLaser_FireStop_Close_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_FireStop_Close_02.AlienLaser_FireStop_Close_02",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_5",
+    "Outer": "AlienLaser_FireStop_Close_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_FireStop_Close_03.AlienLaser_FireStop_Close_03",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_6",
+    "Outer": "AlienLaser_FireStop_Close_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_FireStop_Distant_01.AlienLaser_FireStop_Distant_01",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_7",
+    "Outer": "AlienLaser_FireStop_Close_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_FireStop_Distant_02.AlienLaser_FireStop_Distant_02",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_8",
+    "Outer": "AlienLaser_FireStop_Close_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_FireStop_Distant_03.AlienLaser_FireStop_Distant_03",
+        "SubPathString": ""
+      }
+    }
+  }
+]

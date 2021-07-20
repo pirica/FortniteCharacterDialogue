@@ -1,0 +1,524 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "AlienLaser_ImpactWater_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "AlienLaser_ImpactWater_Cue:SoundNodeDelay_8:SoundNodeDelay",
+        "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_ImpactWater_Cue.1"
+      },
+      "VolumeMultiplier": 2.0,
+      "SoundClassObject": {
+        "ObjectName": "Fort_ImpactSounds:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_ImpactSounds.0"
+      },
+      "bOverrideConcurrency": true,
+      "bHasDelayNode": true,
+      "ConcurrencySet": [
+        {
+          "ObjectName": "RifleBulletImpact_Conc:SoundConcurrency",
+          "ObjectPath": "/Game/Sounds/Concurrency_Rules/RifleBulletImpact_Conc.0"
+        }
+      ],
+      "ConcurrencyOverrides": {
+        "MaxCount": 5,
+        "ResolutionRule": "EMaxConcurrentResolutionRule::StopOldest",
+        "VolumeScale": 0.5
+      },
+      "Duration": 2.3611665,
+      "MaxDistance": 5500.0,
+      "AttenuationSettings": {
+        "ObjectName": "Fort_Bullet_Impact_Att:SoundAttenuation",
+        "ObjectPath": "/Game/Sounds/Attenuation/Fort_Bullet_Impact_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_8",
+    "Outer": "AlienLaser_ImpactWater_Cue",
+    "Properties": {
+      "DelayMin": 0.1,
+      "DelayMax": 0.1,
+      "ChildNodes": [
+        {
+          "ObjectName": "AlienLaser_ImpactWater_Cue:SoundNodeQualityLevel_1:SoundNodeQualityLevel",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_ImpactWater_Cue.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_0",
+    "Outer": "AlienLaser_ImpactWater_Cue",
+    "Properties": {
+      "InputVolume": [
+        1.0,
+        0.3
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "AlienLaser_ImpactWater_Cue:SoundNodeRandom_0:SoundNodeRandom",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_ImpactWater_Cue.7"
+        },
+        {
+          "ObjectName": "AlienLaser_ImpactWater_Cue:SoundNodeModulator_2:SoundNodeModulator",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_ImpactWater_Cue.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_1",
+    "Outer": "AlienLaser_ImpactWater_Cue",
+    "Properties": {
+      "InputVolume": [
+        1.0,
+        0.3
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "AlienLaser_ImpactWater_Cue:SoundNodeRandom_3:SoundNodeRandom",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_ImpactWater_Cue.9"
+        },
+        {
+          "ObjectName": "AlienLaser_ImpactWater_Cue:SoundNodeModulator_0:SoundNodeModulator",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_ImpactWater_Cue.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "AlienLaser_ImpactWater_Cue",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "AlienLaser_ImpactWater_Cue:SoundNodeRandom_4:SoundNodeRandom",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_ImpactWater_Cue.10"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_2",
+    "Outer": "AlienLaser_ImpactWater_Cue",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "AlienLaser_ImpactWater_Cue:SoundNodeRandom_2:SoundNodeRandom",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_ImpactWater_Cue.8"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeQualityLevel",
+    "Name": "SoundNodeQualityLevel_1",
+    "Outer": "AlienLaser_ImpactWater_Cue",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "AlienLaser_ImpactWater_Cue:SoundNodeMixer_0:SoundNodeMixer",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_ImpactWater_Cue.2"
+        },
+        {
+          "ObjectName": "AlienLaser_ImpactWater_Cue:SoundNodeMixer_0:SoundNodeMixer",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_ImpactWater_Cue.2"
+        },
+        {
+          "ObjectName": "AlienLaser_ImpactWater_Cue:SoundNodeMixer_1:SoundNodeMixer",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_ImpactWater_Cue.3"
+        },
+        {
+          "ObjectName": "AlienLaser_ImpactWater_Cue:SoundNodeMixer_1:SoundNodeMixer",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_ImpactWater_Cue.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "AlienLaser_ImpactWater_Cue",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "AlienLaser_ImpactWater_Cue:SoundNodeWavePlayer_0:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_ImpactWater_Cue.11"
+        },
+        {
+          "ObjectName": "AlienLaser_ImpactWater_Cue:SoundNodeWavePlayer_1:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_ImpactWater_Cue.12"
+        },
+        {
+          "ObjectName": "AlienLaser_ImpactWater_Cue:SoundNodeWavePlayer_2:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_ImpactWater_Cue.20"
+        },
+        {
+          "ObjectName": "AlienLaser_ImpactWater_Cue:SoundNodeWavePlayer_3:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_ImpactWater_Cue.27"
+        },
+        {
+          "ObjectName": "AlienLaser_ImpactWater_Cue:SoundNodeWavePlayer_4:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_ImpactWater_Cue.28"
+        },
+        {
+          "ObjectName": "AlienLaser_ImpactWater_Cue:SoundNodeWavePlayer_5:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_ImpactWater_Cue.29"
+        },
+        {
+          "ObjectName": "AlienLaser_ImpactWater_Cue:SoundNodeWavePlayer_6:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_ImpactWater_Cue.30"
+        },
+        {
+          "ObjectName": "AlienLaser_ImpactWater_Cue:SoundNodeWavePlayer_7:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_ImpactWater_Cue.31"
+        },
+        {
+          "ObjectName": "AlienLaser_ImpactWater_Cue:SoundNodeWavePlayer_19:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_ImpactWater_Cue.19"
+        },
+        {
+          "ObjectName": "AlienLaser_ImpactWater_Cue:SoundNodeWavePlayer_20:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_ImpactWater_Cue.21"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_2",
+    "Outer": "AlienLaser_ImpactWater_Cue",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "AlienLaser_ImpactWater_Cue:SoundNodeWavePlayer_13:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_ImpactWater_Cue.13"
+        },
+        {
+          "ObjectName": "AlienLaser_ImpactWater_Cue:SoundNodeWavePlayer_14:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_ImpactWater_Cue.14"
+        },
+        {
+          "ObjectName": "AlienLaser_ImpactWater_Cue:SoundNodeWavePlayer_15:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_ImpactWater_Cue.15"
+        },
+        {
+          "ObjectName": "AlienLaser_ImpactWater_Cue:SoundNodeWavePlayer_16:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_ImpactWater_Cue.16"
+        },
+        {
+          "ObjectName": "AlienLaser_ImpactWater_Cue:SoundNodeWavePlayer_17:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_ImpactWater_Cue.17"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_3",
+    "Outer": "AlienLaser_ImpactWater_Cue",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "AlienLaser_ImpactWater_Cue:SoundNodeWavePlayer_21:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_ImpactWater_Cue.22"
+        },
+        {
+          "ObjectName": "AlienLaser_ImpactWater_Cue:SoundNodeWavePlayer_24:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_ImpactWater_Cue.25"
+        },
+        {
+          "ObjectName": "AlienLaser_ImpactWater_Cue:SoundNodeWavePlayer_25:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_ImpactWater_Cue.26"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_4",
+    "Outer": "AlienLaser_ImpactWater_Cue",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "AlienLaser_ImpactWater_Cue:SoundNodeWavePlayer_18:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_ImpactWater_Cue.18"
+        },
+        {
+          "ObjectName": "AlienLaser_ImpactWater_Cue:SoundNodeWavePlayer_22:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_ImpactWater_Cue.23"
+        },
+        {
+          "ObjectName": "AlienLaser_ImpactWater_Cue:SoundNodeWavePlayer_23:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_ImpactWater_Cue.24"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "AlienLaser_ImpactWater_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_Weapons/Impacts/Bullet_Impacts_S10/Bullet_Impact_Water_Med_10.Bullet_Impact_Water_Med_10",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "AlienLaser_ImpactWater_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_Weapons/Impacts/Bullet_Impacts_S10/Bullet_Impact_Water_Med_01.Bullet_Impact_Water_Med_01",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_13",
+    "Outer": "AlienLaser_ImpactWater_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_Weapons/pistol/FlareGun/FlareGun_EmberImpact_Water_01.FlareGun_EmberImpact_Water_01",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_14",
+    "Outer": "AlienLaser_ImpactWater_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_Weapons/pistol/FlareGun/FlareGun_EmberImpact_Water_02.FlareGun_EmberImpact_Water_02",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_15",
+    "Outer": "AlienLaser_ImpactWater_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_Weapons/pistol/FlareGun/FlareGun_EmberImpact_Water_03.FlareGun_EmberImpact_Water_03",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_16",
+    "Outer": "AlienLaser_ImpactWater_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_Weapons/pistol/FlareGun/FlareGun_EmberImpact_Water_04.FlareGun_EmberImpact_Water_04",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_17",
+    "Outer": "AlienLaser_ImpactWater_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_Weapons/pistol/FlareGun/FlareGun_EmberImpact_Water_05.FlareGun_EmberImpact_Water_05",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_18",
+    "Outer": "AlienLaser_ImpactWater_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_Weapons/pistol/FlareGun/FlareGun_EmberImpact_Water_01.FlareGun_EmberImpact_Water_01",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_19",
+    "Outer": "AlienLaser_ImpactWater_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_Weapons/Impacts/Bullet_Impacts_S10/Bullet_Impact_Water_Med_08.Bullet_Impact_Water_Med_08",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "AlienLaser_ImpactWater_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_Weapons/Impacts/Bullet_Impacts_S10/Bullet_Impact_Water_Med_02.Bullet_Impact_Water_Med_02",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_20",
+    "Outer": "AlienLaser_ImpactWater_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_Weapons/Impacts/Bullet_Impacts_S10/Bullet_Impact_Water_Med_09.Bullet_Impact_Water_Med_09",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_21",
+    "Outer": "AlienLaser_ImpactWater_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_Weapons/Impacts/Bullet_Impacts_S10/Bullet_Impact_Water_Med_01.Bullet_Impact_Water_Med_01",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_22",
+    "Outer": "AlienLaser_ImpactWater_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_Weapons/pistol/FlareGun/FlareGun_EmberImpact_Water_02.FlareGun_EmberImpact_Water_02",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_23",
+    "Outer": "AlienLaser_ImpactWater_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_Weapons/pistol/FlareGun/FlareGun_EmberImpact_Water_03.FlareGun_EmberImpact_Water_03",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_24",
+    "Outer": "AlienLaser_ImpactWater_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_Weapons/Impacts/Bullet_Impacts_S10/Bullet_Impact_Water_Med_03.Bullet_Impact_Water_Med_03",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_25",
+    "Outer": "AlienLaser_ImpactWater_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_Weapons/Impacts/Bullet_Impacts_S10/Bullet_Impact_Water_Med_06.Bullet_Impact_Water_Med_06",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "AlienLaser_ImpactWater_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_Weapons/Impacts/Bullet_Impacts_S10/Bullet_Impact_Water_Med_03.Bullet_Impact_Water_Med_03",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_4",
+    "Outer": "AlienLaser_ImpactWater_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_Weapons/Impacts/Bullet_Impacts_S10/Bullet_Impact_Water_Med_04.Bullet_Impact_Water_Med_04",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_5",
+    "Outer": "AlienLaser_ImpactWater_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_Weapons/Impacts/Bullet_Impacts_S10/Bullet_Impact_Water_Med_05.Bullet_Impact_Water_Med_05",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_6",
+    "Outer": "AlienLaser_ImpactWater_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_Weapons/Impacts/Bullet_Impacts_S10/Bullet_Impact_Water_Med_06.Bullet_Impact_Water_Med_06",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_7",
+    "Outer": "AlienLaser_ImpactWater_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_Weapons/Impacts/Bullet_Impacts_S10/Bullet_Impact_Water_Med_07.Bullet_Impact_Water_Med_07",
+        "SubPathString": ""
+      }
+    }
+  }
+]

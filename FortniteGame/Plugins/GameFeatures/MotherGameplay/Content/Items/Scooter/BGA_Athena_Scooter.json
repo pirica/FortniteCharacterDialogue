@@ -3197,16 +3197,13 @@
     "Template": "Default__BP_SurfaceTypeSoundComponent_C",
     "Properties": {
       "SoundMap": {
-        "24": null,
-        "68": {
-          "ObjectName": "ExecuteUbergraph_BGA_Athena_Scooter:/Game/Abilities/Player/Generic/BPI_Building_Actor_Destroyed:ExecuteUbergraph_BGA_Athena_Scooter",
-          "ObjectPath": "/MotherGameplay/Items/Scooter/BGA_Athena_Scooter.532"
-        },
+        "21": null,
+        "68": null,
         "0": {
           "ObjectName": "Expl_Debris_Wood_Cue:SoundCue",
           "ObjectPath": "/Game/Athena/Sounds/Weapons/Explosions/Expl_Debris_Wood_Cue.0"
         },
-        "22": null
+        "19": null
       }
     }
   },
@@ -3223,12 +3220,7 @@
   {
     "Type": "NiagaraDataInterfaceSkeletalMesh",
     "Name": "NiagaraDataInterfaceSkeletalMesh_0",
-    "Outer": "NS_Scooter_ProjPhysics_GEN_VARIABLE",
-    "Properties": {
-      "MeshUserParameter": {
-        "Parameter": {}
-      }
-    }
+    "Outer": "NS_Scooter_ProjPhysics_GEN_VARIABLE"
   },
   {
     "Type": "ParticleSystemComponent",
@@ -3399,7 +3391,9 @@
           "OverlapRadius": 1500.0
         },
         {
-          "IndicatedActorTags": [],
+          "IndicatedActorTags": [
+            "Building.Type.Container.TreasureChest"
+          ],
           "IndicatedActorTagQuery": {
             "TokenStreamVersion": 0,
             "TagDictionary": [],
@@ -3461,6 +3455,110 @@
             },
             "Sound": null,
             "StateImageOverride": "EIndicatorStateImage::LAST_ENEMY_STATE",
+            "OnActorAdded": {
+              "Num": 0,
+              "Name": "None"
+            },
+            "OnActorRemoved": {
+              "Num": 0,
+              "Name": "None"
+            }
+          },
+          "StenciledData": {
+            "GroupIdentifier": "chests",
+            "Duration": -1.0,
+            "StepTime": 0.0,
+            "ShareActorWith": "EShareActorWith::None",
+            "ShareActorWithMask": 1,
+            "DisplayTeamOverride": 255,
+            "ParticleSystemData": {
+              "ParticleSystem": null,
+              "ParticleSystemActorParamName": null,
+              "ParticleSystemOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemDBNOOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemVectorParamName": null
+            },
+            "Sound": null,
+            "FriendlyStencilName": "YellowOverlayID",
+            "EnemyStencilName": "YellowOverlayID",
+            "FriendlyStencilIndex": 0,
+            "EnemyStencilIndex": 0
+          },
+          "OverlapRadius": 1500.0
+        },
+        {
+          "IndicatedActorTags": [
+            "Building.Type.GameplayItem"
+          ],
+          "IndicatedActorTagQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [],
+            "QueryTokenStream": [],
+            "UserDescription": "",
+            "AutoDescription": ""
+          },
+          "ObjectTypes": [
+            "ObjectTypeQuery1",
+            "ObjectTypeQuery2",
+            "ObjectTypeQuery4"
+          ],
+          "ActorClassFilter": {
+            "ObjectName": "BuildingContainer:Class",
+            "ObjectPath": 0
+          },
+          "WithAffiliation": [],
+          "IndicatedData": {
+            "GroupIdentifier": "chests",
+            "Duration": -1.0,
+            "StepTime": 0.0,
+            "IndicatorOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 90.0
+            },
+            "IndicatorDBNOOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 30.0
+            },
+            "ShareActorWith": "EShareActorWith::None",
+            "ShareActorWithMask": 1,
+            "DisplayTeamOverride": 255,
+            "bClampToScreen": true,
+            "ScaleAndOpacityData": {
+              "SmallSizeDistance": 7500.0,
+              "LargestSizeDistance": 10.0,
+              "SmallScale": 0.5,
+              "LargestScale": 0.8,
+              "FarAwayScale": 0.35,
+              "FarAwayOpacity": 1.0,
+              "MaxScaleAndFadePercent": 0.1
+            },
+            "ParticleSystemData": {
+              "ParticleSystem": null,
+              "ParticleSystemActorParamName": null,
+              "ParticleSystemOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemDBNOOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemVectorParamName": null
+            },
+            "Sound": null,
+            "StateImageOverride": "EIndicatorStateImage::LAST_MATE_STATE",
             "OnActorAdded": {
               "Num": 0,
               "Name": "None"
@@ -3802,8 +3900,6 @@
           "OverlapRadius": 1500.0
         }
       ],
-      "IndicatorGroupIdentifierOverride": "LotusIndicator",
-      "StencilGroupIdentifierOverride": "LotusStencil",
       "PlayerPingSound": {
         "ObjectName": "ScooterRecon_PingDetect_Cue:SoundCue",
         "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_PingDetect_Cue.0"
@@ -4347,22 +4443,6 @@
           },
           {
             "PropertyName": null,
-            "ArrayIndex": 0,
-            "PropertyScope": {
-              "ObjectName": "PulseIndicatorComponent:Class",
-              "ObjectPath": 0
-            }
-          },
-          {
-            "PropertyName": "IndicatorGroupIdentifierOverride",
-            "ArrayIndex": 0,
-            "PropertyScope": {
-              "ObjectName": "PulseIndicatorComponent:Class",
-              "ObjectPath": 0
-            }
-          },
-          {
-            "PropertyName": "StencilGroupIdentifierOverride",
             "ArrayIndex": 0,
             "PropertyScope": {
               "ObjectName": "PulseIndicatorComponent:Class",

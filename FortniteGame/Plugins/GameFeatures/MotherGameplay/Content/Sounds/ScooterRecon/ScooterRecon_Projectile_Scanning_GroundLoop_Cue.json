@@ -1,0 +1,81 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "ScooterRecon_Projectile_Scanning_GroundLoop_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "ScooterRecon_Projectile_Scanning_GroundLoop_Cue:SoundNodeSoundClass_3:SoundNodeSoundClass",
+        "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_Scanning_GroundLoop_Cue.2"
+      },
+      "VolumeMultiplier": 0.09,
+      "PitchMultiplier": 1.1,
+      "AttenuationOverrides": {
+        "bAttenuateWithLPF": true,
+        "StereoSpread": 1000.0,
+        "LPFRadiusMin": 800.0,
+        "LPFRadiusMax": 3000.0,
+        "LPFFrequencyAtMax": 600.0,
+        "ReverbWetLevelMin": 0.2,
+        "ReverbWetLevelMax": 0.7,
+        "DistanceAlgorithm": "EAttenuationDistanceModel::Logarithmic",
+        "FalloffDistance": 2355.5806
+      },
+      "bOverrideAttenuation": true,
+      "SoundClassObject": null,
+      "ConcurrencySet": [
+        {
+          "ObjectName": "ScooterRecon_Projectile_Global_Conc:SoundConcurrency",
+          "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_Global_Conc.0"
+        }
+      ],
+      "ConcurrencyOverrides": {
+        "ResolutionRule": "EMaxConcurrentResolutionRule::PreventNew"
+      },
+      "Duration": 10000.0,
+      "MaxDistance": 2755.5806,
+      "Priority": 0.5
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_3",
+    "Outer": "ScooterRecon_Projectile_Scanning_GroundLoop_Cue",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "ScooterRecon_Projectile_Scanning_GroundLoop_Cue:SoundNodeWavePlayer_1:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_Scanning_GroundLoop_Cue.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeSoundClass",
+    "Name": "SoundNodeSoundClass_3",
+    "Outer": "ScooterRecon_Projectile_Scanning_GroundLoop_Cue",
+    "Properties": {
+      "SoundClassOverride": {
+        "ObjectName": "Fort_Weapons:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Weapons.0"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "ScooterRecon_Projectile_Scanning_GroundLoop_Cue:SoundNodeModulator_3:SoundNodeModulator",
+          "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_Scanning_GroundLoop_Cue.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "ScooterRecon_Projectile_Scanning_GroundLoop_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_Scanning_GroundLoop_mix.ScooterRecon_Projectile_Scanning_GroundLoop_mix",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    }
+  }
+]

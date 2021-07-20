@@ -1,0 +1,104 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "ScooterRecon_OutOfAmmo_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "ScooterRecon_OutOfAmmo_Cue:SoundNodeModulator_1:SoundNodeModulator",
+        "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_OutOfAmmo_Cue.1"
+      },
+      "VolumeMultiplier": 0.4,
+      "PitchMultiplier": 1.2,
+      "AttenuationOverrides": {
+        "FalloffDistance": 1600.0
+      },
+      "SoundClassObject": {
+        "ObjectName": "Fort_Weapon_Projectile_PSM:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Weapon_Projectile_PSM.0"
+      },
+      "bOverrideConcurrency": true,
+      "ConcurrencyOverrides": {
+        "MaxCount": 2,
+        "ResolutionRule": "EMaxConcurrentResolutionRule::StopOldest"
+      },
+      "Duration": 0.9811042,
+      "MaxDistance": 2097152.0
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_1",
+    "Outer": "ScooterRecon_OutOfAmmo_Cue",
+    "Properties": {
+      "PitchMin": 1.0,
+      "PitchMax": 1.0,
+      "VolumeMin": 0.6,
+      "VolumeMax": 0.7,
+      "ChildNodes": [
+        {
+          "ObjectName": "ScooterRecon_OutOfAmmo_Cue:SoundNodeRandom_1:SoundNodeRandom",
+          "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_OutOfAmmo_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_1",
+    "Outer": "ScooterRecon_OutOfAmmo_Cue",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "ScooterRecon_OutOfAmmo_Cue:SoundNodeWavePlayer_0:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_OutOfAmmo_Cue.3"
+        },
+        {
+          "ObjectName": "ScooterRecon_OutOfAmmo_Cue:SoundNodeWavePlayer_5:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_OutOfAmmo_Cue.4"
+        },
+        {
+          "ObjectName": "ScooterRecon_OutOfAmmo_Cue:SoundNodeWavePlayer_6:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_OutOfAmmo_Cue.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "ScooterRecon_OutOfAmmo_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_OutOfAmmo_01.ScooterRecon_OutOfAmmo_01",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_5",
+    "Outer": "ScooterRecon_OutOfAmmo_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_OutOfAmmo_02.ScooterRecon_OutOfAmmo_02",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_6",
+    "Outer": "ScooterRecon_OutOfAmmo_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_OutOfAmmo_03.ScooterRecon_OutOfAmmo_03",
+        "SubPathString": ""
+      }
+    }
+  }
+]

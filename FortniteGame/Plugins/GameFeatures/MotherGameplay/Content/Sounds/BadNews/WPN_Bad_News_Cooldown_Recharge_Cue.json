@@ -1,0 +1,53 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "WPN_Bad_News_Cooldown_Recharge_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "WPN_Bad_News_Cooldown_Recharge_Cue:SoundNodeModulator_0:SoundNodeModulator",
+        "ObjectPath": "/MotherGameplay/Sounds/BadNews/WPN_Bad_News_Cooldown_Recharge_Cue.1"
+      },
+      "VolumeMultiplier": 2.0,
+      "SoundClassObject": {
+        "ObjectName": "Fort_Weapon_Foley:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Weapon_Foley.0"
+      },
+      "bOverrideConcurrency": true,
+      "ConcurrencyOverrides": {
+        "MaxCount": 1,
+        "bLimitToOwner": true,
+        "ResolutionRule": "EMaxConcurrentResolutionRule::StopFarthestThenPreventNew"
+      },
+      "Duration": 2.8228126,
+      "MaxDistance": 2100.0,
+      "AttenuationSettings": {
+        "ObjectName": "Fort_Weapon_Reload_Sml_Att:SoundAttenuation",
+        "ObjectPath": "/Game/Sounds/Attenuation/Fort_Weapon_Reload_Sml_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "WPN_Bad_News_Cooldown_Recharge_Cue",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "WPN_Bad_News_Cooldown_Recharge_Cue:SoundNodeWavePlayer_0:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/BadNews/WPN_Bad_News_Cooldown_Recharge_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "WPN_Bad_News_Cooldown_Recharge_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/BadNews/WPN_Bad_News_Cooldown_Recharge_01.WPN_Bad_News_Cooldown_Recharge_01",
+        "SubPathString": ""
+      }
+    }
+  }
+]

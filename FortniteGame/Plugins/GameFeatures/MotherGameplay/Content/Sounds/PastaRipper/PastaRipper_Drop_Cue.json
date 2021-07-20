@@ -1,0 +1,55 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "PastaRipper_Drop_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "PastaRipper_Drop_Cue:SoundNodeModulator_0:SoundNodeModulator",
+        "ObjectPath": "/MotherGameplay/Sounds/PastaRipper/PastaRipper_Drop_Cue.1"
+      },
+      "VolumeMultiplier": 0.7,
+      "AttenuationOverrides": {
+        "bAttenuate": false,
+        "StereoSpread": 5000.0
+      },
+      "SoundClassObject": {
+        "ObjectName": "Fort_Searching_Foley:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Searching_Foley.0"
+      },
+      "Duration": 0.91178125,
+      "MaxDistance": 3200.0,
+      "AttenuationSettings": {
+        "ObjectName": "Fort_Weapon_Drop_Att:SoundAttenuation",
+        "ObjectPath": "/Game/Sounds/Attenuation/Fort_Weapon_Drop_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "PastaRipper_Drop_Cue",
+    "Properties": {
+      "PitchMin": 0.9,
+      "PitchMax": 1.1,
+      "VolumeMin": 0.9,
+      "VolumeMax": 1.1,
+      "ChildNodes": [
+        {
+          "ObjectName": "PastaRipper_Drop_Cue:SoundNodeWavePlayer_4:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/PastaRipper/PastaRipper_Drop_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_4",
+    "Outer": "PastaRipper_Drop_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_Weapons/AutoRifle/Bullpup/Bullpup_Drop_01.Bullpup_Drop_01",
+        "SubPathString": ""
+      }
+    }
+  }
+]

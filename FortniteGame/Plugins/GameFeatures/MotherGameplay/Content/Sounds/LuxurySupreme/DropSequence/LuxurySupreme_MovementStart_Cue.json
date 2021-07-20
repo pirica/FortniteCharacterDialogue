@@ -1,0 +1,81 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "LuxurySupreme_MovementStart_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "LuxurySupreme_MovementStart_Cue:SoundNodeModulator_0:SoundNodeModulator",
+        "ObjectPath": "/MotherGameplay/Sounds/LuxurySupreme/DropSequence/LuxurySupreme_MovementStart_Cue.1"
+      },
+      "SoundClassObject": {
+        "ObjectName": "Fort_SFX_InGame:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_SFX_InGame.0"
+      },
+      "VirtualizationMode": "EVirtualizationMode::PlayWhenSilent",
+      "Duration": 6.9902916,
+      "MaxDistance": 1010000.0,
+      "AttenuationSettings": {
+        "ObjectName": "LuxurySupreme_MovementStart_Att:SoundAttenuation",
+        "ObjectPath": "/MotherGameplay/Sounds/LuxurySupreme/DropSequence/LuxurySupreme_MovementStart_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "LuxurySupreme_MovementStart_Cue",
+    "Properties": {
+      "PitchMin": 0.98,
+      "PitchMax": 1.03,
+      "ChildNodes": [
+        {
+          "ObjectName": "LuxurySupreme_MovementStart_Cue:SoundNodeRandom_0:SoundNodeRandom",
+          "ObjectPath": "/MotherGameplay/Sounds/LuxurySupreme/DropSequence/LuxurySupreme_MovementStart_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "LuxurySupreme_MovementStart_Cue",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "LuxurySupreme_MovementStart_Cue:SoundNodeWavePlayer_1:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/LuxurySupreme/DropSequence/LuxurySupreme_MovementStart_Cue.3"
+        },
+        {
+          "ObjectName": "LuxurySupreme_MovementStart_Cue:SoundNodeWavePlayer_2:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/LuxurySupreme/DropSequence/LuxurySupreme_MovementStart_Cue.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "LuxurySupreme_MovementStart_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/LuxurySupreme/DropSequence/LuxurySupreme_Start_02.LuxurySupreme_Start_02",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "LuxurySupreme_MovementStart_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/LuxurySupreme/DropSequence/LuxurySupreme_Start_01.LuxurySupreme_Start_01",
+        "SubPathString": ""
+      }
+    }
+  }
+]

@@ -1,0 +1,81 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "AlienLaser_Equip_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "AlienLaser_Equip_Cue:SoundNodeModulator_0:SoundNodeModulator",
+        "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_Equip_Cue.1"
+      },
+      "VolumeMultiplier": 0.4,
+      "SoundClassObject": {
+        "ObjectName": "Fort_Weapon_Foley:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Weapon_Foley.0"
+      },
+      "bDebug": true,
+      "bOverrideConcurrency": true,
+      "Duration": 1.1185,
+      "MaxDistance": 2100.0,
+      "AttenuationSettings": {
+        "ObjectName": "Fort_Weapon_Reload_Sml_Att:SoundAttenuation",
+        "ObjectPath": "/Game/Sounds/Attenuation/Fort_Weapon_Reload_Sml_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "AlienLaser_Equip_Cue",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "AlienLaser_Equip_Cue:SoundNodeRandom_0:SoundNodeRandom",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_Equip_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "AlienLaser_Equip_Cue",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "AlienLaser_Equip_Cue:SoundNodeWavePlayer_0:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_Equip_Cue.3"
+        },
+        {
+          "ObjectName": "AlienLaser_Equip_Cue:SoundNodeWavePlayer_1:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_Equip_Cue.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "AlienLaser_Equip_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_Equip_01.AlienLaser_Equip_01",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "AlienLaser_Equip_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_Equip_02.AlienLaser_Equip_02",
+        "SubPathString": ""
+      }
+    }
+  }
+]

@@ -1,0 +1,158 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "AvacadoEater_Destroyed_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "AvacadoEater_Destroyed_Cue:SoundNodeMixer_0:SoundNodeMixer",
+        "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_Destroyed_Cue.1"
+      },
+      "SoundClassObject": {
+        "ObjectName": "Fort_ImpactSounds:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_ImpactSounds.0"
+      },
+      "Duration": 3.0,
+      "MaxDistance": 5500.0,
+      "AttenuationSettings": {
+        "ObjectName": "Fort_Bullet_Impact_Att:SoundAttenuation",
+        "ObjectPath": "/Game/Sounds/Attenuation/Fort_Bullet_Impact_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_0",
+    "Outer": "AvacadoEater_Destroyed_Cue",
+    "Properties": {
+      "InputVolume": [
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "AvacadoEater_Destroyed_Cue:SoundNodeModulator_1:SoundNodeModulator",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_Destroyed_Cue.2"
+        },
+        {
+          "ObjectName": "AvacadoEater_Destroyed_Cue:SoundNodeRandom_2:SoundNodeRandom",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_Destroyed_Cue.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_1",
+    "Outer": "AvacadoEater_Destroyed_Cue",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "AvacadoEater_Destroyed_Cue:SoundNodeRandom_0:SoundNodeRandom",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_Destroyed_Cue.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "AvacadoEater_Destroyed_Cue",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "AvacadoEater_Destroyed_Cue:SoundNodeWavePlayer_5:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_Destroyed_Cue.7"
+        },
+        {
+          "ObjectName": "AvacadoEater_Destroyed_Cue:SoundNodeWavePlayer_8:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_Destroyed_Cue.8"
+        },
+        {
+          "ObjectName": "AvacadoEater_Destroyed_Cue:SoundNodeWavePlayer_9:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_Destroyed_Cue.9"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_2",
+    "Outer": "AvacadoEater_Destroyed_Cue",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "AvacadoEater_Destroyed_Cue:SoundNodeWavePlayer_2:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_Destroyed_Cue.5"
+        },
+        {
+          "ObjectName": "AvacadoEater_Destroyed_Cue:SoundNodeWavePlayer_3:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_Destroyed_Cue.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "AvacadoEater_Destroyed_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/AvacadoEater/Bird/Cuddle_Fish_Explo_01.Cuddle_Fish_Explo_01",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "AvacadoEater_Destroyed_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/AvacadoEater/Bird/Cuddle_Fish_Explo_02.Cuddle_Fish_Explo_02",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_5",
+    "Outer": "AvacadoEater_Destroyed_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/AvacadoEater/Bird/AvacadoEater_Destroyed_01.AvacadoEater_Destroyed_01",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_8",
+    "Outer": "AvacadoEater_Destroyed_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/AvacadoEater/Bird/AvacadoEater_Destroyed_02.AvacadoEater_Destroyed_02",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_9",
+    "Outer": "AvacadoEater_Destroyed_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/AvacadoEater/Bird/AvacadoEater_Destroyed_03.AvacadoEater_Destroyed_03",
+        "SubPathString": ""
+      }
+    }
+  }
+]

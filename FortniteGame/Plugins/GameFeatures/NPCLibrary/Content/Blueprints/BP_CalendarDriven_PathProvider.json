@@ -2,22 +2,576 @@
   {
     "Type": "Function",
     "Name": "ExecuteUbergraph_BP_CalendarDriven_PathProvider",
-    "Properties": {}
+    "Outer": "BP_CalendarDriven_PathProvider_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Temp_struct_Variable",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 32,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayTagContainer:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_IntInt_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Temp_object_Variable",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortPlaylist:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Temp_object_Variable_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortGameStateAthena:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_PlaylistDataReadyAsync_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortAsyncAction_CurrentPlaylistReady:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_GameState",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortGameStateAthena:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_Playlist",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 2,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortPlaylist:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_PlaylistContextTags",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 32,
+        "PropertyFlags": 2,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayTagContainer:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_GetCalendarEventInformation_bIsEventActive",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetCalendarEventInformation_TimeSinceBegin",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Timespan:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetCalendarEventInformation_TimeUntilEnd",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Timespan:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetCalendarEventInformation_TimeSpanRatio",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_GetAbductionPhase_Stage",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsEmpty_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_IntInt_ReturnValue_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanOR_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanAND_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortAthenaPatrolPathPointProvider:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 20,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "SignatureFunction": {
+          "ObjectName": "PlaylistReadyAsyncDelegate__DelegateSignature:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 8421377,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "Function",
     "Name": "ReceiveBeginPlay",
-    "Properties": {}
+    "Outer": "BP_CalendarDriven_PathProvider_C",
+    "SuperStruct": {
+      "ObjectName": "ReceiveBeginPlay:Class",
+      "ObjectPath": 0
+    },
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 134744064,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "Function",
     "Name": "OnReady_C2064A2A4E601EA29FC3EDA1D3ECD635",
-    "Properties": {}
+    "Outer": "BP_CalendarDriven_PathProvider_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "GameState",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortGameStateAthena:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Playlist",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 150,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortPlaylist:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "PlaylistContextTags",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 32,
+        "PropertyFlags": 134218134,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayTagContainer:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 205520896,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "Function",
     "Name": "GetAbductionPhase",
-    "Properties": {}
+    "Outer": "BP_CalendarDriven_PathProvider_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "Progress",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Stage",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 384,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Abduction Phase",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 5,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_GreaterEqual_FloatFloat_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_FloatFloat_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_FloatFloat_ReturnValue_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 474087424,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "BlueprintGeneratedClass",
@@ -31,6 +585,156 @@
         "ObjectName": "BP_CalendarDriven_PathProvider_C:ExecuteUbergraph_BP_CalendarDriven_PathProvider:Function",
         "ObjectPath": "/NPCLibrary/Blueprints/BP_CalendarDriven_PathProvider.0"
       }
+    },
+    "SuperStruct": {
+      "ObjectName": "Actor:Class",
+      "ObjectPath": 0
+    },
+    "Children": [
+      {
+        "ObjectName": "BP_CalendarDriven_PathProvider_C:GetAbductionPhase:Function",
+        "ObjectPath": "/NPCLibrary/Blueprints/BP_CalendarDriven_PathProvider.3"
+      },
+      {
+        "ObjectName": "BP_CalendarDriven_PathProvider_C:OnReady_C2064A2A4E601EA29FC3EDA1D3ECD635:Function",
+        "ObjectPath": "/NPCLibrary/Blueprints/BP_CalendarDriven_PathProvider.2"
+      },
+      {
+        "ObjectName": "BP_CalendarDriven_PathProvider_C:ReceiveBeginPlay:Function",
+        "ObjectPath": "/NPCLibrary/Blueprints/BP_CalendarDriven_PathProvider.1"
+      },
+      {
+        "ObjectName": "BP_CalendarDriven_PathProvider_C:ExecuteUbergraph_BP_CalendarDriven_PathProvider:Function",
+        "ObjectPath": "/NPCLibrary/Blueprints/BP_CalendarDriven_PathProvider.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 2105344,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "PointerToUberGraphFrame:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DefaultSceneRoot",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "SceneComponent:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "PointProvider",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 2053,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "PointProvider",
+          "Flags": 1,
+          "ArrayDim": 1,
+          "ElementSize": 8,
+          "PropertyFlags": 0,
+          "RepIndex": 0,
+          "RepNotifyFunc": "None",
+          "BlueprintReplicationCondition": "COND_None",
+          "PropertyClass": {
+            "ObjectName": "FortAthenaPatrolPathPointProvider:Class",
+            "ObjectPath": 0
+          }
+        }
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CalendarEventName",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 5,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "DebugBypassCalendarEvent",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 5,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "AbductionPhase",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 5,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_CalendarDriven_PathProvider": {
+        "ObjectName": "BP_CalendarDriven_PathProvider_C:ExecuteUbergraph_BP_CalendarDriven_PathProvider:Function",
+        "ObjectPath": "/NPCLibrary/Blueprints/BP_CalendarDriven_PathProvider.0"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "BP_CalendarDriven_PathProvider_C:ReceiveBeginPlay:Function",
+        "ObjectPath": "/NPCLibrary/Blueprints/BP_CalendarDriven_PathProvider.1"
+      },
+      "OnReady_C2064A2A4E601EA29FC3EDA1D3ECD635": {
+        "ObjectName": "BP_CalendarDriven_PathProvider_C:OnReady_C2064A2A4E601EA29FC3EDA1D3ECD635:Function",
+        "ObjectPath": "/NPCLibrary/Blueprints/BP_CalendarDriven_PathProvider.2"
+      },
+      "GetAbductionPhase": {
+        "ObjectName": "BP_CalendarDriven_PathProvider_C:GetAbductionPhase:Function",
+        "ObjectPath": "/NPCLibrary/Blueprints/BP_CalendarDriven_PathProvider.3"
+      }
+    },
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Engine",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__BP_CalendarDriven_PathProvider_C:BP_CalendarDriven_PathProvider_C",
+      "ObjectPath": "/NPCLibrary/Blueprints/BP_CalendarDriven_PathProvider.5"
     }
   },
   {
@@ -44,11 +748,12 @@
   {
     "Type": "SceneComponent",
     "Name": "DefaultSceneRoot_GEN_VARIABLE",
-    "Properties": {}
+    "Outer": "BP_CalendarDriven_PathProvider_C"
   },
   {
     "Type": "SCS_Node",
     "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
     "Properties": {
       "ComponentClass": {
         "ObjectName": "SceneComponent:Class",
@@ -65,6 +770,7 @@
   {
     "Type": "SimpleConstructionScript",
     "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_CalendarDriven_PathProvider_C",
     "Properties": {
       "RootNodes": [
         {

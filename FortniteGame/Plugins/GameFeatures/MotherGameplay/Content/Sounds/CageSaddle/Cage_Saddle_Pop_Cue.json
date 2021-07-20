@@ -1,0 +1,58 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "Cage_Saddle_Pop_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "Cage_Saddle_Pop_Cue:SoundNodeModulator_2:SoundNodeModulator",
+        "ObjectPath": "/MotherGameplay/Sounds/CageSaddle/Cage_Saddle_Pop_Cue.1"
+      },
+      "AttenuationOverrides": {
+        "AttenuationShapeExtents": {
+          "X": 500.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 1000.0
+      },
+      "SoundClassObject": {
+        "ObjectName": "Fort_Gadgets:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Gadgets.0"
+      },
+      "bOverrideConcurrency": true,
+      "ConcurrencyOverrides": {
+        "ResolutionRule": "EMaxConcurrentResolutionRule::PreventNew"
+      },
+      "Duration": 2.0177293,
+      "MaxDistance": 2400.0,
+      "AttenuationSettings": {
+        "ObjectName": "Cage_Saddle_Bounce_Att:SoundAttenuation",
+        "ObjectPath": "/MotherGameplay/Sounds/CageSaddle/Cage_Saddle_Bounce_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_2",
+    "Outer": "Cage_Saddle_Pop_Cue",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "Cage_Saddle_Pop_Cue:SoundNodeWavePlayer_0:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/CageSaddle/Cage_Saddle_Pop_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "Cage_Saddle_Pop_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/CageSaddle/Cage_Saddle_Popped_01.Cage_Saddle_Popped_01",
+        "SubPathString": ""
+      }
+    }
+  }
+]

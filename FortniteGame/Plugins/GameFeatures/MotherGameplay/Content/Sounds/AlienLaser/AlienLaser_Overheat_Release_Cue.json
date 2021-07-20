@@ -1,0 +1,47 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "AlienLaser_Overheat_Release_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "AlienLaser_Overheat_Release_Cue:SoundNodeWavePlayer_0:SoundNodeWavePlayer",
+        "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_Overheat_Release_Cue.1"
+      },
+      "VolumeMultiplier": 0.8,
+      "AttenuationOverrides": {
+        "DistanceAlgorithm": "EAttenuationDistanceModel::NaturalSound",
+        "AttenuationShapeExtents": {
+          "X": 1000.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 4000.0
+      },
+      "SoundClassObject": {
+        "ObjectName": "Fort_Weapon_Projectile_PSM:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Weapon_Projectile_PSM.0"
+      },
+      "bOverrideConcurrency": true,
+      "ConcurrencyOverrides": {
+        "ResolutionRule": "EMaxConcurrentResolutionRule::PreventNew"
+      },
+      "Duration": 2.763646,
+      "MaxDistance": 3000.0,
+      "AttenuationSettings": {
+        "ObjectName": "Fort_Weapon_Projectile_Close_Athena_Att:SoundAttenuation",
+        "ObjectPath": "/Game/Sounds/Attenuation/Fort_Weapon_Projectile_Close_Athena_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "AlienLaser_Overheat_Release_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_OverHeatLoad.AlienLaser_OverHeatLoad",
+        "SubPathString": ""
+      }
+    }
+  }
+]

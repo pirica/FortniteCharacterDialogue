@@ -1,0 +1,99 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "AvacadoEater_Hatch_Armed_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "AvacadoEater_Hatch_Armed_Cue:SoundNodeQualityLevel_0:SoundNodeQualityLevel",
+        "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_Hatch_Armed_Cue.4"
+      },
+      "VolumeMultiplier": 1.0,
+      "SoundClassObject": {
+        "ObjectName": "Fort_ImpactSounds:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_ImpactSounds.0"
+      },
+      "bDebug": true,
+      "bOverrideConcurrency": true,
+      "ConcurrencyOverrides": {
+        "MaxCount": 2
+      },
+      "Duration": 4.5,
+      "MaxDistance": 3072.0,
+      "AttenuationSettings": {
+        "ObjectName": "AvacadoEater_Att:SoundAttenuation",
+        "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Attenuations/AvacadoEater_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "AvacadoEater_Hatch_Armed_Cue",
+    "Properties": {
+      "PitchMin": 0.92,
+      "PitchMax": 1.07,
+      "ChildNodes": [
+        null
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_12",
+    "Outer": "AvacadoEater_Hatch_Armed_Cue",
+    "Properties": {
+      "PitchMin": 0.98,
+      "ChildNodes": [
+        {
+          "ObjectName": "AvacadoEater_Hatch_Armed_Cue:SoundNodeWavePlayer_3:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_Hatch_Armed_Cue.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_2",
+    "Outer": "AvacadoEater_Hatch_Armed_Cue",
+    "Properties": {
+      "PitchMin": 0.92,
+      "PitchMax": 1.07,
+      "ChildNodes": [
+        null
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeQualityLevel",
+    "Name": "SoundNodeQualityLevel_0",
+    "Outer": "AvacadoEater_Hatch_Armed_Cue",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "AvacadoEater_Hatch_Armed_Cue:SoundNodeModulator_12:SoundNodeModulator",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_Hatch_Armed_Cue.2"
+        },
+        null,
+        {
+          "ObjectName": "AvacadoEater_Hatch_Armed_Cue:SoundNodeModulator_0:SoundNodeModulator",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_Hatch_Armed_Cue.1"
+        },
+        {
+          "ObjectName": "AvacadoEater_Hatch_Armed_Cue:SoundNodeModulator_2:SoundNodeModulator",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_Hatch_Armed_Cue.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "AvacadoEater_Hatch_Armed_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_Hatch_Armed.AvacadoEater_Hatch_Armed",
+        "SubPathString": ""
+      }
+    }
+  }
+]

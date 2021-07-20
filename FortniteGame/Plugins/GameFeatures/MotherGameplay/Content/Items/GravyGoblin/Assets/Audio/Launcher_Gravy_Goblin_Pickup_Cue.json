@@ -1,0 +1,57 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "Launcher_Gravy_Goblin_Pickup_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "Launcher_Gravy_Goblin_Pickup_Cue:SoundNodeModulator_0:SoundNodeModulator",
+        "ObjectPath": "/MotherGameplay/Items/GravyGoblin/Assets/Audio/Launcher_Gravy_Goblin_Pickup_Cue.1"
+      },
+      "VolumeMultiplier": 1.2,
+      "SoundClassObject": {
+        "ObjectName": "Fort_Player_Loot_High_PSM:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Player_Loot_High_PSM.0"
+      },
+      "ConcurrencySet": [
+        {
+          "ObjectName": "PickupMaximum_Oldest:SoundConcurrency",
+          "ObjectPath": "/Game/Sounds/Concurrency_Rules/PickupMaximum_Oldest.0"
+        }
+      ],
+      "ConcurrencyOverrides": {
+        "MaxCount": 1,
+        "ResolutionRule": "EMaxConcurrentResolutionRule::PreventNew"
+      },
+      "Duration": 1.201875,
+      "MaxDistance": 1512.0,
+      "AttenuationSettings": {
+        "ObjectName": "Fort_Weapon_Pickup_Att:SoundAttenuation",
+        "ObjectPath": "/Game/Sounds/Attenuation/Fort_Weapon_Pickup_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "Launcher_Gravy_Goblin_Pickup_Cue",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "Launcher_Gravy_Goblin_Pickup_Cue:SoundNodeWavePlayer_2:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Items/GravyGoblin/Assets/Audio/Launcher_Gravy_Goblin_Pickup_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "Launcher_Gravy_Goblin_Pickup_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Items/GravyGoblin/Assets/Audio/Launcher_Gravy_Goblin_Pickup_01.Launcher_Gravy_Goblin_Pickup_01",
+        "SubPathString": ""
+      }
+    }
+  }
+]

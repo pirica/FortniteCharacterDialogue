@@ -2,31 +2,436 @@
   {
     "Type": "Function",
     "Name": "ExecuteUbergraph_GA_Quest_Repeatable_Vehicle_Speed80",
-    "Properties": {}
+    "Outer": "GA_Quest_Repeatable_Vehicle_Speed80_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_GetVehicleUInterface_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 1125899906842624,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "InterfaceClass": {
+          "ObjectName": "FortVehicleInterface:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsFort_Athena_Vehicle",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortAthenaVehicle:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_SendComplexCustomStatEvent_QuestActive",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_SendComplexCustomStatEvent_QuestCompleted",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetForwardSpeedKmh_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetVehicleAbilitySystemComponent_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "AbilitySystemComponent:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_K2_IsValidTimerHandle_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_GreaterEqual_FloatFloat_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_DoesTagAssetInterfaceHaveTag_TagContainerInterface_CastInput",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 1125899906842624,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "InterfaceClass": {
+          "ObjectName": "GameplayTagAssetInterface:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_DoesTagAssetInterfaceHaveTag_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_EventData",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 184,
+        "PropertyFlags": 2,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayEventData:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "GameplayTagsK2Node_SwitchGameplayTag_CmpSuccess",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 20,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "SignatureFunction": {
+          "ObjectName": "TimerDynamicDelegate__DelegateSignature:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "TimerHandle:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 8421377,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "Function",
     "Name": "Check Speed",
-    "Properties": {}
+    "Outer": "GA_Quest_Repeatable_Vehicle_Speed80_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 201326592,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "Function",
     "Name": "K2_ActivateAbilityFromEvent",
-    "Properties": {}
+    "Outer": "GA_Quest_Repeatable_Vehicle_Speed80_C",
+    "Super": "K2_ActivateAbilityFromEvent",
+    "SuperStruct": {
+      "ObjectName": "GA_Quest_TriggeredAbility_C:K2_ActivateAbilityFromEvent:Function",
+      "ObjectPath": "/Game/Athena/Items/Quests/QuestAbilities/Parents/GA_Quest_TriggeredAbility.1"
+    },
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "EventData",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 184,
+        "PropertyFlags": 134218134,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayEventData:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 138938368,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "BlueprintGeneratedClass",
     "Name": "GA_Quest_Repeatable_Vehicle_Speed80_C",
+    "Super": "GA_Quest_TriggeredAbility_C",
     "Properties": {
       "UberGraphFunction": {
         "ObjectName": "GA_Quest_Repeatable_Vehicle_Speed80_C:ExecuteUbergraph_GA_Quest_Repeatable_Vehicle_Speed80:Function",
         "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_Vehicle_Speed/GA_Quest_Repeatable_Vehicle_Speed80.0"
       }
+    },
+    "SuperStruct": {
+      "ObjectName": "GA_Quest_TriggeredAbility_C:BlueprintGeneratedClass",
+      "ObjectPath": "/Game/Athena/Items/Quests/QuestAbilities/Parents/GA_Quest_TriggeredAbility.2"
+    },
+    "Children": [
+      {
+        "ObjectName": "GA_Quest_Repeatable_Vehicle_Speed80_C:K2_ActivateAbilityFromEvent:Function",
+        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_Vehicle_Speed/GA_Quest_Repeatable_Vehicle_Speed80.2"
+      },
+      {
+        "ObjectName": "GA_Quest_Repeatable_Vehicle_Speed80_C:Check Speed:Function",
+        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_Vehicle_Speed/GA_Quest_Repeatable_Vehicle_Speed80.1"
+      },
+      {
+        "ObjectName": "GA_Quest_Repeatable_Vehicle_Speed80_C:ExecuteUbergraph_GA_Quest_Repeatable_Vehicle_Speed80:Function",
+        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_Vehicle_Speed/GA_Quest_Repeatable_Vehicle_Speed80.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 2105344,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "PointerToUberGraphFrame:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Timer Handle",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "TimerHandle:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Required Speed",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "T_Car",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayTag:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "T_Quest",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 32,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayTagContainer:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_GA_Quest_Repeatable_Vehicle_Speed80": {
+        "ObjectName": "GA_Quest_Repeatable_Vehicle_Speed80_C:ExecuteUbergraph_GA_Quest_Repeatable_Vehicle_Speed80:Function",
+        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_Vehicle_Speed/GA_Quest_Repeatable_Vehicle_Speed80.0"
+      },
+      "Check Speed": {
+        "ObjectName": "GA_Quest_Repeatable_Vehicle_Speed80_C:Check Speed:Function",
+        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_Vehicle_Speed/GA_Quest_Repeatable_Vehicle_Speed80.1"
+      },
+      "K2_ActivateAbilityFromEvent": {
+        "ObjectName": "GA_Quest_Repeatable_Vehicle_Speed80_C:K2_ActivateAbilityFromEvent:Function",
+        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_Vehicle_Speed/GA_Quest_Repeatable_Vehicle_Speed80.2"
+      }
+    },
+    "ClassFlags": 264208,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Engine",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__GA_Quest_Repeatable_Vehicle_Speed80_C:GA_Quest_Repeatable_Vehicle_Speed80_C",
+      "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_Vehicle_Speed/GA_Quest_Repeatable_Vehicle_Speed80.4"
     }
   },
   {
     "Type": "GA_Quest_Repeatable_Vehicle_Speed80_C",
     "Name": "Default__GA_Quest_Repeatable_Vehicle_Speed80_C",
+    "Template": "Default__GA_Quest_TriggeredAbility_C",
     "Properties": {
       "UberGraphFrame": {},
       "Timer Handle": {

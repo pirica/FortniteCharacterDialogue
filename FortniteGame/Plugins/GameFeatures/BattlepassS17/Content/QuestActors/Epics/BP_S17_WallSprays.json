@@ -2,6 +2,7 @@
   {
     "Type": "BlueprintGeneratedClass",
     "Name": "BP_S17_WallSprays_C",
+    "Super": "BP_Athena_PropQuestActor_Parent_C",
     "Properties": {
       "bHasCookedComponentInstancingData": true,
       "SimpleConstructionScript": {
@@ -12,11 +13,32 @@
         "ObjectName": "BP_S17_WallSprays_C:InheritableComponentHandler:InheritableComponentHandler",
         "ObjectPath": "/BattlepassS17/QuestActors/Epics/BP_S17_WallSprays.3"
       }
+    },
+    "SuperStruct": {
+      "ObjectName": "BP_Athena_PropQuestActor_Parent_C:BlueprintGeneratedClass",
+      "ObjectPath": "/Game/Athena/Items/QuestParents/PropQuestActor/BP_Athena_PropQuestActor_Parent.49"
+    },
+    "Children": [],
+    "ChildProperties": [],
+    "FuncMap": {},
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Game",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__BP_S17_WallSprays_C:BP_S17_WallSprays_C",
+      "ObjectPath": "/BattlepassS17/QuestActors/Epics/BP_S17_WallSprays.1"
     }
   },
   {
     "Type": "BP_S17_WallSprays_C",
     "Name": "Default__BP_S17_WallSprays_C",
+    "Template": "Default__BP_Athena_PropQuestActor_Parent_C",
     "Properties": {
       "Interaction Verb": {
         "Namespace": "",
@@ -51,6 +73,9 @@
   },
   {
     "Type": "ConsolidatedQuestComponent",
+    "Name": "ConsolidatedQuestComponent",
+    "Outer": "Default__BP_S17_WallSprays_C",
+    "Template": "ConsolidatedQuestComponent",
     "Properties": {
       "AttachParent": {
         "ObjectName": "Default__BP_S17_WallSprays_C:SceneRoot:SceneComponent",
@@ -60,6 +85,8 @@
   },
   {
     "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "BP_S17_WallSprays_C",
     "Properties": {
       "Records": [
         {
@@ -208,6 +235,8 @@
   {
     "Type": "NiagaraComponent",
     "Name": "N_Ambient_GEN_VARIABLE",
+    "Outer": "BP_S17_WallSprays_C",
+    "Template": "N_Ambient_GEN_VARIABLE",
     "Properties": {
       "OverrideParameters": {}
     }
@@ -215,6 +244,8 @@
   {
     "Type": "NiagaraComponent",
     "Name": "N_Cosmetic_GEN_VARIABLE",
+    "Outer": "BP_S17_WallSprays_C",
+    "Template": "N_Cosmetic_GEN_VARIABLE",
     "Properties": {
       "OverrideParameters": {}
     }
@@ -222,6 +253,8 @@
   {
     "Type": "NiagaraComponent",
     "Name": "N_PostInteractionAmbient_GEN_VARIABLE",
+    "Outer": "BP_S17_WallSprays_C",
+    "Template": "N_PostInteractionAmbient_GEN_VARIABLE",
     "Properties": {
       "OverrideParameters": {}
     }
@@ -229,6 +262,8 @@
   {
     "Type": "NiagaraComponent",
     "Name": "N_UnHide_GEN_VARIABLE",
+    "Outer": "BP_S17_WallSprays_C",
+    "Template": "N_UnHide_GEN_VARIABLE",
     "Properties": {
       "OverrideParameters": {}
     }
@@ -236,16 +271,18 @@
   {
     "Type": "SceneComponent",
     "Name": "DefaultSceneRoot_GEN_VARIABLE",
-    "Properties": {}
+    "Outer": "BP_S17_WallSprays_C"
   },
   {
     "Type": "SceneComponent",
     "Name": "SceneRoot",
-    "Properties": {}
+    "Outer": "Default__BP_S17_WallSprays_C",
+    "Template": "SceneRoot"
   },
   {
     "Type": "SCS_Node",
     "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
     "Properties": {
       "ComponentClass": {
         "ObjectName": "SceneComponent:Class",
@@ -262,6 +299,7 @@
   {
     "Type": "SimpleConstructionScript",
     "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_S17_WallSprays_C",
     "Properties": {
       "DefaultSceneRootNode": {
         "ObjectName": "SimpleConstructionScript_0:SCS_Node_0:SCS_Node",

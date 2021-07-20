@@ -1,0 +1,248 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GCNL_Athena_Alpaca_Loop_C",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "GCNL_Athena_Alpaca_Loop_C:SimpleConstructionScript_0:SimpleConstructionScript",
+        "ObjectPath": "/MotherGameplay/GameplayCues/GCNL_Athena_Alpaca_Loop.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "FortGameplayCueNotify_Loop:Class",
+      "ObjectPath": 0
+    },
+    "Children": [],
+    "ChildProperties": [],
+    "FuncMap": {},
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Engine",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__GCNL_Athena_Alpaca_Loop_C:GCNL_Athena_Alpaca_Loop_C",
+      "ObjectPath": "/MotherGameplay/GameplayCues/GCNL_Athena_Alpaca_Loop.1"
+    }
+  },
+  {
+    "Type": "GCNL_Athena_Alpaca_Loop_C",
+    "Name": "Default__GCNL_Athena_Alpaca_Loop_C",
+    "Properties": {
+      "ApplicationBurst": {
+        "BurstSounds": [
+          {
+            "Condition": {
+              "SourceCondition": "EFortGameplayCueSourceCondition::AnySource",
+              "AllowedSurfaces": [],
+              "DisallowedSurfaces": [],
+              "ChanceToPlay": 1.0,
+              "Significance": "EParticleSignificanceLevel::High",
+              "RequiredDetailMode": 0,
+              "bRequireVisible": false
+            },
+            "Attachment": {
+              "SocketName": "root",
+              "AttachType": "EFortGameplayCueAttachType::AttachToTarget",
+              "bAttachToWeapon": false,
+              "bAttachToHitResult": false,
+              "bUseUnsmoothedNetworkPosition": false,
+              "bIgnoreScale": true,
+              "bIgnoreRotation": false,
+              "OverrideScale": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              },
+              "OverrideRotation": {
+                "Pitch": 0.0,
+                "Yaw": 0.0,
+                "Roll": 0.0
+              }
+            },
+            "SoundCue": {
+              "ObjectName": "LowGravityStone_Activate_Cue:SoundCue",
+              "ObjectPath": "/Game/Sounds/Fort_GamePlay_Sounds/Player/LowGravityStones/LowGravityStone_Activate_Cue.0"
+            },
+            "DelayBeforePlayInSeconds": 0.0,
+            "bOverrideCondition": false,
+            "bOverrideAttachment": true
+          }
+        ]
+      },
+      "LoopingParticles": [
+        {
+          "Condition": {
+            "SourceCondition": "EFortGameplayCueSourceCondition::AnySource",
+            "AllowedSurfaces": [],
+            "DisallowedSurfaces": [],
+            "ChanceToPlay": 1.0,
+            "Significance": "EParticleSignificanceLevel::High",
+            "RequiredDetailMode": 0,
+            "bRequireVisible": false
+          },
+          "Attachment": {
+            "SocketName": "root",
+            "AttachType": "EFortGameplayCueAttachType::AttachToTarget",
+            "bAttachToWeapon": false,
+            "bAttachToHitResult": false,
+            "bUseUnsmoothedNetworkPosition": false,
+            "bIgnoreScale": true,
+            "bIgnoreRotation": false,
+            "OverrideScale": {
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 1.0
+            },
+            "OverrideRotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            }
+          },
+          "FXType": "EFXType::GenericAnimNotify",
+          "NiagaraSystem": null,
+          "ParticleSystem": {
+            "ObjectName": "P_Athena_LowGravity_Loop:ParticleSystem",
+            "ObjectPath": "/Game/Athena/Items/ForagedItems/LowGravity/FX/P_Athena_LowGravity_Loop.149"
+          },
+          "bCastShadow": false,
+          "bOverrideCondition": false,
+          "bOverrideAttachment": true
+        }
+      ],
+      "RemovalBurst": {
+        "BurstParticles": [
+          {
+            "Condition": {
+              "SourceCondition": "EFortGameplayCueSourceCondition::AnySource",
+              "AllowedSurfaces": [],
+              "DisallowedSurfaces": [],
+              "ChanceToPlay": 1.0,
+              "Significance": "EParticleSignificanceLevel::High",
+              "RequiredDetailMode": 0,
+              "bRequireVisible": false
+            },
+            "Attachment": {
+              "SocketName": "root",
+              "AttachType": "EFortGameplayCueAttachType::AttachToTarget",
+              "bAttachToWeapon": false,
+              "bAttachToHitResult": false,
+              "bUseUnsmoothedNetworkPosition": false,
+              "bIgnoreScale": true,
+              "bIgnoreRotation": false,
+              "OverrideScale": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              },
+              "OverrideRotation": {
+                "Pitch": 0.0,
+                "Yaw": 0.0,
+                "Roll": 0.0
+              }
+            },
+            "FXType": "EFXType::GenericAnimNotify",
+            "NiagaraSystem": null,
+            "ParticleSystem": {
+              "ObjectName": "P_Athena_LowGravity_End:ParticleSystem",
+              "ObjectPath": "/Game/Athena/Items/ForagedItems/LowGravity/FX/P_Athena_LowGravity_End.51"
+            },
+            "bCastShadow": false,
+            "bOverrideCondition": false,
+            "bOverrideAttachment": true
+          }
+        ],
+        "BurstSounds": [
+          {
+            "Condition": {
+              "SourceCondition": "EFortGameplayCueSourceCondition::AnySource",
+              "AllowedSurfaces": [],
+              "DisallowedSurfaces": [],
+              "ChanceToPlay": 1.0,
+              "Significance": "EParticleSignificanceLevel::High",
+              "RequiredDetailMode": 0,
+              "bRequireVisible": false
+            },
+            "Attachment": {
+              "SocketName": "root",
+              "AttachType": "EFortGameplayCueAttachType::AttachToTarget",
+              "bAttachToWeapon": false,
+              "bAttachToHitResult": false,
+              "bUseUnsmoothedNetworkPosition": false,
+              "bIgnoreScale": true,
+              "bIgnoreRotation": false,
+              "OverrideScale": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              },
+              "OverrideRotation": {
+                "Pitch": 0.0,
+                "Yaw": 0.0,
+                "Roll": 0.0
+              }
+            },
+            "SoundCue": {
+              "ObjectName": "LowGravityStone_Deactivate_Cue:SoundCue",
+              "ObjectPath": "/Game/Sounds/Fort_GamePlay_Sounds/Player/LowGravityStones/LowGravityStone_Deactivate_Cue.0"
+            },
+            "DelayBeforePlayInSeconds": 0.0,
+            "bOverrideCondition": false,
+            "bOverrideAttachment": true
+          }
+        ]
+      },
+      "GameplayCueTag": {
+        "TagName": "GameplayCue.Athena.Alpaca.Loop"
+      },
+      "GameplayCueName": "GameplayCue.Athena.Alpaca.Loop",
+      "RootComponent": {
+        "ObjectName": "Default__GCNL_Athena_Alpaca_Loop_C:RootComponent:SceneComponent",
+        "ObjectPath": "/MotherGameplay/GameplayCues/GCNL_Athena_Alpaca_Loop.2"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "RootComponent",
+    "Outer": "Default__GCNL_Athena_Alpaca_Loop_C"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "GCNL_Athena_Alpaca_Loop_C"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "SceneComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": {
+        "ObjectName": "GCNL_Athena_Alpaca_Loop_C:DefaultSceneRoot_GEN_VARIABLE:SceneComponent",
+        "ObjectPath": "/MotherGameplay/GameplayCues/GCNL_Athena_Alpaca_Loop.3"
+      },
+      "VariableGuid": "E29DCDA6-40BB8EDF-659915AC-1F9DF38B",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "GCNL_Athena_Alpaca_Loop_C",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SimpleConstructionScript_0:SCS_Node_0:SCS_Node",
+        "ObjectPath": "/MotherGameplay/GameplayCues/GCNL_Athena_Alpaca_Loop.4"
+      }
+    }
+  }
+]

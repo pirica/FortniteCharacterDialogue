@@ -2,6 +2,7 @@
   {
     "Type": "BlueprintGeneratedClass",
     "Name": "BP_S17_Spraycan_C",
+    "Super": "BP_S17_GenericQuestActor_Parent_C",
     "Properties": {
       "bHasCookedComponentInstancingData": true,
       "SimpleConstructionScript": {
@@ -12,11 +13,32 @@
         "ObjectName": "BP_S17_Spraycan_C:InheritableComponentHandler:InheritableComponentHandler",
         "ObjectPath": "/BattlepassS17/QuestActors/Epics/BP_S17_Spraycan.3"
       }
+    },
+    "SuperStruct": {
+      "ObjectName": "BP_S17_GenericQuestActor_Parent_C:BlueprintGeneratedClass",
+      "ObjectPath": "/BattlepassS17/QuestActors/BP_S17_GenericQuestActor_Parent.0"
+    },
+    "Children": [],
+    "ChildProperties": [],
+    "FuncMap": {},
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Game",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__BP_S17_Spraycan_C:BP_S17_Spraycan_C",
+      "ObjectPath": "/BattlepassS17/QuestActors/Epics/BP_S17_Spraycan.1"
     }
   },
   {
     "Type": "BP_S17_Spraycan_C",
     "Name": "Default__BP_S17_Spraycan_C",
+    "Template": "Default__BP_S17_GenericQuestActor_Parent_C",
     "Properties": {
       "Interaction Verb": {
         "Namespace": "",
@@ -64,6 +86,9 @@
   },
   {
     "Type": "ConsolidatedQuestComponent",
+    "Name": "ConsolidatedQuestComponent",
+    "Outer": "Default__BP_S17_Spraycan_C",
+    "Template": "ConsolidatedQuestComponent",
     "Properties": {
       "QuestItemDefinition": {
         "ObjectName": "Quest_S17_W02_Epic_Q03:FortQuestItemDefinition",
@@ -78,6 +103,8 @@
   },
   {
     "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "BP_S17_Spraycan_C",
     "Properties": {
       "Records": [
         {
@@ -226,6 +253,8 @@
   {
     "Type": "NiagaraComponent",
     "Name": "N_Ambient_GEN_VARIABLE",
+    "Outer": "BP_S17_Spraycan_C",
+    "Template": "N_Ambient_GEN_VARIABLE",
     "Properties": {
       "OverrideParameters": {}
     }
@@ -233,6 +262,8 @@
   {
     "Type": "NiagaraComponent",
     "Name": "N_Cosmetic_GEN_VARIABLE",
+    "Outer": "BP_S17_Spraycan_C",
+    "Template": "N_Cosmetic_GEN_VARIABLE",
     "Properties": {
       "OverrideParameters": {}
     }
@@ -240,6 +271,8 @@
   {
     "Type": "NiagaraComponent",
     "Name": "N_PostInteractionAmbient_GEN_VARIABLE",
+    "Outer": "BP_S17_Spraycan_C",
+    "Template": "N_PostInteractionAmbient_GEN_VARIABLE",
     "Properties": {
       "OverrideParameters": {}
     }
@@ -247,6 +280,8 @@
   {
     "Type": "NiagaraComponent",
     "Name": "N_UnHide_GEN_VARIABLE",
+    "Outer": "BP_S17_Spraycan_C",
+    "Template": "N_UnHide_GEN_VARIABLE",
     "Properties": {
       "OverrideParameters": {}
     }
@@ -254,16 +289,18 @@
   {
     "Type": "SceneComponent",
     "Name": "DefaultSceneRoot_GEN_VARIABLE",
-    "Properties": {}
+    "Outer": "BP_S17_Spraycan_C"
   },
   {
     "Type": "SceneComponent",
     "Name": "SceneRoot",
-    "Properties": {}
+    "Outer": "Default__BP_S17_Spraycan_C",
+    "Template": "SceneRoot"
   },
   {
     "Type": "SCS_Node",
     "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
     "Properties": {
       "ComponentClass": {
         "ObjectName": "SceneComponent:Class",
@@ -280,6 +317,7 @@
   {
     "Type": "SimpleConstructionScript",
     "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_S17_Spraycan_C",
     "Properties": {
       "DefaultSceneRootNode": {
         "ObjectName": "SimpleConstructionScript_0:SCS_Node_0:SCS_Node",

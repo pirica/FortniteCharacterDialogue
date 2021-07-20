@@ -2034,16 +2034,13 @@
     "Template": "BP_SurfaceTypeSoundComponent_GEN_VARIABLE",
     "Properties": {
       "SoundMap": {
-        "204": null,
-        "97": {
-          "ObjectName": "ExecuteUbergraph_Prj_Athena_Scooter:/Game/Athena/AthenaFunctionLibrary:ExecuteUbergraph_Prj_Athena_Scooter",
-          "ObjectPath": "/MotherGameplay/Items/Scooter/Prj_Athena_Scooter.456"
-        },
+        "205": null,
+        "97": null,
         "0": {
           "ObjectName": "ScooterRecon_Projectile_Bounce_Cue:SoundCue",
           "ObjectPath": "/MotherGameplay/Sounds/ScooterRecon/ScooterRecon_Projectile_Bounce_Cue.0"
         },
-        "202": null
+        "203": null
       }
     }
   },
@@ -2577,22 +2574,6 @@
                 }
               },
               {
-                "PropertyName": "IndicatorGroupIdentifierOverride",
-                "ArrayIndex": 0,
-                "PropertyScope": {
-                  "ObjectName": "PulseIndicatorComponent:Class",
-                  "ObjectPath": 0
-                }
-              },
-              {
-                "PropertyName": "StencilGroupIdentifierOverride",
-                "ArrayIndex": 0,
-                "PropertyScope": {
-                  "ObjectName": "PulseIndicatorComponent:Class",
-                  "ObjectPath": 0
-                }
-              },
-              {
                 "PropertyName": "PlayerPingSound",
                 "ArrayIndex": 0,
                 "PropertyScope": {
@@ -2799,12 +2780,7 @@
   {
     "Type": "NiagaraDataInterfaceSkeletalMesh",
     "Name": "NiagaraDataInterfaceSkeletalMesh_0",
-    "Outer": "NS_Scooter_ProjLaunch_GEN_VARIABLE",
-    "Properties": {
-      "MeshUserParameter": {
-        "Parameter": {}
-      }
-    }
+    "Outer": "NS_Scooter_ProjLaunch_GEN_VARIABLE"
   },
   {
     "Type": "ParticleSystemComponent",
@@ -2875,7 +2851,7 @@
             "EFortTeamAffiliation::Hostile"
           ],
           "IndicatedData": {
-            "GroupIdentifier": "",
+            "GroupIdentifier": "players",
             "Duration": -1.0,
             "StepTime": 0.0,
             "IndicatorOffset": {
@@ -2958,7 +2934,9 @@
           "OverlapRadius": 1500.0
         },
         {
-          "IndicatedActorTags": [],
+          "IndicatedActorTags": [
+            "Building.Type.Container.TreasureChest"
+          ],
           "IndicatedActorTagQuery": {
             "TokenStreamVersion": 0,
             "TagDictionary": [],
@@ -2968,7 +2946,8 @@
           },
           "ObjectTypes": [
             "ObjectTypeQuery1",
-            "ObjectTypeQuery2"
+            "ObjectTypeQuery2",
+            "ObjectTypeQuery4"
           ],
           "ActorClassFilter": {
             "ObjectName": "BuildingContainer:Class",
@@ -2976,7 +2955,7 @@
           },
           "WithAffiliation": [],
           "IndicatedData": {
-            "GroupIdentifier": "",
+            "GroupIdentifier": "chests",
             "Duration": -1.0,
             "StepTime": 0.0,
             "IndicatorOffset": {
@@ -2990,7 +2969,7 @@
               "Z": 30.0
             },
             "ShareActorWith": "EShareActorWith::None",
-            "ShareActorWithMask": 5,
+            "ShareActorWithMask": 1,
             "DisplayTeamOverride": 255,
             "bClampToScreen": true,
             "ScaleAndOpacityData": {
@@ -3029,11 +3008,11 @@
             }
           },
           "StenciledData": {
-            "GroupIdentifier": "",
+            "GroupIdentifier": "chests",
             "Duration": -1.0,
             "StepTime": 0.0,
             "ShareActorWith": "EShareActorWith::None",
-            "ShareActorWithMask": 5,
+            "ShareActorWithMask": 1,
             "DisplayTeamOverride": 255,
             "ParticleSystemData": {
               "ParticleSystem": null,
@@ -3041,12 +3020,116 @@
               "ParticleSystemOffset": {
                 "X": 0.0,
                 "Y": 0.0,
-                "Z": 90.0
+                "Z": 0.0
               },
               "ParticleSystemDBNOOffset": {
                 "X": 0.0,
                 "Y": 0.0,
-                "Z": 30.0
+                "Z": 0.0
+              },
+              "ParticleSystemVectorParamName": null
+            },
+            "Sound": null,
+            "FriendlyStencilName": "YellowOverlayID",
+            "EnemyStencilName": "YellowOverlayID",
+            "FriendlyStencilIndex": 0,
+            "EnemyStencilIndex": 0
+          },
+          "OverlapRadius": 1500.0
+        },
+        {
+          "IndicatedActorTags": [
+            "Building.Type.GameplayItem"
+          ],
+          "IndicatedActorTagQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [],
+            "QueryTokenStream": [],
+            "UserDescription": "",
+            "AutoDescription": ""
+          },
+          "ObjectTypes": [
+            "ObjectTypeQuery1",
+            "ObjectTypeQuery2",
+            "ObjectTypeQuery4"
+          ],
+          "ActorClassFilter": {
+            "ObjectName": "BuildingContainer:Class",
+            "ObjectPath": 0
+          },
+          "WithAffiliation": [],
+          "IndicatedData": {
+            "GroupIdentifier": "chests",
+            "Duration": -1.0,
+            "StepTime": 0.0,
+            "IndicatorOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 90.0
+            },
+            "IndicatorDBNOOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 30.0
+            },
+            "ShareActorWith": "EShareActorWith::None",
+            "ShareActorWithMask": 1,
+            "DisplayTeamOverride": 255,
+            "bClampToScreen": true,
+            "ScaleAndOpacityData": {
+              "SmallSizeDistance": 7500.0,
+              "LargestSizeDistance": 10.0,
+              "SmallScale": 0.5,
+              "LargestScale": 0.8,
+              "FarAwayScale": 0.35,
+              "FarAwayOpacity": 1.0,
+              "MaxScaleAndFadePercent": 0.1
+            },
+            "ParticleSystemData": {
+              "ParticleSystem": null,
+              "ParticleSystemActorParamName": null,
+              "ParticleSystemOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemDBNOOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemVectorParamName": null
+            },
+            "Sound": null,
+            "StateImageOverride": "EIndicatorStateImage::LAST_MATE_STATE",
+            "OnActorAdded": {
+              "Num": 0,
+              "Name": "None"
+            },
+            "OnActorRemoved": {
+              "Num": 0,
+              "Name": "None"
+            }
+          },
+          "StenciledData": {
+            "GroupIdentifier": "chests",
+            "Duration": -1.0,
+            "StepTime": 0.0,
+            "ShareActorWith": "EShareActorWith::None",
+            "ShareActorWithMask": 1,
+            "DisplayTeamOverride": 255,
+            "ParticleSystemData": {
+              "ParticleSystem": null,
+              "ParticleSystemActorParamName": null,
+              "ParticleSystemOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemDBNOOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
               },
               "ParticleSystemVectorParamName": null
             },
@@ -3074,7 +3157,110 @@
           },
           "WithAffiliation": [],
           "IndicatedData": {
-            "GroupIdentifier": "",
+            "GroupIdentifier": "AI",
+            "Duration": -1.0,
+            "StepTime": 0.0,
+            "IndicatorOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 90.0
+            },
+            "IndicatorDBNOOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 30.0
+            },
+            "ShareActorWith": "EShareActorWith::None",
+            "ShareActorWithMask": 1,
+            "DisplayTeamOverride": 255,
+            "bClampToScreen": true,
+            "ScaleAndOpacityData": {
+              "SmallSizeDistance": 7500.0,
+              "LargestSizeDistance": 10.0,
+              "SmallScale": 0.5,
+              "LargestScale": 0.8,
+              "FarAwayScale": 0.35,
+              "FarAwayOpacity": 1.0,
+              "MaxScaleAndFadePercent": 0.1
+            },
+            "ParticleSystemData": {
+              "ParticleSystem": null,
+              "ParticleSystemActorParamName": null,
+              "ParticleSystemOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemDBNOOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemVectorParamName": null
+            },
+            "Sound": null,
+            "StateImageOverride": "EIndicatorStateImage::FriendlyNPC",
+            "OnActorAdded": {
+              "Num": 0,
+              "Name": "None"
+            },
+            "OnActorRemoved": {
+              "Num": 0,
+              "Name": "None"
+            }
+          },
+          "StenciledData": {
+            "GroupIdentifier": "AI",
+            "Duration": -1.0,
+            "StepTime": 0.0,
+            "ShareActorWith": "EShareActorWith::None",
+            "ShareActorWithMask": 1,
+            "DisplayTeamOverride": 255,
+            "ParticleSystemData": {
+              "ParticleSystem": null,
+              "ParticleSystemActorParamName": null,
+              "ParticleSystemOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemDBNOOffset": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "ParticleSystemVectorParamName": null
+            },
+            "Sound": null,
+            "FriendlyStencilName": "YellowOverlayID",
+            "EnemyStencilName": "RedOverlayID",
+            "FriendlyStencilIndex": 0,
+            "EnemyStencilIndex": 0
+          },
+          "OverlapRadius": 1500.0
+        },
+        {
+          "IndicatedActorTags": [
+            "EnvItem.AvacadoEater"
+          ],
+          "IndicatedActorTagQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [],
+            "QueryTokenStream": [],
+            "UserDescription": "",
+            "AutoDescription": ""
+          },
+          "ObjectTypes": [
+            "ObjectTypeQuery3",
+            "ObjectTypeQuery1"
+          ],
+          "ActorClassFilter": {
+            "ObjectName": "BuildingGameplayActor:Class",
+            "ObjectPath": 0
+          },
+          "WithAffiliation": [],
+          "IndicatedData": {
+            "GroupIdentifier": "AI",
             "Duration": -1.0,
             "StepTime": 0.0,
             "IndicatorOffset": {
@@ -3116,7 +3302,7 @@
               "ParticleSystemVectorParamName": null
             },
             "Sound": null,
-            "StateImageOverride": "EIndicatorStateImage::FriendlyNPC",
+            "StateImageOverride": "EIndicatorStateImage::FIRST_MATE_STATE",
             "OnActorAdded": {
               "Num": 0,
               "Name": "None"
@@ -3127,7 +3313,7 @@
             }
           },
           "StenciledData": {
-            "GroupIdentifier": "",
+            "GroupIdentifier": "AI",
             "Duration": -1.0,
             "StepTime": 0.0,
             "ShareActorWith": "EShareActorWith::None",
@@ -3149,8 +3335,8 @@
               "ParticleSystemVectorParamName": null
             },
             "Sound": null,
-            "FriendlyStencilName": "YellowOverlayID",
-            "EnemyStencilName": null,
+            "FriendlyStencilName": "RedOverlayID",
+            "EnemyStencilName": "RedOverlayID",
             "FriendlyStencilIndex": 0,
             "EnemyStencilIndex": 0
           },
@@ -3257,6 +3443,8 @@
           "OverlapRadius": 1500.0
         }
       ],
+      "IndicatorGroupIdentifierOverride": "",
+      "StencilGroupIdentifierOverride": "",
       "MarkRadius": {
         "Value": 1.0,
         "Curve": {

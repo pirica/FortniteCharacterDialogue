@@ -5,7 +5,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "AGV_Actor_Goop_C:SimpleConstructionScript_0:SimpleConstructionScript",
-        "ObjectPath": "/MotherGameplay/Items/Goop/Audio/AGV_Actor_Goop.8"
+        "ObjectPath": "/MotherGameplay/Items/Goop/Audio/AGV_Actor_Goop.12"
       }
     },
     "SuperStruct": {
@@ -14,6 +14,36 @@
     },
     "Children": [],
     "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "FilterVolume",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FilterVolumeComponent:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "AttenuationVolume",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "AttenuationVolumeComponent:Class",
+          "ObjectPath": 0
+        }
+      },
       {
         "Type": "ObjectProperty",
         "Name": "SubmixSendVolume",
@@ -85,6 +115,15 @@
     "Outer": "AudioGameplayVolume_GEN_VARIABLE"
   },
   {
+    "Type": "AttenuationVolumeComponent",
+    "Name": "AttenuationVolume_GEN_VARIABLE",
+    "Outer": "AGV_Actor_Goop_C",
+    "Properties": {
+      "ExteriorTime": 1.0,
+      "InteriorTime": 1.0
+    }
+  },
+  {
     "Type": "AudioGameplayVolumeComponent",
     "Name": "AudioGameplayVolume_GEN_VARIABLE",
     "Outer": "AGV_Actor_Goop_C",
@@ -94,6 +133,17 @@
         "ObjectPath": "/MotherGameplay/Items/Goop/Audio/AGV_Actor_Goop.2"
       },
       "bAutoActivate": true
+    }
+  },
+  {
+    "Type": "FilterVolumeComponent",
+    "Name": "FilterVolume_GEN_VARIABLE",
+    "Outer": "AGV_Actor_Goop_C",
+    "Properties": {
+      "ExteriorLPF": 250.0,
+      "ExteriorLPFTime": 1.0,
+      "InteriorLPF": 250.0,
+      "InteriorLPFTime": 1.0
     }
   },
   {
@@ -112,7 +162,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "AGV_Actor_Goop_C:DefaultSceneRoot_GEN_VARIABLE:SceneComponent",
-        "ObjectPath": "/MotherGameplay/Items/Goop/Audio/AGV_Actor_Goop.4"
+        "ObjectPath": "/MotherGameplay/Items/Goop/Audio/AGV_Actor_Goop.6"
       },
       "VariableGuid": "B3888BD4-46A5847D-19EB53BD-5B334FFA",
       "InternalVariableName": "DefaultSceneRoot"
@@ -129,7 +179,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "AGV_Actor_Goop_C:AudioGameplayVolume_GEN_VARIABLE:AudioGameplayVolumeComponent",
-        "ObjectPath": "/MotherGameplay/Items/Goop/Audio/AGV_Actor_Goop.3"
+        "ObjectPath": "/MotherGameplay/Items/Goop/Audio/AGV_Actor_Goop.4"
       },
       "VariableGuid": "7FF054F0-4B16C572-18DF22A9-EF3FDE57",
       "InternalVariableName": "AudioGameplayVolume"
@@ -146,10 +196,44 @@
       },
       "ComponentTemplate": {
         "ObjectName": "AGV_Actor_Goop_C:SubmixSendVolume_GEN_VARIABLE:SubmixSendVolumeComponent",
-        "ObjectPath": "/MotherGameplay/Items/Goop/Audio/AGV_Actor_Goop.9"
+        "ObjectPath": "/MotherGameplay/Items/Goop/Audio/AGV_Actor_Goop.13"
       },
       "VariableGuid": "94F8C7B8-4702C6A2-8B6AD598-25B9B10C",
       "InternalVariableName": "SubmixSendVolume"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "AttenuationVolumeComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": {
+        "ObjectName": "AGV_Actor_Goop_C:AttenuationVolume_GEN_VARIABLE:AttenuationVolumeComponent",
+        "ObjectPath": "/MotherGameplay/Items/Goop/Audio/AGV_Actor_Goop.3"
+      },
+      "VariableGuid": "A4E88F5C-4D543DA5-71F885A5-98576A04",
+      "InternalVariableName": "AttenuationVolume"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "FilterVolumeComponent:Class",
+        "ObjectPath": 0
+      },
+      "ComponentTemplate": {
+        "ObjectName": "AGV_Actor_Goop_C:FilterVolume_GEN_VARIABLE:FilterVolumeComponent",
+        "ObjectPath": "/MotherGameplay/Items/Goop/Audio/AGV_Actor_Goop.5"
+      },
+      "VariableGuid": "3B17A557-4E95E2CA-DE133787-D33E7229",
+      "InternalVariableName": "FilterVolume"
     }
   },
   {
@@ -160,34 +244,50 @@
       "RootNodes": [
         {
           "ObjectName": "SimpleConstructionScript_0:SCS_Node_0:SCS_Node",
-          "ObjectPath": "/MotherGameplay/Items/Goop/Audio/AGV_Actor_Goop.5"
+          "ObjectPath": "/MotherGameplay/Items/Goop/Audio/AGV_Actor_Goop.7"
         },
         {
           "ObjectName": "SimpleConstructionScript_0:SCS_Node_1:SCS_Node",
-          "ObjectPath": "/MotherGameplay/Items/Goop/Audio/AGV_Actor_Goop.6"
+          "ObjectPath": "/MotherGameplay/Items/Goop/Audio/AGV_Actor_Goop.8"
         },
         {
           "ObjectName": "SimpleConstructionScript_0:SCS_Node_2:SCS_Node",
-          "ObjectPath": "/MotherGameplay/Items/Goop/Audio/AGV_Actor_Goop.7"
+          "ObjectPath": "/MotherGameplay/Items/Goop/Audio/AGV_Actor_Goop.9"
+        },
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_3:SCS_Node",
+          "ObjectPath": "/MotherGameplay/Items/Goop/Audio/AGV_Actor_Goop.10"
+        },
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_4:SCS_Node",
+          "ObjectPath": "/MotherGameplay/Items/Goop/Audio/AGV_Actor_Goop.11"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SimpleConstructionScript_0:SCS_Node_0:SCS_Node",
-          "ObjectPath": "/MotherGameplay/Items/Goop/Audio/AGV_Actor_Goop.5"
+          "ObjectPath": "/MotherGameplay/Items/Goop/Audio/AGV_Actor_Goop.7"
         },
         {
           "ObjectName": "SimpleConstructionScript_0:SCS_Node_1:SCS_Node",
-          "ObjectPath": "/MotherGameplay/Items/Goop/Audio/AGV_Actor_Goop.6"
+          "ObjectPath": "/MotherGameplay/Items/Goop/Audio/AGV_Actor_Goop.8"
         },
         {
           "ObjectName": "SimpleConstructionScript_0:SCS_Node_2:SCS_Node",
-          "ObjectPath": "/MotherGameplay/Items/Goop/Audio/AGV_Actor_Goop.7"
+          "ObjectPath": "/MotherGameplay/Items/Goop/Audio/AGV_Actor_Goop.9"
+        },
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_3:SCS_Node",
+          "ObjectPath": "/MotherGameplay/Items/Goop/Audio/AGV_Actor_Goop.10"
+        },
+        {
+          "ObjectName": "SimpleConstructionScript_0:SCS_Node_4:SCS_Node",
+          "ObjectPath": "/MotherGameplay/Items/Goop/Audio/AGV_Actor_Goop.11"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SimpleConstructionScript_0:SCS_Node_0:SCS_Node",
-        "ObjectPath": "/MotherGameplay/Items/Goop/Audio/AGV_Actor_Goop.5"
+        "ObjectPath": "/MotherGameplay/Items/Goop/Audio/AGV_Actor_Goop.7"
       }
     }
   },

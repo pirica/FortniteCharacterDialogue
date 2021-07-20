@@ -1,0 +1,446 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "AvacadoEater_AmbientLoop_Deployed_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "AvacadoEater_AmbientLoop_Deployed_Cue:SoundNodeModulator_0:SoundNodeModulator",
+        "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_AmbientLoop_Deployed_Cue.7"
+      },
+      "VolumeMultiplier": 0.35,
+      "SoundClassObject": {
+        "ObjectName": "Fort_Gadgets:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Gadgets.0"
+      },
+      "bOverrideConcurrency": true,
+      "bHasDelayNode": true,
+      "ConcurrencyOverrides": {
+        "MaxCount": 2
+      },
+      "Duration": 10000.0,
+      "MaxDistance": 2848.0
+    }
+  },
+  {
+    "Type": "SoundNodeAttenuation",
+    "Name": "SoundNodeAttenuation_0",
+    "Outer": "AvacadoEater_AmbientLoop_Deployed_Cue",
+    "Properties": {
+      "AttenuationSettings": {
+        "ObjectName": "AvacadoEater_AmbientLoop_Att:SoundAttenuation",
+        "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Attenuations/AvacadoEater_AmbientLoop_Att.0"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "AvacadoEater_AmbientLoop_Deployed_Cue:SoundNodeModulator_1:SoundNodeModulator",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_AmbientLoop_Deployed_Cue.8"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeAttenuation",
+    "Name": "SoundNodeAttenuation_1",
+    "Outer": "AvacadoEater_AmbientLoop_Deployed_Cue",
+    "Properties": {
+      "AttenuationSettings": {
+        "ObjectName": "AvacadoEater_AmbientLoop_Close_Att:SoundAttenuation",
+        "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Attenuations/AvacadoEater_AmbientLoop_Close_Att.0"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "AvacadoEater_AmbientLoop_Deployed_Cue:SoundNodeMixer_1:SoundNodeMixer",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_AmbientLoop_Deployed_Cue.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_0",
+    "Outer": "AvacadoEater_AmbientLoop_Deployed_Cue",
+    "Properties": {
+      "DelayMin": 0.1,
+      "DelayMax": 4.0,
+      "ChildNodes": [
+        {
+          "ObjectName": "AvacadoEater_AmbientLoop_Deployed_Cue:SoundNodeRandom_0:SoundNodeRandom",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_AmbientLoop_Deployed_Cue.10"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeLooping",
+    "Name": "SoundNodeLooping_0",
+    "Outer": "AvacadoEater_AmbientLoop_Deployed_Cue",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "AvacadoEater_AmbientLoop_Deployed_Cue:SoundNodeDelay_0:SoundNodeDelay",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_AmbientLoop_Deployed_Cue.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_0",
+    "Outer": "AvacadoEater_AmbientLoop_Deployed_Cue",
+    "Properties": {
+      "InputVolume": [
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "AvacadoEater_AmbientLoop_Deployed_Cue:SoundNodeAttenuation_0:SoundNodeAttenuation",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_AmbientLoop_Deployed_Cue.1"
+        },
+        {
+          "ObjectName": "AvacadoEater_AmbientLoop_Deployed_Cue:SoundNodeAttenuation_1:SoundNodeAttenuation",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_AmbientLoop_Deployed_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_1",
+    "Outer": "AvacadoEater_AmbientLoop_Deployed_Cue",
+    "Properties": {
+      "InputVolume": [
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "AvacadoEater_AmbientLoop_Deployed_Cue:SoundNodeModulator_2:SoundNodeModulator",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_AmbientLoop_Deployed_Cue.9"
+        },
+        {
+          "ObjectName": "AvacadoEater_AmbientLoop_Deployed_Cue:SoundNodeLooping_0:SoundNodeLooping",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_AmbientLoop_Deployed_Cue.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "AvacadoEater_AmbientLoop_Deployed_Cue",
+    "Properties": {
+      "PitchMin": 0.98,
+      "PitchMax": 1.02,
+      "ChildNodes": [
+        {
+          "ObjectName": "AvacadoEater_AmbientLoop_Deployed_Cue:SoundNodeMixer_0:SoundNodeMixer",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_AmbientLoop_Deployed_Cue.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_1",
+    "Outer": "AvacadoEater_AmbientLoop_Deployed_Cue",
+    "Properties": {
+      "PitchMin": 0.98,
+      "ChildNodes": [
+        {
+          "ObjectName": "AvacadoEater_AmbientLoop_Deployed_Cue:SoundNodeWavePlayer_4:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_AmbientLoop_Deployed_Cue.22"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_2",
+    "Outer": "AvacadoEater_AmbientLoop_Deployed_Cue",
+    "Properties": {
+      "PitchMin": 0.98,
+      "ChildNodes": [
+        {
+          "ObjectName": "AvacadoEater_AmbientLoop_Deployed_Cue:SoundNodeWavePlayer_2:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_AmbientLoop_Deployed_Cue.21"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "AvacadoEater_AmbientLoop_Deployed_Cue",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "AvacadoEater_AmbientLoop_Deployed_Cue:SoundNodeWavePlayer_0:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_AmbientLoop_Deployed_Cue.11"
+        },
+        {
+          "ObjectName": "AvacadoEater_AmbientLoop_Deployed_Cue:SoundNodeWavePlayer_1:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_AmbientLoop_Deployed_Cue.12"
+        },
+        {
+          "ObjectName": "AvacadoEater_AmbientLoop_Deployed_Cue:SoundNodeWavePlayer_5:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_AmbientLoop_Deployed_Cue.23"
+        },
+        {
+          "ObjectName": "AvacadoEater_AmbientLoop_Deployed_Cue:SoundNodeWavePlayer_6:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_AmbientLoop_Deployed_Cue.24"
+        },
+        {
+          "ObjectName": "AvacadoEater_AmbientLoop_Deployed_Cue:SoundNodeWavePlayer_7:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_AmbientLoop_Deployed_Cue.25"
+        },
+        {
+          "ObjectName": "AvacadoEater_AmbientLoop_Deployed_Cue:SoundNodeWavePlayer_8:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_AmbientLoop_Deployed_Cue.26"
+        },
+        {
+          "ObjectName": "AvacadoEater_AmbientLoop_Deployed_Cue:SoundNodeWavePlayer_9:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_AmbientLoop_Deployed_Cue.27"
+        },
+        {
+          "ObjectName": "AvacadoEater_AmbientLoop_Deployed_Cue:SoundNodeWavePlayer_10:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_AmbientLoop_Deployed_Cue.13"
+        },
+        {
+          "ObjectName": "AvacadoEater_AmbientLoop_Deployed_Cue:SoundNodeWavePlayer_11:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_AmbientLoop_Deployed_Cue.14"
+        },
+        {
+          "ObjectName": "AvacadoEater_AmbientLoop_Deployed_Cue:SoundNodeWavePlayer_12:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_AmbientLoop_Deployed_Cue.15"
+        },
+        {
+          "ObjectName": "AvacadoEater_AmbientLoop_Deployed_Cue:SoundNodeWavePlayer_13:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_AmbientLoop_Deployed_Cue.16"
+        },
+        {
+          "ObjectName": "AvacadoEater_AmbientLoop_Deployed_Cue:SoundNodeWavePlayer_14:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_AmbientLoop_Deployed_Cue.17"
+        },
+        {
+          "ObjectName": "AvacadoEater_AmbientLoop_Deployed_Cue:SoundNodeWavePlayer_15:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_AmbientLoop_Deployed_Cue.18"
+        },
+        {
+          "ObjectName": "AvacadoEater_AmbientLoop_Deployed_Cue:SoundNodeWavePlayer_16:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_AmbientLoop_Deployed_Cue.19"
+        },
+        {
+          "ObjectName": "AvacadoEater_AmbientLoop_Deployed_Cue:SoundNodeWavePlayer_17:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_AmbientLoop_Deployed_Cue.20"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "AvacadoEater_AmbientLoop_Deployed_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_Egg_Vocal_10.AvacadoEater_Egg_Vocal_10",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "AvacadoEater_AmbientLoop_Deployed_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_Egg_Vocal_11.AvacadoEater_Egg_Vocal_11",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_10",
+    "Outer": "AvacadoEater_AmbientLoop_Deployed_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_Egg_Vocal_05.AvacadoEater_Egg_Vocal_05",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_11",
+    "Outer": "AvacadoEater_AmbientLoop_Deployed_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_Egg_Vocal_06.AvacadoEater_Egg_Vocal_06",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_12",
+    "Outer": "AvacadoEater_AmbientLoop_Deployed_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_Egg_Vocal_07.AvacadoEater_Egg_Vocal_07",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_13",
+    "Outer": "AvacadoEater_AmbientLoop_Deployed_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_Egg_Vocal_08.AvacadoEater_Egg_Vocal_08",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_14",
+    "Outer": "AvacadoEater_AmbientLoop_Deployed_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_Egg_Vocal_09.AvacadoEater_Egg_Vocal_09",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_15",
+    "Outer": "AvacadoEater_AmbientLoop_Deployed_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_InsideEgg_Vocal_01.AvacadoEater_InsideEgg_Vocal_01",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_16",
+    "Outer": "AvacadoEater_AmbientLoop_Deployed_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_InsideEgg_Vocal_02.AvacadoEater_InsideEgg_Vocal_02",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_17",
+    "Outer": "AvacadoEater_AmbientLoop_Deployed_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_InsideEgg_Vocal_03.AvacadoEater_InsideEgg_Vocal_03",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "AvacadoEater_AmbientLoop_Deployed_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_Ambient_Close_Loop.AvacadoEater_Ambient_Close_Loop",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_4",
+    "Outer": "AvacadoEater_AmbientLoop_Deployed_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_Ambient_Loop_01.AvacadoEater_Ambient_Loop_01",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_5",
+    "Outer": "AvacadoEater_AmbientLoop_Deployed_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_Egg_Vocal_12.AvacadoEater_Egg_Vocal_12",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_6",
+    "Outer": "AvacadoEater_AmbientLoop_Deployed_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_Egg_Vocal_01.AvacadoEater_Egg_Vocal_01",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_7",
+    "Outer": "AvacadoEater_AmbientLoop_Deployed_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_Egg_Vocal_02.AvacadoEater_Egg_Vocal_02",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_8",
+    "Outer": "AvacadoEater_AmbientLoop_Deployed_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_Egg_Vocal_03.AvacadoEater_Egg_Vocal_03",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_9",
+    "Outer": "AvacadoEater_AmbientLoop_Deployed_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/AvacadoEater/Pod/AvacadoEater_Egg_Vocal_04.AvacadoEater_Egg_Vocal_04",
+        "SubPathString": ""
+      }
+    }
+  }
+]

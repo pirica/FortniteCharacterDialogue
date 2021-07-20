@@ -2,31 +2,257 @@
   {
     "Type": "Function",
     "Name": "ExecuteUbergraph_GA_Quest_LowGrav",
-    "Properties": {}
+    "Outer": "GA_Quest_LowGrav_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 20,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "SignatureFunction": {
+          "ObjectName": "AsyncWaitGameplayTagDelegate__DelegateSignature:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetFortPlayerControllerFromActor_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortPlayerController:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_WaitGameplayTagAddToActor_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "AbilityAsync_WaitGameplayTagAdded:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetQuestManager_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortQuestManager:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_SendComplexCustomStatEvent_QuestActive",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_SendComplexCustomStatEvent_QuestCompleted",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 32769,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "Function",
     "Name": "K2_ActivateAbility",
-    "Properties": {}
+    "Outer": "GA_Quest_LowGrav_C",
+    "Super": "K2_ActivateAbility",
+    "SuperStruct": {
+      "ObjectName": "GA_Quest_PassiveAbility_C:K2_ActivateAbility:Function",
+      "ObjectPath": "/Game/Athena/Items/Quests/QuestAbilities/Parents/GA_Quest_PassiveAbility.1"
+    },
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 134744064,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "Function",
     "Name": "Added_0183B0074DBA3F5A9C390992DB4C22AB",
-    "Properties": {}
+    "Outer": "GA_Quest_LowGrav_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 201326592,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "BlueprintGeneratedClass",
     "Name": "GA_Quest_LowGrav_C",
+    "Super": "GA_Quest_PassiveAbility_C",
     "Properties": {
       "UberGraphFunction": {
         "ObjectName": "GA_Quest_LowGrav_C:ExecuteUbergraph_GA_Quest_LowGrav:Function",
         "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_LowGrav/GA_Quest_LowGrav.0"
       }
+    },
+    "SuperStruct": {
+      "ObjectName": "GA_Quest_PassiveAbility_C:BlueprintGeneratedClass",
+      "ObjectPath": "/Game/Athena/Items/Quests/QuestAbilities/Parents/GA_Quest_PassiveAbility.2"
+    },
+    "Children": [
+      {
+        "ObjectName": "GA_Quest_LowGrav_C:Added_0183B0074DBA3F5A9C390992DB4C22AB:Function",
+        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_LowGrav/GA_Quest_LowGrav.2"
+      },
+      {
+        "ObjectName": "GA_Quest_LowGrav_C:K2_ActivateAbility:Function",
+        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_LowGrav/GA_Quest_LowGrav.1"
+      },
+      {
+        "ObjectName": "GA_Quest_LowGrav_C:ExecuteUbergraph_GA_Quest_LowGrav:Function",
+        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_LowGrav/GA_Quest_LowGrav.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 2105344,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "PointerToUberGraphFrame:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_GA_Quest_LowGrav": {
+        "ObjectName": "GA_Quest_LowGrav_C:ExecuteUbergraph_GA_Quest_LowGrav:Function",
+        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_LowGrav/GA_Quest_LowGrav.0"
+      },
+      "K2_ActivateAbility": {
+        "ObjectName": "GA_Quest_LowGrav_C:K2_ActivateAbility:Function",
+        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_LowGrav/GA_Quest_LowGrav.1"
+      },
+      "Added_0183B0074DBA3F5A9C390992DB4C22AB": {
+        "ObjectName": "GA_Quest_LowGrav_C:Added_0183B0074DBA3F5A9C390992DB4C22AB:Function",
+        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_LowGrav/GA_Quest_LowGrav.2"
+      }
+    },
+    "ClassFlags": 264208,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Engine",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__GA_Quest_LowGrav_C:GA_Quest_LowGrav_C",
+      "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_LowGrav/GA_Quest_LowGrav.4"
     }
   },
   {
     "Type": "GA_Quest_LowGrav_C",
     "Name": "Default__GA_Quest_LowGrav_C",
+    "Template": "Default__GA_Quest_PassiveAbility_C",
     "Properties": {
       "UberGraphFrame": {}
     }

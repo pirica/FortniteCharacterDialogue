@@ -281,24 +281,6 @@
       "GC_Bounce": {
         "TagName": "GameplayCue.Athena.EnvItem.AvacadoEaterBird.Bounce"
       },
-      "Tags_IgnoredByAvacadoEater": [
-        "Granted.Athena.EnvItem.AvacadoEaterBird.ImmunityFromBirds",
-        "Athena.Gameplay.Status.Hitchhiker",
-        "EnvItem.AvacadoEater",
-        "Item.AvacadoEater",
-        "Curie.State.ElementalStatus.Burning",
-        "Event.Damage.Killed",
-        "Granted.Athena.Item.PaddleGinger.IsProp",
-        "Gameplay.Status.DBNO",
-        "Event.Damage.Died",
-        "Granted.Athena.EnvItem.HidingProp.GettingInProp",
-        "Granted.Athena.EnvItem.HidingProp.HidingInProp",
-        "MovementMode.SurfaceSwimming",
-        "Athena.Gameplay.Status.BeingAbducted",
-        "Granted.Athena.CageSaddle.InVehicle",
-        "Curie.State.ElementInteraction.Fire",
-        "Granted.Athena.Skyfire"
-      ],
       "GC_LifetimeExpired": {
         "TagName": "GameplayCue.Athena.EnvItem.AvacadoEaterBird.LifetimeExpired"
       },
@@ -412,6 +394,15 @@
           },
           {
             "TagName": "Granted.Athena.Item.PaddleGinger.IsProp"
+          },
+          {
+            "TagName": "Curie.State.ElementInteraction.Fire"
+          },
+          {
+            "TagName": "Granted.Athena.Skyfire"
+          },
+          {
+            "TagName": "MovementMode.Driving"
           }
         ],
         "QueryTokenStream": [
@@ -424,7 +415,7 @@
           0,
           1,
           3,
-          14,
+          17,
           2,
           3,
           4,
@@ -438,10 +429,13 @@
           12,
           13,
           14,
-          15
+          15,
+          16,
+          17,
+          18
         ],
         "UserDescription": "Is a potential target valid?",
-        "AutoDescription": " ALL(  ANY( Pawn.Athena.Player, Pawn.Athena.NPC ),  NONE( Granted.Athena.EnvItem.AvacadoEaterBird.ImmunityFromBirds, Athena.Gameplay.Status.Hitchhiker, EnvItem.AvacadoEater, Item.AvacadoEater, Curie.State.ElementalStatus.Burning, Event.Damage.Killed, Gameplay.Status.DBNO, Event.Damage.Died, Granted.Athena.EnvItem.HidingProp.GettingInProp, Granted.Athena.EnvItem.HidingProp.HidingInProp, MovementMode.SurfaceSwimming, Athena.Gameplay.Status.BeingAbducted, Granted.Athena.CageSaddle.InVehicle, Granted.Athena.Item.PaddleGinger.IsProp ) )"
+        "AutoDescription": " ALL(  ANY( Pawn.Athena.Player, Pawn.Athena.NPC ),  NONE( Granted.Athena.EnvItem.AvacadoEaterBird.ImmunityFromBirds, Athena.Gameplay.Status.Hitchhiker, EnvItem.AvacadoEater, Item.AvacadoEater, Curie.State.ElementalStatus.Burning, Event.Damage.Killed, Gameplay.Status.DBNO, Event.Damage.Died, Granted.Athena.EnvItem.HidingProp.GettingInProp, Granted.Athena.EnvItem.HidingProp.HidingInProp, MovementMode.SurfaceSwimming, Athena.Gameplay.Status.BeingAbducted, Granted.Athena.CageSaddle.InVehicle, Granted.Athena.Item.PaddleGinger.IsProp, Curie.State.ElementInteraction.Fire, Granted.Athena.Skyfire, MovementMode.Driving ) )"
       },
       "TargetingRangeMax": {
         "Curve": {
@@ -573,7 +567,8 @@
       "StaticGameplayTags": [
         "Item.AvacadoEater",
         "Building.Type.GameplayItem",
-        "Abilities.Generic.Athena.ZipLine.ZiplineSmashImmune"
+        "Abilities.Generic.Athena.ZipLine.ZiplineSmashImmune",
+        "Granted.Athena.HidingProp.SmashImmune"
       ],
       "RootComponent": {
         "ObjectName": "Default__BGA_Athena_AvacadoEaterBird_C:CapsuleComponent:CapsuleComponent",
@@ -852,7 +847,15 @@
   {
     "Type": "NiagaraDataInterfaceSkeletalMesh",
     "Name": "NiagaraDataInterfaceSkeletalMesh_0",
-    "Outer": "FX_Niagara_GEN_VARIABLE"
+    "Outer": "FX_Niagara_GEN_VARIABLE",
+    "Properties": {
+      "FilteredBones": [
+        "alien_root"
+      ],
+      "FilteredSockets": [
+        "alien_fx"
+      ]
+    }
   },
   {
     "Type": "SceneComponent",

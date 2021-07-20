@@ -2,22 +2,911 @@
   {
     "Type": "Function",
     "Name": "ExecuteUbergraph_GCL_Athena_BeingDrained",
-    "Properties": {}
+    "Outer": "GCL_Athena_BeingDrained_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 20,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "SignatureFunction": {
+          "ObjectName": "TimerDynamicDelegate__DelegateSignature:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "TimerHandle:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetSocketLocation_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_K2_AttachToComponent_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetWorldRotation_SweepHitResult",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 144,
+        "PropertyFlags": 549755813888,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "HitResult:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_MyTarget_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_Parameters_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 200,
+        "PropertyFlags": 549755813890,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayCueParameters:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_Event_ParticleComponents_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 549890031618,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "K2Node_Event_ParticleComponents_1",
+          "Flags": 1,
+          "ArrayDim": 1,
+          "ElementSize": 8,
+          "PropertyFlags": 524288,
+          "RepIndex": 0,
+          "RepNotifyFunc": "None",
+          "BlueprintReplicationCondition": "COND_None",
+          "PropertyClass": {
+            "ObjectName": "FXSystemComponent:Class",
+            "ObjectPath": 0
+          }
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_Event_AudioComponents_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 549890031618,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "K2Node_Event_AudioComponents_1",
+          "Flags": 1,
+          "ArrayDim": 1,
+          "ElementSize": 8,
+          "PropertyFlags": 524288,
+          "RepIndex": 0,
+          "RepNotifyFunc": "None",
+          "BlueprintReplicationCondition": "COND_None",
+          "PropertyClass": {
+            "ObjectName": "AudioComponent:Class",
+            "ObjectPath": 0
+          }
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakGameplayCueParameters_NormalizedMagnitude",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakGameplayCueParameters_RawMagnitude",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakGameplayCueParameters_EffectContext",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 24,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayEffectContextHandle:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakGameplayCueParameters_MatchedTagName",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayTag:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakGameplayCueParameters_OriginalTag",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayTag:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakGameplayCueParameters_AggregatedSourceTags",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 32,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayTagContainer:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakGameplayCueParameters_AggregatedTargetTags",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 32,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayTagContainer:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakGameplayCueParameters_Location",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakGameplayCueParameters_Normal",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakGameplayCueParameters_Instigator",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakGameplayCueParameters_EffectCauser",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakGameplayCueParameters_SourceObject",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Object:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakGameplayCueParameters_PhysicalMaterial",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "PhysicalMaterial:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakGameplayCueParameters_GameplayEffectLevel",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakGameplayCueParameters_AbilityLevel",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakGameplayCueParameters_TargetAttachComponent",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "SceneComponent:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BreakGameplayCueParameters_bReplicateLocationWhenUsingMinimalRepProxy",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsFort_Player_Pawn",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortPlayerPawn:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Player_Pawn_Non_Participant_Boss",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "BP_PlayerPawn_NonParticipant_Boss_C:BlueprintGeneratedClass",
+          "ObjectPath": "/Game/Athena/AI/NPCs/Base/BP_PlayerPawn_NonParticipant_Boss.15"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_MyTarget",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_Parameters",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 200,
+        "PropertyFlags": 549755813890,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayCueParameters:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_Event_ParticleComponents",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 549890031618,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "K2Node_Event_ParticleComponents",
+          "Flags": 1,
+          "ArrayDim": 1,
+          "ElementSize": 8,
+          "PropertyFlags": 524288,
+          "RepIndex": 0,
+          "RepNotifyFunc": "None",
+          "BlueprintReplicationCondition": "COND_None",
+          "PropertyClass": {
+            "ObjectName": "FXSystemComponent:Class",
+            "ObjectPath": 0
+          }
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_Event_AudioComponents",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 549890031618,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "K2Node_Event_AudioComponents",
+          "Flags": 1,
+          "ArrayDim": 1,
+          "ElementSize": 8,
+          "PropertyFlags": 524288,
+          "RepIndex": 0,
+          "RepNotifyFunc": "None",
+          "BlueprintReplicationCondition": "COND_None",
+          "PropertyClass": {
+            "ObjectName": "AudioComponent:Class",
+            "ObjectPath": 0
+          }
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_BurstCameraShakeInstance",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "MatineeCameraShake:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_BurstDecalInstance",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "DecalActor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetSocketLocation_ReturnValue_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetDirectionUnitVector_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_FindLookAtRotation_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Rotator:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnSystemAttached_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "NiagaraComponent:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetWorldRotation_SweepHitResult_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 144,
+        "PropertyFlags": 549755813888,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "HitResult:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 8421377,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "Function",
     "Name": "OnRemovalGeneric",
-    "Properties": {}
+    "Outer": "GCL_Athena_BeingDrained_C",
+    "SuperStruct": {
+      "ObjectName": "OnRemovalGeneric:Class",
+      "ObjectPath": 0
+    },
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "MyTarget",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Parameters",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 200,
+        "PropertyFlags": 549890032022,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayCueParameters:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "ParticleComponents",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 549890032022,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "ParticleComponents",
+          "Flags": 1,
+          "ArrayDim": 1,
+          "ElementSize": 8,
+          "PropertyFlags": 524288,
+          "RepIndex": 0,
+          "RepNotifyFunc": "None",
+          "BlueprintReplicationCondition": "COND_None",
+          "PropertyClass": {
+            "ObjectName": "FXSystemComponent:Class",
+            "ObjectPath": 0
+          }
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "AudioComponents",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 549890032022,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "AudioComponents",
+          "Flags": 1,
+          "ArrayDim": 1,
+          "ElementSize": 8,
+          "PropertyFlags": 524288,
+          "RepIndex": 0,
+          "RepNotifyFunc": "None",
+          "BlueprintReplicationCondition": "COND_None",
+          "PropertyClass": {
+            "ObjectName": "AudioComponent:Class",
+            "ObjectPath": 0
+          }
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BurstCameraShakeInstance",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "MatineeCameraShake:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BurstDecalInstance",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "DecalActor:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 138545152,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "Function",
     "Name": "CE_Update Impact Rotation",
-    "Properties": {}
+    "Outer": "GCL_Athena_BeingDrained_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 201326592,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "Function",
     "Name": "OnLoopingStartGeneric",
-    "Properties": {}
+    "Outer": "GCL_Athena_BeingDrained_C",
+    "SuperStruct": {
+      "ObjectName": "OnLoopingStartGeneric:Class",
+      "ObjectPath": 0
+    },
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "MyTarget",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Parameters",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 200,
+        "PropertyFlags": 549890032022,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayCueParameters:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "ParticleComponents",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 549890032022,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "ParticleComponents",
+          "Flags": 1,
+          "ArrayDim": 1,
+          "ElementSize": 8,
+          "PropertyFlags": 524288,
+          "RepIndex": 0,
+          "RepNotifyFunc": "None",
+          "BlueprintReplicationCondition": "COND_None",
+          "PropertyClass": {
+            "ObjectName": "FXSystemComponent:Class",
+            "ObjectPath": 0
+          }
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "AudioComponents",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 549890032022,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "AudioComponents",
+          "Flags": 1,
+          "ArrayDim": 1,
+          "ElementSize": 8,
+          "PropertyFlags": 524288,
+          "RepIndex": 0,
+          "RepNotifyFunc": "None",
+          "BlueprintReplicationCondition": "COND_None",
+          "PropertyClass": {
+            "ObjectName": "AudioComponent:Class",
+            "ObjectPath": 0
+          }
+        }
+      }
+    ],
+    "FunctionFlags": 138545152,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "BlueprintGeneratedClass",
@@ -31,6 +920,151 @@
         "ObjectName": "GCL_Athena_BeingDrained_C:ExecuteUbergraph_GCL_Athena_BeingDrained:Function",
         "ObjectPath": "/NPCLibrary/GameplayCues/GCL_Athena_BeingDrained.0"
       }
+    },
+    "SuperStruct": {
+      "ObjectName": "FortGameplayCueNotify_Loop:Class",
+      "ObjectPath": 0
+    },
+    "Children": [
+      {
+        "ObjectName": "GCL_Athena_BeingDrained_C:OnLoopingStartGeneric:Function",
+        "ObjectPath": "/NPCLibrary/GameplayCues/GCL_Athena_BeingDrained.3"
+      },
+      {
+        "ObjectName": "GCL_Athena_BeingDrained_C:CE_Update Impact Rotation:Function",
+        "ObjectPath": "/NPCLibrary/GameplayCues/GCL_Athena_BeingDrained.2"
+      },
+      {
+        "ObjectName": "GCL_Athena_BeingDrained_C:OnRemovalGeneric:Function",
+        "ObjectPath": "/NPCLibrary/GameplayCues/GCL_Athena_BeingDrained.1"
+      },
+      {
+        "ObjectName": "GCL_Athena_BeingDrained_C:ExecuteUbergraph_GCL_Athena_BeingDrained:Function",
+        "ObjectPath": "/NPCLibrary/GameplayCues/GCL_Athena_BeingDrained.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 2105344,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "PointerToUberGraphFrame:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "NS_LifeDrain_Impact_Loop",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "NiagaraComponent:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "As Fort Player Pawn",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 1125899906910213,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortPlayerPawn:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "As BP Player Pawn Non Participant Boss",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 1125899906910213,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "BP_PlayerPawn_NonParticipant_Boss_C:BlueprintGeneratedClass",
+          "ObjectPath": "/Game/Athena/AI/NPCs/Base/BP_PlayerPawn_NonParticipant_Boss.15"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Timer",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "TimerHandle:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Rotation",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Rotator:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_GCL_Athena_BeingDrained": {
+        "ObjectName": "GCL_Athena_BeingDrained_C:ExecuteUbergraph_GCL_Athena_BeingDrained:Function",
+        "ObjectPath": "/NPCLibrary/GameplayCues/GCL_Athena_BeingDrained.0"
+      },
+      "OnRemovalGeneric": {
+        "ObjectName": "GCL_Athena_BeingDrained_C:OnRemovalGeneric:Function",
+        "ObjectPath": "/NPCLibrary/GameplayCues/GCL_Athena_BeingDrained.1"
+      },
+      "CE_Update Impact Rotation": {
+        "ObjectName": "GCL_Athena_BeingDrained_C:CE_Update Impact Rotation:Function",
+        "ObjectPath": "/NPCLibrary/GameplayCues/GCL_Athena_BeingDrained.2"
+      },
+      "OnLoopingStartGeneric": {
+        "ObjectName": "GCL_Athena_BeingDrained_C:OnLoopingStartGeneric:Function",
+        "ObjectPath": "/NPCLibrary/GameplayCues/GCL_Athena_BeingDrained.3"
+      }
+    },
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Engine",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__GCL_Athena_BeingDrained_C:GCL_Athena_BeingDrained_C",
+      "ObjectPath": "/NPCLibrary/GameplayCues/GCL_Athena_BeingDrained.5"
     }
   },
   {
@@ -197,31 +1231,60 @@
   {
     "Type": "NiagaraComponent",
     "Name": "NS_LifeDrain_Impact_Loop_GEN_VARIABLE",
-    "Properties": {}
+    "Outer": "GCL_Athena_BeingDrained_C"
   },
   {
     "Type": "NiagaraDataInterfaceSkeletalMesh",
     "Name": "NiagaraDataInterfaceSkeletalMesh_0",
-    "Properties": {}
+    "Outer": "NS_LifeDrain_Impact_Loop_GEN_VARIABLE",
+    "Properties": {
+      "FilteredBones": [
+        "spine_05",
+        "spine_03",
+        "upperarm_l",
+        "upperarm_r",
+        "head",
+        "calf_l",
+        "calf_r",
+        "thigh_l",
+        "thigh_r"
+      ]
+    }
   },
   {
     "Type": "NiagaraDataInterfaceSkeletalMesh",
     "Name": "NiagaraDataInterfaceSkeletalMesh_1",
-    "Properties": {}
+    "Outer": "NS_LifeDrain_Impact_Loop_GEN_VARIABLE",
+    "Properties": {
+      "FilteredBones": [
+        "upperarm_l",
+        "upperarm_r",
+        "lowerarm_l",
+        "lowerarm_r",
+        "hand_l",
+        "hand_r",
+        "spine_05",
+        "spine_03",
+        "head",
+        "thigh_l",
+        "thigh_r"
+      ]
+    }
   },
   {
     "Type": "SceneComponent",
     "Name": "RootComponent",
-    "Properties": {}
+    "Outer": "Default__GCL_Athena_BeingDrained_C"
   },
   {
     "Type": "SceneComponent",
     "Name": "DefaultSceneRoot_GEN_VARIABLE",
-    "Properties": {}
+    "Outer": "GCL_Athena_BeingDrained_C"
   },
   {
     "Type": "SCS_Node",
     "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
     "Properties": {
       "ComponentClass": {
         "ObjectName": "SceneComponent:Class",
@@ -238,6 +1301,7 @@
   {
     "Type": "SCS_Node",
     "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
     "Properties": {
       "ComponentClass": {
         "ObjectName": "NiagaraComponent:Class",
@@ -256,6 +1320,7 @@
   {
     "Type": "SimpleConstructionScript",
     "Name": "SimpleConstructionScript_0",
+    "Outer": "GCL_Athena_BeingDrained_C",
     "Properties": {
       "RootNodes": [
         {

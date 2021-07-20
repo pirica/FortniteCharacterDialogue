@@ -2,42 +2,688 @@
   {
     "Type": "Function",
     "Name": "ExecuteUbergraph_GA_Quest_Search_Under120sec",
-    "Properties": {}
+    "Outer": "GA_Quest_Search_Under120sec_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 20,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "SignatureFunction": {
+          "ObjectName": "OnUrgentTransientQuestFailed__DelegateSignature:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetFortPlayerControllerFromActor_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortPlayerController:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_Quest_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 336,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "UrgentQuestData:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetQuestManager_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortQuestManager:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetAvatarActorFromActorInfo_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsFort_Player_Pawn_Athena",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortPlayerPawnAthena:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_Quest",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 336,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "UrgentQuestData:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_UrgentQuestData",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 336,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "UrgentQuestData:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetContext_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "AthenaHUDContext:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_UrgentQuestData_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 336,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "UrgentQuestData:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetTransientQuestsComponent_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortControllerComponent_TransientQuests:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_UrgentQuestData",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 336,
+        "PropertyFlags": 2,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "UrgentQuestData:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetTransientQuestsComponent_ReturnValue_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortControllerComponent_TransientQuests:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 20,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "SignatureFunction": {
+          "ObjectName": "OnUrgentQuestTimeExpired__DelegateSignature:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_2",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 20,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "SignatureFunction": {
+          "ObjectName": "OnUrgentTransientQuestCompleted__DelegateSignature:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_TransientQuestItem_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 2,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortQuestItem:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetQuestDefinitionBP_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortQuestItemDefinition:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetTransientQuestsComponent_ReturnValue_2",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortControllerComponent_TransientQuests:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetPrimaryAssetIdFromObject_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 24,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "PrimaryAssetId:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_3",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 20,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "SignatureFunction": {
+          "ObjectName": "OnUrgentQuestTimeExpired__DelegateSignature:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsServer_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_4",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 20,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "SignatureFunction": {
+          "ObjectName": "OnUrgentTransientQuestCompleted__DelegateSignature:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetFortPlayerControllerFromActor_ReturnValue_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortPlayerController:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetContext_ReturnValue_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "AthenaHUDContext:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetQuestManager_ReturnValue_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortQuestManager:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsFort_Urgent_Quest_Item_Definition",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortUrgentQuestItemDefinition:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetPrimaryAssetIdFromObject_ReturnValue_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 24,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "PrimaryAssetId:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetUrgentQuestData_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 336,
+        "PropertyFlags": 2,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "UrgentQuestData:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_PrimaryAssetId_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_5",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 20,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "SignatureFunction": {
+          "ObjectName": "OnUrgentTransientQuestFailed__DelegateSignature:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_TransientQuestItem",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 2,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortQuestItem:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 8421377,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "Function",
     "Name": "Cleanup On Quest Ended",
-    "Properties": {}
+    "Outer": "GA_Quest_Search_Under120sec_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "TransientQuestItem",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 150,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortQuestItem:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 201326592,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "Function",
     "Name": "Quest Completed",
-    "Properties": {}
+    "Outer": "GA_Quest_Search_Under120sec_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "TransientQuestItem",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 150,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortQuestItem:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 201326592,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "Function",
     "Name": "Quest Failed",
-    "Properties": {}
+    "Outer": "GA_Quest_Search_Under120sec_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UrgentQuestData",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 336,
+        "PropertyFlags": 134218134,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "UrgentQuestData:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 205520896,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "Function",
     "Name": "DisplaySuccessMessage",
-    "Properties": {}
+    "Outer": "GA_Quest_Search_Under120sec_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "Quest",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 336,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "UrgentQuestData:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 218104000,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "Function",
     "Name": "K2_ActivateAbility",
-    "Properties": {}
+    "Outer": "GA_Quest_Search_Under120sec_C",
+    "SuperStruct": {
+      "ObjectName": "K2_ActivateAbility:Class",
+      "ObjectPath": 0
+    },
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 134744064,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "Function",
     "Name": "DisplayFailureMessage_TimeExpired",
-    "Properties": {}
+    "Outer": "GA_Quest_Search_Under120sec_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "Quest",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 336,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "UrgentQuestData:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 218104000,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "Function",
     "Name": "Cleanup",
-    "Properties": {}
+    "Outer": "GA_Quest_Search_Under120sec_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 201326592,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "BlueprintGeneratedClass",
@@ -47,6 +693,204 @@
         "ObjectName": "GA_Quest_Search_Under120sec_C:ExecuteUbergraph_GA_Quest_Search_Under120sec:Function",
         "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_Search_Under120seconds/GA_Quest_Search_Under120sec.0"
       }
+    },
+    "SuperStruct": {
+      "ObjectName": "FortTransientQuestGameplayAbility:Class",
+      "ObjectPath": 0
+    },
+    "Children": [
+      {
+        "ObjectName": "GA_Quest_Search_Under120sec_C:Cleanup:Function",
+        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_Search_Under120seconds/GA_Quest_Search_Under120sec.7"
+      },
+      {
+        "ObjectName": "GA_Quest_Search_Under120sec_C:DisplayFailureMessage_TimeExpired:Function",
+        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_Search_Under120seconds/GA_Quest_Search_Under120sec.6"
+      },
+      {
+        "ObjectName": "GA_Quest_Search_Under120sec_C:K2_ActivateAbility:Function",
+        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_Search_Under120seconds/GA_Quest_Search_Under120sec.5"
+      },
+      {
+        "ObjectName": "GA_Quest_Search_Under120sec_C:DisplaySuccessMessage:Function",
+        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_Search_Under120seconds/GA_Quest_Search_Under120sec.4"
+      },
+      {
+        "ObjectName": "GA_Quest_Search_Under120sec_C:Quest Failed:Function",
+        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_Search_Under120seconds/GA_Quest_Search_Under120sec.3"
+      },
+      {
+        "ObjectName": "GA_Quest_Search_Under120sec_C:Quest Completed:Function",
+        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_Search_Under120seconds/GA_Quest_Search_Under120sec.2"
+      },
+      {
+        "ObjectName": "GA_Quest_Search_Under120sec_C:Cleanup On Quest Ended:Function",
+        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_Search_Under120seconds/GA_Quest_Search_Under120sec.1"
+      },
+      {
+        "ObjectName": "GA_Quest_Search_Under120sec_C:ExecuteUbergraph_GA_Quest_Search_Under120sec:Function",
+        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_Search_Under120seconds/GA_Quest_Search_Under120sec.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 2105344,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "PointerToUberGraphFrame:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Owning Player",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 67589,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "FortPlayerPawnAthena:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "Q_ObjectiveName",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Text_QuestFailed",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 24,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Text_TimeExpired",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 24,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Text_Eliminated",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 24,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "TimerHandle",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "TimerHandle:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "Text_QuestSuccess",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 24,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "SuccessReason",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 24,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_GA_Quest_Search_Under120sec": {
+        "ObjectName": "GA_Quest_Search_Under120sec_C:ExecuteUbergraph_GA_Quest_Search_Under120sec:Function",
+        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_Search_Under120seconds/GA_Quest_Search_Under120sec.0"
+      },
+      "Cleanup On Quest Ended": {
+        "ObjectName": "GA_Quest_Search_Under120sec_C:Cleanup On Quest Ended:Function",
+        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_Search_Under120seconds/GA_Quest_Search_Under120sec.1"
+      },
+      "Quest Completed": {
+        "ObjectName": "GA_Quest_Search_Under120sec_C:Quest Completed:Function",
+        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_Search_Under120seconds/GA_Quest_Search_Under120sec.2"
+      },
+      "Quest Failed": {
+        "ObjectName": "GA_Quest_Search_Under120sec_C:Quest Failed:Function",
+        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_Search_Under120seconds/GA_Quest_Search_Under120sec.3"
+      },
+      "DisplaySuccessMessage": {
+        "ObjectName": "GA_Quest_Search_Under120sec_C:DisplaySuccessMessage:Function",
+        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_Search_Under120seconds/GA_Quest_Search_Under120sec.4"
+      },
+      "K2_ActivateAbility": {
+        "ObjectName": "GA_Quest_Search_Under120sec_C:K2_ActivateAbility:Function",
+        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_Search_Under120seconds/GA_Quest_Search_Under120sec.5"
+      },
+      "DisplayFailureMessage_TimeExpired": {
+        "ObjectName": "GA_Quest_Search_Under120sec_C:DisplayFailureMessage_TimeExpired:Function",
+        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_Search_Under120seconds/GA_Quest_Search_Under120sec.6"
+      },
+      "Cleanup": {
+        "ObjectName": "GA_Quest_Search_Under120sec_C:Cleanup:Function",
+        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_Search_Under120seconds/GA_Quest_Search_Under120sec.7"
+      }
+    },
+    "ClassFlags": 264208,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Engine",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__GA_Quest_Search_Under120sec_C:GA_Quest_Search_Under120sec_C",
+      "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_Search_Under120seconds/GA_Quest_Search_Under120sec.9"
     }
   },
   {

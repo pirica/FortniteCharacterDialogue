@@ -1,0 +1,48 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "Cage_Saddle_Timer_Tick_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "Cage_Saddle_Timer_Tick_Cue:SoundNodeWavePlayer_2:SoundNodeWavePlayer",
+        "ObjectPath": "/MotherGameplay/Sounds/CageSaddle/Cage_Saddle_Timer_Tick_Cue.1"
+      },
+      "VolumeMultiplier": 0.3,
+      "AttenuationOverrides": {
+        "AttenuationShapeExtents": {
+          "X": 100.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 500.0
+      },
+      "bOverrideAttenuation": true,
+      "SoundClassObject": {
+        "ObjectName": "Fort_Gadgets:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Gadgets.0"
+      },
+      "bOverrideConcurrency": true,
+      "ConcurrencyOverrides": {
+        "ResolutionRule": "EMaxConcurrentResolutionRule::PreventNew"
+      },
+      "Duration": 10000.0,
+      "MaxDistance": 600.0,
+      "AttenuationSettings": {
+        "ObjectName": "Cage_Saddle_Bounce_Att:SoundAttenuation",
+        "ObjectPath": "/MotherGameplay/Sounds/CageSaddle/Cage_Saddle_Bounce_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "Cage_Saddle_Timer_Tick_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/CageSaddle/Cage_Saddle_Timer_Tick_02.Cage_Saddle_Timer_Tick_02",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    }
+  }
+]

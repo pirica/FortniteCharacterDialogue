@@ -2,6 +2,7 @@
   {
     "Type": "BlueprintGeneratedClass",
     "Name": "BP_VendAISpawner_Nug_C",
+    "Super": "BP_VendAISpawner_Base_C",
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "BP_VendAISpawner_Nug_C:SimpleConstructionScript_0:SimpleConstructionScript",
@@ -11,11 +12,32 @@
         "ObjectName": "BP_VendAISpawner_Nug_C:InheritableComponentHandler:InheritableComponentHandler",
         "ObjectPath": "/BattlepassS17/Services/BP_VendAISpawner_Nug.2"
       }
+    },
+    "SuperStruct": {
+      "ObjectName": "BP_VendAISpawner_Base_C:BlueprintGeneratedClass",
+      "ObjectPath": "/BattlepassS17/Services/BP_VendAISpawner_Base.2"
+    },
+    "Children": [],
+    "ChildProperties": [],
+    "FuncMap": {},
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Engine",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__BP_VendAISpawner_Nug_C:BP_VendAISpawner_Nug_C",
+      "ObjectPath": "/BattlepassS17/Services/BP_VendAISpawner_Nug.1"
     }
   },
   {
     "Type": "BP_VendAISpawner_Nug_C",
     "Name": "Default__BP_VendAISpawner_Nug_C",
+    "Template": "Default__BP_VendAISpawner_Base_C",
     "Properties": {
       "EventRowHandle": {
         "DataTable": {
@@ -30,6 +52,8 @@
   },
   {
     "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "BP_VendAISpawner_Nug_C",
     "Properties": {
       "Records": [
         {
@@ -60,11 +84,13 @@
   {
     "Type": "NiagaraComponent",
     "Name": "Niagara_GEN_VARIABLE",
-    "Properties": {}
+    "Outer": "BP_VendAISpawner_Nug_C",
+    "Template": "Niagara_GEN_VARIABLE"
   },
   {
     "Type": "NiagaraDataInterfaceColorCurve",
     "Name": "NiagaraDataInterfaceColorCurve_19",
+    "Outer": "Niagara_GEN_VARIABLE",
     "Properties": {
       "ShaderLUT": [
         1.0,
@@ -586,16 +612,17 @@
   {
     "Type": "NiagaraDataInterfaceSkeletalMesh",
     "Name": "NiagaraDataInterfaceSkeletalMesh_19",
-    "Properties": {}
+    "Outer": "Niagara_GEN_VARIABLE"
   },
   {
     "Type": "SceneComponent",
     "Name": "DefaultSceneRoot_GEN_VARIABLE",
-    "Properties": {}
+    "Outer": "BP_VendAISpawner_Nug_C"
   },
   {
     "Type": "SCS_Node",
     "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
     "Properties": {
       "ComponentClass": {
         "ObjectName": "SceneComponent:Class",
@@ -612,6 +639,7 @@
   {
     "Type": "SimpleConstructionScript",
     "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_VendAISpawner_Nug_C",
     "Properties": {
       "DefaultSceneRootNode": {
         "ObjectName": "SimpleConstructionScript_0:SCS_Node_0:SCS_Node",

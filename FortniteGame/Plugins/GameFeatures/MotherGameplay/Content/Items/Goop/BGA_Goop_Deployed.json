@@ -18,17 +18,6 @@
         "BlueprintReplicationCondition": "COND_None"
       },
       {
-        "Type": "FloatProperty",
-        "Name": "CallFunc_GetServerWorldTimeSeconds_ReturnValue",
-        "Flags": 1,
-        "ArrayDim": 1,
-        "ElementSize": 4,
-        "PropertyFlags": 0,
-        "RepIndex": 0,
-        "RepNotifyFunc": "None",
-        "BlueprintReplicationCondition": "COND_None"
-      },
-      {
         "Type": "StructProperty",
         "Name": "K2Node_CustomEvent_Payload",
         "Flags": 1,
@@ -902,7 +891,7 @@
       },
       {
         "Type": "FloatProperty",
-        "Name": "CallFunc_GetServerWorldTimeSeconds_ReturnValue_1",
+        "Name": "CallFunc_GetServerWorldTimeSeconds_ReturnValue",
         "Flags": 1,
         "ArrayDim": 1,
         "ElementSize": 4,
@@ -914,6 +903,17 @@
       {
         "Type": "FloatProperty",
         "Name": "CallFunc_Subtract_FloatFloat_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetServerWorldTimeSeconds_ReturnValue_1",
         "Flags": 1,
         "ArrayDim": 1,
         "ElementSize": 4,
@@ -1009,6 +1009,17 @@
       }
     ],
     "FunctionFlags": 8421377,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "Client Kill Self Cleanup",
+    "Outer": "BGA_Goop_Deployed_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 201343040,
     "EventGraphFunction": null,
     "EventGraphCallOffset": 0
   },
@@ -1419,11 +1430,11 @@
       "bHasCookedComponentInstancingData": true,
       "SimpleConstructionScript": {
         "ObjectName": "BGA_Goop_Deployed_C:SimpleConstructionScript_0:SimpleConstructionScript",
-        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.21"
+        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.22"
       },
       "InheritableComponentHandler": {
         "ObjectName": "BGA_Goop_Deployed_C:InheritableComponentHandler:InheritableComponentHandler",
-        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.17"
+        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.18"
       },
       "UberGraphFunction": {
         "ObjectName": "BGA_Goop_Deployed_C:ExecuteUbergraph_BGA_Goop_Deployed:Function",
@@ -1437,54 +1448,58 @@
     "Children": [
       {
         "ObjectName": "BGA_Goop_Deployed_C:OnRep_SpawnTime:Function",
-        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.13"
+        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.14"
       },
       {
         "ObjectName": "BGA_Goop_Deployed_C:ActivateVisualsExpireWarning:Function",
-        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.12"
+        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.13"
       },
       {
         "ObjectName": "BGA_Goop_Deployed_C:TransitionGoopOut:Function",
-        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.11"
+        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.12"
       },
       {
         "ObjectName": "BGA_Goop_Deployed_C:TransitionGoopIn:Function",
-        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.10"
+        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.11"
       },
       {
         "ObjectName": "BGA_Goop_Deployed_C:Added_350557D441717B6FB95F66A691D2F0C4:Function",
-        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.9"
+        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.10"
       },
       {
         "ObjectName": "BGA_Goop_Deployed_C:EventReceived_159D2F074BDE4709F32BC89676C674FA:Function",
-        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.8"
+        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.9"
       },
       {
         "ObjectName": "BGA_Goop_Deployed_C:ReceiveBeginPlay:Function",
-        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.7"
+        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.8"
       },
       {
         "ObjectName": "BGA_Goop_Deployed_C:KillSelf:Function",
-        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.6"
+        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.7"
       },
       {
         "ObjectName": "BGA_Goop_Deployed_C:AddTracker:Function",
-        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.5"
+        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.6"
       },
       {
         "ObjectName": "BGA_Goop_Deployed_C:OnDeathServer:Function",
-        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.4"
+        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.5"
       },
       {
         "ObjectName": "BGA_Goop_Deployed_C:PlaySpawnFX:Function",
-        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.3"
+        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.4"
       },
       {
         "ObjectName": "BGA_Goop_Deployed_C:SetExpireWarningAndTransitionOutTimers:Function",
-        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.2"
+        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.3"
       },
       {
         "ObjectName": "BGA_Goop_Deployed_C:ReceiveEndPlay:Function",
+        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.2"
+      },
+      {
+        "ObjectName": "BGA_Goop_Deployed_C:Client Kill Self Cleanup:Function",
         "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.1"
       },
       {
@@ -1678,57 +1693,61 @@
         "ObjectName": "BGA_Goop_Deployed_C:ExecuteUbergraph_BGA_Goop_Deployed:Function",
         "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.0"
       },
+      "Client Kill Self Cleanup": {
+        "ObjectName": "BGA_Goop_Deployed_C:Client Kill Self Cleanup:Function",
+        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.1"
+      },
       "ReceiveEndPlay": {
         "ObjectName": "BGA_Goop_Deployed_C:ReceiveEndPlay:Function",
-        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.1"
+        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.2"
       },
       "SetExpireWarningAndTransitionOutTimers": {
         "ObjectName": "BGA_Goop_Deployed_C:SetExpireWarningAndTransitionOutTimers:Function",
-        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.2"
+        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.3"
       },
       "PlaySpawnFX": {
         "ObjectName": "BGA_Goop_Deployed_C:PlaySpawnFX:Function",
-        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.3"
+        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.4"
       },
       "OnDeathServer": {
         "ObjectName": "BGA_Goop_Deployed_C:OnDeathServer:Function",
-        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.4"
+        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.5"
       },
       "AddTracker": {
         "ObjectName": "BGA_Goop_Deployed_C:AddTracker:Function",
-        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.5"
+        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.6"
       },
       "KillSelf": {
         "ObjectName": "BGA_Goop_Deployed_C:KillSelf:Function",
-        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.6"
+        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.7"
       },
       "ReceiveBeginPlay": {
         "ObjectName": "BGA_Goop_Deployed_C:ReceiveBeginPlay:Function",
-        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.7"
+        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.8"
       },
       "EventReceived_159D2F074BDE4709F32BC89676C674FA": {
         "ObjectName": "BGA_Goop_Deployed_C:EventReceived_159D2F074BDE4709F32BC89676C674FA:Function",
-        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.8"
+        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.9"
       },
       "Added_350557D441717B6FB95F66A691D2F0C4": {
         "ObjectName": "BGA_Goop_Deployed_C:Added_350557D441717B6FB95F66A691D2F0C4:Function",
-        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.9"
+        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.10"
       },
       "TransitionGoopIn": {
         "ObjectName": "BGA_Goop_Deployed_C:TransitionGoopIn:Function",
-        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.10"
+        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.11"
       },
       "TransitionGoopOut": {
         "ObjectName": "BGA_Goop_Deployed_C:TransitionGoopOut:Function",
-        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.11"
+        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.12"
       },
       "ActivateVisualsExpireWarning": {
         "ObjectName": "BGA_Goop_Deployed_C:ActivateVisualsExpireWarning:Function",
-        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.12"
+        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.13"
       },
       "OnRep_SpawnTime": {
         "ObjectName": "BGA_Goop_Deployed_C:OnRep_SpawnTime:Function",
-        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.13"
+        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.14"
       }
     },
     "ClassFlags": 8652820,
@@ -1742,7 +1761,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "Default__BGA_Goop_Deployed_C:BGA_Goop_Deployed_C",
-      "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.15"
+      "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.16"
     }
   },
   {
@@ -1790,12 +1809,8 @@
       "DelayParticleEffectAfterFirstSpawn": 0.8,
       "IsDynamicTransform": true,
       "Row_MaxLifespan": {
-        "Value": 1.0,
         "Curve": {
-          "CurveTable": {
-            "ObjectName": "MotherGameData:CurveTable",
-            "ObjectPath": "/MotherGameplay/DataTables/MotherGameData.0"
-          }
+          "RowName": "Default.Mother.Goop.AoE.Duration"
         }
       }
     }
@@ -1890,7 +1905,7 @@
           },
           "ComponentTemplate": {
             "ObjectName": "BGA_Goop_Deployed_C:NS_Biome_Volume_InWorld_GEN_VARIABLE:NiagaraComponent",
-            "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.18"
+            "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.19"
           },
           "ComponentKey": {
             "OwnerClass": {
@@ -1977,7 +1992,7 @@
           },
           "ComponentTemplate": {
             "ObjectName": "BGA_Goop_Deployed_C:CollisionMesh_GEN_VARIABLE:StaticMeshComponent",
-            "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.22"
+            "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.23"
           },
           "ComponentKey": {
             "OwnerClass": {
@@ -2288,7 +2303,7 @@
           },
           "ComponentTemplate": {
             "ObjectName": "BGA_Goop_Deployed_C:Box_GEN_VARIABLE:BoxComponent",
-            "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.16"
+            "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.17"
           },
           "ComponentKey": {
             "OwnerClass": {
@@ -2496,7 +2511,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "BGA_Goop_Deployed_C:DefaultSceneRoot_GEN_VARIABLE:SceneComponent",
-        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.19"
+        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.20"
       },
       "VariableGuid": "7EBBE925-46313CC7-4EDEDEBD-48304993",
       "InternalVariableName": "DefaultSceneRoot"
@@ -2509,7 +2524,7 @@
     "Properties": {
       "DefaultSceneRootNode": {
         "ObjectName": "SimpleConstructionScript_0:SCS_Node_0:SCS_Node",
-        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.20"
+        "ObjectPath": "/MotherGameplay/Items/Goop/BGA_Goop_Deployed.21"
       }
     }
   },

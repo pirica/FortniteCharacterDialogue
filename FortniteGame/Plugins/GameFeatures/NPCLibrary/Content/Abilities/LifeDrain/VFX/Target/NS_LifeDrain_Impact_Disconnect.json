@@ -13433,12 +13433,7 @@
   {
     "Type": "NiagaraDataInterfaceSkeletalMesh",
     "Name": "NiagaraDataInterfaceSkeletalMesh_1",
-    "Outer": "SpawnScript",
-    "Properties": {
-      "MeshUserParameter": {
-        "Parameter": {}
-      }
-    }
+    "Outer": "SpawnScript"
   },
   {
     "Type": "NiagaraDataInterfaceSkeletalMesh",
@@ -13448,22 +13443,24 @@
   {
     "Type": "NiagaraDataInterfaceSkeletalMesh",
     "Name": "NiagaraDataInterfaceSkeletalMesh_1",
-    "Outer": "UpdateScript",
-    "Properties": {
-      "MeshUserParameter": {
-        "Parameter": {}
-      }
-    }
+    "Outer": "UpdateScript"
   },
   {
     "Type": "NiagaraDataInterfaceSkeletalMesh",
     "Name": "NiagaraDataInterfaceSkeletalMesh_0",
     "Outer": "NS_LifeDrain_Impact_Disconnect",
     "Properties": {
-      "MeshUserParameter": {
-        "Parameter": {}
-      },
-      "FilteredBones": []
+      "FilteredBones": [
+        "spine_05",
+        "spine_03",
+        "upperarm_l",
+        "upperarm_r",
+        "head",
+        "calf_l",
+        "calf_r",
+        "thigh_l",
+        "thigh_r"
+      ]
     }
   },
   {
@@ -13471,10 +13468,19 @@
     "Name": "NiagaraDataInterfaceSkeletalMesh_1",
     "Outer": "NS_LifeDrain_Impact_Disconnect",
     "Properties": {
-      "MeshUserParameter": {
-        "Parameter": {}
-      },
-      "FilteredBones": []
+      "FilteredBones": [
+        "upperarm_l",
+        "upperarm_r",
+        "lowerarm_l",
+        "lowerarm_r",
+        "hand_l",
+        "hand_r",
+        "spine_05",
+        "spine_03",
+        "head",
+        "thigh_l",
+        "thigh_r"
+      ]
     }
   },
   {
@@ -13485,12 +13491,7 @@
   {
     "Type": "NiagaraDataInterfaceSkeletalMesh",
     "Name": "NiagaraDataInterfaceSkeletalMesh_1",
-    "Outer": "SpawnScript",
-    "Properties": {
-      "MeshUserParameter": {
-        "Parameter": {}
-      }
-    }
+    "Outer": "SpawnScript"
   },
   {
     "Type": "NiagaraDataInterfaceSkeletalMesh",
@@ -13500,12 +13501,7 @@
   {
     "Type": "NiagaraDataInterfaceSkeletalMesh",
     "Name": "NiagaraDataInterfaceSkeletalMesh_1",
-    "Outer": "UpdateScript",
-    "Properties": {
-      "MeshUserParameter": {
-        "Parameter": {}
-      }
-    }
+    "Outer": "UpdateScript"
   },
   {
     "Type": "NiagaraDataInterfaceVectorField",
@@ -14065,12 +14061,80 @@
   {
     "Type": "NiagaraSpriteRendererProperties",
     "Name": "NiagaraSpriteRendererProperties_0",
-    "Outer": "Flame_8"
+    "Outer": "Flame_8",
+    "Properties": {
+      "Material": {
+        "ObjectName": "MI_LifeDrain_Flame_Magic_SubUV:MaterialInstanceConstant",
+        "ObjectPath": "/NPCLibrary/Abilities/LifeDrain/VFX/Target/MI_LifeDrain_Flame_Magic_SubUV.0"
+      },
+      "SubImageSize": {
+        "X": 8.0,
+        "Y": 8.0
+      },
+      "PositionBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "ColorBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "VelocityBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "SpriteRotationBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "SpriteSizeBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "SubImageIndexBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "CameraOffsetBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "MaterialRandomBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "CustomSortingBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "NormalizedAgeBinding": {
+        "bBindingExistsOnSource": true
+      }
+    }
   },
   {
     "Type": "NiagaraSpriteRendererProperties",
     "Name": "NiagaraSpriteRendererProperties_0",
-    "Outer": "NiagaraEmitter_6"
+    "Outer": "NiagaraEmitter_6",
+    "Properties": {
+      "Material": {
+        "ObjectName": "M_Particle_Flare_HotCenter_Flicker:Material",
+        "ObjectPath": "/Game/Effects/Niagara/MasterMaterials/Flares/M_Particle_Flare_HotCenter_Flicker.0"
+      },
+      "PositionBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "ColorBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "SpriteSizeBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "CameraOffsetBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "MaterialRandomBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "CustomSortingBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "NormalizedAgeBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "SortOrderHint": 20
+    }
   },
   {
     "Type": "NiagaraSpriteRendererProperties",
@@ -14080,22 +14144,151 @@
   {
     "Type": "NiagaraSpriteRendererProperties",
     "Name": "NiagaraSpriteRendererProperties_0",
-    "Outer": "NiagaraEmitter_7"
+    "Outer": "NiagaraEmitter_7",
+    "Properties": {
+      "Material": {
+        "ObjectName": "MI_LifeDrain_Impact_Particle_Decal:MaterialInstanceConstant",
+        "ObjectPath": "/NPCLibrary/Abilities/LifeDrain/VFX/Target/MI_LifeDrain_Impact_Particle_Decal.0"
+      },
+      "PositionBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "ColorBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "SpriteSizeBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "DynamicMaterialBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "CameraOffsetBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "MaterialRandomBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "CustomSortingBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "NormalizedAgeBinding": {
+        "bBindingExistsOnSource": true
+      }
+    }
   },
   {
     "Type": "NiagaraSpriteRendererProperties",
     "Name": "NiagaraSpriteRendererProperties_0",
-    "Outer": "Rays_2"
+    "Outer": "Rays_2",
+    "Properties": {
+      "Material": {
+        "ObjectName": "MI_LifeDrain_Rays:MaterialInstanceConstant",
+        "ObjectPath": "/NPCLibrary/Abilities/LifeDrain/VFX/Source/MI_LifeDrain_Rays.0"
+      },
+      "PivotInUVSpace": {
+        "X": 0.5,
+        "Y": 1.0
+      },
+      "SubImageSize": {
+        "X": 4.0,
+        "Y": 1.0
+      },
+      "PositionBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "ColorBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "SpriteRotationBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "SpriteSizeBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "SubImageIndexBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "MaterialRandomBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "CustomSortingBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "NormalizedAgeBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "SortOrderHint": 20
+    }
   },
   {
     "Type": "NiagaraSpriteRendererProperties",
     "Name": "NiagaraSpriteRendererProperties_0",
-    "Outer": "Ring_9"
+    "Outer": "Ring_9",
+    "Properties": {
+      "Material": {
+        "ObjectName": "MI_LifeDrain_Ring:MaterialInstanceConstant",
+        "ObjectPath": "/NPCLibrary/Abilities/LifeDrain/VFX/Source/MI_LifeDrain_Ring.0"
+      },
+      "PositionBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "ColorBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "SpriteSizeBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "CameraOffsetBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "MaterialRandomBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "CustomSortingBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "NormalizedAgeBinding": {
+        "bBindingExistsOnSource": true
+      }
+    }
   },
   {
     "Type": "NiagaraSpriteRendererProperties",
     "Name": "NiagaraSpriteRendererProperties_0",
-    "Outer": "Spark_5"
+    "Outer": "Spark_5",
+    "Properties": {
+      "Material": {
+        "ObjectName": "MI_SparkRound_01_BasicWhite:MaterialInstanceConstant",
+        "ObjectPath": "/Game/Effects/Niagara/MasterMaterials/Sprite/MI_SparkRound_01_BasicWhite.0"
+      },
+      "Alignment": "ENiagaraSpriteAlignment::VelocityAligned",
+      "PivotInUVSpace": {
+        "X": 0.5,
+        "Y": 0.0
+      },
+      "PositionBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "ColorBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "VelocityBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "SpriteSizeBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "MaterialRandomBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "CustomSortingBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "NormalizedAgeBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "SortOrderHint": 20
+    }
   },
   {
     "Type": "NiagaraSystem",

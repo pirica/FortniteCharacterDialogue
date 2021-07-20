@@ -2,12 +2,117 @@
   {
     "Type": "Function",
     "Name": "ExecuteUbergraph_GA_MotherGround_Tend",
-    "Properties": {}
+    "Outer": "GA_MotherGround_Tend_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_EventData",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 184,
+        "PropertyFlags": 2,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayEventData:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsActor",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "PropertyClass": {
+          "ObjectName": "Actor:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeGameplayCueParameters_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 200,
+        "PropertyFlags": 549755813888,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayCueParameters:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 8421377,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "Function",
     "Name": "K2_ActivateAbilityFromEvent",
-    "Properties": {}
+    "Outer": "GA_MotherGround_Tend_C",
+    "SuperStruct": {
+      "ObjectName": "K2_ActivateAbilityFromEvent:Class",
+      "ObjectPath": 0
+    },
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "EventData",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 184,
+        "PropertyFlags": 134218134,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayEventData:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FunctionFlags": 138938368,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
   },
   {
     "Type": "BlueprintGeneratedClass",
@@ -17,6 +122,75 @@
         "ObjectName": "GA_MotherGround_Tend_C:ExecuteUbergraph_GA_MotherGround_Tend:Function",
         "ObjectPath": "/MotherGround/Abilities/GA_MotherGround_Tend.0"
       }
+    },
+    "SuperStruct": {
+      "ObjectName": "FortGameplayAbility:Class",
+      "ObjectPath": 0
+    },
+    "Children": [
+      {
+        "ObjectName": "GA_MotherGround_Tend_C:K2_ActivateAbilityFromEvent:Function",
+        "ObjectPath": "/MotherGround/Abilities/GA_MotherGround_Tend.1"
+      },
+      {
+        "ObjectName": "GA_MotherGround_Tend_C:ExecuteUbergraph_GA_MotherGround_Tend:Function",
+        "ObjectPath": "/MotherGround/Abilities/GA_MotherGround_Tend.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 2105344,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "PointerToUberGraphFrame:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Gameplay Cue Tag",
+        "Flags": 2097153,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 65541,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "GameplayTag:Class",
+          "ObjectPath": 0
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_GA_MotherGround_Tend": {
+        "ObjectName": "GA_MotherGround_Tend_C:ExecuteUbergraph_GA_MotherGround_Tend:Function",
+        "ObjectPath": "/MotherGround/Abilities/GA_MotherGround_Tend.0"
+      },
+      "K2_ActivateAbilityFromEvent": {
+        "ObjectName": "GA_MotherGround_Tend_C:K2_ActivateAbilityFromEvent:Function",
+        "ObjectPath": "/MotherGround/Abilities/GA_MotherGround_Tend.1"
+      }
+    },
+    "ClassFlags": 264208,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Engine",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__GA_MotherGround_Tend_C:GA_MotherGround_Tend_C",
+      "ObjectPath": "/MotherGround/Abilities/GA_MotherGround_Tend.3"
     }
   },
   {

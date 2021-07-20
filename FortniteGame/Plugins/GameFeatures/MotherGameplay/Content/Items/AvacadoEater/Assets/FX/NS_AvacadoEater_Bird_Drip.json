@@ -2770,12 +2770,7 @@
   {
     "Type": "NiagaraDataInterfaceSkeletalMesh",
     "Name": "NiagaraDataInterfaceSkeletalMesh_3",
-    "Outer": "SpawnScript",
-    "Properties": {
-      "MeshUserParameter": {
-        "Parameter": {}
-      }
-    }
+    "Outer": "SpawnScript"
   },
   {
     "Type": "NiagaraDataInterfaceSkeletalMesh",
@@ -2785,12 +2780,7 @@
   {
     "Type": "NiagaraDataInterfaceSkeletalMesh",
     "Name": "NiagaraDataInterfaceSkeletalMesh_3",
-    "Outer": "UpdateScript",
-    "Properties": {
-      "MeshUserParameter": {
-        "Parameter": {}
-      }
-    }
+    "Outer": "UpdateScript"
   },
   {
     "Type": "NiagaraDataInterfaceSkeletalMesh",
@@ -2800,17 +2790,20 @@
   {
     "Type": "NiagaraDataInterfaceSkeletalMesh",
     "Name": "NiagaraDataInterfaceSkeletalMesh_3",
-    "Outer": "SpawnScript_2",
-    "Properties": {
-      "MeshUserParameter": {
-        "Parameter": {}
-      }
-    }
+    "Outer": "SpawnScript_2"
   },
   {
     "Type": "NiagaraDataInterfaceSkeletalMesh",
     "Name": "NiagaraDataInterfaceSkeletalMesh_0",
-    "Outer": "NS_AvacadoEater_Bird_Drip"
+    "Outer": "NS_AvacadoEater_Bird_Drip",
+    "Properties": {
+      "FilteredBones": [
+        "alien_root"
+      ],
+      "FilteredSockets": [
+        "alien_fx"
+      ]
+    }
   },
   {
     "Type": "NiagaraDataInterfaceSkeletalMesh",
@@ -2820,12 +2813,7 @@
   {
     "Type": "NiagaraDataInterfaceSkeletalMesh",
     "Name": "NiagaraDataInterfaceSkeletalMesh_3",
-    "Outer": "SpawnScript",
-    "Properties": {
-      "MeshUserParameter": {
-        "Parameter": {}
-      }
-    }
+    "Outer": "SpawnScript"
   },
   {
     "Type": "NiagaraDataInterfaceSkeletalMesh",
@@ -2835,12 +2823,7 @@
   {
     "Type": "NiagaraDataInterfaceSkeletalMesh",
     "Name": "NiagaraDataInterfaceSkeletalMesh_3",
-    "Outer": "SpawnScript_0",
-    "Properties": {
-      "MeshUserParameter": {
-        "Parameter": {}
-      }
-    }
+    "Outer": "SpawnScript_0"
   },
   {
     "Type": "NiagaraDataInterfaceSkeletalMesh",
@@ -2850,12 +2833,7 @@
   {
     "Type": "NiagaraDataInterfaceSkeletalMesh",
     "Name": "NiagaraDataInterfaceSkeletalMesh_3",
-    "Outer": "SpawnScript_1",
-    "Properties": {
-      "MeshUserParameter": {
-        "Parameter": {}
-      }
-    }
+    "Outer": "SpawnScript_1"
   },
   {
     "Type": "NiagaraEmitter",
@@ -2996,12 +2974,10 @@
         "ObjectName": "MI_Emote_ManAndMonster_SmokeTrail_01:MaterialInstanceConstant",
         "ObjectPath": "/Game/Athena/Effects/Particles/Emotes/NS_Emote_ManAndMonster/MI_Emote_ManAndMonster_SmokeTrail_01.0"
       },
-      "MaterialUserParamBinding": {
-        "Parameter": {}
-      },
       "UV0Settings": {
-        "DistributionMode": "ENiagaraRibbonUVDistributionMode::-2",
-        "LeadingEdgeMode": "ENiagaraRibbonUVEdgeMode::Locked"
+        "DistributionMode": "ENiagaraRibbonUVDistributionMode::ScaledUniformly",
+        "LeadingEdgeMode": "ENiagaraRibbonUVEdgeMode::SmoothTransition",
+        "TrailingEdgeMode": "ENiagaraRibbonUVEdgeMode::SmoothTransition"
       },
       "UV1Settings": {
         "DistributionMode": "ENiagaraRibbonUVDistributionMode::ScaledUniformly",
@@ -3009,9 +2985,7 @@
         "TrailingEdgeMode": "ENiagaraRibbonUVEdgeMode::SmoothTransition"
       },
       "PositionBinding": {
-        "ParamMapVariable": {},
-        "DataSetVariable": {},
-        "RootVariable": {}
+        "bBindingExistsOnSource": true
       },
       "ColorBinding": {
         "bBindingExistsOnSource": true
@@ -3105,22 +3079,181 @@
   {
     "Type": "NiagaraSpriteRendererProperties",
     "Name": "NiagaraSpriteRendererProperties_0",
-    "Outer": "Decal_5"
+    "Outer": "Decal_5",
+    "Properties": {
+      "Material": {
+        "ObjectName": "MI_AvacadoEater_ParticleDecal_01:MaterialInstanceConstant",
+        "ObjectPath": "/MotherGameplay/Items/AvacadoEater/Assets/FX/MI_AvacadoEater_ParticleDecal_01.0"
+      },
+      "PositionBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "ColorBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "SpriteSizeBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "DynamicMaterialBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "DynamicMaterial1Binding": {
+        "bBindingExistsOnSource": true
+      },
+      "CameraOffsetBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "MaterialRandomBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "CustomSortingBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "NormalizedAgeBinding": {
+        "bBindingExistsOnSource": true
+      }
+    }
   },
   {
     "Type": "NiagaraSpriteRendererProperties",
     "Name": "NiagaraSpriteRendererProperties_0",
-    "Outer": "Drip_0"
+    "Outer": "Drip_0",
+    "Properties": {
+      "Material": {
+        "ObjectName": "MI_AvacadoEater_Drip:MaterialInstanceConstant",
+        "ObjectPath": "/MotherGameplay/Items/AvacadoEater/Assets/FX/MI_AvacadoEater_Drip.0"
+      },
+      "Alignment": "ENiagaraSpriteAlignment::VelocityAligned",
+      "PivotInUVSpace": {
+        "X": 0.5,
+        "Y": 1.0
+      },
+      "SortMode": "ENiagaraSortMode::ViewDistance",
+      "PositionBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "ColorBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "VelocityBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "SpriteRotationBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "SpriteSizeBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "MaterialRandomBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "CustomSortingBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "NormalizedAgeBinding": {
+        "bBindingExistsOnSource": true
+      }
+    }
   },
   {
     "Type": "NiagaraSpriteRendererProperties",
     "Name": "NiagaraSpriteRendererProperties_0",
-    "Outer": "Slurp_0"
+    "Outer": "Slurp_0",
+    "Properties": {
+      "Material": {
+        "ObjectName": "MI_AvacadoEater_Slurp_02:MaterialInstanceConstant",
+        "ObjectPath": "/MotherGameplay/Items/AvacadoEater/Assets/FX/MI_AvacadoEater_Slurp_02.0"
+      },
+      "SubImageSize": {
+        "X": 2.0,
+        "Y": 4.0
+      },
+      "PositionBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "ColorBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "VelocityBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "SpriteRotationBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "SpriteSizeBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "SubImageIndexBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "DynamicMaterialBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "CameraOffsetBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "MaterialRandomBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "CustomSortingBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "NormalizedAgeBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "Platforms": {
+        "QualityLevelMask": -2
+      }
+    }
   },
   {
     "Type": "NiagaraSpriteRendererProperties",
     "Name": "NiagaraSpriteRendererProperties_1",
-    "Outer": "Smoke_4"
+    "Outer": "Smoke_4",
+    "Properties": {
+      "Material": {
+        "ObjectName": "M_SmokeMaster_TranslucentParticles_FakeLit_01:Material",
+        "ObjectPath": "/Game/Effects/Niagara/MasterMaterials/Smoke/M_SmokeMaster_TranslucentParticles_FakeLit_01.0"
+      },
+      "SortMode": "ENiagaraSortMode::ViewDistance",
+      "SubImageSize": {
+        "X": 8.0,
+        "Y": 8.0
+      },
+      "PositionBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "ColorBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "VelocityBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "SpriteRotationBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "SpriteSizeBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "SubImageIndexBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "DynamicMaterialBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "CameraOffsetBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "MaterialRandomBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "CustomSortingBinding": {
+        "bBindingExistsOnSource": true
+      },
+      "NormalizedAgeBinding": {
+        "bBindingExistsOnSource": true
+      }
+    }
   },
   {
     "Type": "NiagaraSystem",

@@ -1,0 +1,122 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "Cage_Saddle_Inflate_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "Cage_Saddle_Inflate_Cue:SoundNodeModulator_2:SoundNodeModulator",
+        "ObjectPath": "/MotherGameplay/Sounds/CageSaddle/Cage_Saddle_Inflate_Cue.1"
+      },
+      "AttenuationOverrides": {
+        "AttenuationShapeExtents": {
+          "X": 500.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 1000.0
+      },
+      "SoundClassObject": {
+        "ObjectName": "Fort_Gadgets:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Gadgets.0"
+      },
+      "bOverrideConcurrency": true,
+      "ConcurrencyOverrides": {
+        "ResolutionRule": "EMaxConcurrentResolutionRule::PreventNew"
+      },
+      "Duration": 2.3921876,
+      "MaxDistance": 2400.0,
+      "AttenuationSettings": {
+        "ObjectName": "Cage_Saddle_Bounce_Att:SoundAttenuation",
+        "ObjectPath": "/MotherGameplay/Sounds/CageSaddle/Cage_Saddle_Bounce_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_2",
+    "Outer": "Cage_Saddle_Inflate_Cue",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "Cage_Saddle_Inflate_Cue:SoundNodeRandom_1:SoundNodeRandom",
+          "ObjectPath": "/MotherGameplay/Sounds/CageSaddle/Cage_Saddle_Inflate_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_1",
+    "Outer": "Cage_Saddle_Inflate_Cue",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "Cage_Saddle_Inflate_Cue:SoundNodeWavePlayer_0:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/CageSaddle/Cage_Saddle_Inflate_Cue.3"
+        },
+        {
+          "ObjectName": "Cage_Saddle_Inflate_Cue:SoundNodeWavePlayer_1:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/CageSaddle/Cage_Saddle_Inflate_Cue.4"
+        },
+        {
+          "ObjectName": "Cage_Saddle_Inflate_Cue:SoundNodeWavePlayer_3:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/CageSaddle/Cage_Saddle_Inflate_Cue.5"
+        },
+        {
+          "ObjectName": "Cage_Saddle_Inflate_Cue:SoundNodeWavePlayer_4:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/CageSaddle/Cage_Saddle_Inflate_Cue.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "Cage_Saddle_Inflate_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/CageSaddle/Cage_Saddle_Inflate_01.Cage_Saddle_Inflate_01",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "Cage_Saddle_Inflate_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/CageSaddle/Cage_Saddle_Inflate_02.Cage_Saddle_Inflate_02",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "Cage_Saddle_Inflate_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/CageSaddle/Cage_Saddle_Inflate_03.Cage_Saddle_Inflate_03",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_4",
+    "Outer": "Cage_Saddle_Inflate_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/CageSaddle/Cage_Saddle_Inflate_04.Cage_Saddle_Inflate_04",
+        "SubPathString": ""
+      }
+    }
+  }
+]

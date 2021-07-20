@@ -42,14 +42,35 @@
       "BeingAbductedTag": {
         "TagName": "Athena.Gameplay.Status.BeingAbducted"
       },
+      "AbductionWarpTunnelStartEventTag": {
+        "TagName": "Event.Athena.Item.AwfulDuck.TeleportWarpTunnel.Start"
+      },
+      "AbductionWarpTunnelEndEventTag": {
+        "TagName": "Event.Athena.Item.AwfulDuck.TeleportWarpTunnel.End"
+      },
+      "MothershipWarpTunnelStartEventTag": {
+        "TagName": "Event.Athena.Skyfire.TeleportWarpTunnel.Start"
+      },
+      "MothershipWarpTunnelEndEventTag": {
+        "TagName": "Event.Athena.Skyfire.TeleportWarpTunnel.End"
+      },
       "SkyfireWeaponHolsterId": "SkyfireWeaponHolsterID",
       "TODOverrideActorClass": {
-        "ObjectName": "TODM_Volume_Override_Skyfire_Interior_C:BlueprintGeneratedClass",
-        "ObjectPath": "/Game/TimeOfDay/TODM/BR/TODM_Volume_Override_Skyfire_Interior.0"
+        "ObjectName": "SkyfireTODOverrideVolume:Class",
+        "ObjectPath": 0
       },
       "TimeOrbClass": {
         "AssetPathName": "/Skyfire/Gameplay/Orbs/TimeOrb.TimeOrb_C",
         "SubPathString": ""
+      },
+      "bShouldSkyfireSquadMemberUIBeEnabled": {
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+            "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+          },
+          "RowName": "Skyfire.EnableSkyfireSquadMemberUI"
+        }
       },
       "SecondsGrantedOnTimePickup": {
         "Value": 1.0,
@@ -312,11 +333,8 @@
       "PrisonAndPlayspaceItemsAndAS": {
         "Items": [
           {
-            "Count": 1,
-            "Item": {
-              "ObjectName": "WID_Skyfire_KnockbackWeapon_Launcher:FortWeaponRangedItemDefinition",
-              "ObjectPath": "/Skyfire/Gameplay/KnockbackWeapon/Launcher/WID_Skyfire_KnockbackWeapon_Launcher.0"
-            }
+            "AssetPathName": "/Skyfire/Gameplay/KnockbackWeapon/Launcher/WID_Skyfire_KnockbackWeapon_Launcher.WID_Skyfire_KnockbackWeapon_Launcher",
+            "SubPathString": ""
           }
         ],
         "AbilitySet": {
@@ -327,11 +345,8 @@
       "PrisonThroughLootRoomItemsAndAS": {
         "Items": [
           {
-            "Count": 1,
-            "Item": {
-              "ObjectName": "AGID_Skyfire_JumpBackpack:AthenaGadgetItemDefinition",
-              "ObjectPath": "/Skyfire/Gameplay/AGID_Skyfire_JumpBackpack.0"
-            }
+            "AssetPathName": "/Skyfire/Gameplay/AGID_Skyfire_JumpBackpack.AGID_Skyfire_JumpBackpack",
+            "SubPathString": ""
           }
         ],
         "AbilitySet": {
@@ -460,6 +475,34 @@
       "ClearCachedIndicatorsInterval": 3.0,
       "SkyfireChestTag": {
         "TagName": "Building.Type.Container.TreasureChest.Skyfire"
+      },
+      "bShowLootRoomFlavorText_Perf": {
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+            "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+          },
+          "RowName": "Skyfire.LootRoom.ShowLootRoomFlavorText_Perf"
+        }
+      },
+      "bShowLootRoomFlavorText_Feel": {
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+            "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+          },
+          "RowName": "Skyfire.LootRoom.ShowLootRoomFlavorText_Feel"
+        }
+      },
+      "FlavorTextCountdownThreshold": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "OverrideGameData_Skyfire:CurveTable",
+            "ObjectPath": "/Skyfire/DataTables/OverrideGameData_Skyfire.0"
+          },
+          "RowName": "Skyfire.LootRoom.FlavorTextCountdownThreshold"
+        }
       },
       "RootComponent": null
     }

@@ -2,6 +2,7 @@
   {
     "Type": "NiagaraDataInterfaceCurve",
     "Name": "NiagaraDataInterfaceCurve_0",
+    "Outer": "SpawnScript",
     "Properties": {
       "ShaderLUT": [
         1.0,
@@ -70,6 +71,7 @@
   {
     "Type": "NiagaraDataInterfaceCurve",
     "Name": "NiagaraDataInterfaceCurve_0",
+    "Outer": "UpdateScript",
     "Properties": {
       "ShaderLUT": [
         1.0,
@@ -138,6 +140,7 @@
   {
     "Type": "NiagaraDataInterfaceCurve",
     "Name": "NiagaraDataInterfaceCurve_2",
+    "Outer": "UpdateScript",
     "Properties": {
       "ShaderLUT": [
         1.0,
@@ -206,6 +209,7 @@
   {
     "Type": "NiagaraDataInterfaceCurve",
     "Name": "NiagaraDataInterfaceCurve_0",
+    "Outer": "SystemUpdateScript",
     "Properties": {
       "ShaderLUT": [
         0.0,
@@ -328,6 +332,7 @@
   {
     "Type": "NiagaraDataInterfaceCurve",
     "Name": "NiagaraDataInterfaceCurve_1",
+    "Outer": "SystemUpdateScript",
     "Properties": {
       "ShaderLUT": [
         0.0,
@@ -450,31 +455,37 @@
   {
     "Type": "NiagaraDataInterfaceSkeletalMesh",
     "Name": "NiagaraDataInterfaceSkeletalMesh_0",
-    "Properties": {}
+    "Outer": "SpawnScript"
   },
   {
     "Type": "NiagaraDataInterfaceSkeletalMesh",
     "Name": "NiagaraDataInterfaceSkeletalMesh_1",
-    "Properties": {}
+    "Outer": "SpawnScript"
   },
   {
     "Type": "NiagaraDataInterfaceSkeletalMesh",
     "Name": "NiagaraDataInterfaceSkeletalMesh_0",
-    "Properties": {}
+    "Outer": "UpdateScript"
   },
   {
     "Type": "NiagaraDataInterfaceSkeletalMesh",
     "Name": "NiagaraDataInterfaceSkeletalMesh_1",
-    "Properties": {}
+    "Outer": "UpdateScript"
   },
   {
     "Type": "NiagaraDataInterfaceSkeletalMesh",
     "Name": "NiagaraDataInterfaceSkeletalMesh_0",
-    "Properties": {}
+    "Outer": "NS_Gardener_EggPlace",
+    "Properties": {
+      "FilteredBones": [
+        "attach"
+      ]
+    }
   },
   {
     "Type": "NiagaraEmitter",
     "Name": "Egg_0",
+    "Outer": "NS_Gardener_EggPlace",
     "Properties": {
       "UpdateScriptProps": {
         "Script": {
@@ -505,31 +516,30 @@
   {
     "Type": "NiagaraMeshRendererProperties",
     "Name": "NiagaraMeshRendererProperties_0",
-    "Properties": {}
+    "Outer": "Egg_0"
   },
   {
     "Type": "NiagaraScript",
     "Name": "SpawnScript",
-    "Properties": {}
+    "Outer": "Egg_0"
   },
   {
     "Type": "NiagaraScript",
     "Name": "UpdateScript",
-    "Properties": {}
+    "Outer": "Egg_0"
   },
   {
     "Type": "NiagaraScript",
     "Name": "SystemSpawnScript",
-    "Properties": {}
+    "Outer": "NS_Gardener_EggPlace"
   },
   {
     "Type": "NiagaraScript",
     "Name": "SystemUpdateScript",
-    "Properties": {}
+    "Outer": "NS_Gardener_EggPlace"
   },
   {
     "Type": "NiagaraSystem",
-    "Name": "NS_Gardener_EggPlace",
-    "Properties": {}
+    "Name": "NS_Gardener_EggPlace"
   }
 ]

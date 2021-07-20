@@ -1,0 +1,354 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "Boulder_Impact_Med_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "Boulder_Impact_Med_Cue:SoundNodeMixer_0:SoundNodeMixer",
+        "ObjectPath": "/MotherGameplay/Sounds/Boulder/Boulder_Impact_Med_Cue.2"
+      },
+      "VolumeMultiplier": 1.0,
+      "SoundClassObject": {
+        "ObjectName": "Fort_ImpactSounds_Default_Close:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_ImpactSounds_Default_Close.0"
+      },
+      "bHasDelayNode": true,
+      "Duration": 2.2365625,
+      "MaxDistance": 2000.0,
+      "AttenuationSettings": {
+        "ObjectName": "Fort_Demolition_Close_Att:SoundAttenuation",
+        "ObjectPath": "/Game/Sounds/Attenuation/Fort_Demolition_Close_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_0",
+    "Outer": "Boulder_Impact_Med_Cue",
+    "Properties": {
+      "DelayMin": 0.05,
+      "DelayMax": 0.2,
+      "ChildNodes": [
+        {
+          "ObjectName": "Boulder_Impact_Med_Cue:SoundNodeRandom_5:SoundNodeRandom",
+          "ObjectPath": "/MotherGameplay/Sounds/Boulder/Boulder_Impact_Med_Cue.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_0",
+    "Outer": "Boulder_Impact_Med_Cue",
+    "Properties": {
+      "InputVolume": [
+        0.5,
+        0.75
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "Boulder_Impact_Med_Cue:SoundNodeModulator_1:SoundNodeModulator",
+          "ObjectPath": "/MotherGameplay/Sounds/Boulder/Boulder_Impact_Med_Cue.4"
+        },
+        {
+          "ObjectName": "Boulder_Impact_Med_Cue:SoundNodeModulator_0:SoundNodeModulator",
+          "ObjectPath": "/MotherGameplay/Sounds/Boulder/Boulder_Impact_Med_Cue.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "Boulder_Impact_Med_Cue",
+    "Properties": {
+      "PitchMin": 0.98,
+      "PitchMax": 1.03,
+      "ChildNodes": [
+        {
+          "ObjectName": "Boulder_Impact_Med_Cue:SoundNodeRandom_0:SoundNodeRandom",
+          "ObjectPath": "/MotherGameplay/Sounds/Boulder/Boulder_Impact_Med_Cue.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_1",
+    "Outer": "Boulder_Impact_Med_Cue",
+    "Properties": {
+      "PitchMin": 1.2,
+      "PitchMax": 1.6,
+      "VolumeMin": 0.5,
+      "VolumeMax": 1.0,
+      "ChildNodes": [
+        {
+          "ObjectName": "Boulder_Impact_Med_Cue:SoundNodeDelay_0:SoundNodeDelay",
+          "ObjectPath": "/MotherGameplay/Sounds/Boulder/Boulder_Impact_Med_Cue.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "Boulder_Impact_Med_Cue",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "Boulder_Impact_Med_Cue:SoundNodeWavePlayer_0:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/Boulder/Boulder_Impact_Med_Cue.7"
+        },
+        {
+          "ObjectName": "Boulder_Impact_Med_Cue:SoundNodeWavePlayer_1:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/Boulder/Boulder_Impact_Med_Cue.8"
+        },
+        {
+          "ObjectName": "Boulder_Impact_Med_Cue:SoundNodeWavePlayer_2:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/Boulder/Boulder_Impact_Med_Cue.13"
+        },
+        {
+          "ObjectName": "Boulder_Impact_Med_Cue:SoundNodeWavePlayer_3:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/Boulder/Boulder_Impact_Med_Cue.18"
+        },
+        {
+          "ObjectName": "Boulder_Impact_Med_Cue:SoundNodeWavePlayer_4:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/Boulder/Boulder_Impact_Med_Cue.19"
+        },
+        {
+          "ObjectName": "Boulder_Impact_Med_Cue:SoundNodeWavePlayer_5:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/Boulder/Boulder_Impact_Med_Cue.20"
+        },
+        {
+          "ObjectName": "Boulder_Impact_Med_Cue:SoundNodeWavePlayer_6:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/Boulder/Boulder_Impact_Med_Cue.21"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_5",
+    "Outer": "Boulder_Impact_Med_Cue",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "Boulder_Impact_Med_Cue:SoundNodeWavePlayer_16:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/Boulder/Boulder_Impact_Med_Cue.9"
+        },
+        {
+          "ObjectName": "Boulder_Impact_Med_Cue:SoundNodeWavePlayer_17:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/Boulder/Boulder_Impact_Med_Cue.10"
+        },
+        {
+          "ObjectName": "Boulder_Impact_Med_Cue:SoundNodeWavePlayer_18:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/Boulder/Boulder_Impact_Med_Cue.11"
+        },
+        {
+          "ObjectName": "Boulder_Impact_Med_Cue:SoundNodeWavePlayer_19:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/Boulder/Boulder_Impact_Med_Cue.12"
+        },
+        {
+          "ObjectName": "Boulder_Impact_Med_Cue:SoundNodeWavePlayer_20:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/Boulder/Boulder_Impact_Med_Cue.14"
+        },
+        {
+          "ObjectName": "Boulder_Impact_Med_Cue:SoundNodeWavePlayer_21:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/Boulder/Boulder_Impact_Med_Cue.15"
+        },
+        {
+          "ObjectName": "Boulder_Impact_Med_Cue:SoundNodeWavePlayer_22:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/Boulder/Boulder_Impact_Med_Cue.16"
+        },
+        {
+          "ObjectName": "Boulder_Impact_Med_Cue:SoundNodeWavePlayer_23:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/Boulder/Boulder_Impact_Med_Cue.17"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "Boulder_Impact_Med_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/Boulder/Boulder_Med_Bounce_01.Boulder_Med_Bounce_01",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "Boulder_Impact_Med_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/Boulder/Boulder_Med_Bounce_02.Boulder_Med_Bounce_02",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_16",
+    "Outer": "Boulder_Impact_Med_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/Boulder/Boulder_Large_Bounce_01.Boulder_Large_Bounce_01",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_17",
+    "Outer": "Boulder_Impact_Med_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/Boulder/Boulder_Large_Bounce_02.Boulder_Large_Bounce_02",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_18",
+    "Outer": "Boulder_Impact_Med_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/Boulder/Boulder_Large_Bounce_03.Boulder_Large_Bounce_03",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_19",
+    "Outer": "Boulder_Impact_Med_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/Boulder/Boulder_Large_Bounce_04.Boulder_Large_Bounce_04",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "Boulder_Impact_Med_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/Boulder/Boulder_Med_Bounce_03.Boulder_Med_Bounce_03",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_20",
+    "Outer": "Boulder_Impact_Med_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/Boulder/Boulder_Large_Bounce_05.Boulder_Large_Bounce_05",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_21",
+    "Outer": "Boulder_Impact_Med_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/Boulder/Boulder_Large_Bounce_06.Boulder_Large_Bounce_06",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_22",
+    "Outer": "Boulder_Impact_Med_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/Boulder/Boulder_Large_Bounce_07.Boulder_Large_Bounce_07",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_23",
+    "Outer": "Boulder_Impact_Med_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/Boulder/Boulder_Large_Bounce_08.Boulder_Large_Bounce_08",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "Boulder_Impact_Med_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/Boulder/Boulder_Med_Bounce_04.Boulder_Med_Bounce_04",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_4",
+    "Outer": "Boulder_Impact_Med_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/Boulder/Boulder_Med_Bounce_05.Boulder_Med_Bounce_05",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_5",
+    "Outer": "Boulder_Impact_Med_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/Boulder/Boulder_Med_Bounce_06.Boulder_Med_Bounce_06",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_6",
+    "Outer": "Boulder_Impact_Med_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/Boulder/Boulder_Med_Bounce_07.Boulder_Med_Bounce_07",
+        "SubPathString": ""
+      }
+    }
+  }
+]

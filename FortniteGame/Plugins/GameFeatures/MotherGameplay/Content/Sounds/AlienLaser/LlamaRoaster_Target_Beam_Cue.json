@@ -1,0 +1,89 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "LlamaRoaster_Target_Beam_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "LlamaRoaster_Target_Beam_Cue:SoundNodeSoundClass_5:SoundNodeSoundClass",
+        "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/LlamaRoaster_Target_Beam_Cue.2"
+      },
+      "VolumeMultiplier": 0.1,
+      "AttenuationOverrides": {
+        "StereoSpread": 512.0,
+        "FalloffDistance": 1500.0
+      },
+      "bOverrideAttenuation": true,
+      "SoundClassObject": null,
+      "bDebug": true,
+      "bOverrideConcurrency": true,
+      "ConcurrencyOverrides": {
+        "MaxCount": 2,
+        "bLimitToOwner": true
+      },
+      "Duration": 10000.0,
+      "MaxDistance": 1900.0
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_1",
+    "Outer": "LlamaRoaster_Target_Beam_Cue",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "LlamaRoaster_Target_Beam_Cue:SoundNodeWavePlayer_0:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/LlamaRoaster_Target_Beam_Cue.3"
+        },
+        {
+          "ObjectName": "LlamaRoaster_Target_Beam_Cue:SoundNodeWavePlayer_1:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/LlamaRoaster_Target_Beam_Cue.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeSoundClass",
+    "Name": "SoundNodeSoundClass_5",
+    "Outer": "LlamaRoaster_Target_Beam_Cue",
+    "Properties": {
+      "SoundClassOverride": {
+        "ObjectName": "Fort_Weapon_Projectile_PSM:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Weapon_Projectile_PSM.0"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "LlamaRoaster_Target_Beam_Cue:SoundNodeRandom_1:SoundNodeRandom",
+          "ObjectPath": "/MotherGameplay/Sounds/AlienLaser/LlamaRoaster_Target_Beam_Cue.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "LlamaRoaster_Target_Beam_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_FireLoop_Beam_01.AlienLaser_FireLoop_Beam_01",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "LlamaRoaster_Target_Beam_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/AlienLaser/AlienLaser_FireLoop_Beam_02.AlienLaser_FireLoop_Beam_02",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    }
+  }
+]

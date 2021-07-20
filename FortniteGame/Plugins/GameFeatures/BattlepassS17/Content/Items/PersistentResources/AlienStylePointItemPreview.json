@@ -2,6 +2,7 @@
   {
     "Type": "BlueprintGeneratedClass",
     "Name": "AlienStylePointItemPreview_C",
+    "Super": "BattlePassItemPreview_C",
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "AlienStylePointItemPreview_C:SimpleConstructionScript_0:SimpleConstructionScript",
@@ -11,11 +12,32 @@
         "ObjectName": "AlienStylePointItemPreview_C:InheritableComponentHandler:InheritableComponentHandler",
         "ObjectPath": "/BattlepassS17/Items/PersistentResources/AlienStylePointItemPreview.5"
       }
+    },
+    "SuperStruct": {
+      "ObjectName": "BattlePassItemPreview_C:BlueprintGeneratedClass",
+      "ObjectPath": "/Game/Environments/FrontEnd/Blueprints/ItemPreview/BattlePassItemPreview.9"
+    },
+    "Children": [],
+    "ChildProperties": [],
+    "FuncMap": {},
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Object:Class",
+      "ObjectPath": 0
+    },
+    "ClassConfigName": "Engine",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Default__AlienStylePointItemPreview_C:AlienStylePointItemPreview_C",
+      "ObjectPath": "/BattlepassS17/Items/PersistentResources/AlienStylePointItemPreview.1"
     }
   },
   {
     "Type": "AlienStylePointItemPreview_C",
     "Name": "Default__AlienStylePointItemPreview_C",
+    "Template": "Default__BattlePassItemPreview_C",
     "Properties": {
       "bIsStaticMesh": true,
       "PreviewActorComponent": {
@@ -55,6 +77,8 @@
   {
     "Type": "CameraComponent",
     "Name": "ZoomedInCameraComponent",
+    "Outer": "Default__AlienStylePointItemPreview_C",
+    "Template": "ZoomedInCameraComponent",
     "Properties": {
       "AttachParent": {
         "ObjectName": "Default__AlienStylePointItemPreview_C:RootComponent:SceneComponent",
@@ -65,6 +89,8 @@
   {
     "Type": "CameraComponent",
     "Name": "ZoomedOutCameraComponent",
+    "Outer": "Default__AlienStylePointItemPreview_C",
+    "Template": "ZoomedOutCameraComponent",
     "Properties": {
       "AttachParent": {
         "ObjectName": "Default__AlienStylePointItemPreview_C:RootComponent:SceneComponent",
@@ -75,6 +101,8 @@
   {
     "Type": "ChildActorComponent",
     "Name": "PreviewActor",
+    "Outer": "Default__AlienStylePointItemPreview_C",
+    "Template": "PreviewActor",
     "Properties": {
       "AttachParent": {
         "ObjectName": "Default__AlienStylePointItemPreview_C:UserRotationComponent:SceneComponent",
@@ -84,6 +112,8 @@
   },
   {
     "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "AlienStylePointItemPreview_C",
     "Properties": {
       "Records": [
         {
@@ -136,11 +166,13 @@
   {
     "Type": "SceneComponent",
     "Name": "DefaultSceneRoot_GEN_VARIABLE",
-    "Properties": {}
+    "Outer": "AlienStylePointItemPreview_C"
   },
   {
     "Type": "SceneComponent",
     "Name": "ItemPreviewRootComponent",
+    "Outer": "Default__AlienStylePointItemPreview_C",
+    "Template": "ItemPreviewRootComponent",
     "Properties": {
       "AttachParent": {
         "ObjectName": "Default__AlienStylePointItemPreview_C:RootComponent:SceneComponent",
@@ -151,11 +183,14 @@
   {
     "Type": "SceneComponent",
     "Name": "RootComponent",
-    "Properties": {}
+    "Outer": "Default__AlienStylePointItemPreview_C",
+    "Template": "RootComponent"
   },
   {
     "Type": "SceneComponent",
     "Name": "UserRotationComponent",
+    "Outer": "Default__AlienStylePointItemPreview_C",
+    "Template": "UserRotationComponent",
     "Properties": {
       "AttachParent": {
         "ObjectName": "Default__AlienStylePointItemPreview_C:ItemPreviewRootComponent:SceneComponent",
@@ -166,6 +201,7 @@
   {
     "Type": "SCS_Node",
     "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
     "Properties": {
       "ComponentClass": {
         "ObjectName": "SceneComponent:Class",
@@ -182,6 +218,7 @@
   {
     "Type": "SimpleConstructionScript",
     "Name": "SimpleConstructionScript_0",
+    "Outer": "AlienStylePointItemPreview_C",
     "Properties": {
       "DefaultSceneRootNode": {
         "ObjectName": "SimpleConstructionScript_0:SCS_Node_0:SCS_Node",
@@ -192,6 +229,8 @@
   {
     "Type": "SkeletalMeshComponent",
     "Name": "PreviewSkeletalMesh",
+    "Outer": "Default__AlienStylePointItemPreview_C",
+    "Template": "PreviewSkeletalMesh",
     "Properties": {
       "AttachParent": {
         "ObjectName": "Default__AlienStylePointItemPreview_C:UserRotationComponent:SceneComponent",
@@ -202,6 +241,8 @@
   {
     "Type": "StaticMeshComponent",
     "Name": "BattlePass-Preview_GEN_VARIABLE",
+    "Outer": "AlienStylePointItemPreview_C",
+    "Template": "BattlePass-Preview_GEN_VARIABLE",
     "Properties": {
       "bVisible": false
     }
@@ -209,6 +250,8 @@
   {
     "Type": "StaticMeshComponent",
     "Name": "StaticMesh_GEN_VARIABLE",
+    "Outer": "AlienStylePointItemPreview_C",
+    "Template": "StaticMesh_GEN_VARIABLE",
     "Properties": {
       "StaticMesh": {
         "ObjectName": "Alien_Style_Point:StaticMesh",
@@ -245,6 +288,8 @@
   {
     "Type": "StaticMeshComponent",
     "Name": "PreviewStaticMesh",
+    "Outer": "Default__AlienStylePointItemPreview_C",
+    "Template": "PreviewStaticMesh",
     "Properties": {
       "AttachParent": {
         "ObjectName": "Default__AlienStylePointItemPreview_C:UserRotationComponent:SceneComponent",

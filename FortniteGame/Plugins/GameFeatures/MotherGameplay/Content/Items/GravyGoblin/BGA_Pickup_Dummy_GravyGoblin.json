@@ -18,19 +18,38 @@
         "BlueprintReplicationCondition": "COND_None"
       },
       {
-        "Type": "StructProperty",
-        "Name": "K2Node_CustomEvent_NewLocation",
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAuthority_ReturnValue",
         "Flags": 1,
         "ArrayDim": 1,
-        "ElementSize": 12,
+        "ElementSize": 1,
         "PropertyFlags": 0,
         "RepIndex": 0,
         "RepNotifyFunc": "None",
         "BlueprintReplicationCondition": "COND_None",
-        "Struct": {
-          "ObjectName": "Vector:Class",
-          "ObjectPath": 0
-        }
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAuthority_ReturnValue_1",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
       },
       {
         "Type": "ObjectProperty",
@@ -483,6 +502,36 @@
       },
       {
         "Type": "StructProperty",
+        "Name": "CallFunc_MarkActorOnClient_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "MarkerID:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_NewLocation",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "Struct": {
+          "ObjectName": "Vector:Class",
+          "ObjectPath": 0
+        }
+      },
+      {
+        "Type": "StructProperty",
         "Name": "CallFunc_K2_SetActorLocation_SweepHitResult",
         "Flags": 1,
         "ArrayDim": 1,
@@ -512,41 +561,20 @@
         "FieldMask": 255,
         "BoolSize": 1,
         "bIsNativeBool": true
-      },
-      {
-        "Type": "StructProperty",
-        "Name": "CallFunc_MarkActorOnClient_ReturnValue",
-        "Flags": 1,
-        "ArrayDim": 1,
-        "ElementSize": 8,
-        "PropertyFlags": 0,
-        "RepIndex": 0,
-        "RepNotifyFunc": "None",
-        "BlueprintReplicationCondition": "COND_None",
-        "Struct": {
-          "ObjectName": "MarkerID:Class",
-          "ObjectPath": 0
-        }
-      },
-      {
-        "Type": "BoolProperty",
-        "Name": "CallFunc_HasAuthority_ReturnValue",
-        "Flags": 1,
-        "ArrayDim": 1,
-        "ElementSize": 1,
-        "PropertyFlags": 0,
-        "RepIndex": 0,
-        "RepNotifyFunc": "None",
-        "BlueprintReplicationCondition": "COND_None",
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
       }
     ],
     "FunctionFlags": 8421377,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
+    "Type": "Function",
+    "Name": "Throw",
+    "Outer": "BGA_Pickup_Dummy_GravyGoblin_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [],
+    "FunctionFlags": 201326592,
     "EventGraphFunction": null,
     "EventGraphCallOffset": 0
   },
@@ -665,25 +693,65 @@
     "EventGraphCallOffset": 0
   },
   {
+    "Type": "Function",
+    "Name": "OnRep_Thrown",
+    "Outer": "BGA_Pickup_Dummy_GravyGoblin_C",
+    "SuperStruct": null,
+    "Children": [],
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "Temp_name_Variable",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 2,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Array_RemoveItem_ReturnValue",
+        "Flags": 1,
+        "ArrayDim": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 0,
+        "RepIndex": 0,
+        "RepNotifyFunc": "None",
+        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 201326592,
+    "EventGraphFunction": null,
+    "EventGraphCallOffset": 0
+  },
+  {
     "Type": "BlueprintGeneratedClass",
     "Name": "BGA_Pickup_Dummy_GravyGoblin_C",
     "Super": "BGA_Athena_Physics_Parent_C",
     "Properties": {
-      "NumReplicatedProperties": 1,
+      "NumReplicatedProperties": 2,
       "bHasCookedComponentInstancingData": true,
       "DynamicBindingObjects": [
         {
           "ObjectName": "BGA_Pickup_Dummy_GravyGoblin_C:ComponentDelegateBinding_0:ComponentDelegateBinding",
-          "ObjectPath": "/MotherGameplay/Items/GravyGoblin/BGA_Pickup_Dummy_GravyGoblin.5"
+          "ObjectPath": "/MotherGameplay/Items/GravyGoblin/BGA_Pickup_Dummy_GravyGoblin.7"
         }
       ],
       "SimpleConstructionScript": {
         "ObjectName": "BGA_Pickup_Dummy_GravyGoblin_C:SimpleConstructionScript_0:SimpleConstructionScript",
-        "ObjectPath": "/MotherGameplay/Items/GravyGoblin/BGA_Pickup_Dummy_GravyGoblin.10"
+        "ObjectPath": "/MotherGameplay/Items/GravyGoblin/BGA_Pickup_Dummy_GravyGoblin.12"
       },
       "InheritableComponentHandler": {
         "ObjectName": "BGA_Pickup_Dummy_GravyGoblin_C:InheritableComponentHandler:InheritableComponentHandler",
-        "ObjectPath": "/MotherGameplay/Items/GravyGoblin/BGA_Pickup_Dummy_GravyGoblin.7"
+        "ObjectPath": "/MotherGameplay/Items/GravyGoblin/BGA_Pickup_Dummy_GravyGoblin.9"
       },
       "UberGraphFunction": {
         "ObjectName": "BGA_Pickup_Dummy_GravyGoblin_C:ExecuteUbergraph_BGA_Pickup_Dummy_GravyGoblin:Function",
@@ -696,11 +764,19 @@
     },
     "Children": [
       {
+        "ObjectName": "BGA_Pickup_Dummy_GravyGoblin_C:OnRep_Thrown:Function",
+        "ObjectPath": "/MotherGameplay/Items/GravyGoblin/BGA_Pickup_Dummy_GravyGoblin.4"
+      },
+      {
         "ObjectName": "BGA_Pickup_Dummy_GravyGoblin_C:BndEvt__ParentMesh_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature:Function",
-        "ObjectPath": "/MotherGameplay/Items/GravyGoblin/BGA_Pickup_Dummy_GravyGoblin.2"
+        "ObjectPath": "/MotherGameplay/Items/GravyGoblin/BGA_Pickup_Dummy_GravyGoblin.3"
       },
       {
         "ObjectName": "BGA_Pickup_Dummy_GravyGoblin_C:Detach:Function",
+        "ObjectPath": "/MotherGameplay/Items/GravyGoblin/BGA_Pickup_Dummy_GravyGoblin.2"
+      },
+      {
+        "ObjectName": "BGA_Pickup_Dummy_GravyGoblin_C:Throw:Function",
         "ObjectPath": "/MotherGameplay/Items/GravyGoblin/BGA_Pickup_Dummy_GravyGoblin.1"
       },
       {
@@ -730,9 +806,9 @@
         "Flags": 2097153,
         "ArrayDim": 1,
         "ElementSize": 1,
-        "PropertyFlags": 65541,
-        "RepIndex": 0,
-        "RepNotifyFunc": "None",
+        "PropertyFlags": 4295032869,
+        "RepIndex": 32,
+        "RepNotifyFunc": "OnRep_Thrown",
         "BlueprintReplicationCondition": "COND_None",
         "FieldSize": 1,
         "ByteOffset": 0,
@@ -763,7 +839,7 @@
         "ArrayDim": 1,
         "ElementSize": 8,
         "PropertyFlags": 67621,
-        "RepIndex": 32,
+        "RepIndex": 33,
         "RepNotifyFunc": "None",
         "BlueprintReplicationCondition": "COND_None",
         "PropertyClass": {
@@ -777,13 +853,21 @@
         "ObjectName": "BGA_Pickup_Dummy_GravyGoblin_C:ExecuteUbergraph_BGA_Pickup_Dummy_GravyGoblin:Function",
         "ObjectPath": "/MotherGameplay/Items/GravyGoblin/BGA_Pickup_Dummy_GravyGoblin.0"
       },
+      "Throw": {
+        "ObjectName": "BGA_Pickup_Dummy_GravyGoblin_C:Throw:Function",
+        "ObjectPath": "/MotherGameplay/Items/GravyGoblin/BGA_Pickup_Dummy_GravyGoblin.1"
+      },
       "Detach": {
         "ObjectName": "BGA_Pickup_Dummy_GravyGoblin_C:Detach:Function",
-        "ObjectPath": "/MotherGameplay/Items/GravyGoblin/BGA_Pickup_Dummy_GravyGoblin.1"
+        "ObjectPath": "/MotherGameplay/Items/GravyGoblin/BGA_Pickup_Dummy_GravyGoblin.2"
       },
       "BndEvt__ParentMesh_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature": {
         "ObjectName": "BGA_Pickup_Dummy_GravyGoblin_C:BndEvt__ParentMesh_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature:Function",
-        "ObjectPath": "/MotherGameplay/Items/GravyGoblin/BGA_Pickup_Dummy_GravyGoblin.2"
+        "ObjectPath": "/MotherGameplay/Items/GravyGoblin/BGA_Pickup_Dummy_GravyGoblin.3"
+      },
+      "OnRep_Thrown": {
+        "ObjectName": "BGA_Pickup_Dummy_GravyGoblin_C:OnRep_Thrown:Function",
+        "ObjectPath": "/MotherGameplay/Items/GravyGoblin/BGA_Pickup_Dummy_GravyGoblin.4"
       }
     },
     "ClassFlags": 8652820,
@@ -797,7 +881,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "Default__BGA_Pickup_Dummy_GravyGoblin_C:BGA_Pickup_Dummy_GravyGoblin_C",
-      "ObjectPath": "/MotherGameplay/Items/GravyGoblin/BGA_Pickup_Dummy_GravyGoblin.4"
+      "ObjectPath": "/MotherGameplay/Items/GravyGoblin/BGA_Pickup_Dummy_GravyGoblin.6"
     }
   },
   {
@@ -807,7 +891,15 @@
     "Properties": {
       "UberGraphFrame": {},
       "bAlwaysUseNetCullDistanceSquaredForRelevancy": true,
-      "bCanBeDamaged": false
+      "StaticGameplayTags": [
+        "Building.Type.Gameplay",
+        "Building.Type.Physics",
+        "Asset.Athena.GravyGoblin.DummyObject"
+      ],
+      "bCanBeDamaged": false,
+      "Tags": [
+        "GrabbedByGravyGoblin"
+      ]
     }
   },
   {
@@ -849,7 +941,7 @@
           },
           "ComponentTemplate": {
             "ObjectName": "BGA_Pickup_Dummy_GravyGoblin_C:FortPhysicsObject_GEN_VARIABLE:FortPhysicsObjectComponent",
-            "ObjectPath": "/MotherGameplay/Items/GravyGoblin/BGA_Pickup_Dummy_GravyGoblin.6"
+            "ObjectPath": "/MotherGameplay/Items/GravyGoblin/BGA_Pickup_Dummy_GravyGoblin.8"
           },
           "ComponentKey": {
             "OwnerClass": {
@@ -880,7 +972,7 @@
           },
           "ComponentTemplate": {
             "ObjectName": "BGA_Pickup_Dummy_GravyGoblin_C:ParentMesh_GEN_VARIABLE:StaticMeshComponent",
-            "ObjectPath": "/MotherGameplay/Items/GravyGoblin/BGA_Pickup_Dummy_GravyGoblin.11"
+            "ObjectPath": "/MotherGameplay/Items/GravyGoblin/BGA_Pickup_Dummy_GravyGoblin.13"
           },
           "ComponentKey": {
             "OwnerClass": {
@@ -1211,7 +1303,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "BGA_Pickup_Dummy_GravyGoblin_C:DefaultSceneRoot_GEN_VARIABLE:SceneComponent",
-        "ObjectPath": "/MotherGameplay/Items/GravyGoblin/BGA_Pickup_Dummy_GravyGoblin.8"
+        "ObjectPath": "/MotherGameplay/Items/GravyGoblin/BGA_Pickup_Dummy_GravyGoblin.10"
       },
       "VariableGuid": "28F19F76-4BEF0ACC-2D74A695-6A02DAF9",
       "InternalVariableName": "DefaultSceneRoot"
@@ -1224,7 +1316,7 @@
     "Properties": {
       "DefaultSceneRootNode": {
         "ObjectName": "SimpleConstructionScript_0:SCS_Node_0:SCS_Node",
-        "ObjectPath": "/MotherGameplay/Items/GravyGoblin/BGA_Pickup_Dummy_GravyGoblin.9"
+        "ObjectPath": "/MotherGameplay/Items/GravyGoblin/BGA_Pickup_Dummy_GravyGoblin.11"
       }
     }
   },

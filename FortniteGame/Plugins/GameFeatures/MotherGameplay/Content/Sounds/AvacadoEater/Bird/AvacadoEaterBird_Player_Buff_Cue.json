@@ -1,0 +1,226 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "AvacadoEaterBird_Player_Buff_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "AvacadoEaterBird_Player_Buff_Cue:SoundNodeEnveloper_1:SoundNodeEnveloper",
+        "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Bird/AvacadoEaterBird_Player_Buff_Cue.2"
+      },
+      "VolumeMultiplier": 0.5,
+      "SoundClassObject": {
+        "ObjectName": "Fort_Gadgets:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Gadgets.0"
+      },
+      "bHasDelayNode": true,
+      "Duration": 10000.0,
+      "MaxDistance": 3072.0,
+      "AttenuationSettings": {
+        "ObjectName": "AvacadoEater_Att:SoundAttenuation",
+        "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Attenuations/AvacadoEater_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_2",
+    "Outer": "AvacadoEaterBird_Player_Buff_Cue",
+    "Properties": {
+      "DelayMin": 0.5,
+      "DelayMax": 2.0,
+      "ChildNodes": [
+        {
+          "ObjectName": "AvacadoEaterBird_Player_Buff_Cue:SoundNodeRandom_2:SoundNodeRandom",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Bird/AvacadoEaterBird_Player_Buff_Cue.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeEnveloper",
+    "Name": "SoundNodeEnveloper_1",
+    "Outer": "AvacadoEaterBird_Player_Buff_Cue",
+    "Properties": {
+      "VolumeCurve": {
+        "EditorCurveData": {
+          "Keys": [
+            {
+              "InterpMode": 0,
+              "TangentMode": 0,
+              "TangentWeightMode": 0,
+              "KeyTime": 0.0,
+              "KeyValue": 5.831554E-39,
+              "ArriveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangent": 0.0,
+              "LeaveTangentWeight": 9.403955E-38
+            },
+            {
+              "InterpMode": 2,
+              "TangentMode": 0,
+              "TangentWeightMode": 0,
+              "KeyTime": 2.3318E-41,
+              "KeyValue": 2.4329158E-16,
+              "ArriveTangent": 6.771E-41,
+              "ArriveTangentWeight": 1.9101783E-37,
+              "LeaveTangent": 6.7872E-41,
+              "LeaveTangentWeight": 1.83671E-40
+            },
+            {
+              "InterpMode": 0,
+              "TangentMode": 0,
+              "TangentWeightMode": 0,
+              "KeyTime": 9.1E-44,
+              "KeyValue": 8.8E-44,
+              "ArriveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangent": 0.0,
+              "LeaveTangentWeight": 2.75506E-40
+            }
+          ]
+        }
+      },
+      "PitchCurve": {},
+      "ChildNodes": []
+    }
+  },
+  {
+    "Type": "SoundNodeLooping",
+    "Name": "SoundNodeLooping_0",
+    "Outer": "AvacadoEaterBird_Player_Buff_Cue",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "AvacadoEaterBird_Player_Buff_Cue:SoundNodeDelay_2:SoundNodeDelay",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Bird/AvacadoEaterBird_Player_Buff_Cue.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_1",
+    "Outer": "AvacadoEaterBird_Player_Buff_Cue",
+    "Properties": {
+      "InputVolume": [
+        1.0,
+        1.5,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "AvacadoEaterBird_Player_Buff_Cue:SoundNodeWavePlayer_1:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Bird/AvacadoEaterBird_Player_Buff_Cue.6"
+        },
+        {
+          "ObjectName": "AvacadoEaterBird_Player_Buff_Cue:SoundNodeLooping_0:SoundNodeLooping",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Bird/AvacadoEaterBird_Player_Buff_Cue.3"
+        },
+        null
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_2",
+    "Outer": "AvacadoEaterBird_Player_Buff_Cue",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "AvacadoEaterBird_Player_Buff_Cue:SoundNodeWavePlayer_10:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Bird/AvacadoEaterBird_Player_Buff_Cue.7"
+        },
+        {
+          "ObjectName": "AvacadoEaterBird_Player_Buff_Cue:SoundNodeWavePlayer_11:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Bird/AvacadoEaterBird_Player_Buff_Cue.8"
+        },
+        {
+          "ObjectName": "AvacadoEaterBird_Player_Buff_Cue:SoundNodeWavePlayer_12:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Bird/AvacadoEaterBird_Player_Buff_Cue.9"
+        },
+        {
+          "ObjectName": "AvacadoEaterBird_Player_Buff_Cue:SoundNodeWavePlayer_13:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Bird/AvacadoEaterBird_Player_Buff_Cue.10"
+        },
+        {
+          "ObjectName": "AvacadoEaterBird_Player_Buff_Cue:SoundNodeWavePlayer_14:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/AvacadoEater/Bird/AvacadoEaterBird_Player_Buff_Cue.11"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "AvacadoEaterBird_Player_Buff_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_Weapons/Alterations/Deconstructor/Perk_Deconstructor_Shotgun_Buff_Loop.Perk_Deconstructor_Shotgun_Buff_Loop",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_10",
+    "Outer": "AvacadoEaterBird_Player_Buff_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_Weapons/Alterations/Deconstructor/Perk_Deconstructor_Shotgun_Buff_Loop_Swt_01.Perk_Deconstructor_Shotgun_Buff_Loop_Swt_01",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_11",
+    "Outer": "AvacadoEaterBird_Player_Buff_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_Weapons/Alterations/Deconstructor/Perk_Deconstructor_Shotgun_Buff_Loop_Swt_02.Perk_Deconstructor_Shotgun_Buff_Loop_Swt_02",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_12",
+    "Outer": "AvacadoEaterBird_Player_Buff_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_Weapons/Alterations/Deconstructor/Perk_Deconstructor_Shotgun_Buff_Loop_Swt_03.Perk_Deconstructor_Shotgun_Buff_Loop_Swt_03",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_13",
+    "Outer": "AvacadoEaterBird_Player_Buff_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_Weapons/Alterations/Deconstructor/Perk_Deconstructor_Shotgun_Buff_Loop_Swt_04.Perk_Deconstructor_Shotgun_Buff_Loop_Swt_04",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_14",
+    "Outer": "AvacadoEaterBird_Player_Buff_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_Weapons/Alterations/Deconstructor/Perk_Deconstructor_Shotgun_Buff_Loop_Swt_05.Perk_Deconstructor_Shotgun_Buff_Loop_Swt_05",
+        "SubPathString": ""
+      }
+    }
+  }
+]

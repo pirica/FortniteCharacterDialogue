@@ -1,0 +1,125 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "WPN_Bad_News_Charge_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "WPN_Bad_News_Charge_Cue:SoundNodeModulator_0:SoundNodeModulator",
+        "ObjectPath": "/MotherGameplay/Sounds/BadNews/WPN_Bad_News_Charge_Cue.1"
+      },
+      "VolumeMultiplier": 1.0,
+      "AttenuationOverrides": {
+        "AttenuationShapeExtents": {
+          "X": 1000.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 5000.0
+      },
+      "SoundClassObject": {
+        "ObjectName": "Fort_Weapon_Projectile_PSM:SoundClass",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Weapon_Projectile_PSM.0"
+      },
+      "bOverrideConcurrency": true,
+      "ConcurrencyOverrides": {
+        "MaxCount": 1,
+        "bLimitToOwner": true,
+        "ResolutionRule": "EMaxConcurrentResolutionRule::StopOldest"
+      },
+      "Duration": 1.9403541,
+      "MaxDistance": 5800.0,
+      "AttenuationSettings": {
+        "ObjectName": "WPN_Bad_News_Unstable_Att:SoundAttenuation",
+        "ObjectPath": "/MotherGameplay/Sounds/BadNews/WPN_Bad_News_Unstable_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "WPN_Bad_News_Charge_Cue",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "WPN_Bad_News_Charge_Cue:SoundNodeRandom_1:SoundNodeRandom",
+          "ObjectPath": "/MotherGameplay/Sounds/BadNews/WPN_Bad_News_Charge_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_1",
+    "Outer": "WPN_Bad_News_Charge_Cue",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "WPN_Bad_News_Charge_Cue:SoundNodeWavePlayer_4:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/BadNews/WPN_Bad_News_Charge_Cue.4"
+        },
+        {
+          "ObjectName": "WPN_Bad_News_Charge_Cue:SoundNodeWavePlayer_5:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/BadNews/WPN_Bad_News_Charge_Cue.5"
+        },
+        {
+          "ObjectName": "WPN_Bad_News_Charge_Cue:SoundNodeWavePlayer_6:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/BadNews/WPN_Bad_News_Charge_Cue.6"
+        },
+        {
+          "ObjectName": "WPN_Bad_News_Charge_Cue:SoundNodeWavePlayer_20:SoundNodeWavePlayer",
+          "ObjectPath": "/MotherGameplay/Sounds/BadNews/WPN_Bad_News_Charge_Cue.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_20",
+    "Outer": "WPN_Bad_News_Charge_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/BadNews/WPN_Bad_News_Charge_03.WPN_Bad_News_Charge_03",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_4",
+    "Outer": "WPN_Bad_News_Charge_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/BadNews/WPN_Bad_News_Charge_04.WPN_Bad_News_Charge_04",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_5",
+    "Outer": "WPN_Bad_News_Charge_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/BadNews/WPN_Bad_News_Charge_01.WPN_Bad_News_Charge_01",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_6",
+    "Outer": "WPN_Bad_News_Charge_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/MotherGameplay/Sounds/BadNews/WPN_Bad_News_Charge_02.WPN_Bad_News_Charge_02",
+        "SubPathString": ""
+      }
+    }
+  }
+]
