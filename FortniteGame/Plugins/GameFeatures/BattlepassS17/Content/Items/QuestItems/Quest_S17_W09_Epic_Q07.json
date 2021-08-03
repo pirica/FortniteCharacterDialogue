@@ -1,6 +1,231 @@
 [
   {
     "Type": "FortQuestItemDefinition",
-    "Name": "Quest_S17_W09_Epic_Q07"
+    "Name": "Quest_S17_W09_Epic_Q07",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "QuestSubtype": "EFortQuestSubtype::WeeklyChallenge",
+      "bShouldDisplayOverallQuestInformation": true,
+      "bAthenaMustCompleteInSingleMatch": true,
+      "TandemCharacterData": {
+        "AssetPathName": "/Slone/NPCs/Slone/Slone/NPCCharacterData_Slone.NPCCharacterData_Slone",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "bIsShared": true,
+      "RewardsTable": {
+        "ObjectName": "ChallengeReward_S17_WeeklyXP:DataTable",
+        "ObjectPath": "/BattlepassS17/Items/QuestRewards/ChallengeReward_S17_WeeklyXP.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athenabattlepass_weeklychallenge_token",
+          "Quantity": 1
+        },
+        {
+          "TemplateId": "Token:athenabattlepass_s17_w09",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S17_W09_Epic_Q07_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.Quest.Sample.Pickup"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Interact",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "6F8A2F74496244E5FF8D638659501E46",
+            "SourceString": "Carry an alien sample from a Satellite Station's Dish to an entrance of Corny Complex"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "9E0A4C9C4EE70B6EEDCDDD97D93B3ED3",
+            "SourceString": "These samples could be vital to our war efforts. Get them to the lab, ASAP."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 1,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 0,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        },
+        {
+          "BackendName": "Quest_S17_W09_Epic_Q07_obj1",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.Quest.Sample.Dropoff"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Interact",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "795EF35C44F83E8C3909A3AF4B4C4E1B",
+            "SourceString": "Carry an alien sample from a Satellite Station to Corny Complex"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "9E0A4C9C4EE70B6EEDCDDD97D93B3ED3",
+            "SourceString": "These samples could be vital to our war efforts. Get them to the lab, ASAP."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 1,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 0,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "Quest_S17_W09_Epic_Q07",
+        "Key": "Quest_S17_W09_Epic_Q07_CompletionText",
+        "SourceString": "With some good science and biochemical synthesis... this could turn the tide for us."
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Epic",
+      "DisplayName": {
+        "Namespace": "",
+        "Key": "6F8A2F74496244E5FF8D638659501E46",
+        "SourceString": "Carry an alien sample from a Satellite Station's Dish to an entrance of Corny Complex"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S17_W09_Epic_Q07",
+        "Key": "Quest_S17_W09_Epic_Q07_ShortDescription",
+        "SourceString": "These samples could be vital to our war efforts. Get them to the lab, ASAP."
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "6F8A2F74496244E5FF8D638659501E46",
+        "SourceString": "Carry an alien sample from a Satellite Station's Dish to an entrance of Corny Complex"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP",
+        "Athena.Location.UnnamedPOI.RadarDishBase.07",
+        "Athena.Location.UnnamedPOI.RadarDishBase.06",
+        "Athena.Location.UnnamedPOI.RadarDishBase.05",
+        "Athena.Location.UnnamedPOI.RadarDishBase.04",
+        "Athena.Location.UnnamedPOI.RadarDishBase.03",
+        "Athena.Location.UnnamedPOI.RadarDishBase.02",
+        "Athena.Location.UnnamedPOI.RadarDishBase.01",
+        "Athena.Location.POI.GovernmentComplex"
+      ]
+    }
   }
 ]

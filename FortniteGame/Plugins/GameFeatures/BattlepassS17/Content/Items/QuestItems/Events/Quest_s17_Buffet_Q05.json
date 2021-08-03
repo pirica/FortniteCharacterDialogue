@@ -1,6 +1,124 @@
 [
   {
     "Type": "FortQuestItemDefinition",
-    "Name": "Quest_s17_Buffet_Q05"
+    "Name": "Quest_s17_Buffet_Q05",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "bAthenaGrantRarityToken": false,
+      "TandemCharacterData": {
+        "AssetPathName": "/BattlepassS17/Items/NpcItems/NPCCharacterData_DJBop.NPCCharacterData_DJBop",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "RewardsTable": {
+        "ObjectName": "ChallengeReward_S17_EventXP_Med:DataTable",
+        "ObjectPath": "/BattlepassS17/Items/QuestRewards/ChallengeReward_S17_EventXP_Med.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_s17_buffet_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_s17_Buffet_Q05_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "SquadFriend.Count > 0",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::AthenaRank",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "63B1D5454A031003F69F73B34779B781",
+            "SourceString": "Play matches with friends"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "16C695064366214C1E67AB8891842268",
+            "SourceString": "Let's keep this party goin'! We're all still here, aren't we?"
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 10,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "Quest_s17_Buffet_Q05",
+        "Key": "Quest_s17_Buffet_Q05_CompletionText",
+        "SourceString": "What an adrenaline rush!"
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Epic",
+      "DisplayName": {
+        "Namespace": "Quest_s17_Buffet_Q05",
+        "Key": "Quest_s17_Buffet_Q05_DisplayName",
+        "SourceString": "Play matches with friends"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_s17_Buffet_Q05",
+        "Key": "Quest_s17_Buffet_Q05_ShortDescription",
+        "SourceString": "Let's keep this party goin'! We're all still here, aren't we?"
+      },
+      "Description": {
+        "Namespace": "Quest_s17_Buffet_Q05",
+        "Key": "Quest_s17_Buffet_Q05_Description",
+        "SourceString": "Play matches with friends"
+      }
+    }
   }
 ]

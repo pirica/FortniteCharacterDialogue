@@ -1,6 +1,150 @@
 [
   {
     "Type": "FortQuestItemDefinition",
-    "Name": "Quest_S17_W12_Epic_Q05"
+    "Name": "Quest_S17_W12_Epic_Q05",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "QuestSubtype": "EFortQuestSubtype::WeeklyChallenge",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/Maven/Maven/NPCCharacterData_Maven.NPCCharacterData_Maven",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "RewardsTable": {
+        "ObjectName": "ChallengeReward_S17_WeeklyXP:DataTable",
+        "ObjectPath": "/BattlepassS17/Items/QuestRewards/ChallengeReward_S17_WeeklyXP.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athenabattlepass_weeklychallenge_token",
+          "Quantity": 1
+        },
+        {
+          "TemplateId": "Token:athenabattlepass_s17_w12",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S17_W12_Epic_Q05_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Conversation.Entry.VendingMachine"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::UsedNPCService",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "06C5D3814D8145E2F48CD894238E7621",
+            "SourceString": "Purchase from vending machines"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "CBC0006F4DAE3A453417F895D90B1DD6",
+            "SourceString": "Purchase from vending machines"
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 3,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "",
+        "Key": "F799E7714E9406712D4A039173EB77B7",
+        "SourceString": "Just don't expect IO to reimburse your purchases."
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Epic",
+      "DisplayName": {
+        "Namespace": "",
+        "Key": "8F3C6BB44BEF963BA8CD5D98098A22D0",
+        "SourceString": "Purchase from vending machines"
+      },
+      "ShortDescription": {
+        "Namespace": "",
+        "Key": "9107F3004505F1C3BC2DF38B1150A15C",
+        "SourceString": "Machines keep breaking down, make sure we still have some that work."
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "41DEA78545780E4948B3E7BAA491BE26",
+        "SourceString": "Purchase from vending machines"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP",
+        "Athena.Quests.VendingMachine.01",
+        "Athena.Quests.VendingMachine.02",
+        "Athena.Quests.VendingMachine.03",
+        "Athena.Quests.VendingMachine.04",
+        "Athena.Quests.VendingMachine.05",
+        "Athena.Quests.VendingMachine.06",
+        "Athena.Quests.VendingMachine.07",
+        "Athena.Quests.VendingMachine.08",
+        "Athena.Quests.VendingMachine.09",
+        "Athena.Quests.VendingMachine.10",
+        "Athena.Quests.VendingMachine.11",
+        "Athena.Quests.VendingMachine.12"
+      ]
+    }
   }
 ]

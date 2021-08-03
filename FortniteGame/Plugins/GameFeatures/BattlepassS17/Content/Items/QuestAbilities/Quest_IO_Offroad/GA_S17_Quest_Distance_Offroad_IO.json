@@ -932,10 +932,14 @@
       "T_VehicleMod": [
         "ValetMods.Tires.BasicCar.OffRoad"
       ],
-      "CooldownGameplayEffectClass": {
-        "ObjectName": "GA_S17_Quest_Distance_Offroad_IO_C:ExecuteUbergraph_GA_S17_Quest_Distance_Offroad_IO:Function",
-        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_IO_Offroad/GA_S17_Quest_Distance_Offroad_IO.0"
-      }
+      "AbilityTriggers": [
+        {
+          "TriggerTag": {
+            "TagName": "Gameplay.Action.Player.AthenaInVehicle"
+          },
+          "TriggerSource": "EGameplayAbilityTriggerSource::OwnedTagPresent"
+        }
+      ]
     }
   }
 ]

@@ -1,6 +1,140 @@
 [
   {
     "Type": "FortQuestItemDefinition",
-    "Name": "quest_s17_w09_legendary_q3"
+    "Name": "quest_s17_w09_legendary_q3",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "QuestSubtype": "EFortQuestSubtype::WeeklyChallenge",
+      "TandemCharacterData": {
+        "AssetPathName": "/Slone/NPCs/Slone/Slone/NPCCharacterData_Slone.NPCCharacterData_Slone",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "Rewards": [
+        {
+          "ItemPrimaryAssetId": {
+            "PrimaryAssetType": {
+              "Name": "Quest"
+            },
+            "PrimaryAssetName": "quest_s17_w09_legendary_q4"
+          },
+          "Quantity": 1
+        }
+      ],
+      "RewardsTable": {
+        "ObjectName": "ChallengeReward_S17_LegendaryXP_Stage3:DataTable",
+        "ObjectPath": "/BattlepassS17/Items/QuestRewards/ChallengeReward_S17_LegendaryXP_Stage3.0"
+      },
+      "Objectives": [
+        {
+          "BackendName": "quest_s17_w09_legendary_q3_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.Faction.Mother"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::KillContribution",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "9E2FF27949509DF4C7A8C5847F075B68",
+            "SourceString": "Eliminate Trespassers"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "452F1CD745BDDD8C252B57A1B279F1B4",
+            "SourceString": "They've got too many boots on the ground. I need you to level the playing field."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 3,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 0,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "quest_s17_w09_legendary_q3",
+        "Key": "quest_s17_w09_legendary_q3_CompletionText",
+        "SourceString": "Thank you for your subtlety. An all-out attack would attract too much attention... For now."
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Legendary",
+      "DisplayName": {
+        "Namespace": "quest_s17_w09_legendary_q3",
+        "Key": "quest_s17_w09_legendary_q3_DisplayName",
+        "SourceString": "Eliminate Trespassers"
+      },
+      "ShortDescription": {
+        "Namespace": "quest_s17_w09_legendary_q3",
+        "Key": "quest_s17_w09_legendary_q3_ShortDescription",
+        "SourceString": "They've got too many boots on the ground. I need you to level the playing field."
+      },
+      "Description": {
+        "Namespace": "quest_s17_w09_legendary_q3",
+        "Key": "quest_s17_w09_legendary_q3_Description",
+        "SourceString": "Eliminate Trespassers"
+      },
+      "GameplayTags": [
+        "Quest.Metadata.PartyAssist",
+        "ChallengeCategory.XP"
+      ]
+    }
   }
 ]

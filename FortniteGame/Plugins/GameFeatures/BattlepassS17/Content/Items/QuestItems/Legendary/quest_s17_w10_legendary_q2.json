@@ -1,6 +1,139 @@
 [
   {
     "Type": "FortQuestItemDefinition",
-    "Name": "quest_s17_w10_legendary_q2"
+    "Name": "quest_s17_w10_legendary_q2",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "QuestSubtype": "EFortQuestSubtype::WeeklyChallenge",
+      "TandemCharacterData": {
+        "AssetPathName": "/Slone/NPCs/Slone/Slone/NPCCharacterData_Slone.NPCCharacterData_Slone",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "Rewards": [
+        {
+          "ItemPrimaryAssetId": {
+            "PrimaryAssetType": {
+              "Name": "Quest"
+            },
+            "PrimaryAssetName": "quest_s17_w10_legendary_q3"
+          },
+          "Quantity": 1
+        }
+      ],
+      "RewardsTable": {
+        "ObjectName": "ChallengeReward_S17_LegendaryXP_Stage2:DataTable",
+        "ObjectPath": "/BattlepassS17/Items/QuestRewards/ChallengeReward_S17_LegendaryXP_Stage2.0"
+      },
+      "Objectives": [
+        {
+          "BackendName": "quest_s17_w10_legendary_q2_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Item.Weapon.Ranged.GravyGoblin"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Collect",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "8024140D46B4FF54A640D39D6CD48C38",
+            "SourceString": "Collect a Grab-itron"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "6ECC3A134D07AB584A57A9A0F6E4F149",
+            "SourceString": "The latest string of abductions seem to be related to a new type of alien weapon. Find one, and test it."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 1,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 0,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "quest_s17_w10_legendary_q2",
+        "Key": "quest_s17_w10_legendary_q2_CompletionText",
+        "SourceString": "They've put anti-gravity technology into a handheld weapon. This is... unprecedented."
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Legendary",
+      "DisplayName": {
+        "Namespace": "quest_s17_w10_legendary_q2",
+        "Key": "quest_s17_w10_legendary_q2_DisplayName",
+        "SourceString": "Collect a Grab-itron"
+      },
+      "ShortDescription": {
+        "Namespace": "quest_s17_w10_legendary_q2",
+        "Key": "quest_s17_w10_legendary_q2_ShortDescription",
+        "SourceString": "The latest string of abductions seem to be related to a new type of alien weapon. Find one, and test it."
+      },
+      "Description": {
+        "Namespace": "quest_s17_w10_legendary_q2",
+        "Key": "quest_s17_w10_legendary_q2_Description",
+        "SourceString": "Collect a Grab-itron"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP"
+      ]
+    }
   }
 ]

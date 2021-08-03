@@ -1,6 +1,139 @@
 [
   {
     "Type": "FortQuestItemDefinition",
-    "Name": "quest_s17_w09_legendary_q2"
+    "Name": "quest_s17_w09_legendary_q2",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "QuestSubtype": "EFortQuestSubtype::WeeklyChallenge",
+      "TandemCharacterData": {
+        "AssetPathName": "/Slone/NPCs/Slone/Slone/NPCCharacterData_Slone.NPCCharacterData_Slone",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "Rewards": [
+        {
+          "ItemPrimaryAssetId": {
+            "PrimaryAssetType": {
+              "Name": "Quest"
+            },
+            "PrimaryAssetName": "quest_s17_w09_legendary_q3"
+          },
+          "Quantity": 1
+        }
+      ],
+      "RewardsTable": {
+        "ObjectName": "ChallengeReward_S17_LegendaryXP_Stage2:DataTable",
+        "ObjectPath": "/BattlepassS17/Items/QuestRewards/ChallengeReward_S17_LegendaryXP_Stage2.0"
+      },
+      "Objectives": [
+        {
+          "BackendName": "quest_s17_w09_legendary_q2_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.Location.POI.HollyHedges"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "Target.Tags HasTag Building.Resource.Wood || Target.Tags HasTag Building.Resource.Stone || Target.Tags HasTag Building.Resource.Metal",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Collect",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "0E0E0E3247F1398B088BD28A041C4206",
+            "SourceString": "Collect resources in Holly Hatchery"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "43DE8DB24BDB203D7038878DF82A7856",
+            "SourceString": "The very fabric of the Island is being contaminated by alien activity. Collect resource samples for analysis."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 100,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 0,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "quest_s17_w09_legendary_q2",
+        "Key": "quest_s17_w09_legendary_q2_CompletionText",
+        "SourceString": "The DNA of the island is being corrupted. They're preparing to terraform... everything."
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Legendary",
+      "DisplayName": {
+        "Namespace": "quest_s17_w09_legendary_q2",
+        "Key": "quest_s17_w09_legendary_q2_DisplayName",
+        "SourceString": "Collect resources in Holly Hatchery"
+      },
+      "ShortDescription": {
+        "Namespace": "quest_s17_w09_legendary_q2",
+        "Key": "quest_s17_w09_legendary_q2_ShortDescription",
+        "SourceString": "The very fabric of the Island is being contaminated by alien activity. Collect resource samples for analysis."
+      },
+      "Description": {
+        "Namespace": "quest_s17_w09_legendary_q2",
+        "Key": "quest_s17_w09_legendary_q2_Description",
+        "SourceString": "Collect resources in Holly Hatchery"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP"
+      ]
+    }
   }
 ]

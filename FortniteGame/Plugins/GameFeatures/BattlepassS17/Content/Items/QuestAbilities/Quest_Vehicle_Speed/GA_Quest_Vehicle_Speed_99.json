@@ -444,10 +444,20 @@
       "T_Quest": [
         "Athena.Quests.Speed.Vehicle.99"
       ],
-      "CooldownGameplayEffectClass": {
-        "ObjectName": "GA_Quest_Vehicle_Speed_99_C:K2_ActivateAbilityFromEvent:Function",
-        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_Vehicle_Speed/GA_Quest_Vehicle_Speed_99.1"
-      }
+      "AbilityTriggers": [
+        {
+          "TriggerTag": {
+            "TagName": "Event.Vehicle.Entered"
+          },
+          "TriggerSource": "EGameplayAbilityTriggerSource::GameplayEvent"
+        },
+        {
+          "TriggerTag": {
+            "TagName": "Event.Vehicle.Exit"
+          },
+          "TriggerSource": "EGameplayAbilityTriggerSource::GameplayEvent"
+        }
+      ]
     }
   }
 ]

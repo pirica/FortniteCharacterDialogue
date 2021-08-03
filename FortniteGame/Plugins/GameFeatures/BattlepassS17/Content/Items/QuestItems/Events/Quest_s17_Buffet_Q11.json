@@ -1,6 +1,135 @@
 [
   {
     "Type": "FortQuestItemDefinition",
-    "Name": "Quest_s17_Buffet_Q11"
+    "Name": "Quest_s17_Buffet_Q11",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "bAthenaGrantRarityToken": false,
+      "TandemCharacterData": {
+        "AssetPathName": "/BattlepassS17/Items/NpcItems/NPCCharacterData_DJBop.NPCCharacterData_DJBop",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "RewardsTable": {
+        "ObjectName": "ChallengeReward_S17_EventXP_Med:DataTable",
+        "ObjectPath": "/BattlepassS17/Items/QuestRewards/ChallengeReward_S17_EventXP_Med.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_s17_buffet_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_s17_Buffet_Q11_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.Quests.Buffet.Door"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "Source.Tags HasTag Athena.Location.UnNamedPOI.SheriffOffice || Source.Tags HasTag Athena.Location.UnnamedPOI.RiskyReels",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::ComplexCustom",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "C01E85F74984ACB1BFCF62A87D5A383C",
+            "SourceString": "Use an Alien Hologram Pad at Risky Reels or the Sheriff's Office"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "2D220DA9477ED2312C68578AB6D3DFB7",
+            "SourceString": "These things keep popping up everywhere! Check 'em out."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 1,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "Quest_s17_Buffet_Q11",
+        "Key": "Quest_s17_Buffet_Q11_CompletionText",
+        "SourceString": "Riiight, they bubble-ize you! ...Bubble-fy? Enbubble? Hmm."
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Epic",
+      "DisplayName": {
+        "Namespace": "Quest_s17_Buffet_Q11",
+        "Key": "Quest_s17_Buffet_Q11_DisplayName",
+        "SourceString": "Use an Alien Hologram Pad at Risky Reels or the Sheriff's Office"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_s17_Buffet_Q11",
+        "Key": "Quest_s17_Buffet_Q11_ShortDescription",
+        "SourceString": "These things keep popping up everywhere! Check 'em out."
+      },
+      "Description": {
+        "Namespace": "Quest_s17_Buffet_Q11",
+        "Key": "Quest_s17_Buffet_Q11_Description",
+        "SourceString": "Use an Alien Hologram Pad at Risky Reels or the Sheriff's Office"
+      },
+      "GameplayTags": [
+        "Athena.Quests.Buffet.Door.03",
+        "Athena.Quests.Buffet.Door.04"
+      ]
+    }
   }
 ]

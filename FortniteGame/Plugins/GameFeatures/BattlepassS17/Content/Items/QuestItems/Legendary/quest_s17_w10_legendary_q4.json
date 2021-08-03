@@ -1,6 +1,139 @@
 [
   {
     "Type": "FortQuestItemDefinition",
-    "Name": "quest_s17_w10_legendary_q4"
+    "Name": "quest_s17_w10_legendary_q4",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "QuestSubtype": "EFortQuestSubtype::WeeklyChallenge",
+      "TandemCharacterData": {
+        "AssetPathName": "/Slone/NPCs/Slone/Slone/NPCCharacterData_Slone.NPCCharacterData_Slone",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "Rewards": [
+        {
+          "ItemPrimaryAssetId": {
+            "PrimaryAssetType": {
+              "Name": "Quest"
+            },
+            "PrimaryAssetName": "quest_s17_w10_legendary_q5"
+          },
+          "Quantity": 1
+        }
+      ],
+      "RewardsTable": {
+        "ObjectName": "ChallengeReward_S17_LegendaryXP_Stage4:DataTable",
+        "ObjectPath": "/BattlepassS17/Items/QuestRewards/ChallengeReward_S17_LegendaryXP_Stage4.0"
+      },
+      "Objectives": [
+        {
+          "BackendName": "quest_s17_w10_legendary_q4_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.Location.POI.LuxurySupreme.Top"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Visit",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "329A597A4453ED82B69069BD59632688",
+            "SourceString": "Visit an Abductor"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "56A6C6B24820CFEC814A809BF32329BC",
+            "SourceString": "Get up close and personal with those landers. I want to know everything."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 1,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 0,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "quest_s17_w10_legendary_q4",
+        "Key": "quest_s17_w10_legendary_q4_CompletionText",
+        "SourceString": "The anti-gravity refractor is complex... but it's nothing we can't take down."
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Legendary",
+      "DisplayName": {
+        "Namespace": "quest_s17_w10_legendary_q4",
+        "Key": "quest_s17_w10_legendary_q4_DisplayName",
+        "SourceString": "Visit an Abductor"
+      },
+      "ShortDescription": {
+        "Namespace": "quest_s17_w10_legendary_q4",
+        "Key": "quest_s17_w10_legendary_q4_ShortDescription",
+        "SourceString": "Get up close and personal with those landers. I want to know everything."
+      },
+      "Description": {
+        "Namespace": "quest_s17_w10_legendary_q4",
+        "Key": "quest_s17_w10_legendary_q4_Description",
+        "SourceString": "Visit an Abductor"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP"
+      ]
+    }
   }
 ]

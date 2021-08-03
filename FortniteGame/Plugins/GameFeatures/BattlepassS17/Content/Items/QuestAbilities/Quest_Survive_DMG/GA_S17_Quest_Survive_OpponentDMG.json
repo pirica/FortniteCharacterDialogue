@@ -711,10 +711,14 @@
       "T_player": [
         "Homebase.Class"
       ],
-      "CooldownGameplayEffectClass": {
-        "ObjectName": "GA_S17_Quest_Survive_OpponentDMG_C:ExecuteUbergraph_GA_S17_Quest_Survive_OpponentDMG:Function",
-        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_Survive_DMG/GA_S17_Quest_Survive_OpponentDMG.0"
-      }
+      "AbilityTriggers": [
+        {
+          "TriggerTag": {
+            "TagName": "Event.Damage.Received"
+          },
+          "TriggerSource": "EGameplayAbilityTriggerSource::GameplayEvent"
+        }
+      ]
     }
   }
 ]

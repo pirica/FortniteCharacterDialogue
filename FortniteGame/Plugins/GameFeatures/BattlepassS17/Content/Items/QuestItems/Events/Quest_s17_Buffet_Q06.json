@@ -1,6 +1,124 @@
 [
   {
     "Type": "FortQuestItemDefinition",
-    "Name": "Quest_s17_Buffet_Q06"
+    "Name": "Quest_s17_Buffet_Q06",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "bAthenaGrantRarityToken": false,
+      "TandemCharacterData": {
+        "AssetPathName": "/BattlepassS17/Items/NpcItems/NPCCharacterData_DJBop.NPCCharacterData_DJBop",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "RewardsTable": {
+        "ObjectName": "ChallengeReward_S17_EventXP_Med:DataTable",
+        "ObjectPath": "/BattlepassS17/Items/QuestRewards/ChallengeReward_S17_EventXP_Med.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_s17_buffet_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_s17_Buffet_Q06_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "Athena.Rank <=25 && SquadFriend.Count > 0 && Athena.MaxTeamSize <5",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::AthenaRank",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "F0B65EAB4710CC7B31528B8ECE1363EC",
+            "SourceString": "Reach top 25 with a friend"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "FAB68E0947D2AF6D1820069A352C00E1",
+            "SourceString": "That was good. But can we be... great? Like, top 25 great?"
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 5,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "Quest_s17_Buffet_Q06",
+        "Key": "Quest_s17_Buffet_Q06_CompletionText",
+        "SourceString": "You're. On. FIRE!! Figuratively speaking."
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Epic",
+      "DisplayName": {
+        "Namespace": "Quest_s17_Buffet_Q06",
+        "Key": "Quest_s17_Buffet_Q06_DisplayName",
+        "SourceString": "Reach top 25 with a friend"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_s17_Buffet_Q06",
+        "Key": "Quest_s17_Buffet_Q06_ShortDescription",
+        "SourceString": "That was good. But can we be... great? Like, top 25 great?"
+      },
+      "Description": {
+        "Namespace": "Quest_s17_Buffet_Q06",
+        "Key": "Quest_s17_Buffet_Q06_Description",
+        "SourceString": "Reach top 25 with a friend"
+      }
+    }
   }
 ]

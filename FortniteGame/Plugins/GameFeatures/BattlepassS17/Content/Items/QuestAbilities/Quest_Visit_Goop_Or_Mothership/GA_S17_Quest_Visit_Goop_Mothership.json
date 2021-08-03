@@ -191,10 +191,20 @@
       "T_Visited": [
         "Athena.Quests.Visit.GoopOrMothership"
       ],
-      "CooldownGameplayEffectClass": {
-        "ObjectName": "GA_S17_Quest_Visit_Goop_Mothership_C:K2_ActivateAbilityFromEvent:Function",
-        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_Visit_Goop_Or_Mothership/GA_S17_Quest_Visit_Goop_Mothership.1"
-      }
+      "AbilityTriggers": [
+        {
+          "TriggerTag": {
+            "TagName": "Status.LowGravity.Goop"
+          },
+          "TriggerSource": "EGameplayAbilityTriggerSource::OwnedTagAdded"
+        },
+        {
+          "TriggerTag": {
+            "TagName": "Granted.Athena.Skyfire"
+          },
+          "TriggerSource": "EGameplayAbilityTriggerSource::OwnedTagAdded"
+        }
+      ]
     }
   }
 ]

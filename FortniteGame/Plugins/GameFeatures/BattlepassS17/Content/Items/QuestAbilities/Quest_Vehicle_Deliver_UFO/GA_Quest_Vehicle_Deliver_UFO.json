@@ -466,10 +466,20 @@
       "POI Tag": {
         "TagName": "Athena.Location.UnnamedPOI.RadarDishBase.06"
       },
-      "CooldownGameplayEffectClass": {
-        "ObjectName": "GA_Quest_Vehicle_Deliver_UFO_C:K2_ActivateAbilityFromEvent:Function",
-        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_Vehicle_Deliver_UFO/GA_Quest_Vehicle_Deliver_UFO.1"
-      }
+      "AbilityTriggers": [
+        {
+          "TriggerTag": {
+            "TagName": "Event.Vehicle.Entered"
+          },
+          "TriggerSource": "EGameplayAbilityTriggerSource::GameplayEvent"
+        },
+        {
+          "TriggerTag": {
+            "TagName": "Event.Vehicle.Exit"
+          },
+          "TriggerSource": "EGameplayAbilityTriggerSource::GameplayEvent"
+        }
+      ]
     }
   }
 ]

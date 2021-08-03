@@ -1,6 +1,140 @@
 [
   {
     "Type": "FortQuestItemDefinition",
-    "Name": "Quest_S17_W10_Epic_Q07"
+    "Name": "Quest_S17_W10_Epic_Q07",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "QuestSubtype": "EFortQuestSubtype::WeeklyChallenge",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/Believer/Believer/NPCCharacterData_Believer.NPCCharacterData_Believer",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "RewardsTable": {
+        "ObjectName": "ChallengeReward_S17_WeeklyXP:DataTable",
+        "ObjectPath": "/BattlepassS17/Items/QuestRewards/ChallengeReward_S17_WeeklyXP.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athenabattlepass_weeklychallenge_token",
+          "Quantity": 1
+        },
+        {
+          "TemplateId": "Token:athenabattlepass_s17_w10",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S17_W10_Epic_Q07_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Pawn.Athena.NPC.Mang.Boss"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Damage",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "031E87EE4DC5423718DF0D9867991B6F",
+            "SourceString": "Damage Doctor Slone"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "E16CD7154E0A7BE4462C77BDBA3A7372",
+            "SourceString": "I've got a plan to sneak into IO if you can distract the big boss lady."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 50,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 0,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "Quest_S17_W10_Epic_Q07",
+        "Key": "Quest_S17_W10_Epic_Q07_CompletionText",
+        "SourceString": "Thought I could find proof they were keeping aliens prisoner... But I didn't find anything."
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Epic",
+      "DisplayName": {
+        "Namespace": "Quest_S17_W10_Epic_Q07",
+        "Key": "Quest_S17_W10_Epic_Q07_DisplayName",
+        "SourceString": "Damage Doctor Slone"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S17_W10_Epic_Q07",
+        "Key": "Quest_S17_W10_Epic_Q07_ShortDescription",
+        "SourceString": "I've got a plan to sneak into IO if you can distract the big boss lady."
+      },
+      "Description": {
+        "Namespace": "Quest_S17_W10_Epic_Q07",
+        "Key": "Quest_S17_W10_Epic_Q07_Description",
+        "SourceString": "Damage Doctor Slone"
+      },
+      "GameplayTags": [
+        "Quest.Metadata.PartyAssist",
+        "ChallengeCategory.XP",
+        "Athena.Location.POI.GovernmentComplex"
+      ]
+    }
   }
 ]

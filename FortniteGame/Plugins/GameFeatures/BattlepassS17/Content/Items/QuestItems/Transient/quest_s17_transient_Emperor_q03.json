@@ -1,6 +1,137 @@
 [
   {
     "Type": "FortQuestItemDefinition",
-    "Name": "quest_s17_transient_Emperor_q03"
+    "Name": "quest_s17_transient_Emperor_q03",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaTransientQuest",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/Emperor/Emperor/NPCCharacterData_Emperor.NPCCharacterData_Emperor",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "ExpirationDuration": 60,
+      "RewardsTable": {
+        "ObjectName": "ChallengeReward_S17_Transient_UC:DataTable",
+        "ObjectPath": "/BattlepassS17/Items/QuestRewards/ChallengeReward_S17_Transient_UC.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_s17_emperor_transient_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "quest_s17_transient_Emperor_q03_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.Quests.Visit.GoopOrMothership"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::ComplexCustom",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "0336DBA4449B85380349E9B855E32020",
+            "SourceString": "Visit Mothership or an Alien Biome"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "27A3764C4AA1133EB0D0A9A135CE9CC2",
+            "SourceString": "My memory loss has something to do with these nanites and their mothership. We need to investigate."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 1,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "quest_s17_transient_Emperor_q03",
+        "Key": "quest_s17_transient_Emperor_q03_CompletionText",
+        "SourceString": "That's definitely where they took my memories."
+      },
+      "QuestAbilitySet": {
+        "AssetPathName": "/BattlepassS17/Items/QuestAbilities/Quest_Visit_Goop_Or_Mothership/GAS_S17_Quest_Visit_Goop_Mothership.GAS_S17_Quest_Visit_Goop_Mothership",
+        "SubPathString": ""
+      },
+      "GrantToProfileType": "athena",
+      "DisplayName": {
+        "Namespace": "quest_s17_transient_Emperor_q03",
+        "Key": "quest_s17_transient_Emperor_q03_DisplayName",
+        "SourceString": "Visit Mothership or an Alien Biome"
+      },
+      "ShortDescription": {
+        "Namespace": "quest_s17_transient_Emperor_q03",
+        "Key": "quest_s17_transient_Emperor_q03_ShortDescription",
+        "SourceString": "My memory loss has something to do with these nanites and their mothership. We need to investigate."
+      },
+      "Description": {
+        "Namespace": "quest_s17_transient_Emperor_q03",
+        "Key": "quest_s17_transient_Emperor_q03_Description",
+        "SourceString": "Visit Mothership or an Alien Biome"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.Bars"
+      ]
+    }
   }
 ]

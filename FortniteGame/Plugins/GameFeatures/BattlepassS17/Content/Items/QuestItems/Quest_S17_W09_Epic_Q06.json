@@ -1,6 +1,157 @@
 [
   {
     "Type": "FortQuestItemDefinition",
-    "Name": "Quest_S17_W09_Epic_Q06"
+    "Name": "Quest_S17_W09_Epic_Q06",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "QuestSubtype": "EFortQuestSubtype::WeeklyChallenge",
+      "TandemCharacterData": {
+        "AssetPathName": "/Slone/NPCs/Slone/Slone/NPCCharacterData_Slone.NPCCharacterData_Slone",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "bIsShared": true,
+      "Rewards": [
+        {
+          "ItemPrimaryAssetId": {
+            "PrimaryAssetType": {
+              "Name": "Quest"
+            },
+            "PrimaryAssetName": "Quest_S17_W09_Epic_Q07"
+          },
+          "Quantity": 1
+        }
+      ],
+      "RewardsTable": {
+        "ObjectName": "ChallengeReward_S17_WeeklyXP:DataTable",
+        "ObjectPath": "/BattlepassS17/Items/QuestRewards/ChallengeReward_S17_WeeklyXP.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athenabattlepass_weeklychallenge_token",
+          "Quantity": 1
+        },
+        {
+          "TemplateId": "Token:athenabattlepass_s17_w09",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S17_W09_Epic_Q06_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.Quests.Use.FloorLaunchPad.IO"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Interact",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "04AEBDA8412B448BA51FAA866899BC04",
+            "SourceString": "Use IO launchpads"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "C71FAFFC44104C6607AFF9BEFB129127",
+            "SourceString": "We need to work on our rapid deployment strategies."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 1,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 0,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "Quest_S17_W09_Epic_Q06",
+        "Key": "Quest_S17_W09_Epic_Q06_CompletionText",
+        "SourceString": "Good. We can quickly redistribute troops to get the drop on our enemies."
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Epic",
+      "DisplayName": {
+        "Namespace": "Quest_S17_W09_Epic_Q06",
+        "Key": "Quest_S17_W09_Epic_Q06_DisplayName",
+        "SourceString": "Use IO launchpads"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S17_W09_Epic_Q06",
+        "Key": "Quest_S17_W09_Epic_Q06_ShortDescription",
+        "SourceString": "We need to work on our rapid deployment strategies."
+      },
+      "Description": {
+        "Namespace": "Quest_S17_W09_Epic_Q06",
+        "Key": "Quest_S17_W09_Epic_Q06_Description",
+        "SourceString": "Use IO launchpads"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP",
+        "Athena.Location.UnnamedPOI.RadarDishBase.01",
+        "Athena.Location.UnnamedPOI.RadarDishBase.02",
+        "Athena.Location.UnnamedPOI.RadarDishBase.03",
+        "Athena.Location.UnnamedPOI.RadarDishBase.04",
+        "Athena.Location.UnnamedPOI.RadarDishBase.06",
+        "Athena.Location.UnnamedPOI.RadarDishBase.07",
+        "Athena.Location.UnnamedPOI.RadarDishBase.05"
+      ]
+    }
   }
 ]
