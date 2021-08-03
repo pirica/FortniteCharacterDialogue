@@ -1,0 +1,874 @@
+[
+  {
+    "Type": "AudioComponent",
+    "Name": "AmbientAudio",
+    "Outer": "BP_S17_Hatchery_4",
+    "Template": "AmbientAudio_GEN_VARIABLE",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BP_S17_Hatchery_4:AudioAndFX:SceneComponent",
+        "ObjectPath": "/BattlepassS17/Maps/Building_Overlays/Apollo_1x1_SwampShack_hat_QuestOverlay.22"
+      },
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "CosmeticAudio",
+    "Outer": "BP_S17_Hatchery_4",
+    "Template": "CosmeticAudio_GEN_VARIABLE",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BP_S17_Hatchery_4:AudioAndFX:SceneComponent",
+        "ObjectPath": "/BattlepassS17/Maps/Building_Overlays/Apollo_1x1_SwampShack_hat_QuestOverlay.22"
+      },
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "PostInteractionAmbientAudio",
+    "Outer": "BP_S17_Hatchery_4",
+    "Template": "PostInteractionAmbientAudio_GEN_VARIABLE",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BP_S17_Hatchery_4:AudioAndFX:SceneComponent",
+        "ObjectPath": "/BattlepassS17/Maps/Building_Overlays/Apollo_1x1_SwampShack_hat_QuestOverlay.22"
+      },
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "UnHideAudio",
+    "Outer": "BP_S17_Hatchery_4",
+    "Template": "UnHideAudio_GEN_VARIABLE",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BP_S17_Hatchery_4:AudioAndFX:SceneComponent",
+        "ObjectPath": "/BattlepassS17/Maps/Building_Overlays/Apollo_1x1_SwampShack_hat_QuestOverlay.22"
+      },
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "BoxComponent0",
+    "Outer": "LevelBounds_0",
+    "Properties": {
+      "AreaClass": {
+        "ObjectName": "FortMetaNavArea_Obstacles:Class",
+        "ObjectPath": 0
+      },
+      "BodyInstance": {
+        "MaxAngularVelocity": 3599.9998
+      },
+      "RelativeLocation": {
+        "X": -181.0,
+        "Y": -128.0,
+        "Z": 61.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 179.99995,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 9887.141,
+        "Y": 9887.141,
+        "Z": 9000.0
+      }
+    }
+  },
+  {
+    "Type": "BP_S17_Hatchery_C",
+    "Name": "BP_S17_Hatchery_4",
+    "Outer": "PersistentLevel",
+    "Template": "Default__BP_S17_Hatchery_C"
+  },
+  {
+    "Type": "ConsolidatedQuestComponent",
+    "Name": "ConsolidatedQuest",
+    "Outer": "BP_S17_Hatchery_4",
+    "Template": "ConsolidatedQuest_GEN_VARIABLE",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BP_S17_Hatchery_4:SceneRoot:SceneComponent",
+        "ObjectPath": "/BattlepassS17/Maps/Building_Overlays/Apollo_1x1_SwampShack_hat_QuestOverlay.23"
+      },
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+    }
+  },
+  {
+    "Type": "ConsolidatedQuestComponent",
+    "Name": "ConsolidatedQuestComponent",
+    "Outer": "BP_S17_Hatchery_4",
+    "Template": "ConsolidatedQuestComponent",
+    "Properties": {
+      "OnQuestNotReady": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "PersistentLevel:BP_S17_Hatchery_4:BP_S17_Hatchery_C",
+              "ObjectPath": "/BattlepassS17/Maps/Building_Overlays/Apollo_1x1_SwampShack_hat_QuestOverlay.5"
+            },
+            "FunctionName": "BndEvt__ConsolidatedQuestComponent_K2Node_ComponentBoundEvent_11_SimpleQuestComponentDelegate__DelegateSignature"
+          }
+        ]
+      },
+      "OnQuestReady": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "PersistentLevel:BP_S17_Hatchery_4:BP_S17_Hatchery_C",
+              "ObjectPath": "/BattlepassS17/Maps/Building_Overlays/Apollo_1x1_SwampShack_hat_QuestOverlay.5"
+            },
+            "FunctionName": "BndEvt__ConsolidatedQuestComponent_K2Node_ComponentBoundEvent_16_SimpleQuestComponentDelegate__DelegateSignature"
+          }
+        ]
+      },
+      "OnQuestComponentSuccessEvent": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "PersistentLevel:BP_S17_Hatchery_4:BP_S17_Hatchery_C",
+              "ObjectPath": "/BattlepassS17/Maps/Building_Overlays/Apollo_1x1_SwampShack_hat_QuestOverlay.5"
+            },
+            "FunctionName": "BndEvt__ConsolidatedQuestComponent_K2Node_ComponentBoundEvent_2_SimpleQuestComponentDelegate__DelegateSignature"
+          }
+        ]
+      },
+      "OnCustomSetVisualsToFailed": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "PersistentLevel:BP_S17_Hatchery_4:BP_S17_Hatchery_C",
+              "ObjectPath": "/BattlepassS17/Maps/Building_Overlays/Apollo_1x1_SwampShack_hat_QuestOverlay.5"
+            },
+            "FunctionName": "BndEvt__ConsolidatedQuestComponent_K2Node_ComponentBoundEvent_14_SimpleQuestComponentDelegate__DelegateSignature"
+          }
+        ]
+      },
+      "OnCustomSetVisualsToPassed": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "PersistentLevel:BP_S17_Hatchery_4:BP_S17_Hatchery_C",
+              "ObjectPath": "/BattlepassS17/Maps/Building_Overlays/Apollo_1x1_SwampShack_hat_QuestOverlay.5"
+            },
+            "FunctionName": "BndEvt__ConsolidatedQuestComponent_K2Node_ComponentBoundEvent_1_QuestComponentCustomVisualsPassed__DelegateSignature"
+          }
+        ]
+      },
+      "OnCustomUpdateObjective": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "PersistentLevel:BP_S17_Hatchery_4:BP_S17_Hatchery_C",
+              "ObjectPath": "/BattlepassS17/Maps/Building_Overlays/Apollo_1x1_SwampShack_hat_QuestOverlay.5"
+            },
+            "FunctionName": "BndEvt__ConsolidatedQuestComponent_K2Node_ComponentBoundEvent_12_QuestComponentCustomUpdatedOjective__DelegateSignature"
+          }
+        ]
+      },
+      "ObjectiveBackendName": "quest_s17_w07_legendary_q1_obj2",
+      "AttachParent": {
+        "ObjectName": "BP_S17_Hatchery_4:SceneRoot:SceneComponent",
+        "ObjectPath": "/BattlepassS17/Maps/Building_Overlays/Apollo_1x1_SwampShack_hat_QuestOverlay.23"
+      }
+    }
+  },
+  {
+    "Type": "FortQuestIconComponent",
+    "Name": "QuestIconComponent",
+    "Outer": "BP_S17_Hatchery_4",
+    "Template": "QuestIconComponent"
+  },
+  {
+    "Type": "FortWorldSettings",
+    "Name": "FortWorldSettings",
+    "Outer": "PersistentLevel",
+    "Properties": {
+      "WorldCells": [
+        2147483647,
+        1
+      ],
+      "WorldCellsOrigin": {
+        "X": 512.0,
+        "Y": 512.0,
+        "Z": 0.0
+      },
+      "MinCullObjectSize": 64.0,
+      "MinCullDistance": 2800.0,
+      "MaxCullObjectSize": 1000.0,
+      "MaxCullDistance": 40000.0,
+      "NavigationSystemConfig": {
+        "ObjectName": "FortWorldSettings:NavigationSystemModuleConfig_0:NavigationSystemModuleConfig",
+        "ObjectPath": "/BattlepassS17/Maps/Building_Overlays/Apollo_1x1_SwampShack_hat_QuestOverlay.13"
+      },
+      "BookmarkArray": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  },
+  {
+    "Type": "Level",
+    "Name": "PersistentLevel",
+    "Outer": "Apollo_1x1_SwampShack_hat_QuestOverlay",
+    "Properties": {
+      "Model": {
+        "ObjectName": "PersistentLevel:Model_0:Model",
+        "ObjectPath": "/BattlepassS17/Maps/Building_Overlays/Apollo_1x1_SwampShack_hat_QuestOverlay.12"
+      },
+      "LevelBuildDataId": "5DDB8E7B-42080969-727091A2-66DA4AB9",
+      "bTextureStreamingRotationChanged": true,
+      "WorldSettings": {
+        "ObjectName": "PersistentLevel:FortWorldSettings:FortWorldSettings",
+        "ObjectPath": "/BattlepassS17/Maps/Building_Overlays/Apollo_1x1_SwampShack_hat_QuestOverlay.9"
+      }
+    }
+  },
+  {
+    "Type": "LevelBounds",
+    "Name": "LevelBounds_0",
+    "Outer": "PersistentLevel",
+    "Properties": {
+      "BoxComponent": {
+        "ObjectName": "LevelBounds_0:BoxComponent0:BoxComponent",
+        "ObjectPath": "/BattlepassS17/Maps/Building_Overlays/Apollo_1x1_SwampShack_hat_QuestOverlay.4"
+      },
+      "RootComponent": {
+        "ObjectName": "LevelBounds_0:BoxComponent0:BoxComponent",
+        "ObjectPath": "/BattlepassS17/Maps/Building_Overlays/Apollo_1x1_SwampShack_hat_QuestOverlay.4"
+      }
+    }
+  },
+  {
+    "Type": "Model",
+    "Name": "Model_0",
+    "Outer": "PersistentLevel"
+  },
+  {
+    "Type": "NavigationSystemModuleConfig",
+    "Name": "NavigationSystemModuleConfig_0",
+    "Outer": "FortWorldSettings",
+    "Properties": {
+      "bAutoSpawnMissingNavData": true,
+      "NavigationSystemClass": {
+        "AssetPathName": "/Script/FortniteGame.FortNavSystem",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "N_Ambient",
+    "Outer": "BP_S17_Hatchery_4",
+    "Template": "N_Ambient_GEN_VARIABLE",
+    "Properties": {
+      "OverrideParameters": {},
+      "CachedMaxDrawDistance": 9675.986,
+      "AttachParent": {
+        "ObjectName": "BP_S17_Hatchery_4:AudioAndFX:SceneComponent",
+        "ObjectPath": "/BattlepassS17/Maps/Building_Overlays/Apollo_1x1_SwampShack_hat_QuestOverlay.22"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 64.0
+      },
+      "RelativeScale3D": {
+        "X": 1.5,
+        "Y": 1.5,
+        "Z": 1.0
+      },
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript",
+      "UCSModifiedProperties": [
+        {
+          "MemberParent": {
+            "ObjectName": "SceneComponent:Class",
+            "ObjectPath": 0
+          },
+          "MemberName": "RelativeLocation",
+          "MemberGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "MemberParent": {
+            "ObjectName": "SceneComponent:Class",
+            "ObjectPath": 0
+          },
+          "MemberName": "RelativeScale3D",
+          "MemberGuid": "00000000-00000000-00000000-00000000"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "N_Cosmetic",
+    "Outer": "BP_S17_Hatchery_4",
+    "Template": "N_Cosmetic_GEN_VARIABLE",
+    "Properties": {
+      "OverrideParameters": {},
+      "CachedMaxDrawDistance": 9675.986,
+      "AttachParent": {
+        "ObjectName": "BP_S17_Hatchery_4:AudioAndFX:SceneComponent",
+        "ObjectPath": "/BattlepassS17/Maps/Building_Overlays/Apollo_1x1_SwampShack_hat_QuestOverlay.22"
+      },
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "N_PostInteractionAmbient",
+    "Outer": "BP_S17_Hatchery_4",
+    "Template": "N_PostInteractionAmbient_GEN_VARIABLE",
+    "Properties": {
+      "OverrideParameters": {},
+      "CachedMaxDrawDistance": 9675.986,
+      "AttachParent": {
+        "ObjectName": "BP_S17_Hatchery_4:AudioAndFX:SceneComponent",
+        "ObjectPath": "/BattlepassS17/Maps/Building_Overlays/Apollo_1x1_SwampShack_hat_QuestOverlay.22"
+      },
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "N_UnHide",
+    "Outer": "BP_S17_Hatchery_4",
+    "Template": "N_UnHide_GEN_VARIABLE",
+    "Properties": {
+      "OverrideParameters": {},
+      "CachedMaxDrawDistance": 9675.986,
+      "AttachParent": {
+        "ObjectName": "BP_S17_Hatchery_4:AudioAndFX:SceneComponent",
+        "ObjectPath": "/BattlepassS17/Maps/Building_Overlays/Apollo_1x1_SwampShack_hat_QuestOverlay.22"
+      },
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "P_Ambient",
+    "Outer": "BP_S17_Hatchery_4",
+    "Template": "P_Ambient_GEN_VARIABLE",
+    "Properties": {
+      "Template": {
+        "ObjectName": "P_PropQuest_InWorld:ParticleSystem",
+        "ObjectPath": "/Game/Athena/Items/QuestParents/PropQuestActor/P_PropQuest_InWorld.192"
+      },
+      "CachedMaxDrawDistance": 9675.986,
+      "AttachParent": {
+        "ObjectName": "BP_S17_Hatchery_4:AudioAndFX:SceneComponent",
+        "ObjectPath": "/BattlepassS17/Maps/Building_Overlays/Apollo_1x1_SwampShack_hat_QuestOverlay.22"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 64.0
+      },
+      "RelativeScale3D": {
+        "X": 1.5,
+        "Y": 1.5,
+        "Z": 1.0
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      },
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript",
+      "UCSModifiedProperties": [
+        {
+          "MemberParent": {
+            "ObjectName": "ParticleSystemComponent:Class",
+            "ObjectPath": 0
+          },
+          "MemberName": "Template",
+          "MemberGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "MemberParent": {
+            "ObjectName": "SceneComponent:Class",
+            "ObjectPath": 0
+          },
+          "MemberName": "RelativeLocation",
+          "MemberGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "MemberParent": {
+            "ObjectName": "SceneComponent:Class",
+            "ObjectPath": 0
+          },
+          "MemberName": "RelativeScale3D",
+          "MemberGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "MemberParent": {
+            "ObjectName": "ActorComponent:Class",
+            "ObjectPath": 0
+          },
+          "MemberName": "PrimaryComponentTick",
+          "MemberGuid": "00000000-00000000-00000000-00000000"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "P_Cosmetic",
+    "Outer": "BP_S17_Hatchery_4",
+    "Template": "P_Cosmetic_GEN_VARIABLE",
+    "Properties": {
+      "CachedMaxDrawDistance": 9675.986,
+      "AttachParent": {
+        "ObjectName": "BP_S17_Hatchery_4:AudioAndFX:SceneComponent",
+        "ObjectPath": "/BattlepassS17/Maps/Building_Overlays/Apollo_1x1_SwampShack_hat_QuestOverlay.22"
+      },
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "P_PostInteractionAmbient",
+    "Outer": "BP_S17_Hatchery_4",
+    "Template": "P_PostInteractionAmbient_GEN_VARIABLE",
+    "Properties": {
+      "CachedMaxDrawDistance": 9675.986,
+      "AttachParent": {
+        "ObjectName": "BP_S17_Hatchery_4:AudioAndFX:SceneComponent",
+        "ObjectPath": "/BattlepassS17/Maps/Building_Overlays/Apollo_1x1_SwampShack_hat_QuestOverlay.22"
+      },
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "P_UnHide",
+    "Outer": "BP_S17_Hatchery_4",
+    "Template": "P_UnHide_GEN_VARIABLE",
+    "Properties": {
+      "CachedMaxDrawDistance": 9675.986,
+      "AttachParent": {
+        "ObjectName": "BP_S17_Hatchery_4:AudioAndFX:SceneComponent",
+        "ObjectPath": "/BattlepassS17/Maps/Building_Overlays/Apollo_1x1_SwampShack_hat_QuestOverlay.22"
+      },
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "AudioAndFX",
+    "Outer": "BP_S17_Hatchery_4",
+    "Template": "AudioAndFX_GEN_VARIABLE",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BP_S17_Hatchery_4:SceneRoot:SceneComponent",
+        "ObjectPath": "/BattlepassS17/Maps/Building_Overlays/Apollo_1x1_SwampShack_hat_QuestOverlay.23"
+      },
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "SceneRoot",
+    "Outer": "BP_S17_Hatchery_4",
+    "Template": "SceneRoot",
+    "Properties": {
+      "RelativeLocation": {
+        "X": -181.0,
+        "Y": -128.0,
+        "Z": 5.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 95.9691,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "SphereComponent",
+    "Name": "Collision_AmbientAudioAndFXActivation",
+    "Outer": "BP_S17_Hatchery_4",
+    "Template": "Collision_AmbientAudioAndFXActivation_GEN_VARIABLE",
+    "Properties": {
+      "SphereRadius": 4500.0,
+      "CachedMaxDrawDistance": 9675.986,
+      "OnComponentBeginOverlap": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "PersistentLevel:BP_S17_Hatchery_4:BP_S17_Hatchery_C",
+              "ObjectPath": "/BattlepassS17/Maps/Building_Overlays/Apollo_1x1_SwampShack_hat_QuestOverlay.5"
+            },
+            "FunctionName": "BndEvt__Collision_AmbientAudioActivation_K2Node_ComponentBoundEvent_5_ComponentBeginOverlapSignature__DelegateSignature"
+          }
+        ]
+      },
+      "OnComponentEndOverlap": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "PersistentLevel:BP_S17_Hatchery_4:BP_S17_Hatchery_C",
+              "ObjectPath": "/BattlepassS17/Maps/Building_Overlays/Apollo_1x1_SwampShack_hat_QuestOverlay.5"
+            },
+            "FunctionName": "BndEvt__Collision_AmbientAudioActivation_K2Node_ComponentBoundEvent_9_ComponentEndOverlapSignature__DelegateSignature"
+          }
+        ]
+      },
+      "AttachParent": {
+        "ObjectName": "BP_S17_Hatchery_4:ConsolidatedQuestComponent:ConsolidatedQuestComponent",
+        "ObjectPath": "/BattlepassS17/Maps/Building_Overlays/Apollo_1x1_SwampShack_hat_QuestOverlay.7"
+      },
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript",
+      "UCSModifiedProperties": [
+        {
+          "MemberParent": {
+            "ObjectName": "SphereComponent:Class",
+            "ObjectPath": 0
+          },
+          "MemberName": "SphereRadius",
+          "MemberGuid": "00000000-00000000-00000000-00000000"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_Egg",
+    "Outer": "BP_S17_Hatchery_4",
+    "Template": "SM_Egg_GEN_VARIABLE",
+    "Properties": {
+      "CachedMaxDrawDistance": 9675.986,
+      "BodyInstance": {
+        "MaxAngularVelocity": 3599.9998
+      },
+      "AttachParent": {
+        "ObjectName": "BP_S17_Hatchery_4:ConsolidatedQuest:ConsolidatedQuestComponent",
+        "ObjectPath": "/BattlepassS17/Maps/Building_Overlays/Apollo_1x1_SwampShack_hat_QuestOverlay.6"
+      },
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript"
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_HiddenInteractionCollision",
+    "Outer": "BP_S17_Hatchery_4",
+    "Template": "SM_HiddenInteractionCollision_GEN_VARIABLE",
+    "Properties": {
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldDynamic",
+        "CollisionEnabled": "ECollisionEnabled::QueryOnly",
+        "CollisionProfileName": "FortTriggerOnlyInteractions",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "FCC_Trace_Interaction",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Trace_WeaponWorldMulti",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "FCC_Trace_MoveTool",
+              "Response": "ECollisionResponse::ECR_Overlap"
+            },
+            {
+              "Channel": "FCC_Object_Water",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
+        },
+        "MaxAngularVelocity": 3599.9998
+      },
+      "OnComponentBeginOverlap": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "PersistentLevel:BP_S17_Hatchery_4:BP_S17_Hatchery_C",
+              "ObjectPath": "/BattlepassS17/Maps/Building_Overlays/Apollo_1x1_SwampShack_hat_QuestOverlay.5"
+            },
+            "FunctionName": "BndEvt__SM_HiddenInteractionCollision_K2Node_ComponentBoundEvent_4_ComponentBeginOverlapSignature__DelegateSignature"
+          }
+        ]
+      },
+      "OnComponentEndOverlap": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "PersistentLevel:BP_S17_Hatchery_4:BP_S17_Hatchery_C",
+              "ObjectPath": "/BattlepassS17/Maps/Building_Overlays/Apollo_1x1_SwampShack_hat_QuestOverlay.5"
+            },
+            "FunctionName": "BndEvt__SM_HiddenInteractionCollision_K2Node_ComponentBoundEvent_10_ComponentEndOverlapSignature__DelegateSignature"
+          }
+        ]
+      },
+      "AttachParent": {
+        "ObjectName": "BP_S17_Hatchery_4:ConsolidatedQuestComponent:ConsolidatedQuestComponent",
+        "ObjectPath": "/BattlepassS17/Maps/Building_Overlays/Apollo_1x1_SwampShack_hat_QuestOverlay.7"
+      },
+      "RelativeScale3D": {
+        "X": 2.25,
+        "Y": 1.2,
+        "Z": 1.0
+      },
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript",
+      "UCSModifiedProperties": [
+        {
+          "MemberParent": {
+            "ObjectName": "SceneComponent:Class",
+            "ObjectPath": 0
+          },
+          "MemberName": "RelativeScale3D",
+          "MemberGuid": "00000000-00000000-00000000-00000000"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_Quest_PostInteraction",
+    "Outer": "BP_S17_Hatchery_4",
+    "Template": "SM_Quest_PostInteraction_GEN_VARIABLE",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "SM_Farm_HayTrough_01:StaticMesh",
+        "ObjectPath": "/Game/Environments/Apollo/Sets/Farm/Props/Meshes/SM_Farm_HayTrough_01.1"
+      },
+      "CachedMaxDrawDistance": 9675.986,
+      "AttachParent": {
+        "ObjectName": "BP_S17_Hatchery_4:ConsolidatedQuestComponent:ConsolidatedQuestComponent",
+        "ObjectPath": "/BattlepassS17/Maps/Building_Overlays/Apollo_1x1_SwampShack_hat_QuestOverlay.7"
+      },
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript",
+      "UCSModifiedProperties": [
+        {
+          "MemberParent": {
+            "ObjectName": "StaticMeshComponent:Class",
+            "ObjectPath": 0
+          },
+          "MemberName": "StaticMesh",
+          "MemberGuid": "00000000-00000000-00000000-00000000"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_Quest_PreInteraction",
+    "Outer": "BP_S17_Hatchery_4",
+    "Template": "SM_Quest_PreInteraction_GEN_VARIABLE",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "SM_Farm_HayTrough_01:StaticMesh",
+        "ObjectPath": "/Game/Environments/Apollo/Sets/Farm/Props/Meshes/SM_Farm_HayTrough_01.1"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MI_QuestPropGhostly_02_Inst:MaterialInstanceConstant",
+          "ObjectPath": "/Game/Athena/Items/QuestParents/PropQuestActor/MI_QuestPropGhostly_02_Inst.0"
+        }
+      ],
+      "CachedMaxDrawDistance": 9675.986,
+      "BodyInstance": {
+        "MaxAngularVelocity": 3599.9998
+      },
+      "AttachParent": {
+        "ObjectName": "BP_S17_Hatchery_4:ConsolidatedQuestComponent:ConsolidatedQuestComponent",
+        "ObjectPath": "/BattlepassS17/Maps/Building_Overlays/Apollo_1x1_SwampShack_hat_QuestOverlay.7"
+      },
+      "UCSSerializationIndex": 0,
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::SimpleConstructionScript",
+      "UCSModifiedProperties": [
+        {
+          "MemberParent": {
+            "ObjectName": "StaticMeshComponent:Class",
+            "ObjectPath": 0
+          },
+          "MemberName": "StaticMesh",
+          "MemberGuid": "00000000-00000000-00000000-00000000"
+        },
+        {
+          "MemberParent": {
+            "ObjectName": "MeshComponent:Class",
+            "ObjectPath": 0
+          },
+          "MemberName": "OverrideMaterials",
+          "MemberGuid": "00000000-00000000-00000000-00000000"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "TimelineComponent",
+    "Name": "T_HideCurve",
+    "Outer": "BP_S17_Hatchery_4",
+    "Properties": {
+      "TheTimeline": {
+        "LengthMode": "ETimelineLengthMode::TL_TimelineLength",
+        "Length": 0.5,
+        "Events": [
+          {
+            "Time": 0.4,
+            "EventFunc": {
+              "Num": 6,
+              "Name": "T_HideCurve__PlayUnhideSound__EventFunc"
+            }
+          }
+        ],
+        "InterpFloats": [
+          {
+            "FloatCurve": {
+              "ObjectName": "BP_Athena_PropQuestActor_Parent_C:CurveFloat_3_4:CurveFloat",
+              "ObjectPath": "/Game/Athena/Items/QuestParents/PropQuestActor/BP_Athena_PropQuestActor_Parent.61"
+            },
+            "InterpFunc": {
+              "Num": 0,
+              "Name": "None"
+            },
+            "TrackName": "ScaleDownTime",
+            "FloatPropertyName": "T_HideCurve_ScaleDownTime_9B267ED14BF05847A9B0A5B65795A183"
+          }
+        ],
+        "TimelinePostUpdateFunc": {
+          "Num": 6,
+          "Name": "T_HideCurve__UpdateFunc"
+        },
+        "TimelineFinishedFunc": {
+          "Num": 6,
+          "Name": "T_HideCurve__FinishedFunc"
+        },
+        "PropertySetObject": {
+          "ObjectName": "PersistentLevel:BP_S17_Hatchery_4:BP_S17_Hatchery_C",
+          "ObjectPath": "/BattlepassS17/Maps/Building_Overlays/Apollo_1x1_SwampShack_hat_QuestOverlay.5"
+        },
+        "DirectionPropertyName": "T_HideCurve__Direction_9B267ED14BF05847A9B0A5B65795A183"
+      },
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::UserConstructionScript"
+    }
+  },
+  {
+    "Type": "TimelineComponent",
+    "Name": "T_UnHideCurve",
+    "Outer": "BP_S17_Hatchery_4",
+    "Properties": {
+      "TheTimeline": {
+        "LengthMode": "ETimelineLengthMode::TL_TimelineLength",
+        "Length": 0.25,
+        "InterpFloats": [
+          {
+            "FloatCurve": {
+              "ObjectName": "BP_Athena_PropQuestActor_Parent_C:CurveFloat_3:CurveFloat",
+              "ObjectPath": "/Game/Athena/Items/QuestParents/PropQuestActor/BP_Athena_PropQuestActor_Parent.60"
+            },
+            "InterpFunc": {
+              "Num": 0,
+              "Name": "None"
+            },
+            "TrackName": "ScaleDownTime",
+            "FloatPropertyName": "T_UnHideCurve_ScaleDownTime_FB0AF0004FCE23AADE6D7FB06E999B82"
+          }
+        ],
+        "TimelinePostUpdateFunc": {
+          "Num": 6,
+          "Name": "T_UnHideCurve__UpdateFunc"
+        },
+        "TimelineFinishedFunc": {
+          "Num": 6,
+          "Name": "T_UnHideCurve__FinishedFunc"
+        },
+        "PropertySetObject": {
+          "ObjectName": "PersistentLevel:BP_S17_Hatchery_4:BP_S17_Hatchery_C",
+          "ObjectPath": "/BattlepassS17/Maps/Building_Overlays/Apollo_1x1_SwampShack_hat_QuestOverlay.5"
+        },
+        "DirectionPropertyName": "T_UnHideCurve__Direction_FB0AF0004FCE23AADE6D7FB06E999B82"
+      },
+      "bNetAddressable": true,
+      "CreationMethod": "EComponentCreationMethod::UserConstructionScript"
+    }
+  },
+  {
+    "Type": "World",
+    "Name": "Apollo_1x1_SwampShack_hat_QuestOverlay"
+  }
+]

@@ -1,0 +1,191 @@
+[
+  {
+    "Type": "ConversationDatabase",
+    "Name": "NPCLibrary_Conversation_CavernArmored",
+    "Properties": {
+      "CompilerVersion": 2,
+      "ReachableNodeMap": {
+        "F03DB3234333345B68C3AE8A89E222FD": {
+          "ObjectName": "NPCLibrary_Conversation_CavernArmored:ConversationEntryPointNode_7:ConversationEntryPointNode",
+          "ObjectPath": "/NPCLibrary/NPCs/CavernArmored/CavernArmored/NPCLibrary_Conversation_CavernArmored.1"
+        },
+        "FB1A0187460C4B7C05930986AB547F62": {
+          "ObjectName": "NPCLibrary_Conversation_CavernArmored:Speech_C_4:Speech_C",
+          "ObjectPath": "/NPCLibrary/NPCs/CavernArmored/CavernArmored/NPCLibrary_Conversation_CavernArmored.5"
+        },
+        "9F57E93249BADC68127391BDB646F1E5": {
+          "ObjectName": "NPCLibrary_Conversation_CavernArmored:ConversationLinkNode_0:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/CavernArmored/CavernArmored/NPCLibrary_Conversation_CavernArmored.2"
+        },
+        "87F2F5594DB1ACB1DA7D8F87C6D9595B": {
+          "ObjectName": "NPCLibrary_Conversation_CavernArmored:ConversationLinkNode_1:ConversationLinkNode",
+          "ObjectPath": "/NPCLibrary/NPCs/CavernArmored/CavernArmored/NPCLibrary_Conversation_CavernArmored.3"
+        }
+      },
+      "EntryTags": [
+        {
+          "EntryTag": {
+            "TagName": "Conversation.Entry.CavernArmored"
+          },
+          "DestinationList": [
+            "F03DB323-4333345B-68C3AE8A-89E222FD"
+          ]
+        }
+      ],
+      "ExitTags": [
+        "Conversation.Entry.BasicServices",
+        "Conversation.Entry.NPCLibrary.Quests"
+      ],
+      "InternalNodeIds": [
+        "F03DB323-4333345B-68C3AE8A-89E222FD",
+        "FB1A0187-460C4B7C-05930986-AB547F62",
+        "9F57E932-49BADC68-127391BD-B646F1E5",
+        "87F2F559-4DB1ACB1-DA7D8F87-C6D9595B"
+      ],
+      "Speakers": [
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.Player"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.406108,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "0068FF"
+          }
+        },
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.NPC"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.065123,
+            "B": 0.1875,
+            "A": 1.0,
+            "Hex": "001130"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ConversationEntryPointNode",
+    "Name": "ConversationEntryPointNode_7",
+    "Outer": "NPCLibrary_Conversation_CavernArmored",
+    "Properties": {
+      "EntryTag": {
+        "TagName": "Conversation.Entry.CavernArmored"
+      },
+      "OutputConnections": [
+        "FB1A0187-460C4B7C-05930986-AB547F62"
+      ],
+      "Compiled_NodeGUID": "F03DB323-4333345B-68C3AE8A-89E222FD"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_0",
+    "Outer": "NPCLibrary_Conversation_CavernArmored",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.BasicServices"
+      },
+      "Compiled_NodeGUID": "9F57E932-49BADC68-127391BD-B646F1E5"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_1",
+    "Outer": "NPCLibrary_Conversation_CavernArmored",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.NPCLibrary.Quests"
+      },
+      "Compiled_NodeGUID": "87F2F559-4DB1ACB1-DA7D8F87-C6D9595B"
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_IsFirstEverConversationWithNPC",
+    "Name": "FortControllerRequirement_IsFirstEverConversationWithNPC_0",
+    "Outer": "Speech_C_4"
+  },
+  {
+    "Type": "Speech_C",
+    "Name": "Speech_C_4",
+    "Outer": "NPCLibrary_Conversation_CavernArmored",
+    "Template": "Default__Speech_C",
+    "Properties": {
+      "SpeakerTag": {
+        "TagName": "Conversation.Participant.NPC"
+      },
+      "ListenerTag": {
+        "TagName": "Conversation.Participant.Player"
+      },
+      "GeneralConfig": {
+        "ContextualMessages": [
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "77FE965F4686DD544D2766B4385AB11D",
+              "SourceString": "...Yeah?"
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "Speech_C_4:FortControllerRequirement_IsFirstEverConversationWithNPC_0:FortControllerRequirement_IsFirstEverConversationWithNPC",
+                  "ObjectPath": "/NPCLibrary/NPCs/CavernArmored/CavernArmored/NPCLibrary_Conversation_CavernArmored.4"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            }
+          }
+        ],
+        "DefaultMessage": {
+          "Namespace": "",
+          "Key": "D938761346F9E5110692459F95343F79",
+          "SourceString": "This island needs me."
+        }
+      },
+      "OutputConnections": [
+        "87F2F559-4DB1ACB1-DA7D8F87-C6D9595B",
+        "9F57E932-49BADC68-127391BD-B646F1E5"
+      ],
+      "NodeName": "",
+      "Compiled_NodeGUID": "FB1A0187-460C4B7C-05930986-AB547F62"
+    }
+  }
+]
