@@ -4,24 +4,7 @@
     "Name": "NPCLibrary_Conversation_Payphone",
     "Properties": {
       "CompilerVersion": 2,
-      "ReachableNodeMap": {
-        "A8BA6C0F49F34CEACEDD6685D00BBA54": {
-          "ObjectName": "NPCLibrary_Conversation_Payphone:ConversationEntryPointNode_7:ConversationEntryPointNode",
-          "ObjectPath": "/NPCLibrary/NPCs/NPCLibrary_Conversation_Payphone.1"
-        },
-        "059554C142FBA0722A0AD1ACEB2DC4B5": {
-          "ObjectName": "NPCLibrary_Conversation_Payphone:Speech_C_4:Speech_C",
-          "ObjectPath": "/NPCLibrary/NPCs/NPCLibrary_Conversation_Payphone.5"
-        },
-        "83B25F414731C996E4EAC69F570F2932": {
-          "ObjectName": "NPCLibrary_Conversation_Payphone:ConversationLinkNode_1:ConversationLinkNode",
-          "ObjectPath": "/NPCLibrary/NPCs/NPCLibrary_Conversation_Payphone.3"
-        },
-        "B8A5EF0243FF5209E290D4B9043D2306": {
-          "ObjectName": "NPCLibrary_Conversation_Payphone:ConversationLinkNode_0:ConversationLinkNode",
-          "ObjectPath": "/NPCLibrary/NPCs/NPCLibrary_Conversation_Payphone.2"
-        }
-      },
+      "ReachableNodeMap": {},
       "EntryTags": [
         {
           "EntryTag": {
@@ -124,6 +107,14 @@
     }
   },
   {
+    "Type": "FortControllerRequirement_HasSharedQuestCapacity",
+    "Name": "FortControllerRequirement_HasSharedQuestCapacity_0",
+    "Outer": "Speech_C_4",
+    "Properties": {
+      "bInverseCondition": true
+    }
+  },
+  {
     "Type": "Speech_C",
     "Name": "Speech_C_4",
     "Outer": "NPCLibrary_Conversation_Payphone",
@@ -143,15 +134,24 @@
               "Key": "A6EF9EF443DEF75A87EB5BB945E3189F",
               "SourceString": "Sorry! That's all I've got for you today, try somebody else!"
             },
-            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAny",
             "ContextRequirements": [
               {
                 "ParticipantID": {
                   "TagName": "Conversation.Participant.Player"
                 },
                 "Requirement": {
-                  "ObjectName": "Speech_C_4:FortControllerRequirement_HasRecordedConversationEventWithNPC_0:FortControllerRequirement_HasRecordedConversationEventWithNPC",
+                  "ObjectName": "FortControllerRequirement_HasRecordedConversationEventWithNPC NPCLibrary_Conversation_Payphone:Speech_C_4.FortControllerRequirement_HasRecordedConversationEventWithNPC_0",
                   "ObjectPath": "/NPCLibrary/NPCs/NPCLibrary_Conversation_Payphone.4"
+                }
+              },
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "FortControllerRequirement_HasSharedQuestCapacity NPCLibrary_Conversation_Payphone:Speech_C_4.FortControllerRequirement_HasSharedQuestCapacity_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/NPCLibrary_Conversation_Payphone.5"
                 }
               }
             ],

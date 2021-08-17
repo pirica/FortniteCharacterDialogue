@@ -11,7 +11,7 @@
       },
       "bIncludedInCategories": false,
       "RewardsTable": {
-        "ObjectName": "ChallengeReward_S17_WeeklyXP:DataTable",
+        "ObjectName": "DataTable ChallengeReward_S17_WeeklyXP",
         "ObjectPath": "/BattlepassS17/Items/QuestRewards/ChallengeReward_S17_WeeklyXP.0"
       },
       "HiddenRewards": [
@@ -52,9 +52,40 @@
                   "Require": true
                 }
               ],
-              "Condition": "",
+              "Condition": "Target.Tags HasTag Homebase.Class || Target.Tags HasTag Athena.Faction.Generic.Hostile || Target.Tags HasTag Pawn.Athena.NPC.Duel.IsBeingChallenged || Target.Tags HasTag Pawn.Athena.NPC.Wildlife.Predator || Target.Tags HasTag Pawn.Athena.NPC.Mang || Target.Tags HasTag Pawn.Athena.NPC.IO || Target.Tags HasTag AISpawnerData.Type.MotherWall",
               "TemplateIds": [],
-              "Type": "EFortQuestObjectiveStatEvent::SquadDamage",
+              "Type": "EFortQuestObjectiveStatEvent::Damage",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            },
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Granted.Athena.Goop.Tracker"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "Target.Tags HasTag Homebase.Class || Target.Tags HasTag Athena.Faction.Generic.Hostile || Target.Tags HasTag Pawn.Athena.NPC.Duel.IsBeingChallenged || Target.Tags HasTag Pawn.Athena.NPC.Wildlife.Predator || Target.Tags HasTag Pawn.Athena.NPC.Mang || Target.Tags HasTag Pawn.Athena.NPC.IO || Target.Tags HasTag AISpawnerData.Type.MotherWall",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Damage",
               "bHasInclusiveTargetTags": false,
               "bHasInclusiveSourceTags": true,
               "bHasInclusiveContextTags": true
@@ -70,7 +101,7 @@
           "bRequirePrimaryMissionCompletion": false,
           "bCanProgressInZone": true,
           "bDisplayDynamicAnnouncementUpdate": false,
-          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
           "LinkVaultTab": "EFortInventoryFilter::Max_None",
           "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
           "ItemReference": {
@@ -123,7 +154,7 @@
       "ShortDescription": {
         "Namespace": "",
         "Key": "B9733A0D47402BD754ADDB8DB7C512A4",
-        "SourceString": "We need to confirm weapon effectiveness in alien territory"
+        "SourceString": "We need to confirm weapon effectiveness in alien territory."
       },
       "Description": {
         "Namespace": "",
@@ -131,7 +162,10 @@
         "SourceString": "Deal damage in alien biomes"
       },
       "GameplayTags": [
-        "ChallengeCategory.XP"
+        "ChallengeCategory.XP",
+        "Quest.Metadata.PartyAssist",
+        "Quest.Metadata.GroupChallenge",
+        "Quest.Metadata.HideForContextualQuestDisplay"
       ]
     }
   }

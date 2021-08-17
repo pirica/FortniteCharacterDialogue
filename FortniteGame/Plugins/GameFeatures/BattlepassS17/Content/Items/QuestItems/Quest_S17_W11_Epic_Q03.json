@@ -1,6 +1,145 @@
 [
   {
     "Type": "FortQuestItemDefinition",
-    "Name": "Quest_S17_W11_Epic_Q03"
+    "Name": "Quest_S17_W11_Epic_Q03",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "QuestSubtype": "EFortQuestSubtype::WeeklyChallenge",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/Maven/Maven/NPCCharacterData_Maven.NPCCharacterData_Maven",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "RewardsTable": {
+        "ObjectName": "DataTable ChallengeReward_S17_WeeklyXP",
+        "ObjectPath": "/BattlepassS17/Items/QuestRewards/ChallengeReward_S17_WeeklyXP.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athenabattlepass_weeklychallenge_token",
+          "Quantity": 1
+        },
+        {
+          "TemplateId": "Token:athenabattlepass_s17_w11",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S17_W11_Epic_Q03_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.Quests.Building.Prop.Monitor"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Interact",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "FA7B01F34187C175FF37CD8EA4A3FFE2",
+            "SourceString": "Interact with equipment at any IO radar dish base"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "7024823745DAC2DC1AB7458911AC5CFD",
+            "SourceString": "Interact with equipment at any IO radar dish base"
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 1,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "",
+        "Key": "D96784DF4520809942C92CA3195F4A0B",
+        "SourceString": "Scanning now... Oh. There are quite a bit more than anticipated"
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Epic",
+      "DisplayName": {
+        "Namespace": "",
+        "Key": "C3253D3C478720A16C4730AF0402DBA0",
+        "SourceString": "Interact with equipment at any IO radar dish base"
+      },
+      "ShortDescription": {
+        "Namespace": "",
+        "Key": "A507B62B447C287D45CE46B9EC1FC857",
+        "SourceString": "I need you to upload the updated detection algorithm."
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "EDEE828F46CCA7BB603D7592FD41DDEF",
+        "SourceString": "Interact with equipment at any IO radar dish base"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP",
+        "Athena.Location.UnnamedPOI.RadarDishBase.01",
+        "Athena.Location.UnnamedPOI.RadarDishBase.02",
+        "Athena.Location.UnnamedPOI.RadarDishBase.03",
+        "Athena.Location.UnnamedPOI.RadarDishBase.04",
+        "Athena.Location.UnnamedPOI.RadarDishBase.05",
+        "Athena.Location.UnnamedPOI.RadarDishBase.06",
+        "Athena.Location.UnnamedPOI.RadarDishBase.07"
+      ]
+    }
   }
 ]

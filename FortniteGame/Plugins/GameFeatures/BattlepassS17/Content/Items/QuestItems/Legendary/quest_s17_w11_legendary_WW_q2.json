@@ -1,0 +1,132 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "quest_s17_w11_legendary_WW_q2",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "QuestSubtype": "EFortQuestSubtype::Milestone",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/Antique/Antique/NPCCharacterData_Antique.NPCCharacterData_Antique",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "Threshold": 1000,
+      "RewardsTable": {
+        "ObjectName": "DataTable ChallengeReward_S17_WildWeek_Stage2",
+        "ObjectPath": "/BattlepassS17/Items/QuestRewards/ChallengeReward_S17_WildWeek_Stage2.0"
+      },
+      "Objectives": [
+        {
+          "BackendName": "quest_s17_w11_legendary_ww_q2_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Trait.Suppressed"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "Target.Tags HasTag Homebase.Class || Target.Tags HasTag Athena.Faction.Generic.Hostile || Target.Tags HasTag Pawn.Athena.NPC.Duel.IsBeingChallenged || Target.Tags HasTag Pawn.Athena.NPC.Mang || Target.Tags HasTag Pawn.Athena.NPC.IO || Target.Tags HasTag AISpawnerData.Type.MotherWall || Target.Tags HasTag Pawn.Athena.NPC.Wildlife.Predator",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Damage",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "5912DD4148CBD0AC63F650B6D67A3A6C",
+            "SourceString": "Deal Damage with Suppressed Weapons"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "D1EBB1614AA3E1F0CB57CABA776D06D8",
+            "SourceString": "What isn't suppressed is the urge for violence!"
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 5000,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 10,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "",
+        "Key": "76A4307249B6905F364E95AC2C8AFDEC",
+        "SourceString": "As stealthy as shooting guns can get!"
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Legendary",
+      "DisplayName": {
+        "Namespace": "",
+        "Key": "9946B8E7420A17B6B42996936E7A35CB",
+        "SourceString": "Deal damage with suppressed weapons"
+      },
+      "ShortDescription": {
+        "Namespace": "",
+        "Key": "7B0313314ED80B50C1830790766BC276",
+        "SourceString": "What isn't suppressed is the urge for violence!"
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "4646BCA54A7478783BD047975B6AC68E",
+        "SourceString": "Deal damage with suppressed weapons"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP",
+        "Quest.Metadata.PartyAssist",
+        "Quest.Metadata.GroupChallenge",
+        "Quest.Metadata.HideForContextualQuestDisplay"
+      ]
+    }
+  }
+]

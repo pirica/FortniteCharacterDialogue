@@ -1,0 +1,125 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "Quest_TheMarch",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "bHidden": true,
+      "bIncludedInCategories": false,
+      "bHideStageDescription": true,
+      "Rewards": [
+        {
+          "ItemPrimaryAssetId": {
+            "PrimaryAssetType": {
+              "Name": "AthenaDance"
+            },
+            "PrimaryAssetName": "SPID_299_TheMarch"
+          },
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "themarch_complete",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Creative.FeaturedIsland.TheMarch"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "supplies.crafting.ingredient"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Collect",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": false
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Never",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "CultureInvariantString": null
+          },
+          "HudShortDescription": {
+            "CultureInvariantString": null
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 1,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 10,
+          "DynamicUpdateCompletionDelay": 0.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "bHideQuestProgressNotification": true,
+      "bHideQuestRewardNotification": true,
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Rare",
+      "DisplayName": {
+        "Namespace": "",
+        "Key": "257D372E49E3E246D88414A289AF6C15",
+        "SourceString": "Complete March Through Time"
+      },
+      "ShortDescription": {
+        "Namespace": "",
+        "Key": "820251024F6921537C38FAACD0A19454",
+        "SourceString": "Complete March Through Time"
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "57780ED8418F12E566599F9B5E8C9FE1",
+        "SourceString": "Complete March Through Time"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.Event.Summer"
+      ]
+    }
+  }
+]

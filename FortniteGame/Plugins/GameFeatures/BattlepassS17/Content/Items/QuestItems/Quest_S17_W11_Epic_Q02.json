@@ -22,7 +22,7 @@
         }
       ],
       "RewardsTable": {
-        "ObjectName": "ChallengeReward_S17_WeeklyXP:DataTable",
+        "ObjectName": "DataTable ChallengeReward_S17_WeeklyXP",
         "ObjectPath": "/BattlepassS17/Items/QuestRewards/ChallengeReward_S17_WeeklyXP.0"
       },
       "HiddenRewards": [
@@ -228,6 +228,82 @@
               "bHasInclusiveTargetTags": true,
               "bHasInclusiveSourceTags": true,
               "bHasInclusiveContextTags": true
+            },
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.Quests.Scooter.MarkedPlayer"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "AISpawnerData.Type.MotherWall"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::ComplexCustom",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            },
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.Quests.Scooter.MarkedPlayer"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.Faction.Mother"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::ComplexCustom",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
             }
           ],
           "ObjectiveStatHandle": {
@@ -253,12 +329,12 @@
           "Description": {
             "Namespace": "",
             "Key": "85D38B0C441C594CC1E02FBE89E48E55",
-            "SourceString": "Use the Recon Scanner to spot Alien Parasites and Trespassers"
+            "SourceString": "Use the Recon Scanner to spot an Infected Wildlife or Trespasser"
           },
           "HudShortDescription": {
             "Namespace": "",
             "Key": "8AA3E00540A08665F2BA7F84AB5D68E7",
-            "SourceString": "Use the Recon Scanner to spot Alien Parasites and Trespassers"
+            "SourceString": "Use the Recon Scanner to spot an Infected Wildlife or Trespasser"
           },
           "HudIcon": {
             "AssetPathName": "None",
@@ -288,7 +364,7 @@
       "DisplayName": {
         "Namespace": "",
         "Key": "904B9589412D278976ABBFBEF54A2A93",
-        "SourceString": "Use the Recon Scanner to spot Alien Parasites and Trespassers"
+        "SourceString": "Use the Recon Scanner to spot an Infected Wildlife or Trespasser"
       },
       "ShortDescription": {
         "Namespace": "",
@@ -298,10 +374,13 @@
       "Description": {
         "Namespace": "",
         "Key": "81BA988B4A4A7805BAE6A6B6D15D21D0",
-        "SourceString": "Use the Recon Scanner to spot Alien Parasites and Trespassers"
+        "SourceString": "Use the Recon Scanner to spot an Infected Wildlife or Trespasser"
       },
       "GameplayTags": [
-        "ChallengeCategory.XP"
+        "ChallengeCategory.XP",
+        "Quest.Metadata.PartyAssist",
+        "Quest.Metadata.HideForContextualQuestDisplay",
+        "Quest.Metadata.GroupChallenge"
       ]
     }
   }
