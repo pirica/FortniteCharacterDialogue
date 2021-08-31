@@ -1,0 +1,625 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_GA_Quest_DropOffVehicle_Base",
+    "Outer": "GA_Quest_DropOffVehicle_Base_C",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_GetOwnedGameplayTags_self_CastInput",
+        "Flags": 1,
+        "ElementSize": 16,
+        "InterfaceClass": {
+          "ObjectName": "Class GameplayTagAssetInterface",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetOwnedGameplayTags_TagContainer",
+        "Flags": 1,
+        "ElementSize": 32,
+        "Struct": {
+          "ObjectName": "Class GameplayTagContainer",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasTag_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": 1,
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class WaitGameplayTagDelegate__DelegateSignature",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_EventData",
+        "Flags": 1,
+        "ElementSize": 184,
+        "PropertyFlags": 2,
+        "Struct": {
+          "ObjectName": "Class GameplayEventData",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetFortPlayerControllerFromActor_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class FortPlayerController",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsServer_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_GetOwnedGameplayTags_self_CastInput_1",
+        "Flags": 1,
+        "ElementSize": 16,
+        "InterfaceClass": {
+          "ObjectName": "Class GameplayTagAssetInterface",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetOwnedGameplayTags_TagContainer_1",
+        "Flags": 1,
+        "ElementSize": 32,
+        "Struct": {
+          "ObjectName": "Class GameplayTagContainer",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsFort_Player_Pawn",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class FortPlayerPawn",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_GetVehicleUInterface_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 1125899906842624,
+        "InterfaceClass": {
+          "ObjectName": "Class FortVehicleInterface",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetGameplayTags_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 32,
+        "Struct": {
+          "ObjectName": "Class GameplayTagContainer",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsInVehicle_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAllTags_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAnyTags_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": 1,
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class OnExitVehicle__DelegateSignature",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_WaitGameplayTagAdd_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class AbilityTask_WaitGameplayTagAdded",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_SendComplexCustomStatEvent_QuestActive",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_SendComplexCustomStatEvent_QuestCompleted",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnEmitterAttached_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "PropertyClass": {
+          "ObjectName": "Class ParticleSystemComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": 8421377
+  },
+  {
+    "Type": "Function",
+    "Name": "Re-EnteredVehicle",
+    "Outer": "GA_Quest_DropOffVehicle_Base_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "ExitedVehicle",
+    "Outer": "GA_Quest_DropOffVehicle_Base_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "VictoryFX",
+    "Outer": "GA_Quest_DropOffVehicle_Base_C",
+    "FunctionFlags": 218104000
+  },
+  {
+    "Type": "Function",
+    "Name": "ExitVehicle",
+    "Outer": "GA_Quest_DropOffVehicle_Base_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "K2_ActivateAbilityFromEvent",
+    "Outer": "GA_Quest_DropOffVehicle_Base_C",
+    "Super": "K2_ActivateAbilityFromEvent",
+    "SuperStruct": {
+      "ObjectName": "Function GA_Quest_TriggeredAbility_C:K2_ActivateAbilityFromEvent",
+      "ObjectPath": "/Game/Athena/Items/Quests/QuestAbilities/Parents/GA_Quest_TriggeredAbility.1"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "EventData",
+        "Flags": 1,
+        "ElementSize": 184,
+        "PropertyFlags": 134218134,
+        "Struct": {
+          "ObjectName": "Class GameplayEventData",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      }
+    ],
+    "FunctionFlags": 138938368
+  },
+  {
+    "Type": "Function",
+    "Name": "Added_F042A1C94AE57384350CCEB99167846C",
+    "Outer": "GA_Quest_DropOffVehicle_Base_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GA_Quest_DropOffVehicle_Base_C",
+    "Super": "GA_Quest_TriggeredAbility_C",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function GA_Quest_DropOffVehicle_Base_C:ExecuteUbergraph_GA_Quest_DropOffVehicle_Base",
+        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_DropOff_Vehicle/GA_Quest_DropOffVehicle_Base.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass GA_Quest_TriggeredAbility_C",
+      "ObjectPath": "/Game/Athena/Items/Quests/QuestAbilities/Parents/GA_Quest_TriggeredAbility.2"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function GA_Quest_DropOffVehicle_Base_C:Added_F042A1C94AE57384350CCEB99167846C",
+        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_DropOff_Vehicle/GA_Quest_DropOffVehicle_Base.6"
+      },
+      {
+        "ObjectName": "Function GA_Quest_DropOffVehicle_Base_C:K2_ActivateAbilityFromEvent",
+        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_DropOff_Vehicle/GA_Quest_DropOffVehicle_Base.5"
+      },
+      {
+        "ObjectName": "Function GA_Quest_DropOffVehicle_Base_C:ExitVehicle",
+        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_DropOff_Vehicle/GA_Quest_DropOffVehicle_Base.4"
+      },
+      {
+        "ObjectName": "Function GA_Quest_DropOffVehicle_Base_C:VictoryFX",
+        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_DropOff_Vehicle/GA_Quest_DropOffVehicle_Base.3"
+      },
+      {
+        "ObjectName": "Function GA_Quest_DropOffVehicle_Base_C:ExitedVehicle",
+        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_DropOff_Vehicle/GA_Quest_DropOffVehicle_Base.2"
+      },
+      {
+        "ObjectName": "Function GA_Quest_DropOffVehicle_Base_C:Re-EnteredVehicle",
+        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_DropOff_Vehicle/GA_Quest_DropOffVehicle_Base.1"
+      },
+      {
+        "ObjectName": "Function GA_Quest_DropOffVehicle_Base_C:ExecuteUbergraph_GA_Quest_DropOffVehicle_Base",
+        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_DropOff_Vehicle/GA_Quest_DropOffVehicle_Base.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": 2097153,
+        "ElementSize": 16,
+        "PropertyFlags": 2105344,
+        "Struct": {
+          "ObjectName": "Class PointerToUberGraphFrame",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "QuestTime",
+        "Flags": 2097153,
+        "ElementSize": 4,
+        "PropertyFlags": 21
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "RequiredVehicleTags",
+        "Flags": 2097153,
+        "ElementSize": 32,
+        "PropertyFlags": 21,
+        "Struct": {
+          "ObjectName": "Class GameplayTagContainer",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "StartLocationTags",
+        "Flags": 2097153,
+        "ElementSize": 32,
+        "PropertyFlags": 21,
+        "Struct": {
+          "ObjectName": "Class GameplayTagContainer",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "DestinationLocationTag",
+        "Flags": 2097153,
+        "ElementSize": 12,
+        "PropertyFlags": 21,
+        "Struct": {
+          "ObjectName": "Class GameplayTag",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "QuestStatEventTags",
+        "Flags": 2097153,
+        "ElementSize": 32,
+        "PropertyFlags": 21,
+        "Struct": {
+          "ObjectName": "Class GameplayTagContainer",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "HUDQuestTimerText",
+        "Flags": 2097153,
+        "ElementSize": 24,
+        "PropertyFlags": 21
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VictorySound",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 65557,
+        "PropertyClass": {
+          "ObjectName": "Class SoundBase",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "QuestSuccessEmitter",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 65557,
+        "PropertyClass": {
+          "ObjectName": "Class ParticleSystem",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "TagListenTask",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 65541,
+        "PropertyClass": {
+          "ObjectName": "Class AbilityTask_WaitGameplayTagAdded",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "QuestTimer",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 65541,
+        "Struct": {
+          "ObjectName": "Class TimerHandle",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "QuestVehicle",
+        "Flags": 2097153,
+        "ElementSize": 16,
+        "PropertyFlags": 65541,
+        "InterfaceClass": {
+          "ObjectName": "Class FortVehicleInterface",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "reentered",
+        "Flags": 2097153,
+        "ElementSize": 1,
+        "PropertyFlags": 65541,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "ReturnToVehicleText",
+        "Flags": 2097153,
+        "ElementSize": 24,
+        "PropertyFlags": 21
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "StationTags",
+        "Flags": 2097153,
+        "ElementSize": 32,
+        "PropertyFlags": 65541,
+        "Struct": {
+          "ObjectName": "Class GameplayTagContainer",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_GA_Quest_DropOffVehicle_Base": {
+        "ObjectName": "Function GA_Quest_DropOffVehicle_Base_C:ExecuteUbergraph_GA_Quest_DropOffVehicle_Base",
+        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_DropOff_Vehicle/GA_Quest_DropOffVehicle_Base.0"
+      },
+      "Re-EnteredVehicle": {
+        "ObjectName": "Function GA_Quest_DropOffVehicle_Base_C:Re-EnteredVehicle",
+        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_DropOff_Vehicle/GA_Quest_DropOffVehicle_Base.1"
+      },
+      "ExitedVehicle": {
+        "ObjectName": "Function GA_Quest_DropOffVehicle_Base_C:ExitedVehicle",
+        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_DropOff_Vehicle/GA_Quest_DropOffVehicle_Base.2"
+      },
+      "VictoryFX": {
+        "ObjectName": "Function GA_Quest_DropOffVehicle_Base_C:VictoryFX",
+        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_DropOff_Vehicle/GA_Quest_DropOffVehicle_Base.3"
+      },
+      "ExitVehicle": {
+        "ObjectName": "Function GA_Quest_DropOffVehicle_Base_C:ExitVehicle",
+        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_DropOff_Vehicle/GA_Quest_DropOffVehicle_Base.4"
+      },
+      "K2_ActivateAbilityFromEvent": {
+        "ObjectName": "Function GA_Quest_DropOffVehicle_Base_C:K2_ActivateAbilityFromEvent",
+        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_DropOff_Vehicle/GA_Quest_DropOffVehicle_Base.5"
+      },
+      "Added_F042A1C94AE57384350CCEB99167846C": {
+        "ObjectName": "Function GA_Quest_DropOffVehicle_Base_C:Added_F042A1C94AE57384350CCEB99167846C",
+        "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_DropOff_Vehicle/GA_Quest_DropOffVehicle_Base.6"
+      }
+    },
+    "ClassFlags": 264208,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GA_Quest_DropOffVehicle_Base_C Default__GA_Quest_DropOffVehicle_Base_C",
+      "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_DropOff_Vehicle/GA_Quest_DropOffVehicle_Base.8"
+    }
+  },
+  {
+    "Type": "GA_Quest_DropOffVehicle_Base_C",
+    "Name": "Default__GA_Quest_DropOffVehicle_Base_C",
+    "Template": "Default__GA_Quest_TriggeredAbility_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "QuestTime": 240.0,
+      "RequiredVehicleTags": [
+        "Athena.Vehicle.Valet.BasicSedan.IO"
+      ],
+      "StartLocationTags": [
+        "Athena.Location.POI.HollyHedges"
+      ],
+      "DestinationLocationTag": {
+        "TagName": "Athena.Location.POI.HollyHedges"
+      },
+      "QuestStatEventTags": [
+        "Athena.Quests.VehicleDelivery.AlienArea"
+      ],
+      "HUDQuestTimerText": {
+        "Namespace": "",
+        "Key": "FE4386BD438C564815A1CF9952FA3BE5",
+        "SourceString": "Drive to Lazy Lake"
+      },
+      "VictorySound": {
+        "ObjectName": "SoundCue Athena_CollectHiddenStarReward_Cue",
+        "ObjectPath": "/Game/Athena/Sounds/Quests/Athena_CollectHiddenStarReward_Cue.0"
+      },
+      "QuestSuccessEmitter": {
+        "ObjectName": "ParticleSystem P_Athena_QuestItem_PickupSuccess",
+        "ObjectPath": "/Game/Athena/Items/QuestInteractables/Generic/FX/P_Athena_QuestItem_PickupSuccess.100"
+      },
+      "QuestTimer": {
+        "Handle": 0
+      },
+      "ReturnToVehicleText": {
+        "Namespace": "",
+        "Key": "C8DDAD72477C9F8DFF09E281E9749278",
+        "SourceString": "Re-enter your vehicle!"
+      },
+      "StationTags": [
+        "Athena.Quests.GasStation.CattyCorner",
+        "Athena.Quests.Vault.CattyCorner"
+      ],
+      "ReplicationPolicy": "EGameplayAbilityReplicationPolicy::ReplicateYes",
+      "NetExecutionPolicy": "EGameplayAbilityNetExecutionPolicy::ServerInitiated",
+      "AbilityTriggers": [
+        {
+          "TriggerTag": {
+            "TagName": "Event.Vehicle.Entered"
+          },
+          "TriggerSource": "EGameplayAbilityTriggerSource::GameplayEvent"
+        }
+      ]
+    }
+  }
+]

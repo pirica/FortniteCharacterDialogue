@@ -1,0 +1,141 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "Quest_S17_IslandGames_Q01",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "QuestSubtype": "EFortQuestSubtype::WeeklyChallenge",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/Tess/Tess/NPCCharacterData_Tess.NPCCharacterData_Tess",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "RewardsTable": {
+        "ObjectName": "DataTable ChallengeReward_S17_EventXP_Sm",
+        "ObjectPath": "/BattlepassS17/Items/QuestRewards/ChallengeReward_S17_EventXP_Sm.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_s17_event_islandgames_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S17_IslandGames_Q01_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Creative"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Creative.FeaturedIsland.IslandGames.01"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "Source.Tags HasTag Item.Weapon.Ranged.Shotgun || Source.Tags HasTag Item.Weapon.Ranged.Sniper",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Damage",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "894BBC824A52F6F1EE9073BEE034243A",
+            "SourceString": "Deal damage with Shotguns or Sniper Rifles in Red vs Blue Rumble"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "BB92B7EB4A7EF1DF263204A119C126E7",
+            "SourceString": "In combat, you've gotta hit your mark at any distance."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 5500,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 2,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "Quest_S17_IslandGames_Q01",
+        "Key": "Quest_S17_IslandGames_Q01_CompletionText",
+        "SourceString": "You've got a diverse set of skills."
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Rare",
+      "DisplayName": {
+        "Namespace": "Quest_S17_IslandGames_Q01",
+        "Key": "Quest_S17_IslandGames_Q01_DisplayName",
+        "SourceString": "Deal damage with Shotguns or Sniper Rifles in Red vs Blue Rumble"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S17_IslandGames_Q01",
+        "Key": "Quest_S17_IslandGames_Q01_ShortDescription",
+        "SourceString": "In combat, you've gotta hit your mark at any distance."
+      },
+      "Description": {
+        "Namespace": "Quest_S17_IslandGames_Q01",
+        "Key": "Quest_S17_IslandGames_Q01_Description",
+        "SourceString": "Deal damage with Shotguns or Sniper Rifles in Red vs Blue Rumble"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.Event.IslandGames"
+      ]
+    }
+  }
+]

@@ -1,0 +1,134 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "Quest_S17_IslandGames_Q08",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "QuestSubtype": "EFortQuestSubtype::WeeklyChallenge",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/Viking/Viking/TandemCharacterData_Viking.TandemCharacterData_Viking",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "RewardsTable": {
+        "ObjectName": "DataTable ChallengeReward_S17_EventXP_Sm",
+        "ObjectPath": "/BattlepassS17/Items/QuestRewards/ChallengeReward_S17_EventXP_Sm.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_s17_event_islandgames_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S17_IslandGames_Q08_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Creative"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Creative.FeaturedIsland.IslandGames.03"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "Target.Tags HasTag Trait.Restoration.Shields || Target.Tags HasTag Trait.Restoration.Health",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Heal",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "2140B52B4FBBF8EAEB0EF99F47B5C176",
+            "SourceString": "Restore Health or Shield in Finest 2v2"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "901C74394CA6FDD61141A8B03A2B4217",
+            "SourceString": "The hunt is long. You must stay well."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 750,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 6,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "Quest_S17_IslandGames_Q08",
+        "Key": "Quest_S17_IslandGames_Q08_CompletionText",
+        "SourceString": "Be prepared to endure. At all costs."
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Rare",
+      "DisplayName": {
+        "Namespace": "Quest_S17_IslandGames_Q08",
+        "Key": "Quest_S17_IslandGames_Q08_DisplayName",
+        "SourceString": "Restore Health or Shield in Finest 2v2"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S17_IslandGames_Q08",
+        "Key": "Quest_S17_IslandGames_Q08_ShortDescription",
+        "SourceString": "The hunt is long. You must stay well."
+      },
+      "Description": {
+        "Namespace": "Quest_S17_IslandGames_Q08",
+        "Key": "Quest_S17_IslandGames_Q08_Description",
+        "SourceString": "Restore Health or Shield in Finest 2v2"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.Event.IslandGames"
+      ]
+    }
+  }
+]

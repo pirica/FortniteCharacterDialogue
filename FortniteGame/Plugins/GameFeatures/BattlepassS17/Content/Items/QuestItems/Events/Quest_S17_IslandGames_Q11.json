@@ -1,0 +1,141 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "Quest_S17_IslandGames_Q11",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "QuestSubtype": "EFortQuestSubtype::WeeklyChallenge",
+      "TandemCharacterData": {
+        "AssetPathName": "/Game/Athena/Items/Cosmetics/Characters/Tandem/TandemCharacterData_M_FurnaceFace.TandemCharacterData_M_FurnaceFace",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "RewardsTable": {
+        "ObjectName": "DataTable ChallengeReward_S17_EventXP_Sm",
+        "ObjectPath": "/BattlepassS17/Items/QuestRewards/ChallengeReward_S17_EventXP_Sm.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_s17_event_islandgames_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S17_IslandGames_Q11_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Creative"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Creative.FeaturedIsland.IslandGames.04"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "Source.Tags HasTag Item.Weapon.Ranged.SMG || Source.Tags HasTag Item.Weapon.Ranged.Pistol",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Damage",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "57C340984076E858DC1A47BCD084D571",
+            "SourceString": "Deal damage with SMGs or Pistols in Red vs Blue Lava"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "A888553641BA7646FA6553ACF3B48EBD",
+            "SourceString": "Riddle the sky with ammunition!"
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 5000,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 2,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "Quest_S17_IslandGames_Q11",
+        "Key": "Quest_S17_IslandGames_Q11_CompletionText",
+        "SourceString": "The destruction DELIGHTS Ruin! YES!"
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Rare",
+      "DisplayName": {
+        "Namespace": "Quest_S17_IslandGames_Q11",
+        "Key": "Quest_S17_IslandGames_Q11_DisplayName",
+        "SourceString": "Deal damage with SMGs or Pistols in Red vs Blue Lava"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S17_IslandGames_Q11",
+        "Key": "Quest_S17_IslandGames_Q11_ShortDescription",
+        "SourceString": "Riddle the sky with ammunition!"
+      },
+      "Description": {
+        "Namespace": "Quest_S17_IslandGames_Q11",
+        "Key": "Quest_S17_IslandGames_Q11_Description",
+        "SourceString": "Deal damage with SMGs or Pistols in Red vs Blue Lava"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.Event.IslandGames"
+      ]
+    }
+  }
+]

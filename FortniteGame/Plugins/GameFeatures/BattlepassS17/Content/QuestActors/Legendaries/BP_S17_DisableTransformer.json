@@ -1,0 +1,606 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_S17_DisableTransformer_C",
+    "Super": "BP_S17_GenericQuestActor_Parent_C",
+    "Properties": {
+      "bHasCookedComponentInstancingData": true,
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript BP_S17_DisableTransformer_C:SimpleConstructionScript_0",
+        "ObjectPath": "/BattlepassS17/QuestActors/Legendaries/BP_S17_DisableTransformer.14"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler BP_S17_DisableTransformer_C:InheritableComponentHandler",
+        "ObjectPath": "/BattlepassS17/QuestActors/Legendaries/BP_S17_DisableTransformer.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass BP_S17_GenericQuestActor_Parent_C",
+      "ObjectPath": "/BattlepassS17/QuestActors/BP_S17_GenericQuestActor_Parent.0"
+    },
+    "FuncMap": {},
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_S17_DisableTransformer_C Default__BP_S17_DisableTransformer_C",
+      "ObjectPath": "/BattlepassS17/QuestActors/Legendaries/BP_S17_DisableTransformer.1"
+    }
+  },
+  {
+    "Type": "BP_S17_DisableTransformer_C",
+    "Name": "Default__BP_S17_DisableTransformer_C",
+    "Template": "Default__BP_S17_GenericQuestActor_Parent_C",
+    "Properties": {
+      "TestingCooldown": 10.0,
+      "Interaction Verb": {
+        "Namespace": "",
+        "Key": "C8EECD684FB1EA2D7DB441B17E9B5ABC",
+        "SourceString": "Shut Down Radar Dish"
+      },
+      "SM_PreInteraction": {
+        "ObjectName": "StaticMesh SM_Quest_Tinfoil_IOBox_01",
+        "ObjectPath": "/Game/Environments/Apollo/Sets/Quest/Props/Meshes/SM_Quest_Tinfoil_IOBox_01.1"
+      },
+      "bHideAfterInteract": false,
+      "SM_PostInteraction": {
+        "ObjectName": "StaticMesh SM_Quest_Tinfoil_IOBox_01",
+        "ObjectPath": "/Game/Environments/Apollo/Sets/Quest/Props/Meshes/SM_Quest_Tinfoil_IOBox_01.1"
+      },
+      "SuccessSound": {
+        "ObjectName": "SoundCue Power_Transformer_Succesful_Interaction_Cue",
+        "ObjectPath": "/Game/Athena/Sounds/Quests/PowerTransformer/Power_Transformer_Succesful_Interaction_Cue.0"
+      },
+      "PreInteraction_MIS_Override": {
+        "ObjectName": "MaterialInstanceConstant MI_Quest_Tinfoil_IOBox_02",
+        "ObjectPath": "/Game/Environments/Apollo/Sets/Quest/Props/Materials/MI_Quest_Tinfoil_IOBox_02.0"
+      },
+      "AmbientSound": {
+        "ObjectName": "SoundCue Power_Transformer_Loop_Cue",
+        "ObjectPath": "/Game/Athena/Sounds/Quests/PowerTransformer/Power_Transformer_Loop_Cue.0"
+      },
+      "Ambient Particle Transform": {
+        "Translation": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 50.0
+        },
+        "Scale3D": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 2.5
+        }
+      },
+      "AudioAndVFXHideRadius": 5000.0,
+      "DiscoverRadius": 5500.0,
+      "ConsolidatedQuestComponent": {
+        "ObjectName": "ConsolidatedQuestComponent Default__BP_S17_DisableTransformer_C:ConsolidatedQuestComponent",
+        "ObjectPath": "/BattlepassS17/QuestActors/Legendaries/BP_S17_DisableTransformer.3"
+      },
+      "QuestIconComponent": {
+        "ObjectName": "FortQuestIconComponent Default__BP_S17_DisableTransformer_C:QuestIconComponent",
+        "ObjectPath": "/BattlepassS17/QuestActors/Legendaries/BP_S17_DisableTransformer.4"
+      },
+      "RootComponent": {
+        "ObjectName": "SceneComponent Default__BP_S17_DisableTransformer_C:SceneRoot",
+        "ObjectPath": "/BattlepassS17/QuestActors/Legendaries/BP_S17_DisableTransformer.12"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "AmbientAudio_GEN_VARIABLE",
+    "Outer": "BP_S17_DisableTransformer_C",
+    "Template": "AmbientAudio_GEN_VARIABLE",
+    "Properties": {
+      "Sound": null
+    }
+  },
+  {
+    "Type": "ConsolidatedQuestComponent",
+    "Name": "ConsolidatedQuestComponent",
+    "Outer": "Default__BP_S17_DisableTransformer_C",
+    "Template": "ConsolidatedQuestComponent",
+    "Properties": {
+      "QuestItemDefinition": {
+        "ObjectName": "FortQuestItemDefinition quest_s17_w14_legendary_q3",
+        "ObjectPath": "/BattlepassS17/Items/QuestItems/Legendary/quest_s17_w14_legendary_q3.0"
+      },
+      "AttachParent": {
+        "ObjectName": "SceneComponent Default__BP_S17_DisableTransformer_C:SceneRoot",
+        "ObjectPath": "/BattlepassS17/QuestActors/Legendaries/BP_S17_DisableTransformer.12"
+      }
+    }
+  },
+  {
+    "Type": "FortQuestIconComponent",
+    "Name": "QuestIconComponent",
+    "Outer": "Default__BP_S17_DisableTransformer_C",
+    "Template": "QuestIconComponent"
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "BP_S17_DisableTransformer_C",
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "Class NiagaraComponent",
+            "ObjectPath": "/Script/Niagara"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "NiagaraComponent BP_S17_DisableTransformer_C:N_Cosmetic_GEN_VARIABLE",
+            "ObjectPath": "/BattlepassS17/QuestActors/Legendaries/BP_S17_DisableTransformer.7"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass BP_Athena_PropQuestActor_Parent_C",
+              "ObjectPath": "/Game/Athena/Items/QuestParents/PropQuestActor/BP_Athena_PropQuestActor_Parent.51"
+            },
+            "SCSVariableName": "N_Cosmetic",
+            "AssociatedGuid": "2996F2BB-450E20BC-2BCB609B-B8ADEABE"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [
+              {
+                "PropertyName": "bAutoActivate",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class NiagaraComponent",
+                  "ObjectPath": "/Script/Niagara"
+                }
+              }
+            ],
+            "bHasValidCookedData": true
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class NiagaraComponent",
+            "ObjectPath": "/Script/Niagara"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "NiagaraComponent BP_S17_DisableTransformer_C:N_PostInteractionAmbient_GEN_VARIABLE",
+            "ObjectPath": "/BattlepassS17/QuestActors/Legendaries/BP_S17_DisableTransformer.8"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass BP_Athena_PropQuestActor_Parent_C",
+              "ObjectPath": "/Game/Athena/Items/QuestParents/PropQuestActor/BP_Athena_PropQuestActor_Parent.51"
+            },
+            "SCSVariableName": "N_PostInteractionAmbient",
+            "AssociatedGuid": "52A5AE39-4D03DCF2-AB2AA5AF-67883F44"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [
+              {
+                "PropertyName": "bAutoActivate",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class NiagaraComponent",
+                  "ObjectPath": "/Script/Niagara"
+                }
+              }
+            ],
+            "bHasValidCookedData": true
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class NiagaraComponent",
+            "ObjectPath": "/Script/Niagara"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "NiagaraComponent BP_S17_DisableTransformer_C:N_Ambient_GEN_VARIABLE",
+            "ObjectPath": "/BattlepassS17/QuestActors/Legendaries/BP_S17_DisableTransformer.6"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass BP_Athena_PropQuestActor_Parent_C",
+              "ObjectPath": "/Game/Athena/Items/QuestParents/PropQuestActor/BP_Athena_PropQuestActor_Parent.51"
+            },
+            "SCSVariableName": "N_Ambient",
+            "AssociatedGuid": "1CEE948F-4AA402BE-B7AFE78D-1302BBBD"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [
+              {
+                "PropertyName": "RelativeLocation",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class NiagaraComponent",
+                  "ObjectPath": "/Script/Niagara"
+                }
+              },
+              {
+                "PropertyName": "Z",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class Vector",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "bAutoActivate",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class NiagaraComponent",
+                  "ObjectPath": "/Script/Niagara"
+                }
+              }
+            ],
+            "bHasValidCookedData": true
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class NiagaraComponent",
+            "ObjectPath": "/Script/Niagara"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "NiagaraComponent BP_S17_DisableTransformer_C:N_UnHide_GEN_VARIABLE",
+            "ObjectPath": "/BattlepassS17/QuestActors/Legendaries/BP_S17_DisableTransformer.9"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass BP_Athena_PropQuestActor_Parent_C",
+              "ObjectPath": "/Game/Athena/Items/QuestParents/PropQuestActor/BP_Athena_PropQuestActor_Parent.51"
+            },
+            "SCSVariableName": "N_UnHide",
+            "AssociatedGuid": "5B5047CD-4AA21956-04AFF494-DD15835A"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [
+              {
+                "PropertyName": "bAutoActivate",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class NiagaraComponent",
+                  "ObjectPath": "/Script/Niagara"
+                }
+              }
+            ],
+            "bHasValidCookedData": true
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class AudioComponent",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "AudioComponent BP_S17_DisableTransformer_C:AmbientAudio_GEN_VARIABLE",
+            "ObjectPath": "/BattlepassS17/QuestActors/Legendaries/BP_S17_DisableTransformer.2"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass BP_Athena_PropQuestActor_Parent_C",
+              "ObjectPath": "/Game/Athena/Items/QuestParents/PropQuestActor/BP_Athena_PropQuestActor_Parent.51"
+            },
+            "SCSVariableName": "AmbientAudio",
+            "AssociatedGuid": "58417A85-4EB58B12-7223CFA3-58C4EA3F"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [
+              {
+                "PropertyName": "VolumeMultiplier",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class AudioComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "bAutoActivate",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class AudioComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              }
+            ],
+            "bHasValidCookedData": true
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class ParticleSystemComponent",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "ParticleSystemComponent BP_S17_DisableTransformer_C:P_PostInteractionAmbient_GEN_VARIABLE",
+            "ObjectPath": "/BattlepassS17/QuestActors/Legendaries/BP_S17_DisableTransformer.10"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass BP_Athena_PropQuestActor_Parent_C",
+              "ObjectPath": "/Game/Athena/Items/QuestParents/PropQuestActor/BP_Athena_PropQuestActor_Parent.51"
+            },
+            "SCSVariableName": "P_PostInteractionAmbient",
+            "AssociatedGuid": "7B812C77-450B1D1E-6C4DDA81-A8828EA8"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [
+              {
+                "PropertyName": "RelativeLocation",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class ParticleSystemComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Z",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class Vector",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "bAutoActivate",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class ParticleSystemComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              }
+            ],
+            "bHasValidCookedData": true
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class StaticMeshComponent",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "StaticMeshComponent BP_S17_DisableTransformer_C:SM_Quest_PreInteraction_GEN_VARIABLE",
+            "ObjectPath": "/BattlepassS17/QuestActors/Legendaries/BP_S17_DisableTransformer.15"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass BP_Athena_PropQuestActor_Parent_C",
+              "ObjectPath": "/Game/Athena/Items/QuestParents/PropQuestActor/BP_Athena_PropQuestActor_Parent.51"
+            },
+            "SCSVariableName": "SM_Quest_PreInteraction",
+            "AssociatedGuid": "E9049FD4-494EB90D-C5D462A4-C90426BD"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [
+              {
+                "PropertyName": "bGenerateOverlapEvents",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class StaticMeshComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "BodyInstance",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class StaticMeshComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "ObjectType",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class BodyInstance",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "CollisionEnabled",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class BodyInstance",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "CollisionProfileName",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class BodyInstance",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "CollisionResponses",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class BodyInstance",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "ResponseArray",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class CollisionResponse",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "ResponseArray",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class CollisionResponse",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Channel",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class ResponseChannel",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Response",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class ResponseChannel",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "ResponseArray",
+                "ArrayIndex": 1,
+                "PropertyScope": {
+                  "ObjectName": "Class CollisionResponse",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Channel",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class ResponseChannel",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Response",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class ResponseChannel",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "RelativeLocation",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class StaticMeshComponent",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Z",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class Vector",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              }
+            ],
+            "bHasValidCookedData": true
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "N_Ambient_GEN_VARIABLE",
+    "Outer": "BP_S17_DisableTransformer_C",
+    "Template": "N_Ambient_GEN_VARIABLE",
+    "Properties": {
+      "OverrideParameters": {}
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "N_Cosmetic_GEN_VARIABLE",
+    "Outer": "BP_S17_DisableTransformer_C",
+    "Template": "N_Cosmetic_GEN_VARIABLE",
+    "Properties": {
+      "OverrideParameters": {}
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "N_PostInteractionAmbient_GEN_VARIABLE",
+    "Outer": "BP_S17_DisableTransformer_C",
+    "Template": "N_PostInteractionAmbient_GEN_VARIABLE",
+    "Properties": {
+      "OverrideParameters": {}
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "N_UnHide_GEN_VARIABLE",
+    "Outer": "BP_S17_DisableTransformer_C",
+    "Template": "N_UnHide_GEN_VARIABLE",
+    "Properties": {
+      "OverrideParameters": {}
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "P_PostInteractionAmbient_GEN_VARIABLE",
+    "Outer": "BP_S17_DisableTransformer_C",
+    "Template": "P_PostInteractionAmbient_GEN_VARIABLE",
+    "Properties": {
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 40.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_S17_DisableTransformer_C"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "SceneRoot",
+    "Outer": "Default__BP_S17_DisableTransformer_C",
+    "Template": "SceneRoot"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class SceneComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent BP_S17_DisableTransformer_C:DefaultSceneRoot_GEN_VARIABLE",
+        "ObjectPath": "/BattlepassS17/QuestActors/Legendaries/BP_S17_DisableTransformer.11"
+      },
+      "VariableGuid": "2CBD25C2-4A70792F-04182AA8-BC07E2EF",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_S17_DisableTransformer_C",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node BP_S17_DisableTransformer_C:SimpleConstructionScript_0.SCS_Node_0",
+        "ObjectPath": "/BattlepassS17/QuestActors/Legendaries/BP_S17_DisableTransformer.13"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_Quest_PreInteraction_GEN_VARIABLE",
+    "Outer": "BP_S17_DisableTransformer_C",
+    "Template": "SM_Quest_PreInteraction_GEN_VARIABLE",
+    "Properties": {
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 168.0
+      }
+    }
+  }
+]
