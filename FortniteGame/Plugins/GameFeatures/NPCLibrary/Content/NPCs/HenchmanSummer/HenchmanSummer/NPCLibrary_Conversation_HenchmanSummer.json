@@ -4,28 +4,7 @@
     "Name": "NPCLibrary_Conversation_HenchmanSummer",
     "Properties": {
       "CompilerVersion": 2,
-      "ReachableNodeMap": {
-        "AA675F914F232B44FD4A6BA0A7417BD7": {
-          "ObjectName": "NPCLibrary_Conversation_HenchmanSummer:ConversationEntryPointNode_7:ConversationEntryPointNode",
-          "ObjectPath": "/NPCLibrary/NPCs/HenchmanSummer/HenchmanSummer/NPCLibrary_Conversation_HenchmanSummer.1"
-        },
-        "6797CB2040AC71D19FFBC3A86A5541C6": {
-          "ObjectName": "NPCLibrary_Conversation_HenchmanSummer:Speech_C_4:Speech_C",
-          "ObjectPath": "/NPCLibrary/NPCs/HenchmanSummer/HenchmanSummer/NPCLibrary_Conversation_HenchmanSummer.9"
-        },
-        "8F0A9D1C430D9002A5B204BCE2966556": {
-          "ObjectName": "NPCLibrary_Conversation_HenchmanSummer:ConversationLinkNode_4:ConversationLinkNode",
-          "ObjectPath": "/NPCLibrary/NPCs/HenchmanSummer/HenchmanSummer/NPCLibrary_Conversation_HenchmanSummer.4"
-        },
-        "E91CBB3B4799F47B3EE162939AEF82E6": {
-          "ObjectName": "NPCLibrary_Conversation_HenchmanSummer:ConversationLinkNode_0:ConversationLinkNode",
-          "ObjectPath": "/NPCLibrary/NPCs/HenchmanSummer/HenchmanSummer/NPCLibrary_Conversation_HenchmanSummer.2"
-        },
-        "50C7860445F568BC5B82E481CA597339": {
-          "ObjectName": "NPCLibrary_Conversation_HenchmanSummer:ConversationLinkNode_1:ConversationLinkNode",
-          "ObjectPath": "/NPCLibrary/NPCs/HenchmanSummer/HenchmanSummer/NPCLibrary_Conversation_HenchmanSummer.3"
-        }
-      },
+      "ReachableNodeMap": {},
       "EntryTags": [
         {
           "EntryTag": {
@@ -37,6 +16,7 @@
         }
       ],
       "ExitTags": [
+        "Conversation.Entry.Season17.Week14",
         "Conversation.Entry.Season17.Week3",
         "Conversation.Entry.BasicServices",
         "Conversation.Entry.NPCLibrary.Quests"
@@ -44,6 +24,7 @@
       "InternalNodeIds": [
         "AA675F91-4F232B44-FD4A6BA0-A7417BD7",
         "6797CB20-40AC71D1-9FFBC3A8-6A5541C6",
+        "6E3079EA-49EF35C2-25FEB8A5-80B8AE2E",
         "8F0A9D1C-430D9002-A5B204BC-E2966556",
         "E91CBB3B-4799F47B-3EE16293-9AEF82E6",
         "50C78604-45F568BC-5B82E481-CA597339"
@@ -130,6 +111,17 @@
     }
   },
   {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_5",
+    "Outer": "NPCLibrary_Conversation_HenchmanSummer",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.Season17.Week14"
+      },
+      "Compiled_NodeGUID": "6E3079EA-49EF35C2-25FEB8A5-80B8AE2E"
+    }
+  },
+  {
     "Type": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch",
     "Name": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0",
     "Outer": "Speech_C_4",
@@ -195,8 +187,8 @@
                   "TagName": "Conversation.Participant.Player"
                 },
                 "Requirement": {
-                  "ObjectName": "Speech_C_4:FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0:FortControllerRequirement_CheckTimeSinceLastPlayedMatch",
-                  "ObjectPath": "/NPCLibrary/NPCs/HenchmanSummer/HenchmanSummer/NPCLibrary_Conversation_HenchmanSummer.5"
+                  "ObjectName": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch NPCLibrary_Conversation_HenchmanSummer:Speech_C_4.FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/HenchmanSummer/HenchmanSummer/NPCLibrary_Conversation_HenchmanSummer.6"
                 }
               }
             ],
@@ -204,7 +196,7 @@
               "Value": 1.0,
               "Curve": {
                 "CurveTable": {
-                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
                   "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
                 },
                 "RowName": "Tandem.Speech.Priority.WhileSincePlayed"
@@ -222,7 +214,8 @@
               "RegistryType": {
                 "Name": null
               }
-            }
+            },
+            "MetadataParameters": []
           },
           {
             "Message": {
@@ -237,8 +230,8 @@
                   "TagName": "Conversation.Participant.Player"
                 },
                 "Requirement": {
-                  "ObjectName": "Speech_C_4:FortControllerRequirement_IsFirstEverConversationWithNPC_0:FortControllerRequirement_IsFirstEverConversationWithNPC",
-                  "ObjectPath": "/NPCLibrary/NPCs/HenchmanSummer/HenchmanSummer/NPCLibrary_Conversation_HenchmanSummer.8"
+                  "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC NPCLibrary_Conversation_HenchmanSummer:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/HenchmanSummer/HenchmanSummer/NPCLibrary_Conversation_HenchmanSummer.9"
                 }
               }
             ],
@@ -246,7 +239,7 @@
               "Value": 1.0,
               "Curve": {
                 "CurveTable": {
-                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
                   "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
                 },
                 "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
@@ -264,7 +257,8 @@
               "RegistryType": {
                 "Name": null
               }
-            }
+            },
+            "MetadataParameters": []
           },
           {
             "Message": {
@@ -279,8 +273,8 @@
                   "TagName": "Conversation.Participant.Player"
                 },
                 "Requirement": {
-                  "ObjectName": "Speech_C_4:FortControllerRequirement_HasBars_0:FortControllerRequirement_HasBars",
-                  "ObjectPath": "/NPCLibrary/NPCs/HenchmanSummer/HenchmanSummer/NPCLibrary_Conversation_HenchmanSummer.6"
+                  "ObjectName": "FortControllerRequirement_HasBars NPCLibrary_Conversation_HenchmanSummer:Speech_C_4.FortControllerRequirement_HasBars_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/HenchmanSummer/HenchmanSummer/NPCLibrary_Conversation_HenchmanSummer.7"
                 }
               }
             ],
@@ -288,7 +282,7 @@
               "Value": 1.0,
               "Curve": {
                 "CurveTable": {
-                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
                   "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
                 },
                 "RowName": "Tandem.Speech.Priority.HighTotalBars"
@@ -306,7 +300,8 @@
               "RegistryType": {
                 "Name": null
               }
-            }
+            },
+            "MetadataParameters": []
           },
           {
             "Message": {
@@ -321,8 +316,8 @@
                   "TagName": "Conversation.Participant.Player"
                 },
                 "Requirement": {
-                  "ObjectName": "Speech_C_4:FortControllerRequirement_HasCID_0:FortControllerRequirement_HasCID",
-                  "ObjectPath": "/NPCLibrary/NPCs/HenchmanSummer/HenchmanSummer/NPCLibrary_Conversation_HenchmanSummer.7"
+                  "ObjectName": "FortControllerRequirement_HasCID NPCLibrary_Conversation_HenchmanSummer:Speech_C_4.FortControllerRequirement_HasCID_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/HenchmanSummer/HenchmanSummer/NPCLibrary_Conversation_HenchmanSummer.8"
                 }
               }
             ],
@@ -330,7 +325,7 @@
               "Value": 1.0,
               "Curve": {
                 "CurveTable": {
-                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
                   "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
                 },
                 "RowName": "Tandem.Speech.Priority.OutfitReaction"
@@ -348,7 +343,8 @@
               "RegistryType": {
                 "Name": null
               }
-            }
+            },
+            "MetadataParameters": []
           }
         ],
         "DefaultMessage": {
@@ -360,7 +356,8 @@
       "OutputConnections": [
         "50C78604-45F568BC-5B82E481-CA597339",
         "E91CBB3B-4799F47B-3EE16293-9AEF82E6",
-        "8F0A9D1C-430D9002-A5B204BC-E2966556"
+        "8F0A9D1C-430D9002-A5B204BC-E2966556",
+        "6E3079EA-49EF35C2-25FEB8A5-80B8AE2E"
       ],
       "NodeName": "",
       "Compiled_NodeGUID": "6797CB20-40AC71D1-9FFBC3A8-6A5541C6"

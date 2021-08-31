@@ -4,28 +4,7 @@
     "Name": "NPCLibrary_Conversation_AlienSummer",
     "Properties": {
       "CompilerVersion": 2,
-      "ReachableNodeMap": {
-        "C33059724DE0F17BC5CCCD8583C53FF3": {
-          "ObjectName": "NPCLibrary_Conversation_AlienSummer:ConversationEntryPointNode_7:ConversationEntryPointNode",
-          "ObjectPath": "/NPCLibrary/NPCs/AlienSummer/AlienSummer/NPCLibrary_Conversation_AlienSummer.1"
-        },
-        "AB4E3A254164E974EAF28D9E1A7577B0": {
-          "ObjectName": "NPCLibrary_Conversation_AlienSummer:Speech_C_4:Speech_C",
-          "ObjectPath": "/NPCLibrary/NPCs/AlienSummer/AlienSummer/NPCLibrary_Conversation_AlienSummer.7"
-        },
-        "B364E97840F9D81EE6FE65BD1586CDAB": {
-          "ObjectName": "NPCLibrary_Conversation_AlienSummer:ConversationLinkNode_2:ConversationLinkNode",
-          "ObjectPath": "/NPCLibrary/NPCs/AlienSummer/AlienSummer/NPCLibrary_Conversation_AlienSummer.4"
-        },
-        "F47D4C96427E45D605421DB710B295F9": {
-          "ObjectName": "NPCLibrary_Conversation_AlienSummer:ConversationLinkNode_0:ConversationLinkNode",
-          "ObjectPath": "/NPCLibrary/NPCs/AlienSummer/AlienSummer/NPCLibrary_Conversation_AlienSummer.2"
-        },
-        "C1E57BE641F1CF6FBF17108F0DAE337A": {
-          "ObjectName": "NPCLibrary_Conversation_AlienSummer:ConversationLinkNode_1:ConversationLinkNode",
-          "ObjectPath": "/NPCLibrary/NPCs/AlienSummer/AlienSummer/NPCLibrary_Conversation_AlienSummer.3"
-        }
-      },
+      "ReachableNodeMap": {},
       "EntryTags": [
         {
           "EntryTag": {
@@ -37,6 +16,7 @@
         }
       ],
       "ExitTags": [
+        "Conversation.Entry.Season17.Week14",
         "Conversation.Entry.Season17.Narrative.Mindwipe",
         "Conversation.Entry.BasicServices",
         "Conversation.Entry.NPCLibrary.Quests"
@@ -44,6 +24,7 @@
       "InternalNodeIds": [
         "C3305972-4DE0F17B-C5CCCD85-83C53FF3",
         "AB4E3A25-4164E974-EAF28D9E-1A7577B0",
+        "5C018678-40A07814-A268FE83-B5650367",
         "B364E978-40F9D81E-E6FE65BD-1586CDAB",
         "F47D4C96-427E45D6-05421DB7-10B295F9",
         "C1E57BE6-41F1CF6F-BF17108F-0DAE337A"
@@ -130,6 +111,17 @@
     }
   },
   {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_5",
+    "Outer": "NPCLibrary_Conversation_AlienSummer",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.Season17.Week14"
+      },
+      "Compiled_NodeGUID": "5C018678-40A07814-A268FE83-B5650367"
+    }
+  },
+  {
     "Type": "FortControllerRequirement_HasBars",
     "Name": "FortControllerRequirement_HasBars_0",
     "Outer": "Speech_C_4",
@@ -174,8 +166,8 @@
                   "TagName": "Conversation.Participant.Player"
                 },
                 "Requirement": {
-                  "ObjectName": "Speech_C_4:FortControllerRequirement_IsFirstEverConversationWithNPC_0:FortControllerRequirement_IsFirstEverConversationWithNPC",
-                  "ObjectPath": "/NPCLibrary/NPCs/AlienSummer/AlienSummer/NPCLibrary_Conversation_AlienSummer.6"
+                  "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC NPCLibrary_Conversation_AlienSummer:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/AlienSummer/AlienSummer/NPCLibrary_Conversation_AlienSummer.7"
                 }
               }
             ],
@@ -183,7 +175,7 @@
               "Value": 1.0,
               "Curve": {
                 "CurveTable": {
-                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
                   "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
                 },
                 "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
@@ -201,7 +193,8 @@
               "RegistryType": {
                 "Name": null
               }
-            }
+            },
+            "MetadataParameters": []
           },
           {
             "Message": {
@@ -216,8 +209,8 @@
                   "TagName": "Conversation.Participant.Player"
                 },
                 "Requirement": {
-                  "ObjectName": "Speech_C_4:FortControllerRequirement_HasBars_0:FortControllerRequirement_HasBars",
-                  "ObjectPath": "/NPCLibrary/NPCs/AlienSummer/AlienSummer/NPCLibrary_Conversation_AlienSummer.5"
+                  "ObjectName": "FortControllerRequirement_HasBars NPCLibrary_Conversation_AlienSummer:Speech_C_4.FortControllerRequirement_HasBars_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/AlienSummer/AlienSummer/NPCLibrary_Conversation_AlienSummer.6"
                 }
               }
             ],
@@ -225,7 +218,7 @@
               "Value": 1.0,
               "Curve": {
                 "CurveTable": {
-                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
                   "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
                 },
                 "RowName": "Tandem.Speech.Priority.HighTotalBars"
@@ -243,7 +236,8 @@
               "RegistryType": {
                 "Name": null
               }
-            }
+            },
+            "MetadataParameters": []
           }
         ],
         "DefaultMessage": {
@@ -255,7 +249,8 @@
       "OutputConnections": [
         "C1E57BE6-41F1CF6F-BF17108F-0DAE337A",
         "F47D4C96-427E45D6-05421DB7-10B295F9",
-        "B364E978-40F9D81E-E6FE65BD-1586CDAB"
+        "B364E978-40F9D81E-E6FE65BD-1586CDAB",
+        "5C018678-40A07814-A268FE83-B5650367"
       ],
       "NodeName": "",
       "Compiled_NodeGUID": "AB4E3A25-4164E974-EAF28D9E-1A7577B0"

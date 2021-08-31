@@ -4,24 +4,7 @@
     "Name": "NPCLibrary_Conversation_Hayseed",
     "Properties": {
       "CompilerVersion": 2,
-      "ReachableNodeMap": {
-        "92A7807344D0793BF7135EB3C10C5F19": {
-          "ObjectName": "NPCLibrary_Conversation_Hayseed:ConversationEntryPointNode_7:ConversationEntryPointNode",
-          "ObjectPath": "/NPCLibrary/NPCs/Hayseed/Hayseed/NPCLibrary_Conversation_Hayseed.1"
-        },
-        "A27A114D46A97807AED78D82CB19F3BC": {
-          "ObjectName": "NPCLibrary_Conversation_Hayseed:Speech_C_4:Speech_C",
-          "ObjectPath": "/NPCLibrary/NPCs/Hayseed/Hayseed/NPCLibrary_Conversation_Hayseed.8"
-        },
-        "6AD6274C42E3AC74C1895480F88D26DF": {
-          "ObjectName": "NPCLibrary_Conversation_Hayseed:ConversationLinkNode_0:ConversationLinkNode",
-          "ObjectPath": "/NPCLibrary/NPCs/Hayseed/Hayseed/NPCLibrary_Conversation_Hayseed.2"
-        },
-        "4F887F14436097E349D1FAB5BC8F5028": {
-          "ObjectName": "NPCLibrary_Conversation_Hayseed:ConversationLinkNode_1:ConversationLinkNode",
-          "ObjectPath": "/NPCLibrary/NPCs/Hayseed/Hayseed/NPCLibrary_Conversation_Hayseed.3"
-        }
-      },
+      "ReachableNodeMap": {},
       "EntryTags": [
         {
           "EntryTag": {
@@ -33,12 +16,14 @@
         }
       ],
       "ExitTags": [
+        "Conversation.Entry.Season17.Week14",
         "Conversation.Entry.BasicServices",
         "Conversation.Entry.NPCLibrary.Quests"
       ],
       "InternalNodeIds": [
         "92A78073-44D0793B-F7135EB3-C10C5F19",
         "A27A114D-46A97807-AED78D82-CB19F3BC",
+        "2496772A-474C0C54-1B3100A4-B772E3C0",
         "6AD6274C-42E3AC74-C1895480-F88D26DF",
         "4F887F14-436097E3-49D1FAB5-BC8F5028"
       ],
@@ -113,6 +98,17 @@
     }
   },
   {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_5",
+    "Outer": "NPCLibrary_Conversation_Hayseed",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.Season17.Week14"
+      },
+      "Compiled_NodeGUID": "2496772A-474C0C54-1B3100A4-B772E3C0"
+    }
+  },
+  {
     "Type": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch",
     "Name": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0",
     "Outer": "Speech_C_4",
@@ -178,8 +174,8 @@
                   "TagName": "Conversation.Participant.Player"
                 },
                 "Requirement": {
-                  "ObjectName": "Speech_C_4:FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0:FortControllerRequirement_CheckTimeSinceLastPlayedMatch",
-                  "ObjectPath": "/NPCLibrary/NPCs/Hayseed/Hayseed/NPCLibrary_Conversation_Hayseed.4"
+                  "ObjectName": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch NPCLibrary_Conversation_Hayseed:Speech_C_4.FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/Hayseed/Hayseed/NPCLibrary_Conversation_Hayseed.5"
                 }
               }
             ],
@@ -187,7 +183,7 @@
               "Value": 1.0,
               "Curve": {
                 "CurveTable": {
-                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
                   "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
                 },
                 "RowName": "Tandem.Speech.Priority.WhileSincePlayed"
@@ -205,7 +201,8 @@
               "RegistryType": {
                 "Name": null
               }
-            }
+            },
+            "MetadataParameters": []
           },
           {
             "Message": {
@@ -220,8 +217,8 @@
                   "TagName": "Conversation.Participant.Player"
                 },
                 "Requirement": {
-                  "ObjectName": "Speech_C_4:FortControllerRequirement_IsFirstEverConversationWithNPC_0:FortControllerRequirement_IsFirstEverConversationWithNPC",
-                  "ObjectPath": "/NPCLibrary/NPCs/Hayseed/Hayseed/NPCLibrary_Conversation_Hayseed.7"
+                  "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC NPCLibrary_Conversation_Hayseed:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/Hayseed/Hayseed/NPCLibrary_Conversation_Hayseed.8"
                 }
               }
             ],
@@ -229,7 +226,7 @@
               "Value": 1.0,
               "Curve": {
                 "CurveTable": {
-                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
                   "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
                 },
                 "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
@@ -247,7 +244,8 @@
               "RegistryType": {
                 "Name": null
               }
-            }
+            },
+            "MetadataParameters": []
           },
           {
             "Message": {
@@ -262,8 +260,8 @@
                   "TagName": "Conversation.Participant.Player"
                 },
                 "Requirement": {
-                  "ObjectName": "Speech_C_4:FortControllerRequirement_HasBars_0:FortControllerRequirement_HasBars",
-                  "ObjectPath": "/NPCLibrary/NPCs/Hayseed/Hayseed/NPCLibrary_Conversation_Hayseed.5"
+                  "ObjectName": "FortControllerRequirement_HasBars NPCLibrary_Conversation_Hayseed:Speech_C_4.FortControllerRequirement_HasBars_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/Hayseed/Hayseed/NPCLibrary_Conversation_Hayseed.6"
                 }
               }
             ],
@@ -271,7 +269,7 @@
               "Value": 1.0,
               "Curve": {
                 "CurveTable": {
-                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
                   "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
                 },
                 "RowName": "Tandem.Speech.Priority.HighTotalBars"
@@ -289,7 +287,8 @@
               "RegistryType": {
                 "Name": null
               }
-            }
+            },
+            "MetadataParameters": []
           },
           {
             "Message": {
@@ -304,8 +303,8 @@
                   "TagName": "Conversation.Participant.Player"
                 },
                 "Requirement": {
-                  "ObjectName": "Speech_C_4:FortControllerRequirement_HasCID_0:FortControllerRequirement_HasCID",
-                  "ObjectPath": "/NPCLibrary/NPCs/Hayseed/Hayseed/NPCLibrary_Conversation_Hayseed.6"
+                  "ObjectName": "FortControllerRequirement_HasCID NPCLibrary_Conversation_Hayseed:Speech_C_4.FortControllerRequirement_HasCID_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/Hayseed/Hayseed/NPCLibrary_Conversation_Hayseed.7"
                 }
               }
             ],
@@ -313,7 +312,7 @@
               "Value": 1.0,
               "Curve": {
                 "CurveTable": {
-                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
                   "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
                 },
                 "RowName": "Tandem.Speech.Priority.OutfitReaction"
@@ -331,7 +330,8 @@
               "RegistryType": {
                 "Name": null
               }
-            }
+            },
+            "MetadataParameters": []
           }
         ],
         "DefaultMessage": {
@@ -342,7 +342,8 @@
       },
       "OutputConnections": [
         "4F887F14-436097E3-49D1FAB5-BC8F5028",
-        "6AD6274C-42E3AC74-C1895480-F88D26DF"
+        "6AD6274C-42E3AC74-C1895480-F88D26DF",
+        "2496772A-474C0C54-1B3100A4-B772E3C0"
       ],
       "NodeName": "",
       "Compiled_NodeGUID": "A27A114D-46A97807-AED78D82-CB19F3BC"

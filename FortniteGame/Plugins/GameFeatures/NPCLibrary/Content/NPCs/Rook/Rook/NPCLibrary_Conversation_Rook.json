@@ -4,28 +4,7 @@
     "Name": "NPCLibrary_Conversation_Rook",
     "Properties": {
       "CompilerVersion": 2,
-      "ReachableNodeMap": {
-        "3ADA39C54DEFC7C6BAC014BD1DCAA0A5": {
-          "ObjectName": "NPCLibrary_Conversation_Rook:ConversationEntryPointNode_7:ConversationEntryPointNode",
-          "ObjectPath": "/NPCLibrary/NPCs/Rook/Rook/NPCLibrary_Conversation_Rook.1"
-        },
-        "D6F3163A45FAA07D728E51963E3EB5D7": {
-          "ObjectName": "NPCLibrary_Conversation_Rook:Speech_C_4:Speech_C",
-          "ObjectPath": "/NPCLibrary/NPCs/Rook/Rook/NPCLibrary_Conversation_Rook.8"
-        },
-        "BC969B4D484A95C806DC25B0AD495EDA": {
-          "ObjectName": "NPCLibrary_Conversation_Rook:ConversationLinkNode_0:ConversationLinkNode",
-          "ObjectPath": "/NPCLibrary/NPCs/Rook/Rook/NPCLibrary_Conversation_Rook.2"
-        },
-        "7F3645AC445B747401D08ABB9230A1F2": {
-          "ObjectName": "NPCLibrary_Conversation_Rook:ConversationLinkNode_1:ConversationLinkNode",
-          "ObjectPath": "/NPCLibrary/NPCs/Rook/Rook/NPCLibrary_Conversation_Rook.3"
-        },
-        "E24BE7AF4F35086D763988853AA8C5C9": {
-          "ObjectName": "NPCLibrary_Conversation_Rook:ConversationLinkNode_2:ConversationLinkNode",
-          "ObjectPath": "/NPCLibrary/NPCs/Rook/Rook/NPCLibrary_Conversation_Rook.4"
-        }
-      },
+      "ReachableNodeMap": {},
       "EntryTags": [
         {
           "EntryTag": {
@@ -37,6 +16,7 @@
         }
       ],
       "ExitTags": [
+        "Conversation.Entry.Season17.Week14",
         "Conversation.Entry.BasicServices",
         "Conversation.Entry.NPCLibrary.Quests",
         "Conversation.Entry.Season17.Week2"
@@ -44,6 +24,7 @@
       "InternalNodeIds": [
         "3ADA39C5-4DEFC7C6-BAC014BD-1DCAA0A5",
         "D6F3163A-45FAA07D-728E5196-3E3EB5D7",
+        "7754DCAB-441EC0A4-32A1FF9B-BD594401",
         "BC969B4D-484A95C8-06DC25B0-AD495EDA",
         "7F3645AC-445B7474-01D08ABB-9230A1F2",
         "E24BE7AF-4F35086D-76398885-3AA8C5C9"
@@ -130,6 +111,17 @@
     }
   },
   {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_5",
+    "Outer": "NPCLibrary_Conversation_Rook",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.Season17.Week14"
+      },
+      "Compiled_NodeGUID": "7754DCAB-441EC0A4-32A1FF9B-BD594401"
+    }
+  },
+  {
     "Type": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch",
     "Name": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0",
     "Outer": "Speech_C_4",
@@ -182,8 +174,8 @@
                   "TagName": "Conversation.Participant.Player"
                 },
                 "Requirement": {
-                  "ObjectName": "Speech_C_4:FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0:FortControllerRequirement_CheckTimeSinceLastPlayedMatch",
-                  "ObjectPath": "/NPCLibrary/NPCs/Rook/Rook/NPCLibrary_Conversation_Rook.5"
+                  "ObjectName": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch NPCLibrary_Conversation_Rook:Speech_C_4.FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/Rook/Rook/NPCLibrary_Conversation_Rook.6"
                 }
               }
             ],
@@ -191,7 +183,7 @@
               "Value": 1.0,
               "Curve": {
                 "CurveTable": {
-                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
                   "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
                 },
                 "RowName": "Tandem.Speech.Priority.WhileSincePlayed"
@@ -209,7 +201,8 @@
               "RegistryType": {
                 "Name": null
               }
-            }
+            },
+            "MetadataParameters": []
           },
           {
             "Message": {
@@ -224,8 +217,8 @@
                   "TagName": "Conversation.Participant.Player"
                 },
                 "Requirement": {
-                  "ObjectName": "Speech_C_4:FortControllerRequirement_IsFirstEverConversationWithNPC_0:FortControllerRequirement_IsFirstEverConversationWithNPC",
-                  "ObjectPath": "/NPCLibrary/NPCs/Rook/Rook/NPCLibrary_Conversation_Rook.7"
+                  "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC NPCLibrary_Conversation_Rook:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/Rook/Rook/NPCLibrary_Conversation_Rook.8"
                 }
               }
             ],
@@ -233,7 +226,7 @@
               "Value": 1.0,
               "Curve": {
                 "CurveTable": {
-                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
                   "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
                 },
                 "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
@@ -251,7 +244,8 @@
               "RegistryType": {
                 "Name": null
               }
-            }
+            },
+            "MetadataParameters": []
           },
           {
             "Message": {
@@ -266,8 +260,8 @@
                   "TagName": "Conversation.Participant.Player"
                 },
                 "Requirement": {
-                  "ObjectName": "Speech_C_4:FortControllerRequirement_HasBars_0:FortControllerRequirement_HasBars",
-                  "ObjectPath": "/NPCLibrary/NPCs/Rook/Rook/NPCLibrary_Conversation_Rook.6"
+                  "ObjectName": "FortControllerRequirement_HasBars NPCLibrary_Conversation_Rook:Speech_C_4.FortControllerRequirement_HasBars_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/Rook/Rook/NPCLibrary_Conversation_Rook.7"
                 }
               }
             ],
@@ -275,7 +269,7 @@
               "Value": 1.0,
               "Curve": {
                 "CurveTable": {
-                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
                   "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
                 },
                 "RowName": "Tandem.Speech.Priority.HighTotalBars"
@@ -293,7 +287,8 @@
               "RegistryType": {
                 "Name": null
               }
-            }
+            },
+            "MetadataParameters": []
           }
         ],
         "DefaultMessage": {
@@ -305,7 +300,8 @@
       "OutputConnections": [
         "E24BE7AF-4F35086D-76398885-3AA8C5C9",
         "7F3645AC-445B7474-01D08ABB-9230A1F2",
-        "BC969B4D-484A95C8-06DC25B0-AD495EDA"
+        "BC969B4D-484A95C8-06DC25B0-AD495EDA",
+        "7754DCAB-441EC0A4-32A1FF9B-BD594401"
       ],
       "NodeName": "",
       "Compiled_NodeGUID": "D6F3163A-45FAA07D-728E5196-3E3EB5D7"

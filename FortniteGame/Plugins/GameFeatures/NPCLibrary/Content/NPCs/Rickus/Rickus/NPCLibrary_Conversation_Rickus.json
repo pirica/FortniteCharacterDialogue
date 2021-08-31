@@ -4,28 +4,7 @@
     "Name": "NPCLibrary_Conversation_Rickus",
     "Properties": {
       "CompilerVersion": 2,
-      "ReachableNodeMap": {
-        "3CB5F2BF430B09231B580690B67DFBBB": {
-          "ObjectName": "NPCLibrary_Conversation_Rickus:ConversationEntryPointNode_7:ConversationEntryPointNode",
-          "ObjectPath": "/NPCLibrary/NPCs/Rickus/Rickus/NPCLibrary_Conversation_Rickus.1"
-        },
-        "0A9155C44C5F53ACB6ADB5AA5D7D0AC0": {
-          "ObjectName": "NPCLibrary_Conversation_Rickus:Speech_C_4:Speech_C",
-          "ObjectPath": "/NPCLibrary/NPCs/Rickus/Rickus/NPCLibrary_Conversation_Rickus.7"
-        },
-        "93EB59064A7D95CDDBE9888686913A9E": {
-          "ObjectName": "NPCLibrary_Conversation_Rickus:ConversationLinkNode_0:ConversationLinkNode",
-          "ObjectPath": "/NPCLibrary/NPCs/Rickus/Rickus/NPCLibrary_Conversation_Rickus.2"
-        },
-        "6F108D914126E93A3ACC76B3314B1377": {
-          "ObjectName": "NPCLibrary_Conversation_Rickus:ConversationLinkNode_1:ConversationLinkNode",
-          "ObjectPath": "/NPCLibrary/NPCs/Rickus/Rickus/NPCLibrary_Conversation_Rickus.3"
-        },
-        "0131602C4363BFB1142270ACDEDB3E00": {
-          "ObjectName": "NPCLibrary_Conversation_Rickus:ConversationLinkNode_2:ConversationLinkNode",
-          "ObjectPath": "/NPCLibrary/NPCs/Rickus/Rickus/NPCLibrary_Conversation_Rickus.4"
-        }
-      },
+      "ReachableNodeMap": {},
       "EntryTags": [
         {
           "EntryTag": {
@@ -37,6 +16,7 @@
         }
       ],
       "ExitTags": [
+        "Conversation.Entry.Season17.Week14",
         "Conversation.Entry.BasicServices",
         "Conversation.Entry.NPCLibrary.Quests",
         "Conversation.Entry.Season17.Week2"
@@ -44,6 +24,7 @@
       "InternalNodeIds": [
         "3CB5F2BF-430B0923-1B580690-B67DFBBB",
         "0A9155C4-4C5F53AC-B6ADB5AA-5D7D0AC0",
+        "D5C9A81C-4697E159-89F004B0-DB96C0CF",
         "93EB5906-4A7D95CD-DBE98886-86913A9E",
         "6F108D91-4126E93A-3ACC76B3-314B1377",
         "0131602C-4363BFB1-142270AC-DEDB3E00"
@@ -130,6 +111,17 @@
     }
   },
   {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_5",
+    "Outer": "NPCLibrary_Conversation_Rickus",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.Season17.Week14"
+      },
+      "Compiled_NodeGUID": "D5C9A81C-4697E159-89F004B0-DB96C0CF"
+    }
+  },
+  {
     "Type": "FortControllerRequirement_HasCID",
     "Name": "FortControllerRequirement_HasCID_1",
     "Outer": "Speech_C_4",
@@ -174,8 +166,8 @@
                   "TagName": "Conversation.Participant.Player"
                 },
                 "Requirement": {
-                  "ObjectName": "Speech_C_4:FortControllerRequirement_IsFirstEverConversationWithNPC_0:FortControllerRequirement_IsFirstEverConversationWithNPC",
-                  "ObjectPath": "/NPCLibrary/NPCs/Rickus/Rickus/NPCLibrary_Conversation_Rickus.6"
+                  "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC NPCLibrary_Conversation_Rickus:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/Rickus/Rickus/NPCLibrary_Conversation_Rickus.7"
                 }
               }
             ],
@@ -183,7 +175,7 @@
               "Value": 1.0,
               "Curve": {
                 "CurveTable": {
-                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
                   "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
                 },
                 "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
@@ -201,7 +193,8 @@
               "RegistryType": {
                 "Name": null
               }
-            }
+            },
+            "MetadataParameters": []
           },
           {
             "Message": {
@@ -216,8 +209,8 @@
                   "TagName": "Conversation.Participant.Player"
                 },
                 "Requirement": {
-                  "ObjectName": "Speech_C_4:FortControllerRequirement_HasCID_1:FortControllerRequirement_HasCID",
-                  "ObjectPath": "/NPCLibrary/NPCs/Rickus/Rickus/NPCLibrary_Conversation_Rickus.5"
+                  "ObjectName": "FortControllerRequirement_HasCID NPCLibrary_Conversation_Rickus:Speech_C_4.FortControllerRequirement_HasCID_1",
+                  "ObjectPath": "/NPCLibrary/NPCs/Rickus/Rickus/NPCLibrary_Conversation_Rickus.6"
                 }
               }
             ],
@@ -225,7 +218,7 @@
               "Value": 1.0,
               "Curve": {
                 "CurveTable": {
-                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
                   "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
                 },
                 "RowName": "Tandem.Speech.Priority.OutfitReaction"
@@ -243,7 +236,8 @@
               "RegistryType": {
                 "Name": null
               }
-            }
+            },
+            "MetadataParameters": []
           }
         ],
         "DefaultMessage": {
@@ -255,7 +249,8 @@
       "OutputConnections": [
         "0131602C-4363BFB1-142270AC-DEDB3E00",
         "6F108D91-4126E93A-3ACC76B3-314B1377",
-        "93EB5906-4A7D95CD-DBE98886-86913A9E"
+        "93EB5906-4A7D95CD-DBE98886-86913A9E",
+        "D5C9A81C-4697E159-89F004B0-DB96C0CF"
       ],
       "NodeName": "",
       "Compiled_NodeGUID": "0A9155C4-4C5F53AC-B6ADB5AA-5D7D0AC0"

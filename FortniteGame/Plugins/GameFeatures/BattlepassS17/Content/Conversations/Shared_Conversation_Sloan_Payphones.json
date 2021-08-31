@@ -128,6 +128,22 @@
     }
   },
   {
+    "Type": "ConversationChoiceNode",
+    "Name": "ConversationChoiceNode_9",
+    "Outer": "Shared_Conversation_Sloan_Payphones",
+    "Properties": {
+      "DefaultChoiceDisplayText": {
+        "Namespace": "",
+        "Key": "8288860E471235676B2804B7B9A15B3C",
+        "SourceString": "NEW MISSION"
+      },
+      "ChoiceTags": [
+        "Conversation.Choice.Category.MainQuestline",
+        "Conversation.Choice.AutoSelectIfValid"
+      ]
+    }
+  },
+  {
     "Type": "ConversationDatabase",
     "Name": "Shared_Conversation_Sloan_Payphones",
     "Properties": {
@@ -145,6 +161,12 @@
       ],
       "InternalNodeIds": [
         "90E8DFA9-4A0A68B6-9D4BB0A3-04D0B6CA",
+        "130C86E7-44F848DC-3A7BECAD-9EB08231",
+        "D0EEABB6-49256EDC-B1C4C8A2-53586F29",
+        "87D18FE9-49CAE151-89293597-793CB105",
+        "5F48C0BB-4D3ACB45-311C1DA7-FBD2C8EF",
+        "B4927BC5-428F0B37-93F4F8B1-0DF48540",
+        "73522D98-44AA7860-8E9D7286-E25A0ABB",
         "E1433495-40140796-21D8BFAB-73879DD6",
         "9B0CCFFF-4C6FB9B6-616346A6-76964FF0",
         "6BD12F2D-4DBA3729-C91F2BB3-7302AB9D",
@@ -239,7 +261,8 @@
         "51E96DDA-4563EF72-B5497AB3-FEF28316",
         "201010B6-459105A7-DF9F6EA8-D0131A10",
         "D2E0E3D7-4A1C6E96-1DEE0089-68433682",
-        "E1433495-40140796-21D8BFAB-73879DD6"
+        "E1433495-40140796-21D8BFAB-73879DD6",
+        "130C86E7-44F848DC-3A7BECAD-9EB08231"
       ],
       "Compiled_NodeGUID": "90E8DFA9-4A0A68B6-9D4BB0A3-04D0B6CA"
     }
@@ -313,6 +336,15 @@
     "Outer": "Shared_Conversation_Sloan_Payphones",
     "Template": "Default__ConvoSideEffect_PayphoneActor_Message_C",
     "Properties": {
+      "Message Number": 13
+    }
+  },
+  {
+    "Type": "ConvoSideEffect_PayphoneActor_Message_C",
+    "Name": "ConvoSideEffect_PayphoneActor_Message_C_9",
+    "Outer": "Shared_Conversation_Sloan_Payphones",
+    "Template": "Default__ConvoSideEffect_PayphoneActor_Message_C",
+    "Properties": {
       "Message Number": 12
     }
   },
@@ -380,6 +412,18 @@
     "Type": "FortControllerRequirement_HasCompletedQuest",
     "Name": "FortControllerRequirement_HasCompletedQuest_0",
     "Outer": "FortConversationRequirement_ControllerRequirement_22",
+    "Properties": {
+      "QuestDefinition": {
+        "AssetPathName": "/BattlepassS17/Items/QuestItems/Legendary/quest_s17_w14_legendary_q1.quest_s17_w14_legendary_q1",
+        "SubPathString": ""
+      },
+      "bInverseCondition": true
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_HasCompletedQuest",
+    "Name": "FortControllerRequirement_HasCompletedQuest_0",
+    "Outer": "FortConversationRequirement_ControllerRequirement_25",
     "Properties": {
       "QuestDefinition": {
         "AssetPathName": "/BattlepassS17/Items/QuestItems/Legendary/quest_s17_w12_legendary_q1.quest_s17_w12_legendary_q1",
@@ -468,6 +512,19 @@
     "Type": "FortControllerRequirement_HasCompletedQuestObjective",
     "Name": "FortControllerRequirement_HasCompletedQuestObjective_0",
     "Outer": "FortConversationRequirement_ControllerRequirement_23",
+    "Properties": {
+      "QuestDefinition": {
+        "AssetPathName": "/BattlepassS17/Items/QuestItems/Legendary/quest_s17_w14_legendary_q1.quest_s17_w14_legendary_q1",
+        "SubPathString": ""
+      },
+      "ObjectiveBackendName": "quest_s17_w14_legendary_q1_obj0",
+      "bInverseCondition": true
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_HasCompletedQuestObjective",
+    "Name": "FortControllerRequirement_HasCompletedQuestObjective_0",
+    "Outer": "FortConversationRequirement_ControllerRequirement_26",
     "Properties": {
       "QuestDefinition": {
         "AssetPathName": "/BattlepassS17/Items/QuestItems/Legendary/quest_s17_w12_legendary_q1.quest_s17_w12_legendary_q1",
@@ -577,6 +634,17 @@
     "Outer": "FortConversationRequirement_ControllerRequirement_21",
     "Properties": {
       "QuestDefinition": {
+        "AssetPathName": "/BattlepassS17/Items/QuestItems/Legendary/quest_s17_w14_legendary_q1.quest_s17_w14_legendary_q1",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_IsQuestActive",
+    "Name": "FortControllerRequirement_IsQuestActive_0",
+    "Outer": "FortConversationRequirement_ControllerRequirement_24",
+    "Properties": {
+      "QuestDefinition": {
         "AssetPathName": "/BattlepassS17/Items/QuestItems/Legendary/quest_s17_w12_legendary_q1.quest_s17_w12_legendary_q1",
         "SubPathString": ""
       }
@@ -611,7 +679,7 @@
     "Properties": {
       "Requirement": {
         "ObjectName": "FortControllerRequirement_IsQuestActive Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_0.FortControllerRequirement_IsQuestActive_0",
-        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.34"
+        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.38"
       },
       "NodeName": "Require: Is Quest Active"
     }
@@ -623,7 +691,7 @@
     "Properties": {
       "Requirement": {
         "ObjectName": "FortControllerRequirement_IsQuestActive Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_1.FortControllerRequirement_IsQuestActive_0",
-        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.35"
+        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.39"
       },
       "NodeName": "Require: Is Quest Active"
     }
@@ -635,7 +703,7 @@
     "Properties": {
       "Requirement": {
         "ObjectName": "FortControllerRequirement_HasCompletedQuestObjective Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_10.FortControllerRequirement_HasCompletedQuestObjective_0",
-        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.26"
+        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.29"
       },
       "NodeName": "Require: Has Completed Quest Objective"
     }
@@ -647,7 +715,7 @@
     "Properties": {
       "Requirement": {
         "ObjectName": "FortControllerRequirement_HasCompletedQuest Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_11.FortControllerRequirement_HasCompletedQuest_0",
-        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.18"
+        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.20"
       },
       "NodeName": "Require: Has Completed Quest"
     }
@@ -659,7 +727,7 @@
     "Properties": {
       "Requirement": {
         "ObjectName": "FortControllerRequirement_IsQuestActive Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_12.FortControllerRequirement_IsQuestActive_0",
-        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.36"
+        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.40"
       },
       "NodeName": "Require: Is Quest Active"
     }
@@ -671,7 +739,7 @@
     "Properties": {
       "Requirement": {
         "ObjectName": "FortControllerRequirement_HasCompletedQuest Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_13.FortControllerRequirement_HasCompletedQuest_0",
-        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.19"
+        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.21"
       },
       "NodeName": "Require: Has Completed Quest"
     }
@@ -683,7 +751,7 @@
     "Properties": {
       "Requirement": {
         "ObjectName": "FortControllerRequirement_IsQuestActive Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_14.FortControllerRequirement_IsQuestActive_0",
-        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.37"
+        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.41"
       },
       "NodeName": "Require: Is Quest Active"
     }
@@ -695,7 +763,7 @@
     "Properties": {
       "Requirement": {
         "ObjectName": "FortControllerRequirement_HasCompletedQuest Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_15.FortControllerRequirement_HasCompletedQuest_0",
-        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.20"
+        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.22"
       },
       "NodeName": "Require: Has Completed Quest"
     }
@@ -707,7 +775,7 @@
     "Properties": {
       "Requirement": {
         "ObjectName": "FortControllerRequirement_HasCompletedQuestObjective Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_16.FortControllerRequirement_HasCompletedQuestObjective_0",
-        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.27"
+        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.30"
       },
       "NodeName": "Require: Has Completed Quest Objective"
     }
@@ -719,7 +787,7 @@
     "Properties": {
       "Requirement": {
         "ObjectName": "FortControllerRequirement_HasCompletedQuestObjective Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_17.FortControllerRequirement_HasCompletedQuestObjective_0",
-        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.28"
+        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.31"
       },
       "NodeName": "Require: Has Completed Quest Objective"
     }
@@ -731,7 +799,7 @@
     "Properties": {
       "Requirement": {
         "ObjectName": "FortControllerRequirement_IsQuestActive Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_18.FortControllerRequirement_IsQuestActive_0",
-        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.38"
+        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.42"
       },
       "NodeName": "Require: Is Quest Active"
     }
@@ -743,7 +811,7 @@
     "Properties": {
       "Requirement": {
         "ObjectName": "FortControllerRequirement_HasCompletedQuest Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_19.FortControllerRequirement_HasCompletedQuest_0",
-        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.21"
+        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.23"
       },
       "NodeName": "Require: Has Completed Quest"
     }
@@ -755,7 +823,7 @@
     "Properties": {
       "Requirement": {
         "ObjectName": "FortControllerRequirement_HasCompletedQuest Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_2.FortControllerRequirement_HasCompletedQuest_0",
-        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.22"
+        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.24"
       },
       "NodeName": "Require: Has Completed Quest"
     }
@@ -767,7 +835,7 @@
     "Properties": {
       "Requirement": {
         "ObjectName": "FortControllerRequirement_HasCompletedQuestObjective Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_20.FortControllerRequirement_HasCompletedQuestObjective_0",
-        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.29"
+        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.32"
       },
       "NodeName": "Require: Has Completed Quest Objective"
     }
@@ -779,7 +847,7 @@
     "Properties": {
       "Requirement": {
         "ObjectName": "FortControllerRequirement_IsQuestActive Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_21.FortControllerRequirement_IsQuestActive_0",
-        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.39"
+        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.43"
       },
       "NodeName": "Require: Is Quest Active"
     }
@@ -791,7 +859,7 @@
     "Properties": {
       "Requirement": {
         "ObjectName": "FortControllerRequirement_HasCompletedQuest Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_22.FortControllerRequirement_HasCompletedQuest_0",
-        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.23"
+        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.25"
       },
       "NodeName": "Require: Has Completed Quest"
     }
@@ -803,7 +871,43 @@
     "Properties": {
       "Requirement": {
         "ObjectName": "FortControllerRequirement_HasCompletedQuestObjective Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_23.FortControllerRequirement_HasCompletedQuestObjective_0",
-        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.30"
+        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.33"
+      },
+      "NodeName": "Require: Has Completed Quest Objective"
+    }
+  },
+  {
+    "Type": "FortConversationRequirement_ControllerRequirement",
+    "Name": "FortConversationRequirement_ControllerRequirement_24",
+    "Outer": "Shared_Conversation_Sloan_Payphones",
+    "Properties": {
+      "Requirement": {
+        "ObjectName": "FortControllerRequirement_IsQuestActive Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_24.FortControllerRequirement_IsQuestActive_0",
+        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.44"
+      },
+      "NodeName": "Require: Is Quest Active"
+    }
+  },
+  {
+    "Type": "FortConversationRequirement_ControllerRequirement",
+    "Name": "FortConversationRequirement_ControllerRequirement_25",
+    "Outer": "Shared_Conversation_Sloan_Payphones",
+    "Properties": {
+      "Requirement": {
+        "ObjectName": "FortControllerRequirement_HasCompletedQuest Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_25.FortControllerRequirement_HasCompletedQuest_0",
+        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.26"
+      },
+      "NodeName": "Require: Has Completed Quest"
+    }
+  },
+  {
+    "Type": "FortConversationRequirement_ControllerRequirement",
+    "Name": "FortConversationRequirement_ControllerRequirement_26",
+    "Outer": "Shared_Conversation_Sloan_Payphones",
+    "Properties": {
+      "Requirement": {
+        "ObjectName": "FortControllerRequirement_HasCompletedQuestObjective Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_26.FortControllerRequirement_HasCompletedQuestObjective_0",
+        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.34"
       },
       "NodeName": "Require: Has Completed Quest Objective"
     }
@@ -815,7 +919,7 @@
     "Properties": {
       "Requirement": {
         "ObjectName": "FortControllerRequirement_HasCompletedQuestObjective Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_3.FortControllerRequirement_HasCompletedQuestObjective_0",
-        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.31"
+        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.35"
       },
       "NodeName": "Require: Has Completed Quest Objective"
     }
@@ -827,7 +931,7 @@
     "Properties": {
       "Requirement": {
         "ObjectName": "FortControllerRequirement_IsQuestActive Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_4.FortControllerRequirement_IsQuestActive_0",
-        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.40"
+        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.45"
       },
       "NodeName": "Require: Is Quest Active"
     }
@@ -839,7 +943,7 @@
     "Properties": {
       "Requirement": {
         "ObjectName": "FortControllerRequirement_HasCompletedQuest Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_5.FortControllerRequirement_HasCompletedQuest_0",
-        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.24"
+        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.27"
       },
       "NodeName": "Require: Has Completed Quest"
     }
@@ -851,7 +955,7 @@
     "Properties": {
       "Requirement": {
         "ObjectName": "FortControllerRequirement_HasCompletedQuest Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_6.FortControllerRequirement_HasCompletedQuest_0",
-        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.25"
+        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.28"
       },
       "NodeName": "Require: Has Completed Quest"
     }
@@ -863,7 +967,7 @@
     "Properties": {
       "Requirement": {
         "ObjectName": "FortControllerRequirement_HasCompletedQuestObjective Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_7.FortControllerRequirement_HasCompletedQuestObjective_0",
-        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.32"
+        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.36"
       },
       "NodeName": "Require: Has Completed Quest Objective"
     }
@@ -875,7 +979,7 @@
     "Properties": {
       "Requirement": {
         "ObjectName": "FortControllerRequirement_HasCompletedQuestObjective Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_8.FortControllerRequirement_HasCompletedQuestObjective_0",
-        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.33"
+        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.37"
       },
       "NodeName": "Require: Has Completed Quest Objective"
     }
@@ -887,7 +991,7 @@
     "Properties": {
       "Requirement": {
         "ObjectName": "FortControllerRequirement_IsQuestActive Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_9.FortControllerRequirement_IsQuestActive_0",
-        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.41"
+        "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.46"
       },
       "NodeName": "Require: Is Quest Active"
     }
@@ -905,15 +1009,15 @@
       "SubNodes": [
         {
           "ObjectName": "FortConversationRequirement_ControllerRequirement Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_4",
-          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.60"
+          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.68"
         },
         {
           "ObjectName": "FortConversationRequirement_ControllerRequirement Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_6",
-          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.62"
+          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.70"
         },
         {
           "ObjectName": "FortConversationRequirement_ControllerRequirement Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_7",
-          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.63"
+          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.71"
         },
         {
           "ObjectName": "ConversationChoiceNode Shared_Conversation_Sloan_Payphones:ConversationChoiceNode_4",
@@ -921,7 +1025,7 @@
         },
         {
           "ObjectName": "ConvoSideEffect_PayphoneActor_Message_C Shared_Conversation_Sloan_Payphones:ConvoSideEffect_PayphoneActor_Message_C_4",
-          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.13"
+          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.14"
         }
       ],
       "OutputConnections": [
@@ -943,11 +1047,11 @@
       "SubNodes": [
         {
           "ObjectName": "FortConversationRequirement_ControllerRequirement Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_9",
-          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.65"
+          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.73"
         },
         {
           "ObjectName": "ConvoSideEffect_PayphoneActor_Message_C Shared_Conversation_Sloan_Payphones:ConvoSideEffect_PayphoneActor_Message_C_3",
-          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.12"
+          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.13"
         },
         {
           "ObjectName": "ConversationChoiceNode Shared_Conversation_Sloan_Payphones:ConversationChoiceNode_1",
@@ -955,11 +1059,11 @@
         },
         {
           "ObjectName": "FortConversationRequirement_ControllerRequirement Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_10",
-          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.44"
+          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.49"
         },
         {
           "ObjectName": "FortConversationRequirement_ControllerRequirement Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_11",
-          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.45"
+          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.50"
         }
       ],
       "OutputConnections": [
@@ -981,15 +1085,15 @@
       "SubNodes": [
         {
           "ObjectName": "FortConversationRequirement_ControllerRequirement Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_1",
-          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.43"
+          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.48"
         },
         {
           "ObjectName": "FortConversationRequirement_ControllerRequirement Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_2",
-          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.54"
+          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.59"
         },
         {
           "ObjectName": "FortConversationRequirement_ControllerRequirement Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_3",
-          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.59"
+          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.67"
         },
         {
           "ObjectName": "ConversationChoiceNode Shared_Conversation_Sloan_Payphones:ConversationChoiceNode_3",
@@ -997,7 +1101,7 @@
         },
         {
           "ObjectName": "ConvoSideEffect_PayphoneActor_Message_C Shared_Conversation_Sloan_Payphones:ConvoSideEffect_PayphoneActor_Message_C_1",
-          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.10"
+          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.11"
         }
       ],
       "OutputConnections": [
@@ -1019,15 +1123,15 @@
       "SubNodes": [
         {
           "ObjectName": "FortConversationRequirement_ControllerRequirement Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_18",
-          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.52"
+          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.57"
         },
         {
           "ObjectName": "FortConversationRequirement_ControllerRequirement Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_19",
-          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.53"
+          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.58"
         },
         {
           "ObjectName": "FortConversationRequirement_ControllerRequirement Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_20",
-          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.55"
+          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.60"
         },
         {
           "ObjectName": "ConversationChoiceNode Shared_Conversation_Sloan_Payphones:ConversationChoiceNode_7",
@@ -1035,7 +1139,7 @@
         },
         {
           "ObjectName": "ConvoSideEffect_PayphoneActor_Message_C Shared_Conversation_Sloan_Payphones:ConvoSideEffect_PayphoneActor_Message_C_7",
-          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.16"
+          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.17"
         }
       ],
       "OutputConnections": [
@@ -1057,15 +1161,15 @@
       "SubNodes": [
         {
           "ObjectName": "FortConversationRequirement_ControllerRequirement Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_0",
-          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.42"
+          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.47"
         },
         {
           "ObjectName": "FortConversationRequirement_ControllerRequirement Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_5",
-          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.61"
+          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.69"
         },
         {
           "ObjectName": "FortConversationRequirement_ControllerRequirement Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_8",
-          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.64"
+          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.72"
         },
         {
           "ObjectName": "ConversationChoiceNode Shared_Conversation_Sloan_Payphones:ConversationChoiceNode_0",
@@ -1073,7 +1177,7 @@
         },
         {
           "ObjectName": "ConvoSideEffect_PayphoneActor_Message_C Shared_Conversation_Sloan_Payphones:ConvoSideEffect_PayphoneActor_Message_C_2",
-          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.11"
+          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.12"
         }
       ],
       "OutputConnections": [
@@ -1095,15 +1199,15 @@
       "SubNodes": [
         {
           "ObjectName": "FortConversationRequirement_ControllerRequirement Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_14",
-          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.48"
+          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.53"
         },
         {
           "ObjectName": "FortConversationRequirement_ControllerRequirement Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_15",
-          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.49"
+          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.54"
         },
         {
           "ObjectName": "FortConversationRequirement_ControllerRequirement Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_16",
-          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.50"
+          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.55"
         },
         {
           "ObjectName": "ConversationChoiceNode Shared_Conversation_Sloan_Payphones:ConversationChoiceNode_5",
@@ -1111,7 +1215,7 @@
         },
         {
           "ObjectName": "ConvoSideEffect_PayphoneActor_Message_C Shared_Conversation_Sloan_Payphones:ConvoSideEffect_PayphoneActor_Message_C_5",
-          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.14"
+          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.15"
         }
       ],
       "OutputConnections": [
@@ -1132,24 +1236,24 @@
       "ObjectiveBackendName": "quest_s17_w12_legendary_q1_obj0",
       "SubNodes": [
         {
-          "ObjectName": "FortConversationRequirement_ControllerRequirement Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_21",
-          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.56"
+          "ObjectName": "FortConversationRequirement_ControllerRequirement Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_24",
+          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.64"
         },
         {
-          "ObjectName": "FortConversationRequirement_ControllerRequirement Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_22",
-          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.57"
+          "ObjectName": "FortConversationRequirement_ControllerRequirement Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_25",
+          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.65"
         },
         {
-          "ObjectName": "FortConversationRequirement_ControllerRequirement Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_23",
-          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.58"
+          "ObjectName": "FortConversationRequirement_ControllerRequirement Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_26",
+          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.66"
         },
         {
-          "ObjectName": "ConversationChoiceNode Shared_Conversation_Sloan_Payphones:ConversationChoiceNode_8",
-          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.7"
+          "ObjectName": "ConversationChoiceNode Shared_Conversation_Sloan_Payphones:ConversationChoiceNode_9",
+          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.8"
         },
         {
-          "ObjectName": "ConvoSideEffect_PayphoneActor_Message_C Shared_Conversation_Sloan_Payphones:ConvoSideEffect_PayphoneActor_Message_C_8",
-          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.17"
+          "ObjectName": "ConvoSideEffect_PayphoneActor_Message_C Shared_Conversation_Sloan_Payphones:ConvoSideEffect_PayphoneActor_Message_C_9",
+          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.19"
         }
       ],
       "OutputConnections": [
@@ -1171,15 +1275,15 @@
       "SubNodes": [
         {
           "ObjectName": "FortConversationRequirement_ControllerRequirement Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_12",
-          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.46"
+          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.51"
         },
         {
           "ObjectName": "FortConversationRequirement_ControllerRequirement Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_13",
-          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.47"
+          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.52"
         },
         {
           "ObjectName": "FortConversationRequirement_ControllerRequirement Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_17",
-          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.51"
+          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.56"
         },
         {
           "ObjectName": "ConversationChoiceNode Shared_Conversation_Sloan_Payphones:ConversationChoiceNode_6",
@@ -1187,13 +1291,51 @@
         },
         {
           "ObjectName": "ConvoSideEffect_PayphoneActor_Message_C Shared_Conversation_Sloan_Payphones:ConvoSideEffect_PayphoneActor_Message_C_6",
-          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.15"
+          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.16"
         }
       ],
       "OutputConnections": [
         "BC07B15F-41820CA3-51764CAE-0C1B3FA3"
       ],
       "Compiled_NodeGUID": "D2E0E3D7-4A1C6E96-1DEE0089-68433682"
+    }
+  },
+  {
+    "Type": "FortConversationTaskNode_CompleteQuestObjectiveByBackendName",
+    "Name": "FortConversationTaskNode_CompleteQuestObjectiveByBackendName_8",
+    "Outer": "Shared_Conversation_Sloan_Payphones",
+    "Properties": {
+      "QuestDefinition": {
+        "AssetPathName": "/BattlepassS17/Items/QuestItems/Legendary/quest_s17_w14_legendary_q1.quest_s17_w14_legendary_q1",
+        "SubPathString": ""
+      },
+      "ObjectiveBackendName": "quest_s17_w14_legendary_q1_obj0",
+      "SubNodes": [
+        {
+          "ObjectName": "FortConversationRequirement_ControllerRequirement Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_21",
+          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.61"
+        },
+        {
+          "ObjectName": "FortConversationRequirement_ControllerRequirement Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_22",
+          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.62"
+        },
+        {
+          "ObjectName": "FortConversationRequirement_ControllerRequirement Shared_Conversation_Sloan_Payphones:FortConversationRequirement_ControllerRequirement_23",
+          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.63"
+        },
+        {
+          "ObjectName": "ConversationChoiceNode Shared_Conversation_Sloan_Payphones:ConversationChoiceNode_8",
+          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.7"
+        },
+        {
+          "ObjectName": "ConvoSideEffect_PayphoneActor_Message_C Shared_Conversation_Sloan_Payphones:ConvoSideEffect_PayphoneActor_Message_C_8",
+          "ObjectPath": "/BattlepassS17/Conversations/Shared_Conversation_Sloan_Payphones.18"
+        }
+      ],
+      "OutputConnections": [
+        "D0EEABB6-49256EDC-B1C4C8A2-53586F29"
+      ],
+      "Compiled_NodeGUID": "130C86E7-44F848DC-3A7BECAD-9EB08231"
     }
   },
   {
@@ -1896,6 +2038,35 @@
   },
   {
     "Type": "Speech_C",
+    "Name": "Speech_C_33",
+    "Outer": "Shared_Conversation_Sloan_Payphones",
+    "Template": "Default__Speech_C",
+    "Properties": {
+      "SpeakerTag": {
+        "TagName": "Conversation.Participant.NPC"
+      },
+      "ListenerTag": {
+        "TagName": "Conversation.Participant.Player"
+      },
+      "GeneralConfig": {
+        "DefaultMessage": {
+          "Namespace": "",
+          "Key": "2D656287457FF3B9718ADA9D303E237C",
+          "SourceString": "If you're hearing this recorded message, that means we're <b>getting close</> to executing our plan."
+        }
+      },
+      "SoftTaskIcon": {
+        "AssetPathName": "/Game/Athena/HUD/Interaction/T_UI_NPC_MainQuest.T_UI_NPC_MainQuest",
+        "SubPathString": ""
+      },
+      "OutputConnections": [
+        "87D18FE9-49CAE151-89293597-793CB105"
+      ],
+      "Compiled_NodeGUID": "D0EEABB6-49256EDC-B1C4C8A2-53586F29"
+    }
+  },
+  {
+    "Type": "Speech_C",
     "Name": "Speech_C_34",
     "Outer": "Shared_Conversation_Sloan_Payphones",
     "Template": "Default__Speech_C",
@@ -1972,6 +2143,85 @@
   },
   {
     "Type": "Speech_C",
+    "Name": "Speech_C_37",
+    "Outer": "Shared_Conversation_Sloan_Payphones",
+    "Template": "Default__Speech_C",
+    "Properties": {
+      "SpeakerTag": {
+        "TagName": "Conversation.Participant.NPC"
+      },
+      "ListenerTag": {
+        "TagName": "Conversation.Participant.Player"
+      },
+      "GeneralConfig": {
+        "DefaultMessage": {
+          "Namespace": "",
+          "Key": "9B1AD1DE43559A6F57BBC1B06555B8F8",
+          "SourceString": "If everything works like I think it will... that  <enemy>Mothership's</> days of ominous hovering are numbered."
+        }
+      },
+      "OutputConnections": [
+        "5F48C0BB-4D3ACB45-311C1DA7-FBD2C8EF"
+      ],
+      "Compiled_NodeGUID": "87D18FE9-49CAE151-89293597-793CB105"
+    }
+  },
+  {
+    "Type": "Speech_C",
+    "Name": "Speech_C_38",
+    "Outer": "Shared_Conversation_Sloan_Payphones",
+    "Template": "Default__Speech_C",
+    "Properties": {
+      "SpeakerTag": {
+        "TagName": "Conversation.Participant.NPC"
+      },
+      "ListenerTag": {
+        "TagName": "Conversation.Participant.Player"
+      },
+      "GeneralConfig": {
+        "DefaultMessage": {
+          "Namespace": "",
+          "Key": "34300B80417A155685356193D911EBB1",
+          "SourceString": "<b>Unfortunately</>, The area where it's coming down isn't as unpopulated as I'd like."
+        }
+      },
+      "OutputConnections": [
+        "B4927BC5-428F0B37-93F4F8B1-0DF48540"
+      ],
+      "Compiled_NodeGUID": "5F48C0BB-4D3ACB45-311C1DA7-FBD2C8EF"
+    }
+  },
+  {
+    "Type": "Speech_C",
+    "Name": "Speech_C_39",
+    "Outer": "Shared_Conversation_Sloan_Payphones",
+    "Template": "Default__Speech_C",
+    "Properties": {
+      "SpeakerTag": {
+        "TagName": "Conversation.Participant.NPC"
+      },
+      "ListenerTag": {
+        "TagName": "Conversation.Participant.Player"
+      },
+      "GeneralConfig": {
+        "DefaultMessage": {
+          "Namespace": "",
+          "Key": "864FC5CE45A87175D99811A810341BA6",
+          "SourceString": "I need you to <b>warn the people</> there ahead of time and get them to leave."
+        }
+      },
+      "SoftTaskIcon": {
+        "AssetPathName": "/Game/Athena/HUD/Interaction/T_UI_NPC_MainQuest.T_UI_NPC_MainQuest",
+        "SubPathString": ""
+      },
+      "OutputConnections": [
+        "73522D98-44AA7860-8E9D7286-E25A0ABB"
+      ],
+      "Compiled_NodeGUID": "B4927BC5-428F0B37-93F4F8B1-0DF48540"
+    }
+  },
+  {
+    "Type": "Speech_C",
     "Name": "Speech_C_4",
     "Outer": "Shared_Conversation_Sloan_Payphones",
     "Template": "Default__Speech_C",
@@ -1993,6 +2243,28 @@
         "A1C54DF6-4463E070-09584E8F-7338091A"
       ],
       "Compiled_NodeGUID": "2419BD3D-41AB331D-5B3B9E9D-4B9BBBC5"
+    }
+  },
+  {
+    "Type": "Speech_C",
+    "Name": "Speech_C_40",
+    "Outer": "Shared_Conversation_Sloan_Payphones",
+    "Template": "Default__Speech_C",
+    "Properties": {
+      "SpeakerTag": {
+        "TagName": "Conversation.Participant.NPC"
+      },
+      "ListenerTag": {
+        "TagName": "Conversation.Participant.Player"
+      },
+      "GeneralConfig": {
+        "DefaultMessage": {
+          "Namespace": "",
+          "Key": "002AABCC49B13D548E106A8A65220DC9",
+          "SourceString": "<enemy>Can't risk</>\r\n any of them doing something to <b>interfere with the plan.</>"
+        }
+      },
+      "Compiled_NodeGUID": "73522D98-44AA7860-8E9D7286-E25A0ABB"
     }
   },
   {

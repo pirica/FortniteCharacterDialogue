@@ -4,28 +4,7 @@
     "Name": "NPCLibrary_Conversation_Marigold",
     "Properties": {
       "CompilerVersion": 2,
-      "ReachableNodeMap": {
-        "5FE098B54CE6FB592A8B83BBCFF40F4C": {
-          "ObjectName": "NPCLibrary_Conversation_Marigold:ConversationEntryPointNode_7:ConversationEntryPointNode",
-          "ObjectPath": "/NPCLibrary/NPCs/Marigold/Marigold/NPCLibrary_Conversation_Marigold.1"
-        },
-        "3C4BF5BA419597324D24649315C74158": {
-          "ObjectName": "NPCLibrary_Conversation_Marigold:Speech_C_4:Speech_C",
-          "ObjectPath": "/NPCLibrary/NPCs/Marigold/Marigold/NPCLibrary_Conversation_Marigold.10"
-        },
-        "E80AE7BE4D014EEB07FB279C298FB536": {
-          "ObjectName": "NPCLibrary_Conversation_Marigold:ConversationLinkNode_0:ConversationLinkNode",
-          "ObjectPath": "/NPCLibrary/NPCs/Marigold/Marigold/NPCLibrary_Conversation_Marigold.2"
-        },
-        "96468014451B0DE937E56F9C36E05817": {
-          "ObjectName": "NPCLibrary_Conversation_Marigold:ConversationLinkNode_1:ConversationLinkNode",
-          "ObjectPath": "/NPCLibrary/NPCs/Marigold/Marigold/NPCLibrary_Conversation_Marigold.3"
-        },
-        "BAEC7D1B46FF89F5FC53DE8E821D0508": {
-          "ObjectName": "NPCLibrary_Conversation_Marigold:ConversationLinkNode_2:ConversationLinkNode",
-          "ObjectPath": "/NPCLibrary/NPCs/Marigold/Marigold/NPCLibrary_Conversation_Marigold.4"
-        }
-      },
+      "ReachableNodeMap": {},
       "EntryTags": [
         {
           "EntryTag": {
@@ -37,6 +16,7 @@
         }
       ],
       "ExitTags": [
+        "Conversation.Entry.Season17.Week14",
         "Conversation.Entry.BasicServices",
         "Conversation.Entry.NPCLibrary.Quests",
         "Conversation.Entry.Season17.Week2"
@@ -44,6 +24,7 @@
       "InternalNodeIds": [
         "5FE098B5-4CE6FB59-2A8B83BB-CFF40F4C",
         "3C4BF5BA-41959732-4D246493-15C74158",
+        "F0AFA672-4AB8FE31-F5CB6AA8-8E7E9715",
         "E80AE7BE-4D014EEB-07FB279C-298FB536",
         "96468014-451B0DE9-37E56F9C-36E05817",
         "BAEC7D1B-46FF89F5-FC53DE8E-821D0508"
@@ -130,6 +111,17 @@
     }
   },
   {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_5",
+    "Outer": "NPCLibrary_Conversation_Marigold",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.Season17.Week14"
+      },
+      "Compiled_NodeGUID": "F0AFA672-4AB8FE31-F5CB6AA8-8E7E9715"
+    }
+  },
+  {
     "Type": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch",
     "Name": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0",
     "Outer": "Speech_C_4",
@@ -212,8 +204,8 @@
                   "TagName": "Conversation.Participant.Player"
                 },
                 "Requirement": {
-                  "ObjectName": "Speech_C_4:FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0:FortControllerRequirement_CheckTimeSinceLastPlayedMatch",
-                  "ObjectPath": "/NPCLibrary/NPCs/Marigold/Marigold/NPCLibrary_Conversation_Marigold.5"
+                  "ObjectName": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch NPCLibrary_Conversation_Marigold:Speech_C_4.FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/Marigold/Marigold/NPCLibrary_Conversation_Marigold.6"
                 }
               }
             ],
@@ -221,7 +213,7 @@
               "Value": 1.0,
               "Curve": {
                 "CurveTable": {
-                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
                   "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
                 },
                 "RowName": "Tandem.Speech.Priority.WhileSincePlayed"
@@ -239,7 +231,8 @@
               "RegistryType": {
                 "Name": null
               }
-            }
+            },
+            "MetadataParameters": []
           },
           {
             "Message": {
@@ -254,8 +247,8 @@
                   "TagName": "Conversation.Participant.Player"
                 },
                 "Requirement": {
-                  "ObjectName": "Speech_C_4:FortControllerRequirement_IsFirstEverConversationWithNPC_0:FortControllerRequirement_IsFirstEverConversationWithNPC",
-                  "ObjectPath": "/NPCLibrary/NPCs/Marigold/Marigold/NPCLibrary_Conversation_Marigold.9"
+                  "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC NPCLibrary_Conversation_Marigold:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/Marigold/Marigold/NPCLibrary_Conversation_Marigold.10"
                 }
               }
             ],
@@ -263,7 +256,7 @@
               "Value": 1.0,
               "Curve": {
                 "CurveTable": {
-                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
                   "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
                 },
                 "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
@@ -281,7 +274,8 @@
               "RegistryType": {
                 "Name": null
               }
-            }
+            },
+            "MetadataParameters": []
           },
           {
             "Message": {
@@ -296,8 +290,8 @@
                   "TagName": "Conversation.Participant.Player"
                 },
                 "Requirement": {
-                  "ObjectName": "Speech_C_4:FortControllerRequirement_HasBars_0:FortControllerRequirement_HasBars",
-                  "ObjectPath": "/NPCLibrary/NPCs/Marigold/Marigold/NPCLibrary_Conversation_Marigold.6"
+                  "ObjectName": "FortControllerRequirement_HasBars NPCLibrary_Conversation_Marigold:Speech_C_4.FortControllerRequirement_HasBars_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/Marigold/Marigold/NPCLibrary_Conversation_Marigold.7"
                 }
               }
             ],
@@ -305,7 +299,7 @@
               "Value": 1.0,
               "Curve": {
                 "CurveTable": {
-                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
                   "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
                 },
                 "RowName": "Tandem.Speech.Priority.HighTotalBars"
@@ -323,7 +317,8 @@
               "RegistryType": {
                 "Name": null
               }
-            }
+            },
+            "MetadataParameters": []
           },
           {
             "Message": {
@@ -338,8 +333,8 @@
                   "TagName": "Conversation.Participant.Player"
                 },
                 "Requirement": {
-                  "ObjectName": "Speech_C_4:FortControllerRequirement_HasCID_0:FortControllerRequirement_HasCID",
-                  "ObjectPath": "/NPCLibrary/NPCs/Marigold/Marigold/NPCLibrary_Conversation_Marigold.7"
+                  "ObjectName": "FortControllerRequirement_HasCID NPCLibrary_Conversation_Marigold:Speech_C_4.FortControllerRequirement_HasCID_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/Marigold/Marigold/NPCLibrary_Conversation_Marigold.8"
                 }
               }
             ],
@@ -347,7 +342,7 @@
               "Value": 1.0,
               "Curve": {
                 "CurveTable": {
-                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
                   "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
                 },
                 "RowName": "Tandem.Speech.Priority.OutfitReaction"
@@ -365,7 +360,8 @@
               "RegistryType": {
                 "Name": null
               }
-            }
+            },
+            "MetadataParameters": []
           },
           {
             "Message": {
@@ -380,8 +376,8 @@
                   "TagName": "Conversation.Participant.Player"
                 },
                 "Requirement": {
-                  "ObjectName": "Speech_C_4:FortControllerRequirement_HasCID_1:FortControllerRequirement_HasCID",
-                  "ObjectPath": "/NPCLibrary/NPCs/Marigold/Marigold/NPCLibrary_Conversation_Marigold.8"
+                  "ObjectName": "FortControllerRequirement_HasCID NPCLibrary_Conversation_Marigold:Speech_C_4.FortControllerRequirement_HasCID_1",
+                  "ObjectPath": "/NPCLibrary/NPCs/Marigold/Marigold/NPCLibrary_Conversation_Marigold.9"
                 }
               }
             ],
@@ -389,7 +385,7 @@
               "Value": 1.0,
               "Curve": {
                 "CurveTable": {
-                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
                   "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
                 },
                 "RowName": "Tandem.Speech.Priority.OutfitReaction"
@@ -407,7 +403,8 @@
               "RegistryType": {
                 "Name": null
               }
-            }
+            },
+            "MetadataParameters": []
           }
         ],
         "DefaultMessage": {
@@ -419,7 +416,8 @@
       "OutputConnections": [
         "BAEC7D1B-46FF89F5-FC53DE8E-821D0508",
         "96468014-451B0DE9-37E56F9C-36E05817",
-        "E80AE7BE-4D014EEB-07FB279C-298FB536"
+        "E80AE7BE-4D014EEB-07FB279C-298FB536",
+        "F0AFA672-4AB8FE31-F5CB6AA8-8E7E9715"
       ],
       "NodeName": "",
       "Compiled_NodeGUID": "3C4BF5BA-41959732-4D246493-15C74158"

@@ -4,24 +4,7 @@
     "Name": "NPCLibrary_Conversation_AlienTrooper",
     "Properties": {
       "CompilerVersion": 2,
-      "ReachableNodeMap": {
-        "CFA74AF84916BC0DAD9F12A70AFC0276": {
-          "ObjectName": "NPCLibrary_Conversation_AlienTrooper:ConversationEntryPointNode_7:ConversationEntryPointNode",
-          "ObjectPath": "/NPCLibrary/NPCs/AlienTrooper/AlienTrooper/NPCLibrary_Conversation_AlienTrooper.1"
-        },
-        "5140455B483E1D4ACC9DC29AF7E64EA2": {
-          "ObjectName": "NPCLibrary_Conversation_AlienTrooper:Speech_C_4:Speech_C",
-          "ObjectPath": "/NPCLibrary/NPCs/AlienTrooper/AlienTrooper/NPCLibrary_Conversation_AlienTrooper.7"
-        },
-        "A7C39D5340660FB51C7B898637610B1A": {
-          "ObjectName": "NPCLibrary_Conversation_AlienTrooper:ConversationLinkNode_0:ConversationLinkNode",
-          "ObjectPath": "/NPCLibrary/NPCs/AlienTrooper/AlienTrooper/NPCLibrary_Conversation_AlienTrooper.2"
-        },
-        "BF7390C945BF4DADC5F7D9A72A8FC0FB": {
-          "ObjectName": "NPCLibrary_Conversation_AlienTrooper:ConversationLinkNode_1:ConversationLinkNode",
-          "ObjectPath": "/NPCLibrary/NPCs/AlienTrooper/AlienTrooper/NPCLibrary_Conversation_AlienTrooper.3"
-        }
-      },
+      "ReachableNodeMap": {},
       "EntryTags": [
         {
           "EntryTag": {
@@ -33,12 +16,14 @@
         }
       ],
       "ExitTags": [
+        "Conversation.Entry.Season17.Week14",
         "Conversation.Entry.BasicServices",
         "Conversation.Entry.NPCLibrary.Quests"
       ],
       "InternalNodeIds": [
         "CFA74AF8-4916BC0D-AD9F12A7-0AFC0276",
         "5140455B-483E1D4A-CC9DC29A-F7E64EA2",
+        "D4A42E3A-41337802-C2366FA7-862018C2",
         "A7C39D53-40660FB5-1C7B8986-37610B1A",
         "BF7390C9-45BF4DAD-C5F7D9A7-2A8FC0FB"
       ],
@@ -113,6 +98,17 @@
     }
   },
   {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_5",
+    "Outer": "NPCLibrary_Conversation_AlienTrooper",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.Season17.Week14"
+      },
+      "Compiled_NodeGUID": "D4A42E3A-41337802-C2366FA7-862018C2"
+    }
+  },
+  {
     "Type": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch",
     "Name": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0",
     "Outer": "Speech_C_4",
@@ -165,8 +161,8 @@
                   "TagName": "Conversation.Participant.Player"
                 },
                 "Requirement": {
-                  "ObjectName": "Speech_C_4:FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0:FortControllerRequirement_CheckTimeSinceLastPlayedMatch",
-                  "ObjectPath": "/NPCLibrary/NPCs/AlienTrooper/AlienTrooper/NPCLibrary_Conversation_AlienTrooper.4"
+                  "ObjectName": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch NPCLibrary_Conversation_AlienTrooper:Speech_C_4.FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/AlienTrooper/AlienTrooper/NPCLibrary_Conversation_AlienTrooper.5"
                 }
               }
             ],
@@ -174,7 +170,7 @@
               "Value": 1.0,
               "Curve": {
                 "CurveTable": {
-                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
                   "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
                 },
                 "RowName": "Tandem.Speech.Priority.WhileSincePlayed"
@@ -192,7 +188,8 @@
               "RegistryType": {
                 "Name": null
               }
-            }
+            },
+            "MetadataParameters": []
           },
           {
             "Message": {
@@ -207,8 +204,8 @@
                   "TagName": "Conversation.Participant.Player"
                 },
                 "Requirement": {
-                  "ObjectName": "Speech_C_4:FortControllerRequirement_IsFirstEverConversationWithNPC_0:FortControllerRequirement_IsFirstEverConversationWithNPC",
-                  "ObjectPath": "/NPCLibrary/NPCs/AlienTrooper/AlienTrooper/NPCLibrary_Conversation_AlienTrooper.6"
+                  "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC NPCLibrary_Conversation_AlienTrooper:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/AlienTrooper/AlienTrooper/NPCLibrary_Conversation_AlienTrooper.7"
                 }
               }
             ],
@@ -216,7 +213,7 @@
               "Value": 1.0,
               "Curve": {
                 "CurveTable": {
-                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
                   "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
                 },
                 "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
@@ -234,7 +231,8 @@
               "RegistryType": {
                 "Name": null
               }
-            }
+            },
+            "MetadataParameters": []
           },
           {
             "Message": {
@@ -249,8 +247,8 @@
                   "TagName": "Conversation.Participant.Player"
                 },
                 "Requirement": {
-                  "ObjectName": "Speech_C_4:FortControllerRequirement_HasBars_0:FortControllerRequirement_HasBars",
-                  "ObjectPath": "/NPCLibrary/NPCs/AlienTrooper/AlienTrooper/NPCLibrary_Conversation_AlienTrooper.5"
+                  "ObjectName": "FortControllerRequirement_HasBars NPCLibrary_Conversation_AlienTrooper:Speech_C_4.FortControllerRequirement_HasBars_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/AlienTrooper/AlienTrooper/NPCLibrary_Conversation_AlienTrooper.6"
                 }
               }
             ],
@@ -258,7 +256,7 @@
               "Value": 1.0,
               "Curve": {
                 "CurveTable": {
-                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
                   "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
                 },
                 "RowName": "Tandem.Speech.Priority.HighTotalBars"
@@ -276,7 +274,8 @@
               "RegistryType": {
                 "Name": null
               }
-            }
+            },
+            "MetadataParameters": []
           }
         ],
         "DefaultMessage": {
@@ -287,7 +286,8 @@
       },
       "OutputConnections": [
         "BF7390C9-45BF4DAD-C5F7D9A7-2A8FC0FB",
-        "A7C39D53-40660FB5-1C7B8986-37610B1A"
+        "A7C39D53-40660FB5-1C7B8986-37610B1A",
+        "D4A42E3A-41337802-C2366FA7-862018C2"
       ],
       "NodeName": "",
       "Compiled_NodeGUID": "5140455B-483E1D4A-CC9DC29A-F7E64EA2"

@@ -4,28 +4,7 @@
     "Name": "NPCLibrary_Conversation_SpecialForces",
     "Properties": {
       "CompilerVersion": 2,
-      "ReachableNodeMap": {
-        "F6687EEE4B4F9B79467A94B04115BD79": {
-          "ObjectName": "NPCLibrary_Conversation_SpecialForces:ConversationEntryPointNode_7:ConversationEntryPointNode",
-          "ObjectPath": "/NPCLibrary/NPCs/SpecialForces/SpecialForces/NPCLibrary_Conversation_SpecialForces.1"
-        },
-        "2BC0DEEC46D42AFFA83025A1615AA37D": {
-          "ObjectName": "NPCLibrary_Conversation_SpecialForces:Speech_C_4:Speech_C",
-          "ObjectPath": "/NPCLibrary/NPCs/SpecialForces/SpecialForces/NPCLibrary_Conversation_SpecialForces.8"
-        },
-        "0BFC6835401376840D273DB7B61B24AE": {
-          "ObjectName": "NPCLibrary_Conversation_SpecialForces:ConversationLinkNode_0:ConversationLinkNode",
-          "ObjectPath": "/NPCLibrary/NPCs/SpecialForces/SpecialForces/NPCLibrary_Conversation_SpecialForces.2"
-        },
-        "664309254B009F80185276ABDEED4EB4": {
-          "ObjectName": "NPCLibrary_Conversation_SpecialForces:ConversationLinkNode_1:ConversationLinkNode",
-          "ObjectPath": "/NPCLibrary/NPCs/SpecialForces/SpecialForces/NPCLibrary_Conversation_SpecialForces.3"
-        },
-        "9CE1B5CD40418F670500B6A31278A16F": {
-          "ObjectName": "NPCLibrary_Conversation_SpecialForces:ConversationLinkNode_2:ConversationLinkNode",
-          "ObjectPath": "/NPCLibrary/NPCs/SpecialForces/SpecialForces/NPCLibrary_Conversation_SpecialForces.4"
-        }
-      },
+      "ReachableNodeMap": {},
       "EntryTags": [
         {
           "EntryTag": {
@@ -37,6 +16,7 @@
         }
       ],
       "ExitTags": [
+        "Conversation.Entry.Season17.Week14",
         "Conversation.Entry.BasicServices",
         "Conversation.Entry.NPCLibrary.Quests",
         "Conversation.Entry.Season17.Week2"
@@ -44,6 +24,7 @@
       "InternalNodeIds": [
         "F6687EEE-4B4F9B79-467A94B0-4115BD79",
         "2BC0DEEC-46D42AFF-A83025A1-615AA37D",
+        "96A4352A-4CBFE04C-156348B4-E391A822",
         "0BFC6835-40137684-0D273DB7-B61B24AE",
         "66430925-4B009F80-185276AB-DEED4EB4",
         "9CE1B5CD-40418F67-0500B6A3-1278A16F"
@@ -130,6 +111,17 @@
     }
   },
   {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_5",
+    "Outer": "NPCLibrary_Conversation_SpecialForces",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.Season17.Week14"
+      },
+      "Compiled_NodeGUID": "96A4352A-4CBFE04C-156348B4-E391A822"
+    }
+  },
+  {
     "Type": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch",
     "Name": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0",
     "Outer": "Speech_C_4",
@@ -182,8 +174,8 @@
                   "TagName": "Conversation.Participant.Player"
                 },
                 "Requirement": {
-                  "ObjectName": "Speech_C_4:FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0:FortControllerRequirement_CheckTimeSinceLastPlayedMatch",
-                  "ObjectPath": "/NPCLibrary/NPCs/SpecialForces/SpecialForces/NPCLibrary_Conversation_SpecialForces.5"
+                  "ObjectName": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch NPCLibrary_Conversation_SpecialForces:Speech_C_4.FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/SpecialForces/SpecialForces/NPCLibrary_Conversation_SpecialForces.6"
                 }
               }
             ],
@@ -191,7 +183,7 @@
               "Value": 1.0,
               "Curve": {
                 "CurveTable": {
-                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
                   "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
                 },
                 "RowName": "Tandem.Speech.Priority.WhileSincePlayed"
@@ -209,7 +201,8 @@
               "RegistryType": {
                 "Name": null
               }
-            }
+            },
+            "MetadataParameters": []
           },
           {
             "Message": {
@@ -224,8 +217,8 @@
                   "TagName": "Conversation.Participant.Player"
                 },
                 "Requirement": {
-                  "ObjectName": "Speech_C_4:FortControllerRequirement_IsFirstEverConversationWithNPC_0:FortControllerRequirement_IsFirstEverConversationWithNPC",
-                  "ObjectPath": "/NPCLibrary/NPCs/SpecialForces/SpecialForces/NPCLibrary_Conversation_SpecialForces.7"
+                  "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC NPCLibrary_Conversation_SpecialForces:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/SpecialForces/SpecialForces/NPCLibrary_Conversation_SpecialForces.8"
                 }
               }
             ],
@@ -233,7 +226,7 @@
               "Value": 1.0,
               "Curve": {
                 "CurveTable": {
-                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
                   "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
                 },
                 "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
@@ -251,7 +244,8 @@
               "RegistryType": {
                 "Name": null
               }
-            }
+            },
+            "MetadataParameters": []
           },
           {
             "Message": {
@@ -266,8 +260,8 @@
                   "TagName": "Conversation.Participant.Player"
                 },
                 "Requirement": {
-                  "ObjectName": "Speech_C_4:FortControllerRequirement_HasBars_0:FortControllerRequirement_HasBars",
-                  "ObjectPath": "/NPCLibrary/NPCs/SpecialForces/SpecialForces/NPCLibrary_Conversation_SpecialForces.6"
+                  "ObjectName": "FortControllerRequirement_HasBars NPCLibrary_Conversation_SpecialForces:Speech_C_4.FortControllerRequirement_HasBars_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/SpecialForces/SpecialForces/NPCLibrary_Conversation_SpecialForces.7"
                 }
               }
             ],
@@ -275,7 +269,7 @@
               "Value": 1.0,
               "Curve": {
                 "CurveTable": {
-                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
                   "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
                 },
                 "RowName": null
@@ -293,7 +287,8 @@
               "RegistryType": {
                 "Name": null
               }
-            }
+            },
+            "MetadataParameters": []
           }
         ],
         "DefaultMessage": {
@@ -305,7 +300,8 @@
       "OutputConnections": [
         "9CE1B5CD-40418F67-0500B6A3-1278A16F",
         "66430925-4B009F80-185276AB-DEED4EB4",
-        "0BFC6835-40137684-0D273DB7-B61B24AE"
+        "0BFC6835-40137684-0D273DB7-B61B24AE",
+        "96A4352A-4CBFE04C-156348B4-E391A822"
       ],
       "NodeName": "",
       "Compiled_NodeGUID": "2BC0DEEC-46D42AFF-A83025A1-615AA37D"

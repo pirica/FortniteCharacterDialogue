@@ -4,24 +4,7 @@
     "Name": "NPCLibrary_Conversation_Antique",
     "Properties": {
       "CompilerVersion": 2,
-      "ReachableNodeMap": {
-        "A3898D8B4F04C274257981A88B219CB2": {
-          "ObjectName": "NPCLibrary_Conversation_Antique:ConversationEntryPointNode_7:ConversationEntryPointNode",
-          "ObjectPath": "/NPCLibrary/NPCs/Antique/Antique/NPCLibrary_Conversation_Antique.1"
-        },
-        "2D44370346443AF2A1C1D0AAF72BF42B": {
-          "ObjectName": "NPCLibrary_Conversation_Antique:Speech_C_4:Speech_C",
-          "ObjectPath": "/NPCLibrary/NPCs/Antique/Antique/NPCLibrary_Conversation_Antique.7"
-        },
-        "C100FA194CD47FB8ECF2659F3D0BC96F": {
-          "ObjectName": "NPCLibrary_Conversation_Antique:ConversationLinkNode_0:ConversationLinkNode",
-          "ObjectPath": "/NPCLibrary/NPCs/Antique/Antique/NPCLibrary_Conversation_Antique.2"
-        },
-        "1FFEA39446E29D3D34C728879729E1F1": {
-          "ObjectName": "NPCLibrary_Conversation_Antique:ConversationLinkNode_1:ConversationLinkNode",
-          "ObjectPath": "/NPCLibrary/NPCs/Antique/Antique/NPCLibrary_Conversation_Antique.3"
-        }
-      },
+      "ReachableNodeMap": {},
       "EntryTags": [
         {
           "EntryTag": {
@@ -33,12 +16,14 @@
         }
       ],
       "ExitTags": [
+        "Conversation.Entry.Season17.Week14",
         "Conversation.Entry.BasicServices",
         "Conversation.Entry.NPCLibrary.Quests"
       ],
       "InternalNodeIds": [
         "A3898D8B-4F04C274-257981A8-8B219CB2",
         "2D443703-46443AF2-A1C1D0AA-F72BF42B",
+        "580F3612-4D366FDB-3BDE9B93-3800FBA6",
         "C100FA19-4CD47FB8-ECF2659F-3D0BC96F",
         "1FFEA394-46E29D3D-34C72887-9729E1F1"
       ],
@@ -113,6 +98,17 @@
     }
   },
   {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_5",
+    "Outer": "NPCLibrary_Conversation_Antique",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.Season17.Week14"
+      },
+      "Compiled_NodeGUID": "580F3612-4D366FDB-3BDE9B93-3800FBA6"
+    }
+  },
+  {
     "Type": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch",
     "Name": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0",
     "Outer": "Speech_C_4",
@@ -165,8 +161,8 @@
                   "TagName": "Conversation.Participant.Player"
                 },
                 "Requirement": {
-                  "ObjectName": "Speech_C_4:FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0:FortControllerRequirement_CheckTimeSinceLastPlayedMatch",
-                  "ObjectPath": "/NPCLibrary/NPCs/Antique/Antique/NPCLibrary_Conversation_Antique.4"
+                  "ObjectName": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch NPCLibrary_Conversation_Antique:Speech_C_4.FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/Antique/Antique/NPCLibrary_Conversation_Antique.5"
                 }
               }
             ],
@@ -174,7 +170,7 @@
               "Value": 1.0,
               "Curve": {
                 "CurveTable": {
-                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
                   "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
                 },
                 "RowName": "Tandem.Speech.Priority.WhileSincePlayed"
@@ -192,7 +188,8 @@
               "RegistryType": {
                 "Name": null
               }
-            }
+            },
+            "MetadataParameters": []
           },
           {
             "Message": {
@@ -207,8 +204,8 @@
                   "TagName": "Conversation.Participant.Player"
                 },
                 "Requirement": {
-                  "ObjectName": "Speech_C_4:FortControllerRequirement_IsFirstEverConversationWithNPC_0:FortControllerRequirement_IsFirstEverConversationWithNPC",
-                  "ObjectPath": "/NPCLibrary/NPCs/Antique/Antique/NPCLibrary_Conversation_Antique.6"
+                  "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC NPCLibrary_Conversation_Antique:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/Antique/Antique/NPCLibrary_Conversation_Antique.7"
                 }
               }
             ],
@@ -216,7 +213,7 @@
               "Value": 1.0,
               "Curve": {
                 "CurveTable": {
-                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
                   "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
                 },
                 "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
@@ -234,7 +231,8 @@
               "RegistryType": {
                 "Name": null
               }
-            }
+            },
+            "MetadataParameters": []
           },
           {
             "Message": {
@@ -249,8 +247,8 @@
                   "TagName": "Conversation.Participant.Player"
                 },
                 "Requirement": {
-                  "ObjectName": "Speech_C_4:FortControllerRequirement_HasBars_0:FortControllerRequirement_HasBars",
-                  "ObjectPath": "/NPCLibrary/NPCs/Antique/Antique/NPCLibrary_Conversation_Antique.5"
+                  "ObjectName": "FortControllerRequirement_HasBars NPCLibrary_Conversation_Antique:Speech_C_4.FortControllerRequirement_HasBars_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/Antique/Antique/NPCLibrary_Conversation_Antique.6"
                 }
               }
             ],
@@ -258,7 +256,7 @@
               "Value": 1.0,
               "Curve": {
                 "CurveTable": {
-                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
                   "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
                 },
                 "RowName": "Tandem.Speech.Priority.HighTotalBars"
@@ -276,7 +274,8 @@
               "RegistryType": {
                 "Name": null
               }
-            }
+            },
+            "MetadataParameters": []
           }
         ],
         "DefaultMessage": {
@@ -287,7 +286,8 @@
       },
       "OutputConnections": [
         "1FFEA394-46E29D3D-34C72887-9729E1F1",
-        "C100FA19-4CD47FB8-ECF2659F-3D0BC96F"
+        "C100FA19-4CD47FB8-ECF2659F-3D0BC96F",
+        "580F3612-4D366FDB-3BDE9B93-3800FBA6"
       ],
       "NodeName": "",
       "Compiled_NodeGUID": "2D443703-46443AF2-A1C1D0AA-F72BF42B"

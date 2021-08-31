@@ -4,24 +4,7 @@
     "Name": "NPCLibrary_Conversation_Emperor",
     "Properties": {
       "CompilerVersion": 2,
-      "ReachableNodeMap": {
-        "6B6A101640D2BD6B5C537AA4841790EA": {
-          "ObjectName": "NPCLibrary_Conversation_Emperor:ConversationEntryPointNode_7:ConversationEntryPointNode",
-          "ObjectPath": "/NPCLibrary/NPCs/Emperor/Emperor/NPCLibrary_Conversation_Emperor.1"
-        },
-        "4CC8ADD5414F63FB936D36861A25F156": {
-          "ObjectName": "NPCLibrary_Conversation_Emperor:Speech_C_4:Speech_C",
-          "ObjectPath": "/NPCLibrary/NPCs/Emperor/Emperor/NPCLibrary_Conversation_Emperor.5"
-        },
-        "82E6DE59464E4AD347ED64BE807FE46E": {
-          "ObjectName": "NPCLibrary_Conversation_Emperor:ConversationLinkNode_0:ConversationLinkNode",
-          "ObjectPath": "/NPCLibrary/NPCs/Emperor/Emperor/NPCLibrary_Conversation_Emperor.2"
-        },
-        "16BE642F4DD15459807302A6389D1959": {
-          "ObjectName": "NPCLibrary_Conversation_Emperor:ConversationLinkNode_1:ConversationLinkNode",
-          "ObjectPath": "/NPCLibrary/NPCs/Emperor/Emperor/NPCLibrary_Conversation_Emperor.3"
-        }
-      },
+      "ReachableNodeMap": {},
       "EntryTags": [
         {
           "EntryTag": {
@@ -33,12 +16,14 @@
         }
       ],
       "ExitTags": [
+        "Conversation.Entry.Season17.Week14",
         "Conversation.Entry.BasicServices",
         "Conversation.Entry.NPCLibrary.Quests"
       ],
       "InternalNodeIds": [
         "6B6A1016-40D2BD6B-5C537AA4-841790EA",
         "4CC8ADD5-414F63FB-936D3686-1A25F156",
+        "A5B5ADCA-450405EF-D0866E92-3425C632",
         "82E6DE59-464E4AD3-47ED64BE-807FE46E",
         "16BE642F-4DD15459-807302A6-389D1959"
       ],
@@ -113,6 +98,17 @@
     }
   },
   {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_5",
+    "Outer": "NPCLibrary_Conversation_Emperor",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.Season17.Week14"
+      },
+      "Compiled_NodeGUID": "A5B5ADCA-450405EF-D0866E92-3425C632"
+    }
+  },
+  {
     "Type": "FortControllerRequirement_IsFirstEverConversationWithNPC",
     "Name": "FortControllerRequirement_IsFirstEverConversationWithNPC_0",
     "Outer": "Speech_C_4"
@@ -144,8 +140,8 @@
                   "TagName": "Conversation.Participant.Player"
                 },
                 "Requirement": {
-                  "ObjectName": "Speech_C_4:FortControllerRequirement_IsFirstEverConversationWithNPC_0:FortControllerRequirement_IsFirstEverConversationWithNPC",
-                  "ObjectPath": "/NPCLibrary/NPCs/Emperor/Emperor/NPCLibrary_Conversation_Emperor.4"
+                  "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC NPCLibrary_Conversation_Emperor:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/Emperor/Emperor/NPCLibrary_Conversation_Emperor.5"
                 }
               }
             ],
@@ -153,7 +149,7 @@
               "Value": 1.0,
               "Curve": {
                 "CurveTable": {
-                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
                   "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
                 },
                 "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
@@ -171,7 +167,8 @@
               "RegistryType": {
                 "Name": null
               }
-            }
+            },
+            "MetadataParameters": []
           }
         ],
         "DefaultMessage": {
@@ -182,7 +179,8 @@
       },
       "OutputConnections": [
         "16BE642F-4DD15459-807302A6-389D1959",
-        "82E6DE59-464E4AD3-47ED64BE-807FE46E"
+        "82E6DE59-464E4AD3-47ED64BE-807FE46E",
+        "A5B5ADCA-450405EF-D0866E92-3425C632"
       ],
       "NodeName": "",
       "Compiled_NodeGUID": "4CC8ADD5-414F63FB-936D3686-1A25F156"

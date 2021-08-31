@@ -3,45 +3,30 @@
     "Type": "Function",
     "Name": "ExecuteUbergraph_GA_S17_Quest_HitHeadshots",
     "Outer": "GA_S17_Quest_HitHeadshots_C",
-    "SuperStruct": null,
-    "Children": [],
     "ChildProperties": [
       {
         "Type": "IntProperty",
         "Name": "EntryPoint",
         "Flags": 1,
-        "ArrayDim": 1,
         "ElementSize": 4,
-        "PropertyFlags": 148,
-        "RepIndex": 0,
-        "RepNotifyFunc": "None",
-        "BlueprintReplicationCondition": "COND_None"
+        "PropertyFlags": 148
       },
       {
         "Type": "StructProperty",
         "Name": "K2Node_Event_EventData",
         "Flags": 1,
-        "ArrayDim": 1,
         "ElementSize": 184,
         "PropertyFlags": 2,
-        "RepIndex": 0,
-        "RepNotifyFunc": "None",
-        "BlueprintReplicationCondition": "COND_None",
         "Struct": {
-          "ObjectName": "GameplayEventData:Class",
-          "ObjectPath": 0
+          "ObjectName": "Class GameplayEventData",
+          "ObjectPath": "/Script/GameplayAbilities"
         }
       },
       {
         "Type": "BoolProperty",
         "Name": "CallFunc_SendComplexCustomStatEvent_QuestActive",
         "Flags": 1,
-        "ArrayDim": 1,
         "ElementSize": 1,
-        "PropertyFlags": 0,
-        "RepIndex": 0,
-        "RepNotifyFunc": "None",
-        "BlueprintReplicationCondition": "COND_None",
         "FieldSize": 1,
         "ByteOffset": 0,
         "ByteMask": 1,
@@ -53,12 +38,7 @@
         "Type": "BoolProperty",
         "Name": "CallFunc_SendComplexCustomStatEvent_QuestCompleted",
         "Flags": 1,
-        "ArrayDim": 1,
         "ElementSize": 1,
-        "PropertyFlags": 0,
-        "RepIndex": 0,
-        "RepNotifyFunc": "None",
-        "BlueprintReplicationCondition": "COND_None",
         "FieldSize": 1,
         "ByteOffset": 0,
         "ByteMask": 1,
@@ -67,9 +47,7 @@
         "bIsNativeBool": true
       }
     ],
-    "FunctionFlags": 8421377,
-    "EventGraphFunction": null,
-    "EventGraphCallOffset": 0
+    "FunctionFlags": 8421377
   },
   {
     "Type": "Function",
@@ -77,113 +55,61 @@
     "Outer": "GA_S17_Quest_HitHeadshots_C",
     "Super": "K2_ActivateAbilityFromEvent",
     "SuperStruct": {
-      "ObjectName": "GA_Quest_TriggeredAbility_C:K2_ActivateAbilityFromEvent:Function",
+      "ObjectName": "Function GA_Quest_TriggeredAbility_C:K2_ActivateAbilityFromEvent",
       "ObjectPath": "/Game/Athena/Items/Quests/QuestAbilities/Parents/GA_Quest_TriggeredAbility.1"
     },
-    "Children": [],
     "ChildProperties": [
       {
         "Type": "StructProperty",
         "Name": "EventData",
         "Flags": 1,
-        "ArrayDim": 1,
         "ElementSize": 184,
         "PropertyFlags": 134218134,
-        "RepIndex": 0,
-        "RepNotifyFunc": "None",
-        "BlueprintReplicationCondition": "COND_None",
         "Struct": {
-          "ObjectName": "GameplayEventData:Class",
-          "ObjectPath": 0
+          "ObjectName": "Class GameplayEventData",
+          "ObjectPath": "/Script/GameplayAbilities"
         }
       }
     ],
-    "FunctionFlags": 138938368,
-    "EventGraphFunction": null,
-    "EventGraphCallOffset": 0
+    "FunctionFlags": 138938368
   },
   {
     "Type": "Function",
     "Name": "K2_ShouldAbilityRespondToEvent",
     "Outer": "GA_S17_Quest_HitHeadshots_C",
     "SuperStruct": {
-      "ObjectName": "K2_ShouldAbilityRespondToEvent:Class",
-      "ObjectPath": 0
+      "ObjectName": "Class GameplayAbility:K2_ShouldAbilityRespondToEvent",
+      "ObjectPath": "/Script/GameplayAbilities"
     },
-    "Children": [],
     "ChildProperties": [
       {
         "Type": "StructProperty",
         "Name": "ActorInfo",
         "Flags": 1,
-        "ArrayDim": 1,
         "ElementSize": 80,
         "PropertyFlags": 549755814036,
-        "RepIndex": 0,
-        "RepNotifyFunc": "None",
-        "BlueprintReplicationCondition": "COND_None",
         "Struct": {
-          "ObjectName": "GameplayAbilityActorInfo:Class",
-          "ObjectPath": 0
+          "ObjectName": "Class GameplayAbilityActorInfo",
+          "ObjectPath": "/Script/GameplayAbilities"
         }
       },
       {
         "Type": "StructProperty",
         "Name": "Payload",
         "Flags": 1,
-        "ArrayDim": 1,
         "ElementSize": 184,
         "PropertyFlags": 148,
-        "RepIndex": 0,
-        "RepNotifyFunc": "None",
-        "BlueprintReplicationCondition": "COND_None",
         "Struct": {
-          "ObjectName": "GameplayEventData:Class",
-          "ObjectPath": 0
+          "ObjectName": "Class GameplayEventData",
+          "ObjectPath": "/Script/GameplayAbilities"
         }
       },
       {
         "Type": "BoolProperty",
         "Name": "ReturnValue",
         "Flags": 1,
-        "ArrayDim": 1,
         "ElementSize": 1,
         "PropertyFlags": 1408,
-        "RepIndex": 0,
-        "RepNotifyFunc": "None",
-        "BlueprintReplicationCondition": "COND_None",
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "K2Node_DynamicCast_AsFort_Player_Pawn",
-        "Flags": 1,
-        "ArrayDim": 1,
-        "ElementSize": 8,
-        "PropertyFlags": 0,
-        "RepIndex": 0,
-        "RepNotifyFunc": "None",
-        "BlueprintReplicationCondition": "COND_None",
-        "PropertyClass": {
-          "ObjectName": "FortPlayerPawn:Class",
-          "ObjectPath": 0
-        }
-      },
-      {
-        "Type": "BoolProperty",
-        "Name": "K2Node_DynamicCast_bSuccess",
-        "Flags": 1,
-        "ArrayDim": 1,
-        "ElementSize": 1,
-        "PropertyFlags": 0,
-        "RepIndex": 0,
-        "RepNotifyFunc": "None",
-        "BlueprintReplicationCondition": "COND_None",
         "FieldSize": 1,
         "ByteOffset": 0,
         "ByteMask": 1,
@@ -195,12 +121,51 @@
         "Type": "BoolProperty",
         "Name": "CallFunc_IsCriticalHit_ReturnValue",
         "Flags": 1,
-        "ArrayDim": 1,
         "ElementSize": 1,
-        "PropertyFlags": 0,
-        "RepIndex": 0,
-        "RepNotifyFunc": "None",
-        "BlueprintReplicationCondition": "COND_None",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsNPC_Pawn_Wildlife_Predator_Parent",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass NPC_Pawn_Wildlife_Predator_Parent_C",
+          "ObjectPath": "/Game/Athena/AI/Pawns/NPC/Parents/NPC_Pawn_Wildlife_Predator_Parent.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsFort_Player_Pawn",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class FortPlayerPawn",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_1",
+        "Flags": 1,
+        "ElementSize": 1,
         "FieldSize": 1,
         "ByteOffset": 0,
         "ByteMask": 1,
@@ -212,12 +177,7 @@
         "Type": "BoolProperty",
         "Name": "CallFunc_OnSameTeam_ReturnValue",
         "Flags": 1,
-        "ArrayDim": 1,
         "ElementSize": 1,
-        "PropertyFlags": 0,
-        "RepIndex": 0,
-        "RepNotifyFunc": "None",
-        "BlueprintReplicationCondition": "COND_None",
         "FieldSize": 1,
         "ByteOffset": 0,
         "ByteMask": 1,
@@ -229,12 +189,7 @@
         "Type": "BoolProperty",
         "Name": "CallFunc_Not_PreBool_ReturnValue",
         "Flags": 1,
-        "ArrayDim": 1,
         "ElementSize": 1,
-        "PropertyFlags": 0,
-        "RepIndex": 0,
-        "RepNotifyFunc": "None",
-        "BlueprintReplicationCondition": "COND_None",
         "FieldSize": 1,
         "ByteOffset": 0,
         "ByteMask": 1,
@@ -246,12 +201,7 @@
         "Type": "BoolProperty",
         "Name": "CallFunc_BooleanAND_ReturnValue",
         "Flags": 1,
-        "ArrayDim": 1,
         "ElementSize": 1,
-        "PropertyFlags": 0,
-        "RepIndex": 0,
-        "RepNotifyFunc": "None",
-        "BlueprintReplicationCondition": "COND_None",
         "FieldSize": 1,
         "ByteOffset": 0,
         "ByteMask": 1,
@@ -260,9 +210,7 @@
         "bIsNativeBool": true
       }
     ],
-    "FunctionFlags": 1279789056,
-    "EventGraphFunction": null,
-    "EventGraphCallOffset": 0
+    "FunctionFlags": 1279789056
   },
   {
     "Type": "BlueprintGeneratedClass",
@@ -270,25 +218,25 @@
     "Super": "GA_Quest_TriggeredAbility_C",
     "Properties": {
       "UberGraphFunction": {
-        "ObjectName": "GA_S17_Quest_HitHeadshots_C:ExecuteUbergraph_GA_S17_Quest_HitHeadshots:Function",
+        "ObjectName": "Function GA_S17_Quest_HitHeadshots_C:ExecuteUbergraph_GA_S17_Quest_HitHeadshots",
         "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_Headshots/GA_S17_Quest_HitHeadshots.0"
       }
     },
     "SuperStruct": {
-      "ObjectName": "GA_Quest_TriggeredAbility_C:BlueprintGeneratedClass",
+      "ObjectName": "BlueprintGeneratedClass GA_Quest_TriggeredAbility_C",
       "ObjectPath": "/Game/Athena/Items/Quests/QuestAbilities/Parents/GA_Quest_TriggeredAbility.2"
     },
     "Children": [
       {
-        "ObjectName": "GA_S17_Quest_HitHeadshots_C:K2_ShouldAbilityRespondToEvent:Function",
+        "ObjectName": "Function GA_S17_Quest_HitHeadshots_C:K2_ShouldAbilityRespondToEvent",
         "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_Headshots/GA_S17_Quest_HitHeadshots.2"
       },
       {
-        "ObjectName": "GA_S17_Quest_HitHeadshots_C:K2_ActivateAbilityFromEvent:Function",
+        "ObjectName": "Function GA_S17_Quest_HitHeadshots_C:K2_ActivateAbilityFromEvent",
         "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_Headshots/GA_S17_Quest_HitHeadshots.1"
       },
       {
-        "ObjectName": "GA_S17_Quest_HitHeadshots_C:ExecuteUbergraph_GA_S17_Quest_HitHeadshots:Function",
+        "ObjectName": "Function GA_S17_Quest_HitHeadshots_C:ExecuteUbergraph_GA_S17_Quest_HitHeadshots",
         "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_Headshots/GA_S17_Quest_HitHeadshots.0"
       }
     ],
@@ -297,42 +245,30 @@
         "Type": "StructProperty",
         "Name": "UberGraphFrame",
         "Flags": 2097153,
-        "ArrayDim": 1,
         "ElementSize": 16,
         "PropertyFlags": 2105344,
-        "RepIndex": 0,
-        "RepNotifyFunc": "None",
-        "BlueprintReplicationCondition": "COND_None",
         "Struct": {
-          "ObjectName": "PointerToUberGraphFrame:Class",
-          "ObjectPath": 0
+          "ObjectName": "Class PointerToUberGraphFrame",
+          "ObjectPath": "/Script/Engine"
         }
       },
       {
         "Type": "StructProperty",
         "Name": "T_Headshot",
         "Flags": 2097153,
-        "ArrayDim": 1,
         "ElementSize": 32,
         "PropertyFlags": 65541,
-        "RepIndex": 0,
-        "RepNotifyFunc": "None",
-        "BlueprintReplicationCondition": "COND_None",
         "Struct": {
-          "ObjectName": "GameplayTagContainer:Class",
-          "ObjectPath": 0
+          "ObjectName": "Class GameplayTagContainer",
+          "ObjectPath": "/Script/GameplayTags"
         }
       },
       {
         "Type": "BoolProperty",
         "Name": "Blocked",
         "Flags": 2097153,
-        "ArrayDim": 1,
         "ElementSize": 1,
         "PropertyFlags": 65541,
-        "RepIndex": 0,
-        "RepNotifyFunc": "None",
-        "BlueprintReplicationCondition": "COND_None",
         "FieldSize": 1,
         "ByteOffset": 0,
         "ByteMask": 1,
@@ -343,29 +279,29 @@
     ],
     "FuncMap": {
       "ExecuteUbergraph_GA_S17_Quest_HitHeadshots": {
-        "ObjectName": "GA_S17_Quest_HitHeadshots_C:ExecuteUbergraph_GA_S17_Quest_HitHeadshots:Function",
+        "ObjectName": "Function GA_S17_Quest_HitHeadshots_C:ExecuteUbergraph_GA_S17_Quest_HitHeadshots",
         "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_Headshots/GA_S17_Quest_HitHeadshots.0"
       },
       "K2_ActivateAbilityFromEvent": {
-        "ObjectName": "GA_S17_Quest_HitHeadshots_C:K2_ActivateAbilityFromEvent:Function",
+        "ObjectName": "Function GA_S17_Quest_HitHeadshots_C:K2_ActivateAbilityFromEvent",
         "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_Headshots/GA_S17_Quest_HitHeadshots.1"
       },
       "K2_ShouldAbilityRespondToEvent": {
-        "ObjectName": "GA_S17_Quest_HitHeadshots_C:K2_ShouldAbilityRespondToEvent:Function",
+        "ObjectName": "Function GA_S17_Quest_HitHeadshots_C:K2_ShouldAbilityRespondToEvent",
         "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_Headshots/GA_S17_Quest_HitHeadshots.2"
       }
     },
     "ClassFlags": 264208,
     "ClassWithin": {
-      "ObjectName": "Object:Class",
-      "ObjectPath": 0
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
     },
     "ClassConfigName": "Engine",
     "ClassGeneratedBy": null,
     "Interfaces": [],
     "bCooked": true,
     "ClassDefaultObject": {
-      "ObjectName": "Default__GA_S17_Quest_HitHeadshots_C:GA_S17_Quest_HitHeadshots_C",
+      "ObjectName": "GA_S17_Quest_HitHeadshots_C Default__GA_S17_Quest_HitHeadshots_C",
       "ObjectPath": "/BattlepassS17/Items/QuestAbilities/Quest_Headshots/GA_S17_Quest_HitHeadshots.4"
     }
   },

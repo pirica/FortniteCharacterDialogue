@@ -4,28 +4,7 @@
     "Name": "NPCLibrary_Conversation_Maven",
     "Properties": {
       "CompilerVersion": 2,
-      "ReachableNodeMap": {
-        "065474C24AE5D8B8BD537DBA0A6D9968": {
-          "ObjectName": "NPCLibrary_Conversation_Maven:ConversationEntryPointNode_7:ConversationEntryPointNode",
-          "ObjectPath": "/NPCLibrary/NPCs/Maven/Maven/NPCLibrary_Conversation_Maven.1"
-        },
-        "471B8D644F2B809A79C9308EF8BD3FF5": {
-          "ObjectName": "NPCLibrary_Conversation_Maven:Speech_C_4:Speech_C",
-          "ObjectPath": "/NPCLibrary/NPCs/Maven/Maven/NPCLibrary_Conversation_Maven.8"
-        },
-        "EF051B404CB98ABD26C2159F29B54046": {
-          "ObjectName": "NPCLibrary_Conversation_Maven:ConversationLinkNode_0:ConversationLinkNode",
-          "ObjectPath": "/NPCLibrary/NPCs/Maven/Maven/NPCLibrary_Conversation_Maven.2"
-        },
-        "B11FB1B747786C6D3F779BBEF2F948FF": {
-          "ObjectName": "NPCLibrary_Conversation_Maven:ConversationLinkNode_1:ConversationLinkNode",
-          "ObjectPath": "/NPCLibrary/NPCs/Maven/Maven/NPCLibrary_Conversation_Maven.3"
-        },
-        "37D5020849355DA821BC7388D028F615": {
-          "ObjectName": "NPCLibrary_Conversation_Maven:ConversationLinkNode_2:ConversationLinkNode",
-          "ObjectPath": "/NPCLibrary/NPCs/Maven/Maven/NPCLibrary_Conversation_Maven.4"
-        }
-      },
+      "ReachableNodeMap": {},
       "EntryTags": [
         {
           "EntryTag": {
@@ -37,6 +16,7 @@
         }
       ],
       "ExitTags": [
+        "Conversation.Entry.Season17.Week14",
         "Conversation.Entry.BasicServices",
         "Conversation.Entry.NPCLibrary.Quests",
         "Conversation.Entry.Season17.Week2"
@@ -44,6 +24,7 @@
       "InternalNodeIds": [
         "065474C2-4AE5D8B8-BD537DBA-0A6D9968",
         "471B8D64-4F2B809A-79C9308E-F8BD3FF5",
+        "1742F296-4FA31415-4327D9A8-6D45DCF3",
         "EF051B40-4CB98ABD-26C2159F-29B54046",
         "B11FB1B7-47786C6D-3F779BBE-F2F948FF",
         "37D50208-49355DA8-21BC7388-D028F615"
@@ -130,6 +111,17 @@
     }
   },
   {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_5",
+    "Outer": "NPCLibrary_Conversation_Maven",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.Season17.Week14"
+      },
+      "Compiled_NodeGUID": "1742F296-4FA31415-4327D9A8-6D45DCF3"
+    }
+  },
+  {
     "Type": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch",
     "Name": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0",
     "Outer": "Speech_C_4",
@@ -182,8 +174,8 @@
                   "TagName": "Conversation.Participant.Player"
                 },
                 "Requirement": {
-                  "ObjectName": "Speech_C_4:FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0:FortControllerRequirement_CheckTimeSinceLastPlayedMatch",
-                  "ObjectPath": "/NPCLibrary/NPCs/Maven/Maven/NPCLibrary_Conversation_Maven.5"
+                  "ObjectName": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch NPCLibrary_Conversation_Maven:Speech_C_4.FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/Maven/Maven/NPCLibrary_Conversation_Maven.6"
                 }
               }
             ],
@@ -191,7 +183,7 @@
               "Value": 1.0,
               "Curve": {
                 "CurveTable": {
-                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
                   "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
                 },
                 "RowName": "Tandem.Speech.Priority.WhileSincePlayed"
@@ -209,7 +201,8 @@
               "RegistryType": {
                 "Name": null
               }
-            }
+            },
+            "MetadataParameters": []
           },
           {
             "Message": {
@@ -224,8 +217,8 @@
                   "TagName": "Conversation.Participant.Player"
                 },
                 "Requirement": {
-                  "ObjectName": "Speech_C_4:FortControllerRequirement_IsFirstEverConversationWithNPC_0:FortControllerRequirement_IsFirstEverConversationWithNPC",
-                  "ObjectPath": "/NPCLibrary/NPCs/Maven/Maven/NPCLibrary_Conversation_Maven.7"
+                  "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC NPCLibrary_Conversation_Maven:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/Maven/Maven/NPCLibrary_Conversation_Maven.8"
                 }
               }
             ],
@@ -233,7 +226,7 @@
               "Value": 1.0,
               "Curve": {
                 "CurveTable": {
-                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
                   "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
                 },
                 "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
@@ -251,7 +244,8 @@
               "RegistryType": {
                 "Name": null
               }
-            }
+            },
+            "MetadataParameters": []
           },
           {
             "Message": {
@@ -266,8 +260,8 @@
                   "TagName": "Conversation.Participant.Player"
                 },
                 "Requirement": {
-                  "ObjectName": "Speech_C_4:FortControllerRequirement_HasBars_0:FortControllerRequirement_HasBars",
-                  "ObjectPath": "/NPCLibrary/NPCs/Maven/Maven/NPCLibrary_Conversation_Maven.6"
+                  "ObjectName": "FortControllerRequirement_HasBars NPCLibrary_Conversation_Maven:Speech_C_4.FortControllerRequirement_HasBars_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/Maven/Maven/NPCLibrary_Conversation_Maven.7"
                 }
               }
             ],
@@ -275,7 +269,7 @@
               "Value": 1.0,
               "Curve": {
                 "CurveTable": {
-                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
                   "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
                 },
                 "RowName": "Tandem.Speech.Priority.HighTotalBars"
@@ -293,7 +287,8 @@
               "RegistryType": {
                 "Name": null
               }
-            }
+            },
+            "MetadataParameters": []
           }
         ],
         "DefaultMessage": {
@@ -305,7 +300,8 @@
       "OutputConnections": [
         "37D50208-49355DA8-21BC7388-D028F615",
         "B11FB1B7-47786C6D-3F779BBE-F2F948FF",
-        "EF051B40-4CB98ABD-26C2159F-29B54046"
+        "EF051B40-4CB98ABD-26C2159F-29B54046",
+        "1742F296-4FA31415-4327D9A8-6D45DCF3"
       ],
       "NodeName": "",
       "Compiled_NodeGUID": "471B8D64-4F2B809A-79C9308E-F8BD3FF5"

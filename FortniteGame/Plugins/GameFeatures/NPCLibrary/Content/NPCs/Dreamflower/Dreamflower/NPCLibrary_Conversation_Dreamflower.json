@@ -4,32 +4,7 @@
     "Name": "NPCLibrary_Conversation_Dreamflower",
     "Properties": {
       "CompilerVersion": 2,
-      "ReachableNodeMap": {
-        "1C4DAACA4716B08AC3C67590D69AB813": {
-          "ObjectName": "NPCLibrary_Conversation_Dreamflower:ConversationEntryPointNode_7:ConversationEntryPointNode",
-          "ObjectPath": "/NPCLibrary/NPCs/Dreamflower/Dreamflower/NPCLibrary_Conversation_Dreamflower.1"
-        },
-        "45B0122440F3F0A9A9AAC88F20866501": {
-          "ObjectName": "NPCLibrary_Conversation_Dreamflower:Speech_C_4:Speech_C",
-          "ObjectPath": "/NPCLibrary/NPCs/Dreamflower/Dreamflower/NPCLibrary_Conversation_Dreamflower.9"
-        },
-        "533217AB4ED01E42DC66DF819375D0F9": {
-          "ObjectName": "NPCLibrary_Conversation_Dreamflower:ConversationLinkNode_3:ConversationLinkNode",
-          "ObjectPath": "/NPCLibrary/NPCs/Dreamflower/Dreamflower/NPCLibrary_Conversation_Dreamflower.5"
-        },
-        "50B71D4C44CA11F7FC543AB752AF12CF": {
-          "ObjectName": "NPCLibrary_Conversation_Dreamflower:ConversationLinkNode_0:ConversationLinkNode",
-          "ObjectPath": "/NPCLibrary/NPCs/Dreamflower/Dreamflower/NPCLibrary_Conversation_Dreamflower.2"
-        },
-        "8DEFAB004ECACF6998ACE2B68CDC47CA": {
-          "ObjectName": "NPCLibrary_Conversation_Dreamflower:ConversationLinkNode_1:ConversationLinkNode",
-          "ObjectPath": "/NPCLibrary/NPCs/Dreamflower/Dreamflower/NPCLibrary_Conversation_Dreamflower.3"
-        },
-        "4F3F186F41D1F7C52E9FC2BE7441184C": {
-          "ObjectName": "NPCLibrary_Conversation_Dreamflower:ConversationLinkNode_2:ConversationLinkNode",
-          "ObjectPath": "/NPCLibrary/NPCs/Dreamflower/Dreamflower/NPCLibrary_Conversation_Dreamflower.4"
-        }
-      },
+      "ReachableNodeMap": {},
       "EntryTags": [
         {
           "EntryTag": {
@@ -41,6 +16,8 @@
         }
       ],
       "ExitTags": [
+        "Conversation.Entry.Season17.Week14",
+        "Conversation.Entry.Season17.Week13",
         "Conversation.Entry.Season17.Week3",
         "Conversation.Entry.BasicServices",
         "Conversation.Entry.NPCLibrary.Quests",
@@ -49,6 +26,8 @@
       "InternalNodeIds": [
         "1C4DAACA-4716B08A-C3C67590-D69AB813",
         "45B01224-40F3F0A9-A9AAC88F-20866501",
+        "8AA99DB3-457C82D3-9B2955AE-30B2676E",
+        "EDFB823B-4CFA6B65-FD919EB4-21E2FF34",
         "533217AB-4ED01E42-DC66DF81-9375D0F9",
         "50B71D4C-44CA11F7-FC543AB7-52AF12CF",
         "8DEFAB00-4ECACF69-98ACE2B6-8CDC47CA",
@@ -147,6 +126,28 @@
     }
   },
   {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_4",
+    "Outer": "NPCLibrary_Conversation_Dreamflower",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.Season17.Week13"
+      },
+      "Compiled_NodeGUID": "EDFB823B-4CFA6B65-FD919EB4-21E2FF34"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_5",
+    "Outer": "NPCLibrary_Conversation_Dreamflower",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.Season17.Week14"
+      },
+      "Compiled_NodeGUID": "8AA99DB3-457C82D3-9B2955AE-30B2676E"
+    }
+  },
+  {
     "Type": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch",
     "Name": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0",
     "Outer": "Speech_C_4",
@@ -199,8 +200,8 @@
                   "TagName": "Conversation.Participant.Player"
                 },
                 "Requirement": {
-                  "ObjectName": "Speech_C_4:FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0:FortControllerRequirement_CheckTimeSinceLastPlayedMatch",
-                  "ObjectPath": "/NPCLibrary/NPCs/Dreamflower/Dreamflower/NPCLibrary_Conversation_Dreamflower.6"
+                  "ObjectName": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch NPCLibrary_Conversation_Dreamflower:Speech_C_4.FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/Dreamflower/Dreamflower/NPCLibrary_Conversation_Dreamflower.8"
                 }
               }
             ],
@@ -208,7 +209,7 @@
               "Value": 1.0,
               "Curve": {
                 "CurveTable": {
-                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
                   "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
                 },
                 "RowName": "Tandem.Speech.Priority.WhileSincePlayed"
@@ -226,7 +227,8 @@
               "RegistryType": {
                 "Name": null
               }
-            }
+            },
+            "MetadataParameters": []
           },
           {
             "Message": {
@@ -241,8 +243,8 @@
                   "TagName": "Conversation.Participant.Player"
                 },
                 "Requirement": {
-                  "ObjectName": "Speech_C_4:FortControllerRequirement_IsFirstEverConversationWithNPC_0:FortControllerRequirement_IsFirstEverConversationWithNPC",
-                  "ObjectPath": "/NPCLibrary/NPCs/Dreamflower/Dreamflower/NPCLibrary_Conversation_Dreamflower.8"
+                  "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC NPCLibrary_Conversation_Dreamflower:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/Dreamflower/Dreamflower/NPCLibrary_Conversation_Dreamflower.10"
                 }
               }
             ],
@@ -250,7 +252,7 @@
               "Value": 1.0,
               "Curve": {
                 "CurveTable": {
-                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
                   "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
                 },
                 "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
@@ -268,7 +270,8 @@
               "RegistryType": {
                 "Name": null
               }
-            }
+            },
+            "MetadataParameters": []
           },
           {
             "Message": {
@@ -283,8 +286,8 @@
                   "TagName": "Conversation.Participant.Player"
                 },
                 "Requirement": {
-                  "ObjectName": "Speech_C_4:FortControllerRequirement_HasBars_0:FortControllerRequirement_HasBars",
-                  "ObjectPath": "/NPCLibrary/NPCs/Dreamflower/Dreamflower/NPCLibrary_Conversation_Dreamflower.7"
+                  "ObjectName": "FortControllerRequirement_HasBars NPCLibrary_Conversation_Dreamflower:Speech_C_4.FortControllerRequirement_HasBars_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/Dreamflower/Dreamflower/NPCLibrary_Conversation_Dreamflower.9"
                 }
               }
             ],
@@ -292,7 +295,7 @@
               "Value": 1.0,
               "Curve": {
                 "CurveTable": {
-                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
                   "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
                 },
                 "RowName": "Tandem.Speech.Priority.HighTotalBars"
@@ -310,7 +313,8 @@
               "RegistryType": {
                 "Name": null
               }
-            }
+            },
+            "MetadataParameters": []
           }
         ],
         "DefaultMessage": {
@@ -323,7 +327,9 @@
         "4F3F186F-41D1F7C5-2E9FC2BE-7441184C",
         "8DEFAB00-4ECACF69-98ACE2B6-8CDC47CA",
         "50B71D4C-44CA11F7-FC543AB7-52AF12CF",
-        "533217AB-4ED01E42-DC66DF81-9375D0F9"
+        "533217AB-4ED01E42-DC66DF81-9375D0F9",
+        "EDFB823B-4CFA6B65-FD919EB4-21E2FF34",
+        "8AA99DB3-457C82D3-9B2955AE-30B2676E"
       ],
       "NodeName": "",
       "Compiled_NodeGUID": "45B01224-40F3F0A9-A9AAC88F-20866501"

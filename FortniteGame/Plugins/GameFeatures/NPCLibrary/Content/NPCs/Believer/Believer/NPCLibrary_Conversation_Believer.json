@@ -4,36 +4,7 @@
     "Name": "NPCLibrary_Conversation_Believer",
     "Properties": {
       "CompilerVersion": 2,
-      "ReachableNodeMap": {
-        "48184FA44D0DAABDB70432A8D681A38A": {
-          "ObjectName": "NPCLibrary_Conversation_Believer:ConversationEntryPointNode_7:ConversationEntryPointNode",
-          "ObjectPath": "/NPCLibrary/NPCs/Believer/Believer/NPCLibrary_Conversation_Believer.1"
-        },
-        "F8FAA94043CE1427FD0C84BEDBC8FA49": {
-          "ObjectName": "NPCLibrary_Conversation_Believer:Speech_C_4:Speech_C",
-          "ObjectPath": "/NPCLibrary/NPCs/Believer/Believer/NPCLibrary_Conversation_Believer.11"
-        },
-        "0F5AD815494DA846E392F590CA8B6455": {
-          "ObjectName": "NPCLibrary_Conversation_Believer:ConversationLinkNode_4:ConversationLinkNode",
-          "ObjectPath": "/NPCLibrary/NPCs/Believer/Believer/NPCLibrary_Conversation_Believer.6"
-        },
-        "730B24DF4A78BA6C666C9AB862E09DB2": {
-          "ObjectName": "NPCLibrary_Conversation_Believer:ConversationLinkNode_3:ConversationLinkNode",
-          "ObjectPath": "/NPCLibrary/NPCs/Believer/Believer/NPCLibrary_Conversation_Believer.5"
-        },
-        "BB1834D14441D560EEA8BE893179B19C": {
-          "ObjectName": "NPCLibrary_Conversation_Believer:ConversationLinkNode_0:ConversationLinkNode",
-          "ObjectPath": "/NPCLibrary/NPCs/Believer/Believer/NPCLibrary_Conversation_Believer.2"
-        },
-        "9354E6F345664A47AE8C17970DB93F83": {
-          "ObjectName": "NPCLibrary_Conversation_Believer:ConversationLinkNode_1:ConversationLinkNode",
-          "ObjectPath": "/NPCLibrary/NPCs/Believer/Believer/NPCLibrary_Conversation_Believer.3"
-        },
-        "93FDF1FB41FE50052045B48A5856F556": {
-          "ObjectName": "NPCLibrary_Conversation_Believer:ConversationLinkNode_2:ConversationLinkNode",
-          "ObjectPath": "/NPCLibrary/NPCs/Believer/Believer/NPCLibrary_Conversation_Believer.4"
-        }
-      },
+      "ReachableNodeMap": {},
       "EntryTags": [
         {
           "EntryTag": {
@@ -45,6 +16,8 @@
         }
       ],
       "ExitTags": [
+        "Conversation.Entry.Season17.Week14",
+        "Conversation.Entry.Season17.Week13",
         "Conversation.Entry.Season17.Week3",
         "Conversation.Entry.Season17.Week5",
         "Conversation.Entry.BasicServices",
@@ -54,6 +27,8 @@
       "InternalNodeIds": [
         "48184FA4-4D0DAABD-B70432A8-D681A38A",
         "F8FAA940-43CE1427-FD0C84BE-DBC8FA49",
+        "BF0E0A8A-4F7FE165-D9AC1197-FD37C0B6",
+        "ABD49E78-4ECE1CA0-7D35A587-8CF980F7",
         "0F5AD815-494DA846-E392F590-CA8B6455",
         "730B24DF-4A78BA6C-666C9AB8-62E09DB2",
         "BB1834D1-4441D560-EEA8BE89-3179B19C",
@@ -164,6 +139,28 @@
     }
   },
   {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_5",
+    "Outer": "NPCLibrary_Conversation_Believer",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.Season17.Week13"
+      },
+      "Compiled_NodeGUID": "ABD49E78-4ECE1CA0-7D35A587-8CF980F7"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_6",
+    "Outer": "NPCLibrary_Conversation_Believer",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.Season17.Week14"
+      },
+      "Compiled_NodeGUID": "BF0E0A8A-4F7FE165-D9AC1197-FD37C0B6"
+    }
+  },
+  {
     "Type": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch",
     "Name": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0",
     "Outer": "Speech_C_4",
@@ -229,8 +226,8 @@
                   "TagName": "Conversation.Participant.Player"
                 },
                 "Requirement": {
-                  "ObjectName": "Speech_C_4:FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0:FortControllerRequirement_CheckTimeSinceLastPlayedMatch",
-                  "ObjectPath": "/NPCLibrary/NPCs/Believer/Believer/NPCLibrary_Conversation_Believer.7"
+                  "ObjectName": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch NPCLibrary_Conversation_Believer:Speech_C_4.FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/Believer/Believer/NPCLibrary_Conversation_Believer.9"
                 }
               }
             ],
@@ -238,7 +235,7 @@
               "Value": 1.0,
               "Curve": {
                 "CurveTable": {
-                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
                   "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
                 },
                 "RowName": "Tandem.Speech.Priority.WhileSincePlayed"
@@ -256,7 +253,8 @@
               "RegistryType": {
                 "Name": null
               }
-            }
+            },
+            "MetadataParameters": []
           },
           {
             "Message": {
@@ -271,8 +269,8 @@
                   "TagName": "Conversation.Participant.Player"
                 },
                 "Requirement": {
-                  "ObjectName": "Speech_C_4:FortControllerRequirement_IsFirstEverConversationWithNPC_0:FortControllerRequirement_IsFirstEverConversationWithNPC",
-                  "ObjectPath": "/NPCLibrary/NPCs/Believer/Believer/NPCLibrary_Conversation_Believer.10"
+                  "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC NPCLibrary_Conversation_Believer:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/Believer/Believer/NPCLibrary_Conversation_Believer.12"
                 }
               }
             ],
@@ -280,7 +278,7 @@
               "Value": 1.0,
               "Curve": {
                 "CurveTable": {
-                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
                   "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
                 },
                 "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
@@ -298,7 +296,8 @@
               "RegistryType": {
                 "Name": null
               }
-            }
+            },
+            "MetadataParameters": []
           },
           {
             "Message": {
@@ -313,8 +312,8 @@
                   "TagName": "Conversation.Participant.Player"
                 },
                 "Requirement": {
-                  "ObjectName": "Speech_C_4:FortControllerRequirement_HasBars_0:FortControllerRequirement_HasBars",
-                  "ObjectPath": "/NPCLibrary/NPCs/Believer/Believer/NPCLibrary_Conversation_Believer.8"
+                  "ObjectName": "FortControllerRequirement_HasBars NPCLibrary_Conversation_Believer:Speech_C_4.FortControllerRequirement_HasBars_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/Believer/Believer/NPCLibrary_Conversation_Believer.10"
                 }
               }
             ],
@@ -322,7 +321,7 @@
               "Value": 1.0,
               "Curve": {
                 "CurveTable": {
-                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
                   "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
                 },
                 "RowName": "Tandem.Speech.Priority.HighTotalBars"
@@ -340,7 +339,8 @@
               "RegistryType": {
                 "Name": null
               }
-            }
+            },
+            "MetadataParameters": []
           },
           {
             "Message": {
@@ -355,8 +355,8 @@
                   "TagName": "Conversation.Participant.Player"
                 },
                 "Requirement": {
-                  "ObjectName": "Speech_C_4:FortControllerRequirement_HasCID_0:FortControllerRequirement_HasCID",
-                  "ObjectPath": "/NPCLibrary/NPCs/Believer/Believer/NPCLibrary_Conversation_Believer.9"
+                  "ObjectName": "FortControllerRequirement_HasCID NPCLibrary_Conversation_Believer:Speech_C_4.FortControllerRequirement_HasCID_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/Believer/Believer/NPCLibrary_Conversation_Believer.11"
                 }
               }
             ],
@@ -364,7 +364,7 @@
               "Value": 1.0,
               "Curve": {
                 "CurveTable": {
-                  "ObjectName": "NPC_Speech_Priorities:CurveTable",
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
                   "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
                 },
                 "RowName": "Tandem.Speech.Priority.OutfitReaction"
@@ -382,7 +382,8 @@
               "RegistryType": {
                 "Name": null
               }
-            }
+            },
+            "MetadataParameters": []
           }
         ],
         "DefaultMessage": {
@@ -396,7 +397,9 @@
         "9354E6F3-45664A47-AE8C1797-0DB93F83",
         "BB1834D1-4441D560-EEA8BE89-3179B19C",
         "730B24DF-4A78BA6C-666C9AB8-62E09DB2",
-        "0F5AD815-494DA846-E392F590-CA8B6455"
+        "0F5AD815-494DA846-E392F590-CA8B6455",
+        "ABD49E78-4ECE1CA0-7D35A587-8CF980F7",
+        "BF0E0A8A-4F7FE165-D9AC1197-FD37C0B6"
       ],
       "NodeName": "",
       "Compiled_NodeGUID": "F8FAA940-43CE1427-FD0C84BE-DBC8FA49"
