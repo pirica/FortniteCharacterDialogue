@@ -1,0 +1,171 @@
+[
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_1",
+    "Outer": "FortQueryTest_OnFlatSurface_0",
+    "Properties": {
+      "ParamName": "OnFlatSurface.ScoringFactor"
+    }
+  },
+  {
+    "Type": "EnvQuery",
+    "Name": "EQS_AwfulDuckReturnPlacement",
+    "Properties": {
+      "QueryName": "EQS_AwfulDuckReturnPlacement",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption EQS_AwfulDuckReturnPlacement:EnvQueryOption_1",
+          "ObjectPath": "/AwfulDuck/Items/AwfulDuck/EQS_AwfulDuckReturnPlacement.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_SimpleGrid",
+    "Name": "EnvQueryGenerator_SimpleGrid_1",
+    "Outer": "EQS_AwfulDuckReturnPlacement",
+    "Properties": {
+      "GridSize": {
+        "DefaultValue": 25000.0
+      },
+      "SpaceBetween": {
+        "DefaultValue": 4000.0
+      },
+      "GenerateAround": {
+        "ObjectName": "BlueprintGeneratedClass EQSC_AwfulDuck_Return_C",
+        "ObjectPath": "/AwfulDuck/Items/AwfulDuck/EQSC_AwfulDuck_Return.1"
+      },
+      "ProjectionData": {
+        "VersionNum": 1,
+        "NavigationFilter": {
+          "ObjectName": "BlueprintGeneratedClass NavFilter_NPC_ExcludeAllWater_C",
+          "ObjectPath": "/Game/Athena/AI/NavFilters/NavFilter_NPC_ExcludeAllWater.0"
+        },
+        "ProjectDown": 20000.0,
+        "ProjectUp": 0.0,
+        "TraceChannel": "ETraceTypeQuery::TraceTypeQuery7",
+        "SerializedChannel": "ECollisionChannel::ECC_GameTraceChannel6"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_1",
+    "Outer": "EQS_AwfulDuckReturnPlacement",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_SimpleGrid EQS_AwfulDuckReturnPlacement:EnvQueryGenerator_SimpleGrid_1",
+        "ObjectPath": "/AwfulDuck/Items/AwfulDuck/EQS_AwfulDuckReturnPlacement.2"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_Distance EQS_AwfulDuckReturnPlacement:EnvQueryTest_Distance_1",
+          "ObjectPath": "/AwfulDuck/Items/AwfulDuck/EQS_AwfulDuckReturnPlacement.5"
+        },
+        {
+          "ObjectName": "FortQueryTest_OnFlatSurface EQS_AwfulDuckReturnPlacement:FortQueryTest_OnFlatSurface_0",
+          "ObjectPath": "/AwfulDuck/Items/AwfulDuck/EQS_AwfulDuckReturnPlacement.8"
+        },
+        {
+          "ObjectName": "FortQueryTest_InsideAthenaSafeZone EQS_AwfulDuckReturnPlacement:FortQueryTest_InsideAthenaSafeZone_0",
+          "ObjectPath": "/AwfulDuck/Items/AwfulDuck/EQS_AwfulDuckReturnPlacement.7"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Distance EQS_AwfulDuckReturnPlacement:EnvQueryTest_Distance_0",
+          "ObjectPath": "/AwfulDuck/Items/AwfulDuck/EQS_AwfulDuckReturnPlacement.4"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Volume EQS_AwfulDuckReturnPlacement:EnvQueryTest_Volume_0",
+          "ObjectPath": "/AwfulDuck/Items/AwfulDuck/EQS_AwfulDuckReturnPlacement.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_0",
+    "Outer": "EQS_AwfulDuckReturnPlacement",
+    "Properties": {
+      "TestMode": "EEnvTestDistance::Distance2D",
+      "DistanceTo": {
+        "ObjectName": "BlueprintGeneratedClass Context_WorldOrigin_C",
+        "ObjectPath": "/Game/Missions/Secondary/Events/SatelliteSalvage/Context_WorldOrigin.1"
+      },
+      "TestOrder": 3,
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "FloatValueMax": {
+        "DefaultValue": 148000.0
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_1",
+    "Outer": "EQS_AwfulDuckReturnPlacement",
+    "Properties": {
+      "TestMode": "EEnvTestDistance::Distance2D",
+      "DistanceTo": {
+        "ObjectName": "BlueprintGeneratedClass EQSC_AwfulDuck_Return_C",
+        "ObjectPath": "/AwfulDuck/Items/AwfulDuck/EQSC_AwfulDuck_Return.1"
+      },
+      "FloatValueMin": {
+        "DefaultValue": 4000.0
+      },
+      "FloatValueMax": {
+        "DefaultValue": 30000.0
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Volume",
+    "Name": "EnvQueryTest_Volume_0",
+    "Outer": "EQS_AwfulDuckReturnPlacement",
+    "Properties": {
+      "VolumeClass": {
+        "ObjectName": "Class KillZVolume",
+        "ObjectPath": "/Script/Engine"
+      },
+      "TestOrder": 4,
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "BoolValue": {
+        "DefaultValue": false
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "FortQueryTest_InsideAthenaSafeZone",
+    "Name": "FortQueryTest_InsideAthenaSafeZone_0",
+    "Outer": "EQS_AwfulDuckReturnPlacement",
+    "Properties": {
+      "bUseCurrentSafeZoneIndicatorRadius": true,
+      "TestOrder": 2,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "ScoringFactor": {
+        "DefaultValue": 3.0
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "FortQueryTest_OnFlatSurface",
+    "Name": "FortQueryTest_OnFlatSurface_0",
+    "Outer": "EQS_AwfulDuckReturnPlacement",
+    "Properties": {
+      "TestOrder": 1,
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "ScoringFactor": {
+        "DefaultValue": 0.5,
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams EQS_AwfulDuckReturnPlacement:FortQueryTest_OnFlatSurface_0.AIDataProvider_QueryParams_1",
+          "ObjectPath": "/AwfulDuck/Items/AwfulDuck/EQS_AwfulDuckReturnPlacement.0"
+        },
+        "DataField": "FloatValue"
+      },
+      "VerNum": 1
+    }
+  }
+]

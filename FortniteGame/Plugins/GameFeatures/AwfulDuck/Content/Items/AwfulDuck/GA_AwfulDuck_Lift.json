@@ -1,0 +1,158 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_GA_AwfulDuck_Lift",
+    "Outer": "GA_AwfulDuck_Lift_C",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_bWasCancelled",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 32769
+  },
+  {
+    "Type": "Function",
+    "Name": "K2_OnEndAbility",
+    "Outer": "GA_AwfulDuck_Lift_C",
+    "SuperStruct": {
+      "ObjectName": "Class GameplayAbility:K2_OnEndAbility",
+      "ObjectPath": "/Script/GameplayAbilities"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bWasCancelled",
+        "Flags": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 148,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 134744064
+  },
+  {
+    "Type": "Function",
+    "Name": "K2_ActivateAbility",
+    "Outer": "GA_AwfulDuck_Lift_C",
+    "SuperStruct": {
+      "ObjectName": "Class GameplayAbility:K2_ActivateAbility",
+      "ObjectPath": "/Script/GameplayAbilities"
+    },
+    "FunctionFlags": 134744064
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GA_AwfulDuck_Lift_C",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function GA_AwfulDuck_Lift_C:ExecuteUbergraph_GA_AwfulDuck_Lift",
+        "ObjectPath": "/AwfulDuck/Items/AwfulDuck/GA_AwfulDuck_Lift.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class FortGameplayAbility",
+      "ObjectPath": "/Script/FortniteGame"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function GA_AwfulDuck_Lift_C:K2_ActivateAbility",
+        "ObjectPath": "/AwfulDuck/Items/AwfulDuck/GA_AwfulDuck_Lift.2"
+      },
+      {
+        "ObjectName": "Function GA_AwfulDuck_Lift_C:K2_OnEndAbility",
+        "ObjectPath": "/AwfulDuck/Items/AwfulDuck/GA_AwfulDuck_Lift.1"
+      },
+      {
+        "ObjectName": "Function GA_AwfulDuck_Lift_C:ExecuteUbergraph_GA_AwfulDuck_Lift",
+        "ObjectPath": "/AwfulDuck/Items/AwfulDuck/GA_AwfulDuck_Lift.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": 2097153,
+        "ElementSize": 16,
+        "PropertyFlags": 2105344,
+        "Struct": {
+          "ObjectName": "Class PointerToUberGraphFrame",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_GA_AwfulDuck_Lift": {
+        "ObjectName": "Function GA_AwfulDuck_Lift_C:ExecuteUbergraph_GA_AwfulDuck_Lift",
+        "ObjectPath": "/AwfulDuck/Items/AwfulDuck/GA_AwfulDuck_Lift.0"
+      },
+      "K2_OnEndAbility": {
+        "ObjectName": "Function GA_AwfulDuck_Lift_C:K2_OnEndAbility",
+        "ObjectPath": "/AwfulDuck/Items/AwfulDuck/GA_AwfulDuck_Lift.1"
+      },
+      "K2_ActivateAbility": {
+        "ObjectName": "Function GA_AwfulDuck_Lift_C:K2_ActivateAbility",
+        "ObjectPath": "/AwfulDuck/Items/AwfulDuck/GA_AwfulDuck_Lift.2"
+      }
+    },
+    "ClassFlags": 264208,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GA_AwfulDuck_Lift_C Default__GA_AwfulDuck_Lift_C",
+      "ObjectPath": "/AwfulDuck/Items/AwfulDuck/GA_AwfulDuck_Lift.4"
+    }
+  },
+  {
+    "Type": "GA_AwfulDuck_Lift_C",
+    "Name": "Default__GA_AwfulDuck_Lift_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "ActivationType": "EFortGameplayAbilityActivation::Passive",
+      "CancelAbilitiesWithTag": [
+        "Granted.Athena.EnvItem.HidingProp.HidingInProp",
+        "Gameplay.Action.Player.CarryingPlayer"
+      ],
+      "BlockAbilitiesWithTag": [
+        "Gameplay.Action.Player.ChangeEquipment",
+        "Abilities.Generic.Athena.ZipLine.Enter",
+        "Event.Vehicle.Entered",
+        "Gameplay.Action.Player.AthenaEnterVehicle",
+        "Gameplay.Action.Player.InteractAny",
+        "Gameplay.Action.Player.InteractBuild",
+        "Gameplay.Action.Player.InteractBuildEdit",
+        "Gameplay.Action.Player.InteractiveConsumableUse",
+        "Gameplay.Action.Player.InteractSearch",
+        "Gameplay.Action.Player.InteractUse",
+        "Gameplay.Action.Player.Move",
+        "Gameplay.Action.Player.Jump"
+      ]
+    }
+  }
+]

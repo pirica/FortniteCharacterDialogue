@@ -1,0 +1,155 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_GA_Athena_AwfulDuck_WarmUpPulse",
+    "Outer": "GA_Athena_AwfulDuck_WarmUpPulse_C",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_EventData",
+        "Flags": 1,
+        "ElementSize": 184,
+        "PropertyFlags": 2,
+        "Struct": {
+          "ObjectName": "Class GameplayEventData",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeGameplayCueParameters_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 200,
+        "PropertyFlags": 549755813888,
+        "Struct": {
+          "ObjectName": "Class GameplayCueParameters",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      }
+    ],
+    "FunctionFlags": 8421377
+  },
+  {
+    "Type": "Function",
+    "Name": "K2_ActivateAbilityFromEvent",
+    "Outer": "GA_Athena_AwfulDuck_WarmUpPulse_C",
+    "SuperStruct": {
+      "ObjectName": "Class GameplayAbility:K2_ActivateAbilityFromEvent",
+      "ObjectPath": "/Script/GameplayAbilities"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "EventData",
+        "Flags": 1,
+        "ElementSize": 184,
+        "PropertyFlags": 134218134,
+        "Struct": {
+          "ObjectName": "Class GameplayEventData",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      }
+    ],
+    "FunctionFlags": 138938368
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GA_Athena_AwfulDuck_WarmUpPulse_C",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function GA_Athena_AwfulDuck_WarmUpPulse_C:ExecuteUbergraph_GA_Athena_AwfulDuck_WarmUpPulse",
+        "ObjectPath": "/AwfulDuck/Items/AwfulDuck/GA_Athena_AwfulDuck_WarmUpPulse.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class FortGameplayAbility",
+      "ObjectPath": "/Script/FortniteGame"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function GA_Athena_AwfulDuck_WarmUpPulse_C:K2_ActivateAbilityFromEvent",
+        "ObjectPath": "/AwfulDuck/Items/AwfulDuck/GA_Athena_AwfulDuck_WarmUpPulse.1"
+      },
+      {
+        "ObjectName": "Function GA_Athena_AwfulDuck_WarmUpPulse_C:ExecuteUbergraph_GA_Athena_AwfulDuck_WarmUpPulse",
+        "ObjectPath": "/AwfulDuck/Items/AwfulDuck/GA_Athena_AwfulDuck_WarmUpPulse.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": 2097153,
+        "ElementSize": 16,
+        "PropertyFlags": 2105344,
+        "Struct": {
+          "ObjectName": "Class PointerToUberGraphFrame",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Gameplay Cue Tag",
+        "Flags": 2097153,
+        "ElementSize": 12,
+        "PropertyFlags": 65541,
+        "Struct": {
+          "ObjectName": "Class GameplayTag",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_GA_Athena_AwfulDuck_WarmUpPulse": {
+        "ObjectName": "Function GA_Athena_AwfulDuck_WarmUpPulse_C:ExecuteUbergraph_GA_Athena_AwfulDuck_WarmUpPulse",
+        "ObjectPath": "/AwfulDuck/Items/AwfulDuck/GA_Athena_AwfulDuck_WarmUpPulse.0"
+      },
+      "K2_ActivateAbilityFromEvent": {
+        "ObjectName": "Function GA_Athena_AwfulDuck_WarmUpPulse_C:K2_ActivateAbilityFromEvent",
+        "ObjectPath": "/AwfulDuck/Items/AwfulDuck/GA_Athena_AwfulDuck_WarmUpPulse.1"
+      }
+    },
+    "ClassFlags": 264208,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GA_Athena_AwfulDuck_WarmUpPulse_C Default__GA_Athena_AwfulDuck_WarmUpPulse_C",
+      "ObjectPath": "/AwfulDuck/Items/AwfulDuck/GA_Athena_AwfulDuck_WarmUpPulse.3"
+    }
+  },
+  {
+    "Type": "GA_Athena_AwfulDuck_WarmUpPulse_C",
+    "Name": "Default__GA_Athena_AwfulDuck_WarmUpPulse_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "Gameplay Cue Tag": {
+        "TagName": "GameplayCue.Athena.AwfulDuck.WarmUp.Pulse"
+      },
+      "ActivationType": "EFortGameplayAbilityActivation::Triggered",
+      "bServerRespectsRemoteAbilityCancellation": false,
+      "bRetriggerInstancedAbility": true,
+      "NetExecutionPolicy": "EGameplayAbilityNetExecutionPolicy::ServerInitiated",
+      "AbilityTriggers": [
+        {
+          "TriggerTag": {
+            "TagName": "Event.Athena.Item.AwfulDuck.WarmUp.Pulse"
+          },
+          "TriggerSource": "EGameplayAbilityTriggerSource::GameplayEvent"
+        }
+      ]
+    }
+  }
+]
