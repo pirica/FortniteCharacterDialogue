@@ -1,0 +1,109 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "quest_s18_transient_Unicorn_PartyLocale_q05",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaTransientQuest",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/CerealBox/CerealBox/NPCCharacterData_CerealBox.NPCCharacterData_CerealBox",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "bIsShared": true,
+      "RewardsTable": {
+        "ObjectName": "DataTable ChallengeReward_S18_ShardQuest_SR",
+        "ObjectPath": "/BattlePassS18/Items/QuestRewards/ChallengeReward_S18_ShardQuest_SR.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_quest_completed_cerealbox",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "quest_s18_transient_Unicorn_PartyLocale_q05_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.Quests.EmoteInSideways"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::ComplexCustom",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "52C7739E412863149DDD82A8093FF1AD",
+            "SourceString": "Dance for 5 seconds while in The Sideways"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "B04EE0814D09795DA139A1BAE1F1E1D8",
+            "SourceString": "WHAT IF WE CELEBRATE THE APOCALYPSE... IN THE APOCALYPSE!!"
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 1,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ]
+    }
+  }
+]

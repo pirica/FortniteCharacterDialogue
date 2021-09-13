@@ -1,0 +1,82 @@
+[
+  {
+    "Type": "AthenaDailyQuestDefinition",
+    "Name": "Quest_S18_Repeatable_CompleteUncommonQuests",
+    "Properties": {
+      "QuestSubtype": "EFortQuestSubtype::QuickChallenge",
+      "bAthenaGrantRarityToken": false,
+      "bHideStageDescription": true,
+      "RewardsTable": {
+        "ObjectName": "DataTable AthenaChallengeReward_DailyChallenge_SeasonAgnostic",
+        "ObjectPath": "/Game/Athena/Items/Quests/Rewards/AthenaChallengeReward_DailyChallenge_SeasonAgnostic.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_dailychallenge_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S18_Repeatable_CompleteUncommonQuests_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [],
+              "Condition": "Source.Tags HasTag Token.Rarity.Uncommon",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::AthenaAcquire",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": false,
+              "bHasInclusiveContextTags": false
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "2838EDFA4F5D27BBD5AEFAB7CB1A5A1B",
+            "SourceString": "Complete Uncommon Quests"
+          },
+          "HudShortDescription": {
+            "CultureInvariantString": null
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 4,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "Weight": 0.0
+    }
+  }
+]

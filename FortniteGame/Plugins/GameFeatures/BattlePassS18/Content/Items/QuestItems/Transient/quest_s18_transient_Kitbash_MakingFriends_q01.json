@@ -1,0 +1,127 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "quest_s18_transient_Kitbash_MakingFriends_q01",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaTransientQuest",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/Kitbash/Kitbash/NPCCharacterData_Kitbash.NPCCharacterData_Kitbash",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "bIsShared": true,
+      "Rewards": [
+        {
+          "ItemPrimaryAssetId": {
+            "PrimaryAssetType": {
+              "Name": "Quest"
+            },
+            "PrimaryAssetName": "quest_s18_transient_Kitbash_MakingFriends_q02"
+          },
+          "Quantity": 1
+        }
+      ],
+      "RewardsTable": {
+        "ObjectName": "DataTable ChallengeReward_S18_ShardQuest_C",
+        "ObjectPath": "/BattlePassS18/Items/QuestRewards/ChallengeReward_S18_ShardQuest_C.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_quest_completed_kitbash",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "quest_s18_transient_Kitbash_MakingFriends_q01_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.GameOn"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Item.Ingredient.NutsBolts"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Collect",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "C3AAF7C14F10AF99CBFC81A3E851781B",
+            "SourceString": "Collect Nuts and Bolts"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "DEADE5714015F5047A2B1F9510722225",
+            "SourceString": "The Island is lonely. Let us craft more friends, friend!"
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 1,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ]
+    }
+  }
+]

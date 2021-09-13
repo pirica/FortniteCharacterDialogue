@@ -1,0 +1,102 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "Quest_S18_Repeatable_Talk_PunkKoi",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaTransientQuest",
+      "QuestSubtype": "EFortQuestSubtype::EFortQuestSubtype_MAX",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/VendingLlama/NPCCharacterData_VendingLlama.NPCCharacterData_VendingLlama",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "bIsShared": true,
+      "RewardsTable": {
+        "ObjectName": "DataTable ChallengeReward_S18_ShardQuest_C",
+        "ObjectPath": "/BattlePassS18/Items/QuestRewards/ChallengeReward_S18_ShardQuest_C.0"
+      },
+      "Objectives": [
+        {
+          "BackendName": "Quest_S18_Repeatable_Talk_PunkKoi_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "AISpawnerData.Type.Tandem.PunkKoi"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::InitiatedNPCConversation",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": false,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "B26C22F240D7BE94E2166AA7BD98798C",
+            "SourceString": "Talk to Charlotte"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "009BDD5C44F9F23B37BF1580DF72FB5F",
+            "SourceString": "Ooh, I like her! She's reckless. But, you know, in a fun way."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 1,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "NPCInteractionText": {
+        "Namespace": "Quest_S18_Repeatable_Talk_PunkKoi",
+        "Key": "Quest_S18_Repeatable_Talk_PunkKoi_CompletionText",
+        "SourceString": "Kinda makes you wish you had a cursed sword, right?"
+      }
+    }
+  }
+]

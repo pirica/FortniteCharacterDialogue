@@ -1,0 +1,120 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "quest_s18_transient_SpaceMonkey_WarEffort_q03",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaTransientQuest",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/SpaceChimp/SpaceChimp/NPCCharacterData_SpaceChimp.NPCCharacterData_SpaceChimp",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "bIsShared": true,
+      "Rewards": [
+        {
+          "ItemPrimaryAssetId": {
+            "PrimaryAssetType": {
+              "Name": "Quest"
+            },
+            "PrimaryAssetName": "quest_s18_transient_SpaceMonkey_WarEffort_q04"
+          },
+          "Quantity": 1
+        }
+      ],
+      "RewardsTable": {
+        "ObjectName": "DataTable ChallengeReward_S18_ShardQuest_R",
+        "ObjectPath": "/BattlePassS18/Items/QuestRewards/ChallengeReward_S18_ShardQuest_R.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_quest_completed_spacechimp",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "quest_s18_transient_SpaceMonkey_WarEffort_q03_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Building.Resource.Metal"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "Source.Tags HasTag Athena.Location.UnNamedPOI.CrashSite.01 || Source.Tags HasTag Athena.Location.UnNamedPOI.CrashSite.02 || Source.Tags HasTag Athena.Location.UnNamedPOI.CrashSite.03 ||Source.Tags HasTag Athena.Location.UnNamedPOI.CrashSite.04 || Source.Tags HasTag Athena.Location.UnNamedPOI.CrashSite.05",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Collect",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "7B0313E44710793BBFEA6ABE91DA2BAE",
+            "SourceString": "Harvest metal from an Alien Crash Site"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "3A6D187B42B0F0222E355C90ADFFA1FB",
+            "SourceString": "Alien metal is the perfect alloy for crafting combat supplies."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 100,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ]
+    }
+  }
+]

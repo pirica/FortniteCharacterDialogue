@@ -1,0 +1,120 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "quest_s18_transient_MadCap_MushroomMaster_q04",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaTransientQuest",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/Madcap/Madcap/NPCCharacterData_Madcap.NPCCharacterData_Madcap",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "bIsShared": true,
+      "Rewards": [
+        {
+          "ItemPrimaryAssetId": {
+            "PrimaryAssetType": {
+              "Name": "Quest"
+            },
+            "PrimaryAssetName": "quest_s18_transient_MadCap_MushroomMaster_q05"
+          },
+          "Quantity": 1
+        }
+      ],
+      "RewardsTable": {
+        "ObjectName": "DataTable ChallengeReward_S18_ShardQuest_VR",
+        "ObjectPath": "/BattlePassS18/Items/QuestRewards/ChallengeReward_S18_ShardQuest_VR.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_quest_completed_madcap",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "quest_s18_transient_MadCap_MushroomMaster_q04_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Building.Type.Container.Furniture.Refrigerator"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Destroy",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "0058B3C144D7A9CD18EFF4AFC69A6A20",
+            "SourceString": "Destroy Refrigerators"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "F24C613B471D33F5DF8F7A8D293CE77C",
+            "SourceString": "I got a distress call from a nearby fridge. My brother-in-law's trapped!"
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 2,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ]
+    }
+  }
+]

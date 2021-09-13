@@ -1,0 +1,102 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "Quest_S18_Repeatable_TR_UseBandagesOrMedkits",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaTransientQuest",
+      "QuestSubtype": "EFortQuestSubtype::EFortQuestSubtype_MAX",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/VendingLlama/NPCCharacterData_VendingLlama.NPCCharacterData_VendingLlama",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "bIsShared": true,
+      "RewardsTable": {
+        "ObjectName": "DataTable ChallengeReward_S18_ShardQuest_C",
+        "ObjectPath": "/BattlePassS18/Items/QuestRewards/ChallengeReward_S18_ShardQuest_C.0"
+      },
+      "Objectives": [
+        {
+          "BackendName": "Quest_S18_Repeatable_TR_UseBandagesOrMedkits_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist.TeamRumble"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "Target.Tags HasTag Athena.Quests.Ability.Heal.Medkit || Target.Tags HasTag Athena.Quests.Ability.Heal.Bandage",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::ComplexCustom",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "6055FC1C4D37083A9929A48EF2F483B2",
+            "SourceString": "Use bandages or medkits"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "6AB68B5E4B0518C21FFFA98105450352",
+            "SourceString": "Buddy, you've gotta take care of yourself too!"
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 30,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "NPCInteractionText": {
+        "Namespace": "Quest_S18_Repeatable_TR_UseBandagesOrMedkits",
+        "Key": "Quest_S18_Repeatable_TR_UseBandagesOrMedkits_CompletionText",
+        "SourceString": "I care about your well-being! It's in my programming!"
+      }
+    }
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "quest_s18_Event_4thBirthday_q02",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaTransientQuest",
+      "bShouldDisplayOverallQuestInformation": true,
+      "bAthenaUpdateObjectiveOncePerMatch": true,
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/BirthdayRamirez/BirthdayRamirez/NPCCharacterData_BirthdayRamirez.NPCCharacterData_BirthdayRamirez",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "bHideStageDescription": true,
+      "bIsShared": true,
+      "RewardsTable": {
+        "ObjectName": "DataTable ChallengeReward_S18_Event_Birthday_Bars",
+        "ObjectPath": "/BattlePassS18/Items/QuestRewards/ChallengeReward_S18_Event_Birthday_Bars.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_s18_birthday_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "quest_s18_Event_4thBirthday_q02_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.Quests.EatBirthdayCake"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::ComplexCustom",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "419C2772416BDDB5F9FFF08A489425F0",
+            "SourceString": "Consume Birthday Cakes in different matches"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "17D7530B4AC5A7C454125CA01E27C45D",
+            "SourceString": "This is a big birthday. We gotta celebrate for a few rounds!"
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 4,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "NPCInteractionText": {
+        "Namespace": "quest_s18_Event_4thBirthday_q02",
+        "Key": "quest_s18_Event_4thBirthday_q02_CompletionText",
+        "SourceString": "Four slices of birthday cake are better than one."
+      },
+      "bHideQuestProgressNotification": true,
+      "OnItemCountChanged": {
+        "InvocationList": []
+      },
+      "ItemType": "EFortItemType::WorldItem"
+    }
+  }
+]

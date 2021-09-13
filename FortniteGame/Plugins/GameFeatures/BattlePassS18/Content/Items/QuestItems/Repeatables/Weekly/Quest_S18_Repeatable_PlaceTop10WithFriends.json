@@ -1,0 +1,87 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "Quest_S18_Repeatable_PlaceTop10WithFriends",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "QuestSubtype": "EFortQuestSubtype::PunchCard",
+      "bAthenaGrantRarityToken": false,
+      "bIncludedInCategories": false,
+      "bHideStageDescription": true,
+      "RewardsTable": {
+        "ObjectName": "DataTable ChallengeReward_S18_WeeklyXP",
+        "ObjectPath": "/BattlePassS18/Items/QuestRewards/ChallengeReward_S18_WeeklyXP.0"
+      },
+      "Objectives": [
+        {
+          "BackendName": "Quest_S18_Repeatable_PlaceTop10WithFriends_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                }
+              ],
+              "Condition": "SquadFriend.Count > 0 && Athena.Rank <= 10 && Athena.MaxTeamSize >1 && Athena.MaxTeamSize <5",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::AthenaRank",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": false,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "F430C91F4C21432FDBB731AAD17D6DDA",
+            "SourceString": "Place Top 10 with Friends"
+          },
+          "HudShortDescription": {
+            "CultureInvariantString": null
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 5,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "bHideQuestRewardNotification": true,
+      "bForceExpiryExport": true
+    }
+  }
+]

@@ -1,16 +1,87 @@
 [
   {
+    "Type": "FortGameFeatureAction_AddToPlaylists",
+    "Name": "FortGameFeatureAction_AddToPlaylists_0",
+    "Outer": "GameFeatureData",
+    "Properties": {
+      "PluginName": "Slone",
+      "PlaylistQuery": {
+        "TagDictionary": [
+          {
+            "TagName": "Athena.Playlist.Solo"
+          },
+          {
+            "TagName": "Athena.Playlist.Duo"
+          },
+          {
+            "TagName": "Athena.Playlist.Squad"
+          },
+          {
+            "TagName": "Athena.Playlist.Bot.Solo"
+          },
+          {
+            "TagName": "Athena.Playlist.Bot.Duo"
+          },
+          {
+            "TagName": "Athena.Playlist.Bot.Squad"
+          },
+          {
+            "TagName": "Plugin.Playlist.Arena"
+          },
+          {
+            "TagName": "Plugin.Playlist.BattleLab"
+          },
+          {
+            "TagName": "Athena.Playlist.Trios"
+          },
+          {
+            "TagName": "Athena.Playlist.LTM.AllAI"
+          },
+          {
+            "TagName": "Athena.Playlist.Score"
+          },
+          {
+            "TagName": "Athena.Playlist.TeamRumble"
+          }
+        ],
+        "QueryTokenStream": [
+          0,
+          1,
+          1,
+          12,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "AutoDescription": " ANY( Athena.Playlist.Solo, Athena.Playlist.Duo, Athena.Playlist.Squad, Athena.Playlist.Bot.Solo, Athena.Playlist.Bot.Duo, Athena.Playlist.Bot.Squad, Plugin.Playlist.Arena, Plugin.Playlist.BattleLab, Athena.Playlist.Trios, Athena.Playlist.LTM.AllAI, Athena.Playlist.Score, Athena.Playlist.TeamRumble )"
+      }
+    }
+  },
+  {
     "Type": "FortGameFeatureData",
     "Name": "GameFeatureData",
     "Properties": {
       "LevelOverlayConfig": {
-        "ObjectName": "LevelOverlayConfig_Slone:FortLevelOverlayConfig",
+        "ObjectName": "FortLevelOverlayConfig LevelOverlayConfig_Slone",
         "ObjectPath": "/Slone/LevelOverlays/LevelOverlayConfig_Slone.0"
       },
       "Actions": [
         {
-          "ObjectName": "GameFeatureData:GameFeatureAction_AddComponents_0:GameFeatureAction_AddComponents",
-          "ObjectPath": "/Slone/GameFeatureData.1"
+          "ObjectName": "GameFeatureAction_AddComponents GameFeatureData:GameFeatureAction_AddComponents_0",
+          "ObjectPath": "/Slone/GameFeatureData.2"
+        },
+        {
+          "ObjectName": "FortGameFeatureAction_AddToPlaylists GameFeatureData:FortGameFeatureAction_AddToPlaylists_0",
+          "ObjectPath": "/Slone/GameFeatureData.0"
         }
       ],
       "PrimaryAssetTypesToScan": [
