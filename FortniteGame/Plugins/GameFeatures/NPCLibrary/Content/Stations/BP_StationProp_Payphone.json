@@ -457,6 +457,19 @@
       "ObjectName": "Function BP_StationProp_Parent_C:PlayServiceUsedEffects",
       "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_Parent.6"
     },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlayerController",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "PropertyClass": {
+          "ObjectName": "Class FortPlayerController",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      }
+    ],
     "FunctionFlags": 201457664
   },
   {
@@ -1001,6 +1014,19 @@
           "ObjectName": "Class TimerHandle",
           "ObjectPath": "/Script/Engine"
         }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bLocalPlayerHasUsedServices",
+        "Flags": 2097153,
+        "ElementSize": 1,
+        "PropertyFlags": 65541,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
       }
     ],
     "FuncMap": {
@@ -1101,9 +1127,6 @@
         "Handle": 0
       },
       "StartAmbientOnBeginPlay": false,
-      "UseSpecialActorComponent": {
-        "Value": 1.0
-      },
       "SpecialActorComponentClass": {
         "ObjectName": "BlueprintGeneratedClass PayphoneSpecialActorComponent_C",
         "ObjectPath": "/Game/Blueprints/Components/StationProps/PayphoneSpecialActorComponent.0"

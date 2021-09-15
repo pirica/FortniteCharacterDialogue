@@ -1,0 +1,282 @@
+[
+  {
+    "Type": "ConversationDatabase",
+    "Name": "NPCLibrary_Conversation_Ember",
+    "Properties": {
+      "CompilerVersion": 2,
+      "ReachableNodeMap": {},
+      "EntryTags": [
+        {
+          "EntryTag": {
+            "TagName": "Conversation.Entry.Ember"
+          },
+          "DestinationList": [
+            "5A4C16EE-4FF13B12-B710C6A6-5644C4FC"
+          ]
+        }
+      ],
+      "ExitTags": [
+        "Conversation.Entry.BasicServices",
+        "Conversation.Entry.NPCLibrary.Quests"
+      ],
+      "InternalNodeIds": [
+        "5A4C16EE-4FF13B12-B710C6A6-5644C4FC",
+        "9C5A5038-4CA05E9E-5A9E529B-0BE4FE72",
+        "F1790009-41EF529B-B6D3A8B8-261DB5E3",
+        "16DD61A0-42568506-5C852C82-4D6A7AFC"
+      ],
+      "Speakers": [
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.Player"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.406108,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "0068FF"
+          }
+        },
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.NPC"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.065123,
+            "B": 0.1875,
+            "A": 1.0,
+            "Hex": "001130"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ConversationEntryPointNode",
+    "Name": "ConversationEntryPointNode_7",
+    "Outer": "NPCLibrary_Conversation_Ember",
+    "Properties": {
+      "EntryTag": {
+        "TagName": "Conversation.Entry.Ember"
+      },
+      "OutputConnections": [
+        "9C5A5038-4CA05E9E-5A9E529B-0BE4FE72"
+      ],
+      "Compiled_NodeGUID": "5A4C16EE-4FF13B12-B710C6A6-5644C4FC"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_0",
+    "Outer": "NPCLibrary_Conversation_Ember",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.BasicServices"
+      },
+      "Compiled_NodeGUID": "F1790009-41EF529B-B6D3A8B8-261DB5E3"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_1",
+    "Outer": "NPCLibrary_Conversation_Ember",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.NPCLibrary.Quests"
+      },
+      "Compiled_NodeGUID": "16DD61A0-42568506-5C852C82-4D6A7AFC"
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch",
+    "Name": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0",
+    "Outer": "Speech_C_4",
+    "Properties": {
+      "days": 7
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_HasBars",
+    "Name": "FortControllerRequirement_HasBars_0",
+    "Outer": "Speech_C_4",
+    "Properties": {
+      "ThresholdTestConfig": {
+        "Requirement": "EThresholdRequirement::GreaterThan",
+        "Quantity": {
+          "Value": 3000.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_IsFirstEverConversationWithNPC",
+    "Name": "FortControllerRequirement_IsFirstEverConversationWithNPC_0",
+    "Outer": "Speech_C_4"
+  },
+  {
+    "Type": "Speech_C",
+    "Name": "Speech_C_4",
+    "Outer": "NPCLibrary_Conversation_Ember",
+    "Template": "Default__Speech_C",
+    "Properties": {
+      "SpeakerTag": {
+        "TagName": "Conversation.Participant.NPC"
+      },
+      "ListenerTag": {
+        "TagName": "Conversation.Participant.Player"
+      },
+      "GeneralConfig": {
+        "ContextualMessages": [
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "D72BC1ED46C945B98783F1907BFD85D1",
+              "SourceString": "I see you've rekindled your flame and re-entered the fray. "
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch NPCLibrary_Conversation_Ember:Speech_C_4.FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/Ember/Ember/NPCLibrary_Conversation_Ember.4"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.WhileSincePlayed"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MetadataParameters": []
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "5CCF04A64AA59429DB7E75817390A94E",
+              "SourceString": "Hello. I'm Ember. "
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC NPCLibrary_Conversation_Ember:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/Ember/Ember/NPCLibrary_Conversation_Ember.6"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MetadataParameters": []
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "7E3645994B18068AF862D0BC5650F26F",
+              "SourceString": "Somebody's got Bars to burn."
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "FortControllerRequirement_HasBars NPCLibrary_Conversation_Ember:Speech_C_4.FortControllerRequirement_HasBars_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/Ember/Ember/NPCLibrary_Conversation_Ember.5"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.HighTotalBars"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MetadataParameters": []
+          }
+        ],
+        "DefaultMessage": {
+          "Namespace": "",
+          "Key": "B4D3165D47A26DA43AD13E88E520AA20",
+          "SourceString": "A burning delight to see you again."
+        }
+      },
+      "OutputConnections": [
+        "16DD61A0-42568506-5C852C82-4D6A7AFC",
+        "F1790009-41EF529B-B6D3A8B8-261DB5E3"
+      ],
+      "NodeName": "",
+      "Compiled_NodeGUID": "9C5A5038-4CA05E9E-5A9E529B-0BE4FE72"
+    }
+  }
+]

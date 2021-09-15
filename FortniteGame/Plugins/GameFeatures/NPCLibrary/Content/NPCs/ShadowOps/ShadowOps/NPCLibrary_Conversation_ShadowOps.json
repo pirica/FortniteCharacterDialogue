@@ -1,0 +1,247 @@
+[
+  {
+    "Type": "ConversationDatabase",
+    "Name": "NPCLibrary_Conversation_ShadowOps",
+    "Properties": {
+      "CompilerVersion": 2,
+      "ReachableNodeMap": {},
+      "EntryTags": [
+        {
+          "EntryTag": {
+            "TagName": "Conversation.Entry.ShadowOps"
+          },
+          "DestinationList": [
+            "4CA04D61-4B262F54-7F751CA0-3A4B63F2"
+          ]
+        }
+      ],
+      "ExitTags": [
+        "Conversation.Entry.BasicServices",
+        "Conversation.Entry.NPCLibrary.Quests"
+      ],
+      "InternalNodeIds": [
+        "4CA04D61-4B262F54-7F751CA0-3A4B63F2",
+        "DA845D6C-40636491-B925929B-1494A5F4",
+        "20067480-4D856ADF-2F7BB28F-6245D4AD",
+        "3EF4AD8E-4C23DDB2-96E3BC8C-721F5D88"
+      ],
+      "Speakers": [
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.Player"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.406108,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "0068FF"
+          }
+        },
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.NPC"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.065123,
+            "B": 0.1875,
+            "A": 1.0,
+            "Hex": "001130"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ConversationEntryPointNode",
+    "Name": "ConversationEntryPointNode_7",
+    "Outer": "NPCLibrary_Conversation_ShadowOps",
+    "Properties": {
+      "EntryTag": {
+        "TagName": "Conversation.Entry.ShadowOps"
+      },
+      "OutputConnections": [
+        "DA845D6C-40636491-B925929B-1494A5F4"
+      ],
+      "Compiled_NodeGUID": "4CA04D61-4B262F54-7F751CA0-3A4B63F2"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_0",
+    "Outer": "NPCLibrary_Conversation_ShadowOps",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.BasicServices"
+      },
+      "Compiled_NodeGUID": "20067480-4D856ADF-2F7BB28F-6245D4AD"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_1",
+    "Outer": "NPCLibrary_Conversation_ShadowOps",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.NPCLibrary.Quests"
+      },
+      "Compiled_NodeGUID": "3EF4AD8E-4C23DDB2-96E3BC8C-721F5D88"
+    }
+  },
+  {
+    "Type": "Speech_C",
+    "Name": "Speech_C_4",
+    "Outer": "NPCLibrary_Conversation_ShadowOps",
+    "Template": "Default__Speech_C",
+    "Properties": {
+      "SpeakerTag": {
+        "TagName": "Conversation.Participant.NPC"
+      },
+      "ListenerTag": {
+        "TagName": "Conversation.Participant.Player"
+      },
+      "GeneralConfig": {
+        "ContextualMessages": [
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "E0F6B76247978D57CD686FAE6DDA5926",
+              "SourceString": "Your muscle memory should kick back in pretty soon."
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": null
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.WhileSincePlayed"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MetadataParameters": []
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "C4034DE946C4E6AC106A1DACA9292CD1",
+              "SourceString": "I've heard about your combat style! Impressive."
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": null
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MetadataParameters": []
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "F5F99AC54A82008701098EABF438CB58",
+              "SourceString": "I think J.B.'s accepting donations if you want to offload those Bars!"
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": null
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.HighTotalBars"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MetadataParameters": []
+          }
+        ],
+        "DefaultMessage": {
+          "Namespace": "",
+          "Key": "E04CB38C4205F227C54FA789B9FD9401",
+          "SourceString": "Ready to get tactical? "
+        }
+      },
+      "OutputConnections": [
+        "3EF4AD8E-4C23DDB2-96E3BC8C-721F5D88",
+        "20067480-4D856ADF-2F7BB28F-6245D4AD"
+      ],
+      "NodeName": "",
+      "Compiled_NodeGUID": "DA845D6C-40636491-B925929B-1494A5F4"
+    }
+  }
+]

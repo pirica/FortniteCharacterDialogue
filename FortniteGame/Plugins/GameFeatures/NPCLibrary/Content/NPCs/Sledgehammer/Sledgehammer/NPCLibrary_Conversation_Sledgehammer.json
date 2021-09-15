@@ -1,0 +1,307 @@
+[
+  {
+    "Type": "ConversationDatabase",
+    "Name": "NPCLibrary_Conversation_Sledgehammer",
+    "Properties": {
+      "CompilerVersion": 2,
+      "ReachableNodeMap": {},
+      "EntryTags": [
+        {
+          "EntryTag": {
+            "TagName": "Conversation.Entry.Sledgehammer"
+          },
+          "DestinationList": [
+            "91697559-4123C398-B0A59A88-C3B50250"
+          ]
+        }
+      ],
+      "ExitTags": [
+        "Conversation.Entry.BasicServices",
+        "Conversation.Entry.NPCLibrary.Quests"
+      ],
+      "InternalNodeIds": [
+        "91697559-4123C398-B0A59A88-C3B50250",
+        "511441E4-44C36CB1-72A495A7-6184954C",
+        "E1BE5A75-47F55DB6-4B475E8C-E4162D9D",
+        "E9242278-42A00C4E-93FB3DA2-186686ED"
+      ],
+      "Speakers": [
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.Player"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.406108,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "0068FF"
+          }
+        },
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.NPC"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.065123,
+            "B": 0.1875,
+            "A": 1.0,
+            "Hex": "001130"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ConversationEntryPointNode",
+    "Name": "ConversationEntryPointNode_7",
+    "Outer": "NPCLibrary_Conversation_Sledgehammer",
+    "Properties": {
+      "EntryTag": {
+        "TagName": "Conversation.Entry.Sledgehammer"
+      },
+      "OutputConnections": [
+        "511441E4-44C36CB1-72A495A7-6184954C"
+      ],
+      "Compiled_NodeGUID": "91697559-4123C398-B0A59A88-C3B50250"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_0",
+    "Outer": "NPCLibrary_Conversation_Sledgehammer",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.BasicServices"
+      },
+      "Compiled_NodeGUID": "E1BE5A75-47F55DB6-4B475E8C-E4162D9D"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_1",
+    "Outer": "NPCLibrary_Conversation_Sledgehammer",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.NPCLibrary.Quests"
+      },
+      "Compiled_NodeGUID": "E9242278-42A00C4E-93FB3DA2-186686ED"
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_HasCID",
+    "Name": "FortControllerRequirement_HasCID_0",
+    "Outer": "Speech_C_4",
+    "Properties": {
+      "AllowedCIDs": [
+        {
+          "AssetPathName": "/Game/Athena/Items/Cosmetics/Characters/CID_248_Athena_Commando_M_BlackWidow.CID_248_Athena_Commando_M_BlackWidow",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "/Game/Athena/Items/Cosmetics/Characters/CID_249_Athena_Commando_F_BlackWidow.CID_249_Athena_Commando_F_BlackWidow",
+          "SubPathString": ""
+        }
+      ]
+    }
+  },
+  {
+    "Type": "Speech_C",
+    "Name": "Speech_C_4",
+    "Outer": "NPCLibrary_Conversation_Sledgehammer",
+    "Template": "Default__Speech_C",
+    "Properties": {
+      "SpeakerTag": {
+        "TagName": "Conversation.Participant.NPC"
+      },
+      "ListenerTag": {
+        "TagName": "Conversation.Participant.Player"
+      },
+      "GeneralConfig": {
+        "ContextualMessages": [
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "AC7FD9354ACE664F5F7937832A37986D",
+              "SourceString": "I've learned so many spider facts since you've been gone. "
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": null
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.WhileSincePlayed"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MetadataParameters": []
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "481E81584FF2406824B41D8F40D87BBB",
+              "SourceString": "I'm sorry in advance for all the spider stuff. I just like 'em."
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": null
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MetadataParameters": []
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "E5C3A9A74EB9E0A3AE6939A4FC7DC3EF",
+              "SourceString": "Whoa. You could singlehandedly fund my spider conservancy."
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": null
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.HighTotalBars"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MetadataParameters": []
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "293CC4DD46B62340740BEF88A9452154",
+              "SourceString": "Hey! A fellow arachnid admirer! "
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "FortControllerRequirement_HasCID NPCLibrary_Conversation_Sledgehammer:Speech_C_4.FortControllerRequirement_HasCID_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/Sledgehammer/Sledgehammer/NPCLibrary_Conversation_Sledgehammer.4"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.OutfitReaction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MetadataParameters": []
+          }
+        ],
+        "DefaultMessage": {
+          "Namespace": "",
+          "Key": "3FD615CC4CD2E1490D289481E4E0B91A",
+          "SourceString": "It's about winning the war. And spiders. I like spiders."
+        }
+      },
+      "OutputConnections": [
+        "E9242278-42A00C4E-93FB3DA2-186686ED",
+        "E1BE5A75-47F55DB6-4B475E8C-E4162D9D"
+      ],
+      "NodeName": "",
+      "Compiled_NodeGUID": "511441E4-44C36CB1-72A495A7-6184954C"
+    }
+  }
+]

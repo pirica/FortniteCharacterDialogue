@@ -1,0 +1,338 @@
+[
+  {
+    "Type": "ConversationDatabase",
+    "Name": "NPCLibrary_Conversation_SpaceChimp",
+    "Properties": {
+      "CompilerVersion": 2,
+      "ReachableNodeMap": {},
+      "EntryTags": [
+        {
+          "EntryTag": {
+            "TagName": "Conversation.Entry.SpaceChimp"
+          },
+          "DestinationList": [
+            "7B8E05C4-4A794986-F904F48A-55B19A10"
+          ]
+        }
+      ],
+      "ExitTags": [
+        "Conversation.Entry.BasicServices",
+        "Conversation.Entry.NPCLibrary.Quests"
+      ],
+      "InternalNodeIds": [
+        "7B8E05C4-4A794986-F904F48A-55B19A10",
+        "7F601B3D-41CD5CF2-DEF55FBA-F9B2C739",
+        "43AAFA6A-4D1DCA0D-FB766095-BC4F15D1",
+        "4A74C8C3-4D04AB9F-F71751B3-81F66F45"
+      ],
+      "Speakers": [
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.Player"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.406108,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "0068FF"
+          }
+        },
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.NPC"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.065123,
+            "B": 0.1875,
+            "A": 1.0,
+            "Hex": "001130"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ConversationEntryPointNode",
+    "Name": "ConversationEntryPointNode_7",
+    "Outer": "NPCLibrary_Conversation_SpaceChimp",
+    "Properties": {
+      "EntryTag": {
+        "TagName": "Conversation.Entry.SpaceChimp"
+      },
+      "OutputConnections": [
+        "7F601B3D-41CD5CF2-DEF55FBA-F9B2C739"
+      ],
+      "Compiled_NodeGUID": "7B8E05C4-4A794986-F904F48A-55B19A10"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_0",
+    "Outer": "NPCLibrary_Conversation_SpaceChimp",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.BasicServices"
+      },
+      "Compiled_NodeGUID": "43AAFA6A-4D1DCA0D-FB766095-BC4F15D1"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_1",
+    "Outer": "NPCLibrary_Conversation_SpaceChimp",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.NPCLibrary.Quests"
+      },
+      "Compiled_NodeGUID": "4A74C8C3-4D04AB9F-F71751B3-81F66F45"
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch",
+    "Name": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0",
+    "Outer": "Speech_C_4",
+    "Properties": {
+      "days": 7
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_HasBars",
+    "Name": "FortControllerRequirement_HasBars_0",
+    "Outer": "Speech_C_4",
+    "Properties": {
+      "ThresholdTestConfig": {
+        "Requirement": "EThresholdRequirement::GreaterThan",
+        "Quantity": {
+          "Value": 3000.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_HasCID",
+    "Name": "FortControllerRequirement_HasCID_0",
+    "Outer": "Speech_C_4",
+    "Properties": {
+      "AllowedCIDs": [
+        {
+          "AssetPathName": "/Game/Athena/Items/Cosmetics/Characters/CID_658_Athena_Commando_F_ToyMonkey.CID_658_Athena_Commando_F_ToyMonkey",
+          "SubPathString": ""
+        }
+      ]
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_IsFirstEverConversationWithNPC",
+    "Name": "FortControllerRequirement_IsFirstEverConversationWithNPC_0",
+    "Outer": "Speech_C_4"
+  },
+  {
+    "Type": "Speech_C",
+    "Name": "Speech_C_4",
+    "Outer": "NPCLibrary_Conversation_SpaceChimp",
+    "Template": "Default__Speech_C",
+    "Properties": {
+      "SpeakerTag": {
+        "TagName": "Conversation.Participant.NPC"
+      },
+      "ListenerTag": {
+        "TagName": "Conversation.Participant.Player"
+      },
+      "GeneralConfig": {
+        "ContextualMessages": [
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "ABA751204CC7D41B6F9F5BB1F9C81EAB",
+              "SourceString": "Welcome back, tallchimp. "
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch NPCLibrary_Conversation_SpaceChimp:Speech_C_4.FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/SpaceChimp/SpaceChimp/NPCLibrary_Conversation_SpaceChimp.4"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.WhileSincePlayed"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MetadataParameters": []
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "73424281450E6B2B9AF77F8DD8359E66",
+              "SourceString": "I want YOU to contribute to the fight against six-sided tyranny!"
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC NPCLibrary_Conversation_SpaceChimp:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/SpaceChimp/SpaceChimp/NPCLibrary_Conversation_SpaceChimp.7"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MetadataParameters": []
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "D36C2B1C48D948414E45978E29094ED0",
+              "SourceString": "Whoa. Hey, tallchimp, the donation boxes are right over there! "
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "FortControllerRequirement_HasBars NPCLibrary_Conversation_SpaceChimp:Speech_C_4.FortControllerRequirement_HasBars_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/SpaceChimp/SpaceChimp/NPCLibrary_Conversation_SpaceChimp.5"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.HighTotalBars"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MetadataParameters": []
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "4146B76B491DDFCD414F408060A5E471",
+              "SourceString": " ...You had to know I'd find your outfit extremely offensive. "
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "FortControllerRequirement_HasCID NPCLibrary_Conversation_SpaceChimp:Speech_C_4.FortControllerRequirement_HasCID_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/SpaceChimp/SpaceChimp/NPCLibrary_Conversation_SpaceChimp.6"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.OutfitReaction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MetadataParameters": []
+          }
+        ],
+        "DefaultMessage": {
+          "Namespace": "",
+          "Key": "FA32ED3F4D329BC8AD21A39B2A4D8F3D",
+          "SourceString": "If we all chimp in, we'll do this thing!"
+        }
+      },
+      "OutputConnections": [
+        "4A74C8C3-4D04AB9F-F71751B3-81F66F45",
+        "43AAFA6A-4D1DCA0D-FB766095-BC4F15D1"
+      ],
+      "NodeName": "",
+      "Compiled_NodeGUID": "7F601B3D-41CD5CF2-DEF55FBA-F9B2C739"
+    }
+  }
+]

@@ -1,0 +1,125 @@
+[
+  {
+    "Type": "ConversationDatabase",
+    "Name": "NPCLibrary_Conversation_MoistyMerman",
+    "Properties": {
+      "CompilerVersion": 2,
+      "ReachableNodeMap": {},
+      "EntryTags": [
+        {
+          "EntryTag": {
+            "TagName": "Conversation.Entry.MoistyMerman"
+          },
+          "DestinationList": [
+            "22FE89E9-456B0673-892196BC-A36FFD07"
+          ]
+        }
+      ],
+      "ExitTags": [
+        "Conversation.Entry.BasicServices",
+        "Conversation.Entry.NPCLibrary.Quests"
+      ],
+      "InternalNodeIds": [
+        "22FE89E9-456B0673-892196BC-A36FFD07",
+        "16ED059E-43C9874F-0E1ADF9D-0FB6BE2F",
+        "74154024-42DE8096-60473EA2-65E7609C",
+        "BA70A763-41E07A22-E4F306AB-FB6F34D2"
+      ],
+      "Speakers": [
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.Player"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.406108,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "0068FF"
+          }
+        },
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.NPC"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.065123,
+            "B": 0.1875,
+            "A": 1.0,
+            "Hex": "001130"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ConversationEntryPointNode",
+    "Name": "ConversationEntryPointNode_7",
+    "Outer": "NPCLibrary_Conversation_MoistyMerman",
+    "Properties": {
+      "EntryTag": {
+        "TagName": "Conversation.Entry.MoistyMerman"
+      },
+      "OutputConnections": [
+        "16ED059E-43C9874F-0E1ADF9D-0FB6BE2F"
+      ],
+      "Compiled_NodeGUID": "22FE89E9-456B0673-892196BC-A36FFD07"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_0",
+    "Outer": "NPCLibrary_Conversation_MoistyMerman",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.BasicServices"
+      },
+      "Compiled_NodeGUID": "74154024-42DE8096-60473EA2-65E7609C"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_1",
+    "Outer": "NPCLibrary_Conversation_MoistyMerman",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.NPCLibrary.Quests"
+      },
+      "Compiled_NodeGUID": "BA70A763-41E07A22-E4F306AB-FB6F34D2"
+    }
+  },
+  {
+    "Type": "Speech_C",
+    "Name": "Speech_C_4",
+    "Outer": "NPCLibrary_Conversation_MoistyMerman",
+    "Template": "Default__Speech_C",
+    "Properties": {
+      "SpeakerTag": {
+        "TagName": "Conversation.Participant.NPC"
+      },
+      "ListenerTag": {
+        "TagName": "Conversation.Participant.Player"
+      },
+      "GeneralConfig": {
+        "DefaultMessage": {
+          "Namespace": "",
+          "Key": "336D7F824E8E6BF69BEB02807AF98045",
+          "SourceString": "Default Message"
+        }
+      },
+      "OutputConnections": [
+        "BA70A763-41E07A22-E4F306AB-FB6F34D2",
+        "74154024-42DE8096-60473EA2-65E7609C"
+      ],
+      "NodeName": "",
+      "Compiled_NodeGUID": "16ED059E-43C9874F-0E1ADF9D-0FB6BE2F"
+    }
+  }
+]

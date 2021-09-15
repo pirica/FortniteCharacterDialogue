@@ -1,0 +1,335 @@
+[
+  {
+    "Type": "ConversationDatabase",
+    "Name": "NPCLibrary_Conversation_DarkJonesy",
+    "Properties": {
+      "CompilerVersion": 2,
+      "ReachableNodeMap": {},
+      "EntryTags": [
+        {
+          "EntryTag": {
+            "TagName": "Conversation.Entry.DarkJonesy"
+          },
+          "DestinationList": [
+            "EBDFB7ED-45DB7D46-623F3EB3-8A1F568B"
+          ]
+        }
+      ],
+      "ExitTags": [
+        "Conversation.Entry.BasicServices",
+        "Conversation.Entry.NPCLibrary.Quests"
+      ],
+      "InternalNodeIds": [
+        "EBDFB7ED-45DB7D46-623F3EB3-8A1F568B",
+        "A1B7D8D7-4FD849D9-C292D4AE-F330FB9B",
+        "6CCC96D3-4F0CEFF9-4B735684-967C7C3F",
+        "507CB008-4EE654D5-EFF2C1BD-0DCCBCE4"
+      ],
+      "Speakers": [
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.Player"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.406108,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "0068FF"
+          }
+        },
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.NPC"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.065123,
+            "B": 0.1875,
+            "A": 1.0,
+            "Hex": "001130"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ConversationEntryPointNode",
+    "Name": "ConversationEntryPointNode_7",
+    "Outer": "NPCLibrary_Conversation_DarkJonesy",
+    "Properties": {
+      "EntryTag": {
+        "TagName": "Conversation.Entry.DarkJonesy"
+      },
+      "OutputConnections": [
+        "A1B7D8D7-4FD849D9-C292D4AE-F330FB9B"
+      ],
+      "Compiled_NodeGUID": "EBDFB7ED-45DB7D46-623F3EB3-8A1F568B"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_0",
+    "Outer": "NPCLibrary_Conversation_DarkJonesy",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.BasicServices"
+      },
+      "Compiled_NodeGUID": "6CCC96D3-4F0CEFF9-4B735684-967C7C3F"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_1",
+    "Outer": "NPCLibrary_Conversation_DarkJonesy",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.NPCLibrary.Quests"
+      },
+      "Compiled_NodeGUID": "507CB008-4EE654D5-EFF2C1BD-0DCCBCE4"
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch",
+    "Name": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0",
+    "Outer": "Speech_C_4",
+    "Properties": {
+      "days": 7
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_HasBars",
+    "Name": "FortControllerRequirement_HasBars_0",
+    "Outer": "Speech_C_4",
+    "Properties": {
+      "ThresholdTestConfig": {
+        "Requirement": "EThresholdRequirement::GreaterThan",
+        "Quantity": {
+          "Value": 3000.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_HasVisitedPOI",
+    "Name": "FortControllerRequirement_HasVisitedPOI_0",
+    "Outer": "Speech_C_4",
+    "Properties": {
+      "POITag": {
+        "TagName": "Athena.Location.POI.PretzelCrater"
+      }
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_IsFirstEverConversationWithNPC",
+    "Name": "FortControllerRequirement_IsFirstEverConversationWithNPC_0",
+    "Outer": "Speech_C_4"
+  },
+  {
+    "Type": "Speech_C",
+    "Name": "Speech_C_4",
+    "Outer": "NPCLibrary_Conversation_DarkJonesy",
+    "Template": "Default__Speech_C",
+    "Properties": {
+      "SpeakerTag": {
+        "TagName": "Conversation.Participant.NPC"
+      },
+      "ListenerTag": {
+        "TagName": "Conversation.Participant.Player"
+      },
+      "GeneralConfig": {
+        "ContextualMessages": [
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "D5B1719546149FC038F505BFCF0DEDC0",
+              "SourceString": "I should have foreseen your return. "
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch NPCLibrary_Conversation_DarkJonesy:Speech_C_4.FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/DarkJonesy/DarkJonesy/NPCLibrary_Conversation_DarkJonesy.4"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.WhileSincePlayed"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MetadataParameters": []
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "83687CA342A7B573C8A2298FE9FFB6A4",
+              "SourceString": " How bad was it? The Cube site?"
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "FortControllerRequirement_HasVisitedPOI NPCLibrary_Conversation_DarkJonesy:Speech_C_4.FortControllerRequirement_HasVisitedPOI_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/DarkJonesy/DarkJonesy/NPCLibrary_Conversation_DarkJonesy.6"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.VisitedSpecificPOI"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MetadataParameters": []
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "A5321B7642794F960E8B068F11EF3DC1",
+              "SourceString": "You've come to help us. But I don't know how... or why..."
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC NPCLibrary_Conversation_DarkJonesy:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/DarkJonesy/DarkJonesy/NPCLibrary_Conversation_DarkJonesy.7"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MetadataParameters": []
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "A15FCEEF4CE8DCDDA6B625B88E339922",
+              "SourceString": "Bars won't help us out of this one."
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "FortControllerRequirement_HasBars NPCLibrary_Conversation_DarkJonesy:Speech_C_4.FortControllerRequirement_HasBars_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/DarkJonesy/DarkJonesy/NPCLibrary_Conversation_DarkJonesy.5"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.HighTotalBars"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MetadataParameters": []
+          }
+        ],
+        "DefaultMessage": {
+          "Namespace": "",
+          "Key": "E9AD49F74B73266519BEFD8ED78B2FCB",
+          "SourceString": "The future used to be so clear..."
+        }
+      },
+      "OutputConnections": [
+        "507CB008-4EE654D5-EFF2C1BD-0DCCBCE4",
+        "6CCC96D3-4F0CEFF9-4B735684-967C7C3F"
+      ],
+      "NodeName": "",
+      "Compiled_NodeGUID": "A1B7D8D7-4FD849D9-C292D4AE-F330FB9B"
+    }
+  }
+]

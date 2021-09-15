@@ -1,0 +1,125 @@
+[
+  {
+    "Type": "ConversationDatabase",
+    "Name": "NPCLibrary_Conversation_Sorana",
+    "Properties": {
+      "CompilerVersion": 2,
+      "ReachableNodeMap": {},
+      "EntryTags": [
+        {
+          "EntryTag": {
+            "TagName": "Conversation.Entry.Sorana"
+          },
+          "DestinationList": [
+            "68139566-46AC954F-12757897-1E965985"
+          ]
+        }
+      ],
+      "ExitTags": [
+        "Conversation.Entry.BasicServices",
+        "Conversation.Entry.NPCLibrary.Quests"
+      ],
+      "InternalNodeIds": [
+        "68139566-46AC954F-12757897-1E965985",
+        "0896DDFA-44AB39CF-960A65A9-030D6619",
+        "51FF1E29-4B44D9AE-19404786-6AE51748",
+        "2D5D48F6-4B1E0A6B-ABB9E59C-A4C5740D"
+      ],
+      "Speakers": [
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.Player"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.406108,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "0068FF"
+          }
+        },
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.NPC"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.065123,
+            "B": 0.1875,
+            "A": 1.0,
+            "Hex": "001130"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ConversationEntryPointNode",
+    "Name": "ConversationEntryPointNode_7",
+    "Outer": "NPCLibrary_Conversation_Sorana",
+    "Properties": {
+      "EntryTag": {
+        "TagName": "Conversation.Entry.Sorana"
+      },
+      "OutputConnections": [
+        "0896DDFA-44AB39CF-960A65A9-030D6619"
+      ],
+      "Compiled_NodeGUID": "68139566-46AC954F-12757897-1E965985"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_0",
+    "Outer": "NPCLibrary_Conversation_Sorana",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.BasicServices"
+      },
+      "Compiled_NodeGUID": "51FF1E29-4B44D9AE-19404786-6AE51748"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_1",
+    "Outer": "NPCLibrary_Conversation_Sorana",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.NPCLibrary.Quests"
+      },
+      "Compiled_NodeGUID": "2D5D48F6-4B1E0A6B-ABB9E59C-A4C5740D"
+    }
+  },
+  {
+    "Type": "Speech_C",
+    "Name": "Speech_C_4",
+    "Outer": "NPCLibrary_Conversation_Sorana",
+    "Template": "Default__Speech_C",
+    "Properties": {
+      "SpeakerTag": {
+        "TagName": "Conversation.Participant.NPC"
+      },
+      "ListenerTag": {
+        "TagName": "Conversation.Participant.Player"
+      },
+      "GeneralConfig": {
+        "DefaultMessage": {
+          "Namespace": "",
+          "Key": "C8A9B2204418588BEC1080AD8A46F168",
+          "SourceString": "Default Message"
+        }
+      },
+      "OutputConnections": [
+        "2D5D48F6-4B1E0A6B-ABB9E59C-A4C5740D",
+        "51FF1E29-4B44D9AE-19404786-6AE51748"
+      ],
+      "NodeName": "",
+      "Compiled_NodeGUID": "0896DDFA-44AB39CF-960A65A9-030D6619"
+    }
+  }
+]

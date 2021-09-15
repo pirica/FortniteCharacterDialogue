@@ -1,0 +1,125 @@
+[
+  {
+    "Type": "ConversationDatabase",
+    "Name": "NPCLibrary_Conversation_Prisoner",
+    "Properties": {
+      "CompilerVersion": 2,
+      "ReachableNodeMap": {},
+      "EntryTags": [
+        {
+          "EntryTag": {
+            "TagName": "Conversation.Entry.Prisoner"
+          },
+          "DestinationList": [
+            "2C8C8213-4AAD0412-7FB1A7B0-DC5CB3AB"
+          ]
+        }
+      ],
+      "ExitTags": [
+        "Conversation.Entry.BasicServices",
+        "Conversation.Entry.NPCLibrary.Quests"
+      ],
+      "InternalNodeIds": [
+        "2C8C8213-4AAD0412-7FB1A7B0-DC5CB3AB",
+        "C7C7E33E-43969393-B8889E9A-8F3C7668",
+        "A58808D5-43F47A43-01401589-CF606AC6",
+        "15A94529-4104F8A7-1B4EFDA2-7719B9DC"
+      ],
+      "Speakers": [
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.Player"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.406108,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "0068FF"
+          }
+        },
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.NPC"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.065123,
+            "B": 0.1875,
+            "A": 1.0,
+            "Hex": "001130"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ConversationEntryPointNode",
+    "Name": "ConversationEntryPointNode_7",
+    "Outer": "NPCLibrary_Conversation_Prisoner",
+    "Properties": {
+      "EntryTag": {
+        "TagName": "Conversation.Entry.Prisoner"
+      },
+      "OutputConnections": [
+        "C7C7E33E-43969393-B8889E9A-8F3C7668"
+      ],
+      "Compiled_NodeGUID": "2C8C8213-4AAD0412-7FB1A7B0-DC5CB3AB"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_0",
+    "Outer": "NPCLibrary_Conversation_Prisoner",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.BasicServices"
+      },
+      "Compiled_NodeGUID": "A58808D5-43F47A43-01401589-CF606AC6"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_1",
+    "Outer": "NPCLibrary_Conversation_Prisoner",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.NPCLibrary.Quests"
+      },
+      "Compiled_NodeGUID": "15A94529-4104F8A7-1B4EFDA2-7719B9DC"
+    }
+  },
+  {
+    "Type": "Speech_C",
+    "Name": "Speech_C_4",
+    "Outer": "NPCLibrary_Conversation_Prisoner",
+    "Template": "Default__Speech_C",
+    "Properties": {
+      "SpeakerTag": {
+        "TagName": "Conversation.Participant.NPC"
+      },
+      "ListenerTag": {
+        "TagName": "Conversation.Participant.Player"
+      },
+      "GeneralConfig": {
+        "DefaultMessage": {
+          "Namespace": "",
+          "Key": "619574AA4D07B1E7F1BA21A678486F3F",
+          "SourceString": "Default Message"
+        }
+      },
+      "OutputConnections": [
+        "15A94529-4104F8A7-1B4EFDA2-7719B9DC",
+        "A58808D5-43F47A43-01401589-CF606AC6"
+      ],
+      "NodeName": "",
+      "Compiled_NodeGUID": "C7C7E33E-43969393-B8889E9A-8F3C7668"
+    }
+  }
+]
