@@ -4,7 +4,7 @@
     "Name": "Quest_S18_Repeatable_Ignite_Opponent",
     "Properties": {
       "QuestType": "EFortQuestType::AthenaTransientQuest",
-      "QuestSubtype": "EFortQuestSubtype::EFortQuestSubtype_MAX",
+      "QuestSubtype": "EFortQuestSubtype::Autofill",
       "TandemCharacterData": {
         "AssetPathName": "/NPCLibrary/NPCs/VendingLlama/NPCCharacterData_VendingLlama.NPCCharacterData_VendingLlama",
         "SubPathString": ""
@@ -106,16 +106,35 @@
           }
         }
       ],
-      "NPCInteractionText": {
+      "CompletionText": {
         "Namespace": "Quest_S18_Repeatable_Ignite_Opponent",
         "Key": "Quest_S18_Repeatable_Ignite_Opponent_CompletionText",
         "SourceString": "That'll warm 'em up!"
       },
-      "bHideQuestProgressNotification": true,
-      "OnItemCountChanged": {
-        "InvocationList": []
+      "QuestAbilitySet": {
+        "AssetPathName": "/BattlepassS18/Items/QuestAbilities/Quest_Ignite/GAS_Quest_S18_Ignite_Opponents.GAS_Quest_S18_Ignite_Opponents",
+        "SubPathString": ""
       },
-      "ItemType": "EFortItemType::WorldItem"
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Common",
+      "DisplayName": {
+        "Namespace": "Quest_S18_Repeatable_Ignite_Opponent",
+        "Key": "Quest_S18_Repeatable_Ignite_Opponent_DisplayName",
+        "SourceString": "Ignite an opponent with fire"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S18_Repeatable_Ignite_Opponent",
+        "Key": "Quest_S18_Repeatable_Ignite_Opponent_ShortDescription",
+        "SourceString": "Aww, they look cold."
+      },
+      "Description": {
+        "Namespace": "Quest_S18_Repeatable_Ignite_Opponent",
+        "Key": "Quest_S18_Repeatable_Ignite_Opponent_Description",
+        "SourceString": "Ignite an opponent with fire"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.Bars"
+      ]
     }
   }
 ]

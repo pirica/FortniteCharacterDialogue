@@ -1,0 +1,450 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_PlayerPawn_SmallBag",
+    "Outer": "BP_PlayerPawn_SmallBag_C",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetAbilitySystemComponent_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "PropertyClass": {
+          "ObjectName": "Class AbilitySystemComponent",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_RemoveActiveEffectsWithTags_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": 32769
+  },
+  {
+    "Type": "Function",
+    "Name": "SBDeployShield",
+    "Outer": "BP_PlayerPawn_SmallBag_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_PlayerPawn_SmallBag_C",
+    "Super": "BP_PlayerPawn_NonParticipant_Boss_C",
+    "Properties": {
+      "bHasCookedComponentInstancingData": true,
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript BP_PlayerPawn_SmallBag_C:SimpleConstructionScript_0",
+        "ObjectPath": "/CorruptionNPC/NPCs/SmallBag/SmallBag/Pawns/BP_PlayerPawn_SmallBAg.22"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler BP_PlayerPawn_SmallBag_C:InheritableComponentHandler",
+        "ObjectPath": "/CorruptionNPC/NPCs/SmallBag/SmallBag/Pawns/BP_PlayerPawn_SmallBAg.13"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function BP_PlayerPawn_SmallBag_C:ExecuteUbergraph_BP_PlayerPawn_SmallBag",
+        "ObjectPath": "/CorruptionNPC/NPCs/SmallBag/SmallBag/Pawns/BP_PlayerPawn_SmallBAg.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass BP_PlayerPawn_NonParticipant_Boss_C",
+      "ObjectPath": "/Game/Athena/AI/NPCs/Base/BP_PlayerPawn_NonParticipant_Boss.15"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function BP_PlayerPawn_SmallBag_C:SBDeployShield",
+        "ObjectPath": "/CorruptionNPC/NPCs/SmallBag/SmallBag/Pawns/BP_PlayerPawn_SmallBAg.1"
+      },
+      {
+        "ObjectName": "Function BP_PlayerPawn_SmallBag_C:ExecuteUbergraph_BP_PlayerPawn_SmallBag",
+        "ObjectPath": "/CorruptionNPC/NPCs/SmallBag/SmallBag/Pawns/BP_PlayerPawn_SmallBAg.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": 2097153,
+        "ElementSize": 16,
+        "PropertyFlags": 2105344,
+        "Struct": {
+          "ObjectName": "Class PointerToUberGraphFrame",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_PlayerPawn_SmallBag": {
+        "ObjectName": "Function BP_PlayerPawn_SmallBag_C:ExecuteUbergraph_BP_PlayerPawn_SmallBag",
+        "ObjectPath": "/CorruptionNPC/NPCs/SmallBag/SmallBag/Pawns/BP_PlayerPawn_SmallBAg.0"
+      },
+      "SBDeployShield": {
+        "ObjectName": "Function BP_PlayerPawn_SmallBag_C:SBDeployShield",
+        "ObjectPath": "/CorruptionNPC/NPCs/SmallBag/SmallBag/Pawns/BP_PlayerPawn_SmallBAg.1"
+      }
+    },
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_PlayerPawn_SmallBag_C Default__BP_PlayerPawn_SmallBag_C",
+      "ObjectPath": "/CorruptionNPC/NPCs/SmallBag/SmallBag/Pawns/BP_PlayerPawn_SmallBAg.3"
+    }
+  },
+  {
+    "Type": "BP_PlayerPawn_SmallBag_C",
+    "Name": "Default__BP_PlayerPawn_SmallBag_C",
+    "Template": "Default__BP_PlayerPawn_NonParticipant_Boss_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "ShowHealth": true,
+      "PatrolAnimSetPairs": [
+        {
+          "WeaponType": "EFortWeaponCoreAnimation::AssaultRifle",
+          "DataAsset": {
+            "ObjectName": "FortPatrolAnimAsset AssaultRiflePatrolAnimSet",
+            "ObjectPath": "/Game/Athena/AI/MANG/AnimSet/AssaultRiflePatrolAnimSet.0"
+          }
+        },
+        {
+          "WeaponType": "EFortWeaponCoreAnimation::GoingCommando",
+          "DataAsset": {
+            "ObjectName": "FortPatrolAnimAsset Patrol_Minigun_AnimSet",
+            "ObjectPath": "/Game/Athena/AI/MANG/AnimSet/Patrol_Minigun_AnimSet.0"
+          }
+        }
+      ],
+      "Quantize VO To Music": true,
+      "VO QuantizationClockName": "Music_Inner_Cue",
+      "InAirAudioComp": {
+        "ObjectName": "AudioComponent Default__BP_PlayerPawn_SmallBag_C:InAirAudioComp",
+        "ObjectPath": "/CorruptionNPC/NPCs/SmallBag/SmallBag/Pawns/BP_PlayerPawn_SmallBAg.5"
+      },
+      "PSC_PlayerWalkLand": {
+        "ObjectName": "ParticleSystemComponent Default__BP_PlayerPawn_SmallBag_C:PlayerWalkLandFX",
+        "ObjectPath": "/CorruptionNPC/NPCs/SmallBag/SmallBag/Pawns/BP_PlayerPawn_SmallBAg.19"
+      },
+      "PSC_PlayerRunLand": {
+        "ObjectName": "ParticleSystemComponent Default__BP_PlayerPawn_SmallBag_C:PlayerRunLandFX",
+        "ObjectPath": "/CorruptionNPC/NPCs/SmallBag/SmallBag/Pawns/BP_PlayerPawn_SmallBAg.17"
+      },
+      "PSC_PlayerSlideLand": {
+        "ObjectName": "ParticleSystemComponent Default__BP_PlayerPawn_SmallBag_C:PlayerSlideLandFX",
+        "ObjectPath": "/CorruptionNPC/NPCs/SmallBag/SmallBag/Pawns/BP_PlayerPawn_SmallBAg.18"
+      },
+      "PSC_HitDamage": {
+        "ObjectName": "ParticleSystemComponent Default__BP_PlayerPawn_SmallBag_C:HitDamageFX",
+        "ObjectPath": "/CorruptionNPC/NPCs/SmallBag/SmallBag/Pawns/BP_PlayerPawn_SmallBAg.14"
+      },
+      "ConvertComponent": {
+        "ObjectName": "FortPawnComponent_Convert Default__BP_PlayerPawn_SmallBag_C:ConvertComp",
+        "ObjectPath": "/CorruptionNPC/NPCs/SmallBag/SmallBag/Pawns/BP_PlayerPawn_SmallBAg.10"
+      },
+      "AffiliationComponent": {
+        "ObjectName": "FortActorComponent_Affiliation Default__BP_PlayerPawn_SmallBag_C:AffiliationComponent",
+        "ObjectPath": "/CorruptionNPC/NPCs/SmallBag/SmallBag/Pawns/BP_PlayerPawn_SmallBAg.7"
+      },
+      "TetherComponent": {
+        "ObjectName": "FortPawnComponent_Tether Default__BP_PlayerPawn_SmallBag_C:TetherComp",
+        "ObjectPath": "/CorruptionNPC/NPCs/SmallBag/SmallBag/Pawns/BP_PlayerPawn_SmallBAg.11"
+      },
+      "PSC_PlayerInWater": {
+        "ObjectName": "ParticleSystemComponent Default__BP_PlayerPawn_SmallBag_C:PlayerInWaterFX",
+        "ObjectPath": "/CorruptionNPC/NPCs/SmallBag/SmallBag/Pawns/BP_PlayerPawn_SmallBAg.15"
+      },
+      "PSC_PlayerInWaterSurfaceSwimming": {
+        "ObjectName": "ParticleSystemComponent Default__BP_PlayerPawn_SmallBag_C:PlayerInWaterSurfaceSwimmingFX",
+        "ObjectPath": "/CorruptionNPC/NPCs/SmallBag/SmallBag/Pawns/BP_PlayerPawn_SmallBAg.16"
+      },
+      "VocalChords": [
+        {
+          "FeedbackAudioComponent": {
+            "ObjectName": "AudioComponent Default__BP_PlayerPawn_SmallBag_C:FeedbackAudioComp0",
+            "ObjectPath": "/CorruptionNPC/NPCs/SmallBag/SmallBag/Pawns/BP_PlayerPawn_SmallBAg.4"
+          },
+          "ReplicatedSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          },
+          "PendingSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          },
+          "QueuedSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          },
+          "CurrentSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          }
+        }
+      ],
+      "Mesh": {
+        "ObjectName": "FortPooledSkelMeshComponent Default__BP_PlayerPawn_SmallBag_C:CharacterMesh0",
+        "ObjectPath": "/CorruptionNPC/NPCs/SmallBag/SmallBag/Pawns/BP_PlayerPawn_SmallBAg.12"
+      },
+      "CharacterMovement": {
+        "ObjectName": "FortMovementComp_CharacterAthena Default__BP_PlayerPawn_SmallBag_C:CharMoveComp",
+        "ObjectPath": "/CorruptionNPC/NPCs/SmallBag/SmallBag/Pawns/BP_PlayerPawn_SmallBAg.9"
+      },
+      "CapsuleComponent": {
+        "ObjectName": "CapsuleComponent Default__BP_PlayerPawn_SmallBag_C:CollisionCylinder",
+        "ObjectPath": "/CorruptionNPC/NPCs/SmallBag/SmallBag/Pawns/BP_PlayerPawn_SmallBAg.6"
+      },
+      "RootComponent": {
+        "ObjectName": "CapsuleComponent Default__BP_PlayerPawn_SmallBag_C:CollisionCylinder",
+        "ObjectPath": "/CorruptionNPC/NPCs/SmallBag/SmallBag/Pawns/BP_PlayerPawn_SmallBAg.6"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "FeedbackAudioComp0",
+    "Outer": "Default__BP_PlayerPawn_SmallBag_C",
+    "Template": "FeedbackAudioComp0",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent Default__BP_PlayerPawn_SmallBag_C:CollisionCylinder",
+        "ObjectPath": "/CorruptionNPC/NPCs/SmallBag/SmallBag/Pawns/BP_PlayerPawn_SmallBAg.6"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "InAirAudioComp",
+    "Outer": "Default__BP_PlayerPawn_SmallBag_C",
+    "Template": "InAirAudioComp",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "FortPooledSkelMeshComponent Default__BP_PlayerPawn_SmallBag_C:CharacterMesh0",
+        "ObjectPath": "/CorruptionNPC/NPCs/SmallBag/SmallBag/Pawns/BP_PlayerPawn_SmallBAg.12"
+      }
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "CollisionCylinder",
+    "Outer": "Default__BP_PlayerPawn_SmallBag_C",
+    "Template": "CollisionCylinder",
+    "Properties": {
+      "RelativeScale3D": {
+        "X": 1.5,
+        "Y": 1.5,
+        "Z": 1.5
+      }
+    }
+  },
+  {
+    "Type": "FortActorComponent_Affiliation",
+    "Name": "AffiliationComponent",
+    "Outer": "Default__BP_PlayerPawn_SmallBag_C",
+    "Template": "AffiliationComponent"
+  },
+  {
+    "Type": "FortGenericDataStoreManagerComponent",
+    "Name": "GeneralDataStore",
+    "Outer": "Default__BP_PlayerPawn_SmallBag_C",
+    "Template": "GeneralDataStore"
+  },
+  {
+    "Type": "FortMovementComp_CharacterAthena",
+    "Name": "CharMoveComp",
+    "Outer": "Default__BP_PlayerPawn_SmallBag_C",
+    "Template": "CharMoveComp"
+  },
+  {
+    "Type": "FortPawnComponent_Convert",
+    "Name": "ConvertComp",
+    "Outer": "Default__BP_PlayerPawn_SmallBag_C",
+    "Template": "ConvertComp"
+  },
+  {
+    "Type": "FortPawnComponent_Tether",
+    "Name": "TetherComp",
+    "Outer": "Default__BP_PlayerPawn_SmallBag_C",
+    "Template": "TetherComp"
+  },
+  {
+    "Type": "FortPooledSkelMeshComponent",
+    "Name": "CharacterMesh0",
+    "Outer": "Default__BP_PlayerPawn_SmallBag_C",
+    "Template": "CharacterMesh0",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent Default__BP_PlayerPawn_SmallBag_C:CollisionCylinder",
+        "ObjectPath": "/CorruptionNPC/NPCs/SmallBag/SmallBag/Pawns/BP_PlayerPawn_SmallBAg.6"
+      }
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "BP_PlayerPawn_SmallBag_C"
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "HitDamageFX",
+    "Outer": "Default__BP_PlayerPawn_SmallBag_C",
+    "Template": "HitDamageFX",
+    "Properties": {
+      "AutoAttachParent": {
+        "ObjectName": "CapsuleComponent Default__BP_PlayerPawn_SmallBag_C:CollisionCylinder",
+        "ObjectPath": "/CorruptionNPC/NPCs/SmallBag/SmallBag/Pawns/BP_PlayerPawn_SmallBAg.6"
+      },
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent Default__BP_PlayerPawn_SmallBag_C:CollisionCylinder",
+        "ObjectPath": "/CorruptionNPC/NPCs/SmallBag/SmallBag/Pawns/BP_PlayerPawn_SmallBAg.6"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "PlayerInWaterFX",
+    "Outer": "Default__BP_PlayerPawn_SmallBag_C",
+    "Template": "PlayerInWaterFX",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent Default__BP_PlayerPawn_SmallBag_C:CollisionCylinder",
+        "ObjectPath": "/CorruptionNPC/NPCs/SmallBag/SmallBag/Pawns/BP_PlayerPawn_SmallBAg.6"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "PlayerInWaterSurfaceSwimmingFX",
+    "Outer": "Default__BP_PlayerPawn_SmallBag_C",
+    "Template": "PlayerInWaterSurfaceSwimmingFX",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent Default__BP_PlayerPawn_SmallBag_C:CollisionCylinder",
+        "ObjectPath": "/CorruptionNPC/NPCs/SmallBag/SmallBag/Pawns/BP_PlayerPawn_SmallBAg.6"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "PlayerRunLandFX",
+    "Outer": "Default__BP_PlayerPawn_SmallBag_C",
+    "Template": "PlayerRunLandFX",
+    "Properties": {
+      "AutoAttachParent": {
+        "ObjectName": "FortPooledSkelMeshComponent Default__BP_PlayerPawn_SmallBag_C:CharacterMesh0",
+        "ObjectPath": "/CorruptionNPC/NPCs/SmallBag/SmallBag/Pawns/BP_PlayerPawn_SmallBAg.12"
+      },
+      "AttachParent": {
+        "ObjectName": "FortPooledSkelMeshComponent Default__BP_PlayerPawn_SmallBag_C:CharacterMesh0",
+        "ObjectPath": "/CorruptionNPC/NPCs/SmallBag/SmallBag/Pawns/BP_PlayerPawn_SmallBAg.12"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "PlayerSlideLandFX",
+    "Outer": "Default__BP_PlayerPawn_SmallBag_C",
+    "Template": "PlayerSlideLandFX",
+    "Properties": {
+      "AutoAttachParent": {
+        "ObjectName": "FortPooledSkelMeshComponent Default__BP_PlayerPawn_SmallBag_C:CharacterMesh0",
+        "ObjectPath": "/CorruptionNPC/NPCs/SmallBag/SmallBag/Pawns/BP_PlayerPawn_SmallBAg.12"
+      },
+      "AttachParent": {
+        "ObjectName": "FortPooledSkelMeshComponent Default__BP_PlayerPawn_SmallBag_C:CharacterMesh0",
+        "ObjectPath": "/CorruptionNPC/NPCs/SmallBag/SmallBag/Pawns/BP_PlayerPawn_SmallBAg.12"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "PlayerWalkLandFX",
+    "Outer": "Default__BP_PlayerPawn_SmallBag_C",
+    "Template": "PlayerWalkLandFX",
+    "Properties": {
+      "AutoAttachParent": {
+        "ObjectName": "FortPooledSkelMeshComponent Default__BP_PlayerPawn_SmallBag_C:CharacterMesh0",
+        "ObjectPath": "/CorruptionNPC/NPCs/SmallBag/SmallBag/Pawns/BP_PlayerPawn_SmallBAg.12"
+      },
+      "AttachParent": {
+        "ObjectName": "FortPooledSkelMeshComponent Default__BP_PlayerPawn_SmallBag_C:CharacterMesh0",
+        "ObjectPath": "/CorruptionNPC/NPCs/SmallBag/SmallBag/Pawns/BP_PlayerPawn_SmallBAg.12"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_PlayerPawn_SmallBag_C"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class SceneComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent BP_PlayerPawn_SmallBag_C:DefaultSceneRoot_GEN_VARIABLE",
+        "ObjectPath": "/CorruptionNPC/NPCs/SmallBag/SmallBag/Pawns/BP_PlayerPawn_SmallBAg.20"
+      },
+      "VariableGuid": "A018CE45-48D99066-F43EE392-832F5458",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_PlayerPawn_SmallBag_C",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node BP_PlayerPawn_SmallBag_C:SimpleConstructionScript_0.SCS_Node_0",
+        "ObjectPath": "/CorruptionNPC/NPCs/SmallBag/SmallBag/Pawns/BP_PlayerPawn_SmallBAg.21"
+      }
+    }
+  }
+]

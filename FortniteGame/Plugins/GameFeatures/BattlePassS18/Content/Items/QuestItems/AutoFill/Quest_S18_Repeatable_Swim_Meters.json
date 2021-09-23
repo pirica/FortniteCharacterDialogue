@@ -4,7 +4,7 @@
     "Name": "Quest_S18_Repeatable_Swim_Meters",
     "Properties": {
       "QuestType": "EFortQuestType::AthenaTransientQuest",
-      "QuestSubtype": "EFortQuestSubtype::EFortQuestSubtype_MAX",
+      "QuestSubtype": "EFortQuestSubtype::Autofill",
       "TandemCharacterData": {
         "AssetPathName": "/NPCLibrary/NPCs/VendingLlama/NPCCharacterData_VendingLlama.NPCCharacterData_VendingLlama",
         "SubPathString": ""
@@ -106,16 +106,35 @@
           }
         }
       ],
-      "NPCInteractionText": {
+      "CompletionText": {
         "Namespace": "Quest_S18_Repeatable_Swim_Meters",
         "Key": "Quest_S18_Repeatable_Swim_Meters_CompletionText",
         "SourceString": "If you swim with the current, you can get places faster!"
       },
-      "bHideQuestProgressNotification": true,
-      "OnItemCountChanged": {
-        "InvocationList": []
+      "QuestAbilitySet": {
+        "AssetPathName": "/BattlepassS18/Items/QuestAbilities/Milestone/SwimDistance/GAS_Quest_Milestone_SwimDistance.GAS_Quest_Milestone_SwimDistance",
+        "SubPathString": ""
       },
-      "ItemType": "EFortItemType::WorldItem"
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Common",
+      "DisplayName": {
+        "Namespace": "Quest_S18_Repeatable_Swim_Meters",
+        "Key": "Quest_S18_Repeatable_Swim_Meters_DisplayName",
+        "SourceString": "Travel distance while swimming"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S18_Repeatable_Swim_Meters",
+        "Key": "Quest_S18_Repeatable_Swim_Meters_ShortDescription",
+        "SourceString": "We can go for a swim. I'm waterproof, you know!"
+      },
+      "Description": {
+        "Namespace": "Quest_S18_Repeatable_Swim_Meters",
+        "Key": "Quest_S18_Repeatable_Swim_Meters_Description",
+        "SourceString": "Travel distance while swimming"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.Bars"
+      ]
     }
   }
 ]

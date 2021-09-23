@@ -4,7 +4,7 @@
     "Name": "Quest_S18_Repeatable_Reach100HealthAndShield",
     "Properties": {
       "QuestType": "EFortQuestType::AthenaTransientQuest",
-      "QuestSubtype": "EFortQuestSubtype::EFortQuestSubtype_MAX",
+      "QuestSubtype": "EFortQuestSubtype::Autofill",
       "TandemCharacterData": {
         "AssetPathName": "/NPCLibrary/NPCs/VendingLlama/NPCCharacterData_VendingLlama.NPCCharacterData_VendingLlama",
         "SubPathString": ""
@@ -99,16 +99,35 @@
           }
         }
       ],
-      "NPCInteractionText": {
+      "CompletionText": {
         "Namespace": "Quest_S18_Repeatable_Reach100HealthAndShield",
         "Key": "Quest_S18_Repeatable_Reach100HealthAndShield_CompletionText",
         "SourceString": "As your AI assistant, it's my job to keep you safe!"
       },
-      "bHideQuestProgressNotification": true,
-      "OnItemCountChanged": {
-        "InvocationList": []
+      "QuestAbilitySet": {
+        "AssetPathName": "/BattlePassS18/Items/QuestAbilities/Quest_Full_Health_Shield/GAS_Quest_Full_Health_Shield.GAS_Quest_Full_Health_Shield",
+        "SubPathString": ""
       },
-      "ItemType": "EFortItemType::WorldItem"
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Common",
+      "DisplayName": {
+        "Namespace": "Quest_S18_Repeatable_Reach100HealthAndShield",
+        "Key": "Quest_S18_Repeatable_Reach100HealthAndShield_DisplayName",
+        "SourceString": "Reach 100 of both Health and Shield"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S18_Repeatable_Reach100HealthAndShield",
+        "Key": "Quest_S18_Repeatable_Reach100HealthAndShield_ShortDescription",
+        "SourceString": "I'd love to see you all healthy and... shield-y."
+      },
+      "Description": {
+        "Namespace": "Quest_S18_Repeatable_Reach100HealthAndShield",
+        "Key": "Quest_S18_Repeatable_Reach100HealthAndShield_Description",
+        "SourceString": "Reach 100 of both Health and Shield"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.Bars"
+      ]
     }
   }
 ]

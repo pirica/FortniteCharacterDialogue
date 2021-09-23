@@ -4,7 +4,7 @@
     "Name": "Quest_S18_Repeatable_Bring_Car_ScrapYard",
     "Properties": {
       "QuestType": "EFortQuestType::AthenaTransientQuest",
-      "QuestSubtype": "EFortQuestSubtype::EFortQuestSubtype_MAX",
+      "QuestSubtype": "EFortQuestSubtype::Autofill",
       "TandemCharacterData": {
         "AssetPathName": "/NPCLibrary/NPCs/VendingLlama/NPCCharacterData_VendingLlama.NPCCharacterData_VendingLlama",
         "SubPathString": ""
@@ -99,16 +99,37 @@
           }
         }
       ],
-      "NPCInteractionText": {
+      "CompletionText": {
         "Namespace": "Quest_S18_Repeatable_Bring_Car_ScrapYard",
         "Key": "Quest_S18_Repeatable_Bring_Car_ScrapYard_CompletionText",
         "SourceString": "Cars on cars on cars! It's cars all the way down!"
       },
-      "bHideQuestProgressNotification": true,
-      "OnItemCountChanged": {
-        "InvocationList": []
+      "QuestAbilitySet": {
+        "AssetPathName": "/BattlePassS18/Items/QuestAbilities/Quest_Vehicle_Deliver_CompactCars/GAS_Quest_Vehicle_Deliver_CC.GAS_Quest_Vehicle_Deliver_CC",
+        "SubPathString": ""
       },
-      "ItemType": "EFortItemType::WorldItem"
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Common",
+      "DisplayName": {
+        "Namespace": "Quest_S18_Repeatable_Bring_Car_ScrapYard",
+        "Key": "Quest_S18_Repeatable_Bring_Car_ScrapYard_DisplayName",
+        "SourceString": "Bring a car to Compact Cars"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S18_Repeatable_Bring_Car_ScrapYard",
+        "Key": "Quest_S18_Repeatable_Bring_Car_ScrapYard_ShortDescription",
+        "SourceString": "You know what would make this place nice? Another car."
+      },
+      "Description": {
+        "Namespace": "Quest_S18_Repeatable_Bring_Car_ScrapYard",
+        "Key": "Quest_S18_Repeatable_Bring_Car_ScrapYard_Description",
+        "SourceString": "Bring a car to Compact Cars"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.Bars",
+        "Athena.Location.UnnamedPOI.ScrapYard",
+        "Quest.ChallengeIcon.Car"
+      ]
     }
   }
 ]

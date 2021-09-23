@@ -1,0 +1,159 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_GA_PuffyStraw_Timer",
+    "Outer": "GA_PuffyStraw_Timer_C",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_K2_CommitAbility_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetActivatingPawn_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class FortPawn",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetValueAtLevel_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 32769
+  },
+  {
+    "Type": "Function",
+    "Name": "K2_ActivateAbility",
+    "Outer": "GA_PuffyStraw_Timer_C",
+    "SuperStruct": {
+      "ObjectName": "Class GameplayAbility:K2_ActivateAbility",
+      "ObjectPath": "/Script/GameplayAbilities"
+    },
+    "FunctionFlags": 134744064
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GA_PuffyStraw_Timer_C",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function GA_PuffyStraw_Timer_C:ExecuteUbergraph_GA_PuffyStraw_Timer",
+        "ObjectPath": "/CorruptionNPC/Abilities/GA_PuffyStraw_Timer.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class FortGameplayAbility",
+      "ObjectPath": "/Script/FortniteGame"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function GA_PuffyStraw_Timer_C:K2_ActivateAbility",
+        "ObjectPath": "/CorruptionNPC/Abilities/GA_PuffyStraw_Timer.1"
+      },
+      {
+        "ObjectName": "Function GA_PuffyStraw_Timer_C:ExecuteUbergraph_GA_PuffyStraw_Timer",
+        "ObjectPath": "/CorruptionNPC/Abilities/GA_PuffyStraw_Timer.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": 2097153,
+        "ElementSize": 16,
+        "PropertyFlags": 2105344,
+        "Struct": {
+          "ObjectName": "Class PointerToUberGraphFrame",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "LifeTime",
+        "Flags": 2097153,
+        "ElementSize": 56,
+        "PropertyFlags": 65541,
+        "Struct": {
+          "ObjectName": "Class ScalableFloat",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_GA_PuffyStraw_Timer": {
+        "ObjectName": "Function GA_PuffyStraw_Timer_C:ExecuteUbergraph_GA_PuffyStraw_Timer",
+        "ObjectPath": "/CorruptionNPC/Abilities/GA_PuffyStraw_Timer.0"
+      },
+      "K2_ActivateAbility": {
+        "ObjectName": "Function GA_PuffyStraw_Timer_C:K2_ActivateAbility",
+        "ObjectPath": "/CorruptionNPC/Abilities/GA_PuffyStraw_Timer.1"
+      }
+    },
+    "ClassFlags": 264208,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GA_PuffyStraw_Timer_C Default__GA_PuffyStraw_Timer_C",
+      "ObjectPath": "/CorruptionNPC/Abilities/GA_PuffyStraw_Timer.3"
+    }
+  },
+  {
+    "Type": "GA_PuffyStraw_Timer_C",
+    "Name": "Default__GA_PuffyStraw_Timer_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "LifeTime": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "CurveTable CorruptionNPC_Data",
+            "ObjectPath": "/CorruptionNPC/DataTables/CorruptionNPC_Data.0"
+          },
+          "RowName": "Default.SmallBag.LifeTime"
+        },
+        "RegistryType": {
+          "Name": null
+        }
+      },
+      "InstancingPolicy": "EGameplayAbilityInstancingPolicy::InstancedPerActor"
+    }
+  }
+]
