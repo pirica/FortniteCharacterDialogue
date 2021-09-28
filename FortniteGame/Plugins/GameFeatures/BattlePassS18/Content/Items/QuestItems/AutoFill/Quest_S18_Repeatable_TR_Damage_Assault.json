@@ -11,6 +11,17 @@
       },
       "bIncludedInCategories": false,
       "bIsShared": true,
+      "Rewards": [
+        {
+          "ItemPrimaryAssetId": {
+            "PrimaryAssetType": {
+              "Name": "Quest"
+            },
+            "PrimaryAssetName": "Quest_S18_Repeatable_TR_Damage_Assault_q02"
+          },
+          "Quantity": 1
+        }
+      ],
       "RewardsTable": {
         "ObjectName": "DataTable ChallengeReward_S18_ShardQuest_C",
         "ObjectPath": "/BattlePassS18/Items/QuestRewards/ChallengeReward_S18_ShardQuest_C.0"
@@ -41,12 +52,26 @@
                   },
                   "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
                   "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Pawn.Athena.NPC.Bud"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": false
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
                 }
               ],
-              "Condition": "Target.Tags HasTag Homebase.Class || Target.Tags HasTag Athena.Faction.Generic.Hostile || Target.Tags HasTag Pawn.Athena.NPC.Duel.IsBeingChallenged || Target.Tags HasTag Pawn.Athena.NPC.Wildlife.Predator || Target.Tags HasTag Pawn.Athena.NPC.Mang || Target.Tags HasTag Pawn.Athena.NPC.IO || Target.Tags HasTag AISpawnerData.Type.MotherWall || Target.Tags HasTag Pawn.Athena.NPC.Labrador",
+              "Condition": "",
               "TemplateIds": [],
               "Type": "EFortQuestObjectiveStatEvent::Damage",
-              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveTargetTags": true,
               "bHasInclusiveSourceTags": true,
               "bHasInclusiveContextTags": true
             }
@@ -73,19 +98,19 @@
           "LinkSquadIndex": 0,
           "Description": {
             "Namespace": "",
-            "Key": "2A5F02014BF65F032CF094B28CB4A3AD",
-            "SourceString": "Deal damage with assault rifles"
+            "Key": "2CFC2C1E4FBC44B9462C9198746DBBE2",
+            "SourceString": "Deal damage to players with assault rifles"
           },
           "HudShortDescription": {
             "Namespace": "",
-            "Key": "ACEB7DDD4B42F34C08DCC69BDFC89B06",
+            "Key": "07FA8D734CAA7AAB6734E2848A154A74",
             "SourceString": "Ready to pick up an AR and help your team, bud?"
           },
           "HudIcon": {
             "AssetPathName": "None",
             "SubPathString": ""
           },
-          "Count": 1000,
+          "Count": 500,
           "Stage": -1,
           "DynamicStatusUpdatePercentInterval": 25,
           "DynamicUpdateCompletionDelay": 1.0,
@@ -104,12 +129,14 @@
         "Key": "Quest_S18_Repeatable_TR_Damage_Assault_CompletionText",
         "SourceString": "You were ready! I knew it!"
       },
+      "TransientQuestStage": 1,
+      "TransientQuestMaxStage": 5,
       "GrantToProfileType": "athena",
       "Rarity": "EFortRarity::Common",
       "DisplayName": {
         "Namespace": "Quest_S18_Repeatable_TR_Damage_Assault",
         "Key": "Quest_S18_Repeatable_TR_Damage_Assault_DisplayName",
-        "SourceString": "Deal damage with assault rifles"
+        "SourceString": "Deal damage to players with assault rifles"
       },
       "ShortDescription": {
         "Namespace": "Quest_S18_Repeatable_TR_Damage_Assault",
@@ -119,7 +146,7 @@
       "Description": {
         "Namespace": "Quest_S18_Repeatable_TR_Damage_Assault",
         "Key": "Quest_S18_Repeatable_TR_Damage_Assault_Description",
-        "SourceString": "Deal damage with assault rifles"
+        "SourceString": "Deal damage to players with assault rifles"
       },
       "GameplayTags": [
         "ChallengeCategory.Bars"

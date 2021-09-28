@@ -4,6 +4,7 @@
     "Name": "quest_s18_milestonestyle_18",
     "Properties": {
       "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "bAthenaGrantRarityToken": false,
       "bIncludedInCategories": false,
       "Objectives": [
         {
@@ -20,16 +21,23 @@
                 },
                 {
                   "Tag": {
-                    "TagName": "Athena.Quests.Blank"
+                    "TagName": "Homebase.Class"
                   },
                   "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Pawn.Athena.NPC.Deimos"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
                   "Require": true
                 }
               ],
               "Condition": "",
               "TemplateIds": [],
-              "Type": "EFortQuestObjectiveStatEvent::ComplexCustom",
-              "bHasInclusiveTargetTags": false,
+              "Type": "EFortQuestObjectiveStatEvent::Kill",
+              "bHasInclusiveTargetTags": true,
               "bHasInclusiveSourceTags": true,
               "bHasInclusiveContextTags": true
             }
@@ -44,7 +52,7 @@
           "bRequirePrimaryMissionCompletion": false,
           "bCanProgressInZone": true,
           "bDisplayDynamicAnnouncementUpdate": false,
-          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Never",
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
           "LinkVaultTab": "EFortInventoryFilter::Max_None",
           "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
           "ItemReference": {
@@ -56,8 +64,8 @@
           "LinkSquadIndex": 0,
           "Description": {
             "Namespace": "",
-            "Key": "34F2DF004E1CC9181E660EB8DA72713D",
-            "SourceString": "[PH] Placeholder"
+            "Key": "151DC8294748EB916F9AF29A7B7384B0",
+            "SourceString": "Eliminate Cube Monsters"
           },
           "HudShortDescription": {
             "CultureInvariantString": null
@@ -66,9 +74,9 @@
             "AssetPathName": "None",
             "SubPathString": ""
           },
-          "Count": 1,
+          "Count": 200,
           "Stage": -1,
-          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicStatusUpdatePercentInterval": 10,
           "DynamicUpdateCompletionDelay": 1.0,
           "ScriptedAction": {
             "AssetPathName": "None",
@@ -83,24 +91,24 @@
       "CompletionText": {
         "Namespace": "quest_s18_milestonestyle_18",
         "Key": "quest_s18_milestonestyle_18_CompletionText",
-        "SourceString": "Quest Completed!"
+        "SourceString": "Toona Fish Character Style unlocked!"
       },
       "GrantToProfileType": "athena",
       "Rarity": "EFortRarity::Epic",
       "DisplayName": {
         "Namespace": "quest_s18_milestonestyle_18",
         "Key": "quest_s18_milestonestyle_18_DisplayName",
-        "SourceString": "[PH] Placeholder"
+        "SourceString": "Eliminate Cube Monsters"
       },
       "ShortDescription": {
         "Namespace": "quest_s18_milestonestyle_18",
         "Key": "quest_s18_milestonestyle_18_ShortDescription",
-        "SourceString": "[PH] Placeholder"
+        "SourceString": "Eliminate Cube Monsters"
       },
       "Description": {
         "Namespace": "quest_s18_milestonestyle_18",
         "Key": "quest_s18_milestonestyle_18_Description",
-        "SourceString": "[PH] Placeholder"
+        "SourceString": "Eliminate Cube Monsters"
       }
     }
   }

@@ -4,6 +4,7 @@
     "Name": "quest_s18_milestonestyle_07",
     "Properties": {
       "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "bAthenaGrantRarityToken": false,
       "bIncludedInCategories": false,
       "bIsShared": true,
       "Objectives": [
@@ -11,28 +12,13 @@
           "BackendName": "quest_s18_milestonestyle_07_obj0",
           "InlineObjectiveStats": [
             {
-              "TagConditions": [
-                {
-                  "Tag": {
-                    "TagName": "Athena.Playlist"
-                  },
-                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
-                  "Require": true
-                },
-                {
-                  "Tag": {
-                    "TagName": "Athena.Quests.Blank"
-                  },
-                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
-                  "Require": true
-                }
-              ],
+              "TagConditions": [],
               "Condition": "",
               "TemplateIds": [],
-              "Type": "EFortQuestObjectiveStatEvent::ComplexCustom",
+              "Type": "EFortQuestObjectiveStatEvent::HasAccumulatedItem",
               "bHasInclusiveTargetTags": false,
-              "bHasInclusiveSourceTags": true,
-              "bHasInclusiveContextTags": true
+              "bHasInclusiveSourceTags": false,
+              "bHasInclusiveContextTags": false
             }
           ],
           "ObjectiveStatHandle": {
@@ -45,7 +31,7 @@
           "bRequirePrimaryMissionCompletion": false,
           "bCanProgressInZone": true,
           "bDisplayDynamicAnnouncementUpdate": false,
-          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Never",
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
           "LinkVaultTab": "EFortInventoryFilter::Max_None",
           "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
           "ItemReference": {
@@ -57,7 +43,7 @@
           "LinkSquadIndex": 0,
           "Description": {
             "Namespace": "",
-            "Key": "4192958D474494C197C3FE9263821496",
+            "Key": "AEEF428D4BB2859FD5A463A7BCC4696D",
             "SourceString": "[PH] Placeholder"
           },
           "HudShortDescription": {

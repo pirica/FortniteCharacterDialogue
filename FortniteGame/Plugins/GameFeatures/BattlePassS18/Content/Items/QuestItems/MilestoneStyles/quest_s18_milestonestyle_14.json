@@ -4,6 +4,7 @@
     "Name": "quest_s18_milestonestyle_14",
     "Properties": {
       "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "bAthenaGrantRarityToken": false,
       "bIncludedInCategories": false,
       "Objectives": [
         {
@@ -20,16 +21,30 @@
                 },
                 {
                   "Tag": {
-                    "TagName": "Athena.Quests.Blank"
+                    "TagName": "Homebase.Class"
                   },
                   "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Granted.Athena.Sideways.InsideSideways"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Building.Type.Container.TreasureChest"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
                   "Require": true
                 }
               ],
               "Condition": "",
               "TemplateIds": [],
-              "Type": "EFortQuestObjectiveStatEvent::ComplexCustom",
-              "bHasInclusiveTargetTags": false,
+              "Type": "EFortQuestObjectiveStatEvent::Interact",
+              "bHasInclusiveTargetTags": true,
               "bHasInclusiveSourceTags": true,
               "bHasInclusiveContextTags": true
             }
@@ -44,7 +59,7 @@
           "bRequirePrimaryMissionCompletion": false,
           "bCanProgressInZone": true,
           "bDisplayDynamicAnnouncementUpdate": false,
-          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Never",
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
           "LinkVaultTab": "EFortInventoryFilter::Max_None",
           "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
           "ItemReference": {
@@ -56,8 +71,8 @@
           "LinkSquadIndex": 0,
           "Description": {
             "Namespace": "",
-            "Key": "9081D61C45E8D2597F3B12B01D0AF5D8",
-            "SourceString": "[PH] Placeholder"
+            "Key": "F32181D64DCC599C30693C87BF325DD8",
+            "SourceString": "Open Chests in The Sideways"
           },
           "HudShortDescription": {
             "CultureInvariantString": null
@@ -66,7 +81,7 @@
             "AssetPathName": "None",
             "SubPathString": ""
           },
-          "Count": 1,
+          "Count": 20,
           "Stage": -1,
           "DynamicStatusUpdatePercentInterval": 25,
           "DynamicUpdateCompletionDelay": 1.0,
@@ -83,24 +98,24 @@
       "CompletionText": {
         "Namespace": "quest_s18_milestonestyle_14",
         "Key": "quest_s18_milestonestyle_14_CompletionText",
-        "SourceString": "Quest Completed!"
+        "SourceString": "Toona Fish Character Style unlocked!"
       },
       "GrantToProfileType": "athena",
       "Rarity": "EFortRarity::Epic",
       "DisplayName": {
         "Namespace": "quest_s18_milestonestyle_14",
         "Key": "quest_s18_milestonestyle_14_DisplayName",
-        "SourceString": "[PH] Placeholder"
+        "SourceString": "Open Chests in The Sideways"
       },
       "ShortDescription": {
         "Namespace": "quest_s18_milestonestyle_14",
         "Key": "quest_s18_milestonestyle_14_ShortDescription",
-        "SourceString": "[PH] Placeholder"
+        "SourceString": "Open Chests in The Sideways"
       },
       "Description": {
         "Namespace": "quest_s18_milestonestyle_14",
         "Key": "quest_s18_milestonestyle_14_Description",
-        "SourceString": "[PH] Placeholder"
+        "SourceString": "Open Chests in The Sideways"
       }
     }
   }

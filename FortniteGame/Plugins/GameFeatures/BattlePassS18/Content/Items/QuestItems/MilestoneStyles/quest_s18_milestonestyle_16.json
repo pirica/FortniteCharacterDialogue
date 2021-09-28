@@ -4,6 +4,7 @@
     "Name": "quest_s18_milestonestyle_16",
     "Properties": {
       "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "bAthenaGrantRarityToken": false,
       "bIncludedInCategories": false,
       "Objectives": [
         {
@@ -20,7 +21,14 @@
                 },
                 {
                   "Tag": {
-                    "TagName": "Athena.Quests.Blank"
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.Quests.VehicleDistance"
                   },
                   "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
                   "Require": true
@@ -44,7 +52,7 @@
           "bRequirePrimaryMissionCompletion": false,
           "bCanProgressInZone": true,
           "bDisplayDynamicAnnouncementUpdate": false,
-          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Never",
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
           "LinkVaultTab": "EFortInventoryFilter::Max_None",
           "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
           "ItemReference": {
@@ -56,8 +64,8 @@
           "LinkSquadIndex": 0,
           "Description": {
             "Namespace": "",
-            "Key": "DABEADC54A93388E0C00D5AF899D77B5",
-            "SourceString": "[PH] Placeholder"
+            "Key": "B489FACD4EF48F7CEC068CB85F2D0D69",
+            "SourceString": "Drive in a vehicle"
           },
           "HudShortDescription": {
             "CultureInvariantString": null
@@ -66,9 +74,9 @@
             "AssetPathName": "None",
             "SubPathString": ""
           },
-          "Count": 1,
+          "Count": 25000,
           "Stage": -1,
-          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicStatusUpdatePercentInterval": 20,
           "DynamicUpdateCompletionDelay": 1.0,
           "ScriptedAction": {
             "AssetPathName": "None",
@@ -83,24 +91,28 @@
       "CompletionText": {
         "Namespace": "quest_s18_milestonestyle_16",
         "Key": "quest_s18_milestonestyle_16_CompletionText",
-        "SourceString": "Quest Completed!"
+        "SourceString": "Toona Fish Character Style unlocked!"
+      },
+      "QuestAbilitySet": {
+        "AssetPathName": "/BattlePassS18/Items/QuestAbilities/Milestone/VehicleDistance/GAS_Quest_Milestone_VehicleDistance.GAS_Quest_Milestone_VehicleDistance",
+        "SubPathString": ""
       },
       "GrantToProfileType": "athena",
       "Rarity": "EFortRarity::Epic",
       "DisplayName": {
         "Namespace": "quest_s18_milestonestyle_16",
         "Key": "quest_s18_milestonestyle_16_DisplayName",
-        "SourceString": "[PH] Placeholder"
+        "SourceString": "Drive in a vehicle"
       },
       "ShortDescription": {
         "Namespace": "quest_s18_milestonestyle_16",
         "Key": "quest_s18_milestonestyle_16_ShortDescription",
-        "SourceString": "[PH] Placeholder"
+        "SourceString": "Drive in a vehicle"
       },
       "Description": {
         "Namespace": "quest_s18_milestonestyle_16",
         "Key": "quest_s18_milestonestyle_16_Description",
-        "SourceString": "[PH] Placeholder"
+        "SourceString": "Drive in a vehicle"
       }
     }
   }

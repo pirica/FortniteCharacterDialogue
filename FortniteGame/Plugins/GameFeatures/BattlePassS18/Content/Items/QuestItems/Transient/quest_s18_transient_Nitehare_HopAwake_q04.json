@@ -1,0 +1,150 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "quest_s18_transient_Nitehare_HopAwake_q04",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaTransientQuest",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/Nitehare/Nitehare/NPCCharacterData_Nitehare.NPCCharacterData_Nitehare",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "bIsShared": true,
+      "Rewards": [
+        {
+          "ItemPrimaryAssetId": {
+            "PrimaryAssetType": {
+              "Name": "Quest"
+            },
+            "PrimaryAssetName": "quest_s18_transient_Nitehare_HopAwake_q05"
+          },
+          "Quantity": 1
+        }
+      ],
+      "RewardsTable": {
+        "ObjectName": "DataTable ChallengeReward_S18_ShardQuest_VR",
+        "ObjectPath": "/BattlePassS18/Items/QuestRewards/ChallengeReward_S18_ShardQuest_VR.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_quest_completed_nitehare",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "quest_s18_transient_Nitehare_HopAwake_q04_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Item.Consumable.Grenade"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "Target.Tags HasTag Homebase.Class || Target.Tags HasTag Pawn.Athena.NPC.Deimos || Target.Tags HasTag Athena.Faction.Generic.Hostile || Target.Tags HasTag Pawn.Athena.NPC.Duel.IsBeingChallenged || Target.Tags HasTag Pawn.Athena.NPC.Wildlife.Predator || Target.Tags HasTag Pawn.Athena.NPC.Mang || Target.Tags HasTag Pawn.Athena.NPC.IO || Target.Tags HasTag Pawn.Athena.NPC.Labrador",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Damage",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "5E73EB8C4BCEB9F6F50700B6A54718F9",
+            "SourceString": "Damage an opponent with a Grenade"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "DEAF9FD1483F4424BF2C85A12D7CCCB5",
+            "SourceString": "Bring the bed-time nightmares to every bunny!"
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 25,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 1,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "QuestsToComplete": [
+        {
+          "AssetPathName": "/BattlePassS18/Items/QuestItems/PunchCard/Questline/S18_Complete_Nitehare_HopAwake_q04.S18_Complete_Nitehare_HopAwake_q04",
+          "SubPathString": ""
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "quest_s18_transient_Nitehare_HopAwake_q04",
+        "Key": "quest_s18_transient_Nitehare_HopAwake_q04_CompletionText",
+        "SourceString": "Nice hits. Now to take things up a hare."
+      },
+      "TransientQuestStage": 4,
+      "TransientQuestMaxStage": 5,
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Epic",
+      "DisplayName": {
+        "Namespace": "quest_s18_transient_Nitehare_HopAwake_q04",
+        "Key": "quest_s18_transient_Nitehare_HopAwake_q04_DisplayName",
+        "SourceString": "Damage an opponent with a Grenade"
+      },
+      "ShortDescription": {
+        "Namespace": "quest_s18_transient_Nitehare_HopAwake_q04",
+        "Key": "quest_s18_transient_Nitehare_HopAwake_q04_ShortDescription",
+        "SourceString": "Bring the bed-time nightmares to every bunny!"
+      },
+      "Description": {
+        "Namespace": "quest_s18_transient_Nitehare_HopAwake_q04",
+        "Key": "quest_s18_transient_Nitehare_HopAwake_q04_Description",
+        "SourceString": "Damage an opponent with a Grenade"
+      }
+    }
+  }
+]

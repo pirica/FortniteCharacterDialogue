@@ -11,6 +11,17 @@
       },
       "bIncludedInCategories": false,
       "bIsShared": true,
+      "Rewards": [
+        {
+          "ItemPrimaryAssetId": {
+            "PrimaryAssetType": {
+              "Name": "Quest"
+            },
+            "PrimaryAssetName": "Quest_S18_Repeatable_TR_DealDamage_q02"
+          },
+          "Quantity": 1
+        }
+      ],
       "RewardsTable": {
         "ObjectName": "DataTable ChallengeReward_S18_ShardQuest_C",
         "ObjectPath": "/BattlePassS18/Items/QuestRewards/ChallengeReward_S18_ShardQuest_C.0"
@@ -34,12 +45,26 @@
                   },
                   "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
                   "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Pawn.Athena.NPC.Bud"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": false
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
                 }
               ],
-              "Condition": "Target.Tags HasTag Homebase.Class || Target.Tags HasTag Athena.Faction.Generic.Hostile || Target.Tags HasTag Pawn.Athena.NPC.Duel.IsBeingChallenged || Target.Tags HasTag Pawn.Athena.NPC.Wildlife.Predator || Target.Tags HasTag Pawn.Athena.NPC.Mang || Target.Tags HasTag Pawn.Athena.NPC.IO || Target.Tags HasTag AISpawnerData.Type.MotherWall || Target.Tags HasTag Pawn.Athena.NPC.Labrador",
+              "Condition": "",
               "TemplateIds": [],
               "Type": "EFortQuestObjectiveStatEvent::Damage",
-              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveTargetTags": true,
               "bHasInclusiveSourceTags": true,
               "bHasInclusiveContextTags": true
             }
@@ -66,19 +91,19 @@
           "LinkSquadIndex": 0,
           "Description": {
             "Namespace": "",
-            "Key": "4CAC7EDA403E013AA7F2CEBCFF807F46",
-            "SourceString": "Deal damage"
+            "Key": "D9545CA34702FBC1B56DB9A11D807E40",
+            "SourceString": "Deal damage to players"
           },
           "HudShortDescription": {
             "Namespace": "",
-            "Key": "0593397F4794D7FD13711FA63539F139",
+            "Key": "80C13FFE484F5BB76503B2A79A32A410",
             "SourceString": "Your team needs you to get some hits in!"
           },
           "HudIcon": {
             "AssetPathName": "None",
             "SubPathString": ""
           },
-          "Count": 3000,
+          "Count": 1000,
           "Stage": -1,
           "DynamicStatusUpdatePercentInterval": 25,
           "DynamicUpdateCompletionDelay": 1.0,
@@ -97,12 +122,14 @@
         "Key": "Quest_S18_Repeatable_TR_DealDamage_CompletionText",
         "SourceString": "Just like that! You're the MVP."
       },
+      "TransientQuestStage": 1,
+      "TransientQuestMaxStage": 5,
       "GrantToProfileType": "athena",
       "Rarity": "EFortRarity::Common",
       "DisplayName": {
         "Namespace": "Quest_S18_Repeatable_TR_DealDamage",
         "Key": "Quest_S18_Repeatable_TR_DealDamage_DisplayName",
-        "SourceString": "Deal damage"
+        "SourceString": "Deal damage to players"
       },
       "ShortDescription": {
         "Namespace": "Quest_S18_Repeatable_TR_DealDamage",
@@ -112,7 +139,7 @@
       "Description": {
         "Namespace": "Quest_S18_Repeatable_TR_DealDamage",
         "Key": "Quest_S18_Repeatable_TR_DealDamage_Description",
-        "SourceString": "Deal damage"
+        "SourceString": "Deal damage to players"
       },
       "GameplayTags": [
         "ChallengeCategory.Bars"

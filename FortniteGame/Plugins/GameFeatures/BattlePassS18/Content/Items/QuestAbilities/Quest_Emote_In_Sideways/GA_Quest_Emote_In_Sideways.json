@@ -1,0 +1,359 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_GA_Quest_Emote_In_Sideways",
+    "Outer": "GA_Quest_Emote_In_Sideways_C",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": 1,
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class TimerDynamicDelegate__DelegateSignature",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_EventData",
+        "Flags": 1,
+        "ElementSize": 184,
+        "PropertyFlags": 2,
+        "Struct": {
+          "ObjectName": "Class GameplayEventData",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "Class TimerHandle",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_GetOwnedGameplayTags_self_CastInput",
+        "Flags": 1,
+        "ElementSize": 16,
+        "InterfaceClass": {
+          "ObjectName": "Class GameplayTagAssetInterface",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetOwnedGameplayTags_TagContainer",
+        "Flags": 1,
+        "ElementSize": 32,
+        "Struct": {
+          "ObjectName": "Class GameplayTagContainer",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasTags_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Add_FloatFloat_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Greater_FloatFloat_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_SendComplexCustomStatEvent_QuestActive",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_SendComplexCustomStatEvent_QuestCompleted",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_bWasCancelled",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_K2_IsValidTimerHandle_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 8421377
+  },
+  {
+    "Type": "Function",
+    "Name": "K2_OnEndAbility",
+    "Outer": "GA_Quest_Emote_In_Sideways_C",
+    "SuperStruct": {
+      "ObjectName": "Class GameplayAbility:K2_OnEndAbility",
+      "ObjectPath": "/Script/GameplayAbilities"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bWasCancelled",
+        "Flags": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 148,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 134744064
+  },
+  {
+    "Type": "Function",
+    "Name": "CheckIfEmoteRequirementsMet",
+    "Outer": "GA_Quest_Emote_In_Sideways_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "K2_ActivateAbilityFromEvent",
+    "Outer": "GA_Quest_Emote_In_Sideways_C",
+    "Super": "K2_ActivateAbilityFromEvent",
+    "SuperStruct": {
+      "ObjectName": "Function GA_Quest_TriggeredAbility_C:K2_ActivateAbilityFromEvent",
+      "ObjectPath": "/Game/Athena/Items/Quests/QuestAbilities/Parents/GA_Quest_TriggeredAbility.1"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "EventData",
+        "Flags": 1,
+        "ElementSize": 184,
+        "PropertyFlags": 134218134,
+        "Struct": {
+          "ObjectName": "Class GameplayEventData",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      }
+    ],
+    "FunctionFlags": 138938368
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GA_Quest_Emote_In_Sideways_C",
+    "Super": "GA_Quest_TriggeredAbility_C",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function GA_Quest_Emote_In_Sideways_C:ExecuteUbergraph_GA_Quest_Emote_In_Sideways",
+        "ObjectPath": "/BattlePassS18/Items/QuestAbilities/Quest_Emote_In_Sideways/GA_Quest_Emote_In_Sideways.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass GA_Quest_TriggeredAbility_C",
+      "ObjectPath": "/Game/Athena/Items/Quests/QuestAbilities/Parents/GA_Quest_TriggeredAbility.2"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function GA_Quest_Emote_In_Sideways_C:K2_ActivateAbilityFromEvent",
+        "ObjectPath": "/BattlePassS18/Items/QuestAbilities/Quest_Emote_In_Sideways/GA_Quest_Emote_In_Sideways.3"
+      },
+      {
+        "ObjectName": "Function GA_Quest_Emote_In_Sideways_C:CheckIfEmoteRequirementsMet",
+        "ObjectPath": "/BattlePassS18/Items/QuestAbilities/Quest_Emote_In_Sideways/GA_Quest_Emote_In_Sideways.2"
+      },
+      {
+        "ObjectName": "Function GA_Quest_Emote_In_Sideways_C:K2_OnEndAbility",
+        "ObjectPath": "/BattlePassS18/Items/QuestAbilities/Quest_Emote_In_Sideways/GA_Quest_Emote_In_Sideways.1"
+      },
+      {
+        "ObjectName": "Function GA_Quest_Emote_In_Sideways_C:ExecuteUbergraph_GA_Quest_Emote_In_Sideways",
+        "ObjectPath": "/BattlePassS18/Items/QuestAbilities/Quest_Emote_In_Sideways/GA_Quest_Emote_In_Sideways.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": 2097153,
+        "ElementSize": 16,
+        "PropertyFlags": 2105344,
+        "Struct": {
+          "ObjectName": "Class PointerToUberGraphFrame",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "SidewaysTag",
+        "Flags": 2097153,
+        "ElementSize": 32,
+        "PropertyFlags": 65541,
+        "Struct": {
+          "ObjectName": "Class GameplayTagContainer",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CheckInterval",
+        "Flags": 2097153,
+        "ElementSize": 4,
+        "PropertyFlags": 65541
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "QuestTag",
+        "Flags": 2097153,
+        "ElementSize": 32,
+        "PropertyFlags": 65541,
+        "Struct": {
+          "ObjectName": "Class GameplayTagContainer",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Timer_CheckForEmoteRequirement",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 65541,
+        "Struct": {
+          "ObjectName": "Class TimerHandle",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "TimeEmoting",
+        "Flags": 2097153,
+        "ElementSize": 4,
+        "PropertyFlags": 65541
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "TimeRequiredToEmote",
+        "Flags": 2097153,
+        "ElementSize": 4,
+        "PropertyFlags": 65541
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_GA_Quest_Emote_In_Sideways": {
+        "ObjectName": "Function GA_Quest_Emote_In_Sideways_C:ExecuteUbergraph_GA_Quest_Emote_In_Sideways",
+        "ObjectPath": "/BattlePassS18/Items/QuestAbilities/Quest_Emote_In_Sideways/GA_Quest_Emote_In_Sideways.0"
+      },
+      "K2_OnEndAbility": {
+        "ObjectName": "Function GA_Quest_Emote_In_Sideways_C:K2_OnEndAbility",
+        "ObjectPath": "/BattlePassS18/Items/QuestAbilities/Quest_Emote_In_Sideways/GA_Quest_Emote_In_Sideways.1"
+      },
+      "CheckIfEmoteRequirementsMet": {
+        "ObjectName": "Function GA_Quest_Emote_In_Sideways_C:CheckIfEmoteRequirementsMet",
+        "ObjectPath": "/BattlePassS18/Items/QuestAbilities/Quest_Emote_In_Sideways/GA_Quest_Emote_In_Sideways.2"
+      },
+      "K2_ActivateAbilityFromEvent": {
+        "ObjectName": "Function GA_Quest_Emote_In_Sideways_C:K2_ActivateAbilityFromEvent",
+        "ObjectPath": "/BattlePassS18/Items/QuestAbilities/Quest_Emote_In_Sideways/GA_Quest_Emote_In_Sideways.3"
+      }
+    },
+    "ClassFlags": 264208,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "ClassGeneratedBy": null,
+    "Interfaces": [],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GA_Quest_Emote_In_Sideways_C Default__GA_Quest_Emote_In_Sideways_C",
+      "ObjectPath": "/BattlePassS18/Items/QuestAbilities/Quest_Emote_In_Sideways/GA_Quest_Emote_In_Sideways.5"
+    }
+  },
+  {
+    "Type": "GA_Quest_Emote_In_Sideways_C",
+    "Name": "Default__GA_Quest_Emote_In_Sideways_C",
+    "Template": "Default__GA_Quest_TriggeredAbility_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "SidewaysTag": [
+        "GameplayCue.Athena.Sideways.InsideSideways"
+      ],
+      "CheckInterval": 0.1,
+      "QuestTag": [
+        "Athena.Quests.EmoteInSideways"
+      ],
+      "Timer_CheckForEmoteRequirement": {
+        "Handle": 0
+      },
+      "TimeRequiredToEmote": 5.0,
+      "AbilityTriggers": [
+        {
+          "TriggerTag": {
+            "TagName": "Gameplay.Action.Player.Emote"
+          },
+          "TriggerSource": "EGameplayAbilityTriggerSource::OwnedTagPresent"
+        }
+      ]
+    }
+  }
+]

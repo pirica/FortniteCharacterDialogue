@@ -1,0 +1,161 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "quest_s18_transient_BigMouth_ToothAche_q03",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaTransientQuest",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/BigMouth/BigMouth/NPCCharacterData_BigMouth.NPCCharacterData_BigMouth",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "bIsShared": true,
+      "Rewards": [
+        {
+          "ItemPrimaryAssetId": {
+            "PrimaryAssetType": {
+              "Name": "Quest"
+            },
+            "PrimaryAssetName": "quest_s18_transient_BigMouth_ToothAche_q04"
+          },
+          "Quantity": 1
+        }
+      ],
+      "RewardsTable": {
+        "ObjectName": "DataTable ChallengeReward_S18_ShardQuest_R",
+        "ObjectPath": "/BattlePassS18/Items/QuestRewards/ChallengeReward_S18_ShardQuest_R.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_quest_completed_bigmouth",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "quest_s18_transient_BigMouth_ToothAche_q03_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Building.Type.Container.AmmoBox"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "Source.Tags HasTag Athena.Location.POI.DirtyDocks",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Interact",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "9ED1F9E64CB90738BCB50895C82EB0BD",
+            "SourceString": "Open ammo boxes at Dirty Docks"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "376D0B02483D351642C587878A39CE65",
+            "SourceString": "Big Mouth seeks out ultimate crunch."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 2,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "QuestsToComplete": [
+        {
+          "AssetPathName": "/BattlePassS18/Items/QuestItems/PunchCard/Questline/S18_Complete_BigMouth_ToothAche_q03.S18_Complete_BigMouth_ToothAche_q03",
+          "SubPathString": ""
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "quest_s18_transient_BigMouth_ToothAche_q03",
+        "Key": "quest_s18_transient_BigMouth_ToothAche_q03_CompletionText",
+        "SourceString": "Ahh! Big Mouth has tooth ache from ultimate crunch!"
+      },
+      "TransientQuestStage": 3,
+      "TransientQuestMaxStage": 5,
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Rare",
+      "DisplayName": {
+        "Namespace": "quest_s18_transient_BigMouth_ToothAche_q03",
+        "Key": "quest_s18_transient_BigMouth_ToothAche_q03_DisplayName",
+        "SourceString": "Open ammo boxes at Dirty Docks"
+      },
+      "ShortDescription": {
+        "Namespace": "quest_s18_transient_BigMouth_ToothAche_q03",
+        "Key": "quest_s18_transient_BigMouth_ToothAche_q03_ShortDescription",
+        "SourceString": "Big Mouth seeks out ultimate crunch."
+      },
+      "Description": {
+        "Namespace": "quest_s18_transient_BigMouth_ToothAche_q03",
+        "Key": "quest_s18_transient_BigMouth_ToothAche_q03_Description",
+        "SourceString": "Open ammo boxes at Dirty Docks"
+      },
+      "GameplayTags": [
+        "Athena.Location.POI.DirtyDocks"
+      ],
+      "SmallPreviewImage": {
+        "AssetPathName": "/Game/Athena/UI/Challenges/Art/MiniChallenges/T_UI_Icon_Mini_Ammo.T_UI_Icon_Mini_Ammo",
+        "SubPathString": ""
+      },
+      "LargePreviewImage": {
+        "AssetPathName": "/Game/Athena/UI/Challenges/Art/MiniChallenges/T_UI_Icon_Mini_Ammo.T_UI_Icon_Mini_Ammo",
+        "SubPathString": ""
+      }
+    }
+  }
+]

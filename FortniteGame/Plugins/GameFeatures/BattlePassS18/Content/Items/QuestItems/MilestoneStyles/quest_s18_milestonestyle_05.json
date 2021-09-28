@@ -4,34 +4,22 @@
     "Name": "quest_s18_milestonestyle_05",
     "Properties": {
       "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "bAthenaGrantRarityToken": false,
       "bIncludedInCategories": false,
       "Objectives": [
         {
           "BackendName": "quest_s18_milestonestyle_05_obj0",
           "InlineObjectiveStats": [
             {
-              "TagConditions": [
-                {
-                  "Tag": {
-                    "TagName": "Athena.Playlist"
-                  },
-                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
-                  "Require": true
-                },
-                {
-                  "Tag": {
-                    "TagName": "Athena.Quests.Blank"
-                  },
-                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
-                  "Require": true
-                }
-              ],
+              "TagConditions": [],
               "Condition": "",
-              "TemplateIds": [],
-              "Type": "EFortQuestObjectiveStatEvent::ComplexCustom",
+              "TemplateIds": [
+                "AthenaCharacter:cid_a_199_athena_commando_m_spacechimp"
+              ],
+              "Type": "EFortQuestObjectiveStatEvent::HasAccumulatedItem",
               "bHasInclusiveTargetTags": false,
-              "bHasInclusiveSourceTags": true,
-              "bHasInclusiveContextTags": true
+              "bHasInclusiveSourceTags": false,
+              "bHasInclusiveContextTags": false
             }
           ],
           "ObjectiveStatHandle": {
@@ -44,7 +32,7 @@
           "bRequirePrimaryMissionCompletion": false,
           "bCanProgressInZone": true,
           "bDisplayDynamicAnnouncementUpdate": false,
-          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Never",
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
           "LinkVaultTab": "EFortInventoryFilter::Max_None",
           "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
           "ItemReference": {
@@ -56,8 +44,8 @@
           "LinkSquadIndex": 0,
           "Description": {
             "Namespace": "",
-            "Key": "9EB148574A5FBB130D1A97A9FE00931E",
-            "SourceString": "[PH] Placeholder"
+            "Key": "9EBBAC1B4AF53A5EFC659F827091B6FB",
+            "SourceString": "Claim J.B. Chimpanski in the Battle Pass"
           },
           "HudShortDescription": {
             "CultureInvariantString": null
@@ -83,24 +71,24 @@
       "CompletionText": {
         "Namespace": "quest_s18_milestonestyle_05",
         "Key": "quest_s18_milestonestyle_05_CompletionText",
-        "SourceString": "Quest Completed!"
+        "SourceString": "Toona Fish Character Style unlocked!"
       },
       "GrantToProfileType": "athena",
       "Rarity": "EFortRarity::Epic",
       "DisplayName": {
         "Namespace": "quest_s18_milestonestyle_05",
         "Key": "quest_s18_milestonestyle_05_DisplayName",
-        "SourceString": "[PH] Placeholder"
+        "SourceString": "Claim J.B. Chimpanski in the Battle Pass"
       },
       "ShortDescription": {
         "Namespace": "quest_s18_milestonestyle_05",
         "Key": "quest_s18_milestonestyle_05_ShortDescription",
-        "SourceString": "[PH] Placeholder"
+        "SourceString": "Claim J.B. Chimpanski in the Battle Pass"
       },
       "Description": {
         "Namespace": "quest_s18_milestonestyle_05",
         "Key": "quest_s18_milestonestyle_05_Description",
-        "SourceString": "[PH] Placeholder"
+        "SourceString": "Claim J.B. Chimpanski in the Battle Pass"
       }
     }
   }

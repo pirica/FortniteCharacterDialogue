@@ -1,0 +1,118 @@
+[
+  {
+    "Type": "ConversationDatabase",
+    "Name": "NPCLibrary_Conversation_CritterManiac",
+    "Properties": {
+      "CompilerVersion": 2,
+      "ReachableNodeMap": {},
+      "EntryTags": [
+        {
+          "EntryTag": {
+            "TagName": "Conversation.Entry.CritterManiac"
+          },
+          "DestinationList": [
+            "B2CBF763-46ACE683-109FC284-D94C9E5C"
+          ]
+        }
+      ],
+      "ExitTags": [
+        "Conversation.Entry.BasicServices",
+        "Conversation.Entry.NPCLibrary.Quests"
+      ],
+      "InternalNodeIds": [
+        "B2CBF763-46ACE683-109FC284-D94C9E5C",
+        "DFC1734C-45F1AC20-7C666797-5C38871E",
+        "216CC80D-498852F2-509E1A83-F1BD1D5C",
+        "90FB5F42-4742CF13-502DB3BA-9680BAE0"
+      ],
+      "Speakers": [
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.Player"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.406108,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "0068FF"
+          }
+        },
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.NPC"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.065123,
+            "B": 0.1875,
+            "A": 1.0,
+            "Hex": "001130"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ConversationEntryPointNode",
+    "Name": "ConversationEntryPointNode_7",
+    "Outer": "NPCLibrary_Conversation_CritterManiac",
+    "Properties": {
+      "EntryTag": {
+        "TagName": "Conversation.Entry.CritterManiac"
+      },
+      "OutputConnections": [
+        "DFC1734C-45F1AC20-7C666797-5C38871E"
+      ],
+      "Compiled_NodeGUID": "B2CBF763-46ACE683-109FC284-D94C9E5C"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_0",
+    "Outer": "NPCLibrary_Conversation_CritterManiac",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.BasicServices"
+      },
+      "Compiled_NodeGUID": "216CC80D-498852F2-509E1A83-F1BD1D5C"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_1",
+    "Outer": "NPCLibrary_Conversation_CritterManiac",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.NPCLibrary.Quests"
+      },
+      "Compiled_NodeGUID": "90FB5F42-4742CF13-502DB3BA-9680BAE0"
+    }
+  },
+  {
+    "Type": "Speech_C",
+    "Name": "Speech_C_4",
+    "Outer": "NPCLibrary_Conversation_CritterManiac",
+    "Template": "Default__Speech_C",
+    "Properties": {
+      "SpeakerTag": {
+        "TagName": "Conversation.Participant.NPC"
+      },
+      "ListenerTag": {
+        "TagName": "Conversation.Participant.Player"
+      },
+      "OutputConnections": [
+        "90FB5F42-4742CF13-502DB3BA-9680BAE0",
+        "216CC80D-498852F2-509E1A83-F1BD1D5C"
+      ],
+      "NodeName": "",
+      "Compiled_NodeGUID": "DFC1734C-45F1AC20-7C666797-5C38871E"
+    }
+  }
+]

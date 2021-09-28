@@ -4,6 +4,7 @@
     "Name": "quest_s18_milestonestyle_08",
     "Properties": {
       "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "bAthenaGrantRarityToken": false,
       "bIncludedInCategories": false,
       "Objectives": [
         {
@@ -13,25 +14,20 @@
               "TagConditions": [
                 {
                   "Tag": {
-                    "TagName": "Athena.Playlist"
-                  },
-                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
-                  "Require": true
-                },
-                {
-                  "Tag": {
-                    "TagName": "Athena.Quests.Blank"
+                    "TagName": "Collections.CollectableFish"
                   },
                   "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
                   "Require": true
                 }
               ],
               "Condition": "",
-              "TemplateIds": [],
-              "Type": "EFortQuestObjectiveStatEvent::ComplexCustom",
+              "TemplateIds": [
+                "CollectableFish"
+              ],
+              "Type": "EFortQuestObjectiveStatEvent::AthenaCollectionFoundItem",
               "bHasInclusiveTargetTags": false,
               "bHasInclusiveSourceTags": true,
-              "bHasInclusiveContextTags": true
+              "bHasInclusiveContextTags": false
             }
           ],
           "ObjectiveStatHandle": {
@@ -44,7 +40,7 @@
           "bRequirePrimaryMissionCompletion": false,
           "bCanProgressInZone": true,
           "bDisplayDynamicAnnouncementUpdate": false,
-          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Never",
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
           "LinkVaultTab": "EFortInventoryFilter::Max_None",
           "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
           "ItemReference": {
@@ -56,8 +52,8 @@
           "LinkSquadIndex": 0,
           "Description": {
             "Namespace": "",
-            "Key": "7726D2C748E17488965F07A6EB70021F",
-            "SourceString": "[PH] Placeholder"
+            "Key": "5FCE9B114091D9FE2976C1AE7D6BD158",
+            "SourceString": "Discover fish in the Collection Book"
           },
           "HudShortDescription": {
             "CultureInvariantString": null
@@ -66,7 +62,7 @@
             "AssetPathName": "None",
             "SubPathString": ""
           },
-          "Count": 1,
+          "Count": 25,
           "Stage": -1,
           "DynamicStatusUpdatePercentInterval": 25,
           "DynamicUpdateCompletionDelay": 1.0,
@@ -83,24 +79,24 @@
       "CompletionText": {
         "Namespace": "quest_s18_milestonestyle_08",
         "Key": "quest_s18_milestonestyle_08_CompletionText",
-        "SourceString": "Quest Completed!"
+        "SourceString": "Toona Fish Character Style unlocked!"
       },
       "GrantToProfileType": "athena",
       "Rarity": "EFortRarity::Epic",
       "DisplayName": {
         "Namespace": "quest_s18_milestonestyle_08",
         "Key": "quest_s18_milestonestyle_08_DisplayName",
-        "SourceString": "[PH] Placeholder"
+        "SourceString": "Discover fish in the Collection Book"
       },
       "ShortDescription": {
         "Namespace": "quest_s18_milestonestyle_08",
         "Key": "quest_s18_milestonestyle_08_ShortDescription",
-        "SourceString": "[PH] Placeholder"
+        "SourceString": "Discover fish in the Collection Book"
       },
       "Description": {
         "Namespace": "quest_s18_milestonestyle_08",
         "Key": "quest_s18_milestonestyle_08_Description",
-        "SourceString": "[PH] Placeholder"
+        "SourceString": "Discover fish in the Collection Book"
       }
     }
   }

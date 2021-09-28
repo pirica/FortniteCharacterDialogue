@@ -4,34 +4,22 @@
     "Name": "quest_s18_milestonestyle_04",
     "Properties": {
       "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "bAthenaGrantRarityToken": false,
       "bIncludedInCategories": false,
       "Objectives": [
         {
           "BackendName": "quest_s18_milestonestyle_04_obj0",
           "InlineObjectiveStats": [
             {
-              "TagConditions": [
-                {
-                  "Tag": {
-                    "TagName": "Athena.Playlist"
-                  },
-                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
-                  "Require": true
-                },
-                {
-                  "Tag": {
-                    "TagName": "Athena.Quests.Blank"
-                  },
-                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
-                  "Require": true
-                }
-              ],
+              "TagConditions": [],
               "Condition": "",
-              "TemplateIds": [],
-              "Type": "EFortQuestObjectiveStatEvent::ComplexCustom",
+              "TemplateIds": [
+                "AthenaCharacter:cid_a_200_athena_commando_f_ghosthunter"
+              ],
+              "Type": "EFortQuestObjectiveStatEvent::HasAccumulatedItem",
               "bHasInclusiveTargetTags": false,
-              "bHasInclusiveSourceTags": true,
-              "bHasInclusiveContextTags": true
+              "bHasInclusiveSourceTags": false,
+              "bHasInclusiveContextTags": false
             }
           ],
           "ObjectiveStatHandle": {
@@ -44,7 +32,7 @@
           "bRequirePrimaryMissionCompletion": false,
           "bCanProgressInZone": true,
           "bDisplayDynamicAnnouncementUpdate": false,
-          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Never",
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
           "LinkVaultTab": "EFortInventoryFilter::Max_None",
           "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
           "ItemReference": {
@@ -56,8 +44,8 @@
           "LinkSquadIndex": 0,
           "Description": {
             "Namespace": "",
-            "Key": "A179ED544439D9C6897D0A8CB07F952F",
-            "SourceString": "[PH] Placeholder"
+            "Key": "91D858A84B973CAB6486D8BA9AA49090",
+            "SourceString": "Claim Torin in the Battle Pass"
           },
           "HudShortDescription": {
             "CultureInvariantString": null
@@ -83,24 +71,24 @@
       "CompletionText": {
         "Namespace": "quest_s18_milestonestyle_04",
         "Key": "quest_s18_milestonestyle_04_CompletionText",
-        "SourceString": "Quest Completed!"
+        "SourceString": "Toona Fish Character Style unlocked!"
       },
       "GrantToProfileType": "athena",
       "Rarity": "EFortRarity::Epic",
       "DisplayName": {
         "Namespace": "quest_s18_milestonestyle_04",
         "Key": "quest_s18_milestonestyle_04_DisplayName",
-        "SourceString": "[PH] Placeholder"
+        "SourceString": "Claim Torin in the Battle Pass"
       },
       "ShortDescription": {
         "Namespace": "quest_s18_milestonestyle_04",
         "Key": "quest_s18_milestonestyle_04_ShortDescription",
-        "SourceString": "[PH] Placeholder"
+        "SourceString": "Claim Torin in the Battle Pass"
       },
       "Description": {
         "Namespace": "quest_s18_milestonestyle_04",
         "Key": "quest_s18_milestonestyle_04_Description",
-        "SourceString": "[PH] Placeholder"
+        "SourceString": "Claim Torin in the Battle Pass"
       }
     }
   }

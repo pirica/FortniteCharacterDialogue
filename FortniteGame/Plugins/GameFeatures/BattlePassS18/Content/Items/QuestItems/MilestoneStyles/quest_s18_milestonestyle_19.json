@@ -4,6 +4,7 @@
     "Name": "quest_s18_milestonestyle_19",
     "Properties": {
       "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "bAthenaGrantRarityToken": false,
       "bIncludedInCategories": false,
       "Objectives": [
         {
@@ -20,16 +21,23 @@
                 },
                 {
                   "Tag": {
-                    "TagName": "Athena.Quests.Blank"
+                    "TagName": "Homebase.Class"
                   },
                   "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "AISpawnerData.Type.Boss.SmallBag"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
                   "Require": true
                 }
               ],
               "Condition": "",
               "TemplateIds": [],
-              "Type": "EFortQuestObjectiveStatEvent::ComplexCustom",
-              "bHasInclusiveTargetTags": false,
+              "Type": "EFortQuestObjectiveStatEvent::KillContribution",
+              "bHasInclusiveTargetTags": true,
               "bHasInclusiveSourceTags": true,
               "bHasInclusiveContextTags": true
             }
@@ -44,7 +52,7 @@
           "bRequirePrimaryMissionCompletion": false,
           "bCanProgressInZone": true,
           "bDisplayDynamicAnnouncementUpdate": false,
-          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Never",
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
           "LinkVaultTab": "EFortInventoryFilter::Max_None",
           "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
           "ItemReference": {
@@ -56,8 +64,8 @@
           "LinkSquadIndex": 0,
           "Description": {
             "Namespace": "",
-            "Key": "762BB62F459408AB57DB40A26CFF4A4C",
-            "SourceString": "[PH] Placeholder"
+            "Key": "542BDBEF4B773B3B190FB89C818470B2",
+            "SourceString": "Defeat Cube Assassin"
           },
           "HudShortDescription": {
             "CultureInvariantString": null
@@ -83,24 +91,24 @@
       "CompletionText": {
         "Namespace": "quest_s18_milestonestyle_19",
         "Key": "quest_s18_milestonestyle_19_CompletionText",
-        "SourceString": "Quest Completed!"
+        "SourceString": "Toona Fish Character Style unlocked!"
       },
       "GrantToProfileType": "athena",
       "Rarity": "EFortRarity::Epic",
       "DisplayName": {
         "Namespace": "quest_s18_milestonestyle_19",
         "Key": "quest_s18_milestonestyle_19_DisplayName",
-        "SourceString": "[PH] Placeholder"
+        "SourceString": "Defeat Cube Assassin"
       },
       "ShortDescription": {
         "Namespace": "quest_s18_milestonestyle_19",
         "Key": "quest_s18_milestonestyle_19_ShortDescription",
-        "SourceString": "[PH] Placeholder"
+        "SourceString": "Defeat Cube Assassin"
       },
       "Description": {
         "Namespace": "quest_s18_milestonestyle_19",
         "Key": "quest_s18_milestonestyle_19_Description",
-        "SourceString": "[PH] Placeholder"
+        "SourceString": "Defeat Cube Assassin"
       }
     }
   }

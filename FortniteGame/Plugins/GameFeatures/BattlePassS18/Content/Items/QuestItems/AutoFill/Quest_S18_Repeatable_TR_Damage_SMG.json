@@ -11,6 +11,17 @@
       },
       "bIncludedInCategories": false,
       "bIsShared": true,
+      "Rewards": [
+        {
+          "ItemPrimaryAssetId": {
+            "PrimaryAssetType": {
+              "Name": "Quest"
+            },
+            "PrimaryAssetName": "Quest_S18_Repeatable_TR_Damage_SMG_q02"
+          },
+          "Quantity": 1
+        }
+      ],
       "RewardsTable": {
         "ObjectName": "DataTable ChallengeReward_S18_ShardQuest_C",
         "ObjectPath": "/BattlePassS18/Items/QuestRewards/ChallengeReward_S18_ShardQuest_C.0"
@@ -41,12 +52,26 @@
                   },
                   "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
                   "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Pawn.Athena.NPC.Bud"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": false
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
                 }
               ],
-              "Condition": "Target.Tags HasTag Homebase.Class || Target.Tags HasTag Athena.Faction.Generic.Hostile || Target.Tags HasTag Pawn.Athena.NPC.Duel.IsBeingChallenged || Target.Tags HasTag Pawn.Athena.NPC.Wildlife.Predator || Target.Tags HasTag Pawn.Athena.NPC.Mang || Target.Tags HasTag Pawn.Athena.NPC.IO || Target.Tags HasTag AISpawnerData.Type.MotherWall || Target.Tags HasTag Pawn.Athena.NPC.Labrador",
+              "Condition": "",
               "TemplateIds": [],
               "Type": "EFortQuestObjectiveStatEvent::Damage",
-              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveTargetTags": true,
               "bHasInclusiveSourceTags": true,
               "bHasInclusiveContextTags": true
             }
@@ -73,19 +98,19 @@
           "LinkSquadIndex": 0,
           "Description": {
             "Namespace": "",
-            "Key": "CAABFAE64CA38DF29A83C6AC23940DDF",
-            "SourceString": "Deal damage with SMGs"
+            "Key": "E1C169194CBED4CAA5A0468E8BF78CC6",
+            "SourceString": "Deal damage to players with SMGs"
           },
           "HudShortDescription": {
             "Namespace": "",
-            "Key": "78EA679747687AEF7F573FA5A218DA32",
+            "Key": "C9FA80B244E14996D44015B789BE0ED6",
             "SourceString": "An SMG? Sounds good to me!"
           },
           "HudIcon": {
             "AssetPathName": "None",
             "SubPathString": ""
           },
-          "Count": 1000,
+          "Count": 500,
           "Stage": -1,
           "DynamicStatusUpdatePercentInterval": 25,
           "DynamicUpdateCompletionDelay": 1.0,
@@ -104,12 +129,14 @@
         "Key": "Quest_S18_Repeatable_TR_Damage_SMG_CompletionText",
         "SourceString": "Did you get my rhyme?!"
       },
+      "TransientQuestStage": 1,
+      "TransientQuestMaxStage": 5,
       "GrantToProfileType": "athena",
       "Rarity": "EFortRarity::Common",
       "DisplayName": {
         "Namespace": "Quest_S18_Repeatable_TR_Damage_SMG",
         "Key": "Quest_S18_Repeatable_TR_Damage_SMG_DisplayName",
-        "SourceString": "Deal damage with SMGs"
+        "SourceString": "Deal damage to players with SMGs"
       },
       "ShortDescription": {
         "Namespace": "Quest_S18_Repeatable_TR_Damage_SMG",
@@ -119,7 +146,7 @@
       "Description": {
         "Namespace": "Quest_S18_Repeatable_TR_Damage_SMG",
         "Key": "Quest_S18_Repeatable_TR_Damage_SMG_Description",
-        "SourceString": "Deal damage with SMGs"
+        "SourceString": "Deal damage to players with SMGs"
       },
       "GameplayTags": [
         "ChallengeCategory.Bars"

@@ -96,6 +96,32 @@
     }
   },
   {
+    "Type": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch",
+    "Name": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0",
+    "Outer": "Speech_C_4",
+    "Properties": {
+      "days": 7
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_HasBars",
+    "Name": "FortControllerRequirement_HasBars_0",
+    "Outer": "Speech_C_4",
+    "Properties": {
+      "ThresholdTestConfig": {
+        "Requirement": "EThresholdRequirement::GreaterThan",
+        "Quantity": {
+          "Value": 2000.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_IsFirstEverConversationWithNPC",
+    "Name": "FortControllerRequirement_IsFirstEverConversationWithNPC_0",
+    "Outer": "Speech_C_4"
+  },
+  {
     "Type": "Speech_C",
     "Name": "Speech_C_4",
     "Outer": "NPCLibrary_Conversation_Wrath",
@@ -121,7 +147,10 @@
                 "ParticipantID": {
                   "TagName": "Conversation.Participant.Player"
                 },
-                "Requirement": null
+                "Requirement": {
+                  "ObjectName": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch NPCLibrary_Conversation_Wrath:Speech_C_4.FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/Wrath/Wrath/NPCLibrary_Conversation_Wrath.4"
+                }
               }
             ],
             "Priority": {
@@ -161,7 +190,10 @@
                 "ParticipantID": {
                   "TagName": "Conversation.Participant.Player"
                 },
-                "Requirement": null
+                "Requirement": {
+                  "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC NPCLibrary_Conversation_Wrath:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/Wrath/Wrath/NPCLibrary_Conversation_Wrath.6"
+                }
               }
             ],
             "Priority": {
@@ -201,7 +233,10 @@
                 "ParticipantID": {
                   "TagName": "Conversation.Participant.Player"
                 },
-                "Requirement": null
+                "Requirement": {
+                  "ObjectName": "FortControllerRequirement_HasBars NPCLibrary_Conversation_Wrath:Speech_C_4.FortControllerRequirement_HasBars_0",
+                  "ObjectPath": "/NPCLibrary/NPCs/Wrath/Wrath/NPCLibrary_Conversation_Wrath.5"
+                }
               }
             ],
             "Priority": {
