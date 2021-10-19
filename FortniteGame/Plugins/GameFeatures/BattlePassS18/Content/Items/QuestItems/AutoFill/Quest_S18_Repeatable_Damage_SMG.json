@@ -1,20 +1,21 @@
 [
   {
-    "Type": "FortQuestItemDefinition",
+    "Type": "AthenaDailyQuestDefinition",
     "Name": "Quest_S18_Repeatable_Damage_SMG",
     "Properties": {
-      "QuestType": "EFortQuestType::AthenaTransientQuest",
-      "QuestSubtype": "EFortQuestSubtype::Autofill",
-      "TandemCharacterData": {
-        "AssetPathName": "/NPCLibrary/NPCs/VendingLlama/NPCCharacterData_VendingLlama.NPCCharacterData_VendingLlama",
-        "SubPathString": ""
-      },
-      "bIncludedInCategories": false,
-      "bIsShared": true,
+      "QuestSubtype": "EFortQuestSubtype::QuickChallenge",
+      "bAthenaGrantRarityToken": false,
+      "bHideStageDescription": true,
       "RewardsTable": {
-        "ObjectName": "DataTable ChallengeReward_S18_ShardQuest_C",
-        "ObjectPath": "/BattlePassS18/Items/QuestRewards/ChallengeReward_S18_ShardQuest_C.0"
+        "ObjectName": "DataTable AthenaChallengeReward_DailyChallenge_SeasonAgnostic",
+        "ObjectPath": "/Game/Athena/Items/Quests/Rewards/AthenaChallengeReward_DailyChallenge_SeasonAgnostic.0"
       },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_dailychallenge_token",
+          "Quantity": 1
+        }
+      ],
       "Objectives": [
         {
           "BackendName": "Quest_S18_Repeatable_Damage_SMG_obj0",
@@ -37,13 +38,13 @@
                 },
                 {
                   "Tag": {
-                    "TagName": "Weapon.Ranged.SMG"
+                    "TagName": "Item.Weapon.Ranged.SMG"
                   },
                   "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
                   "Require": true
                 }
               ],
-              "Condition": "Target.Tags HasTag Homebase.Class || Target.Tags HasTag Athena.Faction.Generic.Hostile || Target.Tags HasTag Pawn.Athena.NPC.Duel.IsBeingChallenged || Target.Tags HasTag Pawn.Athena.NPC.Wildlife.Predator || Target.Tags HasTag Pawn.Athena.NPC.Mang || Target.Tags HasTag Pawn.Athena.NPC.IO || Target.Tags HasTag AISpawnerData.Type.MotherWall || Target.Tags HasTag Pawn.Athena.NPC.Labrador",
+              "Condition": "Target.Tags HasTag Homebase.Class || Target.Tags HasTag Pawn.Athena.NPC.Deimos || Target.Tags HasTag Athena.Faction.Generic.Hostile || Target.Tags HasTag Pawn.Athena.NPC.Duel.IsBeingChallenged || Target.Tags HasTag Pawn.Athena.NPC.Wildlife.Predator || Target.Tags HasTag Pawn.Athena.NPC.Mang || Target.Tags HasTag Pawn.Athena.NPC.IO || Target.Tags HasTag Pawn.Athena.NPC.Labrador",
               "TemplateIds": [],
               "Type": "EFortQuestObjectiveStatEvent::Damage",
               "bHasInclusiveTargetTags": false,
@@ -73,13 +74,11 @@
           "LinkSquadIndex": 0,
           "Description": {
             "Namespace": "",
-            "Key": "F3E4C7CC48719A214CC6D99073BCC63C",
+            "Key": "E264DD2E4A19928BD3142392C3C39391",
             "SourceString": "Deal damage with SMGs"
           },
           "HudShortDescription": {
-            "Namespace": "",
-            "Key": "FD37C34748B9FA23B7D7AEA8A8FE86C1",
-            "SourceString": "Sometimes the best attack is a lot of little attacks."
+            "CultureInvariantString": null
           },
           "HudIcon": {
             "AssetPathName": "None",
@@ -99,12 +98,13 @@
           }
         }
       ],
-      "CompletionText": {
-        "Namespace": "Quest_S18_Repeatable_Damage_SMG",
-        "Key": "Quest_S18_Repeatable_Damage_SMG_CompletionText",
-        "SourceString": "Exactly like that!"
+      "Category": {
+        "DataTable": {
+          "ObjectName": "DataTable QuestCategoryTable",
+          "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
+        },
+        "RowName": "BRDailyChallenges"
       },
-      "GrantToProfileType": "athena",
       "Rarity": "EFortRarity::Common",
       "DisplayName": {
         "Namespace": "Quest_S18_Repeatable_Damage_SMG",
@@ -114,7 +114,7 @@
       "ShortDescription": {
         "Namespace": "Quest_S18_Repeatable_Damage_SMG",
         "Key": "Quest_S18_Repeatable_Damage_SMG_ShortDescription",
-        "SourceString": "Sometimes the best attack is a lot of little attacks."
+        "SourceString": "Deal damage with SMGs"
       },
       "Description": {
         "Namespace": "Quest_S18_Repeatable_Damage_SMG",
@@ -122,7 +122,8 @@
         "SourceString": "Deal damage with SMGs"
       },
       "GameplayTags": [
-        "ChallengeCategory.Bars"
+        "ChallengeCategory.XP",
+        "ChallengeCategory.PunchCard"
       ]
     }
   }

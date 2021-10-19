@@ -1,20 +1,21 @@
 [
   {
-    "Type": "FortQuestItemDefinition",
+    "Type": "AthenaDailyQuestDefinition",
     "Name": "Quest_S18_Repeatable_Interact_Boat",
     "Properties": {
-      "QuestType": "EFortQuestType::AthenaTransientQuest",
-      "QuestSubtype": "EFortQuestSubtype::Autofill",
-      "TandemCharacterData": {
-        "AssetPathName": "/NPCLibrary/NPCs/VendingLlama/NPCCharacterData_VendingLlama.NPCCharacterData_VendingLlama",
-        "SubPathString": ""
-      },
-      "bIncludedInCategories": false,
-      "bIsShared": true,
+      "QuestSubtype": "EFortQuestSubtype::QuickChallenge",
+      "bAthenaGrantRarityToken": false,
+      "bHideStageDescription": true,
       "RewardsTable": {
-        "ObjectName": "DataTable ChallengeReward_S18_ShardQuest_C",
-        "ObjectPath": "/BattlePassS18/Items/QuestRewards/ChallengeReward_S18_ShardQuest_C.0"
+        "ObjectName": "DataTable AthenaChallengeReward_DailyChallenge_SeasonAgnostic",
+        "ObjectPath": "/Game/Athena/Items/Quests/Rewards/AthenaChallengeReward_DailyChallenge_SeasonAgnostic.0"
       },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_dailychallenge_token",
+          "Quantity": 1
+        }
+      ],
       "Objectives": [
         {
           "BackendName": "Quest_S18_Repeatable_Interact_Boat_obj0",
@@ -73,13 +74,11 @@
           "LinkSquadIndex": 0,
           "Description": {
             "Namespace": "",
-            "Key": "612CBC024364764A6A3533A51AD4C65F",
+            "Key": "7C65E1EC44C7269979DB8AAC9BB639BC",
             "SourceString": "Drive a boat"
           },
           "HudShortDescription": {
-            "Namespace": "",
-            "Key": "2DCADEA8485D17653C8C08B4D93126D5",
-            "SourceString": "Yarrrr! Yee in a pirate mood, ya scurvy dog?"
+            "CultureInvariantString": null
           },
           "HudIcon": {
             "AssetPathName": "None",
@@ -99,12 +98,13 @@
           }
         }
       ],
-      "CompletionText": {
-        "Namespace": "Quest_S18_Repeatable_Interact_Boat",
-        "Key": "Quest_S18_Repeatable_Interact_Boat_CompletionText",
-        "SourceString": "Where's me hook hand, matey? Heh, kidding!"
+      "Category": {
+        "DataTable": {
+          "ObjectName": "DataTable QuestCategoryTable",
+          "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
+        },
+        "RowName": "BRDailyChallenges"
       },
-      "GrantToProfileType": "athena",
       "Rarity": "EFortRarity::Common",
       "DisplayName": {
         "Namespace": "Quest_S18_Repeatable_Interact_Boat",
@@ -114,7 +114,7 @@
       "ShortDescription": {
         "Namespace": "Quest_S18_Repeatable_Interact_Boat",
         "Key": "Quest_S18_Repeatable_Interact_Boat_ShortDescription",
-        "SourceString": "Yarrrr! Yee in a pirate mood, ya scurvy dog?"
+        "SourceString": "Drive a boat"
       },
       "Description": {
         "Namespace": "Quest_S18_Repeatable_Interact_Boat",
@@ -122,7 +122,8 @@
         "SourceString": "Drive a boat"
       },
       "GameplayTags": [
-        "ChallengeCategory.Bars"
+        "ChallengeCategory.XP",
+        "ChallengeCategory.PunchCard"
       ]
     }
   }

@@ -1,20 +1,21 @@
 [
   {
-    "Type": "FortQuestItemDefinition",
+    "Type": "AthenaDailyQuestDefinition",
     "Name": "Quest_S18_Repeatable_Destroy_Structures",
     "Properties": {
-      "QuestType": "EFortQuestType::AthenaTransientQuest",
-      "QuestSubtype": "EFortQuestSubtype::Autofill",
-      "TandemCharacterData": {
-        "AssetPathName": "/NPCLibrary/NPCs/VendingLlama/NPCCharacterData_VendingLlama.NPCCharacterData_VendingLlama",
-        "SubPathString": ""
-      },
-      "bIncludedInCategories": false,
-      "bIsShared": true,
+      "QuestSubtype": "EFortQuestSubtype::QuickChallenge",
+      "bAthenaGrantRarityToken": false,
+      "bHideStageDescription": true,
       "RewardsTable": {
-        "ObjectName": "DataTable ChallengeReward_S18_ShardQuest_C",
-        "ObjectPath": "/BattlePassS18/Items/QuestRewards/ChallengeReward_S18_ShardQuest_C.0"
+        "ObjectName": "DataTable AthenaChallengeReward_DailyChallenge_SeasonAgnostic",
+        "ObjectPath": "/Game/Athena/Items/Quests/Rewards/AthenaChallengeReward_DailyChallenge_SeasonAgnostic.0"
       },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_dailychallenge_token",
+          "Quantity": 1
+        }
+      ],
       "Objectives": [
         {
           "BackendName": "Quest_S18_Repeatable_Destroy_Structures_obj0",
@@ -80,13 +81,11 @@
           "LinkSquadIndex": 0,
           "Description": {
             "Namespace": "",
-            "Key": "2ADC15434CDD4406E45D329083958F7B",
+            "Key": "9C54C0CB4A5D94F7EA0E7F9AE039128B",
             "SourceString": "Destroy opponent structures"
           },
           "HudShortDescription": {
-            "Namespace": "",
-            "Key": "B6908AB64A4B500C5E25B8A9E4A37505",
-            "SourceString": "Hey you! Come out to plaaaay!"
+            "CultureInvariantString": null
           },
           "HudIcon": {
             "AssetPathName": "None",
@@ -106,12 +105,13 @@
           }
         }
       ],
-      "CompletionText": {
-        "Namespace": "Quest_S18_Repeatable_Destroy_Structures",
-        "Key": "Quest_S18_Repeatable_Destroy_Structures_CompletionText",
-        "SourceString": "There they are!"
+      "Category": {
+        "DataTable": {
+          "ObjectName": "DataTable QuestCategoryTable",
+          "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
+        },
+        "RowName": "BRDailyChallenges"
       },
-      "GrantToProfileType": "athena",
       "Rarity": "EFortRarity::Common",
       "DisplayName": {
         "Namespace": "Quest_S18_Repeatable_Destroy_Structures",
@@ -121,7 +121,7 @@
       "ShortDescription": {
         "Namespace": "Quest_S18_Repeatable_Destroy_Structures",
         "Key": "Quest_S18_Repeatable_Destroy_Structures_ShortDescription",
-        "SourceString": "Hey you! Come out to plaaaay!"
+        "SourceString": "Destroy opponent structures"
       },
       "Description": {
         "Namespace": "Quest_S18_Repeatable_Destroy_Structures",
@@ -129,7 +129,8 @@
         "SourceString": "Destroy opponent structures"
       },
       "GameplayTags": [
-        "ChallengeCategory.Bars"
+        "ChallengeCategory.XP",
+        "ChallengeCategory.PunchCard"
       ]
     }
   }

@@ -1,20 +1,21 @@
 [
   {
-    "Type": "FortQuestItemDefinition",
+    "Type": "AthenaDailyQuestDefinition",
     "Name": "Quest_S18_Repeatable_Fuel_Vehicle",
     "Properties": {
-      "QuestType": "EFortQuestType::AthenaTransientQuest",
-      "QuestSubtype": "EFortQuestSubtype::Autofill",
-      "TandemCharacterData": {
-        "AssetPathName": "/NPCLibrary/NPCs/VendingLlama/NPCCharacterData_VendingLlama.NPCCharacterData_VendingLlama",
-        "SubPathString": ""
-      },
-      "bIncludedInCategories": false,
-      "bIsShared": true,
+      "QuestSubtype": "EFortQuestSubtype::QuickChallenge",
+      "bAthenaGrantRarityToken": false,
+      "bHideStageDescription": true,
       "RewardsTable": {
-        "ObjectName": "DataTable ChallengeReward_S18_ShardQuest_C",
-        "ObjectPath": "/BattlePassS18/Items/QuestRewards/ChallengeReward_S18_ShardQuest_C.0"
+        "ObjectName": "DataTable AthenaChallengeReward_DailyChallenge_SeasonAgnostic",
+        "ObjectPath": "/Game/Athena/Items/Quests/Rewards/AthenaChallengeReward_DailyChallenge_SeasonAgnostic.0"
       },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_dailychallenge_token",
+          "Quantity": 1
+        }
+      ],
       "Objectives": [
         {
           "BackendName": "Quest_S18_Repeatable_Fuel_Vehicle_obj0",
@@ -73,13 +74,11 @@
           "LinkSquadIndex": 0,
           "Description": {
             "Namespace": "",
-            "Key": "EBF86CF54D26D485285E2EA038BB28EA",
+            "Key": "B314365040F7E6D6CE48CEAEEE73233D",
             "SourceString": "Fuel up a Vehicle"
           },
           "HudShortDescription": {
-            "Namespace": "",
-            "Key": "0DE9FD454BE8307CBA771196A4151D81",
-            "SourceString": "My database is telling me vehicles need fuel to function."
+            "CultureInvariantString": null
           },
           "HudIcon": {
             "AssetPathName": "None",
@@ -99,12 +98,13 @@
           }
         }
       ],
-      "CompletionText": {
-        "Namespace": "Quest_S18_Repeatable_Fuel_Vehicle",
-        "Key": "Quest_S18_Repeatable_Fuel_Vehicle_CompletionText",
-        "SourceString": "Full tank, fast car, guaranteed win!"
+      "Category": {
+        "DataTable": {
+          "ObjectName": "DataTable QuestCategoryTable",
+          "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
+        },
+        "RowName": "BRDailyChallenges"
       },
-      "GrantToProfileType": "athena",
       "Rarity": "EFortRarity::Common",
       "DisplayName": {
         "Namespace": "Quest_S18_Repeatable_Fuel_Vehicle",
@@ -114,7 +114,7 @@
       "ShortDescription": {
         "Namespace": "Quest_S18_Repeatable_Fuel_Vehicle",
         "Key": "Quest_S18_Repeatable_Fuel_Vehicle_ShortDescription",
-        "SourceString": "My database is telling me vehicles need fuel to function."
+        "SourceString": "Fuel up a Vehicle"
       },
       "Description": {
         "Namespace": "Quest_S18_Repeatable_Fuel_Vehicle",
@@ -122,7 +122,8 @@
         "SourceString": "Fuel up a Vehicle"
       },
       "GameplayTags": [
-        "ChallengeCategory.Bars"
+        "ChallengeCategory.XP",
+        "ChallengeCategory.PunchCard"
       ]
     }
   }

@@ -1,0 +1,115 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "Quest_S18_Repeatable_ThankTheBusDriver_q03",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "QuestSubtype": "EFortQuestSubtype::PunchCard",
+      "bAthenaGrantRarityToken": false,
+      "bIncludedInCategories": false,
+      "RewardsTable": {
+        "ObjectName": "DataTable ChallengeReward_S18_WeeklyXP_Stage3",
+        "ObjectPath": "/BattlePassS18/Items/QuestRewards/ChallengeReward_S18_WeeklyXP_Stage3.0"
+      },
+      "Objectives": [
+        {
+          "BackendName": "Quest_S18_Repeatable_ThankTheBusDriver_q03_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "Source.Tags HasTag Gameplay.Action.Player.ThankBusDriver",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::ComplexCustom",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "281D257B49ED9E9C9E6558A9C9472379",
+            "SourceString": "Thank the Bus Driver"
+          },
+          "HudShortDescription": {
+            "CultureInvariantString": null
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 20,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "TransientQuestStage": 3,
+      "TransientQuestMaxStage": 3,
+      "bHideQuestProgressNotification": true,
+      "bHideQuestRewardNotification": true,
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Common",
+      "DisplayName": {
+        "Namespace": "Quest_S18_Repeatable_ThankTheBusDriver_q03",
+        "Key": "Quest_S18_Repeatable_ThankTheBusDriver_q03_DisplayName",
+        "SourceString": "Thank the Bus Driver"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S18_Repeatable_ThankTheBusDriver_q03",
+        "Key": "Quest_S18_Repeatable_ThankTheBusDriver_q03_ShortDescription",
+        "SourceString": "Thank the Bus Driver"
+      },
+      "Description": {
+        "Namespace": "Quest_S18_Repeatable_ThankTheBusDriver_q03",
+        "Key": "Quest_S18_Repeatable_ThankTheBusDriver_q03_Description",
+        "SourceString": "Thank the Bus Driver"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP"
+      ]
+    }
+  }
+]

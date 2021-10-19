@@ -1,21 +1,22 @@
 [
   {
-    "Type": "FortQuestItemDefinition",
+    "Type": "AthenaDailyQuestDefinition",
     "Name": "Quest_S18_Repeatable_Collect_WeaponTypes",
     "Properties": {
-      "QuestType": "EFortQuestType::AthenaTransientQuest",
-      "QuestSubtype": "EFortQuestSubtype::Autofill",
-      "TandemCharacterData": {
-        "AssetPathName": "/NPCLibrary/NPCs/VendingLlama/NPCCharacterData_VendingLlama.NPCCharacterData_VendingLlama",
-        "SubPathString": ""
-      },
-      "bIncludedInCategories": false,
-      "bIsShared": true,
+      "QuestSubtype": "EFortQuestSubtype::QuickChallenge",
+      "bAthenaGrantRarityToken": false,
+      "bHideStageDescription": true,
       "ObjectiveCompletionCount": 3,
       "RewardsTable": {
-        "ObjectName": "DataTable ChallengeReward_S18_ShardQuest_C",
-        "ObjectPath": "/BattlePassS18/Items/QuestRewards/ChallengeReward_S18_ShardQuest_C.0"
+        "ObjectName": "DataTable AthenaChallengeReward_DailyChallenge_SeasonAgnostic",
+        "ObjectPath": "/Game/Athena/Items/Quests/Rewards/AthenaChallengeReward_DailyChallenge_SeasonAgnostic.0"
       },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_dailychallenge_token",
+          "Quantity": 1
+        }
+      ],
       "Objectives": [
         {
           "BackendName": "Quest_S18_Repeatable_Collect_WeaponTypes_obj0",
@@ -74,12 +75,12 @@
           "LinkSquadIndex": 0,
           "Description": {
             "Namespace": "",
-            "Key": "81D98EE64EAD474BFD70209E9454B749",
+            "Key": "1E9D05CD4A97234AE77648ADA8846696",
             "SourceString": "Collect different weapon types"
           },
           "HudShortDescription": {
             "Namespace": "",
-            "Key": "F1A512FE4CD164316AE64EBAD451CF9D",
+            "Key": "9FD3E0B245D3DAB9268919A9F6C54B5B",
             "SourceString": "Collect different weapon types"
           },
           "HudIcon": {
@@ -156,12 +157,12 @@
           "LinkSquadIndex": 0,
           "Description": {
             "Namespace": "",
-            "Key": "4535E582462DCDB1229D8FB568ACAAF8",
+            "Key": "EF81B8674A5021D812B8F49EDAC9EF89",
             "SourceString": "Collect different weapon types"
           },
           "HudShortDescription": {
             "Namespace": "",
-            "Key": "F8655246436061DA51B59BA11FB6B206",
+            "Key": "3916F1744E8FB39989E7049182448877",
             "SourceString": "Collect different weapon types"
           },
           "HudIcon": {
@@ -245,12 +246,12 @@
           "LinkSquadIndex": 0,
           "Description": {
             "Namespace": "",
-            "Key": "3E18DDB146E7C76B494F49A71F6842C4",
+            "Key": "282C7E84473550103C4084AC0685CA58",
             "SourceString": "Collect different weapon types"
           },
           "HudShortDescription": {
             "Namespace": "",
-            "Key": "A69AF203478E52BE73BC52A9840CB594",
+            "Key": "89BEEBB14B9365D7E1C99CBB94A3EF3B",
             "SourceString": "Collect different weapon types"
           },
           "HudIcon": {
@@ -327,12 +328,12 @@
           "LinkSquadIndex": 0,
           "Description": {
             "Namespace": "",
-            "Key": "A5DB4449446AAEC2CD27D2A774E64E4D",
+            "Key": "D15B3F26417C0B8F8A2DA0BFBFD01D44",
             "SourceString": "Collect different weapon types"
           },
           "HudShortDescription": {
             "Namespace": "",
-            "Key": "FCEF702C40CC8B3B42B25E9991154BD6",
+            "Key": "CDD8C5884D12DCEEC8270B91123A6651",
             "SourceString": "Collect different weapon types"
           },
           "HudIcon": {
@@ -409,12 +410,12 @@
           "LinkSquadIndex": 0,
           "Description": {
             "Namespace": "",
-            "Key": "909B7B68457DB5E05E4536A01DD6B408",
+            "Key": "09E7E27549D57C6493D47A9A0C078C64",
             "SourceString": "Collect different weapon types"
           },
           "HudShortDescription": {
             "Namespace": "",
-            "Key": "D60B3B694D6DEEA16F8051BFE2AB625E",
+            "Key": "5E153E4C498627370C3312BBED278912",
             "SourceString": "Collect different weapon types"
           },
           "HudIcon": {
@@ -491,12 +492,12 @@
           "LinkSquadIndex": 0,
           "Description": {
             "Namespace": "",
-            "Key": "C6793C68432A5B5163D21B95ABD05777",
+            "Key": "A87090644777550992DC9386E24310FD",
             "SourceString": "Collect different weapon types"
           },
           "HudShortDescription": {
             "Namespace": "",
-            "Key": "337E53FF4E069FFAB0A47993CFB31F91",
+            "Key": "637F07D6483E54C623DF6B8749E2354B",
             "SourceString": "Collect different weapon types"
           },
           "HudIcon": {
@@ -573,12 +574,12 @@
           "LinkSquadIndex": 0,
           "Description": {
             "Namespace": "",
-            "Key": "EEBE28194C5267AFC135C880A5843BD8",
+            "Key": "7B0F0D344C9AC852EA4DFFB6620E56FF",
             "SourceString": "Collect different weapon types"
           },
           "HudShortDescription": {
             "Namespace": "",
-            "Key": "697F083748F21037F74B958D1E138B18",
+            "Key": "76E1B2F748EA22E052A66DAE35163568",
             "SourceString": "Collect different weapon types"
           },
           "HudIcon": {
@@ -599,12 +600,13 @@
           }
         }
       ],
-      "CompletionText": {
-        "Namespace": "Quest_S18_Repeatable_Collect_WeaponTypes",
-        "Key": "Quest_S18_Repeatable_Collect_WeaponTypes_CompletionText",
-        "SourceString": "Long-range, close-range, mid-range... All the ranges!"
+      "Category": {
+        "DataTable": {
+          "ObjectName": "DataTable QuestCategoryTable",
+          "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
+        },
+        "RowName": "BRDailyChallenges"
       },
-      "GrantToProfileType": "athena",
       "Rarity": "EFortRarity::Common",
       "DisplayName": {
         "Namespace": "Quest_S18_Repeatable_Collect_WeaponTypes",
@@ -614,7 +616,7 @@
       "ShortDescription": {
         "Namespace": "Quest_S18_Repeatable_Collect_WeaponTypes",
         "Key": "Quest_S18_Repeatable_Collect_WeaponTypes_ShortDescription",
-        "SourceString": "A diverse loadout gives you options in different scenarios!"
+        "SourceString": "Collect different weapon types"
       },
       "Description": {
         "Namespace": "Quest_S18_Repeatable_Collect_WeaponTypes",
@@ -622,7 +624,8 @@
         "SourceString": "Collect different weapon types"
       },
       "GameplayTags": [
-        "ChallengeCategory.Bars"
+        "ChallengeCategory.XP",
+        "ChallengeCategory.PunchCard"
       ]
     }
   }

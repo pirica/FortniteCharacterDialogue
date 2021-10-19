@@ -1,20 +1,21 @@
 [
   {
-    "Type": "FortQuestItemDefinition",
+    "Type": "AthenaDailyQuestDefinition",
     "Name": "Quest_S18_Repeatable_Damage_Sniper",
     "Properties": {
-      "QuestType": "EFortQuestType::AthenaTransientQuest",
-      "QuestSubtype": "EFortQuestSubtype::Autofill",
-      "TandemCharacterData": {
-        "AssetPathName": "/NPCLibrary/NPCs/VendingLlama/NPCCharacterData_VendingLlama.NPCCharacterData_VendingLlama",
-        "SubPathString": ""
-      },
-      "bIncludedInCategories": false,
-      "bIsShared": true,
+      "QuestSubtype": "EFortQuestSubtype::QuickChallenge",
+      "bAthenaGrantRarityToken": false,
+      "bHideStageDescription": true,
       "RewardsTable": {
-        "ObjectName": "DataTable ChallengeReward_S18_ShardQuest_C",
-        "ObjectPath": "/BattlePassS18/Items/QuestRewards/ChallengeReward_S18_ShardQuest_C.0"
+        "ObjectName": "DataTable AthenaChallengeReward_DailyChallenge_SeasonAgnostic",
+        "ObjectPath": "/Game/Athena/Items/Quests/Rewards/AthenaChallengeReward_DailyChallenge_SeasonAgnostic.0"
       },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_dailychallenge_token",
+          "Quantity": 1
+        }
+      ],
       "Objectives": [
         {
           "BackendName": "Quest_S18_Repeatable_Damage_Sniper_obj0",
@@ -37,13 +38,13 @@
                 },
                 {
                   "Tag": {
-                    "TagName": "Weapon.Ranged.Sniper"
+                    "TagName": "Item.Weapon.Ranged.Sniper"
                   },
                   "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
                   "Require": true
                 }
               ],
-              "Condition": "Target.Tags HasTag Homebase.Class || Target.Tags HasTag Athena.Faction.Generic.Hostile || Target.Tags HasTag Pawn.Athena.NPC.Duel.IsBeingChallenged || Target.Tags HasTag Pawn.Athena.NPC.Wildlife.Predator || Target.Tags HasTag Pawn.Athena.NPC.Mang || Target.Tags HasTag Pawn.Athena.NPC.IO || Target.Tags HasTag AISpawnerData.Type.MotherWall || Target.Tags HasTag Pawn.Athena.NPC.Labrador",
+              "Condition": "Target.Tags HasTag Homebase.Class || Target.Tags HasTag Pawn.Athena.NPC.Deimos || Target.Tags HasTag Athena.Faction.Generic.Hostile || Target.Tags HasTag Pawn.Athena.NPC.Duel.IsBeingChallenged || Target.Tags HasTag Pawn.Athena.NPC.Wildlife.Predator || Target.Tags HasTag Pawn.Athena.NPC.Mang || Target.Tags HasTag Pawn.Athena.NPC.IO || Target.Tags HasTag Pawn.Athena.NPC.Labrador",
               "TemplateIds": [],
               "Type": "EFortQuestObjectiveStatEvent::Damage",
               "bHasInclusiveTargetTags": false,
@@ -73,13 +74,11 @@
           "LinkSquadIndex": 0,
           "Description": {
             "Namespace": "",
-            "Key": "DE8711A94FFBB238D5882A8A1465AAFE",
+            "Key": "80ACFE6D46197C5C4884FC848C74017C",
             "SourceString": "Deal damage with sniper rifles"
           },
           "HudShortDescription": {
-            "Namespace": "",
-            "Key": "D45A5CBC425232CB398DCABF94F76907",
-            "SourceString": "They'll never know what hit 'em."
+            "CultureInvariantString": null
           },
           "HudIcon": {
             "AssetPathName": "None",
@@ -99,12 +98,13 @@
           }
         }
       ],
-      "CompletionText": {
-        "Namespace": "Quest_S18_Repeatable_Damage_Sniper",
-        "Key": "Quest_S18_Repeatable_Damage_Sniper_CompletionText",
-        "SourceString": "...Because you're so far away! Get it?"
+      "Category": {
+        "DataTable": {
+          "ObjectName": "DataTable QuestCategoryTable",
+          "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
+        },
+        "RowName": "BRDailyChallenges"
       },
-      "GrantToProfileType": "athena",
       "Rarity": "EFortRarity::Common",
       "DisplayName": {
         "Namespace": "Quest_S18_Repeatable_Damage_Sniper",
@@ -114,7 +114,7 @@
       "ShortDescription": {
         "Namespace": "Quest_S18_Repeatable_Damage_Sniper",
         "Key": "Quest_S18_Repeatable_Damage_Sniper_ShortDescription",
-        "SourceString": "They'll never know what hit 'em."
+        "SourceString": "Deal damage with sniper rifles"
       },
       "Description": {
         "Namespace": "Quest_S18_Repeatable_Damage_Sniper",
@@ -122,7 +122,8 @@
         "SourceString": "Deal damage with sniper rifles"
       },
       "GameplayTags": [
-        "ChallengeCategory.Bars"
+        "ChallengeCategory.XP",
+        "ChallengeCategory.PunchCard"
       ]
     }
   }

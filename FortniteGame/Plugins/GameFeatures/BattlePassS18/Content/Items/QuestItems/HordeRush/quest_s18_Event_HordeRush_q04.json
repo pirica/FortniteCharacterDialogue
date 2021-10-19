@@ -1,0 +1,133 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "quest_s18_Event_HordeRush_q04",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaTransientQuest",
+      "QuestSubtype": "EFortQuestSubtype::Autofill",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/Hollowhead/Hollowhead/NPCCharacterData_Hollowhead.NPCCharacterData_Hollowhead",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "bHideStageDescription": true,
+      "bIsShared": true,
+      "RewardsTable": {
+        "ObjectName": "DataTable ChallengeReward_S18_ShardQuest_R",
+        "ObjectPath": "/BattlePassS18/Items/QuestRewards/ChallengeReward_S18_ShardQuest_R.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_s18_horderush_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "quest_s18_Event_HordeRush_q04_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.Quests.Mash.ScoreMultiplier"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Interact",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "0F23093B436BB70503EA2C8ED5616743",
+            "SourceString": "Collect score multipliers"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "60CADF7B49AB27D3972C7A9503EAD022",
+            "SourceString": "Grab score multipliers. You'll thank me later."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 6,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "quest_s18_Event_HordeRush_q04",
+        "Key": "quest_s18_Event_HordeRush_q04_CompletionText",
+        "SourceString": "See what I mean? Nice score!"
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Rare",
+      "DisplayName": {
+        "Namespace": "quest_s18_Event_HordeRush_q04",
+        "Key": "quest_s18_Event_HordeRush_q04_DisplayName",
+        "SourceString": "Collect score multipliers"
+      },
+      "ShortDescription": {
+        "Namespace": "quest_s18_Event_HordeRush_q04",
+        "Key": "quest_s18_Event_HordeRush_q04_ShortDescription",
+        "SourceString": "Grab score multipliers. You'll thank me later."
+      },
+      "Description": {
+        "Namespace": "quest_s18_Event_HordeRush_q04",
+        "Key": "quest_s18_Event_HordeRush_q04_Description",
+        "SourceString": "Collect score multipliers"
+      }
+    }
+  }
+]

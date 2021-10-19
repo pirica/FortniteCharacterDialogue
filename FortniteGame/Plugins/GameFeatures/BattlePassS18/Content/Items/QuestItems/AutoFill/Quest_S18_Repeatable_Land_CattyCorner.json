@@ -1,20 +1,21 @@
 [
   {
-    "Type": "FortQuestItemDefinition",
+    "Type": "AthenaDailyQuestDefinition",
     "Name": "Quest_S18_Repeatable_Land_CattyCorner",
     "Properties": {
-      "QuestType": "EFortQuestType::AthenaTransientQuest",
-      "QuestSubtype": "EFortQuestSubtype::Autofill",
-      "TandemCharacterData": {
-        "AssetPathName": "/NPCLibrary/NPCs/VendingLlama/NPCCharacterData_VendingLlama.NPCCharacterData_VendingLlama",
-        "SubPathString": ""
-      },
-      "bIncludedInCategories": false,
-      "bIsShared": true,
+      "QuestSubtype": "EFortQuestSubtype::QuickChallenge",
+      "bAthenaGrantRarityToken": false,
+      "bHideStageDescription": true,
       "RewardsTable": {
-        "ObjectName": "DataTable ChallengeReward_S18_ShardQuest_C",
-        "ObjectPath": "/BattlePassS18/Items/QuestRewards/ChallengeReward_S18_ShardQuest_C.0"
+        "ObjectName": "DataTable AthenaChallengeReward_DailyChallenge_SeasonAgnostic",
+        "ObjectPath": "/Game/Athena/Items/Quests/Rewards/AthenaChallengeReward_DailyChallenge_SeasonAgnostic.0"
       },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_dailychallenge_token",
+          "Quantity": 1
+        }
+      ],
       "Objectives": [
         {
           "BackendName": "Quest_S18_Repeatable_Land_CattyCorner_obj0",
@@ -73,13 +74,11 @@
           "LinkSquadIndex": 0,
           "Description": {
             "Namespace": "",
-            "Key": "E0D4C87B4089C4F2DF83289FB7C55DF7",
+            "Key": "ECA12D144CB2EA18A03B8FA8699B973B",
             "SourceString": "Land at Catty Corner"
           },
           "HudShortDescription": {
-            "Namespace": "",
-            "Key": "A6C4E6BB4EA4B814DBE7D7A903C989C6",
-            "SourceString": "Are you a cat person, bud?"
+            "CultureInvariantString": null
           },
           "HudIcon": {
             "AssetPathName": "None",
@@ -99,12 +98,14 @@
           }
         }
       ],
-      "CompletionText": {
-        "Namespace": "Quest_S18_Repeatable_Land_CattyCorner",
-        "Key": "Quest_S18_Repeatable_Land_CattyCorner_CompletionText",
-        "SourceString": "How about corners? Do you like corners?"
+      "Weight": 0.3,
+      "Category": {
+        "DataTable": {
+          "ObjectName": "DataTable QuestCategoryTable",
+          "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
+        },
+        "RowName": "BRDailyChallenges"
       },
-      "GrantToProfileType": "athena",
       "Rarity": "EFortRarity::Common",
       "DisplayName": {
         "Namespace": "Quest_S18_Repeatable_Land_CattyCorner",
@@ -114,7 +115,7 @@
       "ShortDescription": {
         "Namespace": "Quest_S18_Repeatable_Land_CattyCorner",
         "Key": "Quest_S18_Repeatable_Land_CattyCorner_ShortDescription",
-        "SourceString": "Are you a cat person, bud?"
+        "SourceString": "Land at Catty Corner"
       },
       "Description": {
         "Namespace": "Quest_S18_Repeatable_Land_CattyCorner",
@@ -122,7 +123,8 @@
         "SourceString": "Land at Catty Corner"
       },
       "GameplayTags": [
-        "ChallengeCategory.Bars"
+        "ChallengeCategory.XP",
+        "ChallengeCategory.PunchCard"
       ]
     }
   }

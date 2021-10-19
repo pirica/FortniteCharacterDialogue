@@ -1,20 +1,21 @@
 [
   {
-    "Type": "FortQuestItemDefinition",
+    "Type": "AthenaDailyQuestDefinition",
     "Name": "Quest_S18_Repeatable_Land_SaltyTowers",
     "Properties": {
-      "QuestType": "EFortQuestType::AthenaTransientQuest",
-      "QuestSubtype": "EFortQuestSubtype::Autofill",
-      "TandemCharacterData": {
-        "AssetPathName": "/NPCLibrary/NPCs/VendingLlama/NPCCharacterData_VendingLlama.NPCCharacterData_VendingLlama",
-        "SubPathString": ""
-      },
-      "bIncludedInCategories": false,
-      "bIsShared": true,
+      "QuestSubtype": "EFortQuestSubtype::QuickChallenge",
+      "bAthenaGrantRarityToken": false,
+      "bHideStageDescription": true,
       "RewardsTable": {
-        "ObjectName": "DataTable ChallengeReward_S18_ShardQuest_C",
-        "ObjectPath": "/BattlePassS18/Items/QuestRewards/ChallengeReward_S18_ShardQuest_C.0"
+        "ObjectName": "DataTable AthenaChallengeReward_DailyChallenge_SeasonAgnostic",
+        "ObjectPath": "/Game/Athena/Items/Quests/Rewards/AthenaChallengeReward_DailyChallenge_SeasonAgnostic.0"
       },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_dailychallenge_token",
+          "Quantity": 1
+        }
+      ],
       "Objectives": [
         {
           "BackendName": "Quest_S18_Repeatable_Land_SaltyTowers_obj0",
@@ -73,13 +74,11 @@
           "LinkSquadIndex": 0,
           "Description": {
             "Namespace": "",
-            "Key": "4C761D9349701C0B9FE1D0B4747E8323",
+            "Key": "FBFF6DD94FEB78AE70483DB72904E0E4",
             "SourceString": "Land at Boney Burbs"
           },
           "HudShortDescription": {
-            "Namespace": "",
-            "Key": "A376040345C2AC6F15EA39B708E1F0C4",
-            "SourceString": "Ooh, can we go to Boney Burbs?"
+            "CultureInvariantString": null
           },
           "HudIcon": {
             "AssetPathName": "None",
@@ -99,12 +98,14 @@
           }
         }
       ],
-      "CompletionText": {
-        "Namespace": "Quest_S18_Repeatable_Land_SaltyTowers",
-        "Key": "Quest_S18_Repeatable_Land_SaltyTowers_CompletionText",
-        "SourceString": "It's so rustic!"
+      "Weight": 0.3,
+      "Category": {
+        "DataTable": {
+          "ObjectName": "DataTable QuestCategoryTable",
+          "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
+        },
+        "RowName": "BRDailyChallenges"
       },
-      "GrantToProfileType": "athena",
       "Rarity": "EFortRarity::Common",
       "DisplayName": {
         "Namespace": "Quest_S18_Repeatable_Land_SaltyTowers",
@@ -114,7 +115,7 @@
       "ShortDescription": {
         "Namespace": "Quest_S18_Repeatable_Land_SaltyTowers",
         "Key": "Quest_S18_Repeatable_Land_SaltyTowers_ShortDescription",
-        "SourceString": "Ooh, can we go to Boney Burbs?"
+        "SourceString": "Land at Boney Burbs"
       },
       "Description": {
         "Namespace": "Quest_S18_Repeatable_Land_SaltyTowers",
@@ -122,7 +123,8 @@
         "SourceString": "Land at Boney Burbs"
       },
       "GameplayTags": [
-        "ChallengeCategory.Bars"
+        "ChallengeCategory.XP",
+        "ChallengeCategory.PunchCard"
       ]
     }
   }

@@ -1,20 +1,21 @@
 [
   {
-    "Type": "FortQuestItemDefinition",
+    "Type": "AthenaDailyQuestDefinition",
     "Name": "Quest_S18_Repeatable_Land_SunnyShores",
     "Properties": {
-      "QuestType": "EFortQuestType::AthenaTransientQuest",
-      "QuestSubtype": "EFortQuestSubtype::Autofill",
-      "TandemCharacterData": {
-        "AssetPathName": "/NPCLibrary/NPCs/VendingLlama/NPCCharacterData_VendingLlama.NPCCharacterData_VendingLlama",
-        "SubPathString": ""
-      },
-      "bIncludedInCategories": false,
-      "bIsShared": true,
+      "QuestSubtype": "EFortQuestSubtype::QuickChallenge",
+      "bAthenaGrantRarityToken": false,
+      "bHideStageDescription": true,
       "RewardsTable": {
-        "ObjectName": "DataTable ChallengeReward_S18_ShardQuest_C",
-        "ObjectPath": "/BattlePassS18/Items/QuestRewards/ChallengeReward_S18_ShardQuest_C.0"
+        "ObjectName": "DataTable AthenaChallengeReward_DailyChallenge_SeasonAgnostic",
+        "ObjectPath": "/Game/Athena/Items/Quests/Rewards/AthenaChallengeReward_DailyChallenge_SeasonAgnostic.0"
       },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_dailychallenge_token",
+          "Quantity": 1
+        }
+      ],
       "Objectives": [
         {
           "BackendName": "Quest_S18_Repeatable_Land_SunnyShores_obj0",
@@ -73,13 +74,11 @@
           "LinkSquadIndex": 0,
           "Description": {
             "Namespace": "",
-            "Key": "F4D8F7114F68692E939E479CC61C51B9",
+            "Key": "22A3BAC3411D5A5E35DD06B1961A153F",
             "SourceString": "Land at Believer Beach"
           },
           "HudShortDescription": {
-            "Namespace": "",
-            "Key": "4D6A8CC347CF9E905DB38EB1D3B77069",
-            "SourceString": "How 'bout a beach vacation, boss?"
+            "CultureInvariantString": null
           },
           "HudIcon": {
             "AssetPathName": "None",
@@ -99,12 +98,14 @@
           }
         }
       ],
-      "CompletionText": {
-        "Namespace": "Quest_S18_Repeatable_Land_SunnyShores",
-        "Key": "Quest_S18_Repeatable_Land_SunnyShores_CompletionText",
-        "SourceString": "Don't forget the sunscreen!"
+      "Weight": 0.3,
+      "Category": {
+        "DataTable": {
+          "ObjectName": "DataTable QuestCategoryTable",
+          "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
+        },
+        "RowName": "BRDailyChallenges"
       },
-      "GrantToProfileType": "athena",
       "Rarity": "EFortRarity::Common",
       "DisplayName": {
         "Namespace": "Quest_S18_Repeatable_Land_SunnyShores",
@@ -114,7 +115,7 @@
       "ShortDescription": {
         "Namespace": "Quest_S18_Repeatable_Land_SunnyShores",
         "Key": "Quest_S18_Repeatable_Land_SunnyShores_ShortDescription",
-        "SourceString": "How 'bout a beach vacation, boss?"
+        "SourceString": "Land at Believer Beach"
       },
       "Description": {
         "Namespace": "Quest_S18_Repeatable_Land_SunnyShores",
@@ -122,7 +123,8 @@
         "SourceString": "Land at Believer Beach"
       },
       "GameplayTags": [
-        "ChallengeCategory.Bars"
+        "ChallengeCategory.XP",
+        "ChallengeCategory.PunchCard"
       ]
     }
   }

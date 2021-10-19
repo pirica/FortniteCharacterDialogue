@@ -1,0 +1,144 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "quest_s18_Event_HordeRush_q02",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaTransientQuest",
+      "QuestSubtype": "EFortQuestSubtype::Autofill",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/Hollowhead/Hollowhead/NPCCharacterData_Hollowhead.NPCCharacterData_Hollowhead",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "bHideStageDescription": true,
+      "bIsShared": true,
+      "RewardsTable": {
+        "ObjectName": "DataTable ChallengeReward_S18_ShardQuest_R",
+        "ObjectPath": "/BattlePassS18/Items/QuestRewards/ChallengeReward_S18_ShardQuest_R.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_s18_horderush_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "quest_s18_Event_HordeRush_q02_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.Quests.HitHeadshots"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Pawn.Athena.NPC.Deimos"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::ComplexCustom",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "7308999248B4BDDE94CC8FB56814E9F1",
+            "SourceString": "Get headshots on enemies"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "017D8B9E4FC5FFDAD3D881A0A985D346",
+            "SourceString": "Aim for the head."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 300,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "quest_s18_Event_HordeRush_q02",
+        "Key": "quest_s18_Event_HordeRush_q02_CompletionText",
+        "SourceString": "Nailed it!"
+      },
+      "QuestAbilitySet": {
+        "AssetPathName": "/BattlePassS18/Items/QuestAbilities/Quest_Headshots/Generic/GAS_S18_Quest_HitHeadshots.GAS_S18_Quest_HitHeadshots",
+        "SubPathString": ""
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Rare",
+      "DisplayName": {
+        "Namespace": "quest_s18_Event_HordeRush_q02",
+        "Key": "quest_s18_Event_HordeRush_q02_DisplayName",
+        "SourceString": "Get headshots on enemies"
+      },
+      "ShortDescription": {
+        "Namespace": "quest_s18_Event_HordeRush_q02",
+        "Key": "quest_s18_Event_HordeRush_q02_ShortDescription",
+        "SourceString": "Aim for the head."
+      },
+      "Description": {
+        "Namespace": "quest_s18_Event_HordeRush_q02",
+        "Key": "quest_s18_Event_HordeRush_q02_Description",
+        "SourceString": "Get headshots on enemies"
+      }
+    }
+  }
+]

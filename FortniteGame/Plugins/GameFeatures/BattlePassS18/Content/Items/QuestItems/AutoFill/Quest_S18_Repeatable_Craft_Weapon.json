@@ -1,20 +1,21 @@
 [
   {
-    "Type": "FortQuestItemDefinition",
+    "Type": "AthenaDailyQuestDefinition",
     "Name": "Quest_S18_Repeatable_Craft_Weapon",
     "Properties": {
-      "QuestType": "EFortQuestType::AthenaTransientQuest",
-      "QuestSubtype": "EFortQuestSubtype::Autofill",
-      "TandemCharacterData": {
-        "AssetPathName": "/NPCLibrary/NPCs/VendingLlama/NPCCharacterData_VendingLlama.NPCCharacterData_VendingLlama",
-        "SubPathString": ""
-      },
-      "bIncludedInCategories": false,
-      "bIsShared": true,
+      "QuestSubtype": "EFortQuestSubtype::QuickChallenge",
+      "bAthenaGrantRarityToken": false,
+      "bHideStageDescription": true,
       "RewardsTable": {
-        "ObjectName": "DataTable ChallengeReward_S18_ShardQuest_C",
-        "ObjectPath": "/BattlePassS18/Items/QuestRewards/ChallengeReward_S18_ShardQuest_C.0"
+        "ObjectName": "DataTable AthenaChallengeReward_DailyChallenge_SeasonAgnostic",
+        "ObjectPath": "/Game/Athena/Items/Quests/Rewards/AthenaChallengeReward_DailyChallenge_SeasonAgnostic.0"
       },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_dailychallenge_token",
+          "Quantity": 1
+        }
+      ],
       "Objectives": [
         {
           "BackendName": "Quest_S18_Repeatable_Craft_Weapon_obj0",
@@ -80,13 +81,11 @@
           "LinkSquadIndex": 0,
           "Description": {
             "Namespace": "",
-            "Key": "77D56FBB4DE6CBAEE9432699FBDD81F0",
+            "Key": "2267185D4CB658CC77E484942F0B71D8",
             "SourceString": "Craft a weapon"
           },
           "HudShortDescription": {
-            "Namespace": "",
-            "Key": "DF62D532484AF341B31FE8BA072B8AF7",
-            "SourceString": "Quick, make a weapon! Any weapon!"
+            "CultureInvariantString": null
           },
           "HudIcon": {
             "AssetPathName": "None",
@@ -106,12 +105,13 @@
           }
         }
       ],
-      "CompletionText": {
-        "Namespace": "Quest_S18_Repeatable_Craft_Weapon",
-        "Key": "Quest_S18_Repeatable_Craft_Weapon_CompletionText",
-        "SourceString": "Phew. You gotta stay armed out there, bud!"
+      "Category": {
+        "DataTable": {
+          "ObjectName": "DataTable QuestCategoryTable",
+          "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
+        },
+        "RowName": "BRDailyChallenges"
       },
-      "GrantToProfileType": "athena",
       "Rarity": "EFortRarity::Common",
       "DisplayName": {
         "Namespace": "Quest_S18_Repeatable_Craft_Weapon",
@@ -121,7 +121,7 @@
       "ShortDescription": {
         "Namespace": "Quest_S18_Repeatable_Craft_Weapon",
         "Key": "Quest_S18_Repeatable_Craft_Weapon_ShortDescription",
-        "SourceString": "Quick, make a weapon! Any weapon!"
+        "SourceString": "Craft a weapon"
       },
       "Description": {
         "Namespace": "Quest_S18_Repeatable_Craft_Weapon",
@@ -129,7 +129,8 @@
         "SourceString": "Craft a weapon"
       },
       "GameplayTags": [
-        "ChallengeCategory.Bars"
+        "ChallengeCategory.XP",
+        "ChallengeCategory.PunchCard"
       ]
     }
   }

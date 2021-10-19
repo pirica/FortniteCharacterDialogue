@@ -1,20 +1,21 @@
 [
   {
-    "Type": "FortQuestItemDefinition",
+    "Type": "AthenaDailyQuestDefinition",
     "Name": "Quest_S18_Repeatable_Search_AmmoBoxes",
     "Properties": {
-      "QuestType": "EFortQuestType::AthenaTransientQuest",
-      "QuestSubtype": "EFortQuestSubtype::Autofill",
-      "TandemCharacterData": {
-        "AssetPathName": "/NPCLibrary/NPCs/VendingLlama/NPCCharacterData_VendingLlama.NPCCharacterData_VendingLlama",
-        "SubPathString": ""
-      },
-      "bIncludedInCategories": false,
-      "bIsShared": true,
+      "QuestSubtype": "EFortQuestSubtype::QuickChallenge",
+      "bAthenaGrantRarityToken": false,
+      "bHideStageDescription": true,
       "RewardsTable": {
-        "ObjectName": "DataTable ChallengeReward_S18_ShardQuest_C",
-        "ObjectPath": "/BattlePassS18/Items/QuestRewards/ChallengeReward_S18_ShardQuest_C.0"
+        "ObjectName": "DataTable AthenaChallengeReward_DailyChallenge_SeasonAgnostic",
+        "ObjectPath": "/Game/Athena/Items/Quests/Rewards/AthenaChallengeReward_DailyChallenge_SeasonAgnostic.0"
       },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_dailychallenge_token",
+          "Quantity": 1
+        }
+      ],
       "Objectives": [
         {
           "BackendName": "Quest_S18_Repeatable_Search_AmmoBoxes_obj0",
@@ -73,13 +74,11 @@
           "LinkSquadIndex": 0,
           "Description": {
             "Namespace": "",
-            "Key": "FE9162914EC2478EBF444594AD343794",
+            "Key": "6EAEEC9040A48775E8E2759C13ABDFBC",
             "SourceString": "Search Ammo Boxes"
           },
           "HudShortDescription": {
-            "Namespace": "",
-            "Key": "F7D83EC941BC0988E3B12582C40D074B",
-            "SourceString": "You've got the guns, but do you have the ammo?"
+            "CultureInvariantString": null
           },
           "HudIcon": {
             "AssetPathName": "None",
@@ -99,12 +98,13 @@
           }
         }
       ],
-      "CompletionText": {
-        "Namespace": "Quest_S18_Repeatable_Search_AmmoBoxes",
-        "Key": "Quest_S18_Repeatable_Search_AmmoBoxes_CompletionText",
-        "SourceString": "Stock up now, so you're ready when things get spicy!"
+      "Category": {
+        "DataTable": {
+          "ObjectName": "DataTable QuestCategoryTable",
+          "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
+        },
+        "RowName": "BRDailyChallenges"
       },
-      "GrantToProfileType": "athena",
       "Rarity": "EFortRarity::Common",
       "DisplayName": {
         "Namespace": "Quest_S18_Repeatable_Search_AmmoBoxes",
@@ -114,7 +114,7 @@
       "ShortDescription": {
         "Namespace": "Quest_S18_Repeatable_Search_AmmoBoxes",
         "Key": "Quest_S18_Repeatable_Search_AmmoBoxes_ShortDescription",
-        "SourceString": "You've got the guns, but do you have the ammo?"
+        "SourceString": "Search Ammo Boxes"
       },
       "Description": {
         "Namespace": "Quest_S18_Repeatable_Search_AmmoBoxes",
@@ -122,7 +122,8 @@
         "SourceString": "Search Ammo Boxes"
       },
       "GameplayTags": [
-        "ChallengeCategory.Bars"
+        "ChallengeCategory.XP",
+        "ChallengeCategory.PunchCard"
       ]
     }
   }

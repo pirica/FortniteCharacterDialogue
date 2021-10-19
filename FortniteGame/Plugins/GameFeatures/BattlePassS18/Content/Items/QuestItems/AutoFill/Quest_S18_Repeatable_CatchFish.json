@@ -1,20 +1,21 @@
 [
   {
-    "Type": "FortQuestItemDefinition",
+    "Type": "AthenaDailyQuestDefinition",
     "Name": "Quest_S18_Repeatable_CatchFish",
     "Properties": {
-      "QuestType": "EFortQuestType::AthenaTransientQuest",
-      "QuestSubtype": "EFortQuestSubtype::Autofill",
-      "TandemCharacterData": {
-        "AssetPathName": "/NPCLibrary/NPCs/VendingLlama/NPCCharacterData_VendingLlama.NPCCharacterData_VendingLlama",
-        "SubPathString": ""
-      },
-      "bIncludedInCategories": false,
-      "bIsShared": true,
+      "QuestSubtype": "EFortQuestSubtype::QuickChallenge",
+      "bAthenaGrantRarityToken": false,
+      "bHideStageDescription": true,
       "RewardsTable": {
-        "ObjectName": "DataTable ChallengeReward_S18_ShardQuest_C",
-        "ObjectPath": "/BattlePassS18/Items/QuestRewards/ChallengeReward_S18_ShardQuest_C.0"
+        "ObjectName": "DataTable AthenaChallengeReward_DailyChallenge_SeasonAgnostic",
+        "ObjectPath": "/Game/Athena/Items/Quests/Rewards/AthenaChallengeReward_DailyChallenge_SeasonAgnostic.0"
       },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_dailychallenge_token",
+          "Quantity": 1
+        }
+      ],
       "Objectives": [
         {
           "BackendName": "Quest_S18_Repeatable_CatchFish_obj0",
@@ -80,13 +81,11 @@
           "LinkSquadIndex": 0,
           "Description": {
             "Namespace": "",
-            "Key": "8DE8F0BC4F706DFE8F77CFBD1EDFD15B",
+            "Key": "ED70C0AE441A2731A45870B58DA5F2F9",
             "SourceString": "Catch Fish"
           },
           "HudShortDescription": {
-            "Namespace": "",
-            "Key": "B258CA024FF8D70DE0E5BDBAC8ED0FF3",
-            "SourceString": "Hey, so, I'm feuding with this one fish... Help me find 'em?"
+            "CultureInvariantString": null
           },
           "HudIcon": {
             "AssetPathName": "None",
@@ -106,12 +105,13 @@
           }
         }
       ],
-      "CompletionText": {
-        "Namespace": "Quest_S18_Repeatable_CatchFish",
-        "Key": "Quest_S18_Repeatable_CatchFish_CompletionText",
-        "SourceString": "Thanks, bud. Now we can talk it out!"
+      "Category": {
+        "DataTable": {
+          "ObjectName": "DataTable QuestCategoryTable",
+          "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
+        },
+        "RowName": "BRDailyChallenges"
       },
-      "GrantToProfileType": "athena",
       "Rarity": "EFortRarity::Common",
       "DisplayName": {
         "Namespace": "Quest_S18_Repeatable_CatchFish",
@@ -121,7 +121,7 @@
       "ShortDescription": {
         "Namespace": "Quest_S18_Repeatable_CatchFish",
         "Key": "Quest_S18_Repeatable_CatchFish_ShortDescription",
-        "SourceString": "Hey, so, I'm feuding with this one fish... Help me find 'em?"
+        "SourceString": "Catch Fish"
       },
       "Description": {
         "Namespace": "Quest_S18_Repeatable_CatchFish",
@@ -129,7 +129,8 @@
         "SourceString": "Catch Fish"
       },
       "GameplayTags": [
-        "ChallengeCategory.Bars"
+        "ChallengeCategory.XP",
+        "ChallengeCategory.PunchCard"
       ]
     }
   }

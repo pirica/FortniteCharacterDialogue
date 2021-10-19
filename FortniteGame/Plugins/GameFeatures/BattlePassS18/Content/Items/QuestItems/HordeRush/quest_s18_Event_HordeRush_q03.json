@@ -1,0 +1,126 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "quest_s18_Event_HordeRush_q03",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaTransientQuest",
+      "QuestSubtype": "EFortQuestSubtype::Autofill",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/Hollowhead/Hollowhead/NPCCharacterData_Hollowhead.NPCCharacterData_Hollowhead",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "bHideStageDescription": true,
+      "bIsShared": true,
+      "RewardsTable": {
+        "ObjectName": "DataTable ChallengeReward_S18_ShardQuest_R",
+        "ObjectPath": "/BattlePassS18/Items/QuestRewards/ChallengeReward_S18_ShardQuest_R.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_s18_horderush_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "quest_s18_Event_HordeRush_q03_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "Athena.KillDistance>=5 || Target.Tags HasTag NPC.CharacterType.Brute.Basic.Exploding || Target.Tags HasTag NPC.CharacterType.Fiend.Basic.Poison",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Kill",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "E40D68D240830796CA53FC87EFCD9761",
+            "SourceString": "Eliminate poison or exploding enemies from at least 5m away"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "CA7AB3CB4591BF3D8D0830B484B18D92",
+            "SourceString": "Keep the nasty ones away from your teammates."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 25,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "quest_s18_Event_HordeRush_q03",
+        "Key": "quest_s18_Event_HordeRush_q03_CompletionText",
+        "SourceString": "Save the poison gas and explosions for Hallow's eve celebrations."
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Rare",
+      "DisplayName": {
+        "Namespace": "",
+        "Key": "213403984067131CA71DD0A9C7F68A7A",
+        "SourceString": "Eliminate poison or exploding enemies from at least 5m away"
+      },
+      "ShortDescription": {
+        "Namespace": "quest_s18_Event_HordeRush_q03",
+        "Key": "quest_s18_Event_HordeRush_q03_ShortDescription",
+        "SourceString": "Keep the nasty ones away from your teammates."
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "91D6E8764377FD416DA20983B5591787",
+        "SourceString": "Eliminate poison or exploding enemies from at least 5m away"
+      }
+    }
+  }
+]

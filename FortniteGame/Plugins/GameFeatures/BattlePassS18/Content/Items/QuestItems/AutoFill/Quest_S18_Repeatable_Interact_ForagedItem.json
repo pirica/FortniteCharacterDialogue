@@ -1,20 +1,21 @@
 [
   {
-    "Type": "FortQuestItemDefinition",
+    "Type": "AthenaDailyQuestDefinition",
     "Name": "Quest_S18_Repeatable_Interact_ForagedItem",
     "Properties": {
-      "QuestType": "EFortQuestType::AthenaTransientQuest",
-      "QuestSubtype": "EFortQuestSubtype::Autofill",
-      "TandemCharacterData": {
-        "AssetPathName": "/NPCLibrary/NPCs/VendingLlama/NPCCharacterData_VendingLlama.NPCCharacterData_VendingLlama",
-        "SubPathString": ""
-      },
-      "bIncludedInCategories": false,
-      "bIsShared": true,
+      "QuestSubtype": "EFortQuestSubtype::QuickChallenge",
+      "bAthenaGrantRarityToken": false,
+      "bHideStageDescription": true,
       "RewardsTable": {
-        "ObjectName": "DataTable ChallengeReward_S18_ShardQuest_C",
-        "ObjectPath": "/BattlePassS18/Items/QuestRewards/ChallengeReward_S18_ShardQuest_C.0"
+        "ObjectName": "DataTable AthenaChallengeReward_DailyChallenge_SeasonAgnostic",
+        "ObjectPath": "/Game/Athena/Items/Quests/Rewards/AthenaChallengeReward_DailyChallenge_SeasonAgnostic.0"
       },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_dailychallenge_token",
+          "Quantity": 1
+        }
+      ],
       "Objectives": [
         {
           "BackendName": "Quest_S18_Repeatable_Interact_ForagedItem_obj0",
@@ -118,13 +119,11 @@
           "LinkSquadIndex": 0,
           "Description": {
             "Namespace": "",
-            "Key": "9413EE594592621AB7B7A5BB52E5D0D6",
+            "Key": "F35B2B31486555F1F42E43889D9442DE",
             "SourceString": "Consume Foraged items"
           },
           "HudShortDescription": {
-            "Namespace": "",
-            "Key": "92F67DAD43F3E863D623788A4500B00C",
-            "SourceString": "Found it on the ground? It's probably okay to put in your mouth."
+            "CultureInvariantString": null
           },
           "HudIcon": {
             "AssetPathName": "None",
@@ -144,12 +143,13 @@
           }
         }
       ],
-      "CompletionText": {
-        "Namespace": "Quest_S18_Repeatable_Interact_ForagedItem",
-        "Key": "Quest_S18_Repeatable_Interact_ForagedItem_CompletionText",
-        "SourceString": "At least, that's what my programming says. Is that wrong?"
+      "Category": {
+        "DataTable": {
+          "ObjectName": "DataTable QuestCategoryTable",
+          "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
+        },
+        "RowName": "BRDailyChallenges"
       },
-      "GrantToProfileType": "athena",
       "Rarity": "EFortRarity::Common",
       "DisplayName": {
         "Namespace": "Quest_S18_Repeatable_Interact_ForagedItem",
@@ -159,7 +159,7 @@
       "ShortDescription": {
         "Namespace": "Quest_S18_Repeatable_Interact_ForagedItem",
         "Key": "Quest_S18_Repeatable_Interact_ForagedItem_ShortDescription",
-        "SourceString": "Found it on the ground? It's probably okay to put in your mouth."
+        "SourceString": "Consume Foraged items"
       },
       "Description": {
         "Namespace": "Quest_S18_Repeatable_Interact_ForagedItem",
@@ -167,7 +167,8 @@
         "SourceString": "Consume Foraged items"
       },
       "GameplayTags": [
-        "ChallengeCategory.Bars"
+        "ChallengeCategory.XP",
+        "ChallengeCategory.PunchCard"
       ]
     }
   }

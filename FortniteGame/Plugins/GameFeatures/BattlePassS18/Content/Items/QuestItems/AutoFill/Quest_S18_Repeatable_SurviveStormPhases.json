@@ -1,20 +1,21 @@
 [
   {
-    "Type": "FortQuestItemDefinition",
+    "Type": "AthenaDailyQuestDefinition",
     "Name": "Quest_S18_Repeatable_SurviveStormPhases",
     "Properties": {
-      "QuestType": "EFortQuestType::AthenaTransientQuest",
-      "QuestSubtype": "EFortQuestSubtype::Autofill",
-      "TandemCharacterData": {
-        "AssetPathName": "/NPCLibrary/NPCs/VendingLlama/NPCCharacterData_VendingLlama.NPCCharacterData_VendingLlama",
-        "SubPathString": ""
-      },
-      "bIncludedInCategories": false,
-      "bIsShared": true,
+      "QuestSubtype": "EFortQuestSubtype::QuickChallenge",
+      "bAthenaGrantRarityToken": false,
+      "bHideStageDescription": true,
       "RewardsTable": {
-        "ObjectName": "DataTable ChallengeReward_S18_ShardQuest_C",
-        "ObjectPath": "/BattlePassS18/Items/QuestRewards/ChallengeReward_S18_ShardQuest_C.0"
+        "ObjectName": "DataTable AthenaChallengeReward_DailyChallenge_SeasonAgnostic",
+        "ObjectPath": "/Game/Athena/Items/Quests/Rewards/AthenaChallengeReward_DailyChallenge_SeasonAgnostic.0"
       },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_dailychallenge_token",
+          "Quantity": 1
+        }
+      ],
       "Objectives": [
         {
           "BackendName": "Quest_S18_Repeatable_SurviveStormPhases_obj0",
@@ -73,13 +74,11 @@
           "LinkSquadIndex": 0,
           "Description": {
             "Namespace": "",
-            "Key": "7D9A4AC046ADBECDC2DBBB90CE7AA048",
+            "Key": "E0D7A0B04945BA7052C2649DF827161A",
             "SourceString": "Survive Storm phases"
           },
           "HudShortDescription": {
-            "Namespace": "",
-            "Key": "F2C0C8234101D57103294681C48C3EBD",
-            "SourceString": "Stay out of the Storm! It's... It's bad in there."
+            "CultureInvariantString": null
           },
           "HudIcon": {
             "AssetPathName": "None",
@@ -99,16 +98,17 @@
           }
         }
       ],
-      "CompletionText": {
-        "Namespace": "Quest_S18_Repeatable_SurviveStormPhases",
-        "Key": "Quest_S18_Repeatable_SurviveStormPhases_CompletionText",
-        "SourceString": "What can I say? I give good advice."
+      "Category": {
+        "DataTable": {
+          "ObjectName": "DataTable QuestCategoryTable",
+          "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
+        },
+        "RowName": "BRDailyChallenges"
       },
       "QuestAbilitySet": {
-        "AssetPathName": "/BattlePassS18/Items/QuestAbilities/Quest_Survive_StormPhases/GAS_Quest_Survive_StormPhases.GAS_Quest_Survive_StormPhases",
+        "AssetPathName": "/BattlepassS18/Items/QuestAbilities/Quest_Survive_StormPhases/GAS_Quest_Survive_StormPhases.GAS_Quest_Survive_StormPhases",
         "SubPathString": ""
       },
-      "GrantToProfileType": "athena",
       "Rarity": "EFortRarity::Common",
       "DisplayName": {
         "Namespace": "Quest_S18_Repeatable_SurviveStormPhases",
@@ -118,7 +118,7 @@
       "ShortDescription": {
         "Namespace": "Quest_S18_Repeatable_SurviveStormPhases",
         "Key": "Quest_S18_Repeatable_SurviveStormPhases_ShortDescription",
-        "SourceString": "Stay out of the Storm! It's... It's bad in there."
+        "SourceString": "Survive Storm phases"
       },
       "Description": {
         "Namespace": "Quest_S18_Repeatable_SurviveStormPhases",
@@ -126,7 +126,8 @@
         "SourceString": "Survive Storm phases"
       },
       "GameplayTags": [
-        "ChallengeCategory.Bars"
+        "ChallengeCategory.XP",
+        "ChallengeCategory.PunchCard"
       ]
     }
   }

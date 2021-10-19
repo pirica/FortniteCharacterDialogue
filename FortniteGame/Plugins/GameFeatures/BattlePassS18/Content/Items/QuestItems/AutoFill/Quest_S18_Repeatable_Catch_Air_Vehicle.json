@@ -1,20 +1,21 @@
 [
   {
-    "Type": "FortQuestItemDefinition",
+    "Type": "AthenaDailyQuestDefinition",
     "Name": "Quest_S18_Repeatable_Catch_Air_Vehicle",
     "Properties": {
-      "QuestType": "EFortQuestType::AthenaTransientQuest",
-      "QuestSubtype": "EFortQuestSubtype::Autofill",
-      "TandemCharacterData": {
-        "AssetPathName": "/NPCLibrary/NPCs/VendingLlama/NPCCharacterData_VendingLlama.NPCCharacterData_VendingLlama",
-        "SubPathString": ""
-      },
-      "bIncludedInCategories": false,
-      "bIsShared": true,
+      "QuestSubtype": "EFortQuestSubtype::QuickChallenge",
+      "bAthenaGrantRarityToken": false,
+      "bHideStageDescription": true,
       "RewardsTable": {
-        "ObjectName": "DataTable ChallengeReward_S18_ShardQuest_C",
-        "ObjectPath": "/BattlePassS18/Items/QuestRewards/ChallengeReward_S18_ShardQuest_C.0"
+        "ObjectName": "DataTable AthenaChallengeReward_DailyChallenge_SeasonAgnostic",
+        "ObjectPath": "/Game/Athena/Items/Quests/Rewards/AthenaChallengeReward_DailyChallenge_SeasonAgnostic.0"
       },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_dailychallenge_token",
+          "Quantity": 1
+        }
+      ],
       "Objectives": [
         {
           "BackendName": "Quest_S18_Repeatable_Catch_Air_Vehicle_obj0",
@@ -73,13 +74,11 @@
           "LinkSquadIndex": 0,
           "Description": {
             "Namespace": "",
-            "Key": "1C845877405D5524C971B38D3A884FA2",
+            "Key": "B2B998584F87FEA698C2C19D7CC30478",
             "SourceString": "Catch air in a land vehicle"
           },
           "HudShortDescription": {
-            "Namespace": "",
-            "Key": "51C5B162485CDD5E1FC726B4EAD12B84",
-            "SourceString": "Cars weren't meant to fly... But that doesn't mean they shouldn't."
+            "CultureInvariantString": null
           },
           "HudIcon": {
             "AssetPathName": "None",
@@ -99,16 +98,17 @@
           }
         }
       ],
-      "CompletionText": {
-        "Namespace": "Quest_S18_Repeatable_Catch_Air_Vehicle",
-        "Key": "Quest_S18_Repeatable_Catch_Air_Vehicle_CompletionText",
-        "SourceString": "Yes! Look at that clearance!"
+      "Category": {
+        "DataTable": {
+          "ObjectName": "DataTable QuestCategoryTable",
+          "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
+        },
+        "RowName": "BRDailyChallenges"
       },
       "QuestAbilitySet": {
-        "AssetPathName": "/BattlePassS18/Items/QuestAbilities/Quest_Vehicle_CatchAir/GAS_Quest_Vehicle_CatchAir.GAS_Quest_Vehicle_CatchAir",
+        "AssetPathName": "/BattlepassS18/Items/QuestAbilities/Quest_Vehicle_CatchAir/GAS_Quest_Vehicle_CatchAir.GAS_Quest_Vehicle_CatchAir",
         "SubPathString": ""
       },
-      "GrantToProfileType": "athena",
       "Rarity": "EFortRarity::Common",
       "DisplayName": {
         "Namespace": "Quest_S18_Repeatable_Catch_Air_Vehicle",
@@ -118,7 +118,7 @@
       "ShortDescription": {
         "Namespace": "Quest_S18_Repeatable_Catch_Air_Vehicle",
         "Key": "Quest_S18_Repeatable_Catch_Air_Vehicle_ShortDescription",
-        "SourceString": "Cars weren't meant to fly... But that doesn't mean they shouldn't."
+        "SourceString": "Catch air in a land vehicle"
       },
       "Description": {
         "Namespace": "Quest_S18_Repeatable_Catch_Air_Vehicle",
@@ -126,7 +126,8 @@
         "SourceString": "Catch air in a land vehicle"
       },
       "GameplayTags": [
-        "ChallengeCategory.Bars"
+        "ChallengeCategory.XP",
+        "ChallengeCategory.PunchCard"
       ]
     }
   }

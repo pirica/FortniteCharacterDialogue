@@ -1,20 +1,21 @@
 [
   {
-    "Type": "FortQuestItemDefinition",
+    "Type": "AthenaDailyQuestDefinition",
     "Name": "Quest_S18_Repeatable_Land_WeepingWoods",
     "Properties": {
-      "QuestType": "EFortQuestType::AthenaTransientQuest",
-      "QuestSubtype": "EFortQuestSubtype::Autofill",
-      "TandemCharacterData": {
-        "AssetPathName": "/NPCLibrary/NPCs/VendingLlama/NPCCharacterData_VendingLlama.NPCCharacterData_VendingLlama",
-        "SubPathString": ""
-      },
-      "bIncludedInCategories": false,
-      "bIsShared": true,
+      "QuestSubtype": "EFortQuestSubtype::QuickChallenge",
+      "bAthenaGrantRarityToken": false,
+      "bHideStageDescription": true,
       "RewardsTable": {
-        "ObjectName": "DataTable ChallengeReward_S18_ShardQuest_C",
-        "ObjectPath": "/BattlePassS18/Items/QuestRewards/ChallengeReward_S18_ShardQuest_C.0"
+        "ObjectName": "DataTable AthenaChallengeReward_DailyChallenge_SeasonAgnostic",
+        "ObjectPath": "/Game/Athena/Items/Quests/Rewards/AthenaChallengeReward_DailyChallenge_SeasonAgnostic.0"
       },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_dailychallenge_token",
+          "Quantity": 1
+        }
+      ],
       "Objectives": [
         {
           "BackendName": "Quest_S18_Repeatable_Land_WeepingWoods_obj0",
@@ -73,13 +74,11 @@
           "LinkSquadIndex": 0,
           "Description": {
             "Namespace": "",
-            "Key": "F58D83EB4EBAC061AE6B3FB8954032F3",
+            "Key": "FAB60B9D4527228D9BB54CB684015D23",
             "SourceString": "Land at Weeping Woods"
           },
           "HudShortDescription": {
-            "Namespace": "",
-            "Key": "6C087E424AAF7AF2019CF1B7877AC220",
-            "SourceString": "Weeping Woods, huh? I wonder why they're so sad."
+            "CultureInvariantString": null
           },
           "HudIcon": {
             "AssetPathName": "None",
@@ -99,12 +98,14 @@
           }
         }
       ],
-      "CompletionText": {
-        "Namespace": "Quest_S18_Repeatable_Land_WeepingWoods",
-        "Key": "Quest_S18_Repeatable_Land_WeepingWoods_CompletionText",
-        "SourceString": "Maybe it's allergies?"
+      "Weight": 0.3,
+      "Category": {
+        "DataTable": {
+          "ObjectName": "DataTable QuestCategoryTable",
+          "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
+        },
+        "RowName": "BRDailyChallenges"
       },
-      "GrantToProfileType": "athena",
       "Rarity": "EFortRarity::Common",
       "DisplayName": {
         "Namespace": "Quest_S18_Repeatable_Land_WeepingWoods",
@@ -114,7 +115,7 @@
       "ShortDescription": {
         "Namespace": "Quest_S18_Repeatable_Land_WeepingWoods",
         "Key": "Quest_S18_Repeatable_Land_WeepingWoods_ShortDescription",
-        "SourceString": "Weeping Woods, huh? I wonder why they're so sad."
+        "SourceString": "Land at Weeping Woods"
       },
       "Description": {
         "Namespace": "Quest_S18_Repeatable_Land_WeepingWoods",
@@ -122,7 +123,8 @@
         "SourceString": "Land at Weeping Woods"
       },
       "GameplayTags": [
-        "ChallengeCategory.Bars"
+        "ChallengeCategory.XP",
+        "ChallengeCategory.PunchCard"
       ]
     }
   }

@@ -1,20 +1,21 @@
 [
   {
-    "Type": "FortQuestItemDefinition",
+    "Type": "AthenaDailyQuestDefinition",
     "Name": "Quest_S18_Repeatable_Elim_Pistol",
     "Properties": {
-      "QuestType": "EFortQuestType::AthenaTransientQuest",
-      "QuestSubtype": "EFortQuestSubtype::Autofill",
-      "TandemCharacterData": {
-        "AssetPathName": "/NPCLibrary/NPCs/VendingLlama/NPCCharacterData_VendingLlama.NPCCharacterData_VendingLlama",
-        "SubPathString": ""
-      },
-      "bIncludedInCategories": false,
-      "bIsShared": true,
+      "QuestSubtype": "EFortQuestSubtype::QuickChallenge",
+      "bAthenaGrantRarityToken": false,
+      "bHideStageDescription": true,
       "RewardsTable": {
-        "ObjectName": "DataTable ChallengeReward_S18_ShardQuest_C",
-        "ObjectPath": "/BattlePassS18/Items/QuestRewards/ChallengeReward_S18_ShardQuest_C.0"
+        "ObjectName": "DataTable AthenaChallengeReward_DailyChallenge_SeasonAgnostic",
+        "ObjectPath": "/Game/Athena/Items/Quests/Rewards/AthenaChallengeReward_DailyChallenge_SeasonAgnostic.0"
       },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_dailychallenge_token",
+          "Quantity": 1
+        }
+      ],
       "Objectives": [
         {
           "BackendName": "Quest_S18_Repeatable_Elim_Pistol_obj0",
@@ -37,7 +38,7 @@
                 },
                 {
                   "Tag": {
-                    "TagName": "Weapon.Ranged.Pistol"
+                    "TagName": "Item.Weapon.Ranged.Pistol"
                   },
                   "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
                   "Require": true
@@ -87,13 +88,11 @@
           "LinkSquadIndex": 0,
           "Description": {
             "Namespace": "",
-            "Key": "1BF854924BA2DB6FA508B280BE268852",
+            "Key": "BF17C2324CA988E2E38F37A582CD49C5",
             "SourceString": "Pistol Eliminations"
           },
           "HudShortDescription": {
-            "Namespace": "",
-            "Key": "73A95E2F4FEDF1F04F9709A249B76D17",
-            "SourceString": "Time to practice those pistol skills."
+            "CultureInvariantString": null
           },
           "HudIcon": {
             "AssetPathName": "None",
@@ -113,12 +112,13 @@
           }
         }
       ],
-      "CompletionText": {
-        "Namespace": "Quest_S18_Repeatable_Elim_Pistol",
-        "Key": "Quest_S18_Repeatable_Elim_Pistol_CompletionText",
-        "SourceString": "Great aim!"
+      "Category": {
+        "DataTable": {
+          "ObjectName": "DataTable QuestCategoryTable",
+          "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
+        },
+        "RowName": "BRDailyChallenges"
       },
-      "GrantToProfileType": "athena",
       "Rarity": "EFortRarity::Common",
       "DisplayName": {
         "Namespace": "Quest_S18_Repeatable_Elim_Pistol",
@@ -128,7 +128,7 @@
       "ShortDescription": {
         "Namespace": "Quest_S18_Repeatable_Elim_Pistol",
         "Key": "Quest_S18_Repeatable_Elim_Pistol_ShortDescription",
-        "SourceString": "Time to practice those pistol skills."
+        "SourceString": "Pistol Eliminations"
       },
       "Description": {
         "Namespace": "Quest_S18_Repeatable_Elim_Pistol",
@@ -136,7 +136,8 @@
         "SourceString": "Pistol Eliminations"
       },
       "GameplayTags": [
-        "ChallengeCategory.Bars"
+        "ChallengeCategory.XP",
+        "ChallengeCategory.PunchCard"
       ]
     }
   }

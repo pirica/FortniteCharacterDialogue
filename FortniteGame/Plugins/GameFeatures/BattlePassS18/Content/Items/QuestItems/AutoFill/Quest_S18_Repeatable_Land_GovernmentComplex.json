@@ -1,20 +1,21 @@
 [
   {
-    "Type": "FortQuestItemDefinition",
+    "Type": "AthenaDailyQuestDefinition",
     "Name": "Quest_S18_Repeatable_Land_GovernmentComplex",
     "Properties": {
-      "QuestType": "EFortQuestType::AthenaTransientQuest",
-      "QuestSubtype": "EFortQuestSubtype::Autofill",
-      "TandemCharacterData": {
-        "AssetPathName": "/NPCLibrary/NPCs/VendingLlama/NPCCharacterData_VendingLlama.NPCCharacterData_VendingLlama",
-        "SubPathString": ""
-      },
-      "bIncludedInCategories": false,
-      "bIsShared": true,
+      "QuestSubtype": "EFortQuestSubtype::QuickChallenge",
+      "bAthenaGrantRarityToken": false,
+      "bHideStageDescription": true,
       "RewardsTable": {
-        "ObjectName": "DataTable ChallengeReward_S18_ShardQuest_C",
-        "ObjectPath": "/BattlePassS18/Items/QuestRewards/ChallengeReward_S18_ShardQuest_C.0"
+        "ObjectName": "DataTable AthenaChallengeReward_DailyChallenge_SeasonAgnostic",
+        "ObjectPath": "/Game/Athena/Items/Quests/Rewards/AthenaChallengeReward_DailyChallenge_SeasonAgnostic.0"
       },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_dailychallenge_token",
+          "Quantity": 1
+        }
+      ],
       "Objectives": [
         {
           "BackendName": "Quest_S18_Repeatable_Land_GovernmentComplex_obj0",
@@ -73,13 +74,11 @@
           "LinkSquadIndex": 0,
           "Description": {
             "Namespace": "",
-            "Key": "1FC4E1BD4812BAB962193B8F6F11B8A2",
+            "Key": "DBAD9B924C1DE06FD7EEF2BA9B57E30F",
             "SourceString": "Land at Corny Crops"
           },
           "HudShortDescription": {
-            "Namespace": "",
-            "Key": "1604737F4C32B04F5102FBAA05D8226A",
-            "SourceString": "I'm ready for some fresh air... And some corn."
+            "CultureInvariantString": null
           },
           "HudIcon": {
             "AssetPathName": "None",
@@ -99,12 +98,14 @@
           }
         }
       ],
-      "CompletionText": {
-        "Namespace": "Quest_S18_Repeatable_Land_GovernmentComplex",
-        "Key": "Quest_S18_Repeatable_Land_GovernmentComplex_CompletionText",
-        "SourceString": "I can't taste the corn, but I can look at it!"
+      "Weight": 0.3,
+      "Category": {
+        "DataTable": {
+          "ObjectName": "DataTable QuestCategoryTable",
+          "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
+        },
+        "RowName": "BRDailyChallenges"
       },
-      "GrantToProfileType": "athena",
       "Rarity": "EFortRarity::Common",
       "DisplayName": {
         "Namespace": "Quest_S18_Repeatable_Land_GovernmentComplex",
@@ -114,7 +115,7 @@
       "ShortDescription": {
         "Namespace": "Quest_S18_Repeatable_Land_GovernmentComplex",
         "Key": "Quest_S18_Repeatable_Land_GovernmentComplex_ShortDescription",
-        "SourceString": "I'm ready for some fresh air... And some corn."
+        "SourceString": "Land at Corny Crops"
       },
       "Description": {
         "Namespace": "Quest_S18_Repeatable_Land_GovernmentComplex",
@@ -122,7 +123,8 @@
         "SourceString": "Land at Corny Crops"
       },
       "GameplayTags": [
-        "ChallengeCategory.Bars"
+        "ChallengeCategory.XP",
+        "ChallengeCategory.PunchCard"
       ]
     }
   }
