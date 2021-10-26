@@ -1,7 +1,23 @@
 [
   {
-    "Type": "CurveTable",
-    "Name": "CorruptionGameplayGameData",
+    "Type": "CompositeCurveTable",
+    "Name": "CorruptionCompositeGD_Rumble",
+    "Properties": {
+      "ParentTables": [
+        {
+          "ObjectName": "CurveTable CorruptionGameplayGameData",
+          "ObjectPath": "/CorruptionGameplay/DataTables/CorruptionGameplayGameData.0"
+        },
+        {
+          "ObjectName": "CurveTable OverrideCorruptionGameData_Rumble",
+          "ObjectPath": "/CorruptionGameplay/DataTables/Rumble/OverrideCorruptionGameData_Rumble.0"
+        },
+        {
+          "ObjectName": "CurveTable OverrideCorruptionGameData_Rumble_Hotfix",
+          "ObjectPath": "/CorruptionGameplay/DataTables/Rumble/OverrideCorruptionGameData_Rumble_Hotfix.0"
+        }
+      ]
+    },
     "Rows": {
       "Default.GameplayTemplate.Item.Damage": {
         "InterpMode": "ERichCurveInterpMode::RCIM_Linear",
