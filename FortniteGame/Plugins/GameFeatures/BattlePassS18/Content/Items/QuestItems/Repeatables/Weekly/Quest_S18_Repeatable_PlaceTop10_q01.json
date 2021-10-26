@@ -1,0 +1,115 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "Quest_S18_Repeatable_PlaceTop10_q01",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "QuestSubtype": "EFortQuestSubtype::PunchCard",
+      "bAthenaGrantRarityToken": false,
+      "bIncludedInCategories": false,
+      "RewardsTable": {
+        "ObjectName": "DataTable ChallengeReward_S18_WeeklyXP_Stage1",
+        "ObjectPath": "/BattlePassS18/Items/QuestRewards/ChallengeReward_S18_WeeklyXP_Stage1.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Quest:quest_s18_repeatable_placetop10_q02",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S18_Repeatable_PlaceTop10_q01_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                }
+              ],
+              "Condition": "Athena.Rank <=10 && Athena.MaxTeamSize <5",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::AthenaRank",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": false,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "D916561E49281B0A7A8CE29B14DFDAAB",
+            "SourceString": "Place Top 10"
+          },
+          "HudShortDescription": {
+            "CultureInvariantString": null
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 2,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "TransientQuestStage": 1,
+      "TransientQuestMaxStage": 3,
+      "bHideQuestProgressNotification": true,
+      "bHideQuestRewardNotification": true,
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Common",
+      "DisplayName": {
+        "Namespace": "Quest_S18_Repeatable_PlaceTop10_q01",
+        "Key": "Quest_S18_Repeatable_PlaceTop10_q01_DisplayName",
+        "SourceString": "Place Top 10"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S18_Repeatable_PlaceTop10_q01",
+        "Key": "Quest_S18_Repeatable_PlaceTop10_q01_ShortDescription",
+        "SourceString": "Place Top 10"
+      },
+      "Description": {
+        "Namespace": "Quest_S18_Repeatable_PlaceTop10_q01",
+        "Key": "Quest_S18_Repeatable_PlaceTop10_q01_Description",
+        "SourceString": "Place Top 10"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP",
+        "Quest.HideWhenClaimed"
+      ]
+    }
+  }
+]

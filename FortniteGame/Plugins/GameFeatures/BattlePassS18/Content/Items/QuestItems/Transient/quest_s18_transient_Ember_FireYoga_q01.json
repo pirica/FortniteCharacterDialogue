@@ -1,0 +1,164 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "quest_s18_transient_Ember_FireYoga_q01",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaTransientQuest",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/Ember/Ember/NPCCharacterData_Ember.NPCCharacterData_Ember",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "bIsShared": true,
+      "Rewards": [
+        {
+          "ItemPrimaryAssetId": {
+            "PrimaryAssetType": {
+              "Name": "Quest"
+            },
+            "PrimaryAssetName": "quest_s18_transient_Ember_FireYoga_q02"
+          },
+          "Quantity": 1
+        }
+      ],
+      "RewardsTable": {
+        "ObjectName": "DataTable ChallengeReward_S18_ShardQuest_C",
+        "ObjectPath": "/BattlePassS18/Items/QuestRewards/ChallengeReward_S18_ShardQuest_C.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_quest_completed_ember",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "quest_s18_transient_Ember_FireYoga_q01_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Building.Type.Container.Furniture.Fireplace"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "Source.Tags HasTag Athena.Location.POI.LazyLake || Source.Tags HasTag Athena.Location.POI.BeachyBluffs || Source.Tags HasTag Athena.Location.POI.HollyHedges || Source.Tags HasTag Athena.Location.POI.PleasantPark",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Destroy",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "97F69EE449F422B33490FCA37AF994EC",
+            "SourceString": "Destroy a fireplace at Lazy Lake, Craggy Cliffs, Holly Hedges, or Pleasant Park"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "4E2932EF4DA77021563429B7892A924D",
+            "SourceString": "We'll break your inner fire free figuratively... and literally."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 1,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "QuestsToComplete": [
+        {
+          "AssetPathName": "/BattlePassS18/Items/QuestItems/PunchCard/Questline/S18_Complete_Ember_FireYoga_q01.S18_Complete_Ember_FireYoga_q01",
+          "SubPathString": ""
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "quest_s18_transient_Ember_FireYoga_q01",
+        "Key": "quest_s18_transient_Ember_FireYoga_q01_CompletionText",
+        "SourceString": "To shine brightly, one cannot be a tame flame."
+      },
+      "TransientQuestStage": 1,
+      "TransientQuestMaxStage": 5,
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Common",
+      "DisplayName": {
+        "Namespace": "",
+        "Key": "8CF95EC145F25F0566D206A76C121E6E",
+        "SourceString": "Destroy a fireplace at Lazy Lake, Craggy Cliffs, Holly Hedges, or Pleasant Park"
+      },
+      "ShortDescription": {
+        "Namespace": "quest_s18_transient_Ember_FireYoga_q01",
+        "Key": "quest_s18_transient_Ember_FireYoga_q01_ShortDescription",
+        "SourceString": "We'll break your inner fire free figuratively... and literally."
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "8DCC3C7D43407F3ED37E15A1AAA57CDF",
+        "SourceString": "Destroy a fireplace at Lazy Lake, Craggy Cliffs, Holly Hedges, or Pleasant Park"
+      },
+      "GameplayTags": [
+        "Athena.Location.POI.BeachyBluffs",
+        "Athena.Location.POI.LazyLake",
+        "Athena.Location.POI.HollyHedges",
+        "Athena.Location.POI.PleasantPark"
+      ],
+      "SmallPreviewImage": {
+        "AssetPathName": "/Game/Athena/UI/Challenges/Art/MiniChallenges/T_UI_Icon_Mini_Damage.T_UI_Icon_Mini_Damage",
+        "SubPathString": ""
+      },
+      "LargePreviewImage": {
+        "AssetPathName": "/Game/Athena/UI/Challenges/Art/MiniChallenges/T_UI_Icon_Mini_Damage.T_UI_Icon_Mini_Damage",
+        "SubPathString": ""
+      }
+    }
+  }
+]

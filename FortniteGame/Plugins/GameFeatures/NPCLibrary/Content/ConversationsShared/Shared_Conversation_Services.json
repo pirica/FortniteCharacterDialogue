@@ -252,7 +252,7 @@
         },
         {
           "ObjectName": "SideEffect_Client_PlayVOEvent_C Shared_Conversation_Services:SideEffect_Client_PlayVOEvent_C_1",
-          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.108"
+          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.112"
         }
       ],
       "Compiled_NodeGUID": "1FCB4E1B-4FED1013-98A8759F-8038CBA7"
@@ -818,6 +818,28 @@
     }
   },
   {
+    "Type": "FortControllerRequirement_HasOwnedTag",
+    "Name": "FortControllerRequirement_HasOwnedTag_0",
+    "Outer": "FortConversationRequirement_ControllerRequirement_0",
+    "Properties": {
+      "OwnedTag": {
+        "TagName": "npc.status.noduel"
+      },
+      "bInverseCondition": true
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_HasOwnedTag",
+    "Name": "FortControllerRequirement_HasOwnedTag_0",
+    "Outer": "FortConversationRequirement_ControllerRequirement_1",
+    "Properties": {
+      "OwnedTag": {
+        "TagName": "NPC.Status.NoHire"
+      },
+      "bInverseCondition": true
+    }
+  },
+  {
     "Type": "FortConversationChoiceWithPreviewNode",
     "Name": "FortConversationChoiceWithPreviewNode_0",
     "Outer": "Shared_Conversation_Services",
@@ -1022,6 +1044,36 @@
     }
   },
   {
+    "Type": "FortConversationRequirement_ControllerRequirement",
+    "Name": "FortConversationRequirement_ControllerRequirement_0",
+    "Outer": "Shared_Conversation_Services",
+    "Properties": {
+      "ParticipantID": {
+        "TagName": "Conversation.Participant.NPC"
+      },
+      "Requirement": {
+        "ObjectName": "FortControllerRequirement_HasOwnedTag Shared_Conversation_Services:FortConversationRequirement_ControllerRequirement_0.FortControllerRequirement_HasOwnedTag_0",
+        "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.55"
+      },
+      "NodeName": "Require: Has GameplayTag"
+    }
+  },
+  {
+    "Type": "FortConversationRequirement_ControllerRequirement",
+    "Name": "FortConversationRequirement_ControllerRequirement_1",
+    "Outer": "Shared_Conversation_Services",
+    "Properties": {
+      "ParticipantID": {
+        "TagName": "Conversation.Participant.NPC"
+      },
+      "Requirement": {
+        "ObjectName": "FortControllerRequirement_HasOwnedTag Shared_Conversation_Services:FortConversationRequirement_ControllerRequirement_1.FortControllerRequirement_HasOwnedTag_0",
+        "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.56"
+      },
+      "NodeName": "Require: Has GameplayTag"
+    }
+  },
+  {
     "Type": "FortConversationRequirement_HasService",
     "Name": "FortConversationRequirement_HasService_0",
     "Outer": "Shared_Conversation_Services",
@@ -1204,7 +1256,7 @@
         },
         {
           "ObjectName": "SideEffect_Client_PlayVOEvent_C Shared_Conversation_Services:SideEffect_Client_PlayVOEvent_C_0",
-          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.107"
+          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.111"
         }
       ],
       "Compiled_NodeGUID": "B210350F-4EC89C26-2BA59089-71CB0724"
@@ -1343,7 +1395,7 @@
       "SubNodes": [
         {
           "ObjectName": "SideEffect_Client_PlayAnimationEvent_C Shared_Conversation_Services:SideEffect_Client_PlayAnimationEvent_C_3",
-          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.105"
+          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.109"
         }
       ],
       "OutputConnections": [
@@ -1362,7 +1414,7 @@
       "SubNodes": [
         {
           "ObjectName": "SideEffect_Client_PlayAnimationEvent_C Shared_Conversation_Services:SideEffect_Client_PlayAnimationEvent_C_0",
-          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.102"
+          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.106"
         }
       ],
       "OutputConnections": [
@@ -1381,7 +1433,7 @@
       "SubNodes": [
         {
           "ObjectName": "SideEffect_Client_PlayAnimationEvent_C Shared_Conversation_Services:SideEffect_Client_PlayAnimationEvent_C_1",
-          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.103"
+          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.107"
         }
       ],
       "OutputConnections": [
@@ -1399,7 +1451,7 @@
       "SubNodes": [
         {
           "ObjectName": "SideEffect_Client_PlayAnimationEvent_C Shared_Conversation_Services:SideEffect_Client_PlayAnimationEvent_C_4",
-          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.106"
+          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.110"
         }
       ],
       "OutputConnections": [
@@ -1418,7 +1470,7 @@
       "SubNodes": [
         {
           "ObjectName": "SideEffect_Client_PlayAnimationEvent_C Shared_Conversation_Services:SideEffect_Client_PlayAnimationEvent_C_2",
-          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.104"
+          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.108"
         }
       ],
       "OutputConnections": [
@@ -1581,8 +1633,8 @@
           "ContextualMessages": [],
           "DefaultMessage": {
             "Namespace": "",
-            "Key": "5ED9C96441AFB0963ADEAEA40ACC5FED",
-            "SourceString": "Gaze upon his fearsome grin."
+            "Key": "FB7B0DBC4DEF01FDEDD5BBBF01DBDB65",
+            "SourceString": "Bring the pumpkin-spiced terror."
           },
           "DefaultMetadataParameters": []
         },
@@ -1775,12 +1827,12 @@
           },
           "DefaultMetadataParameters": []
         },
-        "Conversation.Entry.BistroAstronaut": {
+        "Conversation.Entry.CerealBox": {
           "ContextualMessages": [],
           "DefaultMessage": {
             "Namespace": "",
-            "Key": "62F399B0418551CB054A1A9DD08B4F18",
-            "SourceString": "Perfect for monster hunting."
+            "Key": "C77701BC424BFA97218C5FBA8E89EE41",
+            "SourceString": "PUT SOME ICE IN YOUR CEREAL!"
           },
           "DefaultMetadataParameters": []
         }
@@ -1799,11 +1851,11 @@
       "SubNodes": [
         {
           "ObjectName": "FortConversationRequirement_HasService Shared_Conversation_Services:FortConversationRequirement_HasService_3",
-          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.82"
+          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.86"
         },
         {
           "ObjectName": "FortConversationChoiceWithPreviewNode Shared_Conversation_Services:FortConversationChoiceWithPreviewNode_2",
-          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.63"
+          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.65"
         }
       ],
       "OutputConnections": [
@@ -2031,11 +2083,11 @@
       "SubNodes": [
         {
           "ObjectName": "FortConversationRequirement_HasService Shared_Conversation_Services:FortConversationRequirement_HasService_7",
-          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.86"
+          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.90"
         },
         {
           "ObjectName": "FortConversationChoiceWithPreviewNode Shared_Conversation_Services:FortConversationChoiceWithPreviewNode_7",
-          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.69"
+          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.71"
         }
       ],
       "OutputConnections": [
@@ -2144,11 +2196,11 @@
       "SubNodes": [
         {
           "ObjectName": "FortConversationRequirement_HasService Shared_Conversation_Services:FortConversationRequirement_HasService_13",
-          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.77"
+          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.81"
         },
         {
           "ObjectName": "FortConversationChoiceWithPreviewNode Shared_Conversation_Services:FortConversationChoiceWithPreviewNode_15",
-          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.62"
+          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.64"
         }
       ],
       "OutputConnections": [
@@ -2214,11 +2266,11 @@
       "SubNodes": [
         {
           "ObjectName": "FortConversationRequirement_HasService Shared_Conversation_Services:FortConversationRequirement_HasService_4",
-          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.83"
+          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.87"
         },
         {
           "ObjectName": "FortConversationChoiceWithPreviewNode Shared_Conversation_Services:FortConversationChoiceWithPreviewNode_3",
-          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.65"
+          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.67"
         }
       ],
       "OutputConnections": [
@@ -2255,11 +2307,11 @@
       "SubNodes": [
         {
           "ObjectName": "FortConversationRequirement_HasService Shared_Conversation_Services:FortConversationRequirement_HasService_11",
-          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.75"
+          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.79"
         },
         {
           "ObjectName": "FortConversationChoiceWithPreviewNode Shared_Conversation_Services:FortConversationChoiceWithPreviewNode_10",
-          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.57"
+          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.59"
         }
       ],
       "OutputConnections": [
@@ -2343,11 +2395,11 @@
       "SubNodes": [
         {
           "ObjectName": "FortConversationRequirement_HasService Shared_Conversation_Services:FortConversationRequirement_HasService_1",
-          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.73"
+          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.77"
         },
         {
           "ObjectName": "FortConversationChoiceWithPreviewNode Shared_Conversation_Services:FortConversationChoiceWithPreviewNode_5",
-          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.67"
+          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.69"
         }
       ],
       "OutputConnections": [
@@ -2440,11 +2492,11 @@
       "SubNodes": [
         {
           "ObjectName": "FortConversationChoiceWithPreviewNode Shared_Conversation_Services:FortConversationChoiceWithPreviewNode_11",
-          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.58"
+          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.60"
         },
         {
           "ObjectName": "FortConversationRequirement_HasService Shared_Conversation_Services:FortConversationRequirement_HasService_16",
-          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.78"
+          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.82"
         }
       ],
       "OutputConnections": [
@@ -2537,11 +2589,11 @@
       "SubNodes": [
         {
           "ObjectName": "FortConversationChoiceWithPreviewNode Shared_Conversation_Services:FortConversationChoiceWithPreviewNode_12",
-          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.59"
+          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.61"
         },
         {
           "ObjectName": "FortConversationRequirement_HasService Shared_Conversation_Services:FortConversationRequirement_HasService_17",
-          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.79"
+          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.83"
         }
       ],
       "OutputConnections": [
@@ -2667,11 +2719,11 @@
       "SubNodes": [
         {
           "ObjectName": "FortConversationChoiceWithPreviewNode Shared_Conversation_Services:FortConversationChoiceWithPreviewNode_13",
-          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.60"
+          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.62"
         },
         {
           "ObjectName": "FortConversationRequirement_HasService Shared_Conversation_Services:FortConversationRequirement_HasService_18",
-          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.80"
+          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.84"
         }
       ],
       "OutputConnections": [
@@ -2793,15 +2845,6 @@
             "SourceString": "...You planning on close combat?"
           },
           "DefaultMetadataParameters": []
-        },
-        "Conversation.Entry.BistroAstronaut": {
-          "ContextualMessages": [],
-          "DefaultMessage": {
-            "Namespace": "",
-            "Key": "0570945F4616593D38F3F39E0F1A825B",
-            "SourceString": "Want an upgrade?"
-          },
-          "DefaultMetadataParameters": []
         }
       },
       "GeneralConfig": {
@@ -2818,11 +2861,11 @@
       "SubNodes": [
         {
           "ObjectName": "FortConversationRequirement_HasService Shared_Conversation_Services:FortConversationRequirement_HasService_2",
-          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.81"
+          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.85"
         },
         {
           "ObjectName": "FortConversationChoiceWithPreviewNode Shared_Conversation_Services:FortConversationChoiceWithPreviewNode_1",
-          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.56"
+          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.58"
         }
       ],
       "OutputConnections": [
@@ -2888,11 +2931,11 @@
       "SubNodes": [
         {
           "ObjectName": "FortConversationRequirement_HasService Shared_Conversation_Services:FortConversationRequirement_HasService_12",
-          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.76"
+          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.80"
         },
         {
           "ObjectName": "FortConversationChoiceWithPreviewNode Shared_Conversation_Services:FortConversationChoiceWithPreviewNode_14",
-          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.61"
+          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.63"
         }
       ],
       "OutputConnections": [
@@ -3029,7 +3072,7 @@
           "DefaultMessage": {
             "Namespace": "",
             "Key": "A88899D343E36493039C58A65693331B",
-            "SourceString": "I could be your dark accomplice."
+            "SourceString": "You need a sand master's guidance."
           },
           "DefaultMetadataParameters": []
         },
@@ -3102,11 +3145,15 @@
       "SubNodes": [
         {
           "ObjectName": "FortConversationRequirement_HasService Shared_Conversation_Services:FortConversationRequirement_HasService_0",
-          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.72"
+          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.76"
         },
         {
           "ObjectName": "FortConversationChoiceWithPreviewNode Shared_Conversation_Services:FortConversationChoiceWithPreviewNode_0",
-          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.55"
+          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.57"
+        },
+        {
+          "ObjectName": "FortConversationRequirement_ControllerRequirement Shared_Conversation_Services:FortConversationRequirement_ControllerRequirement_1",
+          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.75"
         }
       ],
       "OutputConnections": [
@@ -3271,11 +3318,15 @@
       "SubNodes": [
         {
           "ObjectName": "FortConversationRequirement_HasService Shared_Conversation_Services:FortConversationRequirement_HasService_6",
-          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.85"
+          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.89"
         },
         {
           "ObjectName": "FortConversationChoiceWithPreviewNode Shared_Conversation_Services:FortConversationChoiceWithPreviewNode_4",
-          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.66"
+          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.68"
+        },
+        {
+          "ObjectName": "FortConversationRequirement_ControllerRequirement Shared_Conversation_Services:FortConversationRequirement_ControllerRequirement_0",
+          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.74"
         }
       ],
       "OutputConnections": [
@@ -3467,11 +3518,11 @@
       "SubNodes": [
         {
           "ObjectName": "FortConversationRequirement_HasService Shared_Conversation_Services:FortConversationRequirement_HasService_8",
-          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.87"
+          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.91"
         },
         {
           "ObjectName": "FortConversationChoiceWithPreviewNode Shared_Conversation_Services:FortConversationChoiceWithPreviewNode_8",
-          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.70"
+          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.72"
         }
       ],
       "OutputConnections": [
@@ -3609,11 +3660,11 @@
       "SubNodes": [
         {
           "ObjectName": "FortConversationRequirement_HasService Shared_Conversation_Services:FortConversationRequirement_HasService_5",
-          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.84"
+          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.88"
         },
         {
           "ObjectName": "FortConversationChoiceWithPreviewNode Shared_Conversation_Services:FortConversationChoiceWithPreviewNode_6",
-          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.68"
+          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.70"
         }
       ],
       "OutputConnections": [
@@ -3726,11 +3777,11 @@
       "SubNodes": [
         {
           "ObjectName": "FortConversationRequirement_HasService Shared_Conversation_Services:FortConversationRequirement_HasService_9",
-          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.88"
+          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.92"
         },
         {
           "ObjectName": "FortConversationChoiceWithPreviewNode Shared_Conversation_Services:FortConversationChoiceWithPreviewNode_9",
-          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.71"
+          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.73"
         }
       ],
       "OutputConnections": [
@@ -3796,11 +3847,11 @@
       "SubNodes": [
         {
           "ObjectName": "FortConversationChoiceWithPreviewNode Shared_Conversation_Services:FortConversationChoiceWithPreviewNode_20",
-          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.64"
+          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.66"
         },
         {
           "ObjectName": "FortConversationRequirement_HasService Shared_Conversation_Services:FortConversationRequirement_HasService_10",
-          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.74"
+          "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Services.78"
         }
       ],
       "OutputConnections": [

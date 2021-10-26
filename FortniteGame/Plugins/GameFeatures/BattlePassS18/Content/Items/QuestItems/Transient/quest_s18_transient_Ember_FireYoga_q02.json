@@ -1,0 +1,160 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "quest_s18_transient_Ember_FireYoga_q02",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaTransientQuest",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/Ember/Ember/NPCCharacterData_Ember.NPCCharacterData_Ember",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "bIsShared": true,
+      "Rewards": [
+        {
+          "ItemPrimaryAssetId": {
+            "PrimaryAssetType": {
+              "Name": "Quest"
+            },
+            "PrimaryAssetName": "quest_s18_transient_Ember_FireYoga_q03"
+          },
+          "Quantity": 1
+        }
+      ],
+      "RewardsTable": {
+        "ObjectName": "DataTable ChallengeReward_S18_ShardQuest_UC",
+        "ObjectPath": "/BattlePassS18/Items/QuestRewards/ChallengeReward_S18_ShardQuest_UC.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_quest_completed_ember",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "quest_s18_transient_Ember_FireYoga_q02_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.Quests.Ignite"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Building.Type"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "Target.Tags HasTag Building.Type || Target.Tag HasTag Building.Type.Player",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::ComplexCustom",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "4E26C68E4737479228CD6E9D13C8EC0A",
+            "SourceString": "Set structures on fire"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "4D8235E743557224C67C8AA4E5D1ACF5",
+            "SourceString": "Inwardly reflect on structures around you. Outwardly catch them on fire."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 10,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "QuestsToComplete": [
+        {
+          "AssetPathName": "/BattlePassS18/Items/QuestItems/PunchCard/Questline/S18_Complete_Ember_FireYoga_q02.S18_Complete_Ember_FireYoga_q02",
+          "SubPathString": ""
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "quest_s18_transient_Ember_FireYoga_q02",
+        "Key": "quest_s18_transient_Ember_FireYoga_q02_CompletionText",
+        "SourceString": "You will rise from the ashes like a phoenix."
+      },
+      "TransientQuestStage": 2,
+      "TransientQuestMaxStage": 5,
+      "QuestAbilitySet": {
+        "AssetPathName": "/BattlePassS18/Items/QuestAbilities/Quest_Ignite/GAS_Quest_S18_Ignite_Structures.GAS_Quest_S18_Ignite_Structures",
+        "SubPathString": ""
+      },
+      "GrantToProfileType": "athena",
+      "DisplayName": {
+        "Namespace": "quest_s18_transient_Ember_FireYoga_q02",
+        "Key": "quest_s18_transient_Ember_FireYoga_q02_DisplayName",
+        "SourceString": "Set structures on fire"
+      },
+      "ShortDescription": {
+        "Namespace": "quest_s18_transient_Ember_FireYoga_q02",
+        "Key": "quest_s18_transient_Ember_FireYoga_q02_ShortDescription",
+        "SourceString": "Inwardly reflect on structures around you. Outwardly catch them on fire."
+      },
+      "Description": {
+        "Namespace": "quest_s18_transient_Ember_FireYoga_q02",
+        "Key": "quest_s18_transient_Ember_FireYoga_q02_Description",
+        "SourceString": "Set structures on fire"
+      }
+    }
+  }
+]

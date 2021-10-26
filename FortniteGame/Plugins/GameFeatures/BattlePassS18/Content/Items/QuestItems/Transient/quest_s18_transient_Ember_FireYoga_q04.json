@@ -1,0 +1,161 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "quest_s18_transient_Ember_FireYoga_q04",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaTransientQuest",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/Ember/Ember/NPCCharacterData_Ember.NPCCharacterData_Ember",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "bIsShared": true,
+      "Rewards": [
+        {
+          "ItemPrimaryAssetId": {
+            "PrimaryAssetType": {
+              "Name": "Quest"
+            },
+            "PrimaryAssetName": "quest_s18_transient_Ember_FireYoga_q05"
+          },
+          "Quantity": 1
+        }
+      ],
+      "RewardsTable": {
+        "ObjectName": "DataTable ChallengeReward_S18_ShardQuest_VR",
+        "ObjectPath": "/BattlePassS18/Items/QuestRewards/ChallengeReward_S18_ShardQuest_VR.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_quest_completed_ember",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "quest_s18_transient_Ember_FireYoga_q04_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.Quests.Ignite"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "Target.Tags HasTag Homebase.Class || Target.Tags HasTag Pawn.Athena.NPC.Deimos || Target.Tags HasTag Athena.Faction.Generic.Hostile || Target.Tags HasTag Pawn.Athena.NPC.Duel.IsBeingChallenged || Target.Tags HasTag Pawn.Athena.NPC.Wildlife.Predator || Target.Tags HasTag Pawn.Athena.NPC.Mang || Target.Tags HasTag Pawn.Athena.NPC.IO || Target.Tags HasTag Pawn.Athena.NPC.Labrador",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::ComplexCustom",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "681689844C00CE067D90408502BB2357",
+            "SourceString": "Ignite an opponent with a firefly jar"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "38AEB3474C5AC6BB6334FD91A85BB446",
+            "SourceString": "A heated conflict can reveal much about yourself."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 1,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "QuestsToComplete": [
+        {
+          "AssetPathName": "/BattlePassS18/Items/QuestItems/PunchCard/Questline/S18_Complete_Ember_FireYoga_q04.S18_Complete_Ember_FireYoga_q04",
+          "SubPathString": ""
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "quest_s18_transient_Ember_FireYoga_q04",
+        "Key": "quest_s18_transient_Ember_FireYoga_q04_CompletionText",
+        "SourceString": "I can see your inner spark bursting forth!"
+      },
+      "TransientQuestStage": 4,
+      "TransientQuestMaxStage": 5,
+      "QuestAbilitySet": {
+        "AssetPathName": "/BattlePassS18/Items/QuestAbilities/Quest_Ignite/GAS_Quest_S18_Ignite_Opponents.GAS_Quest_S18_Ignite_Opponents",
+        "SubPathString": ""
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Epic",
+      "DisplayName": {
+        "Namespace": "quest_s18_transient_Ember_FireYoga_q04",
+        "Key": "quest_s18_transient_Ember_FireYoga_q04_DisplayName",
+        "SourceString": "Ignite an opponent with a firefly jar"
+      },
+      "ShortDescription": {
+        "Namespace": "quest_s18_transient_Ember_FireYoga_q04",
+        "Key": "quest_s18_transient_Ember_FireYoga_q04_ShortDescription",
+        "SourceString": "A heated conflict can reveal much about yourself."
+      },
+      "Description": {
+        "Namespace": "quest_s18_transient_Ember_FireYoga_q04",
+        "Key": "quest_s18_transient_Ember_FireYoga_q04_Description",
+        "SourceString": "Ignite an opponent with a firefly jar"
+      }
+    }
+  }
+]

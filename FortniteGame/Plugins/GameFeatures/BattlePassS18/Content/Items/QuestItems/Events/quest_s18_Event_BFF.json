@@ -1,0 +1,141 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "quest_s18_Event_BFF",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaTransientQuest",
+      "bShouldDisplayOverallQuestInformation": true,
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/RainbowRacer/RainbowRacer/NPCCharacterData_RainbowRacer.NPCCharacterData_RainbowRacer",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "bHideStageDescription": true,
+      "bIsShared": true,
+      "RewardsTable": {
+        "ObjectName": "DataTable ChallengeReward_S18_ShardQuest_R",
+        "ObjectPath": "/BattlePassS18/Items/QuestRewards/ChallengeReward_S18_ShardQuest_R.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_s18_bff_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "quest_s18_Event_BFF_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.Quests.SurviveStormCircles"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "SquadFriend.Count > 0",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::ComplexCustom",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "D736A19248C33F2D24A29083E7A46C99",
+            "SourceString": "Survive Storm Phases with a friend"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "DE7348864F0B43E2FCBCABA6D651C470",
+            "SourceString": "Brake for no one... except to pick up some friends!"
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 30,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "quest_s18_Event_BFF",
+        "Key": "quest_s18_Event_BFF_CompletionText",
+        "SourceString": "Friendship for the win!"
+      },
+      "QuestAbilitySet": {
+        "AssetPathName": "/BattlePassS18/Items/QuestAbilities/Quest_Survive_StormPhases/GAS_Quest_Survive_StormPhases.GAS_Quest_Survive_StormPhases",
+        "SubPathString": ""
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Rare",
+      "DisplayName": {
+        "Namespace": "quest_s18_Event_BFF",
+        "Key": "quest_s18_Event_BFF_DisplayName",
+        "SourceString": "Survive Storm Phases with a friend"
+      },
+      "ShortDescription": {
+        "Namespace": "quest_s18_Event_BFF",
+        "Key": "quest_s18_Event_BFF_ShortDescription",
+        "SourceString": "Brake for no one... except to pick up some friends!"
+      },
+      "Description": {
+        "Namespace": "quest_s18_Event_BFF",
+        "Key": "quest_s18_Event_BFF_Description",
+        "SourceString": "Survive Storm Phases with a friend"
+      },
+      "GameplayTags": [
+        "Athena.SharedEventQuest",
+        "ChallengeCategory.Style"
+      ]
+    }
+  }
+]
