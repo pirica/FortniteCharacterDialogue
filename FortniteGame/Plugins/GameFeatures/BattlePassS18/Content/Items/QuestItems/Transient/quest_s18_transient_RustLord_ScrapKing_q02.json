@@ -1,0 +1,146 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "quest_s18_transient_RustLord_ScrapKing_q02",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaTransientQuest",
+      "TandemCharacterData": {
+        "AssetPathName": "/NPCLibrary/NPCs/RustLord/RustLord/NPCCharacterData_RustLord.NPCCharacterData_RustLord",
+        "SubPathString": ""
+      },
+      "bIncludedInCategories": false,
+      "bIsShared": true,
+      "Rewards": [
+        {
+          "ItemPrimaryAssetId": {
+            "PrimaryAssetType": {
+              "Name": "Quest"
+            },
+            "PrimaryAssetName": "quest_s18_transient_RustLord_ScrapKing_q03"
+          },
+          "Quantity": 1
+        }
+      ],
+      "RewardsTable": {
+        "ObjectName": "DataTable ChallengeReward_S18_ShardQuest_UC",
+        "ObjectPath": "/BattlePassS18/Items/QuestRewards/ChallengeReward_S18_ShardQuest_UC.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_quest_completed_rustlord",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "quest_s18_transient_RustLord_ScrapKing_q02_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "Source.Tags HasTag Athena.Location.POI.GovernmentComplex || Source.Tags HasTag Athena.Location.POI.WeepingWoods",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Build",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": null
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": null,
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "8675BCB64B2F4315595E4C844AF3D334",
+            "SourceString": "Build structures at Corny Crops or Weeping Woods"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "8CB1430A43F4CF8DD6A6D4884EDC9B9B",
+            "SourceString": "We shall spread the love of scrap into a more natural setting."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 20,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "QuestsToComplete": [
+        {
+          "AssetPathName": "/BattlePassS18/Items/QuestItems/PunchCard/Questline/S18_Complete_RustLord_ScrapKing_q02.S18_Complete_RustLord_ScrapKing_q02",
+          "SubPathString": ""
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "quest_s18_transient_RustLord_ScrapKing_q02",
+        "Key": "quest_s18_transient_RustLord_ScrapKing_q02_CompletionText",
+        "SourceString": "Nature looks good with some scrap on it."
+      },
+      "TransientQuestStage": 2,
+      "TransientQuestMaxStage": 5,
+      "GrantToProfileType": "athena",
+      "DisplayName": {
+        "Namespace": "",
+        "Key": "27363B4446906E5412B4CFBAF9275E9C",
+        "SourceString": "Build structures at Corny Crops or Weeping Woods"
+      },
+      "ShortDescription": {
+        "Namespace": "quest_s18_transient_RustLord_ScrapKing_q02",
+        "Key": "quest_s18_transient_RustLord_ScrapKing_q02_ShortDescription",
+        "SourceString": "We shall spread the love of scrap into a more natural setting."
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "29D1A8CC4B90802319A6A79D109E3884",
+        "SourceString": "Build structures at Corny Crops or Weeping Woods"
+      },
+      "GameplayTags": [
+        "Athena.Location.POI.GovernmentComplex",
+        "Athena.Location.POI.WeepingWoods"
+      ]
+    }
+  }
+]
