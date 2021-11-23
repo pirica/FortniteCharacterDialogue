@@ -1,0 +1,577 @@
+[
+  {
+    "Type": "ConversationDatabase",
+    "Name": "NPCLibrary_Conversation_HeadbandK",
+    "Properties": {
+      "CompilerVersion": 2,
+      "ReachableNodeMap": {},
+      "EntryTags": [
+        {
+          "EntryTag": {
+            "TagName": "Conversation.Entry.HeadbandK"
+          },
+          "DestinationList": [
+            "7A781621-479F148B-671F378C-A57AC566"
+          ]
+        }
+      ],
+      "ExitTags": [
+        "Conversation.Entry.BasicServices",
+        "Conversation.Entry.NPCLibrary.Quests"
+      ],
+      "InternalNodeIds": [
+        "7A781621-479F148B-671F378C-A57AC566",
+        "CFB1CF82-444B6038-2F4A5BB9-89BC722F",
+        "4170792A-41A8BA54-272007B4-FFE45A28",
+        "EAD5CCC4-431A4B6B-F750E9A2-26E90754"
+      ],
+      "Speakers": [
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.Player"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.406108,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "0068FF"
+          }
+        },
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.NPC"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.065123,
+            "B": 0.1875,
+            "A": 1.0,
+            "Hex": "001130"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ConversationEntryPointNode",
+    "Name": "ConversationEntryPointNode_7",
+    "Outer": "NPCLibrary_Conversation_HeadbandK",
+    "Properties": {
+      "EntryTag": {
+        "TagName": "Conversation.Entry.HeadbandK"
+      },
+      "OutputConnections": [
+        "CFB1CF82-444B6038-2F4A5BB9-89BC722F"
+      ],
+      "Compiled_NodeGUID": "7A781621-479F148B-671F378C-A57AC566"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_0",
+    "Outer": "NPCLibrary_Conversation_HeadbandK",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.BasicServices"
+      },
+      "Compiled_NodeGUID": "4170792A-41A8BA54-272007B4-FFE45A28"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_1",
+    "Outer": "NPCLibrary_Conversation_HeadbandK",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.NPCLibrary.Quests"
+      },
+      "Compiled_NodeGUID": "EAD5CCC4-431A4B6B-F750E9A2-26E90754"
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_CheckNPCMatchConversationCount",
+    "Name": "FortControllerRequirement_CheckNPCMatchConversationCount_0",
+    "Outer": "Speech_C_4",
+    "Properties": {
+      "RequiredConversationCountConfig": {
+        "Requirement": "EThresholdRequirement::GreaterThanOrEqual",
+        "Quantity": {
+          "Value": 4.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_CheckNPCMatchConversationCount",
+    "Name": "FortControllerRequirement_CheckNPCMatchConversationCount_4",
+    "Outer": "Speech_C_4",
+    "Properties": {
+      "RequiredConversationCountConfig": {
+        "Quantity": {
+          "Value": 4.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch",
+    "Name": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0",
+    "Outer": "Speech_C_4",
+    "Properties": {
+      "days": 7
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_HasBars",
+    "Name": "FortControllerRequirement_HasBars_0",
+    "Outer": "Speech_C_4",
+    "Properties": {
+      "ThresholdTestConfig": {
+        "Requirement": "EThresholdRequirement::GreaterThan",
+        "Quantity": {
+          "Value": 2000.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_HasCID",
+    "Name": "FortControllerRequirement_HasCID_0",
+    "Outer": "Speech_C_4",
+    "Properties": {
+      "AllowedCIDs": [
+        {
+          "AssetPathName": "/Game/Athena/Items/Cosmetics/Characters/CID_A_070_Athena_Commando_M_Cavern_3I6I1.CID_A_070_Athena_Commando_M_Cavern_3I6I1",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "/Game/Athena/Items/Cosmetics/Characters/CID_A_124_Athena_Commando_M_CavernArmored.CID_A_124_Athena_Commando_M_CavernArmored",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "/Game/Athena/Items/Cosmetics/Characters/CID_528_Athena_Commando_M_BlackMondayHouston_7DGBT.CID_528_Athena_Commando_M_BlackMondayHouston_7DGBT",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "/Game/Athena/Items/Cosmetics/Characters/CID_529_Athena_Commando_M_BlackMondayKansas_HWD90.CID_529_Athena_Commando_M_BlackMondayKansas_HWD90",
+          "SubPathString": ""
+        }
+      ]
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_HasCID",
+    "Name": "FortControllerRequirement_HasCID_1",
+    "Outer": "Speech_C_4",
+    "Properties": {
+      "AllowedCIDs": [
+        {
+          "AssetPathName": "/Game/Athena/Items/Cosmetics/Characters/CID_A_263_Athena_Commando_M_HeadbandS.CID_A_263_Athena_Commando_M_HeadbandS",
+          "SubPathString": ""
+        }
+      ]
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_HasCID",
+    "Name": "FortControllerRequirement_HasCID_2",
+    "Outer": "Speech_C_4",
+    "Properties": {
+      "AllowedCIDs": [
+        {
+          "AssetPathName": "/Game/Athena/Items/Cosmetics/Characters/CID_161_Athena_Commando_M_Drift.CID_161_Athena_Commando_M_Drift",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "/Game/Athena/Items/Cosmetics/Characters/CID_A_228_Athena_Commando_M_DisguiseBlack.CID_A_228_Athena_Commando_M_DisguiseBlack",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "/Game/Athena/Items/Cosmetics/Characters/CID_422_Athena_Commando_F_MaskedWarrior.CID_422_Athena_Commando_F_MaskedWarrior",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "/Game/Athena/Items/Cosmetics/Characters/CID_421_Athena_Commando_M_MaskedWarrior.CID_421_Athena_Commando_M_MaskedWarrior",
+          "SubPathString": ""
+        },
+        {
+          "AssetPathName": "/Game/Athena/Items/Cosmetics/Characters/CID_A_229_Athena_Commando_F_DisguiseBlack.CID_A_229_Athena_Commando_F_DisguiseBlack",
+          "SubPathString": ""
+        }
+      ]
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_HasCID",
+    "Name": "FortControllerRequirement_HasCID_3",
+    "Outer": "Speech_C_4",
+    "Properties": {
+      "AllowedCIDs": [
+        {
+          "AssetPathName": "/Game/Athena/Items/Cosmetics/Characters/CID_A_263_Athena_Commando_M_HeadbandS.CID_A_263_Athena_Commando_M_HeadbandS",
+          "SubPathString": ""
+        }
+      ]
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_IsFirstEverConversationWithNPC",
+    "Name": "FortControllerRequirement_IsFirstEverConversationWithNPC_0",
+    "Outer": "Speech_C_4"
+  },
+  {
+    "Type": "Speech_C",
+    "Name": "Speech_C_4",
+    "Outer": "NPCLibrary_Conversation_HeadbandK",
+    "Template": "Default__Speech_C",
+    "Properties": {
+      "SpeakerTag": {
+        "TagName": "Conversation.Participant.NPC"
+      },
+      "ListenerTag": {
+        "TagName": "Conversation.Participant.Player"
+      },
+      "GeneralConfig": {
+        "ContextualMessages": [
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "195E162644B1634D0A08B092E3A80361",
+              "SourceString": "That's quite a time skip. Did you train well?"
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch NPCLibrary_Conversation_HeadbandK:Speech_C_4.FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0",
+                  "ObjectPath": "/HeadbandAi/HeadbandK/Conversation/NPCLibrary_Conversation_HeadbandK.6"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.WhileSincePlayed"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MetadataParameters": []
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "403BE3044FEB7E5AE987F090FA006A0F",
+              "SourceString": "I heard you need help taking care of a mythical queen of immense power."
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC NPCLibrary_Conversation_HeadbandK:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0",
+                  "ObjectPath": "/HeadbandAi/HeadbandK/Conversation/NPCLibrary_Conversation_HeadbandK.12"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MetadataParameters": []
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "B64A022E4C3770584FC44DAC6598B170",
+              "SourceString": "Money is one of the three prohibitions of a Shinobi."
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "FortControllerRequirement_HasBars NPCLibrary_Conversation_HeadbandK:Speech_C_4.FortControllerRequirement_HasBars_0",
+                  "ObjectPath": "/HeadbandAi/HeadbandK/Conversation/NPCLibrary_Conversation_HeadbandK.7"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.HighTotalBars"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MetadataParameters": []
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "3DFD9978427390125EC194A629DEE30C",
+              "SourceString": "Sasuke! Did you bring us here with the Rinnegan?"
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "FortControllerRequirement_HasCID NPCLibrary_Conversation_HeadbandK:Speech_C_4.FortControllerRequirement_HasCID_3",
+                  "ObjectPath": "/HeadbandAi/HeadbandK/Conversation/NPCLibrary_Conversation_HeadbandK.11"
+                }
+              },
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount NPCLibrary_Conversation_HeadbandK:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_4",
+                  "ObjectPath": "/HeadbandAi/HeadbandK/Conversation/NPCLibrary_Conversation_HeadbandK.5"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.OutfitReaction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MetadataParameters": []
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "252CD7BB4D769D02CD5A23B3B880A90A",
+              "SourceString": "Is this... Izanami?"
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount NPCLibrary_Conversation_HeadbandK:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_0",
+                  "ObjectPath": "/HeadbandAi/HeadbandK/Conversation/NPCLibrary_Conversation_HeadbandK.4"
+                }
+              },
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "FortControllerRequirement_HasCID NPCLibrary_Conversation_HeadbandK:Speech_C_4.FortControllerRequirement_HasCID_1",
+                  "ObjectPath": "/HeadbandAi/HeadbandK/Conversation/NPCLibrary_Conversation_HeadbandK.9"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.OutfitReaction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MetadataParameters": []
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "9DADB7A94DEE329921D195A569AD5E2C",
+              "SourceString": "Are you with the local ANBU?"
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "FortControllerRequirement_HasCID NPCLibrary_Conversation_HeadbandK:Speech_C_4.FortControllerRequirement_HasCID_2",
+                  "ObjectPath": "/HeadbandAi/HeadbandK/Conversation/NPCLibrary_Conversation_HeadbandK.10"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.OutfitReaction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MetadataParameters": []
+          },
+          {
+            "Message": {
+              "Namespace": "",
+              "Key": "A477617D4E067649109DEF9A087681F4",
+              "SourceString": "The Bat Clan! I thought it was a legend!"
+            },
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+            "ContextRequirements": [
+              {
+                "ParticipantID": {
+                  "TagName": "Conversation.Participant.Player"
+                },
+                "Requirement": {
+                  "ObjectName": "FortControllerRequirement_HasCID NPCLibrary_Conversation_HeadbandK:Speech_C_4.FortControllerRequirement_HasCID_0",
+                  "ObjectPath": "/HeadbandAi/HeadbandK/Conversation/NPCLibrary_Conversation_HeadbandK.8"
+                }
+              }
+            ],
+            "Priority": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "CurveTable NPC_Speech_Priorities",
+                  "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+                },
+                "RowName": "Tandem.Speech.Priority.OutfitReaction"
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "Weight": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": null
+              },
+              "RegistryType": {
+                "Name": null
+              }
+            },
+            "MetadataParameters": []
+          }
+        ],
+        "DefaultMessage": {
+          "Namespace": "",
+          "Key": "22825F9D4BD172548D2BD4B84B2EC953",
+          "SourceString": "Hey! Sorry I'm late, I got caught up."
+        }
+      },
+      "OutputConnections": [
+        "EAD5CCC4-431A4B6B-F750E9A2-26E90754",
+        "4170792A-41A8BA54-272007B4-FFE45A28"
+      ],
+      "NodeName": "",
+      "Compiled_NodeGUID": "CFB1CF82-444B6038-2F4A5BB9-89BC722F"
+    }
+  }
+]
