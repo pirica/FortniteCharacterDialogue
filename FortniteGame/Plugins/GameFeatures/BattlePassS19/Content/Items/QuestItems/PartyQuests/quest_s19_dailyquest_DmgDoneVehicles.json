@@ -1,0 +1,139 @@
+[
+  {
+    "Type": "AthenaDailyQuestDefinition",
+    "Name": "quest_s19_dailyquest_DmgDoneVehicles",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaTransientQuest",
+      "QuestSubtype": "EFortQuestSubtype::Autofill",
+      "bAthenaGrantRarityToken": false,
+      "bHideStageDescription": true,
+      "bIsShared": true,
+      "RewardsTable": {
+        "ObjectName": "DataTable ChallengeReward_S19_Daily_Fresh",
+        "ObjectPath": "/BattlePassS19/Items/QuestRewards/ChallengeReward_S19_Daily_Fresh.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athenabattlepass_s19_dailytoken",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S19_dailyquest_damagevehicles_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.Vehicle"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Damage",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": "None"
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": "None",
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "A7646B15416B9EF2039B57B2B4C3908A",
+            "SourceString": "Damage vehicles piloted by opponents"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "3DD3C3B74C1DE0B3E409EFBEFEF0F9B8",
+            "SourceString": "If you can't drive it, no one can. "
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 200,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "Category": {
+        "DataTable": {
+          "ObjectName": "DataTable QuestCategoryTable",
+          "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
+        },
+        "RowName": "BRDailyChallenges"
+      },
+      "CompletionText": {
+        "Namespace": "",
+        "Key": "76D611F7453F2726193C9D9AFA8F50B0",
+        "SourceString": "Do you think they were getting their learner's permit?"
+      },
+      "Rarity": "EFortRarity::Common",
+      "DisplayName": {
+        "Namespace": "",
+        "Key": "CA9153D549DD2740E92F2A84FEF2C9F1",
+        "SourceString": "Damage vehicles piloted by opponents"
+      },
+      "ShortDescription": {
+        "Namespace": "",
+        "Key": "046EB08F42B75D667F57E195DAE51869",
+        "SourceString": "If you can't drive it, no one can."
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "351E7FBE4E9F59CB103B51B010570777",
+        "SourceString": "Damage vehicles piloted by opponents"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP",
+        "ChallengeCategory.Daily"
+      ]
+    }
+  }
+]

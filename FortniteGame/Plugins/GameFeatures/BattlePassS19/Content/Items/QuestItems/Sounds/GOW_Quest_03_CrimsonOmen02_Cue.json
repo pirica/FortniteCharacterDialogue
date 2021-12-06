@@ -1,0 +1,55 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "GOW_Quest_03_CrimsonOmen02_Cue",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator GOW_Quest_03_CrimsonOmen02_Cue:SoundNodeModulator_1",
+        "ObjectPath": "/BattlePassS19/Items/QuestItems/Sounds/GOW_Quest_03_CrimsonOmen02_Cue.1"
+      },
+      "VolumeMultiplier": 0.8,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass Fort_Quests",
+        "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Quests.0"
+      },
+      "bOverrideConcurrency": true,
+      "ConcurrencyOverrides": {
+        "MaxCount": 1,
+        "bLimitToOwner": true,
+        "ResolutionRule": "EMaxConcurrentResolutionRule::PreventNew"
+      },
+      "Duration": 5.2999167,
+      "MaxDistance": 2097152.0
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_1",
+    "Outer": "GOW_Quest_03_CrimsonOmen02_Cue",
+    "Properties": {
+      "VolumeMin": 1.2,
+      "VolumeMax": 1.2,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer GOW_Quest_03_CrimsonOmen02_Cue:SoundNodeWavePlayer_1",
+          "ObjectPath": "/BattlePassS19/Items/QuestItems/Sounds/GOW_Quest_03_CrimsonOmen02_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "GOW_Quest_03_CrimsonOmen02_Cue",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/BattlePassS19/Items/QuestItems/Sounds/wav/GOW_Quest03_ChainsawStinger.GOW_Quest03_ChainsawStinger",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave GOW_Quest03_ChainsawStinger",
+      "ObjectPath": "/BattlePassS19/Items/QuestItems/Sounds/wav/GOW_Quest03_ChainsawStinger.0"
+    }
+  }
+]

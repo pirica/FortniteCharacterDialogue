@@ -1,0 +1,164 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "Quest_S19_Weekly_W01_Q06",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "QuestSubtype": "EFortQuestSubtype::WeeklyChallenge",
+      "bAthenaGrantRarityToken": false,
+      "bIncludedInCategories": false,
+      "RewardsTable": {
+        "ObjectName": "DataTable ChallengeReward_S19_Weekly",
+        "ObjectPath": "/BattlePassS19/Items/QuestRewards/ChallengeReward_S19_Weekly.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athenabattlepass_s19_w01",
+          "Quantity": 1
+        },
+        {
+          "TemplateId": "Token:athenabattlepass_weeklychallenge_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S19_Weekly_W01_Q06_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Item.Weapon.Ranged.SMG"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "Target.Tags HasTag Homebase.Class || Target.Tags HasTag Athena.Faction.Generic.Hostile || Target.Tags HasTag Pawn.Athena.NPC.Duel.IsBeingChallenged || Target.Tags HasTag Pawn.Athena.NPC.Mang.Boss",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Kill",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            },
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Item.Weapon.Ranged.Sniper"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "Target.Tags HasTag Homebase.Class || Target.Tags HasTag Athena.Faction.Generic.Hostile || Target.Tags HasTag Pawn.Athena.NPC.Duel.IsBeingChallenged || Target.Tags HasTag Pawn.Athena.NPC.Mang.Boss",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Kill",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": "None"
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": "None",
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "AFE3822A4EBD61A890095DA0137CB052",
+            "SourceString": "Get eliminations with an SMG or Sniper Rifle"
+          },
+          "HudShortDescription": {
+            "CultureInvariantString": null
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 3,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "Quest_S19_Weekly_W01_Q06",
+        "Key": "Quest_S19_Weekly_W01_Q06_CompletionText",
+        "SourceString": "Quest Completed!"
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Common",
+      "DisplayName": {
+        "Namespace": "Quest_S19_Weekly_W01_Q06",
+        "Key": "Quest_S19_Weekly_W01_Q06_DisplayName",
+        "SourceString": "Get eliminations with an SMG or Sniper Rifle"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S19_Weekly_W01_Q06",
+        "Key": "Quest_S19_Weekly_W01_Q06_ShortDescription",
+        "SourceString": "Get eliminations with an SMG or Sniper Rifle"
+      },
+      "Description": {
+        "Namespace": "Quest_S19_Weekly_W01_Q06",
+        "Key": "Quest_S19_Weekly_W01_Q06_Description",
+        "SourceString": "Get eliminations with an SMG or Sniper Rifle"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.Weekly.001"
+      ]
+    }
+  }
+]

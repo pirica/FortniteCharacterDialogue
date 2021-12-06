@@ -1,0 +1,133 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "Quest_S19_Milestone_VendingMachinePurchases_Q12",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "QuestSubtype": "EFortQuestSubtype::Milestone",
+      "bAthenaGrantRarityToken": false,
+      "bSuppressQuestGrantedEvent": true,
+      "bIncludedInCategories": false,
+      "Threshold": 110,
+      "RewardsTable": {
+        "ObjectName": "DataTable ChallengeReward_S19_Milestone",
+        "ObjectPath": "/BattlePassS19/Items/QuestRewards/ChallengeReward_S19_Milestone.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_s19_milestonepunch_stage12_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S19_Milestone_VendingMachinePurchases_Q12_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Conversation.Entry.VendingMachine"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::UsedNPCService",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": "None"
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": "None",
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "5C09AC8343827E4BACD7D8B9EE745F1A",
+            "SourceString": "Vending Machine Purchases"
+          },
+          "HudShortDescription": {
+            "CultureInvariantString": null
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 120,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "Quest_S19_Milestone_VendingMachinePurchases_Q12",
+        "Key": "Quest_S19_Milestone_VendingMachinePurchases_Q12_CompletionText",
+        "SourceString": "Milestone Completed!"
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Common",
+      "DisplayName": {
+        "Namespace": "Quest_S19_Milestone_VendingMachinePurchases_Q12",
+        "Key": "Quest_S19_Milestone_VendingMachinePurchases_Q12_DisplayName",
+        "SourceString": "Vending Machine Purchases"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S19_Milestone_VendingMachinePurchases_Q12",
+        "Key": "Quest_S19_Milestone_VendingMachinePurchases_Q12_ShortDescription",
+        "SourceString": "Vending Machine Purchases"
+      },
+      "Description": {
+        "Namespace": "Quest_S19_Milestone_VendingMachinePurchases_Q12",
+        "Key": "Quest_S19_Milestone_VendingMachinePurchases_Q12_Description",
+        "SourceString": "Vending Machine Purchases"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.Milestone",
+        "ChallengeCategory.XP",
+        "Quest.Metadata.HideForContextualQuestDisplay"
+      ]
+    }
+  }
+]

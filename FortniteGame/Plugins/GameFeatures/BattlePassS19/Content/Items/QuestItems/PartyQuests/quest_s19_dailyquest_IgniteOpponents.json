@@ -1,0 +1,150 @@
+[
+  {
+    "Type": "AthenaDailyQuestDefinition",
+    "Name": "quest_s19_dailyquest_IgniteOpponents",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaTransientQuest",
+      "QuestSubtype": "EFortQuestSubtype::Autofill",
+      "bAthenaGrantRarityToken": false,
+      "bHideStageDescription": true,
+      "bIsShared": true,
+      "RewardsTable": {
+        "ObjectName": "DataTable ChallengeReward_S19_Daily_Fresh",
+        "ObjectPath": "/BattlePassS19/Items/QuestRewards/ChallengeReward_S19_Daily_Fresh.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athenabattlepass_s19_dailytoken",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S19_dailyquest_IgniteOpponents_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.Quests.Ignite"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::ComplexCustom",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": "None"
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": "None",
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "8971AD294C06A2D3282F5899EDEFEEE5",
+            "SourceString": "Ignite opponents"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "2E210B654AB061A1480BFA9104F703B7",
+            "SourceString": "That player over there looks a bit chilly."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 3,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "Category": {
+        "DataTable": {
+          "ObjectName": "DataTable QuestCategoryTable",
+          "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
+        },
+        "RowName": "BRDailyChallenges"
+      },
+      "CompletionText": {
+        "Namespace": "",
+        "Key": "E2A8E5F24A3BC21C1BA9298705C876FE",
+        "SourceString": "You warmed 'em right up!"
+      },
+      "QuestAbilitySet": {
+        "AssetPathName": "/BattlePassS19/Items/QuestAbilities/Quest_Ignite/GAS_Quest_S19_Ignite_Opponents.GAS_Quest_S19_Ignite_Opponents",
+        "SubPathString": ""
+      },
+      "Rarity": "EFortRarity::Common",
+      "DisplayName": {
+        "Namespace": "",
+        "Key": "C996487E4107F191DBED4FA57EDE1A71",
+        "SourceString": "Ignite opponents"
+      },
+      "ShortDescription": {
+        "Namespace": "",
+        "Key": "BE19A983468948E264749C824A4B92C6",
+        "SourceString": "That player over there looks a bit chilly."
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "64D8605B43C3BA33FD8EDA857D5822A6",
+        "SourceString": "Ignite opponents"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP",
+        "ChallengeCategory.Daily"
+      ]
+    }
+  }
+]

@@ -1,0 +1,126 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "Quest_S19_Milestone_DamageOpponents_Q10",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "QuestSubtype": "EFortQuestSubtype::Milestone",
+      "bAthenaGrantRarityToken": false,
+      "bSuppressQuestGrantedEvent": true,
+      "bIncludedInCategories": false,
+      "Threshold": 45000,
+      "RewardsTable": {
+        "ObjectName": "DataTable ChallengeReward_S19_Milestone",
+        "ObjectPath": "/BattlePassS19/Items/QuestRewards/ChallengeReward_S19_Milestone.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_s19_milestonepunch_stage10_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S19_Milestone_DamageOpponents_Q10_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "Target.Tags HasTag Homebase.Class || Target.Tags HasTag Athena.Faction.Generic.Hostile || Target.Tags HasTag Pawn.Athena.NPC.Duel.IsBeingChallenged || Target.Tags HasTag Pawn.Athena.NPC.Wildlife.Predator || Target.Tags HasTag Pawn.Athena.NPC.Mang || Target.Tags HasTag Pawn.Athena.NPC.IO || Target.Tags HasTag AISpawnerData.Type.MotherWall || Target.Tags HasTag Pawn.Athena.NPC.Labrador",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Damage",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": "None"
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": "None",
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "663CB1A04DF1BDDC98DD4F9095F29AC6",
+            "SourceString": "Damage Opponents"
+          },
+          "HudShortDescription": {
+            "CultureInvariantString": null
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 50000,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "Quest_S19_Milestone_DamageOpponents_Q10",
+        "Key": "Quest_S19_Milestone_DamageOpponents_Q10_CompletionText",
+        "SourceString": "Milestone Completed!"
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Common",
+      "DisplayName": {
+        "Namespace": "Quest_S19_Milestone_DamageOpponents_Q10",
+        "Key": "Quest_S19_Milestone_DamageOpponents_Q10_DisplayName",
+        "SourceString": "Damage Opponents"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S19_Milestone_DamageOpponents_Q10",
+        "Key": "Quest_S19_Milestone_DamageOpponents_Q10_ShortDescription",
+        "SourceString": "Damage Opponents"
+      },
+      "Description": {
+        "Namespace": "Quest_S19_Milestone_DamageOpponents_Q10",
+        "Key": "Quest_S19_Milestone_DamageOpponents_Q10_Description",
+        "SourceString": "Damage Opponents"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.Milestone",
+        "ChallengeCategory.XP",
+        "Quest.Metadata.HideForContextualQuestDisplay"
+      ]
+    }
+  }
+]

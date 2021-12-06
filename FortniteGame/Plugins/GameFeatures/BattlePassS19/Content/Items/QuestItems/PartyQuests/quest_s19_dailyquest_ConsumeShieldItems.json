@@ -1,0 +1,381 @@
+[
+  {
+    "Type": "AthenaDailyQuestDefinition",
+    "Name": "quest_s19_dailyquest_ConsumeShieldItems",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaTransientQuest",
+      "QuestSubtype": "EFortQuestSubtype::Autofill",
+      "bAthenaGrantRarityToken": false,
+      "bHideStageDescription": true,
+      "bIsShared": true,
+      "ObjectiveCompletionCount": 4,
+      "RewardsTable": {
+        "ObjectName": "DataTable ChallengeReward_S19_Daily_Fresh",
+        "ObjectPath": "/BattlePassS19/Items/QuestRewards/ChallengeReward_S19_Daily_Fresh.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athenabattlepass_s19_dailytoken",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S19_dailyquest_RepairShields_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "Target.Tags HasTag Building.Type.Container.Slurp || Target.Tags HasTag GameplayCue.Athena.EnvItem.Slurp || Target.Tags HasTag GameplayCue.Athena.Item.Slurp || Target.Tags HasTag Granted.Athena.EnvItem.Slurp || Target.Tags HasTag Item.Consumable.SlurpJuice || Target.Tags HasTag Item.Consumable.SlurpMushroom || Target.Tags HasTag Item.Foraged.Slurpshroom || Target.Tags HasTag Phoebe.items.consumable.SlurpFish",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Heal",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": "None"
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": "None",
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "42A0B78A4569AB5C54327590D3FBFA63",
+            "SourceString": "Gain shields with Slurp, a Small Shield Potion, a Shield Potion, and a fish"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "64309D394C93AB562CA359813A87B796",
+            "SourceString": "Gain shields with Slurp"
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 1,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        },
+        {
+          "BackendName": "Quest_S19_dailyquest_RepairShields_obj1",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Item.Consumable.SmallShieldPotion"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Heal",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": "None"
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": "None",
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "80F46B164EBF528E9691349140719B10",
+            "SourceString": "Gain shields with Slurp, a Small Shield Potion, a Shield Potion, and a fish"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "C51A8DDB4BADC6D480B2249E1964C4D5",
+            "SourceString": "Gain shields with a Small Shield Potion"
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 1,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        },
+        {
+          "BackendName": "Quest_S19_dailyquest_RepairShields_obj2",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Item.Consumable.ShieldPotion"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Heal",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": "None"
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": "None",
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "DD8B6073422E0091261817A20131E304",
+            "SourceString": "Gain shields with Slurp, a Small Shield Potion, a Shield Potion, and a fish"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "E5643E2D4B45B63FA44505830292E14D",
+            "SourceString": "Gain shields with a Shield Potion"
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 1,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        },
+        {
+          "BackendName": "Quest_S19_dailyquest_ConsumeForageables_obj3",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Fish.ShieldFish"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "phoebe.items.consumable.SlurpFish"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "Target.Tags HasTag Fish.ShieldFish || Target.Tags HasTag Phoebe.items.consumable.SlurpFish || Target.Tags HasTag Fish.JellyFish",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Heal",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": "None"
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": "None",
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "23BB0DC347A187BD00D4BA944F0FF816",
+            "SourceString": "Gain shields with Slurp, a Small Shield Potion, a Shield Potion, and a fish"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "EB647C1E44CCBAE49A07A9B2BAB34C9B",
+            "SourceString": "Gain shields with a fish"
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 1,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "Category": {
+        "DataTable": {
+          "ObjectName": "DataTable QuestCategoryTable",
+          "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
+        },
+        "RowName": "BRDailyChallenges"
+      },
+      "Rarity": "EFortRarity::Common",
+      "DisplayName": {
+        "Namespace": "",
+        "Key": "95C565B44CF9C9FE064EE8A02CDA7414",
+        "SourceString": "Gain shields with Slurp, a Small Shield Potion, a Shield Potion, and a fish"
+      },
+      "ShortDescription": {
+        "Namespace": "",
+        "Key": "470A0A9441B79B300822C4A227EE70A0",
+        "SourceString": "Gain shields with Slurp, a Small Shield Potion, a Shield Potion, and a fish"
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "97086F5D409B80A8242D74929457BEB3",
+        "SourceString": "Gain shields with Slurp, a Small Shield Potion, a Shield Potion, and a fish"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP",
+        "ChallengeCategory.Daily"
+      ]
+    }
+  }
+]

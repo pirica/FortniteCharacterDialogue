@@ -1,0 +1,126 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "Quest_S19_Milestone_HarvestMaterials_Q16",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "QuestSubtype": "EFortQuestSubtype::Milestone",
+      "bAthenaGrantRarityToken": false,
+      "bSuppressQuestGrantedEvent": true,
+      "bIncludedInCategories": false,
+      "Threshold": 37500,
+      "RewardsTable": {
+        "ObjectName": "DataTable ChallengeReward_S19_Milestone",
+        "ObjectPath": "/BattlePassS19/Items/QuestRewards/ChallengeReward_S19_Milestone.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_s19_milestonepunch_stage16_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S19_Milestone_HarvestMaterials_Q16_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.GameOn"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                }
+              ],
+              "Condition": "Target.Tags HasTag Building.Resource.Wood || Target.Tags HasTag Building.Resource.Stone || Target.Tags HasTag Building.Resource.Metal",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Collect",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": false,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": "None"
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": "None",
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "70438A804CD70A6BF5B7CE9A8F4202AF",
+            "SourceString": "Harvest Materials"
+          },
+          "HudShortDescription": {
+            "CultureInvariantString": null
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 40000,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "Quest_S19_Milestone_HarvestMaterials_Q16",
+        "Key": "Quest_S19_Milestone_HarvestMaterials_Q16_CompletionText",
+        "SourceString": "Milestone Completed!"
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Common",
+      "DisplayName": {
+        "Namespace": "Quest_S19_Milestone_HarvestMaterials_Q16",
+        "Key": "Quest_S19_Milestone_HarvestMaterials_Q16_DisplayName",
+        "SourceString": "Harvest Materials"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S19_Milestone_HarvestMaterials_Q16",
+        "Key": "Quest_S19_Milestone_HarvestMaterials_Q16_ShortDescription",
+        "SourceString": "Harvest Materials"
+      },
+      "Description": {
+        "Namespace": "Quest_S19_Milestone_HarvestMaterials_Q16",
+        "Key": "Quest_S19_Milestone_HarvestMaterials_Q16_Description",
+        "SourceString": "Harvest Materials"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.Milestone",
+        "ChallengeCategory.XP",
+        "Quest.Metadata.HideForContextualQuestDisplay"
+      ]
+    }
+  }
+]

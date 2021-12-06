@@ -1,0 +1,143 @@
+[
+  {
+    "Type": "AthenaDailyQuestDefinition",
+    "Name": "quest_s19_dailyquest_HitWeakpoints",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaTransientQuest",
+      "QuestSubtype": "EFortQuestSubtype::Autofill",
+      "bAthenaGrantRarityToken": false,
+      "bHideStageDescription": true,
+      "bIsShared": true,
+      "RewardsTable": {
+        "ObjectName": "DataTable ChallengeReward_S19_Daily_Fresh",
+        "ObjectPath": "/BattlePassS19/Items/QuestRewards/ChallengeReward_S19_Daily_Fresh.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athenabattlepass_s19_dailytoken",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S19_dailyquest_HitWeakpoints_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.Quests.HitWeakPoints"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::ComplexCustom",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": "None"
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": "None",
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "83C5935747A220960531E1A5692A9D25",
+            "SourceString": "Hit weakpoints while harvesting"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "86AA728A4E908814E443A5BEC959A6B2",
+            "SourceString": "The little blue circle marks the spot."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 25,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "Category": {
+        "DataTable": {
+          "ObjectName": "DataTable QuestCategoryTable",
+          "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
+        },
+        "RowName": "BRDailyChallenges"
+      },
+      "CompletionText": {
+        "Namespace": "",
+        "Key": "0C8B99FD45FE60EB1F55D7A42D84E187",
+        "SourceString": "Blue: the official color of swift, efficient demolition."
+      },
+      "QuestAbilitySet": {
+        "AssetPathName": "/BattlePassS19/Items/QuestAbilities/Quest_HitWeakPoints/GAS_Quest_HitWeakpoints.GAS_Quest_HitWeakpoints",
+        "SubPathString": ""
+      },
+      "Rarity": "EFortRarity::Common",
+      "DisplayName": {
+        "Namespace": "",
+        "Key": "999807744A91E911BEC0728B220A593A",
+        "SourceString": "Hit weakpoints while harvesting"
+      },
+      "ShortDescription": {
+        "Namespace": "",
+        "Key": "BA40140247653CBBB17063B70F846E37",
+        "SourceString": "The little blue circle marks the spot."
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "E20F2ECB48DAB4E802803CA52F3227CC",
+        "SourceString": "Hit weakpoints while harvesting"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.XP",
+        "ChallengeCategory.Daily"
+      ]
+    }
+  }
+]

@@ -1,0 +1,139 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "quest_s19_gow_q04",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "bIncludedInCategories": false,
+      "ObjectiveCompletionCount": 1,
+      "RewardsTable": {
+        "ObjectName": "DataTable ChallengeReward_S19_IP_Cosmetic_Generic",
+        "ObjectPath": "/BattlePassS19/Items/QuestRewards/ChallengeReward_S19_IP_Cosmetic_Generic.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_s19_gow_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "quest_s19_gow_q04_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Pawn.Athena.NPC.Bud"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": false
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Weapon.Ranged.Shotgun"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "Target.Tags HasTag Homebase.Class || Target.Tags HasTag Pawn.Athena.NPC",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Damage",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": "None"
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": "None",
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "2445388F48B02E90E5E5E2BAA3FDF0DB",
+            "SourceString": "Do Shotgun Damage to an Opponent"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "5399C33449193BC3C74D57B9DD082431",
+            "SourceString": "Gnasher Time!"
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 1,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "quest_s19_gow_q04",
+        "Key": "quest_s19_gow_q04_CompletionText",
+        "SourceString": "In the face!"
+      },
+      "TransientQuestStage": 4,
+      "TransientQuestMaxStage": 5,
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Rare",
+      "DisplayName": {
+        "Namespace": "quest_s19_gow_q04",
+        "Key": "quest_s19_gow_q04_DisplayName",
+        "SourceString": "Do Shotgun Damage to an Opponent"
+      },
+      "ShortDescription": {
+        "Namespace": "quest_s19_gow_q04",
+        "Key": "quest_s19_gow_q04_ShortDescription",
+        "SourceString": "Gnasher Time!"
+      },
+      "Description": {
+        "Namespace": "quest_s19_gow_q04",
+        "Key": "quest_s19_gow_q04_Description",
+        "SourceString": "Do Shotgun Damage to an Opponent"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.Event.Rustybolt"
+      ]
+    }
+  }
+]

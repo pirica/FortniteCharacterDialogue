@@ -1,0 +1,133 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "Quest_S19_Milestone_HuntWildlife_Q20",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "QuestSubtype": "EFortQuestSubtype::Milestone",
+      "bAthenaGrantRarityToken": false,
+      "bSuppressQuestGrantedEvent": true,
+      "bIncludedInCategories": false,
+      "Threshold": 475,
+      "RewardsTable": {
+        "ObjectName": "DataTable ChallengeReward_S19_Milestone",
+        "ObjectPath": "/BattlePassS19/Items/QuestRewards/ChallengeReward_S19_Milestone.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_s19_milestonepunch_stage20_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S19_Milestone_HuntWildlife_Q20_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Pawn.Athena.NPC.Wildlife"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Kill",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": "None"
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": "None",
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "45D43A584131E77E4E2248B4F1860FED",
+            "SourceString": "Hunt Wildlife"
+          },
+          "HudShortDescription": {
+            "CultureInvariantString": null
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 500,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "Quest_S19_Milestone_HuntWildlife_Q20",
+        "Key": "Quest_S19_Milestone_HuntWildlife_Q20_CompletionText",
+        "SourceString": "Milestone Completed!"
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Common",
+      "DisplayName": {
+        "Namespace": "Quest_S19_Milestone_HuntWildlife_Q20",
+        "Key": "Quest_S19_Milestone_HuntWildlife_Q20_DisplayName",
+        "SourceString": "Hunt Wildlife"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S19_Milestone_HuntWildlife_Q20",
+        "Key": "Quest_S19_Milestone_HuntWildlife_Q20_ShortDescription",
+        "SourceString": "Hunt Wildlife"
+      },
+      "Description": {
+        "Namespace": "Quest_S19_Milestone_HuntWildlife_Q20",
+        "Key": "Quest_S19_Milestone_HuntWildlife_Q20_Description",
+        "SourceString": "Hunt Wildlife"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.Milestone",
+        "ChallengeCategory.XP",
+        "Quest.Metadata.HideForContextualQuestDisplay"
+      ]
+    }
+  }
+]

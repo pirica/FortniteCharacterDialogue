@@ -1,0 +1,140 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "Quest_S19_Milestone_CatchFish_Q20",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "QuestSubtype": "EFortQuestSubtype::Milestone",
+      "bAthenaGrantRarityToken": false,
+      "bSuppressQuestGrantedEvent": true,
+      "bIncludedInCategories": false,
+      "Threshold": 380,
+      "RewardsTable": {
+        "ObjectName": "DataTable ChallengeReward_S19_Milestone",
+        "ObjectPath": "/BattlePassS19/Items/QuestRewards/ChallengeReward_S19_Milestone.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athena_s19_milestonepunch_stage20_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S19_Milestone_CatchFish_Q20_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "FlopperSpawn"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Item.Consumable.Fish"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Target",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::ComplexCustom",
+              "bHasInclusiveTargetTags": true,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": "None"
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": "None",
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "237247FF488BC2E085C2F7B576C2EFB7",
+            "SourceString": "Catch Fish"
+          },
+          "HudShortDescription": {
+            "CultureInvariantString": null
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 400,
+          "Stage": -1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "Quest_S19_Milestone_CatchFish_Q20",
+        "Key": "Quest_S19_Milestone_CatchFish_Q20_CompletionText",
+        "SourceString": "Milestone Completed!"
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Common",
+      "DisplayName": {
+        "Namespace": "Quest_S19_Milestone_CatchFish_Q20",
+        "Key": "Quest_S19_Milestone_CatchFish_Q20_DisplayName",
+        "SourceString": "Catch Fish"
+      },
+      "ShortDescription": {
+        "Namespace": "Quest_S19_Milestone_CatchFish_Q20",
+        "Key": "Quest_S19_Milestone_CatchFish_Q20_ShortDescription",
+        "SourceString": "Catch Fish"
+      },
+      "Description": {
+        "Namespace": "Quest_S19_Milestone_CatchFish_Q20",
+        "Key": "Quest_S19_Milestone_CatchFish_Q20_Description",
+        "SourceString": "Catch Fish"
+      },
+      "GameplayTags": [
+        "ChallengeCategory.Milestone",
+        "ChallengeCategory.XP",
+        "Quest.Metadata.HideForContextualQuestDisplay"
+      ]
+    }
+  }
+]

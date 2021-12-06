@@ -1,0 +1,219 @@
+[
+  {
+    "Type": "BP_ControllerRequirement_CheckLivingWorldManagerBudget_C",
+    "Name": "BP_ControllerRequirement_CheckLivingWorldManagerBudget_C_1",
+    "Outer": "Station_GiftTypeDefinitions",
+    "Template": "Default__BP_ControllerRequirement_CheckLivingWorldManagerBudget_C",
+    "Properties": {
+      "EventRowHandle": {
+        "DataTable": {
+          "ObjectName": "DataTable Lager_EventTable_Irwin_VendGifts",
+          "ObjectPath": "/Lager/Lager/EventTables/Lager_EventTable_Irwin_VendGifts.0"
+        },
+        "RowName": "Nug"
+      }
+    }
+  },
+  {
+    "Type": "FortControllerEffect_ModifyGameplayTags",
+    "Name": "FortControllerEffect_ModifyGameplayTags_0",
+    "Outer": "Station_GiftTypeDefinitions",
+    "Properties": {
+      "TagModificationRequest": {
+        "TagsToModify": [
+          "Athena.Quests.TandemGift.Nug"
+        ],
+        "FiniteLifetime": 0.0
+      }
+    }
+  },
+  {
+    "Type": "FortControllerEffect_ModifyGameplayTags",
+    "Name": "FortControllerEffect_ModifyGameplayTags_2",
+    "Outer": "Station_GiftTypeDefinitions",
+    "Properties": {
+      "TagModificationRequest": {
+        "TagsToModify": [
+          "Athena.Quests.TandemGift.Mobility"
+        ],
+        "FiniteLifetime": 0.0
+      }
+    }
+  },
+  {
+    "Type": "FortControllerEffect_NPCGiveItem",
+    "Name": "FortControllerEffect_NPCGiveItem_0",
+    "Outer": "Station_GiftTypeDefinitions"
+  },
+  {
+    "Type": "FortControllerEffect_SpawnActor",
+    "Name": "FortControllerEffect_SpawnActor_0",
+    "Outer": "Station_GiftTypeDefinitions",
+    "Properties": {
+      "ActorClass": {
+        "ObjectName": "BlueprintGeneratedClass BGA_Rift_Portal_VM_C",
+        "ObjectPath": "/BattlePassS19/Services/BGA_Rift_Portal_VM.1"
+      },
+      "SpawnDelay": 0.5,
+      "LocalSpaceSpawnOffset": {
+        "X": 0.0,
+        "Y": 50.0,
+        "Z": -35.0
+      }
+    }
+  },
+  {
+    "Type": "FortControllerEffect_SpawnActor",
+    "Name": "FortControllerEffect_SpawnActor_1",
+    "Outer": "Station_GiftTypeDefinitions",
+    "Properties": {
+      "ActorClass": {
+        "ObjectName": "BlueprintGeneratedClass BP_VendAISpawner_Nug_C",
+        "ObjectPath": "/BattlePassS19/Services/BP_VendAISpawner_Nug.0"
+      },
+      "SpawnDelay": 0.5,
+      "LocalSpaceSpawnOffset": {
+        "X": 0.0,
+        "Y": 130.0,
+        "Z": 40.0
+      },
+      "AdditionalRelativeRotationOffset": {
+        "Pitch": 0.0,
+        "Yaw": 90.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_CheckPitchYawRoll",
+    "Name": "FortControllerRequirement_CheckPitchYawRoll_0",
+    "Outer": "Station_GiftTypeDefinitions",
+    "Properties": {
+      "PitchErrorCheck": {
+        "bEnabled": true,
+        "ToleratedErrorInDegrees": 20.0
+      },
+      "RollErrorCheck": {
+        "bEnabled": true,
+        "ToleratedErrorInDegrees": 20.0
+      }
+    }
+  },
+  {
+    "Type": "FortControllerRequirement_CheckPitchYawRoll",
+    "Name": "FortControllerRequirement_CheckPitchYawRoll_1",
+    "Outer": "Station_GiftTypeDefinitions",
+    "Properties": {
+      "PitchErrorCheck": {
+        "bEnabled": true,
+        "ToleratedErrorInDegrees": 20.0
+      },
+      "RollErrorCheck": {
+        "bEnabled": true,
+        "ToleratedErrorInDegrees": 20.0
+      }
+    }
+  },
+  {
+    "Type": "FortConversationGiftTypeDefinitions",
+    "Name": "Station_GiftTypeDefinitions",
+    "Properties": {
+      "GiftDefinitionsByGiftTag": {
+        "Athena.Quests.TandemGift.Nug": {
+          "ServiceProviderRequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ServiceProviderRequirements": [
+            {
+              "ObjectName": "FortControllerRequirement_CheckPitchYawRoll Station_GiftTypeDefinitions:FortControllerRequirement_CheckPitchYawRoll_0",
+              "ObjectPath": "/BattlePassS19/DataTables/Station_GiftTypeDefinitions.6"
+            },
+            {
+              "ObjectName": "BP_ControllerRequirement_CheckLivingWorldManagerBudget_C Station_GiftTypeDefinitions:BP_ControllerRequirement_CheckLivingWorldManagerBudget_C_1",
+              "ObjectPath": "/BattlePassS19/DataTables/Station_GiftTypeDefinitions.0"
+            }
+          ],
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "Requirements": [],
+          "Effects": [
+            {
+              "ObjectName": "FortControllerEffect_SpawnActor Station_GiftTypeDefinitions:FortControllerEffect_SpawnActor_1",
+              "ObjectPath": "/BattlePassS19/DataTables/Station_GiftTypeDefinitions.5"
+            },
+            {
+              "ObjectName": "FortControllerEffect_ModifyGameplayTags Station_GiftTypeDefinitions:FortControllerEffect_ModifyGameplayTags_0",
+              "ObjectPath": "/BattlePassS19/DataTables/Station_GiftTypeDefinitions.1"
+            }
+          ],
+          "UINotificationType": null,
+          "OptionalSelectionCooldown": {
+            "Value": -1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          }
+        },
+        "Athena.Quests.TandemGift.Item": {
+          "ServiceProviderRequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ServiceProviderRequirements": [],
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "Requirements": [],
+          "Effects": [
+            {
+              "ObjectName": "FortControllerEffect_NPCGiveItem Station_GiftTypeDefinitions:FortControllerEffect_NPCGiveItem_0",
+              "ObjectPath": "/BattlePassS19/DataTables/Station_GiftTypeDefinitions.3"
+            }
+          ],
+          "UINotificationType": null,
+          "OptionalSelectionCooldown": {
+            "Value": -1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          }
+        },
+        "Athena.Quests.TandemGift.Mobility": {
+          "ServiceProviderRequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ServiceProviderRequirements": [
+            {
+              "ObjectName": "FortControllerRequirement_CheckPitchYawRoll Station_GiftTypeDefinitions:FortControllerRequirement_CheckPitchYawRoll_1",
+              "ObjectPath": "/BattlePassS19/DataTables/Station_GiftTypeDefinitions.7"
+            }
+          ],
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "Requirements": [],
+          "Effects": [
+            {
+              "ObjectName": "FortControllerEffect_SpawnActor Station_GiftTypeDefinitions:FortControllerEffect_SpawnActor_0",
+              "ObjectPath": "/BattlePassS19/DataTables/Station_GiftTypeDefinitions.4"
+            },
+            {
+              "ObjectName": "FortControllerEffect_ModifyGameplayTags Station_GiftTypeDefinitions:FortControllerEffect_ModifyGameplayTags_2",
+              "ObjectPath": "/BattlePassS19/DataTables/Station_GiftTypeDefinitions.2"
+            }
+          ],
+          "UINotificationType": null,
+          "OptionalSelectionCooldown": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable AthenaGameData",
+                "ObjectPath": "/Game/Athena/Balance/DataTables/AthenaGameData.0"
+              },
+              "RowName": "Default.Rift.Item.ActiveDuration"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          }
+        }
+      }
+    }
+  }
+]

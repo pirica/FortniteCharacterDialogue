@@ -1,0 +1,214 @@
+[
+  {
+    "Type": "FortQuestItemDefinition",
+    "Name": "Quest_S19_Weekly_W01_Q04",
+    "Properties": {
+      "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+      "QuestSubtype": "EFortQuestSubtype::WeeklyChallenge",
+      "bAthenaGrantRarityToken": false,
+      "bAthenaMustCompleteInSingleMatch": true,
+      "bIncludedInCategories": false,
+      "ObjectiveCompletionCount": 2,
+      "RewardsTable": {
+        "ObjectName": "DataTable ChallengeReward_S19_Weekly",
+        "ObjectPath": "/BattlePassS19/Items/QuestRewards/ChallengeReward_S19_Weekly.0"
+      },
+      "HiddenRewards": [
+        {
+          "TemplateId": "Token:athenabattlepass_s19_w01",
+          "Quantity": 1
+        },
+        {
+          "TemplateId": "Token:athenabattlepass_weeklychallenge_token",
+          "Quantity": 1
+        }
+      ],
+      "Objectives": [
+        {
+          "BackendName": "Quest_S19_Weekly_W01_Q04_obj0",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Athena.Location.POI.DailyBugle"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::Land",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": "None"
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": "None",
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "781722AC45A594C30B3C1E8891634B5E",
+            "SourceString": "Land at The Daily Bugle, then finish top 25"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "B16CA63C4C7E9723EBD6B5905B0DE300",
+            "SourceString": "Someone at the Bugle's bragging about his pictures of Spider-Man."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 1,
+          "Stage": 1,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        },
+        {
+          "BackendName": "Quest_S19_Weekly_W01_Q04_obj1",
+          "InlineObjectiveStats": [
+            {
+              "TagConditions": [
+                {
+                  "Tag": {
+                    "TagName": "Athena.Playlist"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Context",
+                  "Require": true
+                },
+                {
+                  "Tag": {
+                    "TagName": "Homebase.Class"
+                  },
+                  "Type": "EInlineObjectiveStatTagCheckEntryType::Source",
+                  "Require": true
+                }
+              ],
+              "Condition": "Athena.Rank <=25",
+              "TemplateIds": [],
+              "Type": "EFortQuestObjectiveStatEvent::AthenaRank",
+              "bHasInclusiveTargetTags": false,
+              "bHasInclusiveSourceTags": true,
+              "bHasInclusiveContextTags": true
+            }
+          ],
+          "ObjectiveStatHandle": {
+            "DataTable": null,
+            "RowName": "None"
+          },
+          "AlternativeStatHandles": [],
+          "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+          "bHidden": false,
+          "bRequirePrimaryMissionCompletion": false,
+          "bCanProgressInZone": true,
+          "bDisplayDynamicAnnouncementUpdate": false,
+          "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+          "LinkVaultTab": "EFortInventoryFilter::Max_None",
+          "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+          "ItemReference": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "ItemTemplateIdOverride": "",
+          "LinkSquadID": "None",
+          "LinkSquadIndex": 0,
+          "Description": {
+            "Namespace": "",
+            "Key": "AC2E46CE4F2A13F6032DD5953C44C94A",
+            "SourceString": "Land at The Daily Bugle, then finish top 25"
+          },
+          "HudShortDescription": {
+            "Namespace": "",
+            "Key": "06D9D4C44320AE656FAD878AA463EFD4",
+            "SourceString": "Someone at the Bugle's bragging about his pictures of Spider-Man."
+          },
+          "HudIcon": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "Count": 1,
+          "Stage": 2,
+          "DynamicStatusUpdatePercentInterval": 25,
+          "DynamicUpdateCompletionDelay": 1.0,
+          "ScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          },
+          "FrontendScriptedAction": {
+            "AssetPathName": "None",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "CompletionText": {
+        "Namespace": "",
+        "Key": "C104F70A455961FBC2A7968FD017CB39",
+        "SourceString": "Oh, he WANTS pictures of Spider-Man? My mistake."
+      },
+      "GrantToProfileType": "athena",
+      "Rarity": "EFortRarity::Common",
+      "DisplayName": {
+        "Namespace": "Quest_S19_Weekly_W01_Q04",
+        "Key": "Quest_S19_Weekly_W01_Q04_DisplayName",
+        "SourceString": "Land at The Daily Bugle, then finish top 25"
+      },
+      "ShortDescription": {
+        "Namespace": "",
+        "Key": "55AEF5C54BB124007229088D32221C6F",
+        "SourceString": "Someone at the Bugle's bragging about his pictures of Spider-Man."
+      },
+      "Description": {
+        "Namespace": "Quest_S19_Weekly_W01_Q04",
+        "Key": "Quest_S19_Weekly_W01_Q04_Description",
+        "SourceString": "Land at The Daily Bugle, then finish top 25"
+      },
+      "GameplayTags": [
+        "Athena.Location.POI.DailyBugle",
+        "Quest.ChallengeIcon.Land",
+        "ChallengeCategory.Weekly.001"
+      ]
+    }
+  }
+]
