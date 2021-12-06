@@ -1,5 +1,29 @@
 [
   {
+    "Type": "AudioComponent",
+    "Name": "FeedbackAudioComp0",
+    "Outer": "Default__BP_PlayerPawn_Inner_C",
+    "Template": "FeedbackAudioComp0",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent Default__BP_PlayerPawn_Inner_C:CollisionCylinder",
+        "ObjectPath": "/NPCLibrary/NPCs/Inner/Inner/Pawns/BP_PlayerPawn_Inner.4"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "InAirAudioComp",
+    "Outer": "Default__BP_PlayerPawn_Inner_C",
+    "Template": "InAirAudioComp",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "FortPooledSkelMeshComponent Default__BP_PlayerPawn_Inner_C:CharacterMesh0",
+        "ObjectPath": "/NPCLibrary/NPCs/Inner/Inner/Pawns/BP_PlayerPawn_Inner.11"
+      }
+    }
+  },
+  {
     "Type": "BlueprintGeneratedClass",
     "Name": "BP_PlayerPawn_Inner_C",
     "Super": "BP_PlayerPawn_NonParticipant_Boss_C",
@@ -7,30 +31,30 @@
       "bHasCookedComponentInstancingData": true,
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript BP_PlayerPawn_Inner_C:SimpleConstructionScript_0",
-        "ObjectPath": "/NPCLibrary/NPCs/Inner/Inner/Pawns/BP_PlayerPawn_Inner.21"
+        "ObjectPath": "/NPCLibrary/NPCs/Inner/Inner/Pawns/BP_PlayerPawn_Inner.22"
       },
       "InheritableComponentHandler": {
         "ObjectName": "InheritableComponentHandler BP_PlayerPawn_Inner_C:InheritableComponentHandler",
-        "ObjectPath": "/NPCLibrary/NPCs/Inner/Inner/Pawns/BP_PlayerPawn_Inner.12"
+        "ObjectPath": "/NPCLibrary/NPCs/Inner/Inner/Pawns/BP_PlayerPawn_Inner.13"
       }
     },
     "SuperStruct": {
       "ObjectName": "BlueprintGeneratedClass BP_PlayerPawn_NonParticipant_Boss_C",
-      "ObjectPath": "/Game/Athena/AI/NPCs/Base/BP_PlayerPawn_NonParticipant_Boss.15"
+      "ObjectPath": "/Game/Athena/AI/NPCs/Base/BP_PlayerPawn_NonParticipant_Boss.2"
     },
-    "FuncMap": {},
     "ClassFlags": 8652820,
     "ClassWithin": {
       "ObjectName": "Class Object",
       "ObjectPath": "/Script/CoreUObject"
     },
     "ClassConfigName": "Game",
-    "ClassGeneratedBy": null,
-    "Interfaces": [],
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "BP_PlayerPawn_Inner_C Default__BP_PlayerPawn_Inner_C",
-      "ObjectPath": "/NPCLibrary/NPCs/Inner/Inner/Pawns/BP_PlayerPawn_Inner.1"
+      "ObjectPath": "/NPCLibrary/NPCs/Inner/Inner/Pawns/BP_PlayerPawn_Inner.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
     }
   },
   {
@@ -66,51 +90,119 @@
       "VO QuantizationClockName": "Music_Inner_Cue",
       "InAirAudioComp": {
         "ObjectName": "AudioComponent Default__BP_PlayerPawn_Inner_C:InAirAudioComp",
-        "ObjectPath": "/NPCLibrary/NPCs/Inner/Inner/Pawns/BP_PlayerPawn_Inner.3"
+        "ObjectPath": "/NPCLibrary/NPCs/Inner/Inner/Pawns/BP_PlayerPawn_Inner.1"
       },
       "PSC_PlayerWalkLand": {
         "ObjectName": "ParticleSystemComponent Default__BP_PlayerPawn_Inner_C:PlayerWalkLandFX",
-        "ObjectPath": "/NPCLibrary/NPCs/Inner/Inner/Pawns/BP_PlayerPawn_Inner.18"
+        "ObjectPath": "/NPCLibrary/NPCs/Inner/Inner/Pawns/BP_PlayerPawn_Inner.19"
       },
       "PSC_PlayerRunLand": {
         "ObjectName": "ParticleSystemComponent Default__BP_PlayerPawn_Inner_C:PlayerRunLandFX",
-        "ObjectPath": "/NPCLibrary/NPCs/Inner/Inner/Pawns/BP_PlayerPawn_Inner.16"
+        "ObjectPath": "/NPCLibrary/NPCs/Inner/Inner/Pawns/BP_PlayerPawn_Inner.17"
       },
       "PSC_PlayerSlideLand": {
         "ObjectName": "ParticleSystemComponent Default__BP_PlayerPawn_Inner_C:PlayerSlideLandFX",
-        "ObjectPath": "/NPCLibrary/NPCs/Inner/Inner/Pawns/BP_PlayerPawn_Inner.17"
+        "ObjectPath": "/NPCLibrary/NPCs/Inner/Inner/Pawns/BP_PlayerPawn_Inner.18"
       },
       "PSC_HitDamage": {
         "ObjectName": "ParticleSystemComponent Default__BP_PlayerPawn_Inner_C:HitDamageFX",
-        "ObjectPath": "/NPCLibrary/NPCs/Inner/Inner/Pawns/BP_PlayerPawn_Inner.13"
+        "ObjectPath": "/NPCLibrary/NPCs/Inner/Inner/Pawns/BP_PlayerPawn_Inner.14"
+      },
+      "TetherComponent": {
+        "ObjectName": "FortPawnComponent_Tether Default__BP_PlayerPawn_Inner_C:TetherComp",
+        "ObjectPath": "/NPCLibrary/NPCs/Inner/Inner/Pawns/BP_PlayerPawn_Inner.10"
+      },
+      "PSC_PlayerInWater": {
+        "ObjectName": "ParticleSystemComponent Default__BP_PlayerPawn_Inner_C:PlayerInWaterFX",
+        "ObjectPath": "/NPCLibrary/NPCs/Inner/Inner/Pawns/BP_PlayerPawn_Inner.15"
+      },
+      "PSC_PlayerInWaterSurfaceSwimming": {
+        "ObjectName": "ParticleSystemComponent Default__BP_PlayerPawn_Inner_C:PlayerInWaterSurfaceSwimmingFX",
+        "ObjectPath": "/NPCLibrary/NPCs/Inner/Inner/Pawns/BP_PlayerPawn_Inner.16"
+      },
+      "ConvertComponent": {
+        "ObjectName": "FortPawnComponent_Convert Default__BP_PlayerPawn_Inner_C:ConvertComp",
+        "ObjectPath": "/NPCLibrary/NPCs/Inner/Inner/Pawns/BP_PlayerPawn_Inner.9"
       },
       "AffiliationComponent": {
-        "ObjectName": "FortPawnComponent_Convert Default__BP_PlayerPawn_Inner_C:ConvertComp",
+        "ObjectName": "FortActorComponent_Affiliation Default__BP_PlayerPawn_Inner_C:AffiliationComponent",
+        "ObjectPath": "/NPCLibrary/NPCs/Inner/Inner/Pawns/BP_PlayerPawn_Inner.5"
+      },
+      "SoundIndicatorComponent": {
+        "ObjectName": "FortSoundIndicatorComponent Default__BP_PlayerPawn_Inner_C:SoundIndicatorComponent",
+        "ObjectPath": "/NPCLibrary/NPCs/Inner/Inner/Pawns/BP_PlayerPawn_Inner.12"
+      },
+      "FortFootstepComponent": {
+        "ObjectName": "FortFootstepComponent Default__BP_PlayerPawn_Inner_C:FortFootstepComp",
+        "ObjectPath": "/NPCLibrary/NPCs/Inner/Inner/Pawns/BP_PlayerPawn_Inner.6"
+      },
+      "VocalChords": [
+        {
+          "FeedbackAudioComponent": {
+            "ObjectName": "AudioComponent Default__BP_PlayerPawn_Inner_C:FeedbackAudioComp0",
+            "ObjectPath": "/NPCLibrary/NPCs/Inner/Inner/Pawns/BP_PlayerPawn_Inner.0"
+          },
+          "ReplicatedSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          },
+          "PendingSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          },
+          "QueuedSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          },
+          "CurrentSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          }
+        }
+      ],
+      "Mesh": {
+        "ObjectName": "FortPooledSkelMeshComponent Default__BP_PlayerPawn_Inner_C:CharacterMesh0",
+        "ObjectPath": "/NPCLibrary/NPCs/Inner/Inner/Pawns/BP_PlayerPawn_Inner.11"
+      },
+      "CharacterMovement": {
+        "ObjectName": "FortMovementComp_CharacterAthena Default__BP_PlayerPawn_Inner_C:CharMoveComp",
         "ObjectPath": "/NPCLibrary/NPCs/Inner/Inner/Pawns/BP_PlayerPawn_Inner.8"
-      }
-    }
-  },
-  {
-    "Type": "AudioComponent",
-    "Name": "FeedbackAudioComp0",
-    "Outer": "Default__BP_PlayerPawn_Inner_C",
-    "Template": "FeedbackAudioComp0",
-    "Properties": {
-      "AttachParent": {
+      },
+      "CapsuleComponent": {
         "ObjectName": "CapsuleComponent Default__BP_PlayerPawn_Inner_C:CollisionCylinder",
         "ObjectPath": "/NPCLibrary/NPCs/Inner/Inner/Pawns/BP_PlayerPawn_Inner.4"
-      }
-    }
-  },
-  {
-    "Type": "AudioComponent",
-    "Name": "InAirAudioComp",
-    "Outer": "Default__BP_PlayerPawn_Inner_C",
-    "Template": "InAirAudioComp",
-    "Properties": {
-      "AttachParent": {
-        "ObjectName": "FortPooledSkelMeshComponent Default__BP_PlayerPawn_Inner_C:CharacterMesh0",
-        "ObjectPath": "/NPCLibrary/NPCs/Inner/Inner/Pawns/BP_PlayerPawn_Inner.10"
+      },
+      "RootComponent": {
+        "ObjectName": "CapsuleComponent Default__BP_PlayerPawn_Inner_C:CollisionCylinder",
+        "ObjectPath": "/NPCLibrary/NPCs/Inner/Inner/Pawns/BP_PlayerPawn_Inner.4"
       }
     }
   },
@@ -125,6 +217,12 @@
     "Name": "AffiliationComponent",
     "Outer": "Default__BP_PlayerPawn_Inner_C",
     "Template": "AffiliationComponent"
+  },
+  {
+    "Type": "FortFootstepComponent",
+    "Name": "FortFootstepComp",
+    "Outer": "Default__BP_PlayerPawn_Inner_C",
+    "Template": "FortFootstepComp"
   },
   {
     "Type": "FortGenericDataStoreManagerComponent",
@@ -221,11 +319,11 @@
     "Properties": {
       "AutoAttachParent": {
         "ObjectName": "FortPooledSkelMeshComponent Default__BP_PlayerPawn_Inner_C:CharacterMesh0",
-        "ObjectPath": "/NPCLibrary/NPCs/Inner/Inner/Pawns/BP_PlayerPawn_Inner.10"
+        "ObjectPath": "/NPCLibrary/NPCs/Inner/Inner/Pawns/BP_PlayerPawn_Inner.11"
       },
       "AttachParent": {
         "ObjectName": "FortPooledSkelMeshComponent Default__BP_PlayerPawn_Inner_C:CharacterMesh0",
-        "ObjectPath": "/NPCLibrary/NPCs/Inner/Inner/Pawns/BP_PlayerPawn_Inner.10"
+        "ObjectPath": "/NPCLibrary/NPCs/Inner/Inner/Pawns/BP_PlayerPawn_Inner.11"
       }
     }
   },
@@ -237,11 +335,11 @@
     "Properties": {
       "AutoAttachParent": {
         "ObjectName": "FortPooledSkelMeshComponent Default__BP_PlayerPawn_Inner_C:CharacterMesh0",
-        "ObjectPath": "/NPCLibrary/NPCs/Inner/Inner/Pawns/BP_PlayerPawn_Inner.10"
+        "ObjectPath": "/NPCLibrary/NPCs/Inner/Inner/Pawns/BP_PlayerPawn_Inner.11"
       },
       "AttachParent": {
         "ObjectName": "FortPooledSkelMeshComponent Default__BP_PlayerPawn_Inner_C:CharacterMesh0",
-        "ObjectPath": "/NPCLibrary/NPCs/Inner/Inner/Pawns/BP_PlayerPawn_Inner.10"
+        "ObjectPath": "/NPCLibrary/NPCs/Inner/Inner/Pawns/BP_PlayerPawn_Inner.11"
       }
     }
   },
@@ -253,11 +351,11 @@
     "Properties": {
       "AutoAttachParent": {
         "ObjectName": "FortPooledSkelMeshComponent Default__BP_PlayerPawn_Inner_C:CharacterMesh0",
-        "ObjectPath": "/NPCLibrary/NPCs/Inner/Inner/Pawns/BP_PlayerPawn_Inner.10"
+        "ObjectPath": "/NPCLibrary/NPCs/Inner/Inner/Pawns/BP_PlayerPawn_Inner.11"
       },
       "AttachParent": {
         "ObjectName": "FortPooledSkelMeshComponent Default__BP_PlayerPawn_Inner_C:CharacterMesh0",
-        "ObjectPath": "/NPCLibrary/NPCs/Inner/Inner/Pawns/BP_PlayerPawn_Inner.10"
+        "ObjectPath": "/NPCLibrary/NPCs/Inner/Inner/Pawns/BP_PlayerPawn_Inner.11"
       }
     }
   },
@@ -277,7 +375,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent BP_PlayerPawn_Inner_C:DefaultSceneRoot_GEN_VARIABLE",
-        "ObjectPath": "/NPCLibrary/NPCs/Inner/Inner/Pawns/BP_PlayerPawn_Inner.19"
+        "ObjectPath": "/NPCLibrary/NPCs/Inner/Inner/Pawns/BP_PlayerPawn_Inner.20"
       },
       "VariableGuid": "A018CE45-48D99066-F43EE392-832F5458",
       "InternalVariableName": "DefaultSceneRoot"
@@ -290,7 +388,7 @@
     "Properties": {
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node BP_PlayerPawn_Inner_C:SimpleConstructionScript_0.SCS_Node_0",
-        "ObjectPath": "/NPCLibrary/NPCs/Inner/Inner/Pawns/BP_PlayerPawn_Inner.20"
+        "ObjectPath": "/NPCLibrary/NPCs/Inner/Inner/Pawns/BP_PlayerPawn_Inner.21"
       }
     }
   }

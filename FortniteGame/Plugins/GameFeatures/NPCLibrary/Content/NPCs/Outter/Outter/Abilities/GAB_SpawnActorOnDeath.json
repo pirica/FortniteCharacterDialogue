@@ -1,5 +1,142 @@
 [
   {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GAB_SpawnActorOnDeath_C",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function GAB_SpawnActorOnDeath_C:ExecuteUbergraph_GAB_SpawnActorOnDeath",
+        "ObjectPath": "/NPCLibrary/NPCs/Outter/Outter/Abilities/GAB_SpawnActorOnDeath.1"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class FortGameplayAbility",
+      "ObjectPath": "/Script/FortniteGame"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function GAB_SpawnActorOnDeath_C:K2_ActivateAbility",
+        "ObjectPath": "/NPCLibrary/NPCs/Outter/Outter/Abilities/GAB_SpawnActorOnDeath.2"
+      },
+      {
+        "ObjectName": "Function GAB_SpawnActorOnDeath_C:PawnDied",
+        "ObjectPath": "/NPCLibrary/NPCs/Outter/Outter/Abilities/GAB_SpawnActorOnDeath.3"
+      },
+      {
+        "ObjectName": "Function GAB_SpawnActorOnDeath_C:ExecuteUbergraph_GAB_SpawnActorOnDeath",
+        "ObjectPath": "/NPCLibrary/NPCs/Outter/Outter/Abilities/GAB_SpawnActorOnDeath.1"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": 2097153,
+        "ElementSize": 16,
+        "PropertyFlags": 2105344,
+        "Struct": {
+          "ObjectName": "Class PointerToUberGraphFrame",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Pawn",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 67589,
+        "PropertyClass": {
+          "ObjectName": "Class FortPlayerPawn",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "ShouldDropPickup",
+        "Flags": 2097153,
+        "ElementSize": 56,
+        "PropertyFlags": 65541,
+        "Struct": {
+          "ObjectName": "Class ScalableFloat",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ClassProperty",
+        "Name": "ActorToSpawn",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 65541,
+        "PropertyClass": {
+          "ObjectName": "Class Class",
+          "ObjectPath": "/Script/CoreUObject"
+        },
+        "MetaClass": {
+          "ObjectName": "Class Actor",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "SpawnedToTracedGround",
+        "Flags": 2097153,
+        "ElementSize": 1,
+        "PropertyFlags": 65541,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "SpawnLocationTransform",
+        "Flags": 2097153,
+        "ElementSize": 48,
+        "PropertyFlags": 65541,
+        "Struct": {
+          "ObjectName": "Class Transform",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "RandomAngle",
+        "Flags": 2097153,
+        "ElementSize": 4,
+        "PropertyFlags": 65541
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_GAB_SpawnActorOnDeath": {
+        "ObjectName": "Function GAB_SpawnActorOnDeath_C:ExecuteUbergraph_GAB_SpawnActorOnDeath",
+        "ObjectPath": "/NPCLibrary/NPCs/Outter/Outter/Abilities/GAB_SpawnActorOnDeath.1"
+      },
+      "PawnDied": {
+        "ObjectName": "Function GAB_SpawnActorOnDeath_C:PawnDied",
+        "ObjectPath": "/NPCLibrary/NPCs/Outter/Outter/Abilities/GAB_SpawnActorOnDeath.3"
+      },
+      "K2_ActivateAbility": {
+        "ObjectName": "Function GAB_SpawnActorOnDeath_C:K2_ActivateAbility",
+        "ObjectPath": "/NPCLibrary/NPCs/Outter/Outter/Abilities/GAB_SpawnActorOnDeath.2"
+      }
+    },
+    "ClassFlags": 8652816,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GAB_SpawnActorOnDeath_C Default__GAB_SpawnActorOnDeath_C",
+      "ObjectPath": "/NPCLibrary/NPCs/Outter/Outter/Abilities/GAB_SpawnActorOnDeath.4"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
     "Type": "Function",
     "Name": "ExecuteUbergraph_GAB_SpawnActorOnDeath",
     "Outer": "GAB_SpawnActorOnDeath_C",
@@ -318,7 +455,7 @@
         "Type": "StructProperty",
         "Name": "CallFunc_LineTraceSingleByProfile_OutHit",
         "Flags": 1,
-        "ElementSize": 144,
+        "ElementSize": 164,
         "PropertyFlags": 549755813888,
         "Struct": {
           "ObjectName": "Class HitResult",
@@ -451,6 +588,12 @@
         "ElementSize": 12
       },
       {
+        "Type": "NameProperty",
+        "Name": "CallFunc_BreakHitResult_BoneName",
+        "Flags": 1,
+        "ElementSize": 12
+      },
+      {
         "Type": "IntProperty",
         "Name": "CallFunc_BreakHitResult_HitItem",
         "Flags": 1,
@@ -510,6 +653,16 @@
       }
     ],
     "FunctionFlags": 8421377
+  },
+  {
+    "Type": "Function",
+    "Name": "K2_ActivateAbility",
+    "Outer": "GAB_SpawnActorOnDeath_C",
+    "SuperStruct": {
+      "ObjectName": "Class GameplayAbility:K2_ActivateAbility",
+      "ObjectPath": "/Script/GameplayAbilities"
+    },
+    "FunctionFlags": 134744064
   },
   {
     "Type": "Function",
@@ -600,152 +753,6 @@
     "FunctionFlags": 201326592
   },
   {
-    "Type": "Function",
-    "Name": "K2_ActivateAbility",
-    "Outer": "GAB_SpawnActorOnDeath_C",
-    "SuperStruct": {
-      "ObjectName": "Class GameplayAbility:K2_ActivateAbility",
-      "ObjectPath": "/Script/GameplayAbilities"
-    },
-    "FunctionFlags": 134744064
-  },
-  {
-    "Type": "BlueprintGeneratedClass",
-    "Name": "GAB_SpawnActorOnDeath_C",
-    "Properties": {
-      "UberGraphFunction": {
-        "ObjectName": "Function GAB_SpawnActorOnDeath_C:ExecuteUbergraph_GAB_SpawnActorOnDeath",
-        "ObjectPath": "/NPCLibrary/NPCs/Outter/Outter/Abilities/GAB_SpawnActorOnDeath.0"
-      }
-    },
-    "SuperStruct": {
-      "ObjectName": "Class FortGameplayAbility",
-      "ObjectPath": "/Script/FortniteGame"
-    },
-    "Children": [
-      {
-        "ObjectName": "Function GAB_SpawnActorOnDeath_C:K2_ActivateAbility",
-        "ObjectPath": "/NPCLibrary/NPCs/Outter/Outter/Abilities/GAB_SpawnActorOnDeath.2"
-      },
-      {
-        "ObjectName": "Function GAB_SpawnActorOnDeath_C:PawnDied",
-        "ObjectPath": "/NPCLibrary/NPCs/Outter/Outter/Abilities/GAB_SpawnActorOnDeath.1"
-      },
-      {
-        "ObjectName": "Function GAB_SpawnActorOnDeath_C:ExecuteUbergraph_GAB_SpawnActorOnDeath",
-        "ObjectPath": "/NPCLibrary/NPCs/Outter/Outter/Abilities/GAB_SpawnActorOnDeath.0"
-      }
-    ],
-    "ChildProperties": [
-      {
-        "Type": "StructProperty",
-        "Name": "UberGraphFrame",
-        "Flags": 2097153,
-        "ElementSize": 16,
-        "PropertyFlags": 2105344,
-        "Struct": {
-          "ObjectName": "Class PointerToUberGraphFrame",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "Pawn",
-        "Flags": 2097153,
-        "ElementSize": 8,
-        "PropertyFlags": 67589,
-        "PropertyClass": {
-          "ObjectName": "Class FortPlayerPawn",
-          "ObjectPath": "/Script/FortniteGame"
-        }
-      },
-      {
-        "Type": "StructProperty",
-        "Name": "ShouldDropPickup",
-        "Flags": 2097153,
-        "ElementSize": 56,
-        "PropertyFlags": 65541,
-        "Struct": {
-          "ObjectName": "Class ScalableFloat",
-          "ObjectPath": "/Script/GameplayAbilities"
-        }
-      },
-      {
-        "Type": "ClassProperty",
-        "Name": "ActorToSpawn",
-        "Flags": 2097153,
-        "ElementSize": 8,
-        "PropertyFlags": 65541,
-        "PropertyClass": {
-          "ObjectName": "Class Class",
-          "ObjectPath": "/Script/CoreUObject"
-        },
-        "MetaClass": {
-          "ObjectName": "Class Actor",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "BoolProperty",
-        "Name": "SpawnedToTracedGround",
-        "Flags": 2097153,
-        "ElementSize": 1,
-        "PropertyFlags": 65541,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
-        "Type": "StructProperty",
-        "Name": "SpawnLocationTransform",
-        "Flags": 2097153,
-        "ElementSize": 48,
-        "PropertyFlags": 65541,
-        "Struct": {
-          "ObjectName": "Class Transform",
-          "ObjectPath": "/Script/CoreUObject"
-        }
-      },
-      {
-        "Type": "FloatProperty",
-        "Name": "RandomAngle",
-        "Flags": 2097153,
-        "ElementSize": 4,
-        "PropertyFlags": 65541
-      }
-    ],
-    "FuncMap": {
-      "ExecuteUbergraph_GAB_SpawnActorOnDeath": {
-        "ObjectName": "Function GAB_SpawnActorOnDeath_C:ExecuteUbergraph_GAB_SpawnActorOnDeath",
-        "ObjectPath": "/NPCLibrary/NPCs/Outter/Outter/Abilities/GAB_SpawnActorOnDeath.0"
-      },
-      "PawnDied": {
-        "ObjectName": "Function GAB_SpawnActorOnDeath_C:PawnDied",
-        "ObjectPath": "/NPCLibrary/NPCs/Outter/Outter/Abilities/GAB_SpawnActorOnDeath.1"
-      },
-      "K2_ActivateAbility": {
-        "ObjectName": "Function GAB_SpawnActorOnDeath_C:K2_ActivateAbility",
-        "ObjectPath": "/NPCLibrary/NPCs/Outter/Outter/Abilities/GAB_SpawnActorOnDeath.2"
-      }
-    },
-    "ClassFlags": 8652816,
-    "ClassWithin": {
-      "ObjectName": "Class Object",
-      "ObjectPath": "/Script/CoreUObject"
-    },
-    "ClassConfigName": "Engine",
-    "ClassGeneratedBy": null,
-    "Interfaces": [],
-    "bCooked": true,
-    "ClassDefaultObject": {
-      "ObjectName": "GAB_SpawnActorOnDeath_C Default__GAB_SpawnActorOnDeath_C",
-      "ObjectPath": "/NPCLibrary/NPCs/Outter/Outter/Abilities/GAB_SpawnActorOnDeath.4"
-    }
-  },
-  {
     "Type": "GAB_SpawnActorOnDeath_C",
     "Name": "Default__GAB_SpawnActorOnDeath_C",
     "Properties": {
@@ -760,12 +767,12 @@
           "RowName": "Default.Outter.DropItem"
         },
         "RegistryType": {
-          "Name": null
+          "Name": "None"
         }
       },
       "ActorToSpawn": {
         "ObjectName": "BlueprintGeneratedClass B_HeldObject_Primal_Runestone_Parent_C",
-        "ObjectPath": "/PrimalGameplay/Items/HeldObjects/B_HeldObject_Primal_Runestone_Parent.14"
+        "ObjectPath": "/PrimalGameplay/Items/HeldObjects/B_HeldObject_Primal_Runestone_Parent.1"
       },
       "SpawnLocationTransform": {
         "Rotation": {

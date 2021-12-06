@@ -1,0 +1,1542 @@
+[
+  {
+    "Type": "BGA_PuffyStraw_C",
+    "Name": "Default__BGA_PuffyStraw_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "bCanBeMarked": false,
+      "bBlockMarking": false,
+      "AttributeInitKeys": {
+        "AttributeInitCategory": "PuffyStraw",
+        "AttributeInitSubCategory": "Defaults"
+      },
+      "AttributeInitKeys": {
+        "AttributeInitCategory": "PuffyStraw",
+        "AttributeInitSubCategory": "Defaults"
+      },
+      "PrimarySurfaceType": "EPhysicalSurface::SurfaceType3",
+      "WeaponResponseType": "EFortBaseWeaponDamage::Environmental",
+      "LifespanAfterDeath": 1.1
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BGA_PuffyStraw_C",
+    "Properties": {
+      "NumReplicatedProperties": 1,
+      "bHasCookedComponentInstancingData": true,
+      "Timelines": [
+        {
+          "ObjectName": "TimelineTemplate BGA_PuffyStraw_C:Fades Alpha Idle Particles (matches Fade Time in Material)_Template",
+          "ObjectPath": "/NPCLibrary/Abilities/PuffyStraw/BGA_PuffyStraw.20"
+        }
+      ],
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript BGA_PuffyStraw_C:SimpleConstructionScript_0",
+        "ObjectPath": "/NPCLibrary/Abilities/PuffyStraw/BGA_PuffyStraw.18"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function BGA_PuffyStraw_C:ExecuteUbergraph_BGA_PuffyStraw",
+        "ObjectPath": "/NPCLibrary/Abilities/PuffyStraw/BGA_PuffyStraw.4"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class BuildingGameplayActor",
+      "ObjectPath": "/Script/FortniteGame"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function BGA_PuffyStraw_C:OnRep_ShieldOwner",
+        "ObjectPath": "/NPCLibrary/Abilities/PuffyStraw/BGA_PuffyStraw.9"
+      },
+      {
+        "ObjectName": "Function BGA_PuffyStraw_C:Fades Alpha Idle Particles (matches Fade Time in Material)__FinishedFunc",
+        "ObjectPath": "/NPCLibrary/Abilities/PuffyStraw/BGA_PuffyStraw.5"
+      },
+      {
+        "ObjectName": "Function BGA_PuffyStraw_C:Fades Alpha Idle Particles (matches Fade Time in Material)__UpdateFunc",
+        "ObjectPath": "/NPCLibrary/Abilities/PuffyStraw/BGA_PuffyStraw.6"
+      },
+      {
+        "ObjectName": "Function BGA_PuffyStraw_C:ReceiveBeginPlay",
+        "ObjectPath": "/NPCLibrary/Abilities/PuffyStraw/BGA_PuffyStraw.11"
+      },
+      {
+        "ObjectName": "Function BGA_PuffyStraw_C:AttachShield",
+        "ObjectPath": "/NPCLibrary/Abilities/PuffyStraw/BGA_PuffyStraw.3"
+      },
+      {
+        "ObjectName": "Function BGA_PuffyStraw_C:ValidateHolder",
+        "ObjectPath": "/NPCLibrary/Abilities/PuffyStraw/BGA_PuffyStraw.12"
+      },
+      {
+        "ObjectName": "Function BGA_PuffyStraw_C:PawnDied",
+        "ObjectPath": "/NPCLibrary/Abilities/PuffyStraw/BGA_PuffyStraw.10"
+      },
+      {
+        "ObjectName": "Function BGA_PuffyStraw_C:OnDeathPlayEffects",
+        "ObjectPath": "/NPCLibrary/Abilities/PuffyStraw/BGA_PuffyStraw.8"
+      },
+      {
+        "ObjectName": "Function BGA_PuffyStraw_C:OnDamagePlayEffects",
+        "ObjectPath": "/NPCLibrary/Abilities/PuffyStraw/BGA_PuffyStraw.7"
+      },
+      {
+        "ObjectName": "Function BGA_PuffyStraw_C:ExecuteUbergraph_BGA_PuffyStraw",
+        "ObjectPath": "/NPCLibrary/Abilities/PuffyStraw/BGA_PuffyStraw.4"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": 2097153,
+        "ElementSize": 16,
+        "PropertyFlags": 2105344,
+        "Struct": {
+          "ObjectName": "Class PointerToUberGraphFrame",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "NS_PuffyStraw_Idle",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class NiagaraComponent",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Sideways_ShieldMesh",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class StaticMeshComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DefaultSceneRoot",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class SceneComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Fades_Alpha_Idle_Particles__matches_Fade_Time_in_Material__Fade_Alpha_26FEAA574F3DDD42918E3FA0ACB1CD5C",
+        "Flags": 2097153,
+        "ElementSize": 4
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Fades_Alpha_Idle_Particles__matches_Fade_Time_in_Material___Direction_26FEAA574F3DDD42918E3FA0ACB1CD5C",
+        "Flags": 2097153,
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class ETimelineDirection",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Fades Alpha Idle Particles (matches Fade Time in Material)",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 524292,
+        "PropertyClass": {
+          "ObjectName": "Class TimelineComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ShieldOwner",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 4295034917,
+        "RepIndex": 31,
+        "RepNotifyFunc": "OnRep_ShieldOwner",
+        "PropertyClass": {
+          "ObjectName": "Class Actor",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Shield Death Sound",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 65541,
+        "PropertyClass": {
+          "ObjectName": "Class SoundBase",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BGA_PuffyStraw": {
+        "ObjectName": "Function BGA_PuffyStraw_C:ExecuteUbergraph_BGA_PuffyStraw",
+        "ObjectPath": "/NPCLibrary/Abilities/PuffyStraw/BGA_PuffyStraw.4"
+      },
+      "OnDamagePlayEffects": {
+        "ObjectName": "Function BGA_PuffyStraw_C:OnDamagePlayEffects",
+        "ObjectPath": "/NPCLibrary/Abilities/PuffyStraw/BGA_PuffyStraw.7"
+      },
+      "OnDeathPlayEffects": {
+        "ObjectName": "Function BGA_PuffyStraw_C:OnDeathPlayEffects",
+        "ObjectPath": "/NPCLibrary/Abilities/PuffyStraw/BGA_PuffyStraw.8"
+      },
+      "PawnDied": {
+        "ObjectName": "Function BGA_PuffyStraw_C:PawnDied",
+        "ObjectPath": "/NPCLibrary/Abilities/PuffyStraw/BGA_PuffyStraw.10"
+      },
+      "ValidateHolder": {
+        "ObjectName": "Function BGA_PuffyStraw_C:ValidateHolder",
+        "ObjectPath": "/NPCLibrary/Abilities/PuffyStraw/BGA_PuffyStraw.12"
+      },
+      "AttachShield": {
+        "ObjectName": "Function BGA_PuffyStraw_C:AttachShield",
+        "ObjectPath": "/NPCLibrary/Abilities/PuffyStraw/BGA_PuffyStraw.3"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function BGA_PuffyStraw_C:ReceiveBeginPlay",
+        "ObjectPath": "/NPCLibrary/Abilities/PuffyStraw/BGA_PuffyStraw.11"
+      },
+      "Fades Alpha Idle Particles (matches Fade Time in Material)__UpdateFunc": {
+        "ObjectName": "Function BGA_PuffyStraw_C:Fades Alpha Idle Particles (matches Fade Time in Material)__UpdateFunc",
+        "ObjectPath": "/NPCLibrary/Abilities/PuffyStraw/BGA_PuffyStraw.6"
+      },
+      "Fades Alpha Idle Particles (matches Fade Time in Material)__FinishedFunc": {
+        "ObjectName": "Function BGA_PuffyStraw_C:Fades Alpha Idle Particles (matches Fade Time in Material)__FinishedFunc",
+        "ObjectPath": "/NPCLibrary/Abilities/PuffyStraw/BGA_PuffyStraw.5"
+      },
+      "OnRep_ShieldOwner": {
+        "ObjectName": "Function BGA_PuffyStraw_C:OnRep_ShieldOwner",
+        "ObjectPath": "/NPCLibrary/Abilities/PuffyStraw/BGA_PuffyStraw.9"
+      }
+    },
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BGA_PuffyStraw_C Default__BGA_PuffyStraw_C",
+      "ObjectPath": "/NPCLibrary/Abilities/PuffyStraw/BGA_PuffyStraw.0"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_0",
+    "Outer": "BGA_PuffyStraw_C",
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.333,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "AttachShield",
+    "Outer": "BGA_PuffyStraw_C",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ShieldOwner",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "PropertyClass": {
+          "ObjectName": "Class Actor",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BGA_PuffyStraw",
+    "Outer": "BGA_PuffyStraw_C",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetComponentLocation_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsFort_Pawn",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class FortPawn",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsDedicatedServer_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_ShieldOwner",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class Actor",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_DamagedActor",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class Actor",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_CustomEvent_Damage",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_InstigatedBy",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class Controller",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_DamageCauser",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class Actor",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_HitLocation",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_FHitComponent",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "PropertyClass": {
+          "ObjectName": "Class PrimitiveComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_BoneName",
+        "Flags": 1,
+        "ElementSize": 12
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_Momentum",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_Damage_1",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_DamageTags_1",
+        "Flags": 1,
+        "ElementSize": 32,
+        "PropertyFlags": 2,
+        "Struct": {
+          "ObjectName": "Class GameplayTagContainer",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_Momentum_1",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_HitInfo_1",
+        "Flags": 1,
+        "ElementSize": 164,
+        "PropertyFlags": 549755813890,
+        "Struct": {
+          "ObjectName": "Class HitResult",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_InstigatedBy_1",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class FortPawn",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_DamageCauser_1",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class Actor",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_EffectContext_1",
+        "Flags": 1,
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class GameplayEffectContextHandle",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetAbilitySystemComponent_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "PropertyClass": {
+          "ObjectName": "Class AbilitySystemComponent",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "Class ActiveGameplayEffectHandle",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetGameTimeInSeconds_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Add_FloatFloat_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetGameTimeInSeconds_ReturnValue_1",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": 1,
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class PawnDamagedSignature__DelegateSignature",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_Damage",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_DamageTags",
+        "Flags": 1,
+        "ElementSize": 32,
+        "PropertyFlags": 2,
+        "Struct": {
+          "ObjectName": "Class GameplayTagContainer",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_Momentum",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_HitInfo",
+        "Flags": 1,
+        "ElementSize": 164,
+        "PropertyFlags": 549755813890,
+        "Struct": {
+          "ObjectName": "Class HitResult",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_InstigatedBy",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class FortPawn",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_DamageCauser",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class Actor",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_EffectContext",
+        "Flags": 1,
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class GameplayEffectContextHandle",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BreakHitResult_bBlockingHit",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BreakHitResult_bInitialOverlap",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakHitResult_Time",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakHitResult_Distance",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_Location",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_ImpactPoint",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_Normal",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_ImpactNormal",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakHitResult_PhysMat",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class PhysicalMaterial",
+          "ObjectPath": "/Script/PhysicsCore"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakHitResult_HitActor",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class Actor",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakHitResult_HitComponent",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "PropertyClass": {
+          "ObjectName": "Class PrimitiveComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_BreakHitResult_HitBoneName",
+        "Flags": 1,
+        "ElementSize": 12
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_BreakHitResult_BoneName",
+        "Flags": 1,
+        "ElementSize": 12
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakHitResult_HitItem",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakHitResult_ElementIndex",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakHitResult_FaceIndex",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_TraceStart",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_TraceEnd",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Subtract_VectorVector_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetReflectionVector_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeRotFromX_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class Rotator",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnSystemAtLocation_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "PropertyClass": {
+          "ObjectName": "Class NiagaraComponent",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetComponentLocation_ReturnValue_1",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetGameTimeInSeconds_ReturnValue_2",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Add_FloatFloat_ReturnValue_1",
+        "Flags": 1,
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": 8421377
+  },
+  {
+    "Type": "Function",
+    "Name": "Fades Alpha Idle Particles (matches Fade Time in Material)__FinishedFunc",
+    "Outer": "BGA_PuffyStraw_C",
+    "FunctionFlags": 134217728
+  },
+  {
+    "Type": "Function",
+    "Name": "Fades Alpha Idle Particles (matches Fade Time in Material)__UpdateFunc",
+    "Outer": "BGA_PuffyStraw_C",
+    "FunctionFlags": 134217728
+  },
+  {
+    "Type": "Function",
+    "Name": "OnDamagePlayEffects",
+    "Outer": "BGA_PuffyStraw_C",
+    "SuperStruct": {
+      "ObjectName": "Class BuildingActor:OnDamagePlayEffects",
+      "ObjectPath": "/Script/FortniteGame"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "Damage",
+        "Flags": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "DamageTags",
+        "Flags": 1,
+        "ElementSize": 32,
+        "PropertyFlags": 134218134,
+        "Struct": {
+          "ObjectName": "Class GameplayTagContainer",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Momentum",
+        "Flags": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 148,
+        "Struct": {
+          "ObjectName": "Class Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "HitInfo",
+        "Flags": 1,
+        "ElementSize": 164,
+        "PropertyFlags": 549890032022,
+        "Struct": {
+          "ObjectName": "Class HitResult",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "InstigatedBy",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "PropertyClass": {
+          "ObjectName": "Class FortPawn",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DamageCauser",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "PropertyClass": {
+          "ObjectName": "Class Actor",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "EffectContext",
+        "Flags": 1,
+        "ElementSize": 24,
+        "PropertyFlags": 148,
+        "Struct": {
+          "ObjectName": "Class GameplayEffectContextHandle",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      }
+    ],
+    "FunctionFlags": 138545160
+  },
+  {
+    "Type": "Function",
+    "Name": "OnDeathPlayEffects",
+    "Outer": "BGA_PuffyStraw_C",
+    "SuperStruct": {
+      "ObjectName": "Class BuildingActor:OnDeathPlayEffects",
+      "ObjectPath": "/Script/FortniteGame"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "Damage",
+        "Flags": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "DamageTags",
+        "Flags": 1,
+        "ElementSize": 32,
+        "PropertyFlags": 134218134,
+        "Struct": {
+          "ObjectName": "Class GameplayTagContainer",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Momentum",
+        "Flags": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 148,
+        "Struct": {
+          "ObjectName": "Class Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "HitInfo",
+        "Flags": 1,
+        "ElementSize": 164,
+        "PropertyFlags": 549890032022,
+        "Struct": {
+          "ObjectName": "Class HitResult",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "InstigatedBy",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "PropertyClass": {
+          "ObjectName": "Class FortPawn",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DamageCauser",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "PropertyClass": {
+          "ObjectName": "Class Actor",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "EffectContext",
+        "Flags": 1,
+        "ElementSize": 24,
+        "PropertyFlags": 148,
+        "Struct": {
+          "ObjectName": "Class GameplayEffectContextHandle",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      }
+    ],
+    "FunctionFlags": 138545160
+  },
+  {
+    "Type": "Function",
+    "Name": "OnRep_ShieldOwner",
+    "Outer": "BGA_PuffyStraw_C",
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "PawnDied",
+    "Outer": "BGA_PuffyStraw_C",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "DamagedActor",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "PropertyClass": {
+          "ObjectName": "Class Actor",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Damage",
+        "Flags": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "InstigatedBy",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "PropertyClass": {
+          "ObjectName": "Class Controller",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DamageCauser",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "PropertyClass": {
+          "ObjectName": "Class Actor",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "HitLocation",
+        "Flags": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 148,
+        "Struct": {
+          "ObjectName": "Class Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FHitComponent",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524436,
+        "PropertyClass": {
+          "ObjectName": "Class PrimitiveComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "BoneName",
+        "Flags": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 148
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Momentum",
+        "Flags": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 148,
+        "Struct": {
+          "ObjectName": "Class Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "BGA_PuffyStraw_C",
+    "SuperStruct": {
+      "ObjectName": "Class Actor:ReceiveBeginPlay",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": 134744064
+  },
+  {
+    "Type": "Function",
+    "Name": "ValidateHolder",
+    "Outer": "BGA_PuffyStraw_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "NS_PuffyStraw_Idle_GEN_VARIABLE",
+    "Outer": "BGA_PuffyStraw_C",
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem NS_PuffyStraw_Idle",
+        "ObjectPath": "/NPCLibrary/Abilities/PuffyStraw/FX/NS_PuffyStraw_Idle.32"
+      },
+      "OverrideParameters": {
+        "UserParameterRedirects": {
+          "Alpha": {
+            "VarData": "",
+            "Name": "User.Alpha",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class NiagaraFloat",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          }
+        },
+        "SortedParameterOffsets": [
+          {
+            "Offset": 0,
+            "Name": "User.Alpha",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class NiagaraFloat",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          }
+        ],
+        "ParameterData": [
+          0,
+          0,
+          128,
+          63
+        ]
+      },
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BGA_PuffyStraw_C"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class SceneComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent BGA_PuffyStraw_C:DefaultSceneRoot_GEN_VARIABLE",
+        "ObjectPath": "/NPCLibrary/Abilities/PuffyStraw/BGA_PuffyStraw.14"
+      },
+      "CookedComponentInstancingData": {
+        "bHasValidCookedData": true
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node BGA_PuffyStraw_C:SimpleConstructionScript_0.SCS_Node_2",
+          "ObjectPath": "/NPCLibrary/Abilities/PuffyStraw/BGA_PuffyStraw.17"
+        }
+      ],
+      "VariableGuid": "754DCA43-4456C853-96C6C1A0-50C7620B",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class NiagaraComponent",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent BGA_PuffyStraw_C:NS_PuffyStraw_Idle_GEN_VARIABLE",
+        "ObjectPath": "/NPCLibrary/Abilities/PuffyStraw/BGA_PuffyStraw.13"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "Asset",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class NiagaraComponent",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "OverrideParameters",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class NiagaraComponent",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "UserParameterRedirects",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class NiagaraUserRedirectionParameterStore",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "SortedParameterOffsets",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class NiagaraUserRedirectionParameterStore",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "None",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class NiagaraUserRedirectionParameterStore",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "ParameterData",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class NiagaraUserRedirectionParameterStore",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "None",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class NiagaraUserRedirectionParameterStore",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "bAutoActivate",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class NiagaraComponent",
+              "ObjectPath": "/Script/Niagara"
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "VariableGuid": "896824FF-4F14876B-69354EB0-37C87C9C",
+      "InternalVariableName": "NS_PuffyStraw_Idle"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class StaticMeshComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent BGA_PuffyStraw_C:Sideways_ShieldMesh_GEN_VARIABLE",
+        "ObjectPath": "/NPCLibrary/Abilities/PuffyStraw/BGA_PuffyStraw.19"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "StaticMesh",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class StaticMeshComponent",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "BodyInstance",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class StaticMeshComponent",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "ObjectType",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class BodyInstance",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "bNotifyRigidBodyCollision",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class BodyInstance",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "CollisionProfileName",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class BodyInstance",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "CollisionResponses",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class BodyInstance",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "ResponseArray",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class CollisionResponse",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "None",
+            "ArrayIndex": 8,
+            "PropertyScope": {
+              "ObjectName": "Class CollisionResponse",
+              "ObjectPath": "/Script/Engine"
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node BGA_PuffyStraw_C:SimpleConstructionScript_0.SCS_Node_1",
+          "ObjectPath": "/NPCLibrary/Abilities/PuffyStraw/BGA_PuffyStraw.16"
+        }
+      ],
+      "VariableGuid": "2D4AF39B-48FBA6B1-CCFCE7AE-7045E6EC",
+      "InternalVariableName": "Sideways_ShieldMesh"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BGA_PuffyStraw_C",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node BGA_PuffyStraw_C:SimpleConstructionScript_0.SCS_Node_0",
+          "ObjectPath": "/NPCLibrary/Abilities/PuffyStraw/BGA_PuffyStraw.15"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node BGA_PuffyStraw_C:SimpleConstructionScript_0.SCS_Node_0",
+          "ObjectPath": "/NPCLibrary/Abilities/PuffyStraw/BGA_PuffyStraw.15"
+        },
+        {
+          "ObjectName": "SCS_Node BGA_PuffyStraw_C:SimpleConstructionScript_0.SCS_Node_2",
+          "ObjectPath": "/NPCLibrary/Abilities/PuffyStraw/BGA_PuffyStraw.17"
+        },
+        {
+          "ObjectName": "SCS_Node BGA_PuffyStraw_C:SimpleConstructionScript_0.SCS_Node_1",
+          "ObjectPath": "/NPCLibrary/Abilities/PuffyStraw/BGA_PuffyStraw.16"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node BGA_PuffyStraw_C:SimpleConstructionScript_0.SCS_Node_0",
+        "ObjectPath": "/NPCLibrary/Abilities/PuffyStraw/BGA_PuffyStraw.15"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Sideways_ShieldMesh_GEN_VARIABLE",
+    "Outer": "BGA_PuffyStraw_C",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh S_FX_PuffyStraw",
+        "ObjectPath": "/NPCLibrary/Abilities/PuffyStraw/FX/S_FX_PuffyStraw.1"
+      },
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "bNotifyRigidBodyCollision": true,
+        "CollisionProfileName": "Custom",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "FCC_Trace_WeaponCapsule",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_PawnAI",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Trace_WeaponMulti",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Trace_Weapon",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_Projectile",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_ProjectileIgnoreAI",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_ProjectileMesh",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_SpectatorDroneCamera",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "Fades Alpha Idle Particles (matches Fade Time in Material)_Template",
+    "Outer": "BGA_PuffyStraw_C",
+    "Properties": {
+      "TimelineLength": 0.333,
+      "FloatTracks": [
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat BGA_PuffyStraw_C:CurveFloat_0",
+            "ObjectPath": "/NPCLibrary/Abilities/PuffyStraw/BGA_PuffyStraw.2"
+          },
+          "PropertyName": "Fades_Alpha_Idle_Particles__matches_Fade_Time_in_Material__Fade_Alpha_26FEAA574F3DDD42918E3FA0ACB1CD5C",
+          "TrackName": "Fade Alpha",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "26FEAA57-4F3DDD42-918E3FA0-ACB1CD5C",
+      "VariableName": "Fades Alpha Idle Particles (matches Fade Time in Material)",
+      "DirectionPropertyName": "Fades_Alpha_Idle_Particles__matches_Fade_Time_in_Material___Direction_26FEAA574F3DDD42918E3FA0ACB1CD5C",
+      "UpdateFunctionName": "Fades Alpha Idle Particles (matches Fade Time in Material)__UpdateFunc",
+      "FinishedFunctionName": "Fades Alpha Idle Particles (matches Fade Time in Material)__FinishedFunc"
+    }
+  }
+]

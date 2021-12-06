@@ -38,7 +38,7 @@
             "G": 0.406108,
             "B": 1.0,
             "A": 1.0,
-            "Hex": "0068FF"
+            "Hex": "FF00ABFF"
           }
         },
         {
@@ -53,7 +53,7 @@
             "G": 0.065123,
             "B": 0.1875,
             "A": 1.0,
-            "Hex": "001130"
+            "Hex": "FF004878"
           }
         }
       ]
@@ -96,41 +96,9 @@
     }
   },
   {
-    "Type": "FortControllerRequirement_HasCID",
-    "Name": "FortControllerRequirement_HasCID_0",
-    "Outer": "Speech_C_4",
-    "Properties": {
-      "AllowedCIDs": [
-        {
-          "AssetPathName": "/Game/Athena/Items/Cosmetics/Characters/CID_185_Athena_Commando_M_DurrburgerHero.CID_185_Athena_Commando_M_DurrburgerHero",
-          "SubPathString": ""
-        },
-        {
-          "AssetPathName": "/Game/Athena/Items/Cosmetics/Characters/CID_505_Athena_Commando_M_MilitiaMascotBurger.CID_505_Athena_Commando_M_MilitiaMascotBurger",
-          "SubPathString": ""
-        },
-        {
-          "AssetPathName": "/Game/Athena/Items/Cosmetics/Characters/CID_538_Athena_Commando_M_Taco.CID_538_Athena_Commando_M_Taco",
-          "SubPathString": ""
-        },
-        {
-          "AssetPathName": "/Game/Athena/Items/Cosmetics/Characters/CID_797_Athena_Commando_F_Taco.CID_797_Athena_Commando_F_Taco",
-          "SubPathString": ""
-        },
-        {
-          "AssetPathName": "/Game/Athena/Items/Cosmetics/Characters/CID_184_Athena_Commando_M_DurrburgerWorker.CID_184_Athena_Commando_M_DurrburgerWorker",
-          "SubPathString": ""
-        },
-        {
-          "AssetPathName": "/Game/Athena/Items/Cosmetics/Characters/CID_815_Athena_Commando_F_DurrburgerHero.CID_815_Athena_Commando_F_DurrburgerHero",
-          "SubPathString": ""
-        },
-        {
-          "AssetPathName": "/Game/Athena/Items/Cosmetics/Characters/CID_536_Athena_Commando_F_DurrburgerWorker.CID_536_Athena_Commando_F_DurrburgerWorker",
-          "SubPathString": ""
-        }
-      ]
-    }
+    "Type": "FortControllerRequirement_IsFirstEverConversationWithNPC",
+    "Name": "FortControllerRequirement_IsFirstEverConversationWithNPC_0",
+    "Outer": "Speech_C_4"
   },
   {
     "Type": "Speech_C",
@@ -149,17 +117,17 @@
           {
             "Message": {
               "Namespace": "",
-              "Key": "833CAC704E3C2758FFB6FE9BDEF1043F",
-              "SourceString": "Sauce off, creeps."
+              "Key": "2D31FB5545B155E6224CE18740353C6F",
+              "SourceString": "Come on down to the Pizza Pit!"
             },
-            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAny",
+            "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
             "ContextRequirements": [
               {
                 "ParticipantID": {
                   "TagName": "Conversation.Participant.Player"
                 },
                 "Requirement": {
-                  "ObjectName": "FortControllerRequirement_HasCID NPCLibrary_Conversation_TomatoHead:Speech_C_4.FortControllerRequirement_HasCID_0",
+                  "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC NPCLibrary_Conversation_TomatoHead:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0",
                   "ObjectPath": "/NPCLibrary/NPCs/TomatoHead/TomatoHead/NPCLibrary_Conversation_TomatoHead.4"
                 }
               }
@@ -171,20 +139,20 @@
                   "ObjectName": "CurveTable NPC_Speech_Priorities",
                   "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
                 },
-                "RowName": "Tandem.Speech.Priority.OutfitReaction"
+                "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
               },
               "RegistryType": {
-                "Name": null
+                "Name": "None"
               }
             },
             "Weight": {
               "Value": 1.0,
               "Curve": {
                 "CurveTable": null,
-                "RowName": null
+                "RowName": "None"
               },
               "RegistryType": {
-                "Name": null
+                "Name": "None"
               }
             },
             "MetadataParameters": []
@@ -193,7 +161,7 @@
         "DefaultMessage": {
           "Namespace": "",
           "Key": "D6514D974D4B7CE95C01B49BB7E199F3",
-          "SourceString": "If you can't stand the <Hot>heat</>, stay outta the sauce."
+          "SourceString": "Ciao, Saucy."
         }
       },
       "OutputConnections": [

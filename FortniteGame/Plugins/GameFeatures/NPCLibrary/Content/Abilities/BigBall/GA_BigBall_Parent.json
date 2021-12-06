@@ -1,0 +1,1079 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GA_BigBall_Parent_C",
+    "Super": "GA_Athena_ActivePower_SpawnProjectile_Parent_C",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function GA_BigBall_Parent_C:ExecuteUbergraph_GA_BigBall_Parent",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/GA_BigBall_Parent.7"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass GA_Athena_ActivePower_SpawnProjectile_Parent_C",
+      "ObjectPath": "/Game/Athena/Items/Parents/Powers/ActivePowers/SpawnProjectile/GA_Athena_ActivePower_SpawnProjectile_Parent.0"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function GA_BigBall_Parent_C:K2_CanActivateAbility",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/GA_BigBall_Parent.10"
+      },
+      {
+        "ObjectName": "Function GA_BigBall_Parent_C:PowerSpawnProjectile",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/GA_BigBall_Parent.14"
+      },
+      {
+        "ObjectName": "Function GA_BigBall_Parent_C:Check Min Hold Time",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/GA_BigBall_Parent.4"
+      },
+      {
+        "ObjectName": "Function GA_BigBall_Parent_C:InitAbility",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/GA_BigBall_Parent.8"
+      },
+      {
+        "ObjectName": "Function GA_BigBall_Parent_C:Added_5B1EDCE74423F322A71731952E1E7F12",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/GA_BigBall_Parent.1"
+      },
+      {
+        "ObjectName": "Function GA_BigBall_Parent_C:Added_988AC5A44DDC11003C27929424B2B714",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/GA_BigBall_Parent.2"
+      },
+      {
+        "ObjectName": "Function GA_BigBall_Parent_C:OnSync_69E884E74D5F90935503A6B5BB942C59",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/GA_BigBall_Parent.13"
+      },
+      {
+        "ObjectName": "Function GA_BigBall_Parent_C:Released",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/GA_BigBall_Parent.15"
+      },
+      {
+        "ObjectName": "Function GA_BigBall_Parent_C:K2_OnEndAbility",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/GA_BigBall_Parent.11"
+      },
+      {
+        "ObjectName": "Function GA_BigBall_Parent_C:CustomEvent_1",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/GA_BigBall_Parent.5"
+      },
+      {
+        "ObjectName": "Function GA_BigBall_Parent_C:MulticastThrow",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/GA_BigBall_Parent.12"
+      },
+      {
+        "ObjectName": "Function GA_BigBall_Parent_C:CastMontageNotifyStart",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/GA_BigBall_Parent.3"
+      },
+      {
+        "ObjectName": "Function GA_BigBall_Parent_C:K2_ActivateAbility",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/GA_BigBall_Parent.9"
+      },
+      {
+        "ObjectName": "Function GA_BigBall_Parent_C:CustomEvent_2",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/GA_BigBall_Parent.6"
+      },
+      {
+        "ObjectName": "Function GA_BigBall_Parent_C:ExecuteUbergraph_GA_BigBall_Parent",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/GA_BigBall_Parent.7"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": 2097153,
+        "ElementSize": 16,
+        "PropertyFlags": 2105344,
+        "Struct": {
+          "ObjectName": "Class PointerToUberGraphFrame",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "FiringAllowed",
+        "Flags": 2097153,
+        "ElementSize": 1,
+        "PropertyFlags": 65541,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "InputReleased",
+        "Flags": 2097153,
+        "ElementSize": 1,
+        "PropertyFlags": 65541,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "T_OkToThrowNotify",
+        "Flags": 2097153,
+        "ElementSize": 12,
+        "PropertyFlags": 65541,
+        "Struct": {
+          "ObjectName": "Class GameplayTag",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "HoldStartTime",
+        "Flags": 2097153,
+        "ElementSize": 4,
+        "PropertyFlags": 65541
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "MinHoldTime",
+        "Flags": 2097153,
+        "ElementSize": 4,
+        "PropertyFlags": 65541
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_GA_BigBall_Parent": {
+        "ObjectName": "Function GA_BigBall_Parent_C:ExecuteUbergraph_GA_BigBall_Parent",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/GA_BigBall_Parent.7"
+      },
+      "CustomEvent_2": {
+        "ObjectName": "Function GA_BigBall_Parent_C:CustomEvent_2",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/GA_BigBall_Parent.6"
+      },
+      "K2_ActivateAbility": {
+        "ObjectName": "Function GA_BigBall_Parent_C:K2_ActivateAbility",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/GA_BigBall_Parent.9"
+      },
+      "CastMontageNotifyStart": {
+        "ObjectName": "Function GA_BigBall_Parent_C:CastMontageNotifyStart",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/GA_BigBall_Parent.3"
+      },
+      "MulticastThrow": {
+        "ObjectName": "Function GA_BigBall_Parent_C:MulticastThrow",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/GA_BigBall_Parent.12"
+      },
+      "CustomEvent_1": {
+        "ObjectName": "Function GA_BigBall_Parent_C:CustomEvent_1",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/GA_BigBall_Parent.5"
+      },
+      "K2_OnEndAbility": {
+        "ObjectName": "Function GA_BigBall_Parent_C:K2_OnEndAbility",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/GA_BigBall_Parent.11"
+      },
+      "Released": {
+        "ObjectName": "Function GA_BigBall_Parent_C:Released",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/GA_BigBall_Parent.15"
+      },
+      "OnSync_69E884E74D5F90935503A6B5BB942C59": {
+        "ObjectName": "Function GA_BigBall_Parent_C:OnSync_69E884E74D5F90935503A6B5BB942C59",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/GA_BigBall_Parent.13"
+      },
+      "Added_988AC5A44DDC11003C27929424B2B714": {
+        "ObjectName": "Function GA_BigBall_Parent_C:Added_988AC5A44DDC11003C27929424B2B714",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/GA_BigBall_Parent.2"
+      },
+      "Added_5B1EDCE74423F322A71731952E1E7F12": {
+        "ObjectName": "Function GA_BigBall_Parent_C:Added_5B1EDCE74423F322A71731952E1E7F12",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/GA_BigBall_Parent.1"
+      },
+      "InitAbility": {
+        "ObjectName": "Function GA_BigBall_Parent_C:InitAbility",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/GA_BigBall_Parent.8"
+      },
+      "Check Min Hold Time": {
+        "ObjectName": "Function GA_BigBall_Parent_C:Check Min Hold Time",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/GA_BigBall_Parent.4"
+      },
+      "PowerSpawnProjectile": {
+        "ObjectName": "Function GA_BigBall_Parent_C:PowerSpawnProjectile",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/GA_BigBall_Parent.14"
+      },
+      "K2_CanActivateAbility": {
+        "ObjectName": "Function GA_BigBall_Parent_C:K2_CanActivateAbility",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/GA_BigBall_Parent.10"
+      }
+    },
+    "ClassFlags": 8652816,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GA_BigBall_Parent_C Default__GA_BigBall_Parent_C",
+      "ObjectPath": "/NPCLibrary/Abilities/BigBall/GA_BigBall_Parent.16"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "Added_5B1EDCE74423F322A71731952E1E7F12",
+    "Outer": "GA_BigBall_Parent_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "Added_988AC5A44DDC11003C27929424B2B714",
+    "Outer": "GA_BigBall_Parent_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "CastMontageNotifyStart",
+    "Outer": "GA_BigBall_Parent_C",
+    "Super": "CastMontageNotifyStart",
+    "SuperStruct": {
+      "ObjectName": "Function GA_Athena_ActivePower_SpawnProjectile_Parent_C:CastMontageNotifyStart",
+      "ObjectPath": "/Game/Athena/Items/Parents/Powers/ActivePowers/SpawnProjectile/GA_Athena_ActivePower_SpawnProjectile_Parent.5"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "NotifyTag",
+        "Flags": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 148,
+        "Struct": {
+          "ObjectName": "Class GameplayTag",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      }
+    ],
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "Check Min Hold Time",
+    "Outer": "GA_BigBall_Parent_C",
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "Success",
+        "Flags": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 384,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "MinTimeRemaining",
+        "Flags": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 384
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetGameTimeInSeconds_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Subtract_FloatFloat_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Greater_FloatFloat_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Subtract_FloatFloat_ReturnValue_1",
+        "Flags": 1,
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": 205651968
+  },
+  {
+    "Type": "Function",
+    "Name": "CustomEvent_1",
+    "Outer": "GA_BigBall_Parent_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "CustomEvent_2",
+    "Outer": "GA_BigBall_Parent_C",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ProjectileSpawned",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "PropertyClass": {
+          "ObjectName": "Class FortProjectileBase",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      }
+    ],
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_GA_BigBall_Parent",
+    "Outer": "GA_BigBall_Parent_C",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": 1,
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class WaitGameplayTagDelegate__DelegateSignature",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_WaitGameplayTagAdd_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class AbilityTask_WaitGameplayTagAdded",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": 1,
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class WaitGameplayTagDelegate__DelegateSignature",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_WaitGameplayTagAdd_ReturnValue_1",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class AbilityTask_WaitGameplayTagAdded",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_2",
+        "Flags": 1,
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class NetworkSyncDelegate__DelegateSignature",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_WaitNetSync_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class AbilityTask_NetworkSyncPoint",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_HoldTime",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_2",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_bWasCancelled",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Check_Min_Hold_Time_Success",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Check_Min_Hold_Time_MinTimeRemaining",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_NotifyTag",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class GameplayTag",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_GameplayTag_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_ProjectileSpawned",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class FortProjectileBase",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_3",
+        "Flags": 1,
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Class TimerDynamicDelegate__DelegateSignature",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_4",
+        "Flags": 1,
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "Function GA_Athena_ActivePower_SpawnProjectile_Parent_C:OnProjectileSpawned__DelegateSignature",
+          "ObjectPath": "/Game/Athena/Items/Parents/Powers/ActivePowers/SpawnProjectile/GA_Athena_ActivePower_SpawnProjectile_Parent.15"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "Class TimerHandle",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": 8421377
+  },
+  {
+    "Type": "Function",
+    "Name": "InitAbility",
+    "Outer": "GA_BigBall_Parent_C",
+    "Super": "InitAbility",
+    "SuperStruct": {
+      "ObjectName": "Function GA_Athena_ActivePower_SpawnProjectile_Parent_C:InitAbility",
+      "ObjectPath": "/Game/Athena/Items/Parents/Powers/ActivePowers/SpawnProjectile/GA_Athena_ActivePower_SpawnProjectile_Parent.12"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetGameTimeInSeconds_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": 201457664
+  },
+  {
+    "Type": "Function",
+    "Name": "K2_ActivateAbility",
+    "Outer": "GA_BigBall_Parent_C",
+    "Super": "K2_ActivateAbility",
+    "SuperStruct": {
+      "ObjectName": "Function GA_Athena_ActivePower_StandardActivation_Parent_C:K2_ActivateAbility",
+      "ObjectPath": "/Game/Athena/Items/Parents/Powers/ActivePowers/Parents/GA_Athena_ActivePower_StandardActivation_Parent.11"
+    },
+    "FunctionFlags": 134744064
+  },
+  {
+    "Type": "Function",
+    "Name": "K2_CanActivateAbility",
+    "Outer": "GA_BigBall_Parent_C",
+    "Super": "K2_CanActivateAbility",
+    "SuperStruct": {
+      "ObjectName": "Function GA_Athena_ActivePower_Parent_C:K2_CanActivateAbility",
+      "ObjectPath": "/Game/Athena/Items/Parents/Powers/ActivePowers/Parents/GA_Athena_ActivePower_Parent.8"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "ActorInfo",
+        "Flags": 1,
+        "ElementSize": 80,
+        "PropertyFlags": 549755814036,
+        "Struct": {
+          "ObjectName": "Class GameplayAbilityActorInfo",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Handle",
+        "Flags": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 150,
+        "Struct": {
+          "ObjectName": "Class GameplayAbilitySpecHandle",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "RelevantTags",
+        "Flags": 1,
+        "ElementSize": 32,
+        "PropertyFlags": 384,
+        "Struct": {
+          "ObjectName": "Class GameplayTagContainer",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 1408,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_CanActivateAbility_RelevantTags",
+        "Flags": 1,
+        "ElementSize": 32,
+        "Struct": {
+          "ObjectName": "Class GameplayTagContainer",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_K2_CanActivateAbility_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 1288177664
+  },
+  {
+    "Type": "Function",
+    "Name": "K2_OnEndAbility",
+    "Outer": "GA_BigBall_Parent_C",
+    "Super": "K2_OnEndAbility",
+    "SuperStruct": {
+      "ObjectName": "Function GA_Athena_ActivePower_StandardActivation_Parent_C:K2_OnEndAbility",
+      "ObjectPath": "/Game/Athena/Items/Parents/Powers/ActivePowers/Parents/GA_Athena_ActivePower_StandardActivation_Parent.12"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bWasCancelled",
+        "Flags": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 148,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 134744064
+  },
+  {
+    "Type": "Function",
+    "Name": "MulticastThrow",
+    "Outer": "GA_BigBall_Parent_C",
+    "FunctionFlags": 201343168
+  },
+  {
+    "Type": "Function",
+    "Name": "OnSync_69E884E74D5F90935503A6B5BB942C59",
+    "Outer": "GA_BigBall_Parent_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "PowerSpawnProjectile",
+    "Outer": "GA_BigBall_Parent_C",
+    "Super": "PowerSpawnProjectile",
+    "SuperStruct": {
+      "ObjectName": "Function GA_Athena_ActivePower_SpawnProjectile_Parent_C:PowerSpawnProjectile",
+      "ObjectPath": "/Game/Athena/Items/Parents/Powers/ActivePowers/SpawnProjectile/GA_Athena_ActivePower_SpawnProjectile_Parent.17"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ProjectileSpawned",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 384,
+        "PropertyClass": {
+          "ObjectName": "Class FortProjectileBase",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_PowerSpawnProjectile_ProjectileSpawned",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class FortProjectileBase",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      }
+    ],
+    "FunctionFlags": 205651968
+  },
+  {
+    "Type": "Function",
+    "Name": "Released",
+    "Outer": "GA_BigBall_Parent_C",
+    "Super": "Released",
+    "SuperStruct": {
+      "ObjectName": "Function GA_Athena_ActivePower_StandardActivation_Parent_C:Released",
+      "ObjectPath": "/Game/Athena/Items/Parents/Powers/ActivePowers/Parents/GA_Athena_ActivePower_StandardActivation_Parent.18"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "HoldTime",
+        "Flags": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148
+      }
+    ],
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "GA_BigBall_Parent_C",
+    "Name": "Default__GA_BigBall_Parent_C",
+    "Template": "Default__GA_Athena_ActivePower_SpawnProjectile_Parent_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "T_OkToThrowNotify": {
+        "TagName": "Abilities.Generic.ActiveAbility.Activate"
+      },
+      "MinHoldTime": 0.3,
+      "ProjectileToSpawn": {
+        "ObjectName": "BlueprintGeneratedClass Prj_BigBall_C",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/Prj_BigBall.1"
+      },
+      "Row_ProjectileSpeed": {
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "CurveTable NPCLibrary_Abilities_Data",
+            "ObjectPath": "/NPCLibrary/DataTables/NPCLibrary_Abilities_Data.0"
+          },
+          "RowName": "Default.Abilities.BigBall.PrjSpeed"
+        }
+      },
+      "Row_ProjectileGravity": {
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "CurveTable NPCLibrary_Abilities_Data",
+            "ObjectPath": "/NPCLibrary/DataTables/NPCLibrary_Abilities_Data.0"
+          },
+          "RowName": "Default.Abilities.BigBall.PrjGrav"
+        }
+      },
+      "Row_SpawnPitchOffset": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "CurveTable NPCLibrary_Abilities_Data",
+            "ObjectPath": "/NPCLibrary/DataTables/NPCLibrary_Abilities_Data.0"
+          },
+          "RowName": "Default.Abilities.BigBall.PrjPitchOffset.04"
+        }
+      },
+      "Proj_SpawnWorldOffset": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 50.0
+      },
+      "UsesAdditionalExplosionContainer": true,
+      "ActivatesOnRelease": true,
+      "OnActivatedJumpToCastSection": true,
+      "GC_InputHeldLoop": {
+        "TagName": "GameplayCue.NPC.Abilities.BigBall.PrefireLoop"
+      },
+      "TestAlreadyReleased": false,
+      "CastMontage": {
+        "ObjectName": "AnimMontage Montage_BigBall",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/Anims/Montage_BigBall.0"
+      },
+      "CastMontageStartSection": "Default",
+      "EffectContainers": {
+        "ApplicationTag": {
+          "TagName": "Targeting.ApplicationTag.1"
+        },
+        "TargetSelection": {
+          "List": [
+            {
+              "Shape": "EFortTargetSelectionShape::Sphere",
+              "CustomShapeComponentName": "",
+              "TestType": "EFortTargetSelectionTestType::Overlap",
+              "PrimarySource": "EFortAbilityTargetingSource::PawnForward",
+              "SecondarySource": "EFortAbilityTargetingSource::Max_None",
+              "Range": {
+                "Value": 512.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "HalfExtents": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "bAlignShapeEdgeToSourceLocation": false,
+              "ConeYawAngle": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "ConePitchAngle": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "ConeMinRadius": {
+                "Value": 1.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "TargetFilter": {
+                "ActorTypeFilter": "EFortTargetSelectionFilter::Pawns",
+                "ActorClassFilter": null,
+                "bExcludeInstigator": true,
+                "bUseTrapsOwningPawnAsInstigator": false,
+                "bExcludeRequester": true,
+                "bExcludeAllAttachedToInstigator": false,
+                "bExcludeAthenaVehicleOfInstigator": false,
+                "bExcludeAllAttachedToRequester": false,
+                "bExcludePawnFriends": false,
+                "bExcludeFriendlyAI": false,
+                "bExcludeAllAI": false,
+                "bExcludePawnNeutrals": false,
+                "bExcludePawnEnemies": false,
+                "bExcludeNonPawnFriends": false,
+                "bExcludeNonPawnEnemies": false,
+                "bConsiderFriendlyFireWhenExcludingFriends": false,
+                "bExcludeDBNOPawns": false,
+                "bExcludeWaterVolumes": false,
+                "bExcludeWaterBodies": true,
+                "bExcludeAthenaVehicleOccupiedBySource": true,
+                "bExcludeAthenaVehicleUnoccupied": false,
+                "bExcludeAthenaVehicleOccupied": false,
+                "bExcludeAthenaVehicleFromObstructionChecks": true,
+                "bExcludeWithoutNavigationCorridor": false,
+                "bExcludeNonPlayerBuiltPieces": false,
+                "bExcludePlayerBuiltPieces": false,
+                "bExcludeNonBGABuildings": false,
+                "bExcludeNonBlockingHits": false,
+                "bExcludeProjectiles": false,
+                "bTraceComplexCollision": false,
+                "bExcludeLandscape": true,
+                "bConsiderPhysicsPawnsAsNonPlayerPawns": true,
+                "ExclusionGameplayTags": [
+                  "Athena.Item.Snowman",
+                  "Athena.Item.Bush"
+                ]
+              },
+              "bExcludeObstructedByWorld": true,
+              "bShouldAttachedActorsObstructTarget": false,
+              "bCreateHitResultWhenNoTargetsFound": false,
+              "bUseProjectileRotationForDamageZones": false,
+              "TargetSelectionUsage": "EFortAbilityTargetSelectionUsage::BothTargetingAndCanHit",
+              "MaxTargets": 12
+            }
+          ]
+        },
+        "TargetGameplayEffectClasses": [
+          {
+            "ObjectName": "BlueprintGeneratedClass GE_BigBall_ExplodePawns_C",
+            "ObjectPath": "/NPCLibrary/Abilities/BigBall/GE_BigBall_ExplodePawns.0"
+          },
+          {
+            "ObjectName": "BlueprintGeneratedClass GE_Impulse_C",
+            "ObjectPath": "/Game/Abilities/Weapons/Ranged/GE_Impulse.0"
+          },
+          {
+            "ObjectName": "BlueprintGeneratedClass GE_BigBall_KnockBack_C",
+            "ObjectPath": "/NPCLibrary/Abilities/BigBall/GE_BigBall_KnockBack.0"
+          }
+        ]
+      },
+      "EffectContainers": {
+        "ApplicationTag": {
+          "TagName": "Targeting.ApplicationTag.2"
+        },
+        "TargetSelection": {
+          "List": [
+            {
+              "Shape": "EFortTargetSelectionShape::Sphere",
+              "CustomShapeComponentName": "",
+              "TestType": "EFortTargetSelectionTestType::Overlap",
+              "PrimarySource": "EFortAbilityTargetingSource::PawnForward",
+              "SecondarySource": "EFortAbilityTargetingSource::Max_None",
+              "Range": {
+                "Value": 512.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "HalfExtents": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "bAlignShapeEdgeToSourceLocation": false,
+              "ConeYawAngle": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "ConePitchAngle": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "ConeMinRadius": {
+                "Value": 1.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "TargetFilter": {
+                "ActorTypeFilter": "EFortTargetSelectionFilter::Damageable",
+                "ActorClassFilter": null,
+                "bExcludeInstigator": true,
+                "bUseTrapsOwningPawnAsInstigator": false,
+                "bExcludeRequester": true,
+                "bExcludeAllAttachedToInstigator": false,
+                "bExcludeAthenaVehicleOfInstigator": false,
+                "bExcludeAllAttachedToRequester": false,
+                "bExcludePawnFriends": false,
+                "bExcludeFriendlyAI": false,
+                "bExcludeAllAI": false,
+                "bExcludePawnNeutrals": false,
+                "bExcludePawnEnemies": false,
+                "bExcludeNonPawnFriends": false,
+                "bExcludeNonPawnEnemies": false,
+                "bConsiderFriendlyFireWhenExcludingFriends": false,
+                "bExcludeDBNOPawns": false,
+                "bExcludeWaterVolumes": false,
+                "bExcludeWaterBodies": true,
+                "bExcludeAthenaVehicleOccupiedBySource": true,
+                "bExcludeAthenaVehicleUnoccupied": false,
+                "bExcludeAthenaVehicleOccupied": false,
+                "bExcludeAthenaVehicleFromObstructionChecks": false,
+                "bExcludeWithoutNavigationCorridor": false,
+                "bExcludeNonPlayerBuiltPieces": false,
+                "bExcludePlayerBuiltPieces": false,
+                "bExcludeNonBGABuildings": false,
+                "bExcludeNonBlockingHits": false,
+                "bExcludeProjectiles": false,
+                "bTraceComplexCollision": false,
+                "bExcludeLandscape": true,
+                "bConsiderPhysicsPawnsAsNonPlayerPawns": true,
+                "ExclusionGameplayTags": [
+                  "Athena.Item.Snowman",
+                  "Athena.Item.Bush"
+                ]
+              },
+              "bExcludeObstructedByWorld": false,
+              "bShouldAttachedActorsObstructTarget": false,
+              "bCreateHitResultWhenNoTargetsFound": false,
+              "bUseProjectileRotationForDamageZones": false,
+              "TargetSelectionUsage": "EFortAbilityTargetSelectionUsage::BothTargetingAndCanHit",
+              "MaxTargets": 12
+            }
+          ]
+        },
+        "TargetGameplayEffectClasses": [
+          {
+            "ObjectName": "BlueprintGeneratedClass GE_BigBall_ExplodeEnvironment_C",
+            "ObjectPath": "/NPCLibrary/Abilities/BigBall/GE_BigBall_ExplodeEnvironment.0"
+          },
+          {
+            "ObjectName": "BlueprintGeneratedClass GE_Impulse_C",
+            "ObjectPath": "/Game/Abilities/Weapons/Ranged/GE_Impulse.0"
+          },
+          {
+            "ObjectName": "BlueprintGeneratedClass GE_BigBall_KnockBack_C",
+            "ObjectPath": "/NPCLibrary/Abilities/BigBall/GE_BigBall_KnockBack.0"
+          }
+        ]
+      },
+      "ExplicitCooldownDuration": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "CurveTable NPCLibrary_Abilities_Data",
+            "ObjectPath": "/NPCLibrary/DataTables/NPCLibrary_Abilities_Data.0"
+          },
+          "RowName": "Default.Abilities.BigBall.Cooldown"
+        }
+      },
+      "ExplicitCooldownTags": [
+        "NPCLibrary.Abilities.BigBall.Cooldown"
+      ],
+      "bStopsAIBehaviorLogic": true,
+      "bStopsAIMovement": true,
+      "AbilityTags": [
+        "Gameplay.Action.Player.Medium",
+        "NPCLibrary.Abilities.BigBall"
+      ],
+      "ActivationOwnedTags": [
+        "NPCLibrary.Abilities.BigBall"
+      ],
+      "ActivationBlockedTags": [
+        "Gameplay.Action.Player.AthenaInVehicle",
+        "Granted.Athena.EnvItem.HidingProp.HidingInProp",
+        "Granted.Athena.EnvItem.HidingProp.GettingInProp",
+        "Gameplay.Action.Player.Emote"
+      ]
+    }
+  }
+]

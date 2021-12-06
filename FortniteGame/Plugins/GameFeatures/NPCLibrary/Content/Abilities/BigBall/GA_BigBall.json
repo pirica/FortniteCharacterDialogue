@@ -1,0 +1,463 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GA_BigBall_C",
+    "Super": "GA_BigBall_Parent_C",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function GA_BigBall_C:ExecuteUbergraph_GA_BigBall",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/GA_BigBall.1"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass GA_BigBall_Parent_C",
+      "ObjectPath": "/NPCLibrary/Abilities/BigBall/GA_BigBall_Parent.0"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function GA_BigBall_C:UpdateProjectilePitchFromDistance",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/GA_BigBall.3"
+      },
+      {
+        "ObjectName": "Function GA_BigBall_C:K2_ActivateAbility",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/GA_BigBall.2"
+      },
+      {
+        "ObjectName": "Function GA_BigBall_C:ExecuteUbergraph_GA_BigBall",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/GA_BigBall.1"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": 2097153,
+        "ElementSize": 16,
+        "PropertyFlags": 2105344,
+        "Struct": {
+          "ObjectName": "Class PointerToUberGraphFrame",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "HoldDuration",
+        "Flags": 2097153,
+        "ElementSize": 4,
+        "PropertyFlags": 65541
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "SF_HoldDuration",
+        "Flags": 2097153,
+        "ElementSize": 56,
+        "PropertyFlags": 65541,
+        "Struct": {
+          "ObjectName": "Class ScalableFloat",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "GoalTargetKeyname",
+        "Flags": 2097153,
+        "ElementSize": 12,
+        "PropertyFlags": 65541
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "DistancesToTarget",
+        "Flags": 2097153,
+        "ElementSize": 16,
+        "PropertyFlags": 65541,
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "DistancesToTarget",
+          "Flags": 1,
+          "ElementSize": 56,
+          "Struct": {
+            "ObjectName": "Class ScalableFloat",
+            "ObjectPath": "/Script/GameplayAbilities"
+          }
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "PitchAdjustmentsRelatedtoTarget",
+        "Flags": 2097153,
+        "ElementSize": 16,
+        "PropertyFlags": 65541,
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "PitchAdjustmentsRelatedtoTarget",
+          "Flags": 1,
+          "ElementSize": 56,
+          "Struct": {
+            "ObjectName": "Class ScalableFloat",
+            "ObjectPath": "/Script/GameplayAbilities"
+          }
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_GA_BigBall": {
+        "ObjectName": "Function GA_BigBall_C:ExecuteUbergraph_GA_BigBall",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/GA_BigBall.1"
+      },
+      "K2_ActivateAbility": {
+        "ObjectName": "Function GA_BigBall_C:K2_ActivateAbility",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/GA_BigBall.2"
+      },
+      "UpdateProjectilePitchFromDistance": {
+        "ObjectName": "Function GA_BigBall_C:UpdateProjectilePitchFromDistance",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/GA_BigBall.3"
+      }
+    },
+    "ClassFlags": 8652816,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GA_BigBall_C Default__GA_BigBall_C",
+      "ObjectPath": "/NPCLibrary/Abilities/BigBall/GA_BigBall.4"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_GA_BigBall",
+    "Outer": "GA_BigBall_C",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetValueAtLevel_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetAvatarActorFromActorInfo_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class Actor",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetBlackboard_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "PropertyClass": {
+          "ObjectName": "Class BlackboardComponent",
+          "ObjectPath": "/Script/AIModule"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetValueAsObject_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class Object",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsFort_Pawn",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class FortPawn",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetActorLocation_ReturnValue_1",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_DistanceBetweenTwoVectors_Distance",
+        "Flags": 1,
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": 32769
+  },
+  {
+    "Type": "Function",
+    "Name": "K2_ActivateAbility",
+    "Outer": "GA_BigBall_C",
+    "Super": "K2_ActivateAbility",
+    "SuperStruct": {
+      "ObjectName": "Function GA_BigBall_Parent_C:K2_ActivateAbility",
+      "ObjectPath": "/NPCLibrary/Abilities/BigBall/GA_BigBall_Parent.9"
+    },
+    "FunctionFlags": 134744064
+  },
+  {
+    "Type": "Function",
+    "Name": "UpdateProjectilePitchFromDistance",
+    "Outer": "GA_BigBall_C",
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "Distance",
+        "Flags": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": 1,
+        "ElementSize": 56,
+        "Struct": {
+          "ObjectName": "Class ScalableFloat",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Array_Get_Item_1",
+        "Flags": 1,
+        "ElementSize": 56,
+        "Struct": {
+          "ObjectName": "Class ScalableFloat",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetValueAtLevel_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_LessEqual_FloatFloat_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 209846272
+  },
+  {
+    "Type": "GA_BigBall_C",
+    "Name": "Default__GA_BigBall_C",
+    "Template": "Default__GA_BigBall_Parent_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "HoldDuration": 2.25,
+      "SF_HoldDuration": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "CurveTable NPCLibrary_Abilities_Data",
+            "ObjectPath": "/NPCLibrary/DataTables/NPCLibrary_Abilities_Data.0"
+          },
+          "RowName": "Default.Abilities.BigBall.HoldTime"
+        },
+        "RegistryType": {
+          "Name": "None"
+        }
+      },
+      "GoalTargetKeyname": "AIEvaluator_Global_TargetActor",
+      "DistancesToTarget": [
+        {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable NPCLibrary_Abilities_Data",
+              "ObjectPath": "/NPCLibrary/DataTables/NPCLibrary_Abilities_Data.0"
+            },
+            "RowName": "Default.Abilities.BigBall.PrjDistanceToTarget.01"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable NPCLibrary_Abilities_Data",
+              "ObjectPath": "/NPCLibrary/DataTables/NPCLibrary_Abilities_Data.0"
+            },
+            "RowName": "Default.Abilities.BigBall.PrjDistanceToTarget.02"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable NPCLibrary_Abilities_Data",
+              "ObjectPath": "/NPCLibrary/DataTables/NPCLibrary_Abilities_Data.0"
+            },
+            "RowName": "Default.Abilities.BigBall.PrjDistanceToTarget.03"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable NPCLibrary_Abilities_Data",
+              "ObjectPath": "/NPCLibrary/DataTables/NPCLibrary_Abilities_Data.0"
+            },
+            "RowName": "Default.Abilities.BigBall.PrjDistanceToTarget.04"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        }
+      ],
+      "PitchAdjustmentsRelatedtoTarget": [
+        {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable NPCLibrary_Abilities_Data",
+              "ObjectPath": "/NPCLibrary/DataTables/NPCLibrary_Abilities_Data.0"
+            },
+            "RowName": "Default.Abilities.BigBall.PrjPitchOffset.01"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable NPCLibrary_Abilities_Data",
+              "ObjectPath": "/NPCLibrary/DataTables/NPCLibrary_Abilities_Data.0"
+            },
+            "RowName": "Default.Abilities.BigBall.PrjPitchOffset.02"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable NPCLibrary_Abilities_Data",
+              "ObjectPath": "/NPCLibrary/DataTables/NPCLibrary_Abilities_Data.0"
+            },
+            "RowName": "Default.Abilities.BigBall.PrjPitchOffset.03"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable NPCLibrary_Abilities_Data",
+              "ObjectPath": "/NPCLibrary/DataTables/NPCLibrary_Abilities_Data.0"
+            },
+            "RowName": "Default.Abilities.BigBall.PrjPitchOffset.04"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        }
+      ],
+      "bStartWithCooldown": true
+    }
+  }
+]

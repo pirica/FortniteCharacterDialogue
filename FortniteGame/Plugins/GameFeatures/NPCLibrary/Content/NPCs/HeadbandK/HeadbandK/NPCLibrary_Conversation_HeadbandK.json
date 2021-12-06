@@ -1,0 +1,125 @@
+[
+  {
+    "Type": "ConversationDatabase",
+    "Name": "NPCLibrary_Conversation_HeadbandK",
+    "Properties": {
+      "CompilerVersion": 2,
+      "ReachableNodeMap": {},
+      "EntryTags": [
+        {
+          "EntryTag": {
+            "TagName": "Conversation.Entry.HeadbandK"
+          },
+          "DestinationList": [
+            "7A781621-479F148B-671F378C-A57AC566"
+          ]
+        }
+      ],
+      "ExitTags": [
+        "Conversation.Entry.BasicServices",
+        "Conversation.Entry.NPCLibrary.Quests"
+      ],
+      "InternalNodeIds": [
+        "7A781621-479F148B-671F378C-A57AC566",
+        "CFB1CF82-444B6038-2F4A5BB9-89BC722F",
+        "4170792A-41A8BA54-272007B4-FFE45A28",
+        "EAD5CCC4-431A4B6B-F750E9A2-26E90754"
+      ],
+      "Speakers": [
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.Player"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.406108,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "FF00ABFF"
+          }
+        },
+        {
+          "FallbackName": {
+            "CultureInvariantString": null
+          },
+          "ParticipantName": {
+            "TagName": "Conversation.Participant.NPC"
+          },
+          "NodeTint": {
+            "R": 0.0,
+            "G": 0.065123,
+            "B": 0.1875,
+            "A": 1.0,
+            "Hex": "FF004878"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ConversationEntryPointNode",
+    "Name": "ConversationEntryPointNode_7",
+    "Outer": "NPCLibrary_Conversation_HeadbandK",
+    "Properties": {
+      "EntryTag": {
+        "TagName": "Conversation.Entry.HeadbandK"
+      },
+      "OutputConnections": [
+        "CFB1CF82-444B6038-2F4A5BB9-89BC722F"
+      ],
+      "Compiled_NodeGUID": "7A781621-479F148B-671F378C-A57AC566"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_0",
+    "Outer": "NPCLibrary_Conversation_HeadbandK",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.BasicServices"
+      },
+      "Compiled_NodeGUID": "4170792A-41A8BA54-272007B4-FFE45A28"
+    }
+  },
+  {
+    "Type": "ConversationLinkNode",
+    "Name": "ConversationLinkNode_1",
+    "Outer": "NPCLibrary_Conversation_HeadbandK",
+    "Properties": {
+      "RemoteEntryTag": {
+        "TagName": "Conversation.Entry.NPCLibrary.Quests"
+      },
+      "Compiled_NodeGUID": "EAD5CCC4-431A4B6B-F750E9A2-26E90754"
+    }
+  },
+  {
+    "Type": "Speech_C",
+    "Name": "Speech_C_4",
+    "Outer": "NPCLibrary_Conversation_HeadbandK",
+    "Template": "Default__Speech_C",
+    "Properties": {
+      "SpeakerTag": {
+        "TagName": "Conversation.Participant.NPC"
+      },
+      "ListenerTag": {
+        "TagName": "Conversation.Participant.Player"
+      },
+      "GeneralConfig": {
+        "DefaultMessage": {
+          "Namespace": "",
+          "Key": "22825F9D4BD172548D2BD4B84B2EC953",
+          "SourceString": "Hello, I am HeadbandK."
+        }
+      },
+      "OutputConnections": [
+        "EAD5CCC4-431A4B6B-F750E9A2-26E90754",
+        "4170792A-41A8BA54-272007B4-FFE45A28"
+      ],
+      "NodeName": "",
+      "Compiled_NodeGUID": "CFB1CF82-444B6038-2F4A5BB9-89BC722F"
+    }
+  }
+]

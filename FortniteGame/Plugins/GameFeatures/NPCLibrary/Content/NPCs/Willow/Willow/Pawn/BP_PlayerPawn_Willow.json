@@ -1,5 +1,292 @@
 [
   {
+    "Type": "AudioComponent",
+    "Name": "FeedbackAudioComp0",
+    "Outer": "Default__BP_PlayerPawn_Willow_C",
+    "Template": "FeedbackAudioComp0",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent Default__BP_PlayerPawn_Willow_C:CollisionCylinder",
+        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.4"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "InAirAudioComp",
+    "Outer": "Default__BP_PlayerPawn_Willow_C",
+    "Template": "InAirAudioComp",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "FortPooledSkelMeshComponent Default__BP_PlayerPawn_Willow_C:CharacterMesh0",
+        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.11"
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_PlayerPawn_Willow_C",
+    "Super": "BP_PlayerPawn_Tandem_C",
+    "Properties": {
+      "bHasCookedComponentInstancingData": true,
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript BP_PlayerPawn_Willow_C:SimpleConstructionScript_0",
+        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.25"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler BP_PlayerPawn_Willow_C:InheritableComponentHandler",
+        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.16"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function BP_PlayerPawn_Willow_C:ExecuteUbergraph_BP_PlayerPawn_Willow",
+        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.13"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass BP_PlayerPawn_Tandem_C",
+      "ObjectPath": "/Game/Athena/AI/NPCs/Tandem/Base/Pawns/BP_PlayerPawn_Tandem.2"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function BP_PlayerPawn_Willow_C:ReceiveBeginPlay",
+        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.14"
+      },
+      {
+        "ObjectName": "Function BP_PlayerPawn_Willow_C:ValidateTimeOfDay",
+        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.15"
+      },
+      {
+        "ObjectName": "Function BP_PlayerPawn_Willow_C:ExecuteUbergraph_BP_PlayerPawn_Willow",
+        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.13"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": 2097153,
+        "ElementSize": 16,
+        "PropertyFlags": 2105344,
+        "Struct": {
+          "ObjectName": "Class PointerToUberGraphFrame",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_PlayerPawn_Willow": {
+        "ObjectName": "Function BP_PlayerPawn_Willow_C:ExecuteUbergraph_BP_PlayerPawn_Willow",
+        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.13"
+      },
+      "ValidateTimeOfDay": {
+        "ObjectName": "Function BP_PlayerPawn_Willow_C:ValidateTimeOfDay",
+        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.15"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function BP_PlayerPawn_Willow_C:ReceiveBeginPlay",
+        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.14"
+      }
+    },
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_PlayerPawn_Willow_C Default__BP_PlayerPawn_Willow_C",
+      "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BP_PlayerPawn_Willow_C",
+    "Name": "Default__BP_PlayerPawn_Willow_C",
+    "Template": "Default__BP_PlayerPawn_Tandem_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "InAirAudioComp": {
+        "ObjectName": "AudioComponent Default__BP_PlayerPawn_Willow_C:InAirAudioComp",
+        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.1"
+      },
+      "PSC_PlayerWalkLand": {
+        "ObjectName": "ParticleSystemComponent Default__BP_PlayerPawn_Willow_C:PlayerWalkLandFX",
+        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.22"
+      },
+      "PSC_PlayerRunLand": {
+        "ObjectName": "ParticleSystemComponent Default__BP_PlayerPawn_Willow_C:PlayerRunLandFX",
+        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.20"
+      },
+      "PSC_PlayerSlideLand": {
+        "ObjectName": "ParticleSystemComponent Default__BP_PlayerPawn_Willow_C:PlayerSlideLandFX",
+        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.21"
+      },
+      "PSC_HitDamage": {
+        "ObjectName": "ParticleSystemComponent Default__BP_PlayerPawn_Willow_C:HitDamageFX",
+        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.17"
+      },
+      "TetherComponent": {
+        "ObjectName": "FortPawnComponent_Tether Default__BP_PlayerPawn_Willow_C:TetherComp",
+        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.10"
+      },
+      "PSC_PlayerInWater": {
+        "ObjectName": "ParticleSystemComponent Default__BP_PlayerPawn_Willow_C:PlayerInWaterFX",
+        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.18"
+      },
+      "PSC_PlayerInWaterSurfaceSwimming": {
+        "ObjectName": "ParticleSystemComponent Default__BP_PlayerPawn_Willow_C:PlayerInWaterSurfaceSwimmingFX",
+        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.19"
+      },
+      "ConvertComponent": {
+        "ObjectName": "FortPawnComponent_Convert Default__BP_PlayerPawn_Willow_C:ConvertComp",
+        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.9"
+      },
+      "AffiliationComponent": {
+        "ObjectName": "FortActorComponent_Affiliation Default__BP_PlayerPawn_Willow_C:AffiliationComponent",
+        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.5"
+      },
+      "SoundIndicatorComponent": {
+        "ObjectName": "FortSoundIndicatorComponent Default__BP_PlayerPawn_Willow_C:SoundIndicatorComponent",
+        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.12"
+      },
+      "FortFootstepComponent": {
+        "ObjectName": "FortFootstepComponent Default__BP_PlayerPawn_Willow_C:FortFootstepComp",
+        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.6"
+      },
+      "VocalChords": [
+        {
+          "FeedbackAudioComponent": {
+            "ObjectName": "AudioComponent Default__BP_PlayerPawn_Willow_C:FeedbackAudioComp0",
+            "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.0"
+          },
+          "ReplicatedSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          },
+          "PendingSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          },
+          "QueuedSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          },
+          "CurrentSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          }
+        }
+      ],
+      "Mesh": {
+        "ObjectName": "FortPooledSkelMeshComponent Default__BP_PlayerPawn_Willow_C:CharacterMesh0",
+        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.11"
+      },
+      "CharacterMovement": {
+        "ObjectName": "FortMovementComp_CharacterAthena Default__BP_PlayerPawn_Willow_C:CharMoveComp",
+        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.8"
+      },
+      "CapsuleComponent": {
+        "ObjectName": "CapsuleComponent Default__BP_PlayerPawn_Willow_C:CollisionCylinder",
+        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.4"
+      },
+      "RootComponent": {
+        "ObjectName": "CapsuleComponent Default__BP_PlayerPawn_Willow_C:CollisionCylinder",
+        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.4"
+      }
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "CollisionCylinder",
+    "Outer": "Default__BP_PlayerPawn_Willow_C",
+    "Template": "CollisionCylinder"
+  },
+  {
+    "Type": "FortActorComponent_Affiliation",
+    "Name": "AffiliationComponent",
+    "Outer": "Default__BP_PlayerPawn_Willow_C",
+    "Template": "AffiliationComponent"
+  },
+  {
+    "Type": "FortFootstepComponent",
+    "Name": "FortFootstepComp",
+    "Outer": "Default__BP_PlayerPawn_Willow_C",
+    "Template": "FortFootstepComp"
+  },
+  {
+    "Type": "FortGenericDataStoreManagerComponent",
+    "Name": "GeneralDataStore",
+    "Outer": "Default__BP_PlayerPawn_Willow_C",
+    "Template": "GeneralDataStore"
+  },
+  {
+    "Type": "FortMovementComp_CharacterAthena",
+    "Name": "CharMoveComp",
+    "Outer": "Default__BP_PlayerPawn_Willow_C",
+    "Template": "CharMoveComp"
+  },
+  {
+    "Type": "FortPawnComponent_Convert",
+    "Name": "ConvertComp",
+    "Outer": "Default__BP_PlayerPawn_Willow_C",
+    "Template": "ConvertComp"
+  },
+  {
+    "Type": "FortPawnComponent_Tether",
+    "Name": "TetherComp",
+    "Outer": "Default__BP_PlayerPawn_Willow_C",
+    "Template": "TetherComp"
+  },
+  {
+    "Type": "FortPooledSkelMeshComponent",
+    "Name": "CharacterMesh0",
+    "Outer": "Default__BP_PlayerPawn_Willow_C",
+    "Template": "CharacterMesh0",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent Default__BP_PlayerPawn_Willow_C:CollisionCylinder",
+        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.4"
+      }
+    }
+  },
+  {
+    "Type": "FortSoundIndicatorComponent",
+    "Name": "SoundIndicatorComponent",
+    "Outer": "Default__BP_PlayerPawn_Willow_C",
+    "Template": "SoundIndicatorComponent"
+  },
+  {
     "Type": "Function",
     "Name": "ExecuteUbergraph_BP_PlayerPawn_Willow",
     "Outer": "BP_PlayerPawn_Willow_C",
@@ -82,208 +369,20 @@
   },
   {
     "Type": "Function",
-    "Name": "ValidateTimeOfDay",
-    "Outer": "BP_PlayerPawn_Willow_C",
-    "FunctionFlags": 201326592
-  },
-  {
-    "Type": "Function",
     "Name": "ReceiveBeginPlay",
     "Outer": "BP_PlayerPawn_Willow_C",
     "Super": "ReceiveBeginPlay",
     "SuperStruct": {
       "ObjectName": "Function BP_PlayerPawn_NonParticipant_C:ReceiveBeginPlay",
-      "ObjectPath": "/Game/Athena/AI/NPCs/Base/BP_PlayerPawn_NonParticipant.20"
+      "ObjectPath": "/Game/Athena/AI/NPCs/Base/BP_PlayerPawn_NonParticipant.44"
     },
     "FunctionFlags": 134744064
   },
   {
-    "Type": "BlueprintGeneratedClass",
-    "Name": "BP_PlayerPawn_Willow_C",
-    "Super": "BP_PlayerPawn_Tandem_C",
-    "Properties": {
-      "bHasCookedComponentInstancingData": true,
-      "SimpleConstructionScript": {
-        "ObjectName": "SimpleConstructionScript BP_PlayerPawn_Willow_C:SimpleConstructionScript_0",
-        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.24"
-      },
-      "InheritableComponentHandler": {
-        "ObjectName": "InheritableComponentHandler BP_PlayerPawn_Willow_C:InheritableComponentHandler",
-        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.15"
-      },
-      "UberGraphFunction": {
-        "ObjectName": "Function BP_PlayerPawn_Willow_C:ExecuteUbergraph_BP_PlayerPawn_Willow",
-        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.0"
-      }
-    },
-    "SuperStruct": {
-      "ObjectName": "BlueprintGeneratedClass BP_PlayerPawn_Tandem_C",
-      "ObjectPath": "/Game/Athena/AI/NPCs/Tandem/Base/Pawns/BP_PlayerPawn_Tandem.0"
-    },
-    "Children": [
-      {
-        "ObjectName": "Function BP_PlayerPawn_Willow_C:ReceiveBeginPlay",
-        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.2"
-      },
-      {
-        "ObjectName": "Function BP_PlayerPawn_Willow_C:ValidateTimeOfDay",
-        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.1"
-      },
-      {
-        "ObjectName": "Function BP_PlayerPawn_Willow_C:ExecuteUbergraph_BP_PlayerPawn_Willow",
-        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.0"
-      }
-    ],
-    "ChildProperties": [
-      {
-        "Type": "StructProperty",
-        "Name": "UberGraphFrame",
-        "Flags": 2097153,
-        "ElementSize": 16,
-        "PropertyFlags": 2105344,
-        "Struct": {
-          "ObjectName": "Class PointerToUberGraphFrame",
-          "ObjectPath": "/Script/Engine"
-        }
-      }
-    ],
-    "FuncMap": {
-      "ExecuteUbergraph_BP_PlayerPawn_Willow": {
-        "ObjectName": "Function BP_PlayerPawn_Willow_C:ExecuteUbergraph_BP_PlayerPawn_Willow",
-        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.0"
-      },
-      "ValidateTimeOfDay": {
-        "ObjectName": "Function BP_PlayerPawn_Willow_C:ValidateTimeOfDay",
-        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.1"
-      },
-      "ReceiveBeginPlay": {
-        "ObjectName": "Function BP_PlayerPawn_Willow_C:ReceiveBeginPlay",
-        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.2"
-      }
-    },
-    "ClassFlags": 8652820,
-    "ClassWithin": {
-      "ObjectName": "Class Object",
-      "ObjectPath": "/Script/CoreUObject"
-    },
-    "ClassConfigName": "Game",
-    "ClassGeneratedBy": null,
-    "Interfaces": [],
-    "bCooked": true,
-    "ClassDefaultObject": {
-      "ObjectName": "BP_PlayerPawn_Willow_C Default__BP_PlayerPawn_Willow_C",
-      "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.4"
-    }
-  },
-  {
-    "Type": "BP_PlayerPawn_Willow_C",
-    "Name": "Default__BP_PlayerPawn_Willow_C",
-    "Template": "Default__BP_PlayerPawn_Tandem_C",
-    "Properties": {
-      "UberGraphFrame": {},
-      "InAirAudioComp": {
-        "ObjectName": "AudioComponent Default__BP_PlayerPawn_Willow_C:InAirAudioComp",
-        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.6"
-      },
-      "PSC_PlayerWalkLand": {
-        "ObjectName": "ParticleSystemComponent Default__BP_PlayerPawn_Willow_C:PlayerWalkLandFX",
-        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.21"
-      },
-      "PSC_PlayerRunLand": {
-        "ObjectName": "ParticleSystemComponent Default__BP_PlayerPawn_Willow_C:PlayerRunLandFX",
-        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.19"
-      },
-      "PSC_PlayerSlideLand": {
-        "ObjectName": "ParticleSystemComponent Default__BP_PlayerPawn_Willow_C:PlayerSlideLandFX",
-        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.20"
-      },
-      "PSC_HitDamage": {
-        "ObjectName": "ParticleSystemComponent Default__BP_PlayerPawn_Willow_C:HitDamageFX",
-        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.16"
-      },
-      "AffiliationComponent": {
-        "ObjectName": "FortPawnComponent_Convert Default__BP_PlayerPawn_Willow_C:ConvertComp",
-        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.11"
-      }
-    }
-  },
-  {
-    "Type": "AudioComponent",
-    "Name": "FeedbackAudioComp0",
-    "Outer": "Default__BP_PlayerPawn_Willow_C",
-    "Template": "FeedbackAudioComp0",
-    "Properties": {
-      "AttachParent": {
-        "ObjectName": "CapsuleComponent Default__BP_PlayerPawn_Willow_C:CollisionCylinder",
-        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.7"
-      }
-    }
-  },
-  {
-    "Type": "AudioComponent",
-    "Name": "InAirAudioComp",
-    "Outer": "Default__BP_PlayerPawn_Willow_C",
-    "Template": "InAirAudioComp",
-    "Properties": {
-      "AttachParent": {
-        "ObjectName": "FortPooledSkelMeshComponent Default__BP_PlayerPawn_Willow_C:CharacterMesh0",
-        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.13"
-      }
-    }
-  },
-  {
-    "Type": "CapsuleComponent",
-    "Name": "CollisionCylinder",
-    "Outer": "Default__BP_PlayerPawn_Willow_C",
-    "Template": "CollisionCylinder"
-  },
-  {
-    "Type": "FortActorComponent_Affiliation",
-    "Name": "AffiliationComponent",
-    "Outer": "Default__BP_PlayerPawn_Willow_C",
-    "Template": "AffiliationComponent"
-  },
-  {
-    "Type": "FortGenericDataStoreManagerComponent",
-    "Name": "GeneralDataStore",
-    "Outer": "Default__BP_PlayerPawn_Willow_C",
-    "Template": "GeneralDataStore"
-  },
-  {
-    "Type": "FortMovementComp_CharacterAthena",
-    "Name": "CharMoveComp",
-    "Outer": "Default__BP_PlayerPawn_Willow_C",
-    "Template": "CharMoveComp"
-  },
-  {
-    "Type": "FortPawnComponent_Convert",
-    "Name": "ConvertComp",
-    "Outer": "Default__BP_PlayerPawn_Willow_C",
-    "Template": "ConvertComp"
-  },
-  {
-    "Type": "FortPawnComponent_Tether",
-    "Name": "TetherComp",
-    "Outer": "Default__BP_PlayerPawn_Willow_C",
-    "Template": "TetherComp"
-  },
-  {
-    "Type": "FortPooledSkelMeshComponent",
-    "Name": "CharacterMesh0",
-    "Outer": "Default__BP_PlayerPawn_Willow_C",
-    "Template": "CharacterMesh0",
-    "Properties": {
-      "AttachParent": {
-        "ObjectName": "CapsuleComponent Default__BP_PlayerPawn_Willow_C:CollisionCylinder",
-        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.7"
-      }
-    }
-  },
-  {
-    "Type": "FortSoundIndicatorComponent",
-    "Name": "SoundIndicatorComponent",
-    "Outer": "Default__BP_PlayerPawn_Willow_C",
-    "Template": "SoundIndicatorComponent"
+    "Type": "Function",
+    "Name": "ValidateTimeOfDay",
+    "Outer": "BP_PlayerPawn_Willow_C",
+    "FunctionFlags": 201326592
   },
   {
     "Type": "InheritableComponentHandler",
@@ -298,11 +397,11 @@
     "Properties": {
       "AutoAttachParent": {
         "ObjectName": "CapsuleComponent Default__BP_PlayerPawn_Willow_C:CollisionCylinder",
-        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.7"
+        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.4"
       },
       "AttachParent": {
         "ObjectName": "CapsuleComponent Default__BP_PlayerPawn_Willow_C:CollisionCylinder",
-        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.7"
+        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.4"
       }
     }
   },
@@ -314,7 +413,7 @@
     "Properties": {
       "AttachParent": {
         "ObjectName": "CapsuleComponent Default__BP_PlayerPawn_Willow_C:CollisionCylinder",
-        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.7"
+        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.4"
       }
     }
   },
@@ -326,7 +425,7 @@
     "Properties": {
       "AttachParent": {
         "ObjectName": "CapsuleComponent Default__BP_PlayerPawn_Willow_C:CollisionCylinder",
-        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.7"
+        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.4"
       }
     }
   },
@@ -338,11 +437,11 @@
     "Properties": {
       "AutoAttachParent": {
         "ObjectName": "FortPooledSkelMeshComponent Default__BP_PlayerPawn_Willow_C:CharacterMesh0",
-        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.13"
+        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.11"
       },
       "AttachParent": {
         "ObjectName": "FortPooledSkelMeshComponent Default__BP_PlayerPawn_Willow_C:CharacterMesh0",
-        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.13"
+        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.11"
       }
     }
   },
@@ -354,11 +453,11 @@
     "Properties": {
       "AutoAttachParent": {
         "ObjectName": "FortPooledSkelMeshComponent Default__BP_PlayerPawn_Willow_C:CharacterMesh0",
-        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.13"
+        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.11"
       },
       "AttachParent": {
         "ObjectName": "FortPooledSkelMeshComponent Default__BP_PlayerPawn_Willow_C:CharacterMesh0",
-        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.13"
+        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.11"
       }
     }
   },
@@ -370,11 +469,11 @@
     "Properties": {
       "AutoAttachParent": {
         "ObjectName": "FortPooledSkelMeshComponent Default__BP_PlayerPawn_Willow_C:CharacterMesh0",
-        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.13"
+        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.11"
       },
       "AttachParent": {
         "ObjectName": "FortPooledSkelMeshComponent Default__BP_PlayerPawn_Willow_C:CharacterMesh0",
-        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.13"
+        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.11"
       }
     }
   },
@@ -394,7 +493,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent BP_PlayerPawn_Willow_C:DefaultSceneRoot_GEN_VARIABLE",
-        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.22"
+        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.23"
       },
       "VariableGuid": "3419670D-4B87D390-81736592-FB201E8B",
       "InternalVariableName": "DefaultSceneRoot"
@@ -407,7 +506,7 @@
     "Properties": {
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node BP_PlayerPawn_Willow_C:SimpleConstructionScript_0.SCS_Node_0",
-        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.23"
+        "ObjectPath": "/NPCLibrary/NPCs/Willow/Willow/Pawn/BP_PlayerPawn_Willow.24"
       }
     }
   }

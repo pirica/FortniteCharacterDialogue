@@ -1,0 +1,1478 @@
+[
+  {
+    "Type": "AudioComponent",
+    "Name": "Audio_GEN_VARIABLE",
+    "Outer": "Prj_BigBall_C",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue BigBall_Prj_Loop_Cue",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/Sounds/BigBall_Prj_Loop_Cue.0"
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Prj_BigBall_C",
+    "Properties": {
+      "NumReplicatedProperties": 2,
+      "bHasCookedComponentInstancingData": true,
+      "DynamicBindingObjects": [
+        {
+          "ObjectName": "ComponentDelegateBinding Prj_BigBall_C:ComponentDelegateBinding_0",
+          "ObjectPath": "/NPCLibrary/Abilities/BigBall/Prj_BigBall.2"
+        }
+      ],
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript Prj_BigBall_C:SimpleConstructionScript_0",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/Prj_BigBall.22"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function Prj_BigBall_C:ExecuteUbergraph_Prj_BigBall",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/Prj_BigBall.7"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class FortProjectileBase",
+      "ObjectPath": "/Script/FortniteGame"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function Prj_BigBall_C:FindMeshANgle",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/Prj_BigBall.8"
+      },
+      {
+        "ObjectName": "Function Prj_BigBall_C:OnRep_HideAndKill",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/Prj_BigBall.10"
+      },
+      {
+        "ObjectName": "Function Prj_BigBall_C:UserConstructionScript",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/Prj_BigBall.14"
+      },
+      {
+        "ObjectName": "Function Prj_BigBall_C:ReceiveHit",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/Prj_BigBall.12"
+      },
+      {
+        "ObjectName": "Function Prj_BigBall_C:BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_0_WaterInteractionOnEnterWater__DelegateSignature",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/Prj_BigBall.6"
+      },
+      {
+        "ObjectName": "Function Prj_BigBall_C:OnExploded",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/Prj_BigBall.9"
+      },
+      {
+        "ObjectName": "Function Prj_BigBall_C:ReceiveBeginPlay",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/Prj_BigBall.11"
+      },
+      {
+        "ObjectName": "Function Prj_BigBall_C:SplashFX",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/Prj_BigBall.13"
+      },
+      {
+        "ObjectName": "Function Prj_BigBall_C:ExecuteUbergraph_Prj_BigBall",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/Prj_BigBall.7"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": 2097153,
+        "ElementSize": 16,
+        "PropertyFlags": 2105344,
+        "Struct": {
+          "ObjectName": "Class PointerToUberGraphFrame",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "NS_Bigball_Rock_Looping",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class NiagaraComponent",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Audio",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 17180393476,
+        "PropertyClass": {
+          "ObjectName": "Class AudioComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "HideAndKill",
+        "Flags": 2097153,
+        "ElementSize": 1,
+        "PropertyFlags": 4295032869,
+        "RepIndex": 20,
+        "RepNotifyFunc": "OnRep_HideAndKill",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ClassProperty",
+        "Name": "FireMesh",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 65541,
+        "PropertyClass": {
+          "ObjectName": "Class Class",
+          "ObjectPath": "/Script/CoreUObject"
+        },
+        "MetaClass": {
+          "ObjectName": "Class BuildingGameplayActor",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Fort Ability System Component",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 589829,
+        "PropertyClass": {
+          "ObjectName": "Class FortAbilitySystemComponent",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Starting Location",
+        "Flags": 2097153,
+        "ElementSize": 12,
+        "PropertyFlags": 65541,
+        "Struct": {
+          "ObjectName": "Class Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "SurfaceType",
+        "Flags": 2097153,
+        "ElementSize": 1,
+        "PropertyFlags": 65541,
+        "Enum": {
+          "ObjectName": "Class EPhysicalSurface",
+          "ObjectPath": "/Script/PhysicsCore"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "StopRotX",
+        "Flags": 2097153,
+        "ElementSize": 12,
+        "PropertyFlags": 65541,
+        "Struct": {
+          "ObjectName": "Class Rotator",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "RowFireEnabled",
+        "Flags": 2097153,
+        "ElementSize": 56,
+        "PropertyFlags": 65541,
+        "Struct": {
+          "ObjectName": "Class ScalableFloat",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "SplashFXZOffset",
+        "Flags": 2097153,
+        "ElementSize": 12,
+        "PropertyFlags": 65541,
+        "Struct": {
+          "ObjectName": "Class Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "HitWater",
+        "Flags": 2097153,
+        "ElementSize": 1,
+        "PropertyFlags": 65573,
+        "RepIndex": 21,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ExplodeSound",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 65541,
+        "PropertyClass": {
+          "ObjectName": "Class SoundBase",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ExplodeWaterSound",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 65541,
+        "PropertyClass": {
+          "ObjectName": "Class SoundBase",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_Prj_BigBall": {
+        "ObjectName": "Function Prj_BigBall_C:ExecuteUbergraph_Prj_BigBall",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/Prj_BigBall.7"
+      },
+      "SplashFX": {
+        "ObjectName": "Function Prj_BigBall_C:SplashFX",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/Prj_BigBall.13"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function Prj_BigBall_C:ReceiveBeginPlay",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/Prj_BigBall.11"
+      },
+      "OnExploded": {
+        "ObjectName": "Function Prj_BigBall_C:OnExploded",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/Prj_BigBall.9"
+      },
+      "BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_0_WaterInteractionOnEnterWater__DelegateSignature": {
+        "ObjectName": "Function Prj_BigBall_C:BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_0_WaterInteractionOnEnterWater__DelegateSignature",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/Prj_BigBall.6"
+      },
+      "ReceiveHit": {
+        "ObjectName": "Function Prj_BigBall_C:ReceiveHit",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/Prj_BigBall.12"
+      },
+      "UserConstructionScript": {
+        "ObjectName": "Function Prj_BigBall_C:UserConstructionScript",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/Prj_BigBall.14"
+      },
+      "OnRep_HideAndKill": {
+        "ObjectName": "Function Prj_BigBall_C:OnRep_HideAndKill",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/Prj_BigBall.10"
+      },
+      "FindMeshANgle": {
+        "ObjectName": "Function Prj_BigBall_C:FindMeshANgle",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/Prj_BigBall.8"
+      }
+    },
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Prj_BigBall_C Default__Prj_BigBall_C",
+      "ObjectPath": "/NPCLibrary/Abilities/BigBall/Prj_BigBall.17"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "ComponentDelegateBinding",
+    "Name": "ComponentDelegateBinding_0",
+    "Outer": "Prj_BigBall_C",
+    "Properties": {
+      "ComponentDelegateBindings": [
+        {
+          "ComponentPropertyName": "WaterInteractionComponent",
+          "DelegatePropertyName": "OnEnterWaterEvent",
+          "FunctionNameToBind": "BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_0_WaterInteractionOnEnterWater__DelegateSignature"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "FortProjectileMovementComponent",
+    "Name": "ProjectileComp0",
+    "Outer": "Default__Prj_BigBall_C",
+    "Properties": {
+      "bRotationFollowsVelocity": true,
+      "MaxSimulationIterations": 1
+    }
+  },
+  {
+    "Type": "FortProjectileRootComponent",
+    "Name": "CollisionCapsule0",
+    "Outer": "Default__Prj_BigBall_C",
+    "Properties": {
+      "CapsuleHalfHeight": 50.0,
+      "CapsuleRadius": 50.0
+    }
+  },
+  {
+    "Type": "FortWaterInteractionComponent",
+    "Name": "WaterComponentName",
+    "Outer": "Default__Prj_BigBall_C"
+  },
+  {
+    "Type": "Function",
+    "Name": "BndEvt__WaterInteractionComponent_K2Node_ComponentBoundEvent_0_WaterInteractionOnEnterWater__DelegateSignature",
+    "Outer": "Prj_BigBall_C",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "WaterBody",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "PropertyClass": {
+          "ObjectName": "Class FortWaterBodyActor",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "WaterInteractionComponent",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524436,
+        "PropertyClass": {
+          "ObjectName": "Class FortWaterInteractionComponent",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsFirstBody",
+        "Flags": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 148,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 134217728
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_Prj_BigBall",
+    "Outer": "Prj_BigBall_C",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsServer_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_IsClosed_Variable",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_ComponentBoundEvent_WaterBody",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class FortWaterBodyActor",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_ComponentBoundEvent_WaterInteractionComponent",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "PropertyClass": {
+          "ObjectName": "Class FortWaterInteractionComponent",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_ComponentBoundEvent_bIsFirstBody",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetLastWaterSurfaceInfo_WaterPlaneLocation",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetLastWaterSurfaceInfo_WaterPlaneNormal",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetLastWaterSurfaceInfo_WaterSurfacePosition",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetLastWaterSurfaceInfo_WaterDepth",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_GetLastWaterSurfaceInfo_WaterBodyIdx",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetLastWaterSurfaceInfo_WaterVelocity",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeRotFromX_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class Rotator",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsCurieActive_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_MyComp",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "PropertyClass": {
+          "ObjectName": "Class PrimitiveComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_Other",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class Actor",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_OtherComp",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "PropertyClass": {
+          "ObjectName": "Class PrimitiveComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_bSelfMoved",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_HitLocation",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_HitNormal",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_NormalImpulse",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_Hit",
+        "Flags": 1,
+        "ElementSize": 164,
+        "PropertyFlags": 549755813890,
+        "Struct": {
+          "ObjectName": "Class HitResult",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_Event_HitActors",
+        "Flags": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 134217730,
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "K2Node_Event_HitActors",
+          "Flags": 1,
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "Class Actor",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_Event_HitResults",
+        "Flags": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 549890031618,
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "K2Node_Event_HitResults",
+          "Flags": 1,
+          "ElementSize": 164,
+          "PropertyFlags": 549755813888,
+          "Struct": {
+            "ObjectName": "Class HitResult",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeTransform_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 48,
+        "Struct": {
+          "ObjectName": "Class Transform",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetComponentLocation_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsCurieActive_ReturnValue_1",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeTransform_ReturnValue_1",
+        "Flags": 1,
+        "ElementSize": 48,
+        "Struct": {
+          "ObjectName": "Class Transform",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnBuildingGameplayActor_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class BuildingGameplayActor",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsDedicatedServer_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnBuildingGameplayActor_ReturnValue_1",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class BuildingGameplayActor",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetInstigator_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class Pawn",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetFortAbilitySystemComponent_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "PropertyClass": {
+          "ObjectName": "Class FortAbilitySystemComponent",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetActorLocation_ReturnValue_1",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_DistanceBetweenTwoVectors_Distance",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetValueAtLevel_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_LessEqual_FloatFloat_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_FTrunc_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Conv_IntToBool_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanAND_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetValueAtLevel_ReturnValue_1",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_FTrunc_ReturnValue_1",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetActorLocation_ReturnValue_2",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Conv_IntToBool_ReturnValue_1",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanAND_ReturnValue_1",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Subtract_VectorVector_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_Rotation",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class Rotator",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnEmitterAtLocation_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "PropertyClass": {
+          "ObjectName": "Class ParticleSystemComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Has_Been_Initd_Variable",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanAND_ReturnValue_2",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 8421377
+  },
+  {
+    "Type": "Function",
+    "Name": "FindMeshANgle",
+    "Outer": "Prj_BigBall_C",
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "HitLoc",
+        "Flags": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 148,
+        "Struct": {
+          "ObjectName": "Class Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "HitNormal",
+        "Flags": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 148,
+        "Struct": {
+          "ObjectName": "Class Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "NewParam",
+        "Flags": 1,
+        "ElementSize": 48,
+        "PropertyFlags": 384,
+        "Struct": {
+          "ObjectName": "Class Transform",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FunctionFlags": 205651968
+  },
+  {
+    "Type": "Function",
+    "Name": "OnExploded",
+    "Outer": "Prj_BigBall_C",
+    "SuperStruct": {
+      "ObjectName": "Class FortGameplayEffectDeliveryActor:OnExploded",
+      "ObjectPath": "/Script/FortniteGame"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ArrayProperty",
+        "Name": "HitActors",
+        "Flags": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 134218134,
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "HitActors",
+          "Flags": 1,
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "Class Actor",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "HitResults",
+        "Flags": 1,
+        "ElementSize": 16,
+        "PropertyFlags": 549890032022,
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "HitResults",
+          "Flags": 1,
+          "ElementSize": 164,
+          "PropertyFlags": 549755813888,
+          "Struct": {
+            "ObjectName": "Class HitResult",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      }
+    ],
+    "FunctionFlags": 138545152
+  },
+  {
+    "Type": "Function",
+    "Name": "OnRep_HideAndKill",
+    "Outer": "Prj_BigBall_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "Prj_BigBall_C",
+    "SuperStruct": {
+      "ObjectName": "Class Actor:ReceiveBeginPlay",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": 134744064
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveHit",
+    "Outer": "Prj_BigBall_C",
+    "SuperStruct": {
+      "ObjectName": "Class Actor:ReceiveHit",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "MyComp",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524436,
+        "PropertyClass": {
+          "ObjectName": "Class PrimitiveComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Other",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "PropertyClass": {
+          "ObjectName": "Class Actor",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "OtherComp",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524436,
+        "PropertyClass": {
+          "ObjectName": "Class PrimitiveComponent",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bSelfMoved",
+        "Flags": 1,
+        "ElementSize": 1,
+        "PropertyFlags": 148,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "HitLocation",
+        "Flags": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 148,
+        "Struct": {
+          "ObjectName": "Class Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "HitNormal",
+        "Flags": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 148,
+        "Struct": {
+          "ObjectName": "Class Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "NormalImpulse",
+        "Flags": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 148,
+        "Struct": {
+          "ObjectName": "Class Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Hit",
+        "Flags": 1,
+        "ElementSize": 164,
+        "PropertyFlags": 549890032022,
+        "Struct": {
+          "ObjectName": "Class HitResult",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": 138545152
+  },
+  {
+    "Type": "Function",
+    "Name": "SplashFX",
+    "Outer": "Prj_BigBall_C",
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "Rotation",
+        "Flags": 1,
+        "ElementSize": 12,
+        "PropertyFlags": 148,
+        "Struct": {
+          "ObjectName": "Class Rotator",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FunctionFlags": 201343040
+  },
+  {
+    "Type": "Function",
+    "Name": "UserConstructionScript",
+    "Outer": "Prj_BigBall_C",
+    "SuperStruct": {
+      "ObjectName": "Class Actor:UserConstructionScript",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsServer_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": 201459712
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "NS_Bigball_Rock_Looping_GEN_VARIABLE",
+    "Outer": "Prj_BigBall_C",
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem NS_Bigball_Rock_Looping",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/FX_Rock/NS_Bigball_Rock_Looping.103"
+      },
+      "OverrideParameters": {
+        "UserParameterRedirects": {
+          "Skeletal Mesh": {
+            "VarData": "",
+            "Name": "User.Skeletal Mesh",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class NiagaraDataInterfaceSkeletalMesh",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 1
+            }
+          }
+        },
+        "SortedParameterOffsets": [
+          {
+            "Offset": 0,
+            "Name": "User.Skeletal Mesh",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class NiagaraDataInterfaceSkeletalMesh",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 1
+            }
+          }
+        ],
+        "DataInterfaces": [
+          {
+            "ObjectName": "NiagaraDataInterfaceSkeletalMesh Prj_BigBall_C:NS_Bigball_Rock_Looping_GEN_VARIABLE.NiagaraDataInterfaceSkeletalMesh_0",
+            "ObjectPath": "/NPCLibrary/Abilities/BigBall/Prj_BigBall.16"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "NiagaraDataInterfaceSkeletalMesh",
+    "Name": "NiagaraDataInterfaceSkeletalMesh_0",
+    "Outer": "NS_Bigball_Rock_Looping_GEN_VARIABLE"
+  },
+  {
+    "Type": "Prj_BigBall_C",
+    "Name": "Default__Prj_BigBall_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "FireMesh": {
+        "ObjectName": "BlueprintGeneratedClass BGA_BigBall_FireMesh_C",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/BGA_BigBall_FireMesh.1"
+      },
+      "Starting Location": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "StopRotX": {
+        "Pitch": 0.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      },
+      "RowFireEnabled": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "CurveTable NPCLibrary_Abilities_Data",
+            "ObjectPath": "/NPCLibrary/DataTables/NPCLibrary_Abilities_Data.0"
+          },
+          "RowName": "Default.Abilities.BIgBall.Fire.Enabled"
+        },
+        "RegistryType": {
+          "Name": "None"
+        }
+      },
+      "SplashFXZOffset": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 100.0
+      },
+      "ExplodeSound": {
+        "ObjectName": "SoundCue BigBall_Proj_Expl_Cue",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/Sounds/BigBall_Proj_Expl_Cue.0"
+      },
+      "ExplodeWaterSound": {
+        "ObjectName": "SoundCue Expl_Debris_Water_Cue",
+        "ObjectPath": "/Game/Athena/Sounds/Weapons/Explosions/Expl_Debris_Water_Cue.0"
+      },
+      "bAddOwnerVelocity": false,
+      "CapsuleComponent": {
+        "ObjectName": "FortProjectileRootComponent Default__Prj_BigBall_C:CollisionCapsule0",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/Prj_BigBall.4"
+      },
+      "ProjectileMovementComponent": {
+        "ObjectName": "FortProjectileMovementComponent Default__Prj_BigBall_C:ProjectileComp0",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/Prj_BigBall.3"
+      },
+      "WaterInteractionComponent": {
+        "ObjectName": "FortWaterInteractionComponent Default__Prj_BigBall_C:WaterComponentName",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/Prj_BigBall.5"
+      },
+      "ProjectileGameplayCues": {
+        "Spawn": {
+          "GameplayCueTag": {
+            "TagName": "GameplayCue.NPC.Abilities.BigBall.Spawn"
+          }
+        },
+        "HitWorld": {
+          "GameplayCueTag": {
+            "TagName": "GameplayCue.NPC.Abilities.BigBall.HitWorld"
+          }
+        },
+        "Explosion": {
+          "GameplayCueTag": {
+            "TagName": "GameplayCue.NPC.Abilities.BigBall.Explode"
+          }
+        }
+      },
+      "BulletWhipTrackerComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass WhipTracker_BigBall_C",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/WhipTracker_BigBall.0"
+      },
+      "CollisionComponent": {
+        "ObjectName": "FortProjectileRootComponent Default__Prj_BigBall_C:CollisionCapsule0",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/Prj_BigBall.4"
+      },
+      "NetUpdateFrequency": 15.0,
+      "RootComponent": {
+        "ObjectName": "FortProjectileRootComponent Default__Prj_BigBall_C:CollisionCapsule0",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/Prj_BigBall.4"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "Prj_BigBall_C"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class SceneComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent Prj_BigBall_C:DefaultSceneRoot_GEN_VARIABLE",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/Prj_BigBall.18"
+      },
+      "VariableGuid": "C9110AF5-405653AD-4D07D1AD-C29BBB37",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class AudioComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "AudioComponent Prj_BigBall_C:Audio_GEN_VARIABLE",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/Prj_BigBall.0"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "Sound",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class AudioComponent",
+              "ObjectPath": "/Script/Engine"
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "ParentComponentOrVariableName": "CollisionCapsule0",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "85B01B6D-462547A7-0651FE97-53FD579C",
+      "InternalVariableName": "Audio"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class NiagaraComponent",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent Prj_BigBall_C:NS_Bigball_Rock_Looping_GEN_VARIABLE",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/Prj_BigBall.15"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "Asset",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class NiagaraComponent",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "OverrideParameters",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class NiagaraComponent",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "UserParameterRedirects",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class NiagaraUserRedirectionParameterStore",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "SortedParameterOffsets",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class NiagaraUserRedirectionParameterStore",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "None",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class NiagaraUserRedirectionParameterStore",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "DataInterfaces",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class NiagaraUserRedirectionParameterStore",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "None",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class NiagaraUserRedirectionParameterStore",
+              "ObjectPath": "/Script/Niagara"
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "ParentComponentOrVariableName": "CollisionCapsule0",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "C7656B4B-46E18D79-FEE65B91-ED8F6DD4",
+      "InternalVariableName": "NS_Bigball_Rock_Looping"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "Prj_BigBall_C",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node Prj_BigBall_C:SimpleConstructionScript_0.SCS_Node_2",
+          "ObjectPath": "/NPCLibrary/Abilities/BigBall/Prj_BigBall.20"
+        },
+        {
+          "ObjectName": "SCS_Node Prj_BigBall_C:SimpleConstructionScript_0.SCS_Node_3",
+          "ObjectPath": "/NPCLibrary/Abilities/BigBall/Prj_BigBall.21"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node Prj_BigBall_C:SimpleConstructionScript_0.SCS_Node_2",
+          "ObjectPath": "/NPCLibrary/Abilities/BigBall/Prj_BigBall.20"
+        },
+        {
+          "ObjectName": "SCS_Node Prj_BigBall_C:SimpleConstructionScript_0.SCS_Node_3",
+          "ObjectPath": "/NPCLibrary/Abilities/BigBall/Prj_BigBall.21"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node Prj_BigBall_C:SimpleConstructionScript_0.SCS_Node_0",
+        "ObjectPath": "/NPCLibrary/Abilities/BigBall/Prj_BigBall.19"
+      }
+    }
+  }
+]

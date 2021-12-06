@@ -1,0 +1,60 @@
+[
+  {
+    "Type": "DataTable",
+    "Name": "AILootOnDeathDataTable_TheSeven",
+    "Properties": {
+      "RowStruct": {
+        "ObjectName": "Class FortAthenaAILootInfoDataTableRow",
+        "ObjectPath": "/Script/FortniteGame"
+      }
+    },
+    "Rows": {
+      "NPC.SevenGuard": {
+        "LootDroppingBehaviors": [
+          {
+            "OptionalTagQuery": {
+              "TokenStreamVersion": 0,
+              "TagDictionary": [],
+              "QueryTokenStream": [],
+              "UserDescription": "",
+              "AutoDescription": ""
+            },
+            "bShouldDropInventoryOnDeath": false,
+            "bShouldDropLootOnDeath": true,
+            "LootTiers": [
+              "Loot_Flipper_SevenGuards_AR"
+            ]
+          }
+        ]
+      },
+      "NPC.SevenGuard.Encounter": {
+        "LootDroppingBehaviors": [
+          {
+            "OptionalTagQuery": {
+              "TokenStreamVersion": 0,
+              "TagDictionary": [
+                {
+                  "TagName": "Pawn.Athena.NPC.Duel.IsBeingChallenged"
+                }
+              ],
+              "QueryTokenStream": [
+                0,
+                1,
+                2,
+                1,
+                0
+              ],
+              "UserDescription": "",
+              "AutoDescription": " ALL( Pawn.Athena.NPC.Duel.IsBeingChallenged )"
+            },
+            "bShouldDropInventoryOnDeath": true,
+            "bShouldDropLootOnDeath": true,
+            "LootTiers": [
+              "Loot_Gibson_Type04"
+            ]
+          }
+        ]
+      }
+    }
+  }
+]

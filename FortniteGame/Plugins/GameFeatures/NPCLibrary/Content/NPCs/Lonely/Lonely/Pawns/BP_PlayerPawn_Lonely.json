@@ -1,5 +1,29 @@
 [
   {
+    "Type": "AudioComponent",
+    "Name": "FeedbackAudioComp0",
+    "Outer": "Default__BP_PlayerPawn_Lonely_C",
+    "Template": "FeedbackAudioComp0",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent Default__BP_PlayerPawn_Lonely_C:CollisionCylinder",
+        "ObjectPath": "/NPCLibrary/NPCs/Lonely/Lonely/Pawns/BP_PlayerPawn_Lonely.4"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "InAirAudioComp",
+    "Outer": "Default__BP_PlayerPawn_Lonely_C",
+    "Template": "InAirAudioComp",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "FortPooledSkelMeshComponent Default__BP_PlayerPawn_Lonely_C:CharacterMesh0",
+        "ObjectPath": "/NPCLibrary/NPCs/Lonely/Lonely/Pawns/BP_PlayerPawn_Lonely.11"
+      }
+    }
+  },
+  {
     "Type": "BlueprintGeneratedClass",
     "Name": "BP_PlayerPawn_Lonely_C",
     "Super": "BP_PlayerPawn_NonParticipant_C",
@@ -7,30 +31,30 @@
       "bHasCookedComponentInstancingData": true,
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript BP_PlayerPawn_Lonely_C:SimpleConstructionScript_0",
-        "ObjectPath": "/NPCLibrary/NPCs/Lonely/Lonely/Pawns/BP_PlayerPawn_Lonely.21"
+        "ObjectPath": "/NPCLibrary/NPCs/Lonely/Lonely/Pawns/BP_PlayerPawn_Lonely.22"
       },
       "InheritableComponentHandler": {
         "ObjectName": "InheritableComponentHandler BP_PlayerPawn_Lonely_C:InheritableComponentHandler",
-        "ObjectPath": "/NPCLibrary/NPCs/Lonely/Lonely/Pawns/BP_PlayerPawn_Lonely.12"
+        "ObjectPath": "/NPCLibrary/NPCs/Lonely/Lonely/Pawns/BP_PlayerPawn_Lonely.13"
       }
     },
     "SuperStruct": {
       "ObjectName": "BlueprintGeneratedClass BP_PlayerPawn_NonParticipant_C",
-      "ObjectPath": "/Game/Athena/AI/NPCs/Base/BP_PlayerPawn_NonParticipant.39"
+      "ObjectPath": "/Game/Athena/AI/NPCs/Base/BP_PlayerPawn_NonParticipant.3"
     },
-    "FuncMap": {},
     "ClassFlags": 8652820,
     "ClassWithin": {
       "ObjectName": "Class Object",
       "ObjectPath": "/Script/CoreUObject"
     },
     "ClassConfigName": "Game",
-    "ClassGeneratedBy": null,
-    "Interfaces": [],
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "BP_PlayerPawn_Lonely_C Default__BP_PlayerPawn_Lonely_C",
-      "ObjectPath": "/NPCLibrary/NPCs/Lonely/Lonely/Pawns/BP_PlayerPawn_Lonely.1"
+      "ObjectPath": "/NPCLibrary/NPCs/Lonely/Lonely/Pawns/BP_PlayerPawn_Lonely.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
     }
   },
   {
@@ -60,51 +84,130 @@
       },
       "InAirAudioComp": {
         "ObjectName": "AudioComponent Default__BP_PlayerPawn_Lonely_C:InAirAudioComp",
-        "ObjectPath": "/NPCLibrary/NPCs/Lonely/Lonely/Pawns/BP_PlayerPawn_Lonely.3"
+        "ObjectPath": "/NPCLibrary/NPCs/Lonely/Lonely/Pawns/BP_PlayerPawn_Lonely.1"
       },
       "PSC_PlayerWalkLand": {
         "ObjectName": "ParticleSystemComponent Default__BP_PlayerPawn_Lonely_C:PlayerWalkLandFX",
-        "ObjectPath": "/NPCLibrary/NPCs/Lonely/Lonely/Pawns/BP_PlayerPawn_Lonely.18"
+        "ObjectPath": "/NPCLibrary/NPCs/Lonely/Lonely/Pawns/BP_PlayerPawn_Lonely.19"
       },
       "PSC_PlayerRunLand": {
         "ObjectName": "ParticleSystemComponent Default__BP_PlayerPawn_Lonely_C:PlayerRunLandFX",
-        "ObjectPath": "/NPCLibrary/NPCs/Lonely/Lonely/Pawns/BP_PlayerPawn_Lonely.16"
+        "ObjectPath": "/NPCLibrary/NPCs/Lonely/Lonely/Pawns/BP_PlayerPawn_Lonely.17"
       },
       "PSC_PlayerSlideLand": {
         "ObjectName": "ParticleSystemComponent Default__BP_PlayerPawn_Lonely_C:PlayerSlideLandFX",
-        "ObjectPath": "/NPCLibrary/NPCs/Lonely/Lonely/Pawns/BP_PlayerPawn_Lonely.17"
+        "ObjectPath": "/NPCLibrary/NPCs/Lonely/Lonely/Pawns/BP_PlayerPawn_Lonely.18"
       },
       "PSC_HitDamage": {
         "ObjectName": "ParticleSystemComponent Default__BP_PlayerPawn_Lonely_C:HitDamageFX",
-        "ObjectPath": "/NPCLibrary/NPCs/Lonely/Lonely/Pawns/BP_PlayerPawn_Lonely.13"
+        "ObjectPath": "/NPCLibrary/NPCs/Lonely/Lonely/Pawns/BP_PlayerPawn_Lonely.14"
+      },
+      "TetherComponent": {
+        "ObjectName": "FortPawnComponent_Tether Default__BP_PlayerPawn_Lonely_C:TetherComp",
+        "ObjectPath": "/NPCLibrary/NPCs/Lonely/Lonely/Pawns/BP_PlayerPawn_Lonely.10"
+      },
+      "PSC_PlayerInWater": {
+        "ObjectName": "ParticleSystemComponent Default__BP_PlayerPawn_Lonely_C:PlayerInWaterFX",
+        "ObjectPath": "/NPCLibrary/NPCs/Lonely/Lonely/Pawns/BP_PlayerPawn_Lonely.15"
+      },
+      "PSC_PlayerInWaterSurfaceSwimming": {
+        "ObjectName": "ParticleSystemComponent Default__BP_PlayerPawn_Lonely_C:PlayerInWaterSurfaceSwimmingFX",
+        "ObjectPath": "/NPCLibrary/NPCs/Lonely/Lonely/Pawns/BP_PlayerPawn_Lonely.16"
+      },
+      "ConvertComponent": {
+        "ObjectName": "FortPawnComponent_Convert Default__BP_PlayerPawn_Lonely_C:ConvertComp",
+        "ObjectPath": "/NPCLibrary/NPCs/Lonely/Lonely/Pawns/BP_PlayerPawn_Lonely.9"
       },
       "AffiliationComponent": {
-        "ObjectName": "FortPawnComponent_Convert Default__BP_PlayerPawn_Lonely_C:ConvertComp",
+        "ObjectName": "FortActorComponent_Affiliation Default__BP_PlayerPawn_Lonely_C:AffiliationComponent",
+        "ObjectPath": "/NPCLibrary/NPCs/Lonely/Lonely/Pawns/BP_PlayerPawn_Lonely.5"
+      },
+      "SoundIndicatorComponent": {
+        "ObjectName": "FortSoundIndicatorComponent Default__BP_PlayerPawn_Lonely_C:SoundIndicatorComponent",
+        "ObjectPath": "/NPCLibrary/NPCs/Lonely/Lonely/Pawns/BP_PlayerPawn_Lonely.12"
+      },
+      "FortFootstepComponent": {
+        "ObjectName": "FortFootstepComponent Default__BP_PlayerPawn_Lonely_C:FortFootstepComp",
+        "ObjectPath": "/NPCLibrary/NPCs/Lonely/Lonely/Pawns/BP_PlayerPawn_Lonely.6"
+      },
+      "VocalChords": [
+        {
+          "FeedbackAudioComponent": {
+            "ObjectName": "AudioComponent Default__BP_PlayerPawn_Lonely_C:FeedbackAudioComp0",
+            "ObjectPath": "/NPCLibrary/NPCs/Lonely/Lonely/Pawns/BP_PlayerPawn_Lonely.0"
+          },
+          "ReplicatedSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          },
+          "PendingSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          },
+          "QueuedSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          },
+          "CurrentSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          }
+        }
+      ],
+      "GameplayTags": [
+        "Class.IsCommando",
+        "NPC.EnemyType.Pawn",
+        "Pawn.Athena.Player",
+        "Athena.AI.NoiseMaker",
+        "Pawn.Athena.NonParticipant",
+        "Pawn.Athena.NPC",
+        "Gameplay.Status.AutoPickupDisabled",
+        "Gameplay.Damage.Environment.ExcludedFromStormSurge",
+        "AISpawnerData.Type.Lonely"
+      ],
+      "Mesh": {
+        "ObjectName": "FortPooledSkelMeshComponent Default__BP_PlayerPawn_Lonely_C:CharacterMesh0",
+        "ObjectPath": "/NPCLibrary/NPCs/Lonely/Lonely/Pawns/BP_PlayerPawn_Lonely.11"
+      },
+      "CharacterMovement": {
+        "ObjectName": "FortMovementComp_CharacterAthena Default__BP_PlayerPawn_Lonely_C:CharMoveComp",
         "ObjectPath": "/NPCLibrary/NPCs/Lonely/Lonely/Pawns/BP_PlayerPawn_Lonely.8"
-      }
-    }
-  },
-  {
-    "Type": "AudioComponent",
-    "Name": "FeedbackAudioComp0",
-    "Outer": "Default__BP_PlayerPawn_Lonely_C",
-    "Template": "FeedbackAudioComp0",
-    "Properties": {
-      "AttachParent": {
+      },
+      "CapsuleComponent": {
         "ObjectName": "CapsuleComponent Default__BP_PlayerPawn_Lonely_C:CollisionCylinder",
         "ObjectPath": "/NPCLibrary/NPCs/Lonely/Lonely/Pawns/BP_PlayerPawn_Lonely.4"
-      }
-    }
-  },
-  {
-    "Type": "AudioComponent",
-    "Name": "InAirAudioComp",
-    "Outer": "Default__BP_PlayerPawn_Lonely_C",
-    "Template": "InAirAudioComp",
-    "Properties": {
-      "AttachParent": {
-        "ObjectName": "FortPooledSkelMeshComponent Default__BP_PlayerPawn_Lonely_C:CharacterMesh0",
-        "ObjectPath": "/NPCLibrary/NPCs/Lonely/Lonely/Pawns/BP_PlayerPawn_Lonely.10"
+      },
+      "RootComponent": {
+        "ObjectName": "CapsuleComponent Default__BP_PlayerPawn_Lonely_C:CollisionCylinder",
+        "ObjectPath": "/NPCLibrary/NPCs/Lonely/Lonely/Pawns/BP_PlayerPawn_Lonely.4"
       }
     }
   },
@@ -119,6 +222,12 @@
     "Name": "AffiliationComponent",
     "Outer": "Default__BP_PlayerPawn_Lonely_C",
     "Template": "AffiliationComponent"
+  },
+  {
+    "Type": "FortFootstepComponent",
+    "Name": "FortFootstepComp",
+    "Outer": "Default__BP_PlayerPawn_Lonely_C",
+    "Template": "FortFootstepComp"
   },
   {
     "Type": "FortGenericDataStoreManagerComponent",
@@ -215,11 +324,11 @@
     "Properties": {
       "AutoAttachParent": {
         "ObjectName": "FortPooledSkelMeshComponent Default__BP_PlayerPawn_Lonely_C:CharacterMesh0",
-        "ObjectPath": "/NPCLibrary/NPCs/Lonely/Lonely/Pawns/BP_PlayerPawn_Lonely.10"
+        "ObjectPath": "/NPCLibrary/NPCs/Lonely/Lonely/Pawns/BP_PlayerPawn_Lonely.11"
       },
       "AttachParent": {
         "ObjectName": "FortPooledSkelMeshComponent Default__BP_PlayerPawn_Lonely_C:CharacterMesh0",
-        "ObjectPath": "/NPCLibrary/NPCs/Lonely/Lonely/Pawns/BP_PlayerPawn_Lonely.10"
+        "ObjectPath": "/NPCLibrary/NPCs/Lonely/Lonely/Pawns/BP_PlayerPawn_Lonely.11"
       }
     }
   },
@@ -231,11 +340,11 @@
     "Properties": {
       "AutoAttachParent": {
         "ObjectName": "FortPooledSkelMeshComponent Default__BP_PlayerPawn_Lonely_C:CharacterMesh0",
-        "ObjectPath": "/NPCLibrary/NPCs/Lonely/Lonely/Pawns/BP_PlayerPawn_Lonely.10"
+        "ObjectPath": "/NPCLibrary/NPCs/Lonely/Lonely/Pawns/BP_PlayerPawn_Lonely.11"
       },
       "AttachParent": {
         "ObjectName": "FortPooledSkelMeshComponent Default__BP_PlayerPawn_Lonely_C:CharacterMesh0",
-        "ObjectPath": "/NPCLibrary/NPCs/Lonely/Lonely/Pawns/BP_PlayerPawn_Lonely.10"
+        "ObjectPath": "/NPCLibrary/NPCs/Lonely/Lonely/Pawns/BP_PlayerPawn_Lonely.11"
       }
     }
   },
@@ -247,11 +356,11 @@
     "Properties": {
       "AutoAttachParent": {
         "ObjectName": "FortPooledSkelMeshComponent Default__BP_PlayerPawn_Lonely_C:CharacterMesh0",
-        "ObjectPath": "/NPCLibrary/NPCs/Lonely/Lonely/Pawns/BP_PlayerPawn_Lonely.10"
+        "ObjectPath": "/NPCLibrary/NPCs/Lonely/Lonely/Pawns/BP_PlayerPawn_Lonely.11"
       },
       "AttachParent": {
         "ObjectName": "FortPooledSkelMeshComponent Default__BP_PlayerPawn_Lonely_C:CharacterMesh0",
-        "ObjectPath": "/NPCLibrary/NPCs/Lonely/Lonely/Pawns/BP_PlayerPawn_Lonely.10"
+        "ObjectPath": "/NPCLibrary/NPCs/Lonely/Lonely/Pawns/BP_PlayerPawn_Lonely.11"
       }
     }
   },
@@ -271,7 +380,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent BP_PlayerPawn_Lonely_C:DefaultSceneRoot_GEN_VARIABLE",
-        "ObjectPath": "/NPCLibrary/NPCs/Lonely/Lonely/Pawns/BP_PlayerPawn_Lonely.19"
+        "ObjectPath": "/NPCLibrary/NPCs/Lonely/Lonely/Pawns/BP_PlayerPawn_Lonely.20"
       },
       "VariableGuid": "398AE25B-4D27AE8B-75E1AD9A-E80F670E",
       "InternalVariableName": "DefaultSceneRoot"
@@ -284,7 +393,7 @@
     "Properties": {
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node BP_PlayerPawn_Lonely_C:SimpleConstructionScript_0.SCS_Node_0",
-        "ObjectPath": "/NPCLibrary/NPCs/Lonely/Lonely/Pawns/BP_PlayerPawn_Lonely.20"
+        "ObjectPath": "/NPCLibrary/NPCs/Lonely/Lonely/Pawns/BP_PlayerPawn_Lonely.21"
       }
     }
   }

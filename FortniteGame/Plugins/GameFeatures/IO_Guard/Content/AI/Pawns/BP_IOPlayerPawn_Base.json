@@ -1,84 +1,27 @@
 [
   {
-    "Type": "Function",
-    "Name": "ExecuteUbergraph_BP_IOPlayerPawn_Base",
-    "Outer": "BP_IOPlayerPawn_Base_C",
-    "ChildProperties": [
-      {
-        "Type": "IntProperty",
-        "Name": "EntryPoint",
-        "Flags": 1,
-        "ElementSize": 4,
-        "PropertyFlags": 148
+    "Type": "AudioComponent",
+    "Name": "FeedbackAudioComp0",
+    "Outer": "Default__BP_IOPlayerPawn_Base_C",
+    "Template": "FeedbackAudioComp0",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent Default__BP_IOPlayerPawn_Base_C:CollisionCylinder",
+        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.4"
       }
-    ],
-    "FunctionFlags": 32769
+    }
   },
   {
-    "Type": "Function",
-    "Name": "ReceiveBeginPlay",
-    "Outer": "BP_IOPlayerPawn_Base_C",
-    "Super": "ReceiveBeginPlay",
-    "SuperStruct": {
-      "ObjectName": "Function BP_PlayerPawn_NonParticipant_C:ReceiveBeginPlay",
-      "ObjectPath": "/Game/Athena/AI/NPCs/Base/BP_PlayerPawn_NonParticipant.20"
-    },
-    "FunctionFlags": 134744064
-  },
-  {
-    "Type": "Function",
-    "Name": "SetupLootTierNameWithWeapon",
-    "Outer": "BP_IOPlayerPawn_Base_C",
-    "Super": "SetupLootTierNameWithWeapon",
-    "SuperStruct": {
-      "ObjectName": "Function BP_PlayerPawn_NonParticipant_C:SetupLootTierNameWithWeapon",
-      "ObjectPath": "/Game/Athena/AI/NPCs/Base/BP_PlayerPawn_NonParticipant.27"
-    },
-    "ChildProperties": [
-      {
-        "Type": "NameProperty",
-        "Name": "NoAmmo",
-        "Flags": 1,
-        "ElementSize": 12,
-        "PropertyFlags": 5
-      },
-      {
-        "Type": "NameProperty",
-        "Name": "RocketsAmmo",
-        "Flags": 1,
-        "ElementSize": 12,
-        "PropertyFlags": 5
-      },
-      {
-        "Type": "NameProperty",
-        "Name": "MediumAmmo",
-        "Flags": 1,
-        "ElementSize": 12,
-        "PropertyFlags": 5
-      },
-      {
-        "Type": "NameProperty",
-        "Name": "HeavyAmmo",
-        "Flags": 1,
-        "ElementSize": 12,
-        "PropertyFlags": 5
-      },
-      {
-        "Type": "NameProperty",
-        "Name": "ShellsAmmo",
-        "Flags": 1,
-        "ElementSize": 12,
-        "PropertyFlags": 5
-      },
-      {
-        "Type": "NameProperty",
-        "Name": "LightAmmo",
-        "Flags": 1,
-        "ElementSize": 12,
-        "PropertyFlags": 5
+    "Type": "AudioComponent",
+    "Name": "InAirAudioComp",
+    "Outer": "Default__BP_IOPlayerPawn_Base_C",
+    "Template": "InAirAudioComp",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "FortPooledSkelMeshComponent Default__BP_IOPlayerPawn_Base_C:CharacterMesh0",
+        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.11"
       }
-    ],
-    "FunctionFlags": 201457664
+    }
   },
   {
     "Type": "BlueprintGeneratedClass",
@@ -96,25 +39,21 @@
       },
       "UberGraphFunction": {
         "ObjectName": "Function BP_IOPlayerPawn_Base_C:ExecuteUbergraph_BP_IOPlayerPawn_Base",
-        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.0"
+        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.13"
       }
     },
     "SuperStruct": {
       "ObjectName": "BlueprintGeneratedClass BP_PlayerPawn_NonParticipant_C",
-      "ObjectPath": "/Game/Athena/AI/NPCs/Base/BP_PlayerPawn_NonParticipant.39"
+      "ObjectPath": "/Game/Athena/AI/NPCs/Base/BP_PlayerPawn_NonParticipant.3"
     },
     "Children": [
       {
-        "ObjectName": "Function BP_IOPlayerPawn_Base_C:SetupLootTierNameWithWeapon",
-        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.2"
-      },
-      {
         "ObjectName": "Function BP_IOPlayerPawn_Base_C:ReceiveBeginPlay",
-        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.1"
+        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.14"
       },
       {
         "ObjectName": "Function BP_IOPlayerPawn_Base_C:ExecuteUbergraph_BP_IOPlayerPawn_Base",
-        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.0"
+        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.13"
       }
     ],
     "ChildProperties": [
@@ -133,15 +72,11 @@
     "FuncMap": {
       "ExecuteUbergraph_BP_IOPlayerPawn_Base": {
         "ObjectName": "Function BP_IOPlayerPawn_Base_C:ExecuteUbergraph_BP_IOPlayerPawn_Base",
-        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.0"
+        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.13"
       },
       "ReceiveBeginPlay": {
         "ObjectName": "Function BP_IOPlayerPawn_Base_C:ReceiveBeginPlay",
-        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.1"
-      },
-      "SetupLootTierNameWithWeapon": {
-        "ObjectName": "Function BP_IOPlayerPawn_Base_C:SetupLootTierNameWithWeapon",
-        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.2"
+        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.14"
       }
     },
     "ClassFlags": 8652820,
@@ -150,12 +85,13 @@
       "ObjectPath": "/Script/CoreUObject"
     },
     "ClassConfigName": "Game",
-    "ClassGeneratedBy": null,
-    "Interfaces": [],
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "BP_IOPlayerPawn_Base_C Default__BP_IOPlayerPawn_Base_C",
-      "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.4"
+      "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
     }
   },
   {
@@ -199,12 +135,19 @@
             "ObjectName": "FortPatrolAnimAsset AssaultRiflePatrolAnimSet",
             "ObjectPath": "/Game/Athena/AI/MANG/AnimSet/AssaultRiflePatrolAnimSet.0"
           }
+        },
+        {
+          "WeaponType": "EFortWeaponCoreAnimation::AR_ForwardGrip",
+          "DataAsset": {
+            "ObjectName": "FortPatrolAnimAsset ARFGrip_Patrol_AnimSet",
+            "ObjectPath": "/Game/Athena/AI/MANG/AnimSet/ARFGrip_Patrol_AnimSet.0"
+          }
         }
       ],
       "bShouldDropItemsOnDeath": false,
       "InAirAudioComp": {
         "ObjectName": "AudioComponent Default__BP_IOPlayerPawn_Base_C:InAirAudioComp",
-        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.6"
+        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.1"
       },
       "PSC_PlayerWalkLand": {
         "ObjectName": "ParticleSystemComponent Default__BP_IOPlayerPawn_Base_C:PlayerWalkLandFX",
@@ -222,33 +165,121 @@
         "ObjectName": "ParticleSystemComponent Default__BP_IOPlayerPawn_Base_C:HitDamageFX",
         "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.16"
       },
-      "AffiliationComponent": {
+      "TetherComponent": {
+        "ObjectName": "FortPawnComponent_Tether Default__BP_IOPlayerPawn_Base_C:TetherComp",
+        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.10"
+      },
+      "PSC_PlayerInWater": {
+        "ObjectName": "ParticleSystemComponent Default__BP_IOPlayerPawn_Base_C:PlayerInWaterFX",
+        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.17"
+      },
+      "PSC_PlayerInWaterSurfaceSwimming": {
+        "ObjectName": "ParticleSystemComponent Default__BP_IOPlayerPawn_Base_C:PlayerInWaterSurfaceSwimmingFX",
+        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.18"
+      },
+      "ConvertComponent": {
         "ObjectName": "FortPawnComponent_Convert Default__BP_IOPlayerPawn_Base_C:ConvertComp",
-        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.11"
-      }
-    }
-  },
-  {
-    "Type": "AudioComponent",
-    "Name": "FeedbackAudioComp0",
-    "Outer": "Default__BP_IOPlayerPawn_Base_C",
-    "Template": "FeedbackAudioComp0",
-    "Properties": {
-      "AttachParent": {
-        "ObjectName": "CapsuleComponent Default__BP_IOPlayerPawn_Base_C:CollisionCylinder",
-        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.7"
-      }
-    }
-  },
-  {
-    "Type": "AudioComponent",
-    "Name": "InAirAudioComp",
-    "Outer": "Default__BP_IOPlayerPawn_Base_C",
-    "Template": "InAirAudioComp",
-    "Properties": {
-      "AttachParent": {
+        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.9"
+      },
+      "AffiliationComponent": {
+        "ObjectName": "FortActorComponent_Affiliation Default__BP_IOPlayerPawn_Base_C:AffiliationComponent",
+        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.5"
+      },
+      "SoundIndicatorComponent": {
+        "ObjectName": "FortSoundIndicatorComponent Default__BP_IOPlayerPawn_Base_C:SoundIndicatorComponent",
+        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.12"
+      },
+      "FortFootstepComponent": {
+        "ObjectName": "FortFootstepComponent Default__BP_IOPlayerPawn_Base_C:FortFootstepComp",
+        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.6"
+      },
+      "VocalChords": [
+        {
+          "FeedbackAudioComponent": {
+            "ObjectName": "AudioComponent Default__BP_IOPlayerPawn_Base_C:FeedbackAudioComp0",
+            "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.0"
+          },
+          "ReplicatedSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          },
+          "PendingSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          },
+          "QueuedSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          },
+          "CurrentSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          }
+        }
+      ],
+      "GameplayTags": [
+        "Class.IsCommando",
+        "NPC.EnemyType.Pawn",
+        "Pawn.Athena.Player",
+        "Athena.AI.NoiseMaker",
+        "Pawn.Athena.NonParticipant",
+        "Athena.Gameplay.Status.ForceDBNO",
+        "Gameplay.Status.AutoPickupDisabled",
+        "Gameplay.Damage.Environment.ExcludedFromStormSurge",
+        "Pawn.Athena.NPC.IO",
+        "Athena.Phoebe.Escape",
+        "Athena.AI.Vehicle.Driver",
+        "Athena.AI.Vehicle.Passenger1",
+        "Athena.AI.Vehicle.Passenger2",
+        "Athena.AI.Vehicle.Passenger3"
+      ],
+      "Mesh": {
         "ObjectName": "FortPooledSkelMeshComponent Default__BP_IOPlayerPawn_Base_C:CharacterMesh0",
-        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.13"
+        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.11"
+      },
+      "CharacterMovement": {
+        "ObjectName": "FortMovementComp_CharacterAthena Default__BP_IOPlayerPawn_Base_C:CharMoveComp",
+        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.8"
+      },
+      "CapsuleComponent": {
+        "ObjectName": "CapsuleComponent Default__BP_IOPlayerPawn_Base_C:CollisionCylinder",
+        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.4"
+      },
+      "AIControllerClass": {
+        "ObjectName": "BlueprintGeneratedClass BP_IOController_Base_C",
+        "ObjectPath": "/IO_Guard/AI/Controllers/BP_IOController_Base.5"
+      },
+      "RootComponent": {
+        "ObjectName": "CapsuleComponent Default__BP_IOPlayerPawn_Base_C:CollisionCylinder",
+        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.4"
       }
     }
   },
@@ -263,6 +294,12 @@
     "Name": "AffiliationComponent",
     "Outer": "Default__BP_IOPlayerPawn_Base_C",
     "Template": "AffiliationComponent"
+  },
+  {
+    "Type": "FortFootstepComponent",
+    "Name": "FortFootstepComp",
+    "Outer": "Default__BP_IOPlayerPawn_Base_C",
+    "Template": "FortFootstepComp"
   },
   {
     "Type": "FortGenericDataStoreManagerComponent",
@@ -296,7 +333,7 @@
     "Properties": {
       "AttachParent": {
         "ObjectName": "CapsuleComponent Default__BP_IOPlayerPawn_Base_C:CollisionCylinder",
-        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.7"
+        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.4"
       }
     }
   },
@@ -305,6 +342,32 @@
     "Name": "SoundIndicatorComponent",
     "Outer": "Default__BP_IOPlayerPawn_Base_C",
     "Template": "SoundIndicatorComponent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_IOPlayerPawn_Base",
+    "Outer": "BP_IOPlayerPawn_Base_C",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148
+      }
+    ],
+    "FunctionFlags": 32769
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "BP_IOPlayerPawn_Base_C",
+    "Super": "ReceiveBeginPlay",
+    "SuperStruct": {
+      "ObjectName": "Function BP_PlayerPawn_NonParticipant_C:ReceiveBeginPlay",
+      "ObjectPath": "/Game/Athena/AI/NPCs/Base/BP_PlayerPawn_NonParticipant.44"
+    },
+    "FunctionFlags": 134744064
   },
   {
     "Type": "InheritableComponentHandler",
@@ -319,11 +382,11 @@
     "Properties": {
       "AutoAttachParent": {
         "ObjectName": "CapsuleComponent Default__BP_IOPlayerPawn_Base_C:CollisionCylinder",
-        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.7"
+        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.4"
       },
       "AttachParent": {
         "ObjectName": "CapsuleComponent Default__BP_IOPlayerPawn_Base_C:CollisionCylinder",
-        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.7"
+        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.4"
       }
     }
   },
@@ -335,7 +398,7 @@
     "Properties": {
       "AttachParent": {
         "ObjectName": "CapsuleComponent Default__BP_IOPlayerPawn_Base_C:CollisionCylinder",
-        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.7"
+        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.4"
       }
     }
   },
@@ -347,7 +410,7 @@
     "Properties": {
       "AttachParent": {
         "ObjectName": "CapsuleComponent Default__BP_IOPlayerPawn_Base_C:CollisionCylinder",
-        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.7"
+        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.4"
       }
     }
   },
@@ -359,11 +422,11 @@
     "Properties": {
       "AutoAttachParent": {
         "ObjectName": "FortPooledSkelMeshComponent Default__BP_IOPlayerPawn_Base_C:CharacterMesh0",
-        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.13"
+        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.11"
       },
       "AttachParent": {
         "ObjectName": "FortPooledSkelMeshComponent Default__BP_IOPlayerPawn_Base_C:CharacterMesh0",
-        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.13"
+        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.11"
       }
     }
   },
@@ -375,11 +438,11 @@
     "Properties": {
       "AutoAttachParent": {
         "ObjectName": "FortPooledSkelMeshComponent Default__BP_IOPlayerPawn_Base_C:CharacterMesh0",
-        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.13"
+        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.11"
       },
       "AttachParent": {
         "ObjectName": "FortPooledSkelMeshComponent Default__BP_IOPlayerPawn_Base_C:CharacterMesh0",
-        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.13"
+        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.11"
       }
     }
   },
@@ -391,11 +454,11 @@
     "Properties": {
       "AutoAttachParent": {
         "ObjectName": "FortPooledSkelMeshComponent Default__BP_IOPlayerPawn_Base_C:CharacterMesh0",
-        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.13"
+        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.11"
       },
       "AttachParent": {
         "ObjectName": "FortPooledSkelMeshComponent Default__BP_IOPlayerPawn_Base_C:CharacterMesh0",
-        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.13"
+        "ObjectPath": "/IO_Guard/AI/Pawns/BP_IOPlayerPawn_Base.11"
       }
     }
   },

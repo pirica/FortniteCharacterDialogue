@@ -1,5 +1,138 @@
 [
   {
+    "Type": "Border",
+    "Name": "Border_0",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Left",
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "Background": {
+        "DrawAs": "ESlateBrushDrawType::NoDrawType"
+      },
+      "Slots": [
+        {
+          "ObjectName": "BorderSlot UI_PastryHeater_MessageBubble_C:WidgetTree.Border_0.BorderSlot_0",
+          "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.1"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot UI_PastryHeater_MessageBubble_C:WidgetTree.Overlay_0.OverlaySlot_0",
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.27"
+      },
+      "Clipping": "EWidgetClipping::ClipToBounds"
+    }
+  },
+  {
+    "Type": "BorderSlot",
+    "Name": "BorderSlot_0",
+    "Outer": "Border_0",
+    "Properties": {
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Left",
+      "Parent": {
+        "ObjectName": "Border UI_PastryHeater_MessageBubble_C:WidgetTree.Border_0",
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.0"
+      },
+      "Content": {
+        "ObjectName": "SizeBox UI_PastryHeater_MessageBubble_C:WidgetTree.SizeBox_Text",
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.36"
+      }
+    }
+  },
+  {
+    "Type": "CommonRichTextBlock",
+    "Name": "Message",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Text": {
+        "CultureInvariantString": "<name>Farmer Joe:</> This text is <b>emphasized</>. This is text about an <enemy>enemy</> and a <ally>friendly</>."
+      },
+      "TextStyleSet": {
+        "ObjectName": "DataTable PastyHeaterMessage_RichTextStyleSet",
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/PastyHeaterMessage_RichTextStyleSet.0"
+      },
+      "bOverrideDefaultStyle": true,
+      "DefaultTextStyleOverride": {
+        "Font": {
+          "FontObject": {
+            "ObjectName": "Font BurbankSmall",
+            "ObjectPath": "/Game/UI/Foundation/Fonts/BurbankSmall.0"
+          },
+          "TypefaceFontName": "Bold",
+          "Size": 20
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 1.0,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "FFFFFFFF"
+          }
+        }
+      },
+      "Justification": "ETextJustify::Center",
+      "WrapTextAt": 500.0,
+      "LineHeightPercentage": 0.9,
+      "Slot": {
+        "ObjectName": "PanelSlot UI_PastryHeater_MessageBubble_C:WidgetTree.RetainerBox_TextReveal.PanelSlot_0",
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.33"
+      }
+    }
+  },
+  {
+    "Type": "CommonRichTextBlock",
+    "Name": "Message_ForSize",
+    "Outer": "WidgetTree",
+    "Properties": {
+      "Text": {
+        "CultureInvariantString": "<name>Farmer Joe:</> This text is <b>emphasized</>. This is text about an <enemy>enemy</> and a <ally>friendly</>."
+      },
+      "TextStyleSet": {
+        "ObjectName": "DataTable PastyHeaterMessage_RichTextStyleSet",
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/PastyHeaterMessage_RichTextStyleSet.0"
+      },
+      "bOverrideDefaultStyle": true,
+      "DefaultTextStyleOverride": {
+        "Font": {
+          "FontObject": {
+            "ObjectName": "Font BurbankSmall",
+            "ObjectPath": "/Game/UI/Foundation/Fonts/BurbankSmall.0"
+          },
+          "TypefaceFontName": "Bold",
+          "Size": 20
+        },
+        "ColorAndOpacity": {
+          "SpecifiedColor": {
+            "R": 1.0,
+            "G": 1.0,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "FFFFFFFF"
+          }
+        }
+      },
+      "Justification": "ETextJustify::Center",
+      "WrapTextAt": 500.0,
+      "LineHeightPercentage": 0.9,
+      "Slot": {
+        "ObjectName": "OverlaySlot UI_PastryHeater_MessageBubble_C:WidgetTree.Overlay_0.OverlaySlot_2",
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.28"
+      },
+      "RenderOpacity": 0.0
+    }
+  },
+  {
     "Type": "Function",
     "Name": "ExecuteUbergraph_UI_PastryHeater_MessageBubble",
     "Outer": "UI_PastryHeater_MessageBubble_C",
@@ -155,6 +288,26 @@
   },
   {
     "Type": "Function",
+    "Name": "OnMessageHidden",
+    "Outer": "UI_PastryHeater_MessageBubble_C",
+    "SuperStruct": {
+      "ObjectName": "Class FortConversationMessageWidget:OnMessageHidden",
+      "ObjectPath": "/Script/FortniteConversationUI"
+    },
+    "FunctionFlags": 134744064
+  },
+  {
+    "Type": "Function",
+    "Name": "OnMessageShown",
+    "Outer": "UI_PastryHeater_MessageBubble_C",
+    "SuperStruct": {
+      "ObjectName": "Class FortConversationMessageWidget:OnMessageShown",
+      "ObjectPath": "/Script/FortniteConversationUI"
+    },
+    "FunctionFlags": 134744064
+  },
+  {
+    "Type": "Function",
     "Name": "OnPreviewMessageSet",
     "Outer": "UI_PastryHeater_MessageBubble_C",
     "SuperStruct": {
@@ -173,339 +326,6 @@
     "FunctionFlags": 138938368
   },
   {
-    "Type": "Function",
-    "Name": "OnMessageShown",
-    "Outer": "UI_PastryHeater_MessageBubble_C",
-    "SuperStruct": {
-      "ObjectName": "Class FortConversationMessageWidget:OnMessageShown",
-      "ObjectPath": "/Script/FortniteConversationUI"
-    },
-    "FunctionFlags": 134744064
-  },
-  {
-    "Type": "Function",
-    "Name": "OnMessageHidden",
-    "Outer": "UI_PastryHeater_MessageBubble_C",
-    "SuperStruct": {
-      "ObjectName": "Class FortConversationMessageWidget:OnMessageHidden",
-      "ObjectPath": "/Script/FortniteConversationUI"
-    },
-    "FunctionFlags": 134744064
-  },
-  {
-    "Type": "WidgetBlueprintGeneratedClass",
-    "Name": "UI_PastryHeater_MessageBubble_C",
-    "Properties": {
-      "WidgetTree": {
-        "ObjectName": "WidgetTree UI_PastryHeater_MessageBubble_C:WidgetTree",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.43"
-      },
-      "Animations": [
-        {
-          "ObjectName": "WidgetAnimation UI_PastryHeater_MessageBubble_C:NewMessage_INST",
-          "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.42"
-        }
-      ],
-      "UberGraphFunction": {
-        "ObjectName": "Function UI_PastryHeater_MessageBubble_C:ExecuteUbergraph_UI_PastryHeater_MessageBubble",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.0"
-      }
-    },
-    "SuperStruct": {
-      "ObjectName": "Class FortConversationMessageWidget",
-      "ObjectPath": "/Script/FortniteConversationUI"
-    },
-    "Children": [
-      {
-        "ObjectName": "Function UI_PastryHeater_MessageBubble_C:OnMessageHidden",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.4"
-      },
-      {
-        "ObjectName": "Function UI_PastryHeater_MessageBubble_C:OnMessageShown",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.3"
-      },
-      {
-        "ObjectName": "Function UI_PastryHeater_MessageBubble_C:OnPreviewMessageSet",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.2"
-      },
-      {
-        "ObjectName": "Function UI_PastryHeater_MessageBubble_C:OnMainMessageSet",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.1"
-      },
-      {
-        "ObjectName": "Function UI_PastryHeater_MessageBubble_C:ExecuteUbergraph_UI_PastryHeater_MessageBubble",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.0"
-      }
-    ],
-    "ChildProperties": [
-      {
-        "Type": "StructProperty",
-        "Name": "UberGraphFrame",
-        "Flags": 2097153,
-        "ElementSize": 16,
-        "PropertyFlags": 2105344,
-        "Struct": {
-          "ObjectName": "Class PointerToUberGraphFrame",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "NewMessage",
-        "Flags": 2097153,
-        "ElementSize": 8,
-        "PropertyFlags": 2147491860,
-        "PropertyClass": {
-          "ObjectName": "Class WidgetAnimation",
-          "ObjectPath": "/Script/UMG"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "Background",
-        "Flags": 2097153,
-        "ElementSize": 8,
-        "PropertyFlags": 562952101429260,
-        "PropertyClass": {
-          "ObjectName": "Class Image",
-          "ObjectPath": "/Script/UMG"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "Image_Tail",
-        "Flags": 2097153,
-        "ElementSize": 8,
-        "PropertyFlags": 562952101429260,
-        "PropertyClass": {
-          "ObjectName": "Class Image",
-          "ObjectPath": "/Script/UMG"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "Message",
-        "Flags": 2097153,
-        "ElementSize": 8,
-        "PropertyFlags": 562952101429260,
-        "PropertyClass": {
-          "ObjectName": "Class CommonRichTextBlock",
-          "ObjectPath": "/Script/CommonUI"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "Message_ForSize",
-        "Flags": 2097153,
-        "ElementSize": 8,
-        "PropertyFlags": 562952101429260,
-        "PropertyClass": {
-          "ObjectName": "Class CommonRichTextBlock",
-          "ObjectPath": "/Script/CommonUI"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "RetainerBox_TextReveal",
-        "Flags": 2097153,
-        "ElementSize": 8,
-        "PropertyFlags": 562952101429260,
-        "PropertyClass": {
-          "ObjectName": "Class RetainerBox",
-          "ObjectPath": "/Script/UMG"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "SizeBox_Text",
-        "Flags": 2097153,
-        "ElementSize": 8,
-        "PropertyFlags": 562952101429260,
-        "PropertyClass": {
-          "ObjectName": "Class SizeBox",
-          "ObjectPath": "/Script/UMG"
-        }
-      }
-    ],
-    "FuncMap": {
-      "ExecuteUbergraph_UI_PastryHeater_MessageBubble": {
-        "ObjectName": "Function UI_PastryHeater_MessageBubble_C:ExecuteUbergraph_UI_PastryHeater_MessageBubble",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.0"
-      },
-      "OnMainMessageSet": {
-        "ObjectName": "Function UI_PastryHeater_MessageBubble_C:OnMainMessageSet",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.1"
-      },
-      "OnPreviewMessageSet": {
-        "ObjectName": "Function UI_PastryHeater_MessageBubble_C:OnPreviewMessageSet",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.2"
-      },
-      "OnMessageShown": {
-        "ObjectName": "Function UI_PastryHeater_MessageBubble_C:OnMessageShown",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.3"
-      },
-      "OnMessageHidden": {
-        "ObjectName": "Function UI_PastryHeater_MessageBubble_C:OnMessageHidden",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.4"
-      }
-    },
-    "ClassFlags": 10754064,
-    "ClassWithin": {
-      "ObjectName": "Class Object",
-      "ObjectPath": "/Script/CoreUObject"
-    },
-    "ClassConfigName": "Engine",
-    "ClassGeneratedBy": null,
-    "Interfaces": [],
-    "bCooked": true,
-    "ClassDefaultObject": {
-      "ObjectName": "UI_PastryHeater_MessageBubble_C Default__UI_PastryHeater_MessageBubble_C",
-      "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.6"
-    }
-  },
-  {
-    "Type": "UI_PastryHeater_MessageBubble_C",
-    "Name": "Default__UI_PastryHeater_MessageBubble_C",
-    "Properties": {
-      "UberGraphFrame": {},
-      "bHasScriptImplementedTick": false,
-      "bHasScriptImplementedPaint": false
-    }
-  },
-  {
-    "Type": "Border",
-    "Name": "Border_0",
-    "Outer": "WidgetTree",
-    "Properties": {
-      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Left",
-      "Padding": {
-        "Left": 0.0,
-        "Top": 0.0,
-        "Right": 0.0,
-        "Bottom": 0.0
-      },
-      "Background": {
-        "DrawAs": "ESlateBrushDrawType::NoDrawType"
-      },
-      "Slots": [
-        {
-          "ObjectName": "BorderSlot UI_PastryHeater_MessageBubble_C:WidgetTree.Border_0.BorderSlot_0",
-          "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.8"
-        }
-      ],
-      "Slot": {
-        "ObjectName": "OverlaySlot UI_PastryHeater_MessageBubble_C:WidgetTree.Overlay_0.OverlaySlot_0",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.29"
-      },
-      "Clipping": "EWidgetClipping::ClipToBounds"
-    }
-  },
-  {
-    "Type": "BorderSlot",
-    "Name": "BorderSlot_0",
-    "Outer": "Border_0",
-    "Properties": {
-      "Padding": {
-        "Left": 0.0,
-        "Top": 0.0,
-        "Right": 0.0,
-        "Bottom": 0.0
-      },
-      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Left",
-      "Parent": {
-        "ObjectName": "Border UI_PastryHeater_MessageBubble_C:WidgetTree.Border_0",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.7"
-      },
-      "Content": {
-        "ObjectName": "SizeBox UI_PastryHeater_MessageBubble_C:WidgetTree.SizeBox_Text",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.38"
-      }
-    }
-  },
-  {
-    "Type": "CommonRichTextBlock",
-    "Name": "Message",
-    "Outer": "WidgetTree",
-    "Properties": {
-      "Text": {
-        "CultureInvariantString": "<name>Farmer Joe:</> This text is <b>emphasized</>. This is text about an <enemy>enemy</> and a <ally>friendly</>."
-      },
-      "TextStyleSet": {
-        "ObjectName": "DataTable PastyHeaterMessage_RichTextStyleSet",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/PastyHeaterMessage_RichTextStyleSet.0"
-      },
-      "bOverrideDefaultStyle": true,
-      "DefaultTextStyleOverride": {
-        "Font": {
-          "FontObject": {
-            "ObjectName": "Font BurbankSmall",
-            "ObjectPath": "/Game/UI/Foundation/Fonts/BurbankSmall.0"
-          },
-          "TypefaceFontName": "Bold",
-          "Size": 20
-        },
-        "ColorAndOpacity": {
-          "SpecifiedColor": {
-            "R": 1.0,
-            "G": 1.0,
-            "B": 1.0,
-            "A": 1.0,
-            "Hex": "FFFFFF"
-          }
-        }
-      },
-      "Justification": "ETextJustify::Center",
-      "WrapTextAt": 500.0,
-      "LineHeightPercentage": 0.9,
-      "Slot": {
-        "ObjectName": "PanelSlot UI_PastryHeater_MessageBubble_C:WidgetTree.RetainerBox_TextReveal.PanelSlot_0",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.35"
-      }
-    }
-  },
-  {
-    "Type": "CommonRichTextBlock",
-    "Name": "Message_ForSize",
-    "Outer": "WidgetTree",
-    "Properties": {
-      "Text": {
-        "CultureInvariantString": "<name>Farmer Joe:</> This text is <b>emphasized</>. This is text about an <enemy>enemy</> and a <ally>friendly</>."
-      },
-      "TextStyleSet": {
-        "ObjectName": "DataTable PastyHeaterMessage_RichTextStyleSet",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/PastyHeaterMessage_RichTextStyleSet.0"
-      },
-      "bOverrideDefaultStyle": true,
-      "DefaultTextStyleOverride": {
-        "Font": {
-          "FontObject": {
-            "ObjectName": "Font BurbankSmall",
-            "ObjectPath": "/Game/UI/Foundation/Fonts/BurbankSmall.0"
-          },
-          "TypefaceFontName": "Bold",
-          "Size": 20
-        },
-        "ColorAndOpacity": {
-          "SpecifiedColor": {
-            "R": 1.0,
-            "G": 1.0,
-            "B": 1.0,
-            "A": 1.0,
-            "Hex": "FFFFFF"
-          }
-        }
-      },
-      "Justification": "ETextJustify::Center",
-      "WrapTextAt": 500.0,
-      "LineHeightPercentage": 0.9,
-      "Slot": {
-        "ObjectName": "OverlaySlot UI_PastryHeater_MessageBubble_C:WidgetTree.Overlay_0.OverlaySlot_2",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.30"
-      },
-      "RenderOpacity": 0.0
-    }
-  },
-  {
     "Type": "HorizontalBox",
     "Name": "HorizontalBox_Tail",
     "Outer": "WidgetTree",
@@ -513,16 +333,16 @@
       "Slots": [
         {
           "ObjectName": "HorizontalBoxSlot UI_PastryHeater_MessageBubble_C:WidgetTree.HorizontalBox_Tail.HorizontalBoxSlot_0",
-          "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.12"
+          "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.10"
         },
         {
           "ObjectName": "HorizontalBoxSlot UI_PastryHeater_MessageBubble_C:WidgetTree.HorizontalBox_Tail.HorizontalBoxSlot_1",
-          "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.13"
+          "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.11"
         }
       ],
       "Slot": {
         "ObjectName": "OverlaySlot UI_PastryHeater_MessageBubble_C:WidgetTree.Overlay_DialogContainer.OverlaySlot_1",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.34"
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.32"
       }
     }
   },
@@ -537,11 +357,11 @@
       "HorizontalAlignment": "EHorizontalAlignment::HAlign_Right",
       "Parent": {
         "ObjectName": "HorizontalBox UI_PastryHeater_MessageBubble_C:WidgetTree.HorizontalBox_Tail",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.11"
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.9"
       },
       "Content": {
         "ObjectName": "Image UI_PastryHeater_MessageBubble_C:WidgetTree.Image_Tail",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.15"
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.13"
       }
     }
   },
@@ -556,11 +376,11 @@
       },
       "Parent": {
         "ObjectName": "HorizontalBox UI_PastryHeater_MessageBubble_C:WidgetTree.HorizontalBox_Tail",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.11"
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.9"
       },
       "Content": {
         "ObjectName": "Spacer UI_PastryHeater_MessageBubble_C:WidgetTree.Spacer_74",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.41"
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.39"
       }
     }
   },
@@ -589,11 +409,11 @@
         "G": 0.005182,
         "B": 0.005605,
         "A": 0.9,
-        "Hex": "E6010101"
+        "Hex": "E6101011"
       },
       "Slot": {
         "ObjectName": "OverlaySlot UI_PastryHeater_MessageBubble_C:WidgetTree.Overlay_BubbleContainer.OverlaySlot_0",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.31"
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.29"
       },
       "RenderTransform": {
         "Shear": {
@@ -627,11 +447,11 @@
         "G": 0.005182,
         "B": 0.005605,
         "A": 0.9,
-        "Hex": "E6010101"
+        "Hex": "E6101011"
       },
       "Slot": {
         "ObjectName": "HorizontalBoxSlot UI_PastryHeater_MessageBubble_C:WidgetTree.HorizontalBox_Tail.HorizontalBoxSlot_0",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.12"
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.10"
       },
       "RenderTransform": {
         "Scale": {
@@ -679,7 +499,7 @@
           "Tracks": [
             {
               "ObjectName": "MovieScene2DTransformTrack UI_PastryHeater_MessageBubble_C:NewMessage_INST.NewMessage.MovieScene2DTransformTrack_0",
-              "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.18"
+              "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.16"
             }
           ]
         },
@@ -688,8 +508,8 @@
           "BindingName": "Border_0",
           "Tracks": [
             {
-              "ObjectName": "MovieSceneVectorTrack UI_PastryHeater_MessageBubble_C:NewMessage_INST.NewMessage.MovieSceneVectorTrack_0",
-              "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.25"
+              "ObjectName": "MovieSceneFloatVectorTrack UI_PastryHeater_MessageBubble_C:NewMessage_INST.NewMessage.MovieSceneVectorTrack_0",
+              "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.23"
             }
           ]
         }
@@ -722,8 +542,8 @@
     "Outer": "MovieScene2DTransformTrack_0",
     "Properties": {
       "Scale": {
-        "PreInfinityExtrap": 4,
-        "PostInfinityExtrap": 4,
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
         "Times": [
           {
             "Value": 0
@@ -785,8 +605,8 @@
         "bShowCurve": false
       },
       "Scale": {
-        "PreInfinityExtrap": 4,
-        "PostInfinityExtrap": 4,
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
         "Times": [
           {
             "Value": 0
@@ -850,11 +670,11 @@
       "Easing": {
         "EaseIn": {
           "ObjectName": "MovieSceneBuiltInEasingFunction UI_PastryHeater_MessageBubble_C:NewMessage_INST.NewMessage.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseInFunction",
-          "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.19"
+          "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.17"
         },
         "EaseOut": {
           "ObjectName": "MovieSceneBuiltInEasingFunction UI_PastryHeater_MessageBubble_C:NewMessage_INST.NewMessage.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0.EaseOutFunction",
-          "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.20"
+          "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.18"
         }
       },
       "SectionRange": {
@@ -889,7 +709,7 @@
       "Sections": [
         {
           "ObjectName": "MovieScene2DTransformSection UI_PastryHeater_MessageBubble_C:NewMessage_INST.NewMessage.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0",
-          "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.17"
+          "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.15"
         }
       ],
       "EvaluationFieldGuid": "EB5CCA68-4486CEF8-EB6C4884-86442ECB",
@@ -898,7 +718,7 @@
           {
             "Section": {
               "ObjectName": "MovieScene2DTransformSection UI_PastryHeater_MessageBubble_C:NewMessage_INST.NewMessage.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0",
-              "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.17"
+              "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.15"
             },
             "Range": {
               "LowerBound": {
@@ -1011,7 +831,7 @@
             "Key": {
               "EntityOwner": {
                 "ObjectName": "MovieScene2DTransformSection UI_PastryHeater_MessageBubble_C:NewMessage_INST.NewMessage.MovieScene2DTransformTrack_0.MovieScene2DTransformSection_0",
-                "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.17"
+                "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.15"
               },
               "EntityID": 0
             },
@@ -1020,8 +840,8 @@
           {
             "Key": {
               "EntityOwner": {
-                "ObjectName": "MovieSceneVectorSection UI_PastryHeater_MessageBubble_C:NewMessage_INST.NewMessage.MovieSceneVectorTrack_0.MovieSceneVectorSection_0",
-                "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.24"
+                "ObjectName": "MovieSceneFloatVectorSection UI_PastryHeater_MessageBubble_C:NewMessage_INST.NewMessage.MovieSceneVectorTrack_0.MovieSceneVectorSection_0",
+                "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.22"
               },
               "EntityID": 0
             },
@@ -1048,13 +868,13 @@
     }
   },
   {
-    "Type": "MovieSceneVectorSection",
+    "Type": "MovieSceneFloatVectorSection",
     "Name": "MovieSceneVectorSection_0",
     "Outer": "MovieSceneVectorTrack_0",
     "Properties": {
       "Curves": {
-        "PreInfinityExtrap": 4,
-        "PostInfinityExtrap": 4,
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
         "Times": [
           {
             "Value": 0
@@ -1103,11 +923,11 @@
       "Easing": {
         "EaseIn": {
           "ObjectName": "MovieSceneBuiltInEasingFunction UI_PastryHeater_MessageBubble_C:NewMessage_INST.NewMessage.MovieSceneVectorTrack_0.MovieSceneVectorSection_0.EaseInFunction",
-          "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.21"
+          "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.19"
         },
         "EaseOut": {
           "ObjectName": "MovieSceneBuiltInEasingFunction UI_PastryHeater_MessageBubble_C:NewMessage_INST.NewMessage.MovieSceneVectorTrack_0.MovieSceneVectorSection_0.EaseOutFunction",
-          "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.22"
+          "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.20"
         }
       },
       "SectionRange": {
@@ -1130,7 +950,7 @@
     }
   },
   {
-    "Type": "MovieSceneVectorTrack",
+    "Type": "MovieSceneFloatVectorTrack",
     "Name": "MovieSceneVectorTrack_0",
     "Outer": "NewMessage",
     "Properties": {
@@ -1142,8 +962,8 @@
       },
       "Sections": [
         {
-          "ObjectName": "MovieSceneVectorSection UI_PastryHeater_MessageBubble_C:NewMessage_INST.NewMessage.MovieSceneVectorTrack_0.MovieSceneVectorSection_0",
-          "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.24"
+          "ObjectName": "MovieSceneFloatVectorSection UI_PastryHeater_MessageBubble_C:NewMessage_INST.NewMessage.MovieSceneVectorTrack_0.MovieSceneVectorSection_0",
+          "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.22"
         }
       ],
       "EvaluationFieldGuid": "122BE0FB-487F7755-85DDA490-737C9C88",
@@ -1151,8 +971,8 @@
         "Entries": [
           {
             "Section": {
-              "ObjectName": "MovieSceneVectorSection UI_PastryHeater_MessageBubble_C:NewMessage_INST.NewMessage.MovieSceneVectorTrack_0.MovieSceneVectorSection_0",
-              "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.24"
+              "ObjectName": "MovieSceneFloatVectorSection UI_PastryHeater_MessageBubble_C:NewMessage_INST.NewMessage.MovieSceneVectorTrack_0.MovieSceneVectorSection_0",
+              "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.22"
             },
             "Range": {
               "LowerBound": {
@@ -1187,16 +1007,16 @@
       "Slots": [
         {
           "ObjectName": "OverlaySlot UI_PastryHeater_MessageBubble_C:WidgetTree.Overlay_0.OverlaySlot_2",
-          "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.30"
+          "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.28"
         },
         {
           "ObjectName": "OverlaySlot UI_PastryHeater_MessageBubble_C:WidgetTree.Overlay_0.OverlaySlot_0",
-          "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.29"
+          "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.27"
         }
       ],
       "Slot": {
         "ObjectName": "OverlaySlot UI_PastryHeater_MessageBubble_C:WidgetTree.Overlay_BubbleContainer.OverlaySlot_1",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.32"
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.30"
       }
     }
   },
@@ -1208,16 +1028,16 @@
       "Slots": [
         {
           "ObjectName": "OverlaySlot UI_PastryHeater_MessageBubble_C:WidgetTree.Overlay_BubbleContainer.OverlaySlot_0",
-          "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.31"
+          "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.29"
         },
         {
           "ObjectName": "OverlaySlot UI_PastryHeater_MessageBubble_C:WidgetTree.Overlay_BubbleContainer.OverlaySlot_1",
-          "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.32"
+          "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.30"
         }
       ],
       "Slot": {
         "ObjectName": "OverlaySlot UI_PastryHeater_MessageBubble_C:WidgetTree.Overlay_DialogContainer.OverlaySlot_0",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.33"
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.31"
       }
     }
   },
@@ -1229,16 +1049,16 @@
       "Slots": [
         {
           "ObjectName": "OverlaySlot UI_PastryHeater_MessageBubble_C:WidgetTree.Overlay_DialogContainer.OverlaySlot_0",
-          "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.33"
+          "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.31"
         },
         {
           "ObjectName": "OverlaySlot UI_PastryHeater_MessageBubble_C:WidgetTree.Overlay_DialogContainer.OverlaySlot_1",
-          "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.34"
+          "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.32"
         }
       ],
       "Slot": {
         "ObjectName": "SizeBoxSlot UI_PastryHeater_MessageBubble_C:WidgetTree.SizeBox_0.SizeBoxSlot_0",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.39"
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.37"
       },
       "RenderTransform": {
         "Shear": {
@@ -1258,11 +1078,11 @@
       },
       "Parent": {
         "ObjectName": "Overlay UI_PastryHeater_MessageBubble_C:WidgetTree.Overlay_0",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.26"
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.24"
       },
       "Content": {
         "ObjectName": "Border UI_PastryHeater_MessageBubble_C:WidgetTree.Border_0",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.7"
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.0"
       }
     }
   },
@@ -1276,11 +1096,11 @@
       },
       "Parent": {
         "ObjectName": "Overlay UI_PastryHeater_MessageBubble_C:WidgetTree.Overlay_0",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.26"
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.24"
       },
       "Content": {
         "ObjectName": "CommonRichTextBlock UI_PastryHeater_MessageBubble_C:WidgetTree.Message_ForSize",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.10"
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.3"
       }
     }
   },
@@ -1293,11 +1113,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
       "Parent": {
         "ObjectName": "Overlay UI_PastryHeater_MessageBubble_C:WidgetTree.Overlay_BubbleContainer",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.27"
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.25"
       },
       "Content": {
         "ObjectName": "Image UI_PastryHeater_MessageBubble_C:WidgetTree.Background",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.14"
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.12"
       }
     }
   },
@@ -1316,11 +1136,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
       "Parent": {
         "ObjectName": "Overlay UI_PastryHeater_MessageBubble_C:WidgetTree.Overlay_BubbleContainer",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.27"
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.25"
       },
       "Content": {
         "ObjectName": "Overlay UI_PastryHeater_MessageBubble_C:WidgetTree.Overlay_0",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.26"
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.24"
       }
     }
   },
@@ -1333,11 +1153,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
       "Parent": {
         "ObjectName": "Overlay UI_PastryHeater_MessageBubble_C:WidgetTree.Overlay_DialogContainer",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.28"
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.26"
       },
       "Content": {
         "ObjectName": "Overlay UI_PastryHeater_MessageBubble_C:WidgetTree.Overlay_BubbleContainer",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.27"
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.25"
       }
     }
   },
@@ -1350,11 +1170,11 @@
       "VerticalAlignment": "EVerticalAlignment::VAlign_Bottom",
       "Parent": {
         "ObjectName": "Overlay UI_PastryHeater_MessageBubble_C:WidgetTree.Overlay_DialogContainer",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.28"
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.26"
       },
       "Content": {
         "ObjectName": "HorizontalBox UI_PastryHeater_MessageBubble_C:WidgetTree.HorizontalBox_Tail",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.11"
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.9"
       }
     }
   },
@@ -1365,11 +1185,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "RetainerBox UI_PastryHeater_MessageBubble_C:WidgetTree.RetainerBox_TextReveal",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.36"
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.34"
       },
       "Content": {
         "ObjectName": "CommonRichTextBlock UI_PastryHeater_MessageBubble_C:WidgetTree.Message",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.9"
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.2"
       }
     }
   },
@@ -1386,12 +1206,12 @@
       "Slots": [
         {
           "ObjectName": "PanelSlot UI_PastryHeater_MessageBubble_C:WidgetTree.RetainerBox_TextReveal.PanelSlot_0",
-          "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.35"
+          "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.33"
         }
       ],
       "Slot": {
         "ObjectName": "SizeBoxSlot UI_PastryHeater_MessageBubble_C:WidgetTree.SizeBox_Text.SizeBoxSlot_0",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.40"
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.38"
       }
     }
   },
@@ -1404,7 +1224,7 @@
       "Slots": [
         {
           "ObjectName": "SizeBoxSlot UI_PastryHeater_MessageBubble_C:WidgetTree.SizeBox_0.SizeBoxSlot_0",
-          "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.39"
+          "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.37"
         }
       ]
     }
@@ -1421,12 +1241,12 @@
       "Slots": [
         {
           "ObjectName": "SizeBoxSlot UI_PastryHeater_MessageBubble_C:WidgetTree.SizeBox_Text.SizeBoxSlot_0",
-          "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.40"
+          "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.38"
         }
       ],
       "Slot": {
         "ObjectName": "BorderSlot UI_PastryHeater_MessageBubble_C:WidgetTree.Border_0.BorderSlot_0",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.8"
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.1"
       },
       "bIsVariable": true
     }
@@ -1438,11 +1258,11 @@
     "Properties": {
       "Parent": {
         "ObjectName": "SizeBox UI_PastryHeater_MessageBubble_C:WidgetTree.SizeBox_0",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.37"
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.35"
       },
       "Content": {
         "ObjectName": "Overlay UI_PastryHeater_MessageBubble_C:WidgetTree.Overlay_DialogContainer",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.28"
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.26"
       }
     }
   },
@@ -1457,11 +1277,11 @@
       "HorizontalAlignment": "EHorizontalAlignment::HAlign_Left",
       "Parent": {
         "ObjectName": "SizeBox UI_PastryHeater_MessageBubble_C:WidgetTree.SizeBox_Text",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.38"
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.36"
       },
       "Content": {
         "ObjectName": "RetainerBox UI_PastryHeater_MessageBubble_C:WidgetTree.RetainerBox_TextReveal",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.36"
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.34"
       }
     }
   },
@@ -1472,8 +1292,17 @@
     "Properties": {
       "Slot": {
         "ObjectName": "HorizontalBoxSlot UI_PastryHeater_MessageBubble_C:WidgetTree.HorizontalBox_Tail.HorizontalBoxSlot_1",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.13"
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.11"
       }
+    }
+  },
+  {
+    "Type": "UI_PastryHeater_MessageBubble_C",
+    "Name": "Default__UI_PastryHeater_MessageBubble_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
     }
   },
   {
@@ -1483,18 +1312,18 @@
     "Properties": {
       "MovieScene": {
         "ObjectName": "MovieScene UI_PastryHeater_MessageBubble_C:NewMessage_INST.NewMessage",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.16"
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.14"
       },
       "AnimationBindings": [
         {
           "WidgetName": "Border_0",
-          "SlotWidgetName": null,
+          "SlotWidgetName": "None",
           "AnimationGuid": "3C01290D-4DAD9FE1-B91AB294-E0DC6F66",
           "bIsRootWidget": false
         },
         {
           "WidgetName": "Overlay_BubbleContainer",
-          "SlotWidgetName": null,
+          "SlotWidgetName": "None",
           "AnimationGuid": "6B53B886-4598FCF2-0E90569B-04796B18",
           "bIsRootWidget": false
         }
@@ -1502,9 +1331,181 @@
       "DisplayLabel": "NewMessage",
       "CompiledData": {
         "ObjectName": "MovieSceneCompiledData UI_PastryHeater_MessageBubble_C:NewMessage_INST.CompiledData",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.23"
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.21"
       },
       "Signature": "26A1830C-4B58DB4F-EA2C2CB9-67F5341F"
+    }
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "UI_PastryHeater_MessageBubble_C",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree UI_PastryHeater_MessageBubble_C:WidgetTree",
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.43"
+      },
+      "Animations": [
+        {
+          "ObjectName": "WidgetAnimation UI_PastryHeater_MessageBubble_C:NewMessage_INST",
+          "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.41"
+        }
+      ],
+      "UberGraphFunction": {
+        "ObjectName": "Function UI_PastryHeater_MessageBubble_C:ExecuteUbergraph_UI_PastryHeater_MessageBubble",
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.4"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class FortConversationMessageWidget",
+      "ObjectPath": "/Script/FortniteConversationUI"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function UI_PastryHeater_MessageBubble_C:OnMessageHidden",
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.6"
+      },
+      {
+        "ObjectName": "Function UI_PastryHeater_MessageBubble_C:OnMessageShown",
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.7"
+      },
+      {
+        "ObjectName": "Function UI_PastryHeater_MessageBubble_C:OnPreviewMessageSet",
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.8"
+      },
+      {
+        "ObjectName": "Function UI_PastryHeater_MessageBubble_C:OnMainMessageSet",
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.5"
+      },
+      {
+        "ObjectName": "Function UI_PastryHeater_MessageBubble_C:ExecuteUbergraph_UI_PastryHeater_MessageBubble",
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.4"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": 2097153,
+        "ElementSize": 16,
+        "PropertyFlags": 2105344,
+        "Struct": {
+          "ObjectName": "Class PointerToUberGraphFrame",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "NewMessage",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 2147491860,
+        "PropertyClass": {
+          "ObjectName": "Class WidgetAnimation",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Background",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 562952101429260,
+        "PropertyClass": {
+          "ObjectName": "Class Image",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Image_Tail",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 562952101429260,
+        "PropertyClass": {
+          "ObjectName": "Class Image",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Message",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 562952101429260,
+        "PropertyClass": {
+          "ObjectName": "Class CommonRichTextBlock",
+          "ObjectPath": "/Script/CommonUI"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Message_ForSize",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 562952101429260,
+        "PropertyClass": {
+          "ObjectName": "Class CommonRichTextBlock",
+          "ObjectPath": "/Script/CommonUI"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "RetainerBox_TextReveal",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 562952101429260,
+        "PropertyClass": {
+          "ObjectName": "Class RetainerBox",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SizeBox_Text",
+        "Flags": 2097153,
+        "ElementSize": 8,
+        "PropertyFlags": 562952101429260,
+        "PropertyClass": {
+          "ObjectName": "Class SizeBox",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_UI_PastryHeater_MessageBubble": {
+        "ObjectName": "Function UI_PastryHeater_MessageBubble_C:ExecuteUbergraph_UI_PastryHeater_MessageBubble",
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.4"
+      },
+      "OnMainMessageSet": {
+        "ObjectName": "Function UI_PastryHeater_MessageBubble_C:OnMainMessageSet",
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.5"
+      },
+      "OnPreviewMessageSet": {
+        "ObjectName": "Function UI_PastryHeater_MessageBubble_C:OnPreviewMessageSet",
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.8"
+      },
+      "OnMessageShown": {
+        "ObjectName": "Function UI_PastryHeater_MessageBubble_C:OnMessageShown",
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.7"
+      },
+      "OnMessageHidden": {
+        "ObjectName": "Function UI_PastryHeater_MessageBubble_C:OnMessageHidden",
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.6"
+      }
+    },
+    "ClassFlags": 10754064,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "UI_PastryHeater_MessageBubble_C Default__UI_PastryHeater_MessageBubble_C",
+      "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.40"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
     }
   },
   {
@@ -1514,7 +1515,7 @@
     "Properties": {
       "RootWidget": {
         "ObjectName": "SizeBox UI_PastryHeater_MessageBubble_C:WidgetTree.SizeBox_0",
-        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.37"
+        "ObjectPath": "/NPCLibrary/LGB/PastryHeater/UI_PastryHeater_MessageBubble.35"
       }
     }
   }

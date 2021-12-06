@@ -1,0 +1,480 @@
+[
+  {
+    "Type": "AudioComponent",
+    "Name": "FeedbackAudioComp0",
+    "Outer": "Default__BP_PlayerPawn_SevenGuard_C",
+    "Template": "FeedbackAudioComp0",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent Default__BP_PlayerPawn_SevenGuard_C:CollisionCylinder",
+        "ObjectPath": "/TheSeven/NPCs/SevenGuard/Pawns/BP_PlayerPawn_SevenGuard.4"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "InAirAudioComp",
+    "Outer": "Default__BP_PlayerPawn_SevenGuard_C",
+    "Template": "InAirAudioComp",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "FortPooledSkelMeshComponent Default__BP_PlayerPawn_SevenGuard_C:CharacterMesh0",
+        "ObjectPath": "/TheSeven/NPCs/SevenGuard/Pawns/BP_PlayerPawn_SevenGuard.11"
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_PlayerPawn_SevenGuard_C",
+    "Super": "BP_PlayerPawn_NonParticipant_C",
+    "Properties": {
+      "bHasCookedComponentInstancingData": true,
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript BP_PlayerPawn_SevenGuard_C:SimpleConstructionScript_0",
+        "ObjectPath": "/TheSeven/NPCs/SevenGuard/Pawns/BP_PlayerPawn_SevenGuard.24"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler BP_PlayerPawn_SevenGuard_C:InheritableComponentHandler",
+        "ObjectPath": "/TheSeven/NPCs/SevenGuard/Pawns/BP_PlayerPawn_SevenGuard.15"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function BP_PlayerPawn_SevenGuard_C:ExecuteUbergraph_BP_PlayerPawn_SevenGuard",
+        "ObjectPath": "/TheSeven/NPCs/SevenGuard/Pawns/BP_PlayerPawn_SevenGuard.13"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass BP_PlayerPawn_NonParticipant_C",
+      "ObjectPath": "/Game/Athena/AI/NPCs/Base/BP_PlayerPawn_NonParticipant.3"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function BP_PlayerPawn_SevenGuard_C:ReceiveBeginPlay",
+        "ObjectPath": "/TheSeven/NPCs/SevenGuard/Pawns/BP_PlayerPawn_SevenGuard.14"
+      },
+      {
+        "ObjectName": "Function BP_PlayerPawn_SevenGuard_C:ExecuteUbergraph_BP_PlayerPawn_SevenGuard",
+        "ObjectPath": "/TheSeven/NPCs/SevenGuard/Pawns/BP_PlayerPawn_SevenGuard.13"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": 2097153,
+        "ElementSize": 16,
+        "PropertyFlags": 2105344,
+        "Struct": {
+          "ObjectName": "Class PointerToUberGraphFrame",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_PlayerPawn_SevenGuard": {
+        "ObjectName": "Function BP_PlayerPawn_SevenGuard_C:ExecuteUbergraph_BP_PlayerPawn_SevenGuard",
+        "ObjectPath": "/TheSeven/NPCs/SevenGuard/Pawns/BP_PlayerPawn_SevenGuard.13"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function BP_PlayerPawn_SevenGuard_C:ReceiveBeginPlay",
+        "ObjectPath": "/TheSeven/NPCs/SevenGuard/Pawns/BP_PlayerPawn_SevenGuard.14"
+      }
+    },
+    "ClassFlags": 8652820,
+    "ClassWithin": {
+      "ObjectName": "Class Object",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_PlayerPawn_SevenGuard_C Default__BP_PlayerPawn_SevenGuard_C",
+      "ObjectPath": "/TheSeven/NPCs/SevenGuard/Pawns/BP_PlayerPawn_SevenGuard.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BP_PlayerPawn_SevenGuard_C",
+    "Name": "Default__BP_PlayerPawn_SevenGuard_C",
+    "Template": "Default__BP_PlayerPawn_NonParticipant_C",
+    "Properties": {
+      "UberGraphFrame": {},
+      "UseVO": true,
+      "UseDropExtraLootOnDeath": true,
+      "LootTier_Medium": "Loot_GIbson_Medium",
+      "LootTier_Shell": "Loot_GIbson_Shell",
+      "LootTier_Heavy": "Loot_GIbson_Heavy",
+      "LootTier_Light": "Loot_GIbson_Light",
+      "LootTier_Rockets": "Loot_GIbson_Rockets",
+      "PatrolAnimSetPairs": [
+        {
+          "WeaponType": "EFortWeaponCoreAnimation::Melee",
+          "DataAsset": {
+            "ObjectName": "FortPatrolAnimAsset MeleePatrolAnimSet",
+            "ObjectPath": "/Game/Athena/AI/MANG/AnimSet/MeleePatrolAnimSet.0"
+          }
+        },
+        {
+          "WeaponType": "EFortWeaponCoreAnimation::AssaultRifle",
+          "DataAsset": {
+            "ObjectName": "FortPatrolAnimAsset AssaultRiflePatrolAnimSet",
+            "ObjectPath": "/Game/Athena/AI/MANG/AnimSet/AssaultRiflePatrolAnimSet.0"
+          }
+        },
+        {
+          "WeaponType": "EFortWeaponCoreAnimation::Pistol",
+          "DataAsset": {
+            "ObjectName": "FortPatrolAnimAsset Pistol_Patrol_AnimSet",
+            "ObjectPath": "/Game/Athena/AI/MANG/AnimSet/Pistol_Patrol_AnimSet.0"
+          }
+        }
+      ],
+      "bShouldDropItemsOnDeath": false,
+      "InAirAudioComp": {
+        "ObjectName": "AudioComponent Default__BP_PlayerPawn_SevenGuard_C:InAirAudioComp",
+        "ObjectPath": "/TheSeven/NPCs/SevenGuard/Pawns/BP_PlayerPawn_SevenGuard.1"
+      },
+      "PSC_PlayerWalkLand": {
+        "ObjectName": "ParticleSystemComponent Default__BP_PlayerPawn_SevenGuard_C:PlayerWalkLandFX",
+        "ObjectPath": "/TheSeven/NPCs/SevenGuard/Pawns/BP_PlayerPawn_SevenGuard.21"
+      },
+      "PSC_PlayerRunLand": {
+        "ObjectName": "ParticleSystemComponent Default__BP_PlayerPawn_SevenGuard_C:PlayerRunLandFX",
+        "ObjectPath": "/TheSeven/NPCs/SevenGuard/Pawns/BP_PlayerPawn_SevenGuard.19"
+      },
+      "PSC_PlayerSlideLand": {
+        "ObjectName": "ParticleSystemComponent Default__BP_PlayerPawn_SevenGuard_C:PlayerSlideLandFX",
+        "ObjectPath": "/TheSeven/NPCs/SevenGuard/Pawns/BP_PlayerPawn_SevenGuard.20"
+      },
+      "PSC_HitDamage": {
+        "ObjectName": "ParticleSystemComponent Default__BP_PlayerPawn_SevenGuard_C:HitDamageFX",
+        "ObjectPath": "/TheSeven/NPCs/SevenGuard/Pawns/BP_PlayerPawn_SevenGuard.16"
+      },
+      "TetherComponent": {
+        "ObjectName": "FortPawnComponent_Tether Default__BP_PlayerPawn_SevenGuard_C:TetherComp",
+        "ObjectPath": "/TheSeven/NPCs/SevenGuard/Pawns/BP_PlayerPawn_SevenGuard.10"
+      },
+      "PSC_PlayerInWater": {
+        "ObjectName": "ParticleSystemComponent Default__BP_PlayerPawn_SevenGuard_C:PlayerInWaterFX",
+        "ObjectPath": "/TheSeven/NPCs/SevenGuard/Pawns/BP_PlayerPawn_SevenGuard.17"
+      },
+      "PSC_PlayerInWaterSurfaceSwimming": {
+        "ObjectName": "ParticleSystemComponent Default__BP_PlayerPawn_SevenGuard_C:PlayerInWaterSurfaceSwimmingFX",
+        "ObjectPath": "/TheSeven/NPCs/SevenGuard/Pawns/BP_PlayerPawn_SevenGuard.18"
+      },
+      "ConvertComponent": {
+        "ObjectName": "FortPawnComponent_Convert Default__BP_PlayerPawn_SevenGuard_C:ConvertComp",
+        "ObjectPath": "/TheSeven/NPCs/SevenGuard/Pawns/BP_PlayerPawn_SevenGuard.9"
+      },
+      "AffiliationComponent": {
+        "ObjectName": "FortActorComponent_Affiliation Default__BP_PlayerPawn_SevenGuard_C:AffiliationComponent",
+        "ObjectPath": "/TheSeven/NPCs/SevenGuard/Pawns/BP_PlayerPawn_SevenGuard.5"
+      },
+      "SoundIndicatorComponent": {
+        "ObjectName": "FortSoundIndicatorComponent Default__BP_PlayerPawn_SevenGuard_C:SoundIndicatorComponent",
+        "ObjectPath": "/TheSeven/NPCs/SevenGuard/Pawns/BP_PlayerPawn_SevenGuard.12"
+      },
+      "FortFootstepComponent": {
+        "ObjectName": "FortFootstepComponent Default__BP_PlayerPawn_SevenGuard_C:FortFootstepComp",
+        "ObjectPath": "/TheSeven/NPCs/SevenGuard/Pawns/BP_PlayerPawn_SevenGuard.6"
+      },
+      "VocalChords": [
+        {
+          "FeedbackAudioComponent": {
+            "ObjectName": "AudioComponent Default__BP_PlayerPawn_SevenGuard_C:FeedbackAudioComp0",
+            "ObjectPath": "/TheSeven/NPCs/SevenGuard/Pawns/BP_PlayerPawn_SevenGuard.0"
+          },
+          "ReplicatedSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          },
+          "PendingSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          },
+          "QueuedSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          },
+          "CurrentSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          }
+        }
+      ],
+      "GameplayTags": [
+        "Class.IsCommando",
+        "NPC.EnemyType.Pawn",
+        "Pawn.Athena.Player",
+        "Athena.AI.NoiseMaker",
+        "Pawn.Athena.NonParticipant",
+        "Athena.Gameplay.Status.ForceDBNO",
+        "Gameplay.Status.AutoPickupDisabled",
+        "Gameplay.Damage.Environment.ExcludedFromStormSurge",
+        "Pawn.Athena.NPC.IO",
+        "Athena.Phoebe.Escape"
+      ],
+      "Mesh": {
+        "ObjectName": "FortPooledSkelMeshComponent Default__BP_PlayerPawn_SevenGuard_C:CharacterMesh0",
+        "ObjectPath": "/TheSeven/NPCs/SevenGuard/Pawns/BP_PlayerPawn_SevenGuard.11"
+      },
+      "CharacterMovement": {
+        "ObjectName": "FortMovementComp_CharacterAthena Default__BP_PlayerPawn_SevenGuard_C:CharMoveComp",
+        "ObjectPath": "/TheSeven/NPCs/SevenGuard/Pawns/BP_PlayerPawn_SevenGuard.8"
+      },
+      "CapsuleComponent": {
+        "ObjectName": "CapsuleComponent Default__BP_PlayerPawn_SevenGuard_C:CollisionCylinder",
+        "ObjectPath": "/TheSeven/NPCs/SevenGuard/Pawns/BP_PlayerPawn_SevenGuard.4"
+      },
+      "AIControllerClass": {
+        "ObjectName": "BlueprintGeneratedClass BP_Controller_SevenGuard_C",
+        "ObjectPath": "/TheSeven/Controllers/BP_Controller_SevenGuard.5"
+      },
+      "RootComponent": {
+        "ObjectName": "CapsuleComponent Default__BP_PlayerPawn_SevenGuard_C:CollisionCylinder",
+        "ObjectPath": "/TheSeven/NPCs/SevenGuard/Pawns/BP_PlayerPawn_SevenGuard.4"
+      }
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "CollisionCylinder",
+    "Outer": "Default__BP_PlayerPawn_SevenGuard_C",
+    "Template": "CollisionCylinder"
+  },
+  {
+    "Type": "FortActorComponent_Affiliation",
+    "Name": "AffiliationComponent",
+    "Outer": "Default__BP_PlayerPawn_SevenGuard_C",
+    "Template": "AffiliationComponent"
+  },
+  {
+    "Type": "FortFootstepComponent",
+    "Name": "FortFootstepComp",
+    "Outer": "Default__BP_PlayerPawn_SevenGuard_C",
+    "Template": "FortFootstepComp"
+  },
+  {
+    "Type": "FortGenericDataStoreManagerComponent",
+    "Name": "GeneralDataStore",
+    "Outer": "Default__BP_PlayerPawn_SevenGuard_C",
+    "Template": "GeneralDataStore"
+  },
+  {
+    "Type": "FortMovementComp_CharacterAthena",
+    "Name": "CharMoveComp",
+    "Outer": "Default__BP_PlayerPawn_SevenGuard_C",
+    "Template": "CharMoveComp"
+  },
+  {
+    "Type": "FortPawnComponent_Convert",
+    "Name": "ConvertComp",
+    "Outer": "Default__BP_PlayerPawn_SevenGuard_C",
+    "Template": "ConvertComp"
+  },
+  {
+    "Type": "FortPawnComponent_Tether",
+    "Name": "TetherComp",
+    "Outer": "Default__BP_PlayerPawn_SevenGuard_C",
+    "Template": "TetherComp"
+  },
+  {
+    "Type": "FortPooledSkelMeshComponent",
+    "Name": "CharacterMesh0",
+    "Outer": "Default__BP_PlayerPawn_SevenGuard_C",
+    "Template": "CharacterMesh0",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent Default__BP_PlayerPawn_SevenGuard_C:CollisionCylinder",
+        "ObjectPath": "/TheSeven/NPCs/SevenGuard/Pawns/BP_PlayerPawn_SevenGuard.4"
+      }
+    }
+  },
+  {
+    "Type": "FortSoundIndicatorComponent",
+    "Name": "SoundIndicatorComponent",
+    "Outer": "Default__BP_PlayerPawn_SevenGuard_C",
+    "Template": "SoundIndicatorComponent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_PlayerPawn_SevenGuard",
+    "Outer": "BP_PlayerPawn_SevenGuard_C",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148
+      }
+    ],
+    "FunctionFlags": 32769
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "BP_PlayerPawn_SevenGuard_C",
+    "Super": "ReceiveBeginPlay",
+    "SuperStruct": {
+      "ObjectName": "Function BP_PlayerPawn_NonParticipant_C:ReceiveBeginPlay",
+      "ObjectPath": "/Game/Athena/AI/NPCs/Base/BP_PlayerPawn_NonParticipant.44"
+    },
+    "FunctionFlags": 134744064
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "BP_PlayerPawn_SevenGuard_C"
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "HitDamageFX",
+    "Outer": "Default__BP_PlayerPawn_SevenGuard_C",
+    "Template": "HitDamageFX",
+    "Properties": {
+      "AutoAttachParent": {
+        "ObjectName": "CapsuleComponent Default__BP_PlayerPawn_SevenGuard_C:CollisionCylinder",
+        "ObjectPath": "/TheSeven/NPCs/SevenGuard/Pawns/BP_PlayerPawn_SevenGuard.4"
+      },
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent Default__BP_PlayerPawn_SevenGuard_C:CollisionCylinder",
+        "ObjectPath": "/TheSeven/NPCs/SevenGuard/Pawns/BP_PlayerPawn_SevenGuard.4"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "PlayerInWaterFX",
+    "Outer": "Default__BP_PlayerPawn_SevenGuard_C",
+    "Template": "PlayerInWaterFX",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent Default__BP_PlayerPawn_SevenGuard_C:CollisionCylinder",
+        "ObjectPath": "/TheSeven/NPCs/SevenGuard/Pawns/BP_PlayerPawn_SevenGuard.4"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "PlayerInWaterSurfaceSwimmingFX",
+    "Outer": "Default__BP_PlayerPawn_SevenGuard_C",
+    "Template": "PlayerInWaterSurfaceSwimmingFX",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent Default__BP_PlayerPawn_SevenGuard_C:CollisionCylinder",
+        "ObjectPath": "/TheSeven/NPCs/SevenGuard/Pawns/BP_PlayerPawn_SevenGuard.4"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "PlayerRunLandFX",
+    "Outer": "Default__BP_PlayerPawn_SevenGuard_C",
+    "Template": "PlayerRunLandFX",
+    "Properties": {
+      "AutoAttachParent": {
+        "ObjectName": "FortPooledSkelMeshComponent Default__BP_PlayerPawn_SevenGuard_C:CharacterMesh0",
+        "ObjectPath": "/TheSeven/NPCs/SevenGuard/Pawns/BP_PlayerPawn_SevenGuard.11"
+      },
+      "AttachParent": {
+        "ObjectName": "FortPooledSkelMeshComponent Default__BP_PlayerPawn_SevenGuard_C:CharacterMesh0",
+        "ObjectPath": "/TheSeven/NPCs/SevenGuard/Pawns/BP_PlayerPawn_SevenGuard.11"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "PlayerSlideLandFX",
+    "Outer": "Default__BP_PlayerPawn_SevenGuard_C",
+    "Template": "PlayerSlideLandFX",
+    "Properties": {
+      "AutoAttachParent": {
+        "ObjectName": "FortPooledSkelMeshComponent Default__BP_PlayerPawn_SevenGuard_C:CharacterMesh0",
+        "ObjectPath": "/TheSeven/NPCs/SevenGuard/Pawns/BP_PlayerPawn_SevenGuard.11"
+      },
+      "AttachParent": {
+        "ObjectName": "FortPooledSkelMeshComponent Default__BP_PlayerPawn_SevenGuard_C:CharacterMesh0",
+        "ObjectPath": "/TheSeven/NPCs/SevenGuard/Pawns/BP_PlayerPawn_SevenGuard.11"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "PlayerWalkLandFX",
+    "Outer": "Default__BP_PlayerPawn_SevenGuard_C",
+    "Template": "PlayerWalkLandFX",
+    "Properties": {
+      "AutoAttachParent": {
+        "ObjectName": "FortPooledSkelMeshComponent Default__BP_PlayerPawn_SevenGuard_C:CharacterMesh0",
+        "ObjectPath": "/TheSeven/NPCs/SevenGuard/Pawns/BP_PlayerPawn_SevenGuard.11"
+      },
+      "AttachParent": {
+        "ObjectName": "FortPooledSkelMeshComponent Default__BP_PlayerPawn_SevenGuard_C:CharacterMesh0",
+        "ObjectPath": "/TheSeven/NPCs/SevenGuard/Pawns/BP_PlayerPawn_SevenGuard.11"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_PlayerPawn_SevenGuard_C"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class SceneComponent",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent BP_PlayerPawn_SevenGuard_C:DefaultSceneRoot_GEN_VARIABLE",
+        "ObjectPath": "/TheSeven/NPCs/SevenGuard/Pawns/BP_PlayerPawn_SevenGuard.22"
+      },
+      "VariableGuid": "1B59FC63-4BA68FD8-9C17F899-DC6582BC",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_PlayerPawn_SevenGuard_C",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node BP_PlayerPawn_SevenGuard_C:SimpleConstructionScript_0.SCS_Node_0",
+        "ObjectPath": "/TheSeven/NPCs/SevenGuard/Pawns/BP_PlayerPawn_SevenGuard.23"
+      }
+    }
+  }
+]
