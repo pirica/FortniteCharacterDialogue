@@ -15,21 +15,21 @@
     },
     "SuperStruct": {
       "ObjectName": "BlueprintGeneratedClass BP_StationProp_VendingMachine_Emote_Base_C",
-      "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachine_Emote_Base.31"
+      "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachine_Emote_Base.2"
     },
-    "FuncMap": {},
     "ClassFlags": 8652820,
     "ClassWithin": {
       "ObjectName": "Class Object",
       "ObjectPath": "/Script/CoreUObject"
     },
     "ClassConfigName": "Game",
-    "ClassGeneratedBy": null,
-    "Interfaces": [],
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "BP_StationProp_VendingMachine_E_Mending_C Default__BP_StationProp_VendingMachine_E_Mending_C",
       "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachine_E_Mending.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
     }
   },
   {
@@ -42,38 +42,111 @@
         "Key": "0D044A9847F09E580E85C79CEA7622C5",
         "SourceString": "Wow! You've gotta teach me how to do that arm thing!"
       },
-      "OnTakeDamageMessage_Light": {
-        "Namespace": "",
-        "Key": "08172E6E484FE6C2D31AE383E837C89C",
-        "SourceString": "Oopsie! Careful with my panels, BFF!"
-      },
-      "OnTakeDamageMessage_Med": {
-        "Namespace": "",
-        "Key": "505727B5497182716971F19C2232E149",
-        "SourceString": "Um, so, quick friendly pointer: you're damaging me."
-      },
-      "OnTakeDamageMessage_Heavy": {
-        "Namespace": "",
-        "Key": "526A977A42A2113276C137AB75854825",
-        "SourceString": "BESTIE NO! WHY?!"
-      },
-      "DmgMatStyleName_Light": "Blush",
-      "DmgMatStyleName_Med": "Shock",
       "LastDialogMarkerInteractionState": "EDialogMarkerInteractionState::Conversation",
       "OnPlayerInteractSound": {
         "ObjectName": "SoundCue StationProp_Jingle_BFF_Cue",
         "ObjectPath": "/Game/Sounds/Foley_Loot/Containers/StationProp/StationProp_Jingle_BFF_Cue.0"
       },
       "SpecificPlayerDanceMatStyleNames": {
-        "/Game/Athena/Items/Cosmetics/Dances/PatPat/EID_PatPat.EID_PatPat": "Excited"
+        "/Game/Athena/Items/Cosmetics/Dances/PatPat/EID_PatPat.EID_PatPat": "Excited",
+        "/Game/Athena/Items/Cosmetics/Dances/EID_Laugh.EID_Laugh": "Sad",
+        "/Game/Athena/Items/Cosmetics/Dances/EID_BuffetMoment_LCZQS.EID_BuffetMoment_LCZQS": "Sad",
+        "/Game/Athena/Items/Cosmetics/Dances/EID_HighActivity.EID_HighActivity": "Laugh",
+        "/Game/Athena/Items/Cosmetics/Dances/EID_SingAlong.EID_SingAlong": "Blush",
+        "/Game/Athena/Items/Cosmetics/Dances/EID_Believer.EID_Believer": "Excited",
+        "/Game/Athena/Items/Cosmetics/Dances/EID_Coronet.EID_Coronet": "Blush"
       },
       "SpecificOnPlayerDanceMessages": {
         "/Game/Athena/Items/Cosmetics/Dances/PatPat/EID_PatPat.EID_PatPat": {
           "Namespace": "",
           "Key": "6C2D23174DAA01457A95E39F5AE503F4",
           "SourceString": "A HUG? From my BFF?! You made me the happiest little llama on this whole island."
+        },
+        "/Game/Athena/Items/Cosmetics/Dances/EID_Laugh.EID_Laugh": {
+          "Namespace": "",
+          "Key": "7B182BF94A5EB3E54151E584EE9FB952",
+          "SourceString": "You're not laughing at me, are you? "
+        },
+        "/Game/Athena/Items/Cosmetics/Dances/EID_BuffetMoment_LCZQS.EID_BuffetMoment_LCZQS": {
+          "Namespace": "",
+          "Key": "AD245A9E4DD4B1CC200DC4AF91E954D2",
+          "SourceString": "A KISS?!?! This is the MOST special gift I've ever gotten. "
+        },
+        "/Game/Athena/Items/Cosmetics/Dances/EID_HighActivity.EID_HighActivity": {
+          "Namespace": "",
+          "Key": "081C2C234FCA1D79DC6055BE04FEA66F",
+          "SourceString": "Oh yeah! Just me and my Bestie, HANGIN' OUT! "
+        },
+        "/Game/Athena/Items/Cosmetics/Dances/EID_SingAlong.EID_SingAlong": {
+          "Namespace": "",
+          "Key": "376FB43248C78FF13826829A4CD038A8",
+          "SourceString": "I... I don't know this one. I'm so embarrassed. I'M SORRY!"
+        },
+        "/Game/Athena/Items/Cosmetics/Dances/EID_Believer.EID_Believer": {
+          "Namespace": "",
+          "Key": "C4F1078A442DBDDCB155BF99B35BA184",
+          "SourceString": "In llama, this dance means \"I love you!\" "
+        },
+        "/Game/Athena/Items/Cosmetics/Dances/EID_Coronet.EID_Coronet": {
+          "Namespace": "",
+          "Key": "ABDB0F394CABA9617C0C418F67D1EA1F",
+          "SourceString": "I was making you a best friend crown, but that one's MUCH shinier..."
         }
       },
+      "DamageResponses_Light": [
+        {
+          "DamageMaterialStyle_5_DA2E9BDA41336285B6F136818C041FAE": "Blush",
+          "DamageMessage_7_92E19AF44AB84ADD702CE4BC7D00ADF3": {
+            "Namespace": "",
+            "Key": "08172E6E484FE6C2D31AE383E837C89C",
+            "SourceString": "Oopsie! Careful with my panels, BFF!"
+          }
+        },
+        {
+          "DamageMaterialStyle_5_DA2E9BDA41336285B6F136818C041FAE": "Shock",
+          "DamageMessage_7_92E19AF44AB84ADD702CE4BC7D00ADF3": {
+            "Namespace": "",
+            "Key": "F708104848B771557F626E9CCF0E0868",
+            "SourceString": "Whoops! What a little friendly fire among friends?"
+          }
+        }
+      ],
+      "DamageResponses_Med": [
+        {
+          "DamageMaterialStyle_5_DA2E9BDA41336285B6F136818C041FAE": "Shock",
+          "DamageMessage_7_92E19AF44AB84ADD702CE4BC7D00ADF3": {
+            "Namespace": "",
+            "Key": "505727B5497182716971F19C2232E149",
+            "SourceString": "Um, so, quick friendly pointer: you're damaging me."
+          }
+        },
+        {
+          "DamageMaterialStyle_5_DA2E9BDA41336285B6F136818C041FAE": "Sad",
+          "DamageMessage_7_92E19AF44AB84ADD702CE4BC7D00ADF3": {
+            "Namespace": "",
+            "Key": "9783D3DC4288C6F9D459A686C3305F0D",
+            "SourceString": "Maybe next time... We can hug instead?"
+          }
+        }
+      ],
+      "DamageResponses_Heavy": [
+        {
+          "DamageMaterialStyle_5_DA2E9BDA41336285B6F136818C041FAE": "Shock",
+          "DamageMessage_7_92E19AF44AB84ADD702CE4BC7D00ADF3": {
+            "Namespace": "",
+            "Key": "526A977A42A2113276C137AB75854825",
+            "SourceString": "BESTIE NO! WHY?!"
+          }
+        },
+        {
+          "DamageMaterialStyle_5_DA2E9BDA41336285B6F136818C041FAE": "Sad",
+          "DamageMessage_7_92E19AF44AB84ADD702CE4BC7D00ADF3": {
+            "Namespace": "",
+            "Key": "CC0697464314135A544CC5A7C6093889",
+            "SourceString": "I still love you! Even though it hurts all my buttons and switches. "
+          }
+        }
+      ],
       "MarkerDisplay": {
         "DisplayName": {
           "Namespace": "",
@@ -113,7 +186,7 @@
           "ComponentKey": {
             "OwnerClass": {
               "ObjectName": "BlueprintGeneratedClass BP_StationProp_Parent_C",
-              "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_Parent.7"
+              "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_Parent.1"
             },
             "SCSVariableName": "NonPlayerConversationComponent",
             "AssociatedGuid": "B3384C1D-432431C3-C6AC48BA-EEF07559"

@@ -15,21 +15,21 @@
     },
     "SuperStruct": {
       "ObjectName": "BlueprintGeneratedClass BP_StationProp_VendingMachine_Emote_Base_C",
-      "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachine_Emote_Base.31"
+      "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachine_Emote_Base.2"
     },
-    "FuncMap": {},
     "ClassFlags": 8652820,
     "ClassWithin": {
       "ObjectName": "Class Object",
       "ObjectPath": "/Script/CoreUObject"
     },
     "ClassConfigName": "Game",
-    "ClassGeneratedBy": null,
-    "Interfaces": [],
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "BP_StationProp_VendingMachine_E_Pistol_C Default__BP_StationProp_VendingMachine_E_Pistol_C",
       "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachine_E_Pistol.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
     }
   },
   {
@@ -42,36 +42,110 @@
         "Key": "CD87F6D04BC5C066F217509489B14320",
         "SourceString": "That's quite the do-si-do, if ya don't mind me sayin'! "
       },
-      "OnTakeDamageMessage_Light": {
-        "Namespace": "",
-        "Key": "C914A5C54C9E82C7E65B219CB843DB6B",
-        "SourceString": "You watch where yer pointin' that thing!"
-      },
-      "OnTakeDamageMessage_Med": {
-        "Namespace": "",
-        "Key": "0E723F104D7B1E1B55B91AB9AB299F73",
-        "SourceString": "You ain't gettin' the jump on me, Tex!"
-      },
-      "OnTakeDamageMessage_Heavy": {
-        "Namespace": "",
-        "Key": "A6128B0A465BEEBDBC0CA791478FC6CB",
-        "SourceString": "It's a brawl at the F.N. Corral! "
-      },
-      "DmgMatStyleName_Heavy": "Shock",
       "OnPlayerInteractSound": {
         "ObjectName": "SoundCue StationProp_Jingle_Cowboy_Cue",
         "ObjectPath": "/Game/Sounds/Foley_Loot/Containers/StationProp/StationProp_Jingle_Cowboy_Cue.0"
       },
       "SpecificPlayerDanceMatStyleNames": {
-        "/Game/Athena/Items/Cosmetics/Dances/PatPat/EID_PatPat.EID_PatPat": "Laugh"
+        "/Game/Athena/Items/Cosmetics/Dances/PatPat/EID_PatPat.EID_PatPat": "Laugh",
+        "/Game/Athena/Items/Cosmetics/Dances/EID_Laugh.EID_Laugh": "Shock",
+        "/Game/Athena/Items/Cosmetics/Dances/EID_BuffetMoment_LCZQS.EID_BuffetMoment_LCZQS": "Excited",
+        "/Game/Athena/Items/Cosmetics/Dances/EID_HighActivity.EID_HighActivity": "Happy",
+        "/Game/Athena/Items/Cosmetics/Dances/EID_CowboyDance.EID_CowboyDance": "Excited",
+        "/Game/Athena/Items/Cosmetics/Dances/EID_TapShuffle.EID_TapShuffle": "Excited",
+        "/Game/Athena/Items/Cosmetics/Dances/EID_Coronet.EID_Coronet": "Laugh"
       },
       "SpecificOnPlayerDanceMessages": {
         "/Game/Athena/Items/Cosmetics/Dances/PatPat/EID_PatPat.EID_PatPat": {
           "Namespace": "",
           "Key": "6977B93540A7EAF0294908B07311DA5C",
           "SourceString": "Hey, bring it in! Every cowboy needs a lil' cuddle now'n then."
+        },
+        "/Game/Athena/Items/Cosmetics/Dances/EID_Laugh.EID_Laugh": {
+          "Namespace": "",
+          "Key": "C772E8944737666DCF33EDAB683D4ACA",
+          "SourceString": "...Y'all got a brayin' donkey back there?"
+        },
+        "/Game/Athena/Items/Cosmetics/Dances/EID_BuffetMoment_LCZQS.EID_BuffetMoment_LCZQS": {
+          "Namespace": "",
+          "Key": "C22F5A9248ADF49D6280578ADC30AB22",
+          "SourceString": "A little smoocherino?! Aren't you sweeter than a shield potion!"
+        },
+        "/Game/Athena/Items/Cosmetics/Dances/EID_HighActivity.EID_HighActivity": {
+          "Namespace": "",
+          "Key": "2C1B25FE4381CCABEB44DC86732EF06A",
+          "SourceString": "Sit down and cool those barkin' puppies, pardner."
+        },
+        "/Game/Athena/Items/Cosmetics/Dances/EID_CowboyDance.EID_CowboyDance": {
+          "Namespace": "",
+          "Key": "848EB8534965FA9D4163E9B71B7E7DA0",
+          "SourceString": "Well I'll be darn-tootin! Back home, we call that one a vending-box step!"
+        },
+        "/Game/Athena/Items/Cosmetics/Dances/EID_TapShuffle.EID_TapShuffle": {
+          "Namespace": "",
+          "Key": "848EB8534965FA9D4163E9B71B7E7DA0",
+          "SourceString": "Well I'll be darn-tootin! Back home, we call that one a vending-box step!"
+        },
+        "/Game/Athena/Items/Cosmetics/Dances/EID_Coronet.EID_Coronet": {
+          "Namespace": "",
+          "Key": "4BB8D2DD4A88E29F659B3AB1AF5CCFAB",
+          "SourceString": "Hey, congrats! Best be watchin' your back with that crown on your head, cowpoke. "
         }
       },
+      "DamageResponses_Light": [
+        {
+          "DamageMaterialStyle_5_DA2E9BDA41336285B6F136818C041FAE": "Shock",
+          "DamageMessage_7_92E19AF44AB84ADD702CE4BC7D00ADF3": {
+            "Namespace": "",
+            "Key": "C914A5C54C9E82C7E65B219CB843DB6B",
+            "SourceString": "You watch where yer pointin' that thing!"
+          }
+        },
+        {
+          "DamageMaterialStyle_5_DA2E9BDA41336285B6F136818C041FAE": "Shock",
+          "DamageMessage_7_92E19AF44AB84ADD702CE4BC7D00ADF3": {
+            "Namespace": "",
+            "Key": "1CCBA29846692992C21F96AB1855CE34",
+            "SourceString": "Whoa now! I didn't say draw!"
+          }
+        }
+      ],
+      "DamageResponses_Med": [
+        {
+          "DamageMaterialStyle_5_DA2E9BDA41336285B6F136818C041FAE": "Mad",
+          "DamageMessage_7_92E19AF44AB84ADD702CE4BC7D00ADF3": {
+            "Namespace": "",
+            "Key": "0E723F104D7B1E1B55B91AB9AB299F73",
+            "SourceString": "You ain't gettin' the jump on me, Tex!"
+          }
+        },
+        {
+          "DamageMaterialStyle_5_DA2E9BDA41336285B6F136818C041FAE": "Mad",
+          "DamageMessage_7_92E19AF44AB84ADD702CE4BC7D00ADF3": {
+            "Namespace": "",
+            "Key": "6252CAB74B75554EDD85F9BBBC0A4FC7",
+            "SourceString": "I'll send ya straight to the sheriff!"
+          }
+        }
+      ],
+      "DamageResponses_Heavy": [
+        {
+          "DamageMaterialStyle_5_DA2E9BDA41336285B6F136818C041FAE": "Shock",
+          "DamageMessage_7_92E19AF44AB84ADD702CE4BC7D00ADF3": {
+            "Namespace": "",
+            "Key": "A6128B0A465BEEBDBC0CA791478FC6CB",
+            "SourceString": "It's a brawl at the F.N. Corral! "
+          }
+        },
+        {
+          "DamageMaterialStyle_5_DA2E9BDA41336285B6F136818C041FAE": "Mad",
+          "DamageMessage_7_92E19AF44AB84ADD702CE4BC7D00ADF3": {
+            "Namespace": "",
+            "Key": "1C462CF34CD44194F6CB7AA28D338F27",
+            "SourceString": "You want a fight, hoss? You'll get one!"
+          }
+        }
+      ],
       "MarkerDisplay": {
         "DisplayName": {
           "Namespace": "",
@@ -111,7 +185,7 @@
           "ComponentKey": {
             "OwnerClass": {
               "ObjectName": "BlueprintGeneratedClass BP_StationProp_Parent_C",
-              "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_Parent.7"
+              "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_Parent.1"
             },
             "SCSVariableName": "NonPlayerConversationComponent",
             "AssociatedGuid": "B3384C1D-432431C3-C6AC48BA-EEF07559"

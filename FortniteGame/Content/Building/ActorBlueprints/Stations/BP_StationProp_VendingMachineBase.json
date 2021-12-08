@@ -1,185 +1,16 @@
 [
   {
-    "Type": "Function",
-    "Name": "ExecuteUbergraph_BP_StationProp_VendingMachineBase",
+    "Type": "AudioComponent",
+    "Name": "Station_Ambient_GEN_VARIABLE",
     "Outer": "BP_StationProp_VendingMachineBase_C",
-    "ChildProperties": [
-      {
-        "Type": "IntProperty",
-        "Name": "EntryPoint",
-        "Flags": 1,
-        "ElementSize": 4,
-        "PropertyFlags": 148
+    "Template": "Station_Ambient_GEN_VARIABLE",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue StationProp_Ambient_Loop_Default_Cue",
+        "ObjectPath": "/Game/Sounds/Foley_Loot/Containers/StationProp/StationProp_Ambient_Loop_Default_Cue.0"
       },
-      {
-        "Type": "ObjectProperty",
-        "Name": "CallFunc_GetPhysicsObjectComponent_ReturnValue",
-        "Flags": 1,
-        "ElementSize": 8,
-        "PropertyFlags": 524288,
-        "PropertyClass": {
-          "ObjectName": "Class FortPhysicsObjectComponent",
-          "ObjectPath": "/Script/FortniteGame"
-        }
-      },
-      {
-        "Type": "StructProperty",
-        "Name": "CallFunc_RLerp_ReturnValue",
-        "Flags": 1,
-        "ElementSize": 12,
-        "Struct": {
-          "ObjectName": "Class Rotator",
-          "ObjectPath": "/Script/CoreUObject"
-        }
-      },
-      {
-        "Type": "BoolProperty",
-        "Name": "CallFunc_IsAwake_ReturnValue",
-        "Flags": 1,
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
-        "Type": "BoolProperty",
-        "Name": "CallFunc_HasAuthority_ReturnValue",
-        "Flags": 1,
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
-        "Type": "StructProperty",
-        "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
-        "Flags": 1,
-        "ElementSize": 12,
-        "Struct": {
-          "ObjectName": "Class Vector",
-          "ObjectPath": "/Script/CoreUObject"
-        }
-      },
-      {
-        "Type": "BoolProperty",
-        "Name": "CallFunc_IsValid_ReturnValue",
-        "Flags": 1,
-        "ElementSize": 1,
-        "FieldSize": 1,
-        "ByteOffset": 0,
-        "ByteMask": 1,
-        "FieldMask": 255,
-        "BoolSize": 1,
-        "bIsNativeBool": true
-      },
-      {
-        "Type": "StructProperty",
-        "Name": "CallFunc_ComposeRotators_ReturnValue",
-        "Flags": 1,
-        "ElementSize": 12,
-        "Struct": {
-          "ObjectName": "Class Rotator",
-          "ObjectPath": "/Script/CoreUObject"
-        }
-      },
-      {
-        "Type": "StructProperty",
-        "Name": "CallFunc_K2_SetRelativeRotation_SweepHitResult",
-        "Flags": 1,
-        "ElementSize": 144,
-        "PropertyFlags": 549755813888,
-        "Struct": {
-          "ObjectName": "Class HitResult",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "IntProperty",
-        "Name": "CallFunc_GetMaterialIndex_ReturnValue",
-        "Flags": 1,
-        "ElementSize": 4
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "CallFunc_GetMaterial_ReturnValue",
-        "Flags": 1,
-        "ElementSize": 8,
-        "PropertyClass": {
-          "ObjectName": "Class MaterialInterface",
-          "ObjectPath": "/Script/Engine"
-        }
-      },
-      {
-        "Type": "ObjectProperty",
-        "Name": "CallFunc_CreateDynamicMaterialInstance_ReturnValue",
-        "Flags": 1,
-        "ElementSize": 8,
-        "PropertyClass": {
-          "ObjectName": "Class MaterialInstanceDynamic",
-          "ObjectPath": "/Script/Engine"
-        }
-      }
-    ],
-    "FunctionFlags": 8421377
-  },
-  {
-    "Type": "Function",
-    "Name": "TriggerVendEffects",
-    "Outer": "BP_StationProp_VendingMachineBase_C",
-    "FunctionFlags": 201326592
-  },
-  {
-    "Type": "Function",
-    "Name": "ReceiveBeginPlay",
-    "Outer": "BP_StationProp_VendingMachineBase_C",
-    "Super": "ReceiveBeginPlay",
-    "SuperStruct": {
-      "ObjectName": "Function BP_StationProp_Parent_C:ReceiveBeginPlay",
-      "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_Parent.2"
-    },
-    "FunctionFlags": 134744064
-  },
-  {
-    "Type": "Function",
-    "Name": "WobbleTimeline__UpdateFunc",
-    "Outer": "BP_StationProp_VendingMachineBase_C",
-    "FunctionFlags": 134217728
-  },
-  {
-    "Type": "Function",
-    "Name": "WobbleTimeline__FinishedFunc",
-    "Outer": "BP_StationProp_VendingMachineBase_C",
-    "FunctionFlags": 134217728
-  },
-  {
-    "Type": "Function",
-    "Name": "PlayServiceUsedEffects",
-    "Outer": "BP_StationProp_VendingMachineBase_C",
-    "Super": "PlayServiceUsedEffects",
-    "SuperStruct": {
-      "ObjectName": "Function BP_StationProp_Parent_C:PlayServiceUsedEffects",
-      "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_Parent.6"
-    },
-    "ChildProperties": [
-      {
-        "Type": "ObjectProperty",
-        "Name": "PlayerController",
-        "Flags": 1,
-        "ElementSize": 8,
-        "PropertyFlags": 148,
-        "PropertyClass": {
-          "ObjectName": "Class FortPlayerController",
-          "ObjectPath": "/Script/FortniteGame"
-        }
-      }
-    ],
-    "FunctionFlags": 201457664
+      "VolumeMultiplier": 0.45
+    }
   },
   {
     "Type": "BlueprintGeneratedClass",
@@ -202,37 +33,37 @@
       },
       "UberGraphFunction": {
         "ObjectName": "Function BP_StationProp_VendingMachineBase_C:ExecuteUbergraph_BP_StationProp_VendingMachineBase",
-        "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachineBase.0"
+        "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachineBase.5"
       }
     },
     "SuperStruct": {
       "ObjectName": "BlueprintGeneratedClass BP_StationProp_Parent_C",
-      "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_Parent.7"
+      "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_Parent.1"
     },
     "Children": [
       {
         "ObjectName": "Function BP_StationProp_VendingMachineBase_C:PlayServiceUsedEffects",
-        "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachineBase.5"
+        "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachineBase.6"
       },
       {
         "ObjectName": "Function BP_StationProp_VendingMachineBase_C:WobbleTimeline__FinishedFunc",
-        "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachineBase.4"
+        "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachineBase.9"
       },
       {
         "ObjectName": "Function BP_StationProp_VendingMachineBase_C:WobbleTimeline__UpdateFunc",
-        "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachineBase.3"
+        "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachineBase.10"
       },
       {
         "ObjectName": "Function BP_StationProp_VendingMachineBase_C:ReceiveBeginPlay",
-        "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachineBase.2"
+        "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachineBase.7"
       },
       {
         "ObjectName": "Function BP_StationProp_VendingMachineBase_C:TriggerVendEffects",
-        "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachineBase.1"
+        "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachineBase.8"
       },
       {
         "ObjectName": "Function BP_StationProp_VendingMachineBase_C:ExecuteUbergraph_BP_StationProp_VendingMachineBase",
-        "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachineBase.0"
+        "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachineBase.5"
       }
     ],
     "ChildProperties": [
@@ -359,27 +190,27 @@
     "FuncMap": {
       "ExecuteUbergraph_BP_StationProp_VendingMachineBase": {
         "ObjectName": "Function BP_StationProp_VendingMachineBase_C:ExecuteUbergraph_BP_StationProp_VendingMachineBase",
-        "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachineBase.0"
+        "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachineBase.5"
       },
       "TriggerVendEffects": {
         "ObjectName": "Function BP_StationProp_VendingMachineBase_C:TriggerVendEffects",
-        "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachineBase.1"
+        "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachineBase.8"
       },
       "ReceiveBeginPlay": {
         "ObjectName": "Function BP_StationProp_VendingMachineBase_C:ReceiveBeginPlay",
-        "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachineBase.2"
+        "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachineBase.7"
       },
       "WobbleTimeline__UpdateFunc": {
         "ObjectName": "Function BP_StationProp_VendingMachineBase_C:WobbleTimeline__UpdateFunc",
-        "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachineBase.3"
+        "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachineBase.10"
       },
       "WobbleTimeline__FinishedFunc": {
         "ObjectName": "Function BP_StationProp_VendingMachineBase_C:WobbleTimeline__FinishedFunc",
-        "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachineBase.4"
+        "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachineBase.9"
       },
       "PlayServiceUsedEffects": {
         "ObjectName": "Function BP_StationProp_VendingMachineBase_C:PlayServiceUsedEffects",
-        "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachineBase.5"
+        "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachineBase.6"
       }
     },
     "ClassFlags": 8652821,
@@ -388,12 +219,13 @@
       "ObjectPath": "/Script/CoreUObject"
     },
     "ClassConfigName": "Game",
-    "ClassGeneratedBy": null,
-    "Interfaces": [],
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "BP_StationProp_VendingMachineBase_C Default__BP_StationProp_VendingMachineBase_C",
-      "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachineBase.7"
+      "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachineBase.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
     }
   },
   {
@@ -452,19 +284,6 @@
     }
   },
   {
-    "Type": "AudioComponent",
-    "Name": "Station_Ambient_GEN_VARIABLE",
-    "Outer": "BP_StationProp_VendingMachineBase_C",
-    "Template": "Station_Ambient_GEN_VARIABLE",
-    "Properties": {
-      "Sound": {
-        "ObjectName": "SoundCue StationProp_Ambient_Loop_Default_Cue",
-        "ObjectPath": "/Game/Sounds/Foley_Loot/Containers/StationProp/StationProp_Ambient_Loop_Default_Cue.0"
-      },
-      "VolumeMultiplier": 0.45
-    }
-  },
-  {
     "Type": "CurveFloat",
     "Name": "CurveFloat_0",
     "Outer": "BP_StationProp_VendingMachineBase_C",
@@ -472,9 +291,9 @@
       "FloatCurve": {
         "Keys": [
           {
-            "InterpMode": 0,
-            "TangentMode": 0,
-            "TangentWeightMode": 0,
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
             "Time": 0.0,
             "Value": 0.0,
             "ArriveTangent": 0.0,
@@ -483,9 +302,9 @@
             "LeaveTangentWeight": 0.0
           },
           {
-            "InterpMode": 0,
-            "TangentMode": 0,
-            "TangentWeightMode": 0,
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
             "Time": 0.032355,
             "Value": 0.591254,
             "ArriveTangent": 0.0,
@@ -494,9 +313,9 @@
             "LeaveTangentWeight": 0.0
           },
           {
-            "InterpMode": 0,
-            "TangentMode": 0,
-            "TangentWeightMode": 0,
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
             "Time": 0.096758,
             "Value": -0.674876,
             "ArriveTangent": 0.0,
@@ -505,9 +324,9 @@
             "LeaveTangentWeight": 0.0
           },
           {
-            "InterpMode": 0,
-            "TangentMode": 0,
-            "TangentWeightMode": 0,
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
             "Time": 0.156742,
             "Value": 0.919091,
             "ArriveTangent": 0.0,
@@ -516,9 +335,9 @@
             "LeaveTangentWeight": 0.0
           },
           {
-            "InterpMode": 0,
-            "TangentMode": 0,
-            "TangentWeightMode": 0,
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
             "Time": 0.21177542,
             "Value": -1.173688,
             "ArriveTangent": 0.0,
@@ -527,9 +346,9 @@
             "LeaveTangentWeight": 0.0
           },
           {
-            "InterpMode": 0,
-            "TangentMode": 0,
-            "TangentWeightMode": 0,
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
             "Time": 0.2568782,
             "Value": 1.270769,
             "ArriveTangent": 0.0,
@@ -538,9 +357,9 @@
             "LeaveTangentWeight": 0.0
           },
           {
-            "InterpMode": 0,
-            "TangentMode": 0,
-            "TangentWeightMode": 0,
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
             "Time": 0.31223163,
             "Value": -0.708077,
             "ArriveTangent": 0.0,
@@ -549,9 +368,9 @@
             "LeaveTangentWeight": 0.0
           },
           {
-            "InterpMode": 0,
-            "TangentMode": 0,
-            "TangentWeightMode": 0,
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
             "Time": 0.35870117,
             "Value": 0.834259,
             "ArriveTangent": 0.0,
@@ -560,9 +379,9 @@
             "LeaveTangentWeight": 0.0
           },
           {
-            "InterpMode": 0,
-            "TangentMode": 0,
-            "TangentWeightMode": 0,
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
             "Time": 0.39833695,
             "Value": -0.261867,
             "ArriveTangent": 0.0,
@@ -571,9 +390,9 @@
             "LeaveTangentWeight": 0.0
           },
           {
-            "InterpMode": 0,
-            "TangentMode": 0,
-            "TangentWeightMode": 0,
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
             "Time": 0.49264276,
             "Value": 0.174644,
             "ArriveTangent": 0.0,
@@ -582,9 +401,9 @@
             "LeaveTangentWeight": 0.0
           },
           {
-            "InterpMode": 0,
-            "TangentMode": 0,
-            "TangentWeightMode": 0,
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
             "Time": 0.54116243,
             "Value": 0.0,
             "ArriveTangent": 0.0,
@@ -593,9 +412,9 @@
             "LeaveTangentWeight": 0.0
           },
           {
-            "InterpMode": 0,
-            "TangentMode": 0,
-            "TangentWeightMode": 0,
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
             "Time": 0.65,
             "Value": 0.0,
             "ArriveTangent": 0.0,
@@ -615,9 +434,9 @@
       "FloatCurve": {
         "Keys": [
           {
-            "InterpMode": 0,
-            "TangentMode": 0,
-            "TangentWeightMode": 0,
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
             "Time": 0.0,
             "Value": 1.0,
             "ArriveTangent": 0.0,
@@ -626,9 +445,9 @@
             "LeaveTangentWeight": 0.0
           },
           {
-            "InterpMode": 0,
-            "TangentMode": 0,
-            "TangentWeightMode": 0,
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
             "Time": 0.062217742,
             "Value": 0.6150028,
             "ArriveTangent": 0.0,
@@ -637,9 +456,9 @@
             "LeaveTangentWeight": 0.0
           },
           {
-            "InterpMode": 0,
-            "TangentMode": 0,
-            "TangentWeightMode": 0,
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
             "Time": 0.65,
             "Value": 0.0,
             "ArriveTangent": 0.0,
@@ -650,6 +469,188 @@
         ]
       }
     }
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_StationProp_VendingMachineBase",
+    "Outer": "BP_StationProp_VendingMachineBase_C",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": 1,
+        "ElementSize": 4,
+        "PropertyFlags": 148
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetPhysicsObjectComponent_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 524288,
+        "PropertyClass": {
+          "ObjectName": "Class FortPhysicsObjectComponent",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_RLerp_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class Rotator",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsAwake_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAuthority_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class Vector",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_ComposeRotators_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class Rotator",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetRelativeRotation_SweepHitResult",
+        "Flags": 1,
+        "ElementSize": 164,
+        "PropertyFlags": 549755813888,
+        "Struct": {
+          "ObjectName": "Class HitResult",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_GetMaterialIndex_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetMaterial_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class MaterialInterface",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreateDynamicMaterialInstance_ReturnValue",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class MaterialInstanceDynamic",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": 8421377
+  },
+  {
+    "Type": "Function",
+    "Name": "PlayServiceUsedEffects",
+    "Outer": "BP_StationProp_VendingMachineBase_C",
+    "Super": "PlayServiceUsedEffects",
+    "SuperStruct": {
+      "ObjectName": "Function BP_StationProp_Parent_C:PlayServiceUsedEffects",
+      "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_Parent.9"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlayerController",
+        "Flags": 1,
+        "ElementSize": 8,
+        "PropertyFlags": 148,
+        "PropertyClass": {
+          "ObjectName": "Class FortPlayerController",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      }
+    ],
+    "FunctionFlags": 201457664
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "BP_StationProp_VendingMachineBase_C",
+    "Super": "ReceiveBeginPlay",
+    "SuperStruct": {
+      "ObjectName": "Function BP_StationProp_Parent_C:ReceiveBeginPlay",
+      "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_Parent.10"
+    },
+    "FunctionFlags": 134744064
+  },
+  {
+    "Type": "Function",
+    "Name": "TriggerVendEffects",
+    "Outer": "BP_StationProp_VendingMachineBase_C",
+    "FunctionFlags": 201326592
+  },
+  {
+    "Type": "Function",
+    "Name": "WobbleTimeline__FinishedFunc",
+    "Outer": "BP_StationProp_VendingMachineBase_C",
+    "FunctionFlags": 134217728
+  },
+  {
+    "Type": "Function",
+    "Name": "WobbleTimeline__UpdateFunc",
+    "Outer": "BP_StationProp_VendingMachineBase_C",
+    "FunctionFlags": 134217728
   },
   {
     "Type": "InheritableComponentHandler",
@@ -669,7 +670,7 @@
           "ComponentKey": {
             "OwnerClass": {
               "ObjectName": "BlueprintGeneratedClass BP_StationProp_Parent_C",
-              "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_Parent.7"
+              "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_Parent.1"
             },
             "SCSVariableName": "NonPlayerConversationComponent",
             "AssociatedGuid": "B3384C1D-432431C3-C6AC48BA-EEF07559"
@@ -686,12 +687,12 @@
           },
           "ComponentTemplate": {
             "ObjectName": "AudioComponent BP_StationProp_VendingMachineBase_C:Station_Ambient_GEN_VARIABLE",
-            "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachineBase.8"
+            "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachineBase.0"
           },
           "ComponentKey": {
             "OwnerClass": {
               "ObjectName": "BlueprintGeneratedClass BP_StationProp_Parent_C",
-              "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_Parent.7"
+              "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_Parent.1"
             },
             "SCSVariableName": "Station_Ambient",
             "AssociatedGuid": "286D96E5-45FF6495-7ABD358C-FA3CA60C"
@@ -839,7 +840,8 @@
         "ObjectName": "StaticMesh SM_VendingMachineQuest",
         "ObjectPath": "/Game/Athena/Items/Gameplay/VendingMachine/FX/SM_VendingMachineQuest.1"
       },
-      "Mobility": "EComponentMobility::Movable"
+      "Mobility": "EComponentMobility::Movable",
+      "bCanEverAffectNavigation": true
     }
   },
   {
@@ -852,7 +854,7 @@
         {
           "CurveFloat": {
             "ObjectName": "CurveFloat BP_StationProp_VendingMachineBase_C:CurveFloat_0",
-            "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachineBase.9"
+            "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachineBase.3"
           },
           "PropertyName": "WobbleTimeline_WobbleOverTime_9E6480CB4A24F3C93A07ACB946C295A5",
           "TrackName": "WobbleOverTime",
@@ -861,7 +863,7 @@
         {
           "CurveFloat": {
             "ObjectName": "CurveFloat BP_StationProp_VendingMachineBase_C:CurveFloat_1",
-            "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachineBase.10"
+            "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachineBase.4"
           },
           "PropertyName": "WobbleTimeline_Flash_9E6480CB4A24F3C93A07ACB946C295A5",
           "TrackName": "Flash",

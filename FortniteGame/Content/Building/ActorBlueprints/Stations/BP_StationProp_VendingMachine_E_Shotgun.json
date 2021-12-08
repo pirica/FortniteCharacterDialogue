@@ -15,21 +15,21 @@
     },
     "SuperStruct": {
       "ObjectName": "BlueprintGeneratedClass BP_StationProp_VendingMachine_Emote_Base_C",
-      "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachine_Emote_Base.31"
+      "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachine_Emote_Base.2"
     },
-    "FuncMap": {},
     "ClassFlags": 8652820,
     "ClassWithin": {
       "ObjectName": "Class Object",
       "ObjectPath": "/Script/CoreUObject"
     },
     "ClassConfigName": "Game",
-    "ClassGeneratedBy": null,
-    "Interfaces": [],
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "BP_StationProp_VendingMachine_E_Shotgun_C Default__BP_StationProp_VendingMachine_E_Shotgun_C",
       "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachine_E_Shotgun.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
     }
   },
   {
@@ -42,36 +42,111 @@
         "Key": "140C18D849F369453E5B4CADD4EC3F0A",
         "SourceString": "Perfect form and precision rhythm! What a waltz!"
       },
-      "OnTakeDamageMessage_Light": {
-        "Namespace": "",
-        "Key": "33391B324F0954C578BC38954402A486",
-        "SourceString": "Oh ho! How impish!"
-      },
-      "OnTakeDamageMessage_Med": {
-        "Namespace": "",
-        "Key": "5CB97B1349EDAD3BA8BA6B8D759128A4",
-        "SourceString": "Do you attack me, sir?"
-      },
-      "OnTakeDamageMessage_Heavy": {
-        "Namespace": "",
-        "Key": "72EDA0514B60B030A201F0B7841D176E",
-        "SourceString": "SCOUNDREL! RAKE! MISCREANT!"
-      },
       "PlayerDanceMatStyleName": "Laugh",
       "OnPlayerInteractSound": {
         "ObjectName": "SoundCue StationProp_Jingle_Classy_Cue",
         "ObjectPath": "/Game/Sounds/Foley_Loot/Containers/StationProp/StationProp_Jingle_Classy_Cue.0"
       },
       "SpecificPlayerDanceMatStyleNames": {
-        "/Game/Athena/Items/Cosmetics/Dances/EID_PunkKoi.EID_PunkKoi": "Shock"
+        "/Game/Athena/Items/Cosmetics/Dances/EID_PunkKoi.EID_PunkKoi": "Shock",
+        "/Game/Athena/Items/Cosmetics/Dances/PatPat/EID_PatPat.EID_PatPat": "Shock",
+        "/Game/Athena/Items/Cosmetics/Dances/EID_Laugh.EID_Laugh": "Excited",
+        "/Game/Athena/Items/Cosmetics/Dances/EID_BuffetMoment_LCZQS.EID_BuffetMoment_LCZQS": "Blush",
+        "/Game/Athena/Items/Cosmetics/Dances/EID_HighActivity.EID_HighActivity": "Happy",
+        "/Game/Athena/Items/Cosmetics/Dances/EID_Accolades.EID_Accolades": "Laugh",
+        "/Game/Athena/Items/Cosmetics/Dances/EID_Coronet.EID_Coronet": "Excited"
       },
       "SpecificOnPlayerDanceMessages": {
         "/Game/Athena/Items/Cosmetics/Dances/EID_PunkKoi.EID_PunkKoi": {
           "Namespace": "",
           "Key": "A8D6E1784ECCD35C892DD390921C00A5",
           "SourceString": "My word, are you challenging me to a duel with the Demonslayer blade?! "
+        },
+        "/Game/Athena/Items/Cosmetics/Dances/PatPat/EID_PatPat.EID_PatPat": {
+          "Namespace": "",
+          "Key": "DD1456D044DF2617D5C36293C65386FD",
+          "SourceString": "This is impropriety itself... But it feels nice."
+        },
+        "/Game/Athena/Items/Cosmetics/Dances/EID_Laugh.EID_Laugh": {
+          "Namespace": "",
+          "Key": "5D562B874C27740AFEC70796AC7EC3C0",
+          "SourceString": "What are you laughing at? Is it a droll little cartoon?!"
+        },
+        "/Game/Athena/Items/Cosmetics/Dances/EID_BuffetMoment_LCZQS.EID_BuffetMoment_LCZQS": {
+          "Namespace": "",
+          "Key": "3AAD085B4E723AE3929DC09F6D80416B",
+          "SourceString": "I must admit, I feel the same... But it cannot be."
+        },
+        "/Game/Athena/Items/Cosmetics/Dances/EID_HighActivity.EID_HighActivity": {
+          "Namespace": "",
+          "Key": "134CA77B4EBD2B9E452A5A8915ED82A9",
+          "SourceString": "Taking a break? Shall I tell the other players you're indisposed?"
+        },
+        "/Game/Athena/Items/Cosmetics/Dances/EID_Accolades.EID_Accolades": {
+          "Namespace": "",
+          "Key": "4A76BB2D461DB0BE15FF51802BD1477B",
+          "SourceString": "Brava! Brava! Encore!"
+        },
+        "/Game/Athena/Items/Cosmetics/Dances/EID_Coronet.EID_Coronet": {
+          "Namespace": "",
+          "Key": "7192EBC7497292C4F9601F8EBDF1FF50",
+          "SourceString": "Your highness! HRH! My liege! It is my HONOR to host you at my humble machine."
         }
       },
+      "DamageResponses_Light": [
+        {
+          "DamageMaterialStyle_5_DA2E9BDA41336285B6F136818C041FAE": "Shock",
+          "DamageMessage_7_92E19AF44AB84ADD702CE4BC7D00ADF3": {
+            "Namespace": "",
+            "Key": "33391B324F0954C578BC38954402A486",
+            "SourceString": "Oh ho! How impish!"
+          }
+        },
+        {
+          "DamageMaterialStyle_5_DA2E9BDA41336285B6F136818C041FAE": "Happy",
+          "DamageMessage_7_92E19AF44AB84ADD702CE4BC7D00ADF3": {
+            "Namespace": "",
+            "Key": "21AB65554EF6F1C400D7A18F8213D112",
+            "SourceString": "Ha! You want a duel, do you? "
+          }
+        }
+      ],
+      "DamageResponses_Med": [
+        {
+          "DamageMaterialStyle_5_DA2E9BDA41336285B6F136818C041FAE": "Mad",
+          "DamageMessage_7_92E19AF44AB84ADD702CE4BC7D00ADF3": {
+            "Namespace": "",
+            "Key": "5CB97B1349EDAD3BA8BA6B8D759128A4",
+            "SourceString": "Do you attack me, sir?"
+          }
+        },
+        {
+          "DamageMaterialStyle_5_DA2E9BDA41336285B6F136818C041FAE": "Laugh",
+          "DamageMessage_7_92E19AF44AB84ADD702CE4BC7D00ADF3": {
+            "Namespace": "",
+            "Key": "28A3944E48D656800B31C0B09FAF1A99",
+            "SourceString": "EN GARDE! DODGE! PARRY! WEAVE!"
+          }
+        }
+      ],
+      "DamageResponses_Heavy": [
+        {
+          "DamageMaterialStyle_5_DA2E9BDA41336285B6F136818C041FAE": "Sad",
+          "DamageMessage_7_92E19AF44AB84ADD702CE4BC7D00ADF3": {
+            "Namespace": "",
+            "Key": "72EDA0514B60B030A201F0B7841D176E",
+            "SourceString": "SCOUNDREL! RAKE! MISCREANT!"
+          }
+        },
+        {
+          "DamageMaterialStyle_5_DA2E9BDA41336285B6F136818C041FAE": "Sad",
+          "DamageMessage_7_92E19AF44AB84ADD702CE4BC7D00ADF3": {
+            "Namespace": "",
+            "Key": "3ECC704A4BA1E6ACD5C4E3ADBEF86888",
+            "SourceString": "Oh dear... Oh no..."
+          }
+        }
+      ],
       "MarkerDisplay": {
         "DisplayName": {
           "Namespace": "",
@@ -111,7 +186,7 @@
           "ComponentKey": {
             "OwnerClass": {
               "ObjectName": "BlueprintGeneratedClass BP_StationProp_Parent_C",
-              "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_Parent.7"
+              "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_Parent.1"
             },
             "SCSVariableName": "NonPlayerConversationComponent",
             "AssociatedGuid": "B3384C1D-432431C3-C6AC48BA-EEF07559"

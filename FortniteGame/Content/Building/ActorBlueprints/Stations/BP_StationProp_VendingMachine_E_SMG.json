@@ -15,21 +15,21 @@
     },
     "SuperStruct": {
       "ObjectName": "BlueprintGeneratedClass BP_StationProp_VendingMachine_Emote_Base_C",
-      "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachine_Emote_Base.31"
+      "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachine_Emote_Base.2"
     },
-    "FuncMap": {},
     "ClassFlags": 8652820,
     "ClassWithin": {
       "ObjectName": "Class Object",
       "ObjectPath": "/Script/CoreUObject"
     },
     "ClassConfigName": "Game",
-    "ClassGeneratedBy": null,
-    "Interfaces": [],
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "BP_StationProp_VendingMachine_E_SMG_C Default__BP_StationProp_VendingMachine_E_SMG_C",
       "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachine_E_SMG.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
     }
   },
   {
@@ -42,36 +42,111 @@
         "Key": "07F39BDD4762692347C3EC96B60DEBC8",
         "SourceString": "Celebrating a big windfall? How about cutting me in?"
       },
-      "OnTakeDamageMessage_Light": {
-        "Namespace": "",
-        "Key": "893D2B4F4714A9024ADA389573E4679B",
-        "SourceString": "Whoa! Hey! Let's work this out with HR!"
-      },
-      "OnTakeDamageMessage_Med": {
-        "Namespace": "",
-        "Key": "2AB3268646B680D1DBB61D9DC60D4B23",
-        "SourceString": "You'll be hearing from my attorneys."
-      },
-      "OnTakeDamageMessage_Heavy": {
-        "Namespace": "",
-        "Key": "9CE395F945B4AB2C46764996E53F4908",
-        "SourceString": "You could have gotten in on the ground floor..."
-      },
       "PlayerDanceMatStyleName": "Shock",
       "OnPlayerInteractSound": {
         "ObjectName": "SoundCue StationProp_Jingle_Business_Cue",
         "ObjectPath": "/Game/Sounds/Foley_Loot/Containers/StationProp/StationProp_Jingle_Business_Cue.0"
       },
       "SpecificPlayerDanceMatStyleNames": {
-        "/Game/Athena/Items/Cosmetics/Dances/PatPat/EID_PatPat.EID_PatPat": "Blush"
+        "/Game/Athena/Items/Cosmetics/Dances/PatPat/EID_PatPat.EID_PatPat": "Blush",
+        "/Game/Athena/Items/Cosmetics/Dances/EID_Laugh.EID_Laugh": "Sad",
+        "/Game/Athena/Items/Cosmetics/Dances/EID_BuffetMoment_LCZQS.EID_BuffetMoment_LCZQS": "Blush",
+        "/Game/Athena/Items/Cosmetics/Dances/EID_HighActivity.EID_HighActivity": "Trade",
+        "/Game/Athena/Items/Cosmetics/Dances/EID_MakeItRain.EID_MakeItRain": "Excited",
+        "/Game/Athena/Items/Cosmetics/Dances/EID_MakeItPlantain.EID_MakeItPlantain": "Excited",
+        "/Game/Athena/Items/Cosmetics/Dances/EID_Coronet.EID_Coronet": "Shock"
       },
       "SpecificOnPlayerDanceMessages": {
         "/Game/Athena/Items/Cosmetics/Dances/PatPat/EID_PatPat.EID_PatPat": {
           "Namespace": "",
           "Key": "C9CEA1FD43610B80F40E5D8A81A2258D",
           "SourceString": "Erm, I'm more of a \"handshake deal\" kind of llama. Mending machine'll hug you though!"
+        },
+        "/Game/Athena/Items/Cosmetics/Dances/EID_Laugh.EID_Laugh": {
+          "Namespace": "",
+          "Key": "6BF1E52E408E81C28AF680B500B03F57",
+          "SourceString": "Are you laughing at my tie? It's not my fault! Somebody got a little soup on it!"
+        },
+        "/Game/Athena/Items/Cosmetics/Dances/EID_BuffetMoment_LCZQS.EID_BuffetMoment_LCZQS": {
+          "Namespace": "",
+          "Key": "582BF03546A1CC5EBB199FB845128659",
+          "SourceString": "Oh wow... Um... that's quite the deposit."
+        },
+        "/Game/Athena/Items/Cosmetics/Dances/EID_HighActivity.EID_HighActivity": {
+          "Namespace": "",
+          "Key": "9CBC2E424F836553C1AFDDBEE8C0FEA5",
+          "SourceString": "Waiting on some compound interest to add up? Same."
+        },
+        "/Game/Athena/Items/Cosmetics/Dances/EID_MakeItRain.EID_MakeItRain": {
+          "Namespace": "",
+          "Key": "6105787E4B3F9550FC5E4C87221EF1BB",
+          "SourceString": "Whoa! Is all of that for me? I'll invest it for you, promise!"
+        },
+        "/Game/Athena/Items/Cosmetics/Dances/EID_MakeItPlantain.EID_MakeItPlantain": {
+          "Namespace": "",
+          "Key": "6105787E4B3F9550FC5E4C87221EF1BB",
+          "SourceString": "Whoa! Is all of that for me? I'll invest it for you, promise!"
+        },
+        "/Game/Athena/Items/Cosmetics/Dances/EID_Coronet.EID_Coronet": {
+          "Namespace": "",
+          "Key": "ACFF07C245719BBB2B162FBD82800646",
+          "SourceString": "Is that a crown?! Ahem... We have many PREMIUM investment schemes for VIPs..."
         }
       },
+      "DamageResponses_Light": [
+        {
+          "DamageMaterialStyle_5_DA2E9BDA41336285B6F136818C041FAE": "Shock",
+          "DamageMessage_7_92E19AF44AB84ADD702CE4BC7D00ADF3": {
+            "Namespace": "",
+            "Key": "893D2B4F4714A9024ADA389573E4679B",
+            "SourceString": "Whoa! Hey! Let's work this out with HR!"
+          }
+        },
+        {
+          "DamageMaterialStyle_5_DA2E9BDA41336285B6F136818C041FAE": "Mad",
+          "DamageMessage_7_92E19AF44AB84ADD702CE4BC7D00ADF3": {
+            "Namespace": "",
+            "Key": "07A182F040B38CE83EA027B982A118D2",
+            "SourceString": "The free market doesn't mean \"free to attack an innocent llama,\" you know!"
+          }
+        }
+      ],
+      "DamageResponses_Med": [
+        {
+          "DamageMaterialStyle_5_DA2E9BDA41336285B6F136818C041FAE": "Mad",
+          "DamageMessage_7_92E19AF44AB84ADD702CE4BC7D00ADF3": {
+            "Namespace": "",
+            "Key": "2AB3268646B680D1DBB61D9DC60D4B23",
+            "SourceString": "You'll be hearing from my attorneys."
+          }
+        },
+        {
+          "DamageMaterialStyle_5_DA2E9BDA41336285B6F136818C041FAE": "Sad",
+          "DamageMessage_7_92E19AF44AB84ADD702CE4BC7D00ADF3": {
+            "Namespace": "",
+            "Key": "737DE741432E715E0C2D38A0A4873399",
+            "SourceString": "After the boom comes a bust..."
+          }
+        }
+      ],
+      "DamageResponses_Heavy": [
+        {
+          "DamageMaterialStyle_5_DA2E9BDA41336285B6F136818C041FAE": "Sad",
+          "DamageMessage_7_92E19AF44AB84ADD702CE4BC7D00ADF3": {
+            "Namespace": "",
+            "Key": "9CE395F945B4AB2C46764996E53F4908",
+            "SourceString": "You could have gotten in on the ground floor..."
+          }
+        },
+        {
+          "DamageMaterialStyle_5_DA2E9BDA41336285B6F136818C041FAE": "Sad",
+          "DamageMessage_7_92E19AF44AB84ADD702CE4BC7D00ADF3": {
+            "Namespace": "",
+            "Key": "004F79624B52010C8181088EE10D7953",
+            "SourceString": "NO! MY ASSETS!"
+          }
+        }
+      ],
       "MarkerDisplay": {
         "DisplayName": {
           "Namespace": "",
@@ -111,7 +186,7 @@
           "ComponentKey": {
             "OwnerClass": {
               "ObjectName": "BlueprintGeneratedClass BP_StationProp_Parent_C",
-              "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_Parent.7"
+              "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_Parent.1"
             },
             "SCSVariableName": "NonPlayerConversationComponent",
             "AssociatedGuid": "B3384C1D-432431C3-C6AC48BA-EEF07559"

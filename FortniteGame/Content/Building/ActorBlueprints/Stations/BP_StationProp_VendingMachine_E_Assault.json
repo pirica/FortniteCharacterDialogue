@@ -15,21 +15,21 @@
     },
     "SuperStruct": {
       "ObjectName": "BlueprintGeneratedClass BP_StationProp_VendingMachine_Emote_Base_C",
-      "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachine_Emote_Base.31"
+      "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachine_Emote_Base.2"
     },
-    "FuncMap": {},
     "ClassFlags": 8652820,
     "ClassWithin": {
       "ObjectName": "Class Object",
       "ObjectPath": "/Script/CoreUObject"
     },
     "ClassConfigName": "Game",
-    "ClassGeneratedBy": null,
-    "Interfaces": [],
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "BP_StationProp_VendingMachine_E_Assault_C Default__BP_StationProp_VendingMachine_E_Assault_C",
       "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachine_E_Assault.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
     }
   },
   {
@@ -42,38 +42,111 @@
         "Key": "8CF00D6A496E15B2DCDC6D83EB6FA1ED",
         "SourceString": "Is this a negotiation tactic? My prices are firm, pal."
       },
-      "OnTakeDamageMessage_Light": {
-        "Namespace": "",
-        "Key": "51C9395846E755B1D335478C8A131688",
-        "SourceString": "Come on now! That's no way to get a discount!"
-      },
-      "OnTakeDamageMessage_Med": {
-        "Namespace": "",
-        "Key": "3FFEC1A940F99DC5CE871EA90A04B02C",
-        "SourceString": "STOP! PLEASE! That panel's brand new!  "
-      },
-      "OnTakeDamageMessage_Heavy": {
-        "Namespace": "",
-        "Key": "F6FE3AB244CD366A0733D291498F5923",
-        "SourceString": "I took you for a fool. My mistake. PLEASE STOP!!"
-      },
       "PlayerDanceMatStyleName": "Laugh",
-      "DmgMatStyleName_Light": "Mad",
-      "DmgMatStyleName_Med": "Shock",
       "OnPlayerInteractSound": {
         "ObjectName": "SoundCue StationProp_Jingle_Salesman_Cue",
         "ObjectPath": "/Game/Sounds/Foley_Loot/Containers/StationProp/StationProp_Jingle_Salesman_Cue.0"
       },
       "SpecificPlayerDanceMatStyleNames": {
-        "/Game/Athena/Items/Cosmetics/Dances/EID_PunkKoi.EID_PunkKoi": "Shock"
+        "/Game/Athena/Items/Cosmetics/Dances/EID_PunkKoi.EID_PunkKoi": "Shock",
+        "/Game/Athena/Items/Cosmetics/Dances/PatPat/EID_PatPat.EID_PatPat": "Blush",
+        "/Game/Athena/Items/Cosmetics/Dances/EID_Laugh.EID_Laugh": "Laugh",
+        "/Game/Athena/Items/Cosmetics/Dances/EID_BuffetMoment_LCZQS.EID_BuffetMoment_LCZQS": "Shock",
+        "/Game/Athena/Items/Cosmetics/Dances/EID_UnicycleTraversal.EID_UnicycleTraversal": "Shock",
+        "/Game/Athena/Items/Cosmetics/Dances/EID_HighActivity.EID_HighActivity": "Trade",
+        "/Game/Athena/Items/Cosmetics/Dances/EID_Coronet.EID_Coronet": "Shock"
       },
       "SpecificOnPlayerDanceMessages": {
         "/Game/Athena/Items/Cosmetics/Dances/EID_PunkKoi.EID_PunkKoi": {
           "Namespace": "",
           "Key": "A614A62048629D557807BBAF0AF74D59",
           "SourceString": "I-is that the Demonslayer blade?! Haha... ha... We're cool, right?!"
+        },
+        "/Game/Athena/Items/Cosmetics/Dances/PatPat/EID_PatPat.EID_PatPat": {
+          "Namespace": "",
+          "Key": "43D55F614E4525283A07A3AFEC58A791",
+          "SourceString": "Aww, now I feel a little bad for trying to trick you."
+        },
+        "/Game/Athena/Items/Cosmetics/Dances/EID_Laugh.EID_Laugh": {
+          "Namespace": "",
+          "Key": "42FB6F1A454D32DD247315928D17C8D3",
+          "SourceString": "Hahahaha! What are we laughing at?"
+        },
+        "/Game/Athena/Items/Cosmetics/Dances/EID_BuffetMoment_LCZQS.EID_BuffetMoment_LCZQS": {
+          "Namespace": "",
+          "Key": "8B04C2B94A59C805745934BEB7D939B9",
+          "SourceString": "...Guess I was a little too charming?"
+        },
+        "/Game/Athena/Items/Cosmetics/Dances/EID_UnicycleTraversal.EID_UnicycleTraversal": {
+          "Namespace": "",
+          "Key": "7445BF18446D38DC9B92ECA24006240B",
+          "SourceString": "I don't know what you're doing, but I find it intimidating."
+        },
+        "/Game/Athena/Items/Cosmetics/Dances/EID_HighActivity.EID_HighActivity": {
+          "Namespace": "",
+          "Key": "6FCF58A24BDA0E4824E8E99BCB63F8CE",
+          "SourceString": "If you're sticking around for a bit, I've got other stuff I can sell you..."
+        },
+        "/Game/Athena/Items/Cosmetics/Dances/EID_Coronet.EID_Coronet": {
+          "Namespace": "",
+          "Key": "0DE5F48A412786DFE48873AB6AFD262D",
+          "SourceString": "Is that a...?! You need someone to keep that crown safe for you, kid?"
         }
       },
+      "DamageResponses_Light": [
+        {
+          "DamageMaterialStyle_5_DA2E9BDA41336285B6F136818C041FAE": "Mad",
+          "DamageMessage_7_92E19AF44AB84ADD702CE4BC7D00ADF3": {
+            "Namespace": "",
+            "Key": "51C9395846E755B1D335478C8A131688",
+            "SourceString": "Come on now! That's no way to get a discount!"
+          }
+        },
+        {
+          "DamageMaterialStyle_5_DA2E9BDA41336285B6F136818C041FAE": "Mad",
+          "DamageMessage_7_92E19AF44AB84ADD702CE4BC7D00ADF3": {
+            "Namespace": "",
+            "Key": "8CF9C7A0473AF8074CD60FB014DDAFAD",
+            "SourceString": "Don't ya know it's rude to attack a vending machine?"
+          }
+        }
+      ],
+      "DamageResponses_Med": [
+        {
+          "DamageMaterialStyle_5_DA2E9BDA41336285B6F136818C041FAE": "Shock",
+          "DamageMessage_7_92E19AF44AB84ADD702CE4BC7D00ADF3": {
+            "Namespace": "",
+            "Key": "3FFEC1A940F99DC5CE871EA90A04B02C",
+            "SourceString": "STOP! PLEASE! That panel's brand new!  "
+          }
+        },
+        {
+          "DamageMaterialStyle_5_DA2E9BDA41336285B6F136818C041FAE": "Sad",
+          "DamageMessage_7_92E19AF44AB84ADD702CE4BC7D00ADF3": {
+            "Namespace": "",
+            "Key": "CBB67A3A44B851E33A6D1CA76FECE7D8",
+            "SourceString": "I took you for a fool. My mistake. PLEASE STOP!!"
+          }
+        }
+      ],
+      "DamageResponses_Heavy": [
+        {
+          "DamageMaterialStyle_5_DA2E9BDA41336285B6F136818C041FAE": "Sad",
+          "DamageMessage_7_92E19AF44AB84ADD702CE4BC7D00ADF3": {
+            "Namespace": "",
+            "Key": "A4B0750B444FD0D9740DDBB60FFDC4D3",
+            "SourceString": "I'm just a simple Bars-merchant-slash-secret-seller!"
+          }
+        },
+        {
+          "DamageMaterialStyle_5_DA2E9BDA41336285B6F136818C041FAE": "Shock",
+          "DamageMessage_7_92E19AF44AB84ADD702CE4BC7D00ADF3": {
+            "Namespace": "",
+            "Key": "2F6AA0994E8FF403E71800A66838571B",
+            "SourceString": "NOOOOOOOOO!!!!!!"
+          }
+        }
+      ],
       "MarkerDisplay": {
         "DisplayName": {
           "Namespace": "",
@@ -113,7 +186,7 @@
           "ComponentKey": {
             "OwnerClass": {
               "ObjectName": "BlueprintGeneratedClass BP_StationProp_Parent_C",
-              "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_Parent.7"
+              "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_Parent.1"
             },
             "SCSVariableName": "NonPlayerConversationComponent",
             "AssociatedGuid": "B3384C1D-432431C3-C6AC48BA-EEF07559"

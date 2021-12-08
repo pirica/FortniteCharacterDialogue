@@ -15,21 +15,21 @@
     },
     "SuperStruct": {
       "ObjectName": "BlueprintGeneratedClass BP_StationProp_VendingMachine_Emote_Base_C",
-      "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachine_Emote_Base.31"
+      "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachine_Emote_Base.2"
     },
-    "FuncMap": {},
     "ClassFlags": 8652820,
     "ClassWithin": {
       "ObjectName": "Class Object",
       "ObjectPath": "/Script/CoreUObject"
     },
     "ClassConfigName": "Game",
-    "ClassGeneratedBy": null,
-    "Interfaces": [],
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "BP_StationProp_VendingMachine_E_Sniper_C Default__BP_StationProp_VendingMachine_E_Sniper_C",
       "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_VendingMachine_E_Sniper.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
     }
   },
   {
@@ -42,38 +42,117 @@
         "Key": "B6A602984EDCE568145DB2B08C753292",
         "SourceString": "Oh. Okay then. You... You do that."
       },
-      "OnTakeDamageMessage_Light": {
-        "Namespace": "",
-        "Key": "A5D73C964AAE7FAB1FF91D90D3D3EAF8",
-        "SourceString": "Watch it. I'll assume that was an accident."
-      },
-      "OnTakeDamageMessage_Med": {
-        "Namespace": "",
-        "Key": "72604A404BF9844FE1A954A7B65D509C",
-        "SourceString": "You're not the llama I thought you were."
-      },
-      "OnTakeDamageMessage_Heavy": {
-        "Namespace": "",
-        "Key": "CDB75B944AC8A8E42A697CB60C7DD3EE",
-        "SourceString": "You've made a powerful enemy. "
-      },
       "PlayerDanceMatStyleName": "Shock",
-      "DmgMatStyleName_Light": "Mad",
-      "DmgMatStyleName_Heavy": "Mad",
       "OnPlayerInteractSound": {
         "ObjectName": "SoundCue StationProp_Jingle_Spy_Cue",
         "ObjectPath": "/Game/Sounds/Foley_Loot/Containers/StationProp/StationProp_Jingle_Spy_Cue.0"
       },
       "SpecificPlayerDanceMatStyleNames": {
-        "/Game/Athena/Items/Cosmetics/Dances/EID_CerealBox.EID_CerealBox": "Shock"
+        "/Game/Athena/Items/Cosmetics/Dances/EID_CerealBox.EID_CerealBox": "Shock",
+        "/Game/Athena/Items/Cosmetics/Dances/PatPat/EID_PatPat.EID_PatPat": "Shock",
+        "/Game/Athena/Items/Cosmetics/Dances/EID_Laugh.EID_Laugh": "Mad",
+        "/Game/Athena/Items/Cosmetics/Dances/EID_BuffetMoment_LCZQS.EID_BuffetMoment_LCZQS": "Blush",
+        "/Game/Athena/Items/Cosmetics/Dances/EID_HighActivity.EID_HighActivity": "Mad",
+        "/Game/Athena/Items/Cosmetics/Dances/EID_Believer.EID_Believer": "Excited",
+        "/Game/Athena/Items/Cosmetics/Dances/EID_Emperor.EID_Emperor": "Blush",
+        "/Game/Athena/Items/Cosmetics/Dances/EID_Coronet.EID_Coronet": "Happy"
       },
       "SpecificOnPlayerDanceMessages": {
         "/Game/Athena/Items/Cosmetics/Dances/EID_CerealBox.EID_CerealBox": {
           "Namespace": "",
           "Key": "B6010D4D45A5F55A8A991FBCB0444840",
           "SourceString": "Ugh... You know what's in that stuff, right? It's not good for your brain. "
+        },
+        "/Game/Athena/Items/Cosmetics/Dances/PatPat/EID_PatPat.EID_PatPat": {
+          "Namespace": "",
+          "Key": "60D0ABE347BDE59AC04EE98750F9773F",
+          "SourceString": "You had a hard round, huh? Happens to the best of us."
+        },
+        "/Game/Athena/Items/Cosmetics/Dances/EID_Laugh.EID_Laugh": {
+          "Namespace": "",
+          "Key": "7F3DB51247F166684C42DE8AC2F7DE20",
+          "SourceString": "What's so funny?"
+        },
+        "/Game/Athena/Items/Cosmetics/Dances/EID_BuffetMoment_LCZQS.EID_BuffetMoment_LCZQS": {
+          "Namespace": "",
+          "Key": "3FF1E5334891EC4C8BA0389C9910B3A4",
+          "SourceString": "Let's keep this professional."
+        },
+        "/Game/Athena/Items/Cosmetics/Dances/EID_HighActivity.EID_HighActivity": {
+          "Namespace": "",
+          "Key": "113738644C05EB714ADE43B75CF5EFF9",
+          "SourceString": "Mind taking the casual act somewhere else? I'm undercover."
+        },
+        "/Game/Athena/Items/Cosmetics/Dances/EID_Believer.EID_Believer": {
+          "Namespace": "",
+          "Key": "5079E3D94875495B72332AA6DDF20E1C",
+          "SourceString": "THAT'S! WHO! I! WANT! TO! SEE! How did you know I love this song?"
+        },
+        "/Game/Athena/Items/Cosmetics/Dances/EID_Emperor.EID_Emperor": {
+          "Namespace": "",
+          "Key": "1644D0C6456C0892EDB156847CD31554",
+          "SourceString": "I knew it was you the whole time."
+        },
+        "/Game/Athena/Items/Cosmetics/Dances/EID_Coronet.EID_Coronet": {
+          "Namespace": "",
+          "Key": "7D405EA24BC6C8514CA24C8199B618B8",
+          "SourceString": "Your head feeling heavy with all that hardware up there?"
         }
       },
+      "DamageResponses_Light": [
+        {
+          "DamageMaterialStyle_5_DA2E9BDA41336285B6F136818C041FAE": "Mad",
+          "DamageMessage_7_92E19AF44AB84ADD702CE4BC7D00ADF3": {
+            "Namespace": "",
+            "Key": "A5D73C964AAE7FAB1FF91D90D3D3EAF8",
+            "SourceString": "Watch it. I'll assume that was an accident."
+          }
+        },
+        {
+          "DamageMaterialStyle_5_DA2E9BDA41336285B6F136818C041FAE": "Mad",
+          "DamageMessage_7_92E19AF44AB84ADD702CE4BC7D00ADF3": {
+            "Namespace": "",
+            "Key": "47A32F4F4341C1E8D99E9B9463C57220",
+            "SourceString": "Do you mind?"
+          }
+        }
+      ],
+      "DamageResponses_Med": [
+        {
+          "DamageMaterialStyle_5_DA2E9BDA41336285B6F136818C041FAE": "Mad",
+          "DamageMessage_7_92E19AF44AB84ADD702CE4BC7D00ADF3": {
+            "Namespace": "",
+            "Key": "72604A404BF9844FE1A954A7B65D509C",
+            "SourceString": "You're not the llama I thought you were."
+          }
+        },
+        {
+          "DamageMaterialStyle_5_DA2E9BDA41336285B6F136818C041FAE": "Mad",
+          "DamageMessage_7_92E19AF44AB84ADD702CE4BC7D00ADF3": {
+            "Namespace": "",
+            "Key": "1B8EF2CD43C43BBCED6707BD221D8F54",
+            "SourceString": "You will regret this!!"
+          }
+        }
+      ],
+      "DamageResponses_Heavy": [
+        {
+          "DamageMaterialStyle_5_DA2E9BDA41336285B6F136818C041FAE": "Mad",
+          "DamageMessage_7_92E19AF44AB84ADD702CE4BC7D00ADF3": {
+            "Namespace": "",
+            "Key": "CDB75B944AC8A8E42A697CB60C7DD3EE",
+            "SourceString": "You've made a powerful enemy. "
+          }
+        },
+        {
+          "DamageMaterialStyle_5_DA2E9BDA41336285B6F136818C041FAE": "Mad",
+          "DamageMessage_7_92E19AF44AB84ADD702CE4BC7D00ADF3": {
+            "Namespace": "",
+            "Key": "7030A89942CE82A1FA451FBF4328546B",
+            "SourceString": "I'll be back. I guarantee it."
+          }
+        }
+      ],
       "MarkerDisplay": {
         "DisplayName": {
           "Namespace": "",
@@ -113,7 +192,7 @@
           "ComponentKey": {
             "OwnerClass": {
               "ObjectName": "BlueprintGeneratedClass BP_StationProp_Parent_C",
-              "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_Parent.7"
+              "ObjectPath": "/Game/Building/ActorBlueprints/Stations/BP_StationProp_Parent.1"
             },
             "SCSVariableName": "NonPlayerConversationComponent",
             "AssociatedGuid": "B3384C1D-432431C3-C6AC48BA-EEF07559"
